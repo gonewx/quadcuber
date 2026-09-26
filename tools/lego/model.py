@@ -326,7 +326,8 @@ def build(fork_extended=True, head_angle=0.0, with_cube=True, motor="large"):
     d = riser - crank_c if fork_extended else crank_c - riser
     d = d / np.linalg.norm(d)
     pin = crank_c + CRANK_R * d
-    s = step("曲柄", "3 孔细梁一端的十字孔套在舵机输出轴上, 当作曲柄。" + ("(图中为夹紧位置)" if fork_extended else ""),
+    s = step("曲柄", "3 孔细梁一端的十字孔套在舵机输出轴上, 当作曲柄。曲柄停在输出轴的最外端、和轴端齐平, "
+             "和舵机外壳之间留约 1.6mm 空隙是正常的 (这样连杆两头一样高); 不要推到底。" + ("(图中为夹紧位置)" if fork_extended else ""),
              view=(25, 35), focus="mech")
     dz = np.array([d[0], d[1], 0.0])
     hadd("6632.dat", C_BEAM, (crank_c[0], crank_c[1], 45), orient(np.cross([0, 0, 1], dz), "+z", dz), s)
