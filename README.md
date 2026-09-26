@@ -90,6 +90,7 @@ python -m unittest -v
 | `firmware/pico/` | 单臂测试程序（MicroPython）：配置、PIO 编码器、马达/舵机驱动、位置控制、串口命令行 |
 | `docs/single_arm.md` | 单臂原型的接线、测试步骤和待验证假设 |
 | `docs/arm_concept.md` | 乐高机械手的概念设计：叉子 + 滑块结构、关键尺寸、单臂测试的魔方固定方法 |
+| `docs/wiring/` | 单臂原型的图解接线指南（`build.py` 生成 `index.html`，内嵌 SVG） |
 | `docs/lego/` | 单臂原型的乐高搭建说明书：大马达版在根目录，中马达版在 `medium/`（网页 + 步骤图 + LDraw 模型文件） |
 | `tools/lego/` | 搭建图工具：模型定义、干涉/连接检查、渲染（见其中的 README） |
 | `tests/` | 单元测试 |
