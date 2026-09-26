@@ -1,11 +1,13 @@
 # quadcuber
 
-四机械手乐高魔方机器人（参考 CubeStormer 3 的思路），目前包含**动作规划器**和**模拟器**。
+四机械手乐高魔方机器人（参考 CubeStormer 3 的思路），目前包含**动作规划器**、**模拟器**，以及**单臂原型的 Pico 测试程序**。
 
 - 规划器：把求解器给出的转动序列（如 `R U R' U'`）翻译成 4 个机械手的动作序列，并使总耗时最短。
 - 模拟器：在 54 个贴纸的魔方模型上按物理动作逐步重放，检查每一步是否满足机械约束，以及最后魔方是否还原。
 
-纯 Python 实现，不依赖第三方库，可以在 PC 或树莓派 Zero W 上运行。
+- 单臂测试程序（`firmware/pico/`，MicroPython）：测机械手转 90° 的耗时、到位精度和夹持可靠性，结果汇总后替换规划器的耗时估算值。接线和测试步骤见 [docs/single_arm.md](docs/single_arm.md)。
+
+规划器纯 Python 实现，不依赖第三方库，可以在 PC 或树莓派 Zero W 上运行。
 
 ## 机器模型
 
@@ -44,7 +46,7 @@ python -m quadcuber bench --count 20 --compare
 python -m quadcuber bench --timing timing.json
 ```
 
-`timing.json` 的字段见 `quadcuber/machine.py` 中的 `Timing`，单位为秒。**默认值是估算值**，搭好单臂原型后应替换成实测值：
+`timing.json` 的字段见 `quadcuber/machine.py` 中的 `Timing`，单位为秒。**默认值是估算值**，搭好单臂原型后应替换成实测值（可以用 `python -m quadcuber armlog arm.log -o timing.json` 从单臂测试日志生成）：
 
 ```json
 {"turn90": 0.18, "turn180": 0.30, "open": 0.10, "close": 0.10,
@@ -73,7 +75,7 @@ python -m quadcuber bench --timing timing.json
 python -m unittest -v
 ```
 
-测试覆盖：魔方模型、各条机器约束，以及随机序列经规划后能在模拟器中还原。
+测试覆盖：魔方模型、各条机器约束，以及随机序列经规划后能在模拟器中还原；Pico 固件在模拟环境（马达模型 + PIO 解释器，`tests/pico_sim.py`）中的编码器计数、位置控制和各条测试命令；日志汇总工具。
 
 ## 目录
 
@@ -83,5 +85,8 @@ python -m unittest -v
 | `quadcuber/machine.py` | 机器状态、动作、约束、耗时参数 |
 | `quadcuber/planner.py` | 动作规划器 |
 | `quadcuber/simulate.py` | 模拟器 / 验证 |
+| `quadcuber/armlog.py` | 单臂测试日志汇总，生成 `timing.json` |
 | `quadcuber/__main__.py` | 命令行 |
+| `firmware/pico/` | 单臂测试程序（MicroPython）：配置、PIO 编码器、马达/舵机驱动、位置控制、串口命令行 |
+| `docs/single_arm.md` | 单臂原型的接线、测试步骤和待验证假设 |
 | `tests/` | 单元测试 |

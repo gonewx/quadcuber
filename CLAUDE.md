@@ -32,13 +32,17 @@
   - 舵机单独用一路 5V、3A 以上的降压电源，不要和 Pico 共用；
   - 所有设备共地；Pico 的 VSYS 前面加一个肖特基二极管。
 
-## 当前代码（v0.1）
+## 当前代码
 
 - `quadcuber/cube.py`：54 贴纸魔方模型，世界坐标系为 x→R、y→U、z→F。
 - `quadcuber/machine.py`：机器状态、动作和约束，是机器模型的**唯一规格来源**。约束规则写在该模块的 docstring 和 `Machine.check` 中。
 - `quadcuber/planner.py`：A* 规划器，默认滚动窗口 4/2。角度受限时先按不限角度规划，再用 `fit_angle_limit` 做动态规划。
 - `quadcuber/simulate.py`：只按世界坐标中的物理动作转动贴纸，独立验证规划结果。**任何规划相关的改动，都必须用模拟器验证。**
-- 运行测试：`python -m unittest -v`（27 个测试）。命令行：`python -m quadcuber plan|bench`。
+- `quadcuber/armlog.py`：把单臂测试日志里的 `RESULT {json}` 行汇总成 `timing.json`。
+- `firmware/pico/`：单臂测试程序（MicroPython）。`control.py` 是与硬件无关的位置控制（梯形曲线 + 前馈 + PID + 到位/堵转/失控判定），CPython 也能跑；`encoder.py` 用 PIO 做 4 倍频计数（每个编码器 2 个状态机，读数时通过 SMx_INSTR 插入指令）；`arm_test.py` 是串口命令行。**尚未在实物上运行过。** MicroPython 兼容性：不要用 dataclass、类型注解、`from __future__`。
+- `tests/pico_sim.py`：假的 `machine`/`rp2`/`time` 模块 + 小型 PIO 解释器 + 马达模型，让固件在 CPython 里端到端运行。改固件后必须跑 `tests/test_firmware.py`。
+- `docs/single_arm.md`：单臂原型的接线（含四臂引脚总表）、测试步骤、待验证假设。
+- 运行测试：`python -m unittest -v`（53 个测试）。命令行：`python -m quadcuber plan|bench|armlog`。
 
 ## 已知问题和注意事项
 
@@ -49,8 +53,8 @@
 
 ## 下一步（按优先级）
 
-1. **单臂原型**：用户搭建 1 个机械手（夹紧 + 旋转），加上 Pico 测试程序，测 90° 旋转的耗时和到位精度，检验夹持是否可靠。这一步决定整个方案是否可行。
-2. 把实测耗时写进 `timing.json`，重新评估速度。
+1. **单臂原型**：用户搭建 1 个机械手（夹紧 + 旋转），测 90° 旋转的耗时和到位精度，检验夹持是否可靠。这一步决定整个方案是否可行。**Pico 测试程序和文档已完成，等用户搭建实物并反馈 `arm.log`、录像和照片**；首次上电后很可能要根据实际情况修正固件。
+2. 用 `python -m quadcuber armlog arm.log -o timing.json` 把实测耗时写进 `timing.json`，重新评估速度。
 3. 接入 Kociemba 求解器（在 Zero W 上用 Python 的 `kociemba` 库）。
 4. 定义 Pico 与 Zero 之间的串口协议（`Plan.to_dict()` 已能输出 JSON 动作序列）。
 5. 四臂框架搭好后：网页手动控制，并做随机拧动 1000 次的可靠性测试。
