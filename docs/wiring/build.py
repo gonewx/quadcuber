@@ -137,8 +137,8 @@ def wiring_svg():
     s.append('<rect class="usb" x="792" y="144" width="56" height="18" rx="3"/>')
     s.append('<text class="ps" x="820" y="138" text-anchor="middle">USB (调试时供电)</text>')
     s.append('<rect class="pico" x="760" y="160" width="120" height="430" rx="8"/>')
-    s.append('<text class="pt" x="820" y="476" text-anchor="middle">Pico</text>')
-    s.append('<text class="ps" x="820" y="492" text-anchor="middle">正面朝上</text>')
+    s.append('<text class="pt ob" x="820" y="476" text-anchor="middle">Pico</text>')
+    s.append('<text class="ps ob" x="820" y="492" text-anchor="middle">正面朝上</text>')
     for n in range(1, 41):
         x = 760 if n <= 20 else 880
         y = pico_pin_y(n)
@@ -284,6 +284,7 @@ CSS = """
   --board:#1f6f4a; --board-ink:#eaf4ee;
   --c9:#e8590c; --c5:#d6336c; --c33:#e0a100; --cm:#8f3fbf; --cc:#2b9348; --ce:#1c7ed6; --cs:#0b8a8f;
   --warn:#a15c00; --warn-bg:#fff3dd; --danger:#b42318; --danger-bg:#fde8e6; --ok:#1f7a45;
+  --bb:#f4f2ea; --bbch:#e2dfd3; --hole:#a9a596;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -292,6 +293,7 @@ CSS = """
     --board:#1d5a3e; --board-ink:#dcefe4;
     --c9:#ff8a3d; --c5:#f06595; --c33:#ffd43b; --cm:#c77dff; --cc:#51cf66; --ce:#4dabf7; --cs:#3bc9db;
     --warn:#ffc261; --warn-bg:#2f2615; --danger:#ff8a80; --danger-bg:#34191a; --ok:#69db7c;
+    --bb:#2a2f36; --bbch:#20242a; --hole:#5f6770;
   }
 }
 :root[data-theme="dark"]{
@@ -300,6 +302,7 @@ CSS = """
   --board:#1d5a3e; --board-ink:#dcefe4;
   --c9:#ff8a3d; --c5:#f06595; --c33:#ffd43b; --cm:#c77dff; --cc:#51cf66; --ce:#4dabf7; --cs:#3bc9db;
   --warn:#ffc261; --warn-bg:#2f2615; --danger:#ff8a80; --danger-bg:#34191a; --ok:#69db7c;
+  --bb:#2a2f36; --bbch:#20242a; --hole:#5f6770;
 }
 body{background:var(--bg);color:var(--ink);font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   font-size:15px;line-height:1.65;padding-inline:16px;padding-block:24px 64px}
@@ -325,7 +328,7 @@ figcaption{font-size:13px;color:var(--muted);max-width:75ch}
 .pico{fill:var(--board);stroke:none}
 .usb{fill:#b8bfc6;stroke:none}
 .pt{font-family:"Noto Sans SC",sans-serif;font-size:14px;font-weight:700;fill:currentColor}
-.pico ~ .pt,.pinout .pt{fill:var(--board-ink)}
+.pt.ob,.pinout .pt{fill:var(--board-ink)}
 .ps{font-family:"Noto Sans SC",sans-serif;font-size:11px;fill:var(--muted)}
 .pinout .ps{fill:var(--board-ink);opacity:.8}
 .pn{font-size:11px;fill:currentColor}
@@ -394,7 +397,184 @@ ol.flow li::marker{font-weight:700}
 ol.flow code,.step code,td code{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px;background:var(--panel);
   border:1px solid var(--line);border-radius:4px;padding:0 4px}
 details summary{cursor:pointer;font-weight:700}
+
+.bb{fill:var(--bb);stroke:var(--line);stroke-width:1}
+.bbch{fill:var(--bbch)}
+.hole{fill:var(--hole)}
+.rp{stroke:#e03131;stroke-width:1.5} .rn{stroke:#1c7ed6;stroke-width:1.5}
+.bbl{font-size:10.5px;fill:var(--muted)}
+.bbn{font-size:9.5px;fill:var(--muted)}
+.lvl{fill:#1c4f8f}
+.pt.sm{font-size:12px;fill:#fff}
+.ps.ob{fill:var(--board-ink);opacity:.85} .ps.lv{fill:#dbe8f7}
+.pu.sm{font-size:9.5px} .pu.xs{font-size:8.5px;fill:#fff}
+.pn.xs{font-size:10px}
+.w.jw{stroke-width:2.6}
+.w.heavy{stroke-width:5.5}
+.wg{stroke:var(--ink)} .dot.wg{fill:var(--ink)} .wgt{fill:var(--ink)}
+.bbsvg{min-width:720px}
 """
+
+
+# ---- 面包板布局 -------------------------------------------------------------------
+# 标准 830 孔面包板: 列 1~63 (图中只画 1~40), 行 a~e / f~j, 上下各一对电源轨。
+# Pico 横放, USB 朝左: 1~20 号脚在 h 行第 3~22 列, 40~21 号脚在 c 行第 3~22 列。
+
+BB_X0, BB_P = 220, 16
+BB_ROW = {"T+": 214, "T-": 230, "a": 256, "b": 272, "c": 288, "d": 304, "e": 320,
+          "f": 352, "g": 368, "h": 384, "i": 400, "j": 416, "B+": 442, "B-": 458}
+BB_COLS = 40
+
+
+def hole(c, r):
+    return (BB_X0 + (c - 1) * BB_P, BB_ROW[r])
+
+
+def jumper(group, cls, a, b, bow=0, label=None, label_at=None, anchor="middle"):
+    (x0, y0), (x1, y1) = a, b
+    if bow:
+        mx, my = (x0 + x1) / 2, (y0 + y1) / 2 - bow
+        d = f"M{x0} {y0} Q{mx} {my} {x1} {y1}"
+    else:
+        d = f"M{x0} {y0} L{x1} {y1}"
+    out = f'<g class="wire" data-g="{group}"><path class="w jw {cls}" d="{d}"/>'
+    out += f'<circle class="dot {cls}" cx="{x0}" cy="{y0}" r="3.6"/><circle class="dot {cls}" cx="{x1}" cy="{y1}" r="3.6"/>'
+    if label:
+        out += f'<text class="wl {cls}t" x="{label_at[0]}" y="{label_at[1]}" text-anchor="{anchor}">{label}</text>'
+    return out + "</g>"
+
+
+def stub(cls, x, y, dx, dy, text, anchor="start"):
+    """板外直连的粗线头: 从 (x, y) 伸出一小段, 末端写去向。"""
+    x1, y1 = x + dx, y + dy
+    tx = x1 + (6 if anchor == "start" else -6) if dx else x1
+    ty = y1 + 4 if dx else y1 + (14 if dy > 0 else -6)
+    a = anchor if dx else "middle"
+    return (f'<g class="wire" data-g="direct"><path class="w heavy {cls}" d="M{x} {y} L{x1} {y1}"/>'
+            f'<text class="wl {cls}t" x="{tx}" y="{ty}" text-anchor="{a}">{text}</text></g>')
+
+
+def breadboard_svg():
+    s = []
+    x_l, x_r = BB_X0 - 18, BB_X0 + (BB_COLS - 1) * BB_P + 18
+    s.append(f'<rect class="bb" x="{x_l}" y="198" width="{x_r - x_l}" height="274" rx="6"/>')
+    s.append(f'<rect class="bbch" x="{x_l}" y="330" width="{x_r - x_l}" height="12"/>')
+    for r, cls in (("T+", "rp"), ("T-", "rn"), ("B+", "rp"), ("B-", "rn")):
+        y = BB_ROW[r] + (-8 if r.endswith("+") else 8)
+        s.append(f'<line class="{cls}" x1="{x_l + 8}" y1="{y}" x2="{x_r - 8}" y2="{y}"/>')
+        s.append(f'<text class="bbl" x="{x_l - 6}" y="{BB_ROW[r] + 4}" text-anchor="end">{r[0].replace("T", "上").replace("B", "下")}{r[1]}</text>')
+    for r in "abcdefghij":
+        s.append(f'<text class="bbl" x="{x_l + 6}" y="{BB_ROW[r] + 4}">{r}</text>')
+    for c in range(1, BB_COLS + 1):
+        x = BB_X0 + (c - 1) * BB_P
+        if c == 1 or c % 5 == 0:
+            s.append(f'<text class="bbn" x="{x}" y="{BB_ROW["a"] - 12}" text-anchor="middle">{c}</text>')
+            s.append(f'<text class="bbn" x="{x}" y="{BB_ROW["j"] + 20}" text-anchor="middle">{c}</text>')
+        for r in BB_ROW:
+            s.append(f'<rect class="hole" x="{x - 2.5}" y="{BB_ROW[r] - 2.5}" width="5" height="5"/>')
+    s.append(f'<text class="note" x="{x_r - 4}" y="492" text-anchor="end">第 41~63 列未画出, 不用</text>')
+
+    # Pico
+    s.append('<rect class="usb" x="224" y="318" width="22" height="36" rx="3"/>')
+    s.append('<rect class="pico" x="244" y="280" width="320" height="112" rx="8" opacity="0.93"/>')
+    s.append('<text class="pt ob" x="420" y="334" text-anchor="middle">Pico  (USB 朝左)</text>')
+    s.append('<text class="ps ob" x="420" y="350" text-anchor="middle">1~20 号脚在 h 行 · 40~21 号脚在 c 行</text>')
+    for n in range(1, 41):
+        c, r = (n + 2, "h") if n <= 20 else (43 - n, "c")
+        x, y = hole(c, r)
+        used = n in USED
+        s.append(f'<circle class="pin{" used" if used else ""}" cx="{x}" cy="{y}" r="4"/>')
+    for n, text in ((38, "GND"), (36, "3V3")):
+        x, y = hole(43 - n, "c")
+        s.append(f'<text class="pu" x="{x}" y="{y + 16}" text-anchor="middle">{text}</text>')
+    for n, text in ((3, "GND"), (4, "GP2"), (5, "GP3"), (6, "GP4"), (7, "GP5"), (11, "GP8")):
+        x, y = hole(n + 2, "h")
+        s.append(f'<text class="pu sm" x="{x + 3.5}" y="{y - 9}" transform="rotate(-90 {x + 3.5} {y - 9})">{text}</text>')
+
+    # 电平转换 (按常见的 SparkFun 型排针画, 以丝印为准)
+    s.append('<rect class="lvl" x="676" y="296" width="96" height="80" rx="4" opacity="0.93"/>')
+    s.append('<text class="pt sm" x="724" y="330" text-anchor="middle">电平转换</text>')
+    s.append('<text class="ps lv" x="724" y="362" text-anchor="middle">上 HV · 下 LV</text>')
+    s.append('<text class="ps lv" x="724" y="348" text-anchor="middle">BSS138</text>')
+    for i, (hv, lv) in enumerate((("1", "1"), ("2", "2"), ("V", "V"), ("G", "G"), ("3", "3"), ("4", "4"))):
+        c = 30 + i
+        for r, t in (("d", hv), ("g", lv)):
+            x, y = hole(c, r)
+            s.append(f'<circle class="pin used" cx="{x}" cy="{y}" r="3.6"/>')
+            ty = y - 7 if r == "g" else y + 12
+            s.append(f'<text class="pu xs" x="{x}" y="{ty}" text-anchor="middle">{t}</text>')
+
+    # 板上跳线
+    s.append(jumper("gnd", "wg", hole(5, "a"), hole(5, "T-")))
+    s.append(jumper("gnd", "wg", hole(5, "j"), hole(5, "B-")))
+    s.append(jumper("gnd", "wg", hole(40, "T-"), hole(40, "B-"), bow=-26))
+    s.append(jumper("p33", "w33", hole(7, "b"), hole(32, "j"), bow=150, label="3.3V", label_at=(516, 262)))
+    s.append(jumper("enc", "we", hole(8, "i"), hole(30, "i"), bow=-60, label="GP4→LV1", label_at=(520, 434)))
+    s.append(jumper("enc", "we", hole(9, "j"), hole(31, "j"), bow=-88, label="GP5→LV2", label_at=(470, 470)))
+    s.append(jumper("p5", "w5", hole(32, "a"), hole(32, "T+")))
+    s.append(jumper("gnd", "wg", hole(33, "a"), hole(33, "T-")))
+
+    # EV3 线 (剪开)
+    s.append(box(596, 26, 234, 58, "EV3 马达线 (剪开的 6 根芯)"))
+    tails = [(612, "白", "wm"), (628, "黑", "wm"), (684, "黄 A", "we"), (700, "蓝 B", "we"), (780, "绿 5V", "w5"),
+             (796, "红 GND", "wg")]
+    for x, t, cls in tails:
+        s.append(f'<text class="pn xs" x="{x}" y="78" text-anchor="middle">{t.split()[0]}</text>')
+    s.append(jumper("enc", "we", (684, 84), hole(30, "b"), label="A相", label_at=(678, 180), anchor="end"))
+    s.append(jumper("enc", "we", (700, 84), hole(31, "b"), label="B相", label_at=(706, 180), anchor="start"))
+    s.append(jumper("p5", "w5", (780, 84), hole(36, "T+"), label="5V", label_at=(772, 150), anchor="end"))
+    s.append(jumper("gnd", "wg", (796, 84), hole(37, "T-"), label="GND", label_at=(804, 150), anchor="start"))
+    s.append(stub("wm", 612, 84, 0, 34, "白"))
+    s.append(stub("wm", 628, 84, 0, 34, "黑"))
+    s.append('<text class="note" x="600" y="148" text-anchor="end">白、黑两根</text>')
+    s.append('<text class="note" x="600" y="162" text-anchor="end">直连 DRV8833 AOUT1/2</text>')
+
+    # 5V 降压
+    s.append(box(250, 26, 150, 58, "5V 降压模块", "输出 ≥ 3A"))
+    s.append(jumper("p5", "w5", (332, 84), hole(8, "T+"), label="OUT+", label_at=(326, 150), anchor="end"))
+    s.append(jumper("gnd", "wg", (348, 84), hole(9, "T-"), label="GND", label_at=(354, 150), anchor="start"))
+    s.append(stub("w9", 250, 44, -40, 0, "9V+", anchor="end"))
+    s.append(stub("w9", 250, 66, -40, 0, "9V−", anchor="end"))
+    s.append(stub("w5", 400, 44, 44, 0, "另一根直连舵机 V+"))
+    s.append(stub("w5", 400, 66, 44, 0, "另一根直连舵机 GND"))
+
+    # DRV8833 (放在板外)
+    s.append(box(130, 540, 230, 80, "DRV8833 (放在面包板外)", "VM / GND / AOUT 不走面包板"))
+    s.append(jumper("ctrl", "wc", hole(6, "j"), (300, 540), label="GP2→AIN1", label_at=(292, 500), anchor="end"))
+    s.append(jumper("ctrl", "wc", hole(7, "j"), (316, 540), label="GP3→AIN2", label_at=(324, 520), anchor="start"))
+    s.append(stub("w9", 130, 566, -40, 0, "VM ← 9V+", anchor="end"))
+    s.append(stub("w9", 130, 594, -40, 0, "GND ← 9V−", anchor="end"))
+    s.append(stub("wm", 190, 620, 0, 30, "AOUT1 → 白"))
+    s.append(stub("wm", 270, 620, 0, 30, "AOUT2 → 黑"))
+
+    # 舵机
+    s.append(box(380, 540, 170, 70, "Geekservo 舵机"))
+    s.append(jumper("servo", "ws", hole(13, "j"), (412, 540), label="GP8→信号", label_at=(420, 500), anchor="start"))
+    s.append(stub("w5", 550, 566, 44, 0, "V+ ← 5V 降压 (直连)"))
+    s.append(stub("w5", 550, 594, 44, 0, "GND ← 5V 降压 (直连)"))
+    return ('<svg class="diagram bbsvg" viewBox="0 0 900 680" role="img" aria-label="面包板布局: Pico 横放在第 3~22 列, '
+            '电平转换在第 30~35 列跨中间凹槽; 上排电源轨为 5V 和地; 马达驱动和舵机电源放在面包板外直接连线。">'
+            + "".join(s) + "</svg>")
+
+
+BB_TABLE = [
+    ("插 Pico", "c3~c22、h3~h22", "USB 朝左。1 号脚在 h3, 20 号脚在 h22; 40 号脚在 c3, 21 号脚在 c22"),
+    ("插电平转换", "第 30~35 列", "跨在中间凹槽上, HV 那排朝上 (靠 5V 轨), LV 那排朝下"),
+    ("地", "a5 → 上排 −", "Pico 38 号脚 GND"),
+    ("地", "j5 → 下排 −", "Pico 3 号脚 GND"),
+    ("地", "上排 − (第 40 列) → 下排 −", "把上下两条地线轨连起来"),
+    ("3.3V", "b7 → j32", "Pico 36 号脚 (3V3) → 电平转换 LV"),
+    ("5V", "a32 → 上排 +", "电平转换 HV 接 5V"),
+    ("地", "a33 → 上排 −", "电平转换 GND"),
+    ("编码器", "i8 → i30", "GP4 → LV1"),
+    ("编码器", "j9 → j31", "GP5 → LV2"),
+    ("编码器", "黄线 → b30, 蓝线 → b31", "EV3 A/B 相 → HV1/HV2"),
+    ("编码器电源", "绿线 → 上排 +, 红线 → 上排 −", "EV3 线的红色是地线"),
+    ("5V 电源", "降压 OUT+ → 上排 +, GND → 上排 −", "面包板上的 5V 和地都从这里来"),
+    ("马达控制", "j6 → AIN1, j7 → AIN2", "杜邦线接到板外的 DRV8833"),
+    ("舵机信号", "j13 → 舵机信号线", "舵机电源另外直连 5V 降压模块"),
+]
+
 
 STEPS = [
     ("gnd", "先接所有地线", "断电状态下, 把 9V 电源负极、5V 降压模块 GND、DRV8833 GND、电平转换 GND、舵机地线、"
@@ -495,6 +675,19 @@ def page():
                f'<div class="steps">{steps}</div>'
                '<p class="progress">勾选状态只保存在这台设备的浏览器里。</p></section>')
 
+    rows = "".join(f"<tr><td>{a}</td><td class=\"mono\">{b}</td><td>{c}</td></tr>" for a, b, c in BB_TABLE)
+    out.append('<section id="breadboard"><h2>面包板怎么插</h2>'
+               '<p>信号线走面包板; 大电流的线 (9V、马达线、舵机电源) 不走面包板, 直接连。'
+               '孔的坐标写法: 字母是行, 数字是列, 例如 <span class="mono">a5</span> 是 a 行第 5 列。</p>'
+               '<figure><div class="scroll">' + breadboard_svg() + "</div>"
+               "<figcaption>细线是插在面包板上的跳线, 粗线头是不走面包板、直接连到别处的线 (写了去向)。"
+               "电平转换模块按常见的 SparkFun 型排针顺序 (HV1、HV2、HV、GND、HV3、HV4) 画的, 你的模块顺序不同就按丝印对应, "
+               "只要保证每根线接的是同名的脚。</figcaption></figure>"
+               '<div class="tbl"><table><tr><th>类别</th><th>从 → 到</th><th>说明</th></tr>' + rows + "</table></div>"
+               '<div class="warn"><b>先检查面包板的电源轨。</b> 有些面包板的电源轨在中间 (第 30 列左右) 是断开的, '
+               "红蓝线在那里有个缺口。用万用表测一下上排 + 的第 5 列和第 40 列通不通, 不通就在断口处补一根跳线。"
+               "另外, 5V 降压模块的输入地和输出地大多是相通的, 用万用表确认一下; 面包板的地只通过降压模块的 GND 这一根线接出去。</div>"
+               "</section>")
     out.append('<section><h2>Pico 引脚</h2><figure><div class="scroll">' + pinout_svg() + "</div>"
                "<figcaption>从正面 (有 RP2040 芯片的一面) 看, USB 口朝上, 左上角是 1 号脚。彩色的是单臂原型要接的脚; "
                "GP0/GP1 以后接 Zero W 的串口, 现在空着。</figcaption></figure>"
