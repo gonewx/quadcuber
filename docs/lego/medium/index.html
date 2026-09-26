@@ -1,4 +1,4 @@
-<title>quadcuber 单臂搭建</title>
+<title>quadcuber 单臂搭建 中马达</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono&family=Noto+Sans+SC:wght@400;700&display=swap">
 <style>
@@ -81,33 +81,33 @@ th{color:var(--muted);font-weight:600}
 </style>
 <div class="wrap">
 <header class="cover">
-<div class="eyebrow">quadcuber · 单臂原型 · 搭建说明书 · EV3 大马达版</div>
+<div class="eyebrow">quadcuber · 单臂原型 · 搭建说明书 · EV3 中马达版</div>
 <h1>一只机械手 + 测试架</h1>
-<p class="cap">本页是EV3 大马达版。另有<a href="https://claude.ai/artifact/7VtzEUtxMbezHPJQYCDWPX">EV3 中马达版</a>, 两版的机械手、叉子和测试架大部分相同, 只有马达固定和马达与转动座的连接不同。</p>
-<p>一个 EV3 大马达带动机械手旋转, 一个灰色 Geekservo 推拉叉子夹紧或松开魔方。测试架把马达和一个固定叉连在一起, 固定叉卡住魔方背面的中间一列, 这样机械手就可以单独拧魔方的一层。搭好后按 <b>docs/single_arm.md</b> 接线和测试。</p>
+<p class="cap">本页是EV3 中马达版。另有<a href="https://claude.ai/artifact/BWgtEpkX4PGRGnYzvNV2L4">EV3 大马达版</a>, 两版的机械手、叉子和测试架大部分相同, 只有马达固定和马达与转动座的连接不同。</p>
+<p>一个 EV3 中马达带动机械手旋转, 一个灰色 Geekservo 推拉叉子夹紧或松开魔方。测试架把马达和一个固定叉连在一起, 固定叉卡住魔方背面的中间一列, 这样机械手就可以单独拧魔方的一层。搭好后按 <b>docs/single_arm.md</b> 接线和测试。</p>
 <div class="plate"><img src="img/cover_closed.png" alt="整机总览" class="" loading="lazy" width="1400" height="900"></div>
-<div class="facts"><div class="fact"><b>20</b><span>个步骤</span></div><div class="fact"><b>106</b><span>个乐高零件, 另加 EV3 大马达和舵机各 1 个</span></div><div class="fact"><b>16.5 mm</b><span>叉子行程 (要求 ≥ 13mm)</span></div><div class="fact"><b>56 mm</b><span>魔方尺寸 (叉齿内侧间距约 56.8mm)</span></div></div>
+<div class="facts"><div class="fact"><b>22</b><span>个步骤</span></div><div class="fact"><b>113</b><span>个乐高零件, 另加 EV3 中马达和舵机各 1 个</span></div><div class="fact"><b>16.5 mm</b><span>叉子行程 (要求 ≥ 13mm)</span></div><div class="fact"><b>56 mm</b><span>魔方尺寸 (叉齿内侧间距约 56.8mm)</span></div></div>
 <div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/mech_closed.png" alt="夹紧" class="" loading="lazy" width="1000" height="520"></div><figcaption class="cap">俯视: 夹紧 (舵机曲柄转到前死点, 叉齿插入魔方两侧约 10mm)</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/mech_open.png" alt="松开" class="" loading="lazy" width="1000" height="520"></div><figcaption class="cap">俯视: 松开 (叉子后退 16.5mm, 叉齿离开魔方)</figcaption></figure></div>
 <div class="note"><b>请先读这里:</b> 这份说明书是按官方 LDraw 零件的精确尺寸建模的, 程序检查过所有零件没有互相穿模、每个销和轴都插在孔里、机械手转一整圈不会碰到测试架。但它<b>没有被实物搭过</b>, Geekservo 的外形按你给的图纸建模, 摩擦力、零件松紧和整体刚度只能靠实物检验。搭的过程中哪一步对不上, 拍照发给我。</div>
-<nav class="toc"><a href="#bom">零件清单</a><a href="#s1">1. 底座 1</a><a href="#s2">2. 底座 2</a><a href="#s3">3. 立板</a><a href="#s4">4. 横梁</a><a href="#s5">5. 接头</a><a href="#s6">6. 马达固定板</a><a href="#s7">7. 装马达</a><a href="#s8">8. 固定叉 1</a><a href="#s9">9. 固定叉 2</a><a href="#s10">10. 装固定叉</a><a href="#s11">11. 转动座</a><a href="#s12">12. 舵机</a><a href="#s13">13. 叉子 1</a><a href="#s14">14. 叉子 2</a><a href="#s15">15. 导轨</a><a href="#s16">16. 装叉子</a><a href="#s17">17. 立轴</a><a href="#s18">18. 曲柄</a><a href="#s19">19. 连杆</a><a href="#s20">20. 放入魔方</a><a href="#checks">检查与待验证</a></nav>
+<nav class="toc"><a href="#bom">零件清单</a><a href="#s1">1. 底座 1</a><a href="#s2">2. 底座 2</a><a href="#s3">3. 立板</a><a href="#s4">4. 横梁</a><a href="#s5">5. 接头</a><a href="#s6">6. 马达支架</a><a href="#s7">7. 马达面板</a><a href="#s8">8. 装马达</a><a href="#s9">9. 固定叉 1</a><a href="#s10">10. 固定叉 2</a><a href="#s11">11. 装固定叉</a><a href="#s12">12. 联轴</a><a href="#s13">13. 转动座</a><a href="#s14">14. 舵机</a><a href="#s15">15. 叉子 1</a><a href="#s16">16. 叉子 2</a><a href="#s17">17. 导轨</a><a href="#s18">18. 装叉子</a><a href="#s19">19. 立轴</a><a href="#s20">20. 曲柄</a><a href="#s21">21. 连杆</a><a href="#s22">22. 放入魔方</a><a href="#checks">检查与待验证</a></nav>
 </header>
 <section id="bom" class="cover"><h2>零件清单</h2><p class="cap">颜色不限, 图中颜色只是为了区分。另需: 灰色 Geekservo 舵机 1 个 (270° 位置舵机, 不要用 360° 的红色马达版)、56mm 魔方 1 个。</p><div class="bom">
-<div class="item"><img src="img/part_32278_0.png" alt="15 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="qty">10×</div><div>15 孔粗梁</div><div class="mono">32278</div></div>
+<div class="item"><img src="img/part_32278_0.png" alt="15 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="qty">11×</div><div>15 孔粗梁</div><div class="mono">32278</div></div>
 <div class="item"><img src="img/part_32523_0.png" alt="3 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="qty">16×</div><div>3 孔粗梁</div><div class="mono">32523</div></div>
 <div class="item"><img src="img/part_32524_4.png" alt="7 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="qty">2×</div><div>7 孔粗梁</div><div class="mono">32524</div></div>
 <div class="item"><img src="img/part_32524_0.png" alt="7 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="qty">1×</div><div>7 孔粗梁</div><div class="mono">32524</div></div>
 <div class="item"><img src="img/part_40490_4.png" alt="9 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="qty">2×</div><div>9 孔粗梁</div><div class="mono">40490</div></div>
 <div class="item"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="qty">9×</div><div>7x5 框架</div><div class="mono">64179</div></div>
-<div class="item"><img src="img/part_6632_0.png" alt="3 孔细梁 (两端十字孔)" class="" loading="lazy" width="260" height="200"><div class="qty">1×</div><div>3 孔细梁 (两端十字孔)</div><div class="mono">6632</div></div>
-<div class="item"><img src="img/part_95658_15.png" alt="EV3 大马达" class="" loading="lazy" width="260" height="200"><div class="qty">1×</div><div>EV3 大马达</div><div class="mono">95658</div></div>
+<div class="item"><img src="img/part_6632_0.png" alt="3 孔细梁 (两端十字孔)" class="" loading="lazy" width="260" height="200"><div class="qty">3×</div><div>3 孔细梁 (两端十字孔)</div><div class="mono">6632</div></div>
+<div class="item"><img src="img/part_99455_15.png" alt="EV3 中马达" class="" loading="lazy" width="260" height="200"><div class="qty">1×</div><div>EV3 中马达</div><div class="mono">99455</div></div>
 <div class="item"><img src="img/part_geekservo_72.png" alt="Geekservo 舵机 (灰色, 270°)" class="" loading="lazy" width="260" height="200"><div class="qty">1×</div><div>Geekservo 舵机 (灰色, 270°)</div><div class="mono">geekservo</div></div>
-<div class="item"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="qty">29×</div><div>摩擦销 (2 孔长)</div><div class="mono">2780</div></div>
+<div class="item"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="qty">35×</div><div>摩擦销 (2 孔长)</div><div class="mono">2780</div></div>
 <div class="item"><img src="img/part_32073_72.png" alt="5 号轴" class="" loading="lazy" width="260" height="200"><div class="qty">1×</div><div>5 号轴</div><div class="mono">32073</div></div>
 <div class="item"><img src="img/part_32123a_72.png" alt="半轴套" class="" loading="lazy" width="260" height="200"><div class="qty">4×</div><div>半轴套</div><div class="mono">32123a</div></div>
+<div class="item"><img src="img/part_3705_0.png" alt="4 号轴" class="" loading="lazy" width="260" height="200"><div class="qty">1×</div><div>4 号轴</div><div class="mono">3705</div></div>
 <div class="item"><img src="img/part_3708_0.png" alt="12 号轴" class="" loading="lazy" width="260" height="200"><div class="qty">2×</div><div>12 号轴</div><div class="mono">3708</div></div>
 <div class="item"><img src="img/part_3713_72.png" alt="轴套" class="" loading="lazy" width="260" height="200"><div class="qty">4×</div><div>轴套</div><div class="mono">3713</div></div>
-<div class="item"><img src="img/part_43093_1.png" alt="轴销 (一半轴一半销)" class="" loading="lazy" width="260" height="200"><div class="qty">1×</div><div>轴销 (一半轴一半销)</div><div class="mono">43093</div></div>
-<div class="item"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="qty">24×</div><div>长摩擦销 (3 孔长)</div><div class="mono">6558</div></div>
+<div class="item"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="qty">22×</div><div>长摩擦销 (3 孔长)</div><div class="mono">6558</div></div>
 </div></section>
 <h2>搭建步骤</h2>
 <section class="step sub" id="s1">
@@ -157,145 +157,163 @@ th{color:var(--muted);font-weight:600}
 <div class="plate"><img src="img/step05.png" alt="接头" class="" loading="lazy" width="1200" height="860"></div>
 <p>用一块 7x5 框架盖住三排横梁的接头。</p>
 </section>
-<section class="step sub" id="s6">
+<section class="step" id="s6">
 <div class="step-head">
 <div class="num">6</div><div class="title-block">
-<div class="subtag">子组件 · 马达</div>
-<h3>马达固定板</h3></div>
+<h3>马达支架</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_95658_15.png" alt="EV3 大马达" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">EV3 大马达</div></div><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
-<div class="plate"><img src="img/step06.png" alt="马达固定板" class="" loading="lazy" width="1200" height="860"></div>
-<p>7x5 框架竖着插进马达底部两片耳朵之间的缝里, 用两根长销穿过 耳朵-框架-耳朵。</p>
+<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
+<div class="plate"><img src="img/step06.png" alt="马达支架" class="" loading="lazy" width="1200" height="860"></div>
+<p>7x5 框架竖着装在左边立板前面, 两根长销穿过 框架-横梁-立板。</p>
 </section>
-<section class="step" id="s7">
+<section class="step sub" id="s7">
 <div class="step-head">
 <div class="num">7</div><div class="title-block">
-<h3>装马达</h3></div>
+<div class="subtag">子组件 · 马达</div>
+<h3>马达面板</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/sub1.png" alt="马达" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的马达</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
-<div class="plate"><img src="img/step07.png" alt="装马达" class="" loading="lazy" width="1200" height="860"></div>
-<p>马达固定板的尾端对准左边立板, 两根长销穿过 固定板-横梁-立板。</p>
+<div class="callout"><div class="chip"><img src="img/part_99455_15.png" alt="EV3 中马达" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">EV3 中马达</div></div><div class="chip"><img src="img/part_32278_0.png" alt="15 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">15 孔粗梁</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">摩擦销 (2 孔长)</div></div><div class="chip"><img src="img/part_3705_0.png" alt="4 号轴" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">4 号轴</div></div></div>
+<div class="plate"><img src="img/step07.png" alt="马达面板" class="" loading="lazy" width="1200" height="860"></div>
+<p>15 孔梁贴在中马达正面 (有红色输出孔的一面): 两个摩擦销插进输出孔左右两侧的孔, 梁中间的孔正对输出孔。再把 4 号轴穿过这个孔插进输出孔, 轴应能跟着马达自由转动。</p>
 </section>
-<section class="step sub" id="s8">
+<section class="step" id="s8">
 <div class="step-head">
 <div class="num">8</div><div class="title-block">
-<div class="subtag">子组件 · 固定叉</div>
-<h3>固定叉 1</h3></div>
+<h3>装马达</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_32523_0.png" alt="3 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">8×</div><div class="n">3 孔粗梁</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
-<div class="plate"><img src="img/step08.png" alt="固定叉 1" class="" loading="lazy" width="1200" height="860"></div>
-<p>7x5 框架两侧各用两根长销夹上 3 孔梁。</p>
+<div class="callout"><div class="chip"><img src="img/sub1.png" alt="马达" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的马达</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
+<div class="plate"><img src="img/step08.png" alt="装马达" class="" loading="lazy" width="1200" height="860"></div>
+<p>15 孔梁的另一头贴在马达支架侧面下排的 4 个孔上, 用 4 个摩擦销固定。</p>
 </section>
 <section class="step sub" id="s9">
 <div class="step-head">
 <div class="num">9</div><div class="title-block">
 <div class="subtag">子组件 · 固定叉</div>
+<h3>固定叉 1</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_32523_0.png" alt="3 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">8×</div><div class="n">3 孔粗梁</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
+<div class="plate"><img src="img/step09.png" alt="固定叉 1" class="" loading="lazy" width="1200" height="860"></div>
+<p>7x5 框架两侧各用两根长销夹上 3 孔梁。</p>
+</section>
+<section class="step sub" id="s10">
+<div class="step-head">
+<div class="num">10</div><div class="title-block">
+<div class="subtag">子组件 · 固定叉</div>
 <h3>固定叉 2</h3></div>
 </div>
 <div class="callout"><div class="chip"><img src="img/part_32524_4.png" alt="7 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">7 孔粗梁</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
-<div class="plate"><img src="img/step09.png" alt="固定叉 2" class="" loading="lazy" width="1200" height="860"></div>
+<div class="plate"><img src="img/step10.png" alt="固定叉 2" class="" loading="lazy" width="1200" height="860"></div>
 <p>装上两根叉齿 (7 孔梁), 长销穿过 3 孔梁-叉齿-3 孔梁。</p>
-</section>
-<section class="step" id="s10">
-<div class="step-head">
-<div class="num">10</div><div class="title-block">
-<h3>装固定叉</h3></div>
-</div>
-<div class="callout"><div class="chip"><img src="img/sub2.png" alt="固定叉" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的固定叉</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
-<div class="plate"><img src="img/step10.png" alt="装固定叉" class="" loading="lazy" width="1200" height="860"></div>
-<p>固定叉的尾端对准右边立板, 两根长销穿过 固定叉-横梁-立板。</p>
 </section>
 <section class="step" id="s11">
 <div class="step-head">
 <div class="num">11</div><div class="title-block">
-<h3>转动座</h3></div>
+<h3>装固定叉</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">摩擦销 (2 孔长)</div></div><div class="chip"><img src="img/part_43093_1.png" alt="轴销 (一半轴一半销)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">轴销 (一半轴一半销)</div></div><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div></div>
-<div class="plate"><img src="img/step11.png" alt="转动座" class="" loading="lazy" width="1200" height="860"></div>
-<p>7x5 框架的短边插在马达输出盘上: 上下两个摩擦销, 中间一个轴销 (轴的一头插进输出盘)。</p>
+<div class="callout"><div class="chip"><img src="img/sub2.png" alt="固定叉" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的固定叉</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
+<div class="plate"><img src="img/step11.png" alt="装固定叉" class="" loading="lazy" width="1200" height="860"></div>
+<p>固定叉的尾端对准右边立板, 两根长销穿过 固定叉-横梁-立板。</p>
 </section>
 <section class="step" id="s12">
 <div class="step-head">
 <div class="num">12</div><div class="title-block">
+<h3>联轴</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/part_6632_0.png" alt="3 孔细梁 (两端十字孔)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">3 孔细梁 (两端十字孔)</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
+<div class="plate"><img src="img/step12.png" alt="联轴" class="" loading="lazy" width="1200" height="860"></div>
+<p>两片 3 孔细梁用一端的十字孔套在 4 号轴上, 一片朝上、一片朝下, 各插一个摩擦销。</p>
+</section>
+<section class="step" id="s13">
+<div class="step-head">
+<div class="num">13</div><div class="title-block">
+<h3>转动座</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div></div>
+<div class="plate"><img src="img/step13.png" alt="转动座" class="" loading="lazy" width="1200" height="860"></div>
+<p>7x5 框架的短边对准两个摩擦销和 4 号轴插上去: 销进上下两个孔, 轴进中间的孔。</p>
+</section>
+<section class="step" id="s14">
+<div class="step-head">
+<div class="num">14</div><div class="title-block">
 <h3>舵机</h3></div>
 </div>
 <div class="callout"><div class="chip"><img src="img/part_geekservo_72.png" alt="Geekservo 舵机 (灰色, 270°)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">Geekservo 舵机 (灰色, 270°)</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
-<div class="plate"><img src="img/step12.png" alt="舵机" class="" loading="lazy" width="1200" height="860"></div>
+<div class="plate"><img src="img/step14.png" alt="舵机" class="" loading="lazy" width="1200" height="860"></div>
 <p>舵机两个耳朵上的销孔对准转动座上边的第 1、3 个孔, 各插一根长销。输出轴朝向图中前方, 并且偏向魔方一侧。</p>
-</section>
-<section class="step sub" id="s13">
-<div class="step-head">
-<div class="num">13</div><div class="title-block">
-<div class="subtag">子组件 · 叉子</div>
-<h3>叉子 1</h3></div>
-</div>
-<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_32523_0.png" alt="3 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">8×</div><div class="n">3 孔粗梁</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
-<div class="plate"><img src="img/step13.png" alt="叉子 1" class="" loading="lazy" width="1200" height="860"></div>
-<p>7x5 框架两侧各用两根长销夹上 3 孔梁。</p>
-</section>
-<section class="step sub" id="s14">
-<div class="step-head">
-<div class="num">14</div><div class="title-block">
-<div class="subtag">子组件 · 叉子</div>
-<h3>叉子 2</h3></div>
-</div>
-<div class="callout"><div class="chip"><img src="img/part_40490_4.png" alt="9 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">9 孔粗梁</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
-<div class="plate"><img src="img/step14.png" alt="叉子 2" class="" loading="lazy" width="1200" height="860"></div>
-<p>装上两根叉齿 (9 孔梁)。叉齿内侧的间距就是夹魔方的宽度。</p>
 </section>
 <section class="step sub" id="s15">
 <div class="step-head">
 <div class="num">15</div><div class="title-block">
 <div class="subtag">子组件 · 叉子</div>
+<h3>叉子 1</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_32523_0.png" alt="3 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">8×</div><div class="n">3 孔粗梁</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
+<div class="plate"><img src="img/step15.png" alt="叉子 1" class="" loading="lazy" width="1200" height="860"></div>
+<p>7x5 框架两侧各用两根长销夹上 3 孔梁。</p>
+</section>
+<section class="step sub" id="s16">
+<div class="step-head">
+<div class="num">16</div><div class="title-block">
+<div class="subtag">子组件 · 叉子</div>
+<h3>叉子 2</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/part_40490_4.png" alt="9 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">9 孔粗梁</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
+<div class="plate"><img src="img/step16.png" alt="叉子 2" class="" loading="lazy" width="1200" height="860"></div>
+<p>装上两根叉齿 (9 孔梁)。叉齿内侧的间距就是夹魔方的宽度。</p>
+</section>
+<section class="step sub" id="s17">
+<div class="step-head">
+<div class="num">17</div><div class="title-block">
+<div class="subtag">子组件 · 叉子</div>
 <h3>导轨</h3></div>
 </div>
 <div class="callout"><div class="chip"><img src="img/part_3708_0.png" alt="12 号轴" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">12 号轴</div></div><div class="chip"><img src="img/part_32123a_72.png" alt="半轴套" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">半轴套</div></div></div>
-<div class="plate"><img src="img/step15.png" alt="导轨" class="" loading="lazy" width="1200" height="860"></div>
+<div class="plate"><img src="img/step17.png" alt="导轨" class="" loading="lazy" width="1200" height="860"></div>
 <p>两根 12 号轴穿过叉子框架两端的孔, 再在叉子后面套上半轴套。叉子应能在轴上顺滑地前后滑动。</p>
-</section>
-<section class="step" id="s16">
-<div class="step-head">
-<div class="num">16</div><div class="title-block">
-<h3>装叉子</h3></div>
-</div>
-<div class="callout"><div class="chip"><img src="img/sub3.png" alt="叉子" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的叉子</div></div><div class="chip"><img src="img/part_3713_72.png" alt="轴套" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">轴套</div></div></div>
-<div class="plate"><img src="img/step16.png" alt="装叉子" class="" loading="lazy" width="1200" height="860"></div>
-<p>导轨的另一头插进转动座远端的两个孔, 从框架中间的空档里给每根轴套上一个轴套, 把导轨卡住。</p>
-</section>
-<section class="step" id="s17">
-<div class="step-head">
-<div class="num">17</div><div class="title-block">
-<h3>立轴</h3></div>
-</div>
-<div class="callout"><div class="chip"><img src="img/part_32073_72.png" alt="5 号轴" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">5 号轴</div></div><div class="chip"><img src="img/part_32123a_72.png" alt="半轴套" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">半轴套</div></div><div class="chip"><img src="img/part_3713_72.png" alt="轴套" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">轴套</div></div></div>
-<div class="plate"><img src="img/step17.png" alt="立轴" class="" loading="lazy" width="1200" height="860"></div>
-<p>5 号轴竖着穿过叉子框架后部的孔: 框架下面一个半轴套, 上面两个轴套。</p>
 </section>
 <section class="step" id="s18">
 <div class="step-head">
 <div class="num">18</div><div class="title-block">
-<h3>曲柄</h3></div>
+<h3>装叉子</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_6632_0.png" alt="3 孔细梁 (两端十字孔)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">3 孔细梁 (两端十字孔)</div></div></div>
-<div class="plate"><img src="img/step18.png" alt="曲柄" class="" loading="lazy" width="1200" height="860"></div>
-<p>3 孔细梁一端的十字孔套在舵机输出轴上, 当作曲柄。(图中为夹紧位置)</p>
+<div class="callout"><div class="chip"><img src="img/sub3.png" alt="叉子" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的叉子</div></div><div class="chip"><img src="img/part_3713_72.png" alt="轴套" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">轴套</div></div></div>
+<div class="plate"><img src="img/step18.png" alt="装叉子" class="" loading="lazy" width="1200" height="860"></div>
+<p>导轨的另一头插进转动座远端的两个孔, 从框架中间的空档里给每根轴套上一个轴套, 把导轨卡住。</p>
 </section>
 <section class="step" id="s19">
 <div class="step-head">
 <div class="num">19</div><div class="title-block">
-<h3>连杆</h3></div>
+<h3>立轴</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_32524_0.png" alt="7 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7 孔粗梁</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">摩擦销 (2 孔长)</div></div><div class="chip"><img src="img/part_32123a_72.png" alt="半轴套" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">半轴套</div></div></div>
-<div class="plate"><img src="img/step19.png" alt="连杆" class="" loading="lazy" width="1200" height="860"></div>
-<p>7 孔梁当连杆: 一头套在立轴上, 另一头用摩擦销接曲柄, 最后在立轴顶上套一个半轴套。</p>
+<div class="callout"><div class="chip"><img src="img/part_32073_72.png" alt="5 号轴" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">5 号轴</div></div><div class="chip"><img src="img/part_32123a_72.png" alt="半轴套" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">半轴套</div></div><div class="chip"><img src="img/part_3713_72.png" alt="轴套" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">轴套</div></div></div>
+<div class="plate"><img src="img/step19.png" alt="立轴" class="" loading="lazy" width="1200" height="860"></div>
+<p>5 号轴竖着穿过叉子框架后部的孔: 框架下面一个半轴套, 上面两个轴套。</p>
 </section>
 <section class="step" id="s20">
 <div class="step-head">
 <div class="num">20</div><div class="title-block">
+<h3>曲柄</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/part_6632_0.png" alt="3 孔细梁 (两端十字孔)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">3 孔细梁 (两端十字孔)</div></div></div>
+<div class="plate"><img src="img/step20.png" alt="曲柄" class="" loading="lazy" width="1200" height="860"></div>
+<p>3 孔细梁一端的十字孔套在舵机输出轴上, 当作曲柄。(图中为夹紧位置)</p>
+</section>
+<section class="step" id="s21">
+<div class="step-head">
+<div class="num">21</div><div class="title-block">
+<h3>连杆</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/part_32524_0.png" alt="7 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7 孔粗梁</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">摩擦销 (2 孔长)</div></div><div class="chip"><img src="img/part_32123a_72.png" alt="半轴套" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">半轴套</div></div></div>
+<div class="plate"><img src="img/step21.png" alt="连杆" class="" loading="lazy" width="1200" height="860"></div>
+<p>7 孔梁当连杆: 一头套在立轴上, 另一头用摩擦销接曲柄, 最后在立轴顶上套一个半轴套。</p>
+</section>
+<section class="step" id="s22">
+<div class="step-head">
+<div class="num">22</div><div class="title-block">
 <h3>放入魔方</h3></div>
 </div>
 <div class="callout"><div class="chip"><img src="img/part_cube56_16.png" alt="56mm 魔方 (示意)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">56mm 魔方 (示意)</div></div></div>
-<div class="plate"><img src="img/step20.png" alt="放入魔方" class="" loading="lazy" width="1200" height="860"></div>
+<div class="plate"><img src="img/step22.png" alt="放入魔方" class="" loading="lazy" width="1200" height="860"></div>
 <p>舵机松开 (叉子退后), 从前方把魔方推进去, 直到背面卡进固定叉; 再让舵机夹紧。</p>
 </section>
 <section id="checks" class="cover"><h2>检查与待验证</h2>

@@ -161,7 +161,8 @@ python -m quadcuber bench --timing timing.json --compare
 | 假设 | 在哪里改 |
 | --- | --- |
 | EV3 编码器 4 倍频为 720 计数/圈 | `config.COUNTS_PER_MOTOR_REV`（`cal` 实测） |
-| EV3 大马达 9V 空载约 1000°/s，时间常数约 0.05s | `GAINS["v_full"]`、`GAINS["tau"]`（`speed` 实测） |
+| EV3 大马达 9V 空载约 1000°/s，中马达约 1450°/s，时间常数约 0.05s | `GAINS["v_full"]`、`GAINS["tau"]`（`speed` 实测；换马达后必须重新测） |
+| 中马达扭矩（持续约 8 N·cm，大马达约 20 N·cm）够拧魔方 | `bench 1 20 load` 时不应频繁报 `stall` |
 | 编码器信号是 5V 电平 | 用万用表确认后再接电平转换 |
 | EV3 线的线色 | 以万用表为准 |
 | Geekservo 的开合位置和耗时 | `SERVO_*`（`servo`、`grip` + 录像） |

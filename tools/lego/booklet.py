@@ -1,7 +1,7 @@
 """生成乐高风格的搭建说明书: 步骤图、零件缩略图、docs/lego/index.html 和 model.ldr。
 
 用法 (先在另一个终端启动 render/server.py):
-    python booklet.py [--no-render]
+    python booklet.py [--no-render] [--medium]     默认大马达版, --medium 生成中马达版 (docs/lego/medium/)
 
 步骤图由 render/render.js 在无头 Chromium 里用 three.js 的 LDrawLoader 渲染。
 """
@@ -17,8 +17,13 @@ import check
 import model
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, "..", "..", "docs", "lego")
+DOCS = os.path.join(HERE, "..", "..", "docs", "lego")
+OUT = DOCS
 IMG = os.path.join(OUT, "img")
+MOTOR = "large"
+MOTOR_NAME = {"large": "EV3 大马达", "medium": "EV3 中马达"}
+# 已发布的说明书 (artifact), 两版互相链接
+ARTIFACT_URL = {"large": "https://claude.ai/artifact/BWgtEpkX4PGRGnYzvNV2L4", "medium": "https://claude.ai/artifact/7VtzEUtxMbezHPJQYCDWPX"}
 WORK = os.path.join(HERE, ".cache", "work")
 
 W, H = 1200, 860  # 步骤图尺寸
@@ -48,7 +53,7 @@ def visible_parts(parts, k):
 
 def head_part(p):
     s = model.STEPS[p.step - 1]
-    return s["title"] in model.head_names() or s["sub"] == "叉子" or p.name == "95658.dat"
+    return s["title"] in model.head_names() or s["sub"] == "叉子" or p.name in ("95658.dat", "99455.dat")
 
 
 def ldr_for_step(parts, k):
@@ -60,7 +65,7 @@ def ldr_for_step(parts, k):
     if s["focus"] == "head":
         fit_old = [p for p in old if head_part(p)]
     elif s["focus"] == "mech":
-        fit_old = [p for p in old if head_part(p) and p.name != "95658.dat"]
+        fit_old = [p for p in old if head_part(p) and p.name not in ("95658.dat", "99455.dat")]
     elif s["focus"] == "new":
         fit_old = []
     else:
@@ -77,10 +82,15 @@ def part_key(p):
     return (p.name, p.color)
 
 
-def main(render=True):
+def main(render=True, motor="large"):
+    global OUT, IMG, MOTOR, WORK
+    MOTOR = motor
+    OUT = DOCS if motor == "large" else os.path.join(DOCS, "medium")
+    IMG = os.path.join(OUT, "img")
+    WORK = os.path.join(HERE, ".cache", "work", motor)
     os.makedirs(IMG, exist_ok=True)
     os.makedirs(WORK, exist_ok=True)
-    parts = model.build()
+    parts = model.build(motor=motor)
     steps = model.STEPS
     jobs = []
     step_new = []
@@ -127,17 +137,17 @@ def main(render=True):
     for tag, ext in (("closed", True), ("open", False)):
         path = os.path.join(WORK, f"cover_{tag}.ldr")
         with open(path, "w") as f:
-            f.write(model.to_ldr(model.build(fork_extended=ext)))
+            f.write(model.to_ldr(model.build(fork_extended=ext, motor=motor)))
         jobs.append({"model": path, "out": os.path.join(IMG, f"cover_{tag}.png"),
                      "opts": {"w": 1400, "h": 900, "yaw": 35, "pitch": 28, "margin": 0.04}})
     for tag, ext in (("closed", True), ("open", False)):
-        head = [p for p in model.build(fork_extended=ext) if head_part(p) or p.name == "cube56.dat"]
+        head = [p for p in model.build(fork_extended=ext, motor=motor) if head_part(p) or p.name == "cube56.dat"]
         path = os.path.join(WORK, f"mech_{tag}.ldr")
         with open(path, "w") as f:
             f.write("0 mech\n" + "\n".join(p.ldraw() for p in head) + "\n")
         jobs.append({"model": path, "out": os.path.join(IMG, f"mech_{tag}.png"),
                      "opts": {"w": 1000, "h": 520, "yaw": 0, "pitch": 88, "margin": 0.05}})
-    model.build()  # 恢复默认步骤表
+    model.build(motor=motor)  # 恢复步骤表
 
     if render:
         jobs_path = os.path.join(WORK, "jobs.json")
@@ -148,7 +158,7 @@ def main(render=True):
         subprocess.run(["node", "render.js", jobs_path], cwd=os.path.join(HERE, "render"), check=True, env=env)
 
     with open(os.path.join(OUT, "model.ldr"), "w") as f:
-        f.write(model.to_ldr(parts, "quadcuber 单臂原型"))
+        f.write(model.to_ldr(parts, f"quadcuber 单臂原型 ({MOTOR_NAME[motor]})"))
     write_html(parts, step_new, keys, list(subs))
 
 
@@ -238,7 +248,7 @@ def write_html(parts, step_new, keys, subs):
     steps = model.STEPS
     esc = html.escape
     bom = Counter(part_key(p) for p in parts if p.name != "cube56.dat")
-    n_parts = sum(n for k, n in bom.items() if k[0] not in ("95658.dat", "geekservo.dat"))
+    n_parts = sum(n for k, n in bom.items() if k[0] not in ("95658.dat", "99455.dat", "geekservo.dat"))
 
     def img(src, alt, cls="", w=None, h=None):
         size = f' width="{w}" height="{h}"' if w else ""
@@ -248,7 +258,7 @@ def write_html(parts, step_new, keys, subs):
         return f"part_{k[0][:-4]}_{k[1]}.png"
 
     out = []
-    out.append('<title>quadcuber 单臂搭建</title>')
+    out.append('<title>quadcuber 单臂搭建</title>' if MOTOR == "large" else '<title>quadcuber 单臂搭建 中马达</title>')
     out.append('<link rel="preconnect" href="https://fonts.googleapis.com">')
     out.append('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700'
                '&family=JetBrains+Mono&family=Noto+Sans+SC:wght@400;700&display=swap">')
@@ -258,15 +268,19 @@ def write_html(parts, step_new, keys, subs):
     # 封面
     xf_c, xf_o = model.fork_frame_x(True), model.fork_frame_x(False)
     out.append('<header class="cover">')
-    out.append('<div class="eyebrow">quadcuber · 单臂原型 · 搭建说明书</div>')
+    out.append(f'<div class="eyebrow">quadcuber · 单臂原型 · 搭建说明书 · {MOTOR_NAME[MOTOR]}版</div>')
     out.append("<h1>一只机械手 + 测试架</h1>")
-    out.append("<p>一个 EV3 大马达带动机械手旋转, 一个灰色 Geekservo 推拉叉子夹紧或松开魔方。"
+    om = "medium" if MOTOR == "large" else "large"
+    link = ARTIFACT_URL[om] or ("medium/index.html" if om == "medium" else "../index.html")
+    out.append(f'<p class="cap">本页是{MOTOR_NAME[MOTOR]}版。另有<a href="{link}">{MOTOR_NAME[om]}版</a>, '
+               '两版的机械手、叉子和测试架大部分相同, 只有马达固定和马达与转动座的连接不同。</p>')
+    out.append(f"<p>一个 {MOTOR_NAME[MOTOR]}带动机械手旋转, 一个灰色 Geekservo 推拉叉子夹紧或松开魔方。"
                "测试架把马达和一个固定叉连在一起, 固定叉卡住魔方背面的中间一列, 这样机械手就可以单独拧魔方的一层。"
                "搭好后按 <b>docs/single_arm.md</b> 接线和测试。</p>")
     out.append('<div class="plate">' + img("cover_closed.png", "整机总览", w=1400, h=900) + "</div>")
     out.append('<div class="facts">'
                f'<div class="fact"><b>{len(steps)}</b><span>个步骤</span></div>'
-               f'<div class="fact"><b>{n_parts}</b><span>个乐高零件, 另加 EV3 大马达和舵机各 1 个</span></div>'
+               f'<div class="fact"><b>{n_parts}</b><span>个乐高零件, 另加 {MOTOR_NAME[MOTOR]}和舵机各 1 个</span></div>'
                f'<div class="fact"><b>{model.STROKE * 0.4:.1f} mm</b><span>叉子行程 (要求 ≥ 13mm)</span></div>'
                f'<div class="fact"><b>56 mm</b><span>魔方尺寸 (叉齿内侧间距约 56.8mm)</span></div>'
                "</div>")
@@ -324,11 +338,11 @@ def write_html(parts, step_new, keys, subs):
         out.append("</section>")
 
     # 检查
-    closed = model.build()
+    closed = model.build(motor=MOTOR)
     problems = len(check.collisions(closed)) + len(check.connections(closed))
-    opened = model.build(fork_extended=False)
+    opened = model.build(fork_extended=False, motor=MOTOR)
     problems += len(check.collisions(opened)) + len(check.connections(opened))
-    model.build()
+    model.build(motor=MOTOR)
     out.append('<section id="checks" class="cover"><h2>检查与待验证</h2>')
     out.append('<div class="tbl"><table><tr><th>程序检查 (tools/lego/run_check.py)</th><th>结果</th></tr>'
                f'<tr><td>零件互相穿模 (夹紧、松开两种状态)</td><td class="ok">{"无" if problems == 0 else problems}</td></tr>'
@@ -351,4 +365,4 @@ def write_html(parts, step_new, keys, subs):
 
 
 if __name__ == "__main__":
-    main(render="--no-render" not in sys.argv)
+    main(render="--no-render" not in sys.argv, motor="medium" if "--medium" in sys.argv else "large")

@@ -107,7 +107,7 @@ def _allowed(a, b):
     if names != {"geekservo.dat", "6632.dat"}:
         return False
     servo, crank = (a, b) if a.name == "geekservo.dat" else (b, a)
-    out_pt = servo.world((10, -43, 0))
+    out_pt = servo.world((10, -43, 0))  # 输出轴上一点 (局部坐标)
     out_ax = servo.rot @ np.array([0, 1.0, 0])
     hole = crank.world((0, 0, 0))
     return np.linalg.norm(np.cross(hole - out_pt, out_ax)) < 1.0
@@ -119,7 +119,7 @@ def _hole_lines(p):
     return [(p.world(q), p.rot @ a) for q, a in lines]
 
 
-CONNECTOR_LEN = {"2780.dat": 40, "6558.dat": 60, "43093.dat": 40, "3708.dat": 240, "32073.dat": 100,
+CONNECTOR_LEN = {"3705.dat": 80, "2780.dat": 40, "6558.dat": 60, "43093.dat": 40, "3708.dat": 240, "32073.dat": 100,
                  "3713.dat": 20, "32123a.dat": 10}
 
 
