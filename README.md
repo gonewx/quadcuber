@@ -5,7 +5,7 @@
 - 规划器：把求解器给出的转动序列（如 `R U R' U'`）翻译成 4 个机械手的动作序列，并使总耗时最短。
 - 模拟器：在 54 个贴纸的魔方模型上按物理动作逐步重放，检查每一步是否满足机械约束，以及最后魔方是否还原。
 
-- 单臂测试程序（`firmware/pico/`，MicroPython）：测机械手转 90° 的耗时、到位精度和夹持可靠性，结果汇总后替换规划器的耗时估算值。接线和测试步骤见 [docs/single_arm.md](docs/single_arm.md)。
+- 单臂测试程序（`firmware/pico/`，MicroPython）：测机械手转 90° 的耗时、到位精度和夹持可靠性，结果汇总后替换规划器的耗时估算值。接线和测试步骤见 [docs/single_arm.md](docs/single_arm.md)，乐高机械手的结构思路和尺寸要求见 [docs/arm_concept.md](docs/arm_concept.md)。
 
 规划器纯 Python 实现，不依赖第三方库，可以在 PC 或树莓派 Zero W 上运行。
 
@@ -89,4 +89,5 @@ python -m unittest -v
 | `quadcuber/__main__.py` | 命令行 |
 | `firmware/pico/` | 单臂测试程序（MicroPython）：配置、PIO 编码器、马达/舵机驱动、位置控制、串口命令行 |
 | `docs/single_arm.md` | 单臂原型的接线、测试步骤和待验证假设 |
+| `docs/arm_concept.md` | 乐高机械手的概念设计：叉子 + 滑块结构、关键尺寸、单臂测试的魔方固定方法 |
 | `tests/` | 单元测试 |

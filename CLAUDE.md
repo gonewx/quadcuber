@@ -42,6 +42,7 @@
 - `firmware/pico/`：单臂测试程序（MicroPython）。`control.py` 是与硬件无关的位置控制（梯形曲线 + 前馈 + PID + 到位/堵转/失控判定），CPython 也能跑；`encoder.py` 用 PIO 做 4 倍频计数（每个编码器 2 个状态机，读数时通过 SMx_INSTR 插入指令）；`arm_test.py` 是串口命令行。**尚未在实物上运行过。** MicroPython 兼容性：不要用 dataclass、类型注解、`from __future__`。
 - `tests/pico_sim.py`：假的 `machine`/`rp2`/`time` 模块 + 小型 PIO 解释器 + 马达模型，让固件在 CPython 里端到端运行。改固件后必须跑 `tests/test_firmware.py`。
 - `docs/single_arm.md`：单臂原型的接线（含四臂引脚总表）、测试步骤、待验证假设。
+- `docs/arm_concept.md`：乐高机械手的概念设计（给用户搭建参考，非零件清单）。夹条的实现方式是 **U 形叉 + 舵机推动沿轴向前进/后退**：叉齿卡住面中间一列的两个棱块外侧，靠形状传递扭矩和托住魔方。关键尺寸：叉齿宽 ≤16mm、退出行程 ≥13mm、魔方面前 14mm 内除叉齿外不能有宽零件（按 56mm 魔方计算）。模型里"叉子水平时也能支撑魔方"这一点待验证。
 - 运行测试：`python -m unittest -v`（53 个测试）。命令行：`python -m quadcuber plan|bench|armlog`。
 
 ## 已知问题和注意事项
