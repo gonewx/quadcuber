@@ -1,0 +1,76 @@
+<!doctype html><html><head><meta charset="utf-8">
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body style="margin:0;background:#fff">
+<script type="module">
+// 渲染页: render.js 通过 window.renderLdr(模型文本, 选项) 调用, 返回 PNG 的 data URL。
+import * as THREE from 'three';
+import { LDrawLoader } from 'three/addons/loaders/LDrawLoader.js';
+import { LDrawConditionalLineMaterial } from 'three/addons/materials/LDrawConditionalLineMaterial.js';
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1);
+document.body.appendChild(renderer.domElement);
+const loader = new LDrawLoader();
+loader.setConditionalLineMaterial(LDrawConditionalLineMaterial);
+loader.setPartsLibraryPath('/ldraw/');
+loader.smoothNormals = true;
+const ready = loader.preloadMaterials('/ldraw/colors/ldcfgalt.ldr');
+
+// opts: w, h, yaw, pitch (度), maxStep (只显示到第几步), fitStep (按哪几步取景), margin, highlight (新零件步号)
+window.renderLdr = async (text, opts) => {
+  await ready;
+  const group = await new Promise((res, rej) => loader.parse(text, res, rej));
+  group.rotation.x = Math.PI;  // LDraw -Y 向上
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(opts.bg ?? 0xffffff);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x8a8a8a, 2.3));
+  const dl = new THREE.DirectionalLight(0xffffff, 1.5); dl.position.set(-1, 2, 1.5); scene.add(dl);
+  scene.add(group);
+  group.updateMatrixWorld(true);
+  const maxStep = opts.maxStep ?? 1e9;
+  for (const c of group.children) {
+    const st = c.userData.buildingStep ?? 0;
+    c.visible = st <= maxStep;
+    if (opts.highlight !== undefined && st < opts.highlight && opts.fadeOld) {
+      c.traverse(o => {
+        if (!o.material) return;
+        const ms = Array.isArray(o.material) ? o.material : [o.material];
+        const nm = ms.map(m => { const k = m.clone(); if (o.isMesh) { k.color = k.color.clone().lerp(new THREE.Color(0xffffff), 0.45); } else { k.transparent = true; k.opacity = 0.35; } return k; });
+        o.material = Array.isArray(o.material) ? nm : nm[0];
+      });
+    }
+  }
+  const W = opts.w || 900, H = opts.h || 700;
+  renderer.setSize(W, H);
+  const yaw = (opts.yaw ?? 35) * Math.PI / 180, pitch = (opts.pitch ?? 30) * Math.PI / 180;
+  const dir = new THREE.Vector3(Math.sin(yaw) * Math.cos(pitch), Math.sin(pitch), Math.cos(yaw) * Math.cos(pitch));
+  const box = new THREE.Box3();
+  for (const c of group.children) if (c.visible) box.expandByObject(c);
+  const ctr = new THREE.Vector3(); box.getCenter(ctr);
+  const r = box.getSize(new THREE.Vector3()).length() / 2 || 50;
+  const cam = new THREE.OrthographicCamera(-1, 1, 1, -1, -r * 20, r * 20);
+  cam.position.copy(ctr).addScaledVector(dir, r * 4); cam.lookAt(ctr); cam.updateMatrixWorld();
+  const inv = cam.matrixWorldInverse; let x0 = 1e9, x1 = -1e9, y0 = 1e9, y1 = -1e9;
+  const v = new THREE.Vector3();
+  for (const c of group.children) {
+    const st = c.userData.buildingStep ?? 0;
+    if (!c.visible || (opts.fitStep !== undefined && st > opts.fitStep) || (opts.fitFrom !== undefined && st < opts.fitFrom)) continue;
+    c.traverse(o => {
+      if (!o.isMesh) return;
+      const pos = o.geometry.attributes.position; const stride = Math.max(1, Math.floor(pos.count / 300));
+      for (let i = 0; i < pos.count; i += stride) {
+        v.fromBufferAttribute(pos, i).applyMatrix4(o.matrixWorld).applyMatrix4(inv);
+        x0 = Math.min(x0, v.x); x1 = Math.max(x1, v.x); y0 = Math.min(y0, v.y); y1 = Math.max(y1, v.y);
+      }
+    });
+  }
+  const m = opts.margin ?? 0.06; let cw = (x1 - x0) * (1 + 2 * m), ch = (y1 - y0) * (1 + 2 * m);
+  if (cw / ch > W / H) ch = cw * H / W; else cw = ch * W / H;
+  const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+  cam.left = cx - cw / 2; cam.right = cx + cw / 2; cam.top = cy + ch / 2; cam.bottom = cy - ch / 2;
+  cam.updateProjectionMatrix();
+  renderer.render(scene, cam);
+  return renderer.domElement.toDataURL('image/png');
+};
+window.pageReady = true;
+</script></body></html>
