@@ -43,7 +43,7 @@ def result(kind, data):
 class Arm:
     def __init__(self):
         self.motor = Motor(config.MOTOR_IN1, config.MOTOR_IN2, config.MOTOR_INVERT, config.PWM_FREQ)
-        self.enc = Encoder(config.ENC_A, config.ENC_B, config.ENC_SM, config.ENC_INVERT)
+        self.enc = Encoder(config.ENC_A, config.ENC_B, config.ENC_SM, config.ENC_INVERT, pull_up=config.ENC_PULLUP)
         self.servo = Servo(config.SERVO)
         self.gains = Gains(**config.GAINS)
         self.nominal = 0.0  # 名义角度 (90 的整数倍), 相对移动以它为基准, 误差不会累积

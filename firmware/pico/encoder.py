@@ -51,9 +51,11 @@ def _edge_counter():
 
 
 class Encoder:
-    def __init__(self, pin_a, pin_b, sm_ids, invert=False, freq=10_000_000):
-        a = Pin(pin_a, Pin.IN, Pin.PULL_UP)
-        b = Pin(pin_b, Pin.IN, Pin.PULL_UP)
+    def __init__(self, pin_a, pin_b, sm_ids, invert=False, freq=10_000_000, pull_up=False):
+        # 默认不开内部上拉: BSS138 模块自带上拉, TXS0108E 不宜接上拉, 电阻分压时上拉会抬高分压点
+        pull = Pin.PULL_UP if pull_up else None
+        a = Pin(pin_a, Pin.IN, pull)
+        b = Pin(pin_b, Pin.IN, pull)
         self._sms = []
         self._instr = []
         for sm_id, (base, other) in zip(sm_ids, ((a, b), (b, a))):
