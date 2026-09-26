@@ -171,3 +171,6 @@ python -m quadcuber bench --timing timing.json --compare
 | EV3 线的线色 | 以万用表为准 |
 | Geekservo 的开合位置和耗时 | `SERVO_*`（`servo`、`grip` + 录像） |
 | MicroPython 能稳定跑 1kHz 控制循环 | 看 `RESULT` 里的 `max_dt_us` |
+| 一对相对的叉子在水平姿态也能托住魔方（整体翻转的前提） | 慢速整体翻转 90° 实测；托不住要改叉齿（弹性预紧），并修正 `quadcuber/machine.py` 的支撑约束 |
+| 曲柄停在死点附近时叉子不会被推退 | 拧面时录像看叉子有没有后退；不行就加机械限位 / 过中心锁定 |
+| 叉子与这一层之间的空转（计算约 ±4.5°） | 对齐标记 + 录像，比较编码器角度和魔方面角度 |
