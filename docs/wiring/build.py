@@ -491,12 +491,12 @@ def breadboard_svg():
         x, y = hole(n + 2, "h")
         s.append(f'<text class="pu sm" x="{x + 3.5}" y="{y - 9}" transform="rotate(-90 {x + 3.5} {y - 9})">{text}</text>')
 
-    # 电平转换 (按常见的 SparkFun 型排针画, 以丝印为准)
+    # 电平转换: 按用户模块的丝印顺序, 第 30~35 列依次为 HV4 HV3 GND HV HV2 HV1 (LV 侧同序)
     s.append('<rect class="lvl" x="676" y="296" width="96" height="80" rx="4" opacity="0.93"/>')
     s.append('<text class="pt sm" x="724" y="330" text-anchor="middle">电平转换</text>')
     s.append('<text class="ps lv" x="724" y="362" text-anchor="middle">上 HV · 下 LV</text>')
     s.append('<text class="ps lv" x="724" y="348" text-anchor="middle">BSS138</text>')
-    for i, (hv, lv) in enumerate((("1", "1"), ("2", "2"), ("V", "V"), ("G", "G"), ("3", "3"), ("4", "4"))):
+    for i, (hv, lv) in enumerate((("4", "4"), ("3", "3"), ("G", "G"), ("V", "V"), ("2", "2"), ("1", "1"))):
         c = 30 + i
         for r, t in (("d", hv), ("g", lv)):
             x, y = hole(c, r)
@@ -508,20 +508,20 @@ def breadboard_svg():
     s.append(jumper("gnd", "wg", hole(5, "a"), hole(5, "T-")))
     s.append(jumper("gnd", "wg", hole(5, "j"), hole(5, "B-")))
     s.append(jumper("gnd", "wg", hole(40, "T-"), hole(40, "B-"), bow=-26))
-    s.append(jumper("p33", "w33", hole(7, "b"), hole(32, "j"), bow=150, label="3.3V", label_at=(516, 262)))
-    s.append(jumper("enc", "we", hole(8, "i"), hole(30, "i"), bow=-60, label="GP4→LV1", label_at=(520, 434)))
-    s.append(jumper("enc", "we", hole(9, "j"), hole(31, "j"), bow=-88, label="GP5→LV2", label_at=(470, 470)))
-    s.append(jumper("p5", "w5", hole(32, "a"), hole(32, "T+")))
-    s.append(jumper("gnd", "wg", hole(33, "a"), hole(33, "T-")))
+    s.append(jumper("p33", "w33", hole(7, "b"), hole(33, "j"), bow=150, label="3.3V", label_at=(520, 262)))
+    s.append(jumper("enc", "we", hole(8, "i"), hole(35, "i"), bow=-60, label="GP4→LV1", label_at=(540, 434)))
+    s.append(jumper("enc", "we", hole(9, "j"), hole(34, "j"), bow=-88, label="GP5→LV2", label_at=(490, 470)))
+    s.append(jumper("p5", "w5", hole(33, "a"), hole(33, "T+")))
+    s.append(jumper("gnd", "wg", hole(32, "a"), hole(32, "T-")))
 
     # EV3 线 (剪开)
     s.append(box(596, 26, 234, 58, "EV3 马达线 (剪开的 6 根芯)"))
-    tails = [(612, "白", "wm"), (628, "黑", "wm"), (684, "黄 A", "we"), (700, "蓝 B", "we"), (780, "绿 5V", "w5"),
+    tails = [(612, "白", "wm"), (628, "黑", "wm"), (748, "蓝 B", "we"), (764, "黄 A", "we"), (780, "绿 5V", "w5"),
              (796, "红 GND", "wg")]
     for x, t, cls in tails:
         s.append(f'<text class="pn xs" x="{x}" y="78" text-anchor="middle">{t.split()[0]}</text>')
-    s.append(jumper("enc", "we", (684, 84), hole(30, "b"), label="A相", label_at=(678, 180), anchor="end"))
-    s.append(jumper("enc", "we", (700, 84), hole(31, "b"), label="B相", label_at=(706, 180), anchor="start"))
+    s.append(jumper("enc", "we", (764, 84), hole(35, "b"), label="A相", label_at=(770, 186), anchor="start"))
+    s.append(jumper("enc", "we", (748, 84), hole(34, "b"), label="B相", label_at=(742, 186), anchor="end"))
     s.append(jumper("p5", "w5", (780, 84), hole(36, "T+"), label="5V", label_at=(772, 150), anchor="end"))
     s.append(jumper("gnd", "wg", (796, 84), hole(37, "T-"), label="GND", label_at=(804, 150), anchor="start"))
     s.append(stub("wm", 612, 84, 0, 34, "白"))
@@ -559,16 +559,16 @@ def breadboard_svg():
 
 BB_TABLE = [
     ("插 Pico", "c3~c22、h3~h22", "USB 朝左。1 号脚在 h3, 20 号脚在 h22; 40 号脚在 c3, 21 号脚在 c22"),
-    ("插电平转换", "第 30~35 列", "跨在中间凹槽上, HV 那排朝上 (靠 5V 轨), LV 那排朝下"),
+    ("插电平转换", "第 30~35 列", "跨在中间凹槽上, HV 那排朝上 (靠 5V 轨)。从左到右: HV4 HV3 GND HV HV2 HV1"),
     ("地", "a5 → 上排 −", "Pico 38 号脚 GND"),
     ("地", "j5 → 下排 −", "Pico 3 号脚 GND"),
     ("地", "上排 − (第 40 列) → 下排 −", "把上下两条地线轨连起来"),
-    ("3.3V", "b7 → j32", "Pico 36 号脚 (3V3) → 电平转换 LV"),
-    ("5V", "a32 → 上排 +", "电平转换 HV 接 5V"),
-    ("地", "a33 → 上排 −", "电平转换 GND"),
-    ("编码器", "i8 → i30", "GP4 → LV1"),
-    ("编码器", "j9 → j31", "GP5 → LV2"),
-    ("编码器", "黄线 → b30, 蓝线 → b31", "EV3 A/B 相 → HV1/HV2"),
+    ("3.3V", "b7 → j33", "Pico 36 号脚 (3V3) → 电平转换 LV"),
+    ("5V", "a33 → 上排 +", "电平转换 HV 接 5V"),
+    ("地", "a32 → 上排 −", "电平转换 GND"),
+    ("编码器", "i8 → i35", "GP4 → LV1"),
+    ("编码器", "j9 → j34", "GP5 → LV2"),
+    ("编码器", "黄线 → b35, 蓝线 → b34", "EV3 A/B 相 → HV1/HV2"),
     ("编码器电源", "绿线 → 上排 +, 红线 → 上排 −", "EV3 线的红色是地线"),
     ("5V 电源", "降压 OUT+ → 上排 +, GND → 上排 −", "面包板上的 5V 和地都从这里来"),
     ("马达控制", "j6 → AIN1, j7 → AIN2", "杜邦线接到板外的 DRV8833"),
@@ -681,8 +681,8 @@ def page():
                '孔的坐标写法: 字母是行, 数字是列, 例如 <span class="mono">a5</span> 是 a 行第 5 列。</p>'
                '<figure><div class="scroll">' + breadboard_svg() + "</div>"
                "<figcaption>细线是插在面包板上的跳线, 粗线头是不走面包板、直接连到别处的线 (写了去向)。"
-               "电平转换模块按常见的 SparkFun 型排针顺序 (HV1、HV2、HV、GND、HV3、HV4) 画的, 你的模块顺序不同就按丝印对应, "
-               "只要保证每根线接的是同名的脚。</figcaption></figure>"
+               "电平转换模块按你的模块丝印画: 第 30~35 列从左到右是 HV4、HV3、GND、HV、HV2、HV1, "
+               "LV 一侧按同样顺序 (LV4、LV3、GND、LV、LV2、LV1)。插之前再对一下丝印, 保证每根线接的是同名的脚。</figcaption></figure>"
                '<div class="tbl"><table><tr><th>类别</th><th>从 → 到</th><th>说明</th></tr>' + rows + "</table></div>"
                '<div class="warn"><b>先检查面包板的电源轨。</b> 有些面包板的电源轨在中间 (第 30 列左右) 是断开的, '
                "红蓝线在那里有个缺口。用万用表测一下上排 + 的第 5 列和第 40 列通不通, 不通就在断口处补一根跳线。"
