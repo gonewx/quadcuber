@@ -16,7 +16,7 @@ ENC_SM = (0, 1)  # 编码器占用的两个 PIO 状态机 (0~3 在 PIO0, 4~7 在
 # 用 check 命令检查: 正占空比应让编码器读数增加。不一致时把其中一个改成 True。
 MOTOR_INVERT = False
 ENC_INVERT = False
-# 编码器引脚是否开 Pico 内部上拉 (约 50kΩ)。BSS138 模块、TXS0108E、电阻分压都不需要, 保持 False。
+# 修订编码器接口由 SN74LVC2G17 驱动；Pico 内部上拉保持关闭。见 docs/ev3-interface-verification.md。
 ENC_PULLUP = False
 
 # ---- 机械参数 ---------------------------------------------------------------

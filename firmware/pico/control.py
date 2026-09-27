@@ -57,7 +57,8 @@ class Gains:
     def set(self, name, value):
         if name not in self.__dict__:
             raise KeyError("未知参数: " + name)
-        self.__dict__[name] = float(value)
+        # MicroPython 的实例 __dict__ 是只读映射，必须通过属性接口赋值。
+        setattr(self, name, float(value))
 
     def as_dict(self):
         return {k: self.__dict__[k] for k in self.names()}

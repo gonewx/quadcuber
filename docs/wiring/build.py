@@ -3,10 +3,13 @@
     python docs/wiring/build.py
 
 引脚分配以 firmware/pico/config.py 为准 (R 臂): GP2/GP3 马达, GP4/GP5 编码器, GP8 舵机。
+洞洞板图由 perfboard_layout.py 按孔位生成，同时生成可独立打开的 perfboard.html。
+详细接线见 ../perfboard.md。
 """
 
 import html
 import os
+import perfboard_layout
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -156,13 +159,6 @@ def wiring_svg():
     s.append(wire("p9", "w9", [(190, 40), (270, 40)], "9V", (212, 33)))
     s.append(wire("p9", "w9", [(230, 40), (230, 120), (540, 120), (540, 180)]))
     s.append(junction("p9", "w9", 230, 40))
-    # 电容
-    s.append('<g class="wire" data-g="p9"><path class="w w9" d="M540 146 L584 146"/>'
-             '<line class="cap" x1="585" y1="137" x2="585" y2="155"/><line class="cap" x1="592" y1="137" x2="592" y2="155"/>'
-             '<path class="w g" d="M592 146 L604 146"/>'
-             '<text class="note" x="560" y="168">≥100µF (长脚接 9V)</text></g>')
-    s.append(junction("p9", "w9", 540, 146))
-    s.append(ground(604, 146, "right", label=False))
     s.append(wire("p5", "w5", [(420, 40), (440, 40), (440, 150), (40, 150), (40, 540), (530, 540), (530, 580)],
                   "5V", (446, 70)))
     s.append(wire("p5", "w5", [(70, 270), (40, 270)]))
@@ -570,9 +566,10 @@ BB_TABLE = [
     ("编码器", "j9 → j34", "GP5 → LV2"),
     ("编码器", "黄线 → b35, 蓝线 → b34", "EV3 A/B 相 → HV1/HV2"),
     ("编码器电源", "绿线 → 上排 +, 红线 → 上排 −", "EV3 线的红色是地线"),
-    ("5V 电源", "降压 OUT+ → 上排 +, GND → 上排 −", "面包板上的 5V 和地都从这里来"),
-    ("马达控制", "j6 → AIN1, j7 → AIN2", "杜邦线接到板外的 DRV8833"),
-    ("舵机信号", "j13 → 舵机信号线", "舵机电源另外直连 5V 降压模块"),
+    ("5V 电源", "J6.1 → 上排 + 第8孔, J6.2 → 上排 − 第9孔", "从洞洞板排母引出两根公对公线"),
+    ("马达控制", "j6 → J7.1, j7 → J7.2", "经洞洞板焊线接 DRV8833 AIN1 / AIN2"),
+    ("舵机信号", "j13 → J7.3", "经洞洞板接舵机信号，电源不走面包板"),
+    ("驱动使能", "a7 → J7.4", "3V3 → STBY；b7 已用于电平转换，保留原跳线"),
 ]
 
 
@@ -580,7 +577,7 @@ STEPS = [
     ("gnd", "先接所有地线", "断电状态下, 把 9V 电源负极、5V 降压模块 GND、DRV8833 GND、电平转换 GND、舵机地线、"
      "EV3 线 3 号脚 (红色) 和 Pico 的 38 号脚连在一起。先接地, 后面任何一步接错都更不容易损坏器件。"),
     ("p9", "接 9V", "先用万用表确认电源电压在 8.5~9.5V (绝不能超过 10.8V)。9V 正极接 DRV8833 的 VM 和 5V 降压模块的输入; "
-     "VM 旁边并一个 ≥100µF 电解电容, 长脚 (正极) 接 9V, 短脚接地。"),
+     "本版不另装电容, 保留模块自带的电容。洞洞板按用户确认的 DRV8833 脚序使用 VM 输入。"),
     ("p5", "接 5V", "单独给 5V 降压模块通电, 先把输出调到 5.0V, 断电后再接: 电平转换 HV、EV3 线 4 号脚 (绿色)、舵机正极。"),
     ("p33", "接 3.3V", "Pico 的 36 号脚 (3V3 OUT) 接电平转换的 LV。这一路只给电平转换低压侧供电, 不要接任何 5V 的东西。"),
     ("ctrl", "接马达控制线", "Pico 的 GP2 (4 号脚) 接 DRV8833 AIN1, GP3 (5 号脚) 接 AIN2。确认模块的 nSLEEP (有的标 EEP/STBY) 是高电平。"),
@@ -632,6 +629,21 @@ JS = """
 """
 
 
+def perfboard_section():
+    return perfboard_layout.section()
+
+
+def perfboard_page():
+    """独立页面与主指南复用章节和样式，离线打开也能显示 SVG。"""
+    return ('<!doctype html>\n<html lang="zh-CN">\n<head>\n'
+            '<meta charset="utf-8">\n'
+            '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+            '<title>quadcuber 洞洞板接线设计</title>\n'
+            f'<style>{CSS}</style>\n</head>\n<body>\n<main class="wrap">\n'
+            '<nav><a href="index.html#perfboard">返回完整接线指南</a></nav>\n'
+            + perfboard_section() + '\n</main>\n</body>\n</html>\n')
+
+
 def page():
     esc = html.escape
     out = ['<title>quadcuber 单臂接线</title>',
@@ -644,7 +656,11 @@ def page():
                '<h1>把机械手接到 Pico 上</h1>'
                '<p>一个 EV3 马达 (大马达或中马达接法相同)、一个灰色 Geekservo、一块 DRV8833、一块电平转换模块。'
                '引脚按 <span class="mono">firmware/pico/config.py</span> 的 R 臂分配, 接完按 '
-               '<span class="mono">docs/single_arm.md</span> 第 4、5 节刷程序和测试。</p></header>')
+               '<span class="mono">docs/single_arm.md</span> 第 4、5 节刷程序和测试。</p>'
+               '<p><a href="#perfboard">洞洞板布局与端子表</a> · <a href="#breadboard">面包板接线</a></p></header>')
+    out.append('<div class="warn"><b>原编码器接口未通过复核：本页 BSS138 / HV / LV 图仅留作旧版诊断参考。</b>'
+               '不要继续按旧图安装编码器接口。供电与马达端子分工保留；'
+               '<a href="../ev3-interface-verification.md">修订电路与验证报告</a>。</div>')
     out.append('<section><h2>三条不能违反的规则</h2><div class="rules">'
                '<div class="rule"><b>马达电压不超过 10.8V</b>DRV8833 的上限。9V 可以, 12V 会烧。</div>'
                '<div class="rule"><b>编码器信号必须经过电平转换</b>Pico 的引脚不耐 5V, EV3 编码器输出的是 5V 信号。</div>'
@@ -676,7 +692,9 @@ def page():
                '<p class="progress">勾选状态只保存在这台设备的浏览器里。</p></section>')
 
     rows = "".join(f"<tr><td>{a}</td><td class=\"mono\">{b}</td><td>{c}</td></tr>" for a, b, c in BB_TABLE)
+    out.append(perfboard_section())
     out.append('<section id="breadboard"><h2>面包板怎么插</h2>'
+               '<p>与洞洞板之间的 6 根线见 <a href="perfboard.html#bridge">④ 两板实际连接图</a>。下图的板内跳线保留，板外接线经 J6/J7 插座。</p>'
                '<p>信号线走面包板; 大电流的线 (9V、马达线、舵机电源) 不走面包板, 直接连。'
                '孔的坐标写法: 字母是行, 数字是列, 例如 <span class="mono">a5</span> 是 a 行第 5 列。</p>'
                '<figure><div class="scroll">' + breadboard_svg() + "</div>"
@@ -708,17 +726,13 @@ def page():
                '<div class="warn"><b>红线是地线, 不是正极。</b> 线色只是常见配色, 不同的线可能不一样, 以万用表通断为准: '
                "1、2 脚之间是马达线圈, 电阻约几欧到十几欧; 1、2 脚和其他脚之间不通。</div></section>")
 
-    out.append('<section><h2>电平转换: 三种接法</h2><div class="opts">'
-               '<div class="card opt"><h3>BSS138 模块<span class="badge">推荐</span></h3><ul>'
-               "<li>HV 接 5V, LV 接 Pico 36 号脚 (3V3)</li><li>HV1/HV2 接编码器 A/B, LV1/LV2 接 GP4/GP5</li>"
-               "<li>GND 接公共地</li><li>自带上拉, 编码器是哪种输出都能用</li></ul></div>"
-               '<div class="card opt"><h3>TXS0108E</h3><ul>'
-               "<li><b>VA 接 3V3, VB 接 5V</b>, 不能接反</li><li><b>OE 接 VA</b>, 否则没有读数</li>"
-               "<li>编码器接 B 侧, Pico 接 A 侧</li><li>不要加上拉/下拉电阻; 8 路正好接 4 个编码器, 适合整机</li></ul></div>"
-               '<div class="card opt"><h3>电阻分压<span class="badge">备选</span></h3><ul>'
-               "<li>信号 → 10kΩ → GP 引脚 → 20kΩ → GND</li><li>接 Pico 之前先量分压点: 高电平 2.5~3.4V</li>"
-               "<li>编码器若是开漏输出, 高电平可能不够</li></ul></div>"
-               "</div></section>")
+    out.append('<section><h2>编码器接口修订（2026-09-27）</h2>'
+               '<p><b>原 BSS138 接法撤回。</b>EV3 输出串联电阻与双侧上拉会抬高低电平；'
+               '蓝线典型计算为 1.65V，与实测一致。TXS0108E 和原分压方案均不作为已验证替代。</p>'
+               '<p>修订为 SN74LVC2G17：VCC 接 3V3、GND 共地；黄线 → 1A → 1Y → GP4；'
+               '蓝线 → 2A → 2Y → GP5。采用自带去耦、无信号上拉的可插拔模块，实际排针顺序待核对。</p>'
+               '<p><a href="../ev3-interface-verification.md">查看计算、来源、芯片针脚和实物验收条件</a>。'
+               '下列及上方 HV/LV 图为旧版诊断参考，不是新接口安装图。</p></section>')
 
     checks = [("9V 电源 (空载)", "直流电压档, 红表笔接正极", "8.5~9.5V, 绝不能超过 10.8V"),
               ("5V 降压输出", "直流电压档, 接任何负载之前", "4.9~5.2V"),
@@ -749,5 +763,8 @@ def page():
 
 
 if __name__ == "__main__":
+    perfboard_layout.write_assets(HERE)
     with open(os.path.join(HERE, "index.html"), "w", encoding="utf-8") as f:
         f.write(page())
+    with open(os.path.join(HERE, "perfboard.html"), "w", encoding="utf-8") as f:
+        f.write(perfboard_page())

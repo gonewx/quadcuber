@@ -8,6 +8,7 @@ import importlib.util
 import os
 import random
 import unittest
+from types import MappingProxyType
 
 _PATH = os.path.join(os.path.dirname(__file__), "..", "firmware", "pico", "control.py")
 _spec = importlib.util.spec_from_file_location("pico_control", _PATH)
@@ -121,6 +122,22 @@ class MoveTest(unittest.TestCase):
     def test_gains_set(self):
         g = control.Gains(kp=0.05)
         self.assertEqual(g.kp, 0.05)
+        with self.assertRaises(KeyError):
+            g.set("nope", 1)
+
+    def test_gains_with_read_only_dict(self):
+        # MicroPython 的实例 __dict__ 不允许直接写入。
+        class ReadOnlyDictGains(control.Gains):
+            @property
+            def __dict__(self):
+                return MappingProxyType(super().__dict__)
+
+        g = ReadOnlyDictGains(kp=0.05)
+        g.set("vmax", "450")
+        self.assertEqual(g.kp, 0.05)
+        self.assertEqual(g.vmax, 450.0)
+        self.assertEqual(g.as_dict()["vmax"], 450.0)
+        self.assertIn("kp", g.names())
         with self.assertRaises(KeyError):
             g.set("nope", 1)
 

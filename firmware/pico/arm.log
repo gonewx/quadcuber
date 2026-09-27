@@ -1,0 +1,93 @@
+
+>>> 
+MPY: soft reboot
+MicroPython v1.17 on 2021-09-02; Raspberry Pi Pico with RP2040
+Type "help()" for more information.
+>>> 10
+10
+>>>  0.00 V 0.05 V
+Traceback (most recent call last):
+  File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>  0.00 V 0.05 V
+Traceback (most recent call last):
+  File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>  0.00 V 0.06 V
+Traceback (most recent call last):
+  File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>  0.00 V 0.05 V
+Traceback (most recent call last):
+  File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>  0.00 V 0.05 V
+Traceback (most recent call last):
+  File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>  0.00 V 0.06 V
+Traceback (most recent call last):
+  File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>  0.00 V 0.06 V
+Traceback (most recent call last):
+  File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>  0.00 V 0.06 V
+Traceback (most recent call last):
+  File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>  0.00 V 0.05 V
+Traceback (most recent call last):
+  File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>  0.00 V 0.07 V
+>>> 
+MPY: soft reboot
+MicroPython v1.17 on 2021-09-02; Raspberry Pi Pico with RP2040
+Type "help()" for more information.
+>>> volts()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'volts' isn't defined
+>>> 
+>>> 
+MPY: soft reboot
+MicroPython v1.17 on 2021-09-02; Raspberry Pi Pico with RP2040
+Type "help()" for more information.
+>>> 
+paste mode; Ctrl-C to cancel, Ctrl-D to finish
+=== from machine import ADC, Pin
+=== import time
+=== 
+=== adc = ADC(Pin(26))
+=== 
+=== def volts():
+===     print("开始：连续缓慢转轴，测量10秒")
+===     for sec in range(10):
+===         lo = 65535
+===         hi = 0
+===         end = time.ticks_add(time.ticks_ms(), 1000)
+===         while time.ticks_diff(end, time.ticks_ms()) > 0:
+===             v = adc.read_u16()
+===             if v < lo:
+===                 lo = v
+===             if v > hi:
+===                 hi = v
+===         print("最低 %.2f V，最高 %.2f V" %
+===               (lo * 3.3 / 65535, hi * 3.3 / 65535))
+=== 
+=== volts()
+=== 
+开始：连续缓慢转轴，测量10秒
+最低 0.00 V，最高 0.04 V
+最低 0.00 V，最高 0.04 V
+最低 0.00 V，最高 0.06 V
+最低 0.00 V，最高 0.06 V
+最低 0.00 V，最高 0.06 V
+最低 0.00 V，最高 0.06 V
+最低 0.00 V，最高 0.05 V
+最低 0.00 V，最高 0.06 V
+最低 0.00 V，最高 0.06 V
+最低 0.00 V，最高 0.04 V
+>>> 
