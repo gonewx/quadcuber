@@ -52,7 +52,7 @@ def _edge_counter():
 
 class Encoder:
     def __init__(self, pin_a, pin_b, sm_ids, invert=False, freq=10_000_000, pull_up=False):
-        # 默认不开内部上拉；修订接口由外部 SN74LVC2G17 驱动，避免给信号额外负载。
+        # 默认不开内部上拉: 编码器经电阻分压接入, 上拉会抬高分压点。
         pull = Pin.PULL_UP if pull_up else None
         a = Pin(pin_a, Pin.IN, pull)
         b = Pin(pin_b, Pin.IN, pull)

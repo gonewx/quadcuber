@@ -183,7 +183,7 @@ def cmd_check(arm, args):
     d = arm.enc.count() - c0
     print("占空比 %+.2f 驱动 150ms, 编码器变化 %d 计数 (机械手 %.1f 度)" % (duty, d, d * DEG_PER_COUNT))
     if abs(d) < 4:
-        print("!! 几乎没有读数: 马达没转 (查供电/DRV8833 的 nSLEEP/接线), 或编码器没接好 (查电平转换)")
+        print("!! 几乎没有读数: 马达没转 (查供电/DRV8833 的 nSLEEP/接线), 或编码器没接好 (查分压电阻和黄/蓝线通断)")
     elif d < 0:
         print("!! 方向相反: 把 config.py 里的 ENC_INVERT 改成相反的值 (或 MOTOR_INVERT)")
     else:

@@ -7,8 +7,8 @@
 # ---- 引脚 (R 臂) ------------------------------------------------------------
 MOTOR_IN1 = 2  # DRV8833 AIN1; GP2/GP3 属于同一个 PWM slice
 MOTOR_IN2 = 3  # DRV8833 AIN2
-ENC_A = 4  # 编码器 A 相 (EV3 线的 5 号脚, 经电平转换)
-ENC_B = 5  # 编码器 B 相 (EV3 线的 6 号脚, 经电平转换)
+ENC_A = 4  # 编码器 A 相 (EV3 线 5 脚黄线, 经 10k+20k 分压)
+ENC_B = 5  # 编码器 B 相 (EV3 线 6 脚蓝线, 经 10k+20k 分压)
 SERVO = 8  # Geekservo 信号线
 ENC_SM = (0, 1)  # 编码器占用的两个 PIO 状态机 (0~3 在 PIO0, 4~7 在 PIO1)
 
@@ -16,7 +16,7 @@ ENC_SM = (0, 1)  # 编码器占用的两个 PIO 状态机 (0~3 在 PIO0, 4~7 在
 # 用 check 命令检查: 正占空比应让编码器读数增加。不一致时把其中一个改成 True。
 MOTOR_INVERT = False
 ENC_INVERT = False
-# 修订编码器接口由 SN74LVC2G17 驱动；Pico 内部上拉保持关闭。见 docs/ev3-interface-verification.md。
+# 编码器经电阻分压 (10k 串联 + 20k 下拉) 接入; 内部上拉会抬高分压点, 必须保持 False。见 docs/single_arm.md 第 3 节。
 ENC_PULLUP = False
 
 # ---- 机械参数 ---------------------------------------------------------------

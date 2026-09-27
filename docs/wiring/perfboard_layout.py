@@ -246,7 +246,7 @@ def harness_svg():
 
 # 两端均为公头：洞洞板插排母，另一端插面包板弹片孔。
 BRIDGE = [
-    ('B01','5V','J6.1','T+',8,'上排 + 第8孔','降压5V → 编码器及电平转换'),
+    ('B01','5V','J6.1','T+',8,'上排 + 第8孔','降压5V → 编码器电源'),
     ('B02','GND','J6.2','T-',9,'上排 − 第9孔','公共地'),
     ('B03','IN1','J7.1','j',6,'j6','Pico GP2 → AIN1'),
     ('B04','IN2','J7.2','j',7,'j7','Pico GP3 → AIN2'),
@@ -265,7 +265,7 @@ def bridge_svg():
     s=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1140" role="img" aria-label="面包板与洞洞板六根公对公跳线连接：J6到电源轨，J7到j6、j7、j13、a7" style="background:#f6f4ee;font-family:Arial,Microsoft YaHei,sans-serif">',
        txt(32,34,'面包板 ↔ 洞洞板 · 六根公对公跳线',24,anchor='start',weight='bold'),
        txt(32,62,'两块板均从元件面看；Pico USB 朝左。下面洞洞板只显示 S～X 行与接线插座。',15,anchor='start'),
-       txt(32,86,'旧版诊断图：BSS138 编码器支路已撤回；新接口见 ev3-interface-verification.md。',16,'#a82020',anchor='start',weight='bold'),
+       txt(32,86,'编码器：每路 10kΩ 串联 + 20kΩ 接地分压（第 26、28 列为分压点），不用电平转换模块。',15,'#1f5f99',anchor='start',weight='bold'),
        rect(70,170,918,389,'#ebe9e0','#b6b3a7',9),rect(74,367,910,20,'#d0cbbd',radius=1)]
     for row in BRIDGE_ROWS:
         yy=BRIDGE_ROWS[row]
@@ -294,25 +294,28 @@ def bridge_svg():
     for c,row,label in [(5,'c','GND'),(7,'c','3V3'),(6,'h','GP2'),(7,'h','GP3'),(8,'h','GP4'),(9,'h','GP5'),(13,'h','GP8')]:
         x,y=bridge_hole(c,row)
         s.append(txt(x,y+(20 if row=='c' else -12),label,10,'white'))
-    lx,ly=bridge_hole(30,'d')
-    s.append(rect(lx-11,ly-10,132,108,'#25578e','#163d63',4))
-    s.append(txt(lx+55,377,'电平转换',17,'white',weight='bold'))
-    s.append(txt(lx+55,399,'上 HV / 下 LV',12,'white'))
-    for c,name in zip(range(30,36),('4','3','G','V','2','1')):
-        for row in ('d','g'):
-            x,y=bridge_hole(c,row)
-            s.append(f'<circle cx="{x}" cy="{y}" r="4" fill="#e1c96c"/>')
-            s.append(txt(x,y+(17 if row=='d' else -8),name,9,'white'))
-    # 保留的板内跳线，使用较细浅色线，与六根板间线区分。
-    internal=[((5,'a'),(5,'T-')),((5,'j'),(5,'B-')),((40,'T-'),(40,'B-')),
-              ((33,'a'),(33,'T+')),((32,'a'),(32,'T-'))]
+    # 保留的板内地线跳线，使用较细浅色线，与六根板间线区分。
+    internal=[((5,'a'),(5,'T-')),((5,'j'),(5,'B-')),((40,'T-'),(40,'B-'))]
     for a,b in internal:
         ax,ay=bridge_hole(*a); bx,by=bridge_hole(*b)
         s.append(f'<path d="M{ax} {ay}L{bx} {by}" fill="none" stroke="#849597" stroke-width="2.5"/>')
-    for a,b,bend in [((7,'b'),(33,'j'),170),((8,'i'),(35,'i'),560),((9,'j'),(34,'j'),585)]:
+    # 编码器分压：GP4→i26、GP5→i28 两根跳线；10k 跨 f26~f33 / g28~g31；20k 从 j26 / j28 到下排 −。
+    for a,b,bend in [((8,'i'),(26,'i'),520),((9,'i'),(28,'i'),548)]:
         ax,ay=bridge_hole(*a); bx,by=bridge_hole(*b)
-        s.append(f'<path d="M{ax} {ay}Q{(ax+bx)/2} {bend} {bx} {by}" fill="none" stroke="#8c9ba4" stroke-width="2.5"/>')
-    s.append(txt(748,600,'细灰线：原有板内跳线继续保留',13))
+        s.append(f'<path d="M{ax} {ay}Q{(ax+bx)/2} {bend} {bx} {by}" fill="none" stroke="#2d7fc9" stroke-width="2.5"/>')
+    for a,b,text in [((26,'f'),(33,'f'),'10k'),((28,'g'),(31,'g'),'10k'),((26,'j'),(26,'B-'),'20k'),((28,'j'),(28,'B-'),'20k')]:
+        ax,ay=bridge_hole(*a); bx,by=bridge_hole(*b)
+        s.append(f'<path d="M{ax} {ay}L{bx} {by}" fill="none" stroke="#7d8488" stroke-width="2"/>')
+        mx,my=(ax+bx)/2,(ay+by)/2
+        if ay==by:
+            s.append(rect(mx-18,my-6,36,12,'#e6cfa1','#7a5b2e',3))
+            s.append(txt(mx,my-10 if a[1]=='f' else my+20,text+'Ω',11,'#5a4320',weight='bold'))
+        else:
+            s.append(rect(mx-6,my-16,12,32,'#e6cfa1','#7a5b2e',3))
+            s.append(txt(mx+(-10 if text and a[0]==26 else 10),my+4,text+'Ω',11,'#5a4320',anchor='end' if a[0]==26 else 'start',weight='bold'))
+        for ex,ey in ((ax,ay),(bx,by)):
+            s.append(f'<circle cx="{ex}" cy="{ey}" r="3" fill="#2d7fc9"/>')
+    s.append(txt(748,600,'细灰线：板内地线跳线；蓝线与电阻：编码器分压',13))
     # 洞洞板下沿原图裁切，方向、接头位置和孔号直接复用真实装配数据。
     crop=board_svg().split('>',1)[1].rsplit('</svg>',1)[0]
     s.append('<defs><clipPath id="pb-bridge-crop"><rect x="20" y="790" width="1060" height="250"/></clipPath></defs>')
@@ -359,8 +362,8 @@ LOADS = [
     ('E2','EV3 2脚','黑 / M2','J4.2','AO2 → 马达端2'),
     ('E3','EV3 3脚','红 / GND','T-37','面包板上排 − 第37孔'),
     ('E4','EV3 4脚','绿 / 5V','T+36','面包板上排 + 第36孔'),
-    ('E5','EV3 5脚','黄 / A相','b35','电平转换 HV1 → LV1 → GP4'),
-    ('E6','EV3 6脚','蓝 / B相','b34','电平转换 HV2 → LV2 → GP5'),
+    ('E5','EV3 5脚','黄 / A相','h33','10kΩ → 分压点第26列 → GP4'),
+    ('E6','EV3 6脚','蓝 / B相','h31','10kΩ → 分压点第28列 → GP5'),
     ('S1','舵机 GND','棕 / GND','J5.1','地；洞洞板 V23'),
     ('S2','舵机 V+','红 / 5V','J5.2','5V；洞洞板 V24'),
     ('S3','舵机 SIG','黄 / SIG','J5.3','GP8 信号；洞洞板 V25'),
@@ -397,14 +400,14 @@ def loads_svg():
           '<circle cx="963" cy="1408" r="23" fill="#e3e6e6" stroke="#505964" stroke-width="3"/>',
           '<path d="M951 1408h24 M963 1396v24" stroke="#555e67" stroke-width="7"/>',
           txt(892,1435,'Geekservo',18,weight='bold'),txt(906,1530,'灰色 270° 舵机',16),
-          txt(32,1571,'EV3 的红线是地线；线色仅作常见配色参考，先核对脚号。编码器信号必须经过电平转换。',16,anchor='start'),
+          txt(32,1571,'EV3 的红线是地线；线色仅作常见配色参考，先核对脚号。编码器信号必须经电阻分压，不能直接接 Pico。',16,anchor='start'),
           txt(32,1604,'舵机三孔母头插 J5：1=棕 GND，2=红 5V，3=黄 SIG。马达与舵机的大电流供电不经过面包板。',16,anchor='start')]
     def port(name):
         x,y=xy(PINS[name][0]);return x+20,y+190
     dest={
         'E1':port('J4.1'),'E2':port('J4.2'),
         'E3':bridge_hole(37,'T-'),'E4':bridge_hole(36,'T+'),
-        'E5':bridge_hole(35,'b'),'E6':bridge_hole(34,'b'),
+        'E5':bridge_hole(33,'h'),'E6':bridge_hole(31,'h'),
         'S1':port('J5.1'),'S2':port('J5.2'),'S3':port('J5.3'),
     }
     paths={
@@ -412,8 +415,8 @@ def loads_svg():
         'E2':[(170,1293),(170,1110),(dest['E2'][0],1110),dest['E2']],
         'E3':[(200,1293),(200,1140),(1140,1140),(1140,174),(dest['E3'][0],174),dest['E3']],
         'E4':[(230,1293),(230,1170),(1170,1170),(1170,154),(dest['E4'][0],154),dest['E4']],
-        'E5':[(260,1293),(260,1200),(1200,1200),(1200,254),(dest['E5'][0],254),dest['E5']],
-        'E6':[(290,1293),(290,1230),(1230,1230),(1230,276),(dest['E6'][0],276),dest['E6']],
+        'E5':[(260,1293),(260,1200),(1200,1200),(1200,276),(dest['E5'][0],276),dest['E5']],
+        'E6':[(290,1293),(290,1230),(1230,1230),(1230,254),(dest['E6'][0],254),dest['E6']],
         'S1':[dest['S1'],(dest['S1'][0],1090),(700,1090),(700,1400),(813,1400)],
         'S2':[dest['S2'],(dest['S2'][0],1110),(725,1110),(725,1420),(813,1420)],
         'S3':[dest['S3'],(dest['S3'][0],1130),(750,1130),(750,1440),(813,1440)],
@@ -522,7 +525,7 @@ def section():
     return f'''<section id="perfboard">
 <style>{STYLE}</style>
 <h2>洞洞板实物装配与焊接图</h2>
-<div class="warn"><b>2026-09-27：编码器接口复核未通过。</b>④⑤ 中的 BSS138/HV/LV 接线只留作旧版诊断参考，不是可继续安装的编码器方案。供电和马达端子分工保留；新接口使用 SN74LVC2G17，实际模块孔位待确认。见<a href="../ev3-interface-verification.md">接口复核报告</a>。</div>
+<div class="warn"><b>2026-09-27 更新：编码器改用电阻分压。</b>④⑤ 中编码器按最终方案画：每路 10kΩ 串联 + 20kΩ 接地，分压点在面包板第 26、28 列，不用电平转换模块。原因见<a href="../ev3-interface-verification.md">接口复核报告</a>。</div>
 <p>按这版孔位插元件，再左右翻板照背面焊 14 根线。列 1～32、行 A～X，孔距 2.54mm；选至少有这块完整孔阵的独立焊盘洞洞板，约 90 × 70mm。先给 A1 旁边做红色标记。</p>
 <div class="warn"><b>全部可拆换：</b>洞洞板只焊底座和配线，模块均可拔。选用5.08mm 插拔式端子（配套直针底座＋可拔螺钉插头）、2.54mm 排针、DRV8833 按你提供的实物丝印（左上 VM、右上 NC）安装，两排 8 针，机械排距暂按 10.16mm。你的模块若外形或脚序不同，先指出差异再改图，不能把同名芯片的其他模块直接插进这些孔。U2 按 XL4005 四角电源孔 <b>38.1 × 15.24mm</b> 这一机械假设画；这不是所有 XL4005 的统一尺寸。两块模块均插排母，无螺钉或支柱；不另装电容。</div>
 <div class="pb-controls" role="group" aria-label="选择装配视图">
@@ -533,7 +536,7 @@ def section():
 <p class="pb-downloads">下载可放大的矢量图：<a href="perfboard-front.svg" download>元件面 SVG</a> · <a href="perfboard-back.svg" download>焊接面 SVG</a> · <a href="perfboard-external.svg" download>板外接线 SVG</a> · <a href="perfboard-bridge.svg" download>两板连接 SVG</a> · <a href="perfboard-loads.svg" download>舵机与马达全图 SVG</a>。图已放大供阅读，打印不能当 1:1 钻孔模板。</p>
 <h3>两板之间的 6 根公对公线</h3>
 {table(["线号","洞洞板接口 / 孔位","面包板孔位","用途"],bridge_rows())}
-<p>3.3V 线使用 a7；原有 b7 → 电平转换 LV 跳线继续保留。a7、b7、c7 同组相通。电源轨按原指南检查中间断口并补跨线。</p>
+<p>3.3V 线使用 a7（a7、b7、c7 同组相通，c7 是 Pico 3V3）。电源轨按原指南检查中间断口并补跨线。</p>
 <h3>舵机与 EV3 马达的 9 根线</h3>
 {table(["线号","设备线端","常见颜色 / 功能","接入点 / 孔位","去向"],load_rows())}
 <p>EV3 线 1/2 脚接 J4 可拔端子；3/4/5/6 脚用公头转接线插面包板。舵机自带三孔母头插 J5，按棕 GND / 红 5V / 黄 SIG 核对顺序。EV3 红线是地线，不能当成电源正极。</p>
@@ -547,7 +550,7 @@ def section():
 <p>脚序按你提供的实物丝印：VM 接 9V，AO1/AO2 接马达；AIN1/AIN2 接 GP2/GP3；STBY 经 J7.4 接 Pico 3V3。NC 留空，未用 B 路输出留空；不另装电容，模块自带电容保留。机械排距仍是绘图假设，焊排母前用实物对齐。</p>
 <h3>焊接顺序与检查</h3>
 <ol><li>先只焊 J1/J4 端子底座、J5 排针、J6/J7 排母、U1 两排排母和 U2 四角排母；DRV8833 先不插。核对 A1、各接口正负和两排间距。</li><li>按 W01～W14 焊接绝缘导线。断电测各线首尾导通；DRV8833 和降压都拔下时，9V、5V、地和各信号网络之间不能短路。</li><li>先只插 U2 降压模块，按“电源与拔插结构”接 9V，空载调到 5.0V。确认 J5.2、J6.1 对各自 GND 约 5V，再断电放电。</li><li>插入 DRV8833，接 J6、J7 和编码器，Pico 仍用 USB。先按<a href="../single_arm.md#5-测试步骤">单臂步骤</a>测马达，再断电接舵机测试。</li><li>大电流导线和接点按实际启动电流选型；带载检查压降、温升与 VM 瞬态，DRV8833 工作电压不超过 10.8V。用绝缘底板保护焊接面，线束留松弛并固定，插拔时扶住底座。</li></ol>
-<p>接面包板：J6.1 → 上排 +，J6.2 → 上排 −；J7.1 → j6（GP2），J7.2 → j7（GP3），J7.3 → j13（GP8），J7.4 → a7（3V3）。编码器与电平转换跳线保持原接法。完整说明见<a href="../perfboard.md">洞洞板设计文档</a>。</p>
+<p>接面包板：J6.1 → 上排 +，J6.2 → 上排 −；J7.1 → j6（GP2），J7.2 → j7（GP3），J7.3 → j13（GP8），J7.4 → a7（3V3）。编码器分压电阻和跳线见④。完整说明见<a href="../perfboard.md">洞洞板设计文档</a>。</p>
 <script>{JS}</script>
 </section>'''
 
@@ -558,7 +561,7 @@ def document():
     wire_rows = [(w[0], f'{w[2]} / {hole(PINS[w[2]][0])}', f'{w[3]} / {hole(PINS[w[3]][0])}', ' → '.join(hole(p) for p in w[4]) or '直达', w[5]) for w in WIRES]
     return '''# 单臂洞洞板：可拔插的逐孔安装与焊接图
 
-> **2026-09-27：原 BSS138 编码器支路撤回。** 以下 HV/LV 图及孔位表保留作旧版诊断参考，不再用于安装编码器接口；电源、马达和舵机分工保留。修订采用 SN74LVC2G17，实际模块孔位待确认，见 [接口复核报告](ev3-interface-verification.md)。
+> **2026-09-27 更新：编码器改用电阻分压**（每路 10kΩ 串联 + 20kΩ 接地，分压点在面包板第 26、28 列），不用电平转换模块。原因见 [接口复核报告](ev3-interface-verification.md)。
 
 打开 [实物装配页面](wiring/perfboard.html)：可以切换**元件面、镜像焊接面、电源与拔插结构、面包板连接、舵机与马达**，点击 W01～W14 单独查看一根线，还可下载五张 SVG 矢量图。
 
@@ -570,7 +573,7 @@ def document():
 - **不用螺钉和支柱安装降压模块。** 四角针脚插入四个排母座，外部线束留松弛并固定，插拔时扶住底座。
 - **不另装电容。** 模块原有的去耦／滤波电容保留。是否需要增加储能电容，留待实物供电与运行情况决定，本版没有外接电容或电容插座。
 - J1、J4 使用 **5.08mm 插拔式接线端子**，由板上直针底座和可整块拔出的螺钉插头组成；不是必须逐根拧螺钉才能拆下的固定式端子。
-- Pico 与电平转换仍放在面包板，Pico 由 USB 供电；J6 只给编码器、电平转换及公共地连接供电，不接 Pico 的 VBUS、VSYS、3V3。
+- Pico 与编码器分压电阻仍放在面包板，Pico 由 USB 供电；J6 只给编码器电源及公共地连接供电，不接 Pico 的 VBUS、VSYS、3V3。
 
 ## 2. 图纸基准与朝向
 
@@ -602,7 +605,7 @@ W01～W04 是电源入口分支；W05～W08 是降压输出分支；W09～W10 �
 
 ''' + mdtable(['线号', '洞洞板接口／孔位', '面包板孔位', '用途'], bridge_rows()) + '''
 
-a7、b7、c7 是同一列上半侧的连通组，c7 是 Pico 3V3。b7 已有到电平转换 LV 的跳线，所以 STBY 的 3.3V 线使用 a7，不往 b7 再塞一根。面包板原有板内跳线和编码器连线保留；上下地轨与电源轨中间断口按原图连接。
+a7、b7、c7 是同一列上半侧的连通组，c7 是 Pico 3V3，STBY 的 3.3V 线插 a7。编码器分压电阻和跳线按[接线指南](wiring/index.html#breadboard)插；上下地轨与电源轨中间断口按原图连接。
 
 ### 舵机与马达完整接线
 
@@ -610,7 +613,7 @@ a7、b7、c7 是同一列上半侧的连通组，c7 是 Pico 3V3。b7 已有到�
 
 ''' + mdtable(['线号', '设备线端', '常见颜色／功能', '接入点／孔位', '去向'], load_rows()) + '''
 
-EV3 线色只作常见配色参考，必须先确认脚号；红色对应编码器地，不是正极。编码器 A/B 经 HV1/HV2 转换到 LV1/LV2，再去 GP4/GP5，不能直接把 5V 信号接 Pico。面包板上排 +36、−37 和 b35、b34 均为预留接线孔。
+EV3 线色只作常见配色参考，必须先确认脚号；红色对应编码器地，不是正极。编码器 A/B 各经 10kΩ 串联、20kΩ 接地分压后去 GP4/GP5，不能直接把 5V 信号接 Pico。面包板上排 +36、−37 和 h33、h31 是 EV3 线的接线孔。
 
 马达两根驱动线接 J4 的可拔端子；四根编码器线经公头转接线插面包板。舵机自带三孔母头直接插 J5 公排针，1=棕 GND、2=红 5V、3=黄 SIG，先核对线序后再插。裸线需使用合适的压接／转接连接，不能将多股散线直接塞进面包板。
 
@@ -621,7 +624,7 @@ EV3 线色只作常见配色参考，必须先确认脚号；红色对应编码�
 - J5.1 / J5.2 / J5.3 → 舵机 GND / +5V / 信号；按舵机实际线序制作可拔转接线。
 - J6.1 / J6.2 → 面包板上排 + / − 电源轨。
 - J7.1 → j6（GP2）；J7.2 → j7（GP3）；J7.3 → j13（GP8）；J7.4 → a7（Pico 3V3，物理36脚）。公头排针线插入板上 J7 排母。
-- EV3 线 3、4 脚仍接面包板 GND、5V；5、6 脚经电平转换接 GP4、GP5，详见 [单臂接线](single_arm.md)。
+- EV3 线 3、4 脚仍接面包板 GND、5V；5、6 脚经电阻分压接 GP4、GP5，详见 [单臂接线](single_arm.md)。
 
 STBY 经 W14 接 Pico 3V3，不接 9V。NC 保持悬空，B 路输出留空。驱动电源、信号和电机均按本页用户确认的脚序连接。
 

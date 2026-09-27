@@ -57,6 +57,14 @@ def ground(x, y, direction="down", label=True):
     return f'<g class="wire" data-g="gnd">{stub}{bars}{txt}</g>'
 
 
+def resistor(x, y, text, vertical=False, label_at=None, anchor="middle"):
+    """画在导线上的电阻 (导线另画, 电阻体盖在上面)。(x, y) 是电阻体中心。"""
+    w, h = (10, 36) if vertical else (36, 10)
+    s = f'<rect class="rb" x="{x - w / 2}" y="{y - h / 2}" width="{w}" height="{h}" rx="3"/>'
+    lx, ly = label_at or ((x + 10, y + 4) if vertical else (x, y - 9))
+    return s + f'<text class="rl" x="{lx}" y="{ly}" text-anchor="{anchor}">{text}</text>'
+
+
 def box(x, y, w, h, title, sub=None, cls="part"):
     s = f'<rect class="{cls}" x="{x}" y="{y}" width="{w}" height="{h}" rx="6"/>'
     s += f'<text class="pt" x="{x + w / 2}" y="{y + 18}" text-anchor="middle">{title}</text>'
@@ -103,33 +111,25 @@ def wiring_svg():
     s.append(ground(125, 76))
     s.append(ground(345, 76))
     # EV3 马达接头
-    s.append(box(70, 176, 160, 144, "EV3 马达", "6 芯线"))
+    s.append(box(70, 160, 160, 166, "EV3 马达", "6 芯线"))
     ev3 = [(1, "白", "M1"), (2, "黑", "M2"), (3, "红", "GND"), (4, "绿", "5V"), (5, "黄", "A相"), (6, "蓝", "B相")]
     for i, (n, color, fn) in enumerate(ev3):
-        y = 216 + i * 18
+        y = 210 + i * 20
         s.append(f'<text class="pn" x="78" y="{y + 4}">{n} {color}</text>')
         s.append(f'<text class="pn" x="222" y="{y + 4}" text-anchor="end">{fn}</text>')
     # DRV8833
-    s.append(box(480, 180, 140, 120, "DRV8833", "只用 A 路"))
-    for y, t in ((216, "AOUT1"), (234, "AOUT2")):
+    s.append(box(480, 180, 140, 100, "DRV8833", "只用 A 路"))
+    for y, t in ((210, "AOUT1"), (230, "AOUT2")):
         s.append(pin_label(480, y, t, "left"))
     for y, t in ((250, "AIN1"), (270, "AIN2")):
         s.append(pin_label(620, y, t, "right"))
-    s.append(pin_label(540, 180, "VM", "top"))
-    s.append(f'<text class="note" x="626" y="204">nSLEEP 需为高电平</text>')
-    s.append(f'<text class="note" x="626" y="218">(多数模块板上已上拉)</text>')
-    s.append(ground(550, 300))
-    # 电平转换
-    s.append(box(480, 360, 140, 140, "电平转换", "BSS138 4 路"))
-    s.append(f'<text class="side" x="488" y="452">← HV 5V 侧</text>')
-    s.append(f'<text class="side" x="612" y="452" text-anchor="end">LV 3.3V 侧 →</text>')
-    for y, t in ((410, "HV1"), (430, "HV2")):
-        s.append(pin_label(480, y, t, "left"))
-    s.append(pin_label(480, 470, "GND", "left"))
-    for y, t in ((410, "LV1"), (430, "LV2"), (480, "LV")):
-        s.append(pin_label(620, y, t, "right"))
-    s.append(pin_label(500, 500, "HV", "bottom"))
-    s.append(ground(480, 470, "left", label=False))
+    s.append(pin_label(496, 180, "VM", "top"))
+    s.append(pin_label(600, 180, "STBY", "top"))
+    s.append(f'<text class="note" x="626" y="204">STBY (nSLEEP) 接 3.3V</text>')
+    s.append(f'<text class="note" x="626" y="218">使能驱动</text>')
+    s.append(ground(480, 262, "left", label=False))
+    # 编码器分压: 每路 10k 串联 + 20k 下拉
+    s.append(f'<text class="note" x="300" y="470">每路两个电阻分压: 5V 信号 → 约 3V</text>')
     # 舵机
     s.append(box(480, 580, 140, 60, "Geekservo", "灰色 270°"))
     s.append(pin_label(530, 580, "", "top"))
@@ -152,40 +152,45 @@ def wiring_svg():
             if n <= 20:
                 s.append(f'<text class="pu" x="{x + 9}" y="{y + 4}">{name} ({n})</text>')
             else:
-                s.append(f'<text class="pu" x="{x - 9}" y="{y + 4}" text-anchor="end">{name} ({n})</text>')
+                # 同一行左边也有用到的脚时, 右边只写名字, 避免两个标签挤在一起
+                text = name if (41 - n) in USED else f"{name} ({n})"
+                s.append(f'<text class="pu" x="{x - 9}" y="{y + 4}" text-anchor="end">{text}</text>')
     s.append(ground(880, pico_pin_y(38), "right"))
 
     # ---- 导线 ----
     s.append(wire("p9", "w9", [(190, 40), (270, 40)], "9V", (212, 33)))
-    s.append(wire("p9", "w9", [(230, 40), (230, 120), (540, 120), (540, 180)]))
+    s.append(wire("p9", "w9", [(230, 40), (230, 120), (496, 120), (496, 180)]))
     s.append(junction("p9", "w9", 230, 40))
     s.append(wire("p5", "w5", [(420, 40), (440, 40), (440, 150), (40, 150), (40, 540), (530, 540), (530, 580)],
                   "5V", (446, 70)))
     s.append(wire("p5", "w5", [(70, 270), (40, 270)]))
     s.append(junction("p5", "w5", 40, 270))
-    s.append(wire("p5", "w5", [(500, 540), (500, 500)]))
-    s.append(junction("p5", "w5", 500, 540))
-    s.append(wire("p33", "w33", [(880, 270), (910, 270), (910, 652), (640, 652), (640, 480), (620, 480)],
-                  "3.3V", (916, 460), hop=(640, 600)))
+    s.append(wire("p33", "w33", [(880, 270), (940, 270), (940, 110), (600, 110), (600, 180)], "3.3V", (760, 104)))
     # EV3 1/2 -> DRV8833 AOUT
-    s.append(wire("motor", "wm", [(230, 216), (480, 216)], "M1", (330, 210)))
-    s.append(wire("motor", "wm", [(230, 234), (480, 234)], "M2", (330, 229)))
+    s.append(wire("motor", "wm", [(230, 210), (480, 210)], "M1", (330, 204)))
+    s.append(wire("motor", "wm", [(230, 230), (480, 230)], "M2", (330, 225)))
     # EV3 3 -> 地
-    s.append(ground(230, 252, "right", label=False))
-    # EV3 5/6 -> HV1/HV2
-    s.append(wire("enc", "we", [(230, 288), (320, 288), (320, 410), (480, 410)], "A相 5V", (330, 404)))
-    s.append(wire("enc", "we", [(230, 306), (300, 306), (300, 430), (480, 430)], "B相 5V", (330, 446)))
+    s.append(ground(230, 250, "right", label=False))
+    # EV3 5/6 -> 10k -> 分压点 (20k 到地) -> GP4/GP5
+    s.append(wire("enc", "we", [(230, 290), (760, 290)], "≈3V", (720, 284), anchor="middle"))
+    s.append(wire("enc", "we", [(230, 310), (760, 310)], "≈3V", (720, 326), anchor="middle"))
+    s.append(wire("enc", "we", [(430, 290), (430, 420)], hop=(430, 310)))
+    s.append(wire("enc", "we", [(470, 310), (470, 420)]))
+    s.append(junction("enc", "we", 430, 290))
+    s.append(junction("enc", "we", 470, 310))
+    s.append('<g class="wire" data-g="enc">' + resistor(360, 290, "10kΩ") + resistor(360, 310, "10kΩ", label_at=(360, 328))
+             + resistor(430, 380, "20kΩ", True, (422, 384), "end") + resistor(470, 380, "20kΩ", True) + "</g>")
+    s.append(f'<text class="wl wet" x="262" y="284" text-anchor="middle">5V</text>')
+    s.append(ground(430, 420, label=False))
+    s.append(ground(470, 420, label=False))
     # Pico -> DRV8833
     s.append(wire("ctrl", "wc", [(760, 250), (620, 250)], "PWM", (690, 244), anchor="middle"))
     s.append(wire("ctrl", "wc", [(760, 270), (620, 270)]))
-    # 电平转换 -> Pico
-    s.append(wire("enc", "we", [(760, 290), (670, 290), (670, 410), (620, 410)]))
-    s.append(wire("enc", "we", [(760, 310), (690, 310), (690, 430), (620, 430)], "3.3V", (696, 446)))
     # Pico -> 舵机
     s.append(wire("servo", "ws", [(760, 390), (720, 390), (720, 600), (620, 600)], "舵机信号", (712, 520), anchor="end"))
     return ('<svg class="diagram" viewBox="0 0 980 680" role="img" aria-label="单臂原型完整接线图: 9V 供给 DRV8833 和 5V 降压模块; '
-            '5V 供给舵机、编码器和电平转换高压侧; Pico 的 3.3V 供给电平转换低压侧; GP2/GP3 控制 DRV8833, '
-            'DRV8833 输出驱动 EV3 马达; 编码器 A/B 相经电平转换接 GP4/GP5; GP8 接舵机信号。">'
+            '5V 供给舵机和编码器; Pico 的 3.3V 接 DRV8833 STBY; GP2/GP3 控制 DRV8833, '
+            'DRV8833 输出驱动 EV3 马达; 编码器 A/B 相各经 10k 串联、20k 下拉分压后接 GP4/GP5; GP8 接舵机信号。">'
             + "".join(s) + "</svg>")
 
 
@@ -217,29 +222,27 @@ def overview_svg():
     node(240, 130, 150, "DRV8833", "马达驱动")
     node(480, 130, 150, "EV3 马达", "转动机械手")
     node(480, 20, 150, "Geekservo", "夹爪开合")
-    node(480, 250, 150, "电平转换", "5V ↔ 3.3V")
+    node(480, 250, 150, "分压电阻", "10k + 20k ×2")
     node(240, 250, 150, "Pico", "实时控制")
     arrow("w9", [(150, 43), (240, 43)], "9V", (195, 37))
     arrow("w9", [(85, 66), (85, 153), (240, 153)], "9V", (100, 145), "start")
     arrow("w5", [(390, 36), (480, 36)], "5V", (435, 30))
     arrow("w5", [(315, 66), (315, 100), (700, 100), (700, 180), (630, 180)], "5V 编码器电源", (655, 94))
-    arrow("w5", [(700, 180), (700, 263), (630, 263)], "5V 高压侧", (706, 225), "start")
     arrow("wm", [(390, 153), (480, 153)], "M1 / M2", (435, 147))
     arrow("we", [(555, 176), (555, 250)], "A/B 相 5V", (561, 218), "start")
-    arrow("we", [(480, 285), (390, 285)], "A/B 相 3.3V", (435, 303))
+    arrow("we", [(480, 273), (390, 273)], "A/B 相 ≈3V", (435, 291))
     arrow("wc", [(300, 250), (300, 176)], "GP2/GP3 PWM", (306, 218), "start")
     arrow("ws", [(360, 250), (360, 210), (440, 210), (440, 56), (480, 56)], "GP8 信号", (446, 200), "start")
-    arrow("w33", [(390, 265), (480, 265)], "3.3V 低压侧", (435, 259))
     arrow("w5", [(150, 273), (240, 273)], "5V", (195, 267))
     return ('<svg class="diagram" viewBox="0 0 760 320" role="img" aria-label="系统总览: 9V 电源供给马达驱动和 5V 降压; 5V 供给舵机、'
-            '编码器和电平转换; Pico 由 USB 供电, 通过 PWM 控制马达驱动, 经电平转换读取编码器, 直接控制舵机。">'
+            '编码器; Pico 由 USB 供电, 通过 PWM 控制马达驱动, 经电阻分压读取编码器, 直接控制舵机。">'
             + "".join(s) + "</svg>")
 
 
 # ---- Pico 引脚图 ------------------------------------------------------------------
 
 PIN_ROLE = {4: ("wc", "马达 AIN1"), 5: ("wc", "马达 AIN2"), 6: ("we", "编码器 A"), 7: ("we", "编码器 B"),
-            11: ("ws", "舵机信号"), 36: ("w33", "电平转换 LV"), 38: ("gnd", "公共地"), 3: ("gnd", "(也可接地)"),
+            11: ("ws", "舵机信号"), 36: ("w33", "DRV8833 STBY"), 38: ("gnd", "公共地"), 3: ("gnd", "(也可接地)"),
             1: ("later", "UART→Zero"), 2: ("later", "UART←Zero")}
 
 
@@ -269,7 +272,7 @@ def pinout_svg():
                      f'{role[1]}</text>')
     return ('<svg class="diagram pinout" viewBox="0 0 520 470" role="img" aria-label="Pico 引脚图, 正面朝上 USB 在上: '
             '单臂原型用到 4 号脚 GP2、5 号脚 GP3 (马达), 6 号脚 GP4、7 号脚 GP5 (编码器), 11 号脚 GP8 (舵机), '
-            '36 号脚 3V3 和 38 号脚 GND。">' + "".join(s) + "</svg>")
+            '36 号脚 3V3 (接 DRV8833 STBY) 和 38 号脚 GND。">' + "".join(s) + "</svg>")
 
 
 # ---- 页面 -------------------------------------------------------------------------
@@ -400,9 +403,11 @@ details summary{cursor:pointer;font-weight:700}
 .rp{stroke:#e03131;stroke-width:1.5} .rn{stroke:#1c7ed6;stroke-width:1.5}
 .bbl{font-size:10.5px;fill:var(--muted)}
 .bbn{font-size:9.5px;fill:var(--muted)}
-.lvl{fill:#1c4f8f}
+.rb{fill:#e6cfa1;stroke:#7a5b2e;stroke-width:1.4}
+.rlead{stroke:#8a9097;stroke-width:2;fill:none}
+.rl{font-size:10.5px;font-weight:700;fill:currentColor;paint-order:stroke;stroke:var(--sheet);stroke-width:3px}
 .pt.sm{font-size:12px;fill:#fff}
-.ps.ob{fill:var(--board-ink);opacity:.85} .ps.lv{fill:#dbe8f7}
+.ps.ob{fill:var(--board-ink);opacity:.85}
 .pu.sm{font-size:9.5px} .pu.xs{font-size:8.5px;fill:#fff}
 .pn.xs{font-size:10px}
 .w.jw{stroke-width:2.6}
@@ -487,28 +492,28 @@ def breadboard_svg():
         x, y = hole(n + 2, "h")
         s.append(f'<text class="pu sm" x="{x + 3.5}" y="{y - 9}" transform="rotate(-90 {x + 3.5} {y - 9})">{text}</text>')
 
-    # 电平转换: 按用户模块的丝印顺序, 第 30~35 列依次为 HV4 HV3 GND HV HV2 HV1 (LV 侧同序)
-    s.append('<rect class="lvl" x="676" y="296" width="96" height="80" rx="4" opacity="0.93"/>')
-    s.append('<text class="pt sm" x="724" y="330" text-anchor="middle">电平转换</text>')
-    s.append('<text class="ps lv" x="724" y="362" text-anchor="middle">上 HV · 下 LV</text>')
-    s.append('<text class="ps lv" x="724" y="348" text-anchor="middle">BSS138</text>')
-    for i, (hv, lv) in enumerate((("4", "4"), ("3", "3"), ("G", "G"), ("V", "V"), ("2", "2"), ("1", "1"))):
-        c = 30 + i
-        for r, t in (("d", hv), ("g", lv)):
-            x, y = hole(c, r)
-            s.append(f'<circle class="pin used" cx="{x}" cy="{y}" r="3.6"/>')
-            ty = y - 7 if r == "g" else y + 12
-            s.append(f'<text class="pu xs" x="{x}" y="{ty}" text-anchor="middle">{t}</text>')
+    # 编码器分压 (下半区, 与 Pico 同侧):
+    #   A 相: 分压点第 26 列 (i8→i26 接 GP4, j26 经 20k 接下排 −), 10k 跨 f26~f33, 黄线插 h33
+    #   B 相: 分压点第 28 列 (i9→i28 接 GP5, j28 经 20k 接下排 −), 10k 跨 g28~g31, 蓝线插 h31
+    def bb_res(a, b, text, label_at, anchor="middle"):
+        (x0, y0), (x1, y1) = a, b
+        mx, my = (x0 + x1) / 2, (y0 + y1) / 2
+        vertical = x0 == x1
+        body = resistor(mx, my, text, vertical, label_at, anchor)
+        return (f'<g class="wire" data-g="enc"><path class="rlead" d="M{x0} {y0} L{x1} {y1}"/>'
+                f'<circle class="dot we" cx="{x0}" cy="{y0}" r="3"/><circle class="dot we" cx="{x1}" cy="{y1}" r="3"/>'
+                + body + "</g>")
 
-    # 板上跳线
     s.append(jumper("gnd", "wg", hole(5, "a"), hole(5, "T-")))
     s.append(jumper("gnd", "wg", hole(5, "j"), hole(5, "B-")))
     s.append(jumper("gnd", "wg", hole(40, "T-"), hole(40, "B-"), bow=-26))
-    s.append(jumper("p33", "w33", hole(7, "b"), hole(33, "j"), bow=150, label="3.3V", label_at=(520, 262)))
-    s.append(jumper("enc", "we", hole(8, "i"), hole(35, "i"), bow=-60, label="GP4→LV1", label_at=(540, 434)))
-    s.append(jumper("enc", "we", hole(9, "j"), hole(34, "j"), bow=-88, label="GP5→LV2", label_at=(490, 470)))
-    s.append(jumper("p5", "w5", hole(33, "a"), hole(33, "T+")))
-    s.append(jumper("gnd", "wg", hole(32, "a"), hole(32, "T-")))
+    s.append(jumper("enc", "we", hole(8, "i"), hole(26, "i"), bow=-46))
+    s.append(jumper("enc", "we", hole(9, "i"), hole(28, "i"), bow=-70))
+    s.append(bb_res(hole(26, "f"), hole(33, "f"), "10kΩ", (672, 345)))
+    s.append(bb_res(hole(28, "g"), hole(31, "g"), "10kΩ", (656, 386)))
+    s.append(bb_res(hole(26, "j"), hole(26, "B-"), "20kΩ", (612, 442), "end"))
+    s.append(bb_res(hole(28, "j"), hole(28, "B-"), "20kΩ", (670, 442), "start"))
+    s.append(f'<text class="note" x="{hole(29, "j")[0]}" y="502" text-anchor="middle">第 26、28 列是分压点 (≈3V)</text>')
 
     # EV3 线 (剪开)
     s.append(box(596, 26, 234, 58, "EV3 马达线 (剪开的 6 根芯)"))
@@ -516,8 +521,11 @@ def breadboard_svg():
              (796, "红 GND", "wg")]
     for x, t, cls in tails:
         s.append(f'<text class="pn xs" x="{x}" y="78" text-anchor="middle">{t.split()[0]}</text>')
-    s.append(jumper("enc", "we", (764, 84), hole(35, "b"), label="A相", label_at=(770, 186), anchor="start"))
-    s.append(jumper("enc", "we", (748, 84), hole(34, "b"), label="B相", label_at=(742, 186), anchor="end"))
+    s.append(jumper("enc", "we", (764, 84), hole(33, "h")))
+    s.append(jumper("enc", "we", (748, 84), hole(31, "h")))
+    for c, t in ((33, "黄"), (31, "蓝")):
+        x, y = hole(c, "j")
+        s.append(f'<text class="wl wet" x="{x}" y="{y + 16}" text-anchor="middle">{t}</text>')
     s.append(jumper("p5", "w5", (780, 84), hole(36, "T+"), label="5V", label_at=(772, 150), anchor="end"))
     s.append(jumper("gnd", "wg", (796, 84), hole(37, "T-"), label="GND", label_at=(804, 150), anchor="start"))
     s.append(stub("wm", 612, 84, 0, 34, "白"))
@@ -549,40 +557,40 @@ def breadboard_svg():
     s.append(stub("w5", 550, 566, 44, 0, "V+ ← 5V 降压 (直连)"))
     s.append(stub("w5", 550, 594, 44, 0, "GND ← 5V 降压 (直连)"))
     return ('<svg class="diagram bbsvg" viewBox="0 0 900 680" role="img" aria-label="面包板布局: Pico 横放在第 3~22 列, '
-            '电平转换在第 30~35 列跨中间凹槽; 上排电源轨为 5V 和地; 马达驱动和舵机电源放在面包板外直接连线。">'
+            '编码器分压电阻在第 26~33 列下半区; 上排电源轨为 5V 和地; 马达驱动和舵机电源放在面包板外直接连线。">'
             + "".join(s) + "</svg>")
 
 
 BB_TABLE = [
     ("插 Pico", "c3~c22、h3~h22", "USB 朝左。1 号脚在 h3, 20 号脚在 h22; 40 号脚在 c3, 21 号脚在 c22"),
-    ("插电平转换", "第 30~35 列", "跨在中间凹槽上, HV 那排朝上 (靠 5V 轨)。从左到右: HV4 HV3 GND HV HV2 HV1"),
     ("地", "a5 → 上排 −", "Pico 38 号脚 GND"),
     ("地", "j5 → 下排 −", "Pico 3 号脚 GND"),
     ("地", "上排 − (第 40 列) → 下排 −", "把上下两条地线轨连起来"),
-    ("3.3V", "b7 → j33", "Pico 36 号脚 (3V3) → 电平转换 LV"),
-    ("5V", "a33 → 上排 +", "电平转换 HV 接 5V"),
-    ("地", "a32 → 上排 −", "电平转换 GND"),
-    ("编码器", "i8 → i35", "GP4 → LV1"),
-    ("编码器", "j9 → j34", "GP5 → LV2"),
-    ("编码器", "黄线 → b35, 蓝线 → b34", "EV3 A/B 相 → HV1/HV2"),
-    ("编码器电源", "绿线 → 上排 +, 红线 → 上排 −", "EV3 线的红色是地线"),
+    ("编码器 A", "10kΩ: f26 ↔ f33; 20kΩ: j26 ↔ 下排 −", "第 26 列是 A 相分压点"),
+    ("编码器 A", "i8 → i26", "GP4 → A 相分压点"),
+    ("编码器 A", "黄线 → h33", "EV3 5 号脚 → 10kΩ 的另一端"),
+    ("编码器 B", "10kΩ: g28 ↔ g31; 20kΩ: j28 ↔ 下排 −", "第 28 列是 B 相分压点"),
+    ("编码器 B", "i9 → i28", "GP5 → B 相分压点"),
+    ("编码器 B", "蓝线 → h31", "EV3 6 号脚 → 10kΩ 的另一端"),
+    ("编码器电源", "绿线 → 上排 + (第 36 列), 红线 → 上排 − (第 37 列)", "EV3 线的红色是地线"),
     ("5V 电源", "J6.1 → 上排 + 第8孔, J6.2 → 上排 − 第9孔", "从洞洞板排母引出两根公对公线"),
     ("马达控制", "j6 → J7.1, j7 → J7.2", "经洞洞板焊线接 DRV8833 AIN1 / AIN2"),
     ("舵机信号", "j13 → J7.3", "经洞洞板接舵机信号，电源不走面包板"),
-    ("驱动使能", "a7 → J7.4", "3V3 → STBY；b7 已用于电平转换，保留原跳线"),
+    ("驱动使能", "a7 → J7.4", "Pico 36 号脚 3V3 (c7) → STBY"),
 ]
 
 
 STEPS = [
-    ("gnd", "先接所有地线", "断电状态下, 把 9V 电源负极、5V 降压模块 GND、DRV8833 GND、电平转换 GND、舵机地线、"
+    ("gnd", "先接所有地线", "断电状态下, 把 9V 电源负极、5V 降压模块 GND、DRV8833 GND、舵机地线、"
      "EV3 线 3 号脚 (红色) 和 Pico 的 38 号脚连在一起。先接地, 后面任何一步接错都更不容易损坏器件。"),
     ("p9", "接 9V", "先用万用表确认电源电压在 8.5~9.5V (绝不能超过 10.8V)。9V 正极接 DRV8833 的 VM 和 5V 降压模块的输入; "
      "本版不另装电容, 保留模块自带的电容。洞洞板按用户确认的 DRV8833 脚序使用 VM 输入。"),
-    ("p5", "接 5V", "单独给 5V 降压模块通电, 先把输出调到 5.0V, 断电后再接: 电平转换 HV、EV3 线 4 号脚 (绿色)、舵机正极。"),
-    ("p33", "接 3.3V", "Pico 的 36 号脚 (3V3 OUT) 接电平转换的 LV。这一路只给电平转换低压侧供电, 不要接任何 5V 的东西。"),
-    ("ctrl", "接马达控制线", "Pico 的 GP2 (4 号脚) 接 DRV8833 AIN1, GP3 (5 号脚) 接 AIN2。确认模块的 nSLEEP (有的标 EEP/STBY) 是高电平。"),
+    ("p5", "接 5V", "单独给 5V 降压模块通电, 先把输出调到 5.0V, 断电后再接: EV3 线 4 号脚 (绿色)、舵机正极。"),
+    ("p33", "接 3.3V", "Pico 的 36 号脚 (3V3 OUT) 接 DRV8833 的 STBY (有的标 nSLEEP/EEP), 让驱动处于工作状态。不要接任何 5V 的东西。"),
+    ("ctrl", "接马达控制线", "Pico 的 GP2 (4 号脚) 接 DRV8833 AIN1, GP3 (5 号脚) 接 AIN2。"),
     ("motor", "接马达电源线", "DRV8833 的 AOUT1 接 EV3 线 1 号脚 (白), AOUT2 接 2 号脚 (黑)。两根线接反也不会坏, 只是方向相反, 用 check 命令能发现。"),
-    ("enc", "接编码器", "EV3 线 5 号脚 (黄, A 相) 接电平转换 HV1, 6 号脚 (蓝, B 相) 接 HV2; 对应的 LV1 接 GP4 (6 号脚), LV2 接 GP5 (7 号脚)。"
+    ("enc", "接编码器分压", "每路两个电阻: EV3 线 5 号脚 (黄, A 相) → 10kΩ → 分压点 → GP4, 分压点再经 20kΩ 接地; "
+     "6 号脚 (蓝, B 相) 同样接到 GP5。先不接 GP4/GP5 的跳线, 通电后手转马达量分压点: 应在约 0V 和 3V 之间变化, 不能超过 3.3V, 正常再接跳线。"
      "5V 信号绝不能直接接 Pico。"),
     ("servo", "接舵机信号", "Pico 的 GP8 (11 号脚) 接舵机信号线。舵机的电源和地已在第 1、3 步接好。"),
 ]
@@ -654,22 +662,22 @@ def page():
     out.append('<header style="display:flex;flex-direction:column;gap:10px">'
                '<div class="eyebrow">quadcuber · 单臂原型 · 接线指南</div>'
                '<h1>把机械手接到 Pico 上</h1>'
-               '<p>一个 EV3 马达 (大马达或中马达接法相同)、一个灰色 Geekservo、一块 DRV8833、一块电平转换模块。'
+               '<p>一个 EV3 马达 (大马达或中马达接法相同)、一个灰色 Geekservo、一块 DRV8833、4 个电阻 (10kΩ ×2、20kΩ ×2)。'
                '引脚按 <span class="mono">firmware/pico/config.py</span> 的 R 臂分配, 接完按 '
                '<span class="mono">docs/single_arm.md</span> 第 4、5 节刷程序和测试。</p>'
                '<p><a href="#perfboard">洞洞板布局与端子表</a> · <a href="#breadboard">面包板接线</a></p></header>')
-    out.append('<div class="warn"><b>原编码器接口未通过复核：本页 BSS138 / HV / LV 图仅留作旧版诊断参考。</b>'
-               '不要继续按旧图安装编码器接口。供电与马达端子分工保留；'
-               '<a href="../ev3-interface-verification.md">修订电路与验证报告</a>。</div>')
+    out.append('<div class="warn"><b>2026-09-27 更新：编码器改用电阻分压, 不再用电平转换模块。</b>'
+               'BSS138 模块与 EV3 马达内部的串联电阻不匹配, 低电平降不下来。'
+               '原因和测量依据见 <a href="../ev3-interface-verification.md">接口复核报告</a>。</div>')
     out.append('<section><h2>三条不能违反的规则</h2><div class="rules">'
                '<div class="rule"><b>马达电压不超过 10.8V</b>DRV8833 的上限。9V 可以, 12V 会烧。</div>'
-               '<div class="rule"><b>编码器信号必须经过电平转换</b>Pico 的引脚不耐 5V, EV3 编码器输出的是 5V 信号。</div>'
+               '<div class="rule"><b>编码器信号必须经过分压</b>Pico 的引脚不耐 5V, EV3 编码器输出 5V 信号; 每路 10kΩ 串联 + 20kΩ 接地, 降到约 3V。</div>'
                '<div class="rule"><b>舵机不从 Pico 取电</b>舵机用 5V 降压模块供电, 启动电流会让 Pico 复位。</div>'
                "</div></section>")
 
     out.append('<section><h2>总览</h2><figure><div class="scroll">' + overview_svg() + "</div>"
-               "<figcaption>9V 只给马达驱动和 5V 降压模块; 5V 给舵机、编码器和电平转换的高压侧; Pico 由电脑 USB 供电, "
-               "它的 3.3V 给电平转换的低压侧。所有模块的地 (GND) 连在一起, 图中没画出。</figcaption></figure></section>")
+               "<figcaption>9V 只给马达驱动和 5V 降压模块; 5V 给舵机和编码器; Pico 由电脑 USB 供电, "
+               "编码器的 5V 信号经电阻分压成约 3V 再进 Pico。所有模块的地 (GND) 连在一起, 图中没画出。</figcaption></figure></section>")
 
     btns = ""
     for g, label, var in FILTERS:
@@ -679,7 +687,7 @@ def page():
                f'<div class="filters" role="group" aria-label="按类别显示导线">{btns}</div>'
                '<figure id="wiring"><div class="scroll">' + wiring_svg() + "</div>"
                "<figcaption>点上面的按钮只看某一类线。线的颜色表示用途, 不是实际导线的颜色。所有接地符号表示连到同一个公共地。"
-               "模块的排针顺序各家不同, 以板上的丝印为准。3.3V 线上的小半圆表示跨过舵机信号线, 两线不相连。</figcaption>"
+               "模块的排针顺序各家不同, 以板上的丝印为准。A 相下拉电阻那条竖线上的小半圆表示跨过 B 相线, 两线不相连。</figcaption>"
                "</figure></section>")
 
     steps = ""
@@ -699,8 +707,9 @@ def page():
                '孔的坐标写法: 字母是行, 数字是列, 例如 <span class="mono">a5</span> 是 a 行第 5 列。</p>'
                '<figure><div class="scroll">' + breadboard_svg() + "</div>"
                "<figcaption>细线是插在面包板上的跳线, 粗线头是不走面包板、直接连到别处的线 (写了去向)。"
-               "电平转换模块按你的模块丝印画: 第 30~35 列从左到右是 HV4、HV3、GND、HV、HV2、HV1, "
-               "LV 一侧按同样顺序 (LV4、LV3、GND、LV、LV2、LV1)。插之前再对一下丝印, 保证每根线接的是同名的脚。</figcaption></figure>"
+               "面包板每一列的 f~j 五个孔是连通的: 第 26 列 (A 相) 和第 28 列 (B 相) 就是分压点, 各插着 10kΩ 的一端、"
+               "20kΩ 的一端和到 GP4/GP5 的跳线; 第 33、31 列插 10kΩ 的另一端和 EV3 的黄、蓝线。"
+               "电阻没有正负, 两头可以对调。</figcaption></figure>"
                '<div class="tbl"><table><tr><th>类别</th><th>从 → 到</th><th>说明</th></tr>' + rows + "</table></div>"
                '<div class="warn"><b>先检查面包板的电源轨。</b> 有些面包板的电源轨在中间 (第 30 列左右) 是断开的, '
                "红蓝线在那里有个缺口。用万用表测一下上排 + 的第 5 列和第 40 列通不通, 不通就在断口处补一根跳线。"
@@ -718,7 +727,7 @@ def page():
 
     ev3 = [("#f4f4f4", "1", "白", "马达 M1", "DRV8833 AOUT1"), ("#222", "2", "黑", "马达 M2", "DRV8833 AOUT2"),
            ("#d9282f", "3", "红", "地 GND", "公共地"), ("#2f9e44", "4", "绿", "编码器电源", "5V"),
-           ("#f2c500", "5", "黄", "编码器 A 相", "电平转换 HV1"), ("#1c6fd6", "6", "蓝", "编码器 B 相", "电平转换 HV2")]
+           ("#f2c500", "5", "黄", "编码器 A 相", "10kΩ → GP4 (GP4 经 20kΩ 接地)"), ("#1c6fd6", "6", "蓝", "编码器 B 相", "10kΩ → GP5 (GP5 经 20kΩ 接地)")]
     rows = "".join(f'<tr><td class="mono">{n}</td><td><span class="chip" style="background:{c}"></span>{col}</td>'
                    f"<td>{fn}</td><td>{to}</td></tr>" for c, n, col, fn, to in ev3)
     out.append('<section><h2>EV3 线的 6 根芯</h2><div class="tbl"><table>'
@@ -726,13 +735,13 @@ def page():
                '<div class="warn"><b>红线是地线, 不是正极。</b> 线色只是常见配色, 不同的线可能不一样, 以万用表通断为准: '
                "1、2 脚之间是马达线圈, 电阻约几欧到十几欧; 1、2 脚和其他脚之间不通。</div></section>")
 
-    out.append('<section><h2>编码器接口修订（2026-09-27）</h2>'
-               '<p><b>原 BSS138 接法撤回。</b>EV3 输出串联电阻与双侧上拉会抬高低电平；'
-               '蓝线典型计算为 1.65V，与实测一致。TXS0108E 和原分压方案均不作为已验证替代。</p>'
-               '<p>修订为 SN74LVC2G17：VCC 接 3V3、GND 共地；黄线 → 1A → 1Y → GP4；'
-               '蓝线 → 2A → 2Y → GP5。采用自带去耦、无信号上拉的可插拔模块，实际排针顺序待核对。</p>'
-               '<p><a href="../ev3-interface-verification.md">查看计算、来源、芯片针脚和实物验收条件</a>。'
-               '下列及上方 HV/LV 图为旧版诊断参考，不是新接口安装图。</p></section>')
+    out.append('<section><h2>编码器为什么用分压</h2>'
+               '<p>LEGO 官方电路: EV3 马达里两路编码器都是推挽输出 0V/5V, 各经一个串联电阻到插头 (蓝线 3.3kΩ; '
+               '黄线的电阻兼作型号识别, 大马达 3.3kΩ、中马达 6.8kΩ)。加上外接的 10kΩ 和 20kΩ, 高电平约 3.0V (中马达黄线约 2.7V), '
+               '低电平约 0V, Pico 读得很可靠。</p>'
+               '<p>BSS138 电平转换模块的上拉会和马达内部电阻分压, 低电平只能降到约 1.65V (实测 1.60~1.64V), 不能用; '
+               'TXS0108E 要求信号源内阻很低, 也不能用。'
+               '<a href="../ev3-interface-verification.md">详细依据</a>。</p></section>')
 
     checks = [("9V 电源 (空载)", "直流电压档, 红表笔接正极", "8.5~9.5V, 绝不能超过 10.8V"),
               ("5V 降压输出", "直流电压档, 接任何负载之前", "4.9~5.2V"),
@@ -741,7 +750,7 @@ def page():
               ("各模块的 GND 之间", "断电, 蜂鸣档", "全部相通"),
               ("EV3 线 1、2 脚之间", "断电, 电阻档", "几欧到十几欧 (马达线圈)"),
               ("DRV8833 nSLEEP 对地", "通电后, 直流电压档", "约 3.3V 或 5V (高电平)"),
-              ("电平转换 LV1/LV2 对地", "通电后, 用手慢慢转马达", "在约 0V 和 3.3V 之间跳变, 最高不超过 3.4V")]
+              ("分压点 (第 26、28 列) 对地", "通电后、先不接 GP4/GP5 跳线, 手转马达, 每次转一点停下读", "在约 0V 和 3V 之间跳变, 任何时候不超过 3.3V")]
     rows = "".join(f"<tr><td>{a}</td><td>{b}</td><td>{c}</td></tr>" for a, b, c in checks)
     out.append('<section><h2>上电前用万用表检查</h2><div class="tbl"><table>'
                "<tr><th>测什么</th><th>怎么测</th><th>应该是</th></tr>" + rows + "</table></div></section>")
@@ -752,7 +761,7 @@ def page():
                "<li>接通 <b>9V</b>。马达此时不会转: 程序没发指令时 DRV8833 输入为低, 马达处于断开状态。"
                "如果马达自己转或者发烫, 立刻断电, 检查 AIN1/AIN2 的接线。</li>"
                "<li>输入 <code>enc</code>, 用手把马达输出轴转一圈, 再输入 <code>enc</code>。计数应变化约 720 "
-               "(方向取决于转向)。没有变化就检查 5V、电平转换和 GP4/GP5。</li>"
+               "(方向取决于转向)。没有变化就检查 5V、分压电阻、黄/蓝线通断和 GP4/GP5。</li>"
                "<li>输入 <code>check</code>, 马达应短暂正转并显示 <b>方向正确</b>。方向相反就按提示改 "
                "<span class=\"mono\">config.py</span>。方向确认之前不要运行 <code>rot</code>。</li>"
                "<li>输入 <code>servo 1500</code>, 舵机应转到中间位置; 然后按 <span class=\"mono\">docs/single_arm.md</span> "
