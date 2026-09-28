@@ -382,16 +382,21 @@ def build(fork_extended=True, head_angle=0.0, with_cube=True, motor="large"):
         for dx in (-20, 20):
             hadd("32523.dat", C_BEAM, (xf + dx, 60 * sy, 20), BEAM_Y_HOLES_Z, s)
 
-    s = step("导轨", "两根 12 号轴穿过叉子框架两端的孔, 再在叉子后面套上半轴套。叉子应能在轴上顺滑地前后滑动。",
-             sub="叉子", view=(30, 35))
+    # 导轨根部: 转动座远端只有 1 孔厚的圆孔, 轴在圆孔里有间隙, 前面 8cm 悬臂会把间隙放大成叉尖下垂。
+    # 两片 3 孔细梁用两端的十字孔同时卡住两根导轨, 从前后两面夹住转动座远端的边框, 把支撑长度加倍。
+    s = step("导轨", "两根 12 号轴穿过叉子框架两端的孔, 在叉子后面各套一个半轴套, 再把一片 3 孔细梁用两端的十字孔"
+             "同时套在两根轴上, 贴住半轴套。叉子应能在轴上顺滑地前后滑动。", sub="叉子", view=(30, 35))
     for y in (-20, 20):
         hadd("3708.dat", C_AXLE, (250 + D, y, 0), ALONG_X, s)
-        hadd("32123a.dat", C_BUSH, (175 + D, y, 0), BUSH_X, s)
+        hadd("32123a.dat", C_BUSH, (185 + D, y, 0), BUSH_X, s)
+    hadd("6632.dat", C_BEAM, (175 + D, -20, 0), BEAM_Y_HOLES_X, s)
 
-    s = step("装叉子", "导轨的另一头插进转动座远端的两个孔, 从框架中间的空档里给每根轴套上一个轴套, 把导轨卡住。",
+    s = step("装叉子", "导轨的另一头插进转动座远端的两个孔, 细梁贴住边框前面。再从框架中间的空档里, 把第二片 3 孔细梁"
+             "用十字孔套在两根轴上、贴住边框后面, 最后各套一个半轴套。两片细梁夹住边框, 导轨就不会在孔里晃。",
              attach=("叉子",), view=(40, 30), focus="head")
+    hadd("6632.dat", C_BEAM, (145 + D, -20, 0), BEAM_Y_HOLES_X, s)
     for y in (-20, 20):
-        hadd("3713.dat", C_BUSH, (140 + D, y, 0), BUSH_X, s)
+        hadd("32123a.dat", C_BUSH, (135 + D, y, 0), BUSH_X, s)
 
     rx = slider_x(fork_extended)
     s = step("立轴", "5 号轴竖着穿过叉子框架后部的孔: 框架下面一个半轴套, 上面两个轴套。", view=(25, 35), focus="mech")
