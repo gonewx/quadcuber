@@ -175,26 +175,40 @@ def CATALOG_NAME(p):
 LPIN_COLLAR = -10.0
 
 
-def _pin_layers(c, solids, hole_cache, boxes):
-    """沿销轴线, 每个与销啮合的实体零件占据的 t 区间 (销局部 x)。"""
+def _hole_segs(p):
+    """零件每段孔在世界坐标中的 (起点, 单位方向, 长度)。"""
+    out = []
+    for a, b in ldraw.hole_segments(p.name):
+        a, b = p.world(a), p.world(b)
+        n = np.linalg.norm(b - a)
+        if n > 1:
+            out.append((a, (b - a) / n, n))
+    return out
+
+
+def _pin_layers(c, solids, hole_cache=None, boxes=None):
+    """沿销轴线, 每个与销啮合的实体零件占据的 t 区间 (销局部 x)。按每段孔的实际长度判断, 不用无限长的孔线。"""
     axis = c.rot[:, 0]
     L = CONNECTOR_LEN[c.name]
     spans = {}
-    for t in np.arange(-L / 2 + 1, L / 2, 2.0):
-        pt = c.pos + t * axis
-        for s in solids:
+    for s in solids:
+        if boxes is not None:
             lo, hi = boxes[id(s)]
-            if np.any(pt < lo - 1) or np.any(pt > hi + 1):
+            ends = np.array([c.pos - L / 2 * axis, c.pos + L / 2 * axis])
+            if np.any(ends.max(0) < lo - 1) or np.any(ends.min(0) > hi + 1):
                 continue
-            local = (pt - s.pos) @ s.rot
-            slo, shi = ldraw.bbox(s.name)
-            if np.any(local < slo - 0.5) or np.any(local > shi + 0.5):
+        for a, d, n in _hole_segs(s):
+            if abs(abs(d @ axis) - 1) > 1e-3 or np.linalg.norm(np.cross(c.pos - a, d)) > 1.5:
                 continue
-            if any(abs(abs(a @ axis) - 1) < 1e-3 and np.linalg.norm(np.cross(pt - q, a)) < 1.5
-                   for q, a in hole_cache[id(s)]):
-                sp = spans.setdefault(id(s), [s, t, t])
-                sp[1], sp[2] = min(sp[1], t), max(sp[2], t)
-    return [(s, lo - 1, hi + 1) for s, lo, hi in spans.values()]
+            u0 = (c.pos - a) @ d  # 销中心在孔段上的位置
+            sign = d @ axis
+            # 孔段 [0, n] 换成销的 t 坐标
+            t1, t2 = sorted(((0 - u0) * sign, (n - u0) * sign))
+            lo, hi = max(t1, -L / 2), min(t2, L / 2)
+            if hi - lo > 1:
+                sp = spans.setdefault(id(s), [s, lo, hi])
+                sp[1], sp[2] = min(sp[1], lo), max(sp[2], hi)
+    return [tuple(v) for v in spans.values()]
 
 
 def long_pins(parts):
