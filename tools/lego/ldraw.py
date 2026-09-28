@@ -154,3 +154,35 @@ def holes(name):
             lines.append((p, a))
     _holes[key] = lines
     return lines
+
+
+_segs = {}
+
+
+def hole_segments(name):
+    """零件的每一段孔: [(起点, 终点)], 零件局部坐标。和 holes() 不同, 不合并成无限长的直线,
+    可以用来判断某一点是不是真的在孔里 (例如挡套、挡肩有没有伸进孔)。"""
+    key = name.lower()
+    if key in _segs:
+        return _segs[key]
+    out = []
+
+    def walk(n, m, pos, depth):
+        for line in get(n).splitlines():
+            p = line.split()
+            if len(p) < 15 or p[0] != "1":
+                continue
+            v = list(map(float, p[2:14]))
+            sub = " ".join(p[14:]).lower().replace("\\", "/")
+            gp = m @ np.array(v[:3]) + pos
+            gm = m @ np.array(v[3:12]).reshape(3, 3)
+            if any(k in sub for k in _HOLE_KEYS) and not sub.startswith(_SKIP):
+                t = geometry(sub)[0]
+                ys = t[..., 1] if len(t) else np.array([0.0, 1.0])
+                out.append((gp + gm[:, 1] * ys.min(), gp + gm[:, 1] * ys.max()))
+            elif depth < 4 and not sub.startswith(_SKIP):
+                walk(sub, gm, gp, depth + 1)
+
+    walk(key, np.eye(3), np.zeros(3), 0)
+    _segs[key] = out
+    return out

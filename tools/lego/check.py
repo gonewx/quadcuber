@@ -119,7 +119,7 @@ def _hole_lines(p):
     return [(p.world(q), p.rot @ a) for q, a in lines]
 
 
-CONNECTOR_LEN = {"3705.dat": 80, "2780.dat": 40, "6558.dat": 60, "43093.dat": 40, "3708.dat": 240, "32073.dat": 100,
+CONNECTOR_LEN = {"3705.dat": 80, "2780.dat": 40, "6558.dat": 60, "43093.dat": 40, "32054.dat": 60, "3708.dat": 240, "32073.dat": 100,
                  "3713.dat": 20, "32123a.dat": 10}
 
 
@@ -228,9 +228,29 @@ def long_pins(parts):
         return find
 
     for c in parts:
+        where = f"{CATALOG_NAME(c)} @ {np.round(c.pos, 1).tolist()}"
+        if c.name == "32054.dat":
+            # 带挡套长销: 局部 -30..-10 是挡套, 不能进孔; 2 孔长的销段 (-10..+30) 要穿在零件里。
+            axis = c.rot[:, 0]
+            inbush = []
+            for s in solids:
+                for a, b in ldraw.hole_segments(s.name):
+                    a, b = s.world(a), s.world(b)
+                    d = b - a
+                    n = np.linalg.norm(d)
+                    if n < 1 or abs(abs(d @ axis) / n - 1) > 1e-3:
+                        continue
+                    for t in np.arange(-29, LPIN_COLLAR - 0.5, 2.0):  # 挡套上的点
+                        pt = c.pos + t * axis
+                        u = (pt - a) @ d / n
+                        if 0.5 < u < n - 0.5 and np.linalg.norm(np.cross(pt - a, d / n)) < 1.5:
+                            inbush.append(s)
+                            break
+            if inbush:
+                problems.append(f"{where}: 挡套落在 {CATALOG_NAME(inbush[0])} 的孔里, 方向反了")
+            continue
         if c.name != "6558.dat":
             continue
-        where = f"{CATALOG_NAME(c)} @ {np.round(c.pos, 1).tolist()}"
         short = [s for s, lo, hi in layers[id(c)] if lo < LPIN_COLLAR - 0.5]
         long_ = [s for s, lo, hi in layers[id(c)] if hi > LPIN_COLLAR + 0.5]
         inside = [s for s, lo, hi in layers[id(c)] if lo < LPIN_COLLAR - 0.5 and hi > LPIN_COLLAR + 0.5]
