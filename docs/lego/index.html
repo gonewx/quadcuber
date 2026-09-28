@@ -86,7 +86,7 @@ th{color:var(--muted);font-weight:600}
 <p class="cap">本页是EV3 大马达版。另有<a href="https://claude.ai/artifact/7VtzEUtxMbezHPJQYCDWPX">EV3 中马达版</a>, 两版的机械手、叉子和测试架大部分相同, 只有马达固定和马达与转动座的连接不同。</p>
 <p>一个 EV3 大马达带动机械手旋转, 一个灰色 Geekservo 推拉叉子夹紧或松开魔方。测试架把马达和一个固定叉连在一起, 固定叉卡住魔方背面的中间一列, 这样机械手就可以单独拧魔方的一层。搭好后按 <b>docs/single_arm.md</b> 接线和测试。</p>
 <div class="plate"><img src="img/cover_closed.png" alt="整机总览" class="" loading="lazy" width="1400" height="900"></div>
-<div class="facts"><div class="fact"><b>23</b><span>个步骤</span></div><div class="fact"><b>124</b><span>个乐高零件, 另加 EV3 大马达和舵机各 1 个</span></div><div class="fact"><b>16.5 mm</b><span>叉子行程 (要求 ≥ 13mm)</span></div><div class="fact"><b>56 mm</b><span>魔方尺寸 (叉齿内侧间距约 56.8mm)</span></div></div>
+<div class="facts"><div class="fact"><b>23</b><span>个步骤</span></div><div class="fact"><b>125</b><span>个乐高零件, 另加 EV3 大马达和舵机各 1 个</span></div><div class="fact"><b>16.5 mm</b><span>叉子行程 (要求 ≥ 13mm)</span></div><div class="fact"><b>56 mm</b><span>魔方尺寸 (叉齿内侧间距约 56.8mm)</span></div></div>
 <div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/mech_closed.png" alt="夹紧" class="" loading="lazy" width="1000" height="520"></div><figcaption class="cap">俯视: 夹紧 (舵机曲柄转到前死点, 叉齿插入魔方两侧约 10mm)</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/mech_open.png" alt="松开" class="" loading="lazy" width="1000" height="520"></div><figcaption class="cap">俯视: 松开 (叉子后退 16.5mm, 叉齿离开魔方)</figcaption></figure></div>
 <div class="note"><b>请先读这里:</b> 这份说明书是按官方 LDraw 零件的精确尺寸建模的, 程序检查过所有零件没有互相穿模、每个销和轴都插在孔里、已建模的机械手零件转一整圈不会碰到测试架。<b>检查不包含线缆, 不代表实物可连续旋转</b>。Geekservo 的外形按你给的图纸建模, 摩擦力、零件松紧和整体刚度只能靠实物检验。搭的过程中哪一步对不上, 拍照发给我。</div>
 <nav class="toc"><a href="#bom">零件清单</a><a href="#s1">1. 底座 1</a><a href="#s2">2. 底座 2</a><a href="#s3">3. 立板</a><a href="#s4">4. 横梁</a><a href="#s5">5. 接头</a><a href="#s6">6. 后垫块</a><a href="#s7">7. 装后垫块</a><a href="#s8">8. 马达固定板</a><a href="#s9">9. 底部垫梁</a><a href="#s10">10. 装马达</a><a href="#s11">11. 固定叉 1</a><a href="#s12">12. 固定叉 2</a><a href="#s13">13. 装固定叉</a><a href="#s14">14. 转动座</a><a href="#s15">15. 舵机</a><a href="#s16">16. 叉子 1</a><a href="#s17">17. 叉子 2</a><a href="#s18">18. 导轨</a><a href="#s19">19. 装叉子</a><a href="#s20">20. 立轴</a><a href="#s21">21. 曲柄</a><a href="#s22">22. 连杆</a><a href="#s23">23. 放入魔方</a><a href="#checks">检查与待验证</a></nav>
@@ -108,7 +108,7 @@ th{color:var(--muted);font-weight:600}
 <div class="item"><img src="img/part_3708_0.png" alt="12 号轴" class="" loading="lazy" width="260" height="200"><div class="qty">2×</div><div>12 号轴</div><div class="mono">3708</div></div>
 <div class="item"><img src="img/part_3713_72.png" alt="轴套" class="" loading="lazy" width="260" height="200"><div class="qty">2×</div><div>轴套</div><div class="mono">3713</div></div>
 <div class="item"><img src="img/part_43093_1.png" alt="轴销 (一半轴一半销)" class="" loading="lazy" width="260" height="200"><div class="qty">1×</div><div>轴销 (一半轴一半销)</div><div class="mono">43093</div></div>
-<div class="item"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="qty">22×</div><div>长摩擦销 (3 孔长)</div><div class="mono">6558</div></div>
+<div class="item"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="qty">23×</div><div>长摩擦销 (3 孔长)</div><div class="mono">6558</div></div>
 </div></section>
 <h2>搭建步骤</h2>
 <section class="step sub" id="s1">
@@ -173,9 +173,9 @@ th{color:var(--muted);font-weight:600}
 <div class="num">7</div><div class="title-block">
 <h3>装后垫块</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/sub1.png" alt="后垫块" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的后垫块</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
+<div class="callout"><div class="chip"><img src="img/sub1.png" alt="后垫块" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的后垫块</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">摩擦销 (2 孔长)</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
 <div class="plate"><img src="img/step07.png" alt="装后垫块" class="" loading="lazy" width="1200" height="860"></div>
-<p>先在最上排横梁的第 3、4 孔各插一个摩擦销, 露出半截; 把后垫块的后层第 4、5 孔套上去, 垫块左端比横梁多出一个孔。</p>
+<p>先在最上排横梁的第 3、4 孔各插一个摩擦销, 露出半截; 再把一根蓝色长销的 2 孔长一段从后面插进后垫块第 7 孔 (离多出来那一端最远的孔), 穿过后、中两层, 挡肩贴住后层, 1 孔长的短头朝后。把后垫块的后层第 4、5 孔套上两个黑销, 同时短头插进横梁第 6 孔; 垫块另一端比横梁多出一个孔。</p>
 </section>
 <section class="step sub" id="s8">
 <div class="step-head">
