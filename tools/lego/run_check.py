@@ -1,6 +1,6 @@
 """运行全部检查: python run_check.py [large|medium ...]   (默认两种马达都检查)
 
-1. 夹紧、松开两种状态: 零件干涉 + 销/轴连接;
+1. 夹紧、松开两种状态: 零件干涉 + 销/轴连接 + 蓝色长销能否装上 (挡肩位置和装配顺序);
 2. 转动扫描: 机械手每 15° 一格转满一圈, 转动部分不能碰到测试架和马达;
 3. 松开时魔方整体翻转 0~90° (将来四臂时), 不能碰到机械手。
 """
@@ -26,6 +26,9 @@ def report(parts, label):
     for p in check.connections(parts):
         n += 1
         print(f"[{label}] 连接: {p}")
+    for p in check.long_pins(parts):
+        n += 1
+        print(f"[{label}] 长销: {p}")
     return n
 
 
