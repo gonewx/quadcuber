@@ -34,6 +34,10 @@ I = np.eye(3)
 ALONG_X = I  # 销、轴 (局部 x 为轴线)
 ALONG_Y = orient("+y", "-x")
 ALONG_Z = orient("+z", "+y")
+# 6558 长销的挡肩在局部 x = -10 (1 孔长一段在局部 -x 侧)。下面三个朝向把 1 孔长的一段朝向 +X/+Y/+Z。
+LPIN_SHORT_X = orient("-x", "+y")
+LPIN_SHORT_Y = orient("-y", "+x")
+LPIN_SHORT_Z = orient("-z", "+y")
 BEAM_X_HOLES_Z = orient("+y", "+z")  # 梁沿 X, 孔沿 Z (局部 z 为梁长方向, 局部 y 为孔轴)
 BEAM_Y_HOLES_Z = orient("-x", "+z")
 BEAM_Y_HOLES_X = orient("+z", "+x")
@@ -214,20 +218,25 @@ def build(fork_extended=True, head_angle=0.0, with_cube=True, motor="large"):
 
     # ========== 二、马达 ==========
     if motor == "large":
-        s = step("马达固定板", "7x5 框架竖着插进马达底部两片耳朵之间的缝里, 用两根长销穿过 耳朵-框架-耳朵。", sub="马达",
+        # 两片耳朵是马达上的同一个零件, 缝宽正好 1 孔: 蓝色长销的挡肩要穿过一片耳朵才能到位, 装不上;
+        # 改用无挡肩的 2 孔长摩擦销, 从外侧推进 耳朵-框架 两层, 框架被耳朵夹住不能左右移动。
+        s = step("马达固定板", "7x5 框架竖着插进马达底部两片耳朵之间的缝里。本步不用蓝色长销 (它的挡肩穿不过耳朵): "
+                 "两根黑色 2 孔长摩擦销从没有输出盘的一侧推进耳朵和框架, 推到与耳朵外侧平齐。", sub="马达",
                  view=(60, -20))
         add("95658.dat", C_MOTOR, (0, 0, 0), I, s)
         add("64179.dat", C_FRAME, (0, 40, -200), FRAME_YZ_LONG_Z, s)
         for z in (-180, -140):
-            add("6558.dat", C_LPIN, (0, 0, z), ALONG_X, s)
-        s = step("装马达", "马达固定板的尾端对准左边立板, 两根长销穿过 固定板-横梁-立板。", attach=("马达",))
+            add("2780.dat", C_PIN, (-10, 0, z), ALONG_X, s)
+        s = step("装马达", "两根蓝色长销从前面把 2 孔长的一段插进横梁和左边立板, 挡肩贴住横梁, 1 孔长的一段朝前露出。"
+                 "再把马达固定板尾端的两个孔套在露出的短头上。", attach=("马达",))
         for y in (20, 60):
-            add("6558.dat", C_LPIN, (0, y, -280), ALONG_Z, s)
+            add("6558.dat", C_LPIN, (0, y, -280), LPIN_SHORT_Z, s)
     else:
-        s = step("马达支架", "7x5 框架竖着装在左边立板前面, 两根长销穿过 框架-横梁-立板。")
+        s = step("马达支架", "两根蓝色长销从前面把 2 孔长的一段插进横梁和左边立板, 挡肩贴住横梁; "
+                 "7x5 框架竖着套在露出的短头上。")
         add("64179.dat", C_FRAME, (0, 40, -200), FRAME_YZ_LONG_Z, s)
         for y in (20, 60):
-            add("6558.dat", C_LPIN, (0, y, -280), ALONG_Z, s)
+            add("6558.dat", C_LPIN, (0, y, -280), LPIN_SHORT_Z, s)
         s = step("马达面板", "15 孔梁贴在中马达正面 (有红色输出孔的一面): 两个摩擦销插进输出孔左右两侧的孔, "
                  "梁中间的孔正对输出孔。再把 4 号轴穿过这个孔插进输出孔, 轴应能跟着马达自由转动。", sub="马达",
                  view=(75, 20))
@@ -276,22 +285,26 @@ def build(fork_extended=True, head_angle=0.0, with_cube=True, motor="large"):
 
     # ========== 三、固定叉 ==========
     fb = np.array([480.0 + D, 0.0, -200.0])
-    s = step("固定叉 1", "7x5 框架两侧各用两根长销夹上 3 孔梁。", sub="固定叉", view=(120, 30))
+    # 3 孔梁-框架/叉齿-3 孔梁三层夹心: 长销挡肩在第一层和中间层之间, 所以先在第一层插好全部长销,
+    # 再套中间层, 最后盖第三层 (两边 3 孔梁一旦连住, 就不能再往中间穿长销)。
+    s = step("固定叉 1", "4 根 3 孔梁平放, 每根两端的孔各插一根蓝色长销的 1 孔长短头, 挡肩贴住梁, 共 8 根。"
+             "7x5 框架套在靠里的 4 根长销上。", sub="固定叉", view=(120, 30))
     add("64179.dat", C_FRAME, fb, FRAME_YZ_LONG_Z, s)
     for sy in (1, -1):
         for z in (-180, -140):
-            for x in (460 + D, 500 + D):
-                add("32523.dat", C_BEAM, (x, 60 * sy, z), BEAM_Y_HOLES_X, s)
-            add("6558.dat", C_LPIN, (480 + D, 40 * sy, z), ALONG_X, s)
-    s = step("固定叉 2", "装上两根叉齿 (7 孔梁), 长销穿过 3 孔梁-叉齿-3 孔梁。", sub="固定叉", view=(120, 30))
+            add("32523.dat", C_BEAM, (460 + D, 60 * sy, z), BEAM_Y_HOLES_X, s)
+            for y in (40, 80):
+                add("6558.dat", C_LPIN, (480 + D, y * sy, z), ALONG_X, s)
+    s = step("固定叉 2", "两根叉齿 (7 孔梁) 套在靠外的 4 根长销上, 最后盖上另外 4 根 3 孔梁, 把框架和叉齿夹在中间。",
+             sub="固定叉", view=(120, 30))
     for sy in (1, -1):
         add("32524.dat", C_FORK, (480 + D, 80 * sy, -120), BEAM_Z_HOLES_X, s)
         for z in (-180, -140):
-            add("6558.dat", C_LPIN, (480 + D, 80 * sy, z), ALONG_X, s)
-    s = step("装固定叉", "固定叉的尾端对准右边立板, 两根长销穿过 固定叉-横梁-立板。", attach=("固定叉",),
-             view=(150, 28))
+            add("32523.dat", C_BEAM, (500 + D, 60 * sy, z), BEAM_Y_HOLES_X, s)
+    s = step("装固定叉", "两根蓝色长销从前面把 2 孔长的一段插进横梁和右边立板, 挡肩贴住横梁; "
+             "固定叉的尾端套在露出的短头上。", attach=("固定叉",), view=(150, 28))
     for y in (-20, 20):
-        add("6558.dat", C_LPIN, (480 + D, y, -280), ALONG_Z, s)
+        add("6558.dat", C_LPIN, (480 + D, y, -280), LPIN_SHORT_Z, s)
 
     # ========== 四、机械手 ==========
     head = []  # 随机械手转动的零件
@@ -316,25 +329,28 @@ def build(fork_extended=True, head_angle=0.0, with_cube=True, motor="large"):
                  view=(60, 25), focus="head")
     hadd("64179.dat", C_FRAME, (100 + D, 0, 0), FRAME_XY_LONG_X, s)
 
-    s = step("舵机", "舵机两个耳朵上的销孔对准转动座上边的第 1、3 个孔, 各插一根长销。"
-             "输出轴朝向图中前方, 并且偏向魔方一侧。", view=(35, 28), focus="head")
+    s = step("舵机", "两根蓝色长销的 2 孔长一段插满舵机两个耳朵的销孔 (耳朵厚 2 孔), 挡肩贴住耳朵, "
+             "1 孔长的短头插进转动座上边的第 1、3 个孔。输出轴朝向图中前方, 并且偏向魔方一侧。",
+             view=(35, 28), focus="head")
     hadd("geekservo.dat", C_SERVO, SERVO_C + [D, 0, 0], orient("+x", "-z"), s)
     for x in (60 + D, 140 + D):
-        hadd("6558.dat", C_LPIN, (x, -60, 0), ALONG_Y, s)
+        hadd("6558.dat", C_LPIN, (x, -60, 0), LPIN_SHORT_Y, s)
 
     xf = fork_frame_x(fork_extended)
-    s = step("叉子 1", "7x5 框架两侧各用两根长销夹上 3 孔梁。", sub="叉子", view=(30, 35))
+    s = step("叉子 1", "4 根 3 孔梁平放, 每根两端的孔各插一根蓝色长销的 1 孔长短头, 挡肩贴住梁, 共 8 根。"
+             "7x5 框架套在靠里的 4 根长销上。", sub="叉子", view=(30, 35))
     hadd("64179.dat", C_FRAME, (xf, 0, 0), FRAME_XY_LONG_X, s)
     for sy in (1, -1):
         for dx in (-20, 20):
-            for z in (-20, 20):
-                hadd("32523.dat", C_BEAM, (xf + dx, 60 * sy, z), BEAM_Y_HOLES_Z, s)
-            hadd("6558.dat", C_LPIN, (xf + dx, 40 * sy, 0), ALONG_Z, s)
-    s = step("叉子 2", "装上两根叉齿 (9 孔梁)。叉齿内侧的间距就是夹魔方的宽度。", sub="叉子", view=(30, 35))
+            hadd("32523.dat", C_BEAM, (xf + dx, 60 * sy, -20), BEAM_Y_HOLES_Z, s)
+            for y in (40, 80):
+                hadd("6558.dat", C_LPIN, (xf + dx, y * sy, 0), ALONG_Z, s)
+    s = step("叉子 2", "两根叉齿 (9 孔梁) 套在靠外的 4 根长销上, 最后盖上另外 4 根 3 孔梁, 把框架和叉齿夹在中间。"
+             "叉齿内侧的间距就是夹魔方的宽度。", sub="叉子", view=(30, 35))
     for sy in (1, -1):
         hadd("40490.dat", C_FORK, (xf + 40, 80 * sy, 0), BEAM_X_HOLES_Z, s)
         for dx in (-20, 20):
-            hadd("6558.dat", C_LPIN, (xf + dx, 80 * sy, 0), ALONG_Z, s)
+            hadd("32523.dat", C_BEAM, (xf + dx, 60 * sy, 20), BEAM_Y_HOLES_Z, s)
 
     s = step("导轨", "两根 12 号轴穿过叉子框架两端的孔, 再在叉子后面套上半轴套。叉子应能在轴上顺滑地前后滑动。",
              sub="叉子", view=(30, 35))

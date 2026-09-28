@@ -168,3 +168,79 @@ def CATALOG_NAME(p):
     import model
 
     return f"{model.CATALOG[p.name][0]}[步骤{p.step}]"
+
+
+# 6558 长销的挡肩在局部 x = -10: 一侧 1 孔长 (-30..-10), 另一侧 2 孔长 (-10..+30)。挡肩过不了孔,
+# 所以长销只能这样装: 两段分别插进挡肩两边的零件, 挡肩正好落在两层之间的接缝上。
+LPIN_COLLAR = -10.0
+
+
+def _pin_layers(c, solids, hole_cache, boxes):
+    """沿销轴线, 每个与销啮合的实体零件占据的 t 区间 (销局部 x)。"""
+    axis = c.rot[:, 0]
+    L = CONNECTOR_LEN[c.name]
+    spans = {}
+    for t in np.arange(-L / 2 + 1, L / 2, 2.0):
+        pt = c.pos + t * axis
+        for s in solids:
+            lo, hi = boxes[id(s)]
+            if np.any(pt < lo - 1) or np.any(pt > hi + 1):
+                continue
+            local = (pt - s.pos) @ s.rot
+            slo, shi = ldraw.bbox(s.name)
+            if np.any(local < slo - 0.5) or np.any(local > shi + 0.5):
+                continue
+            if any(abs(abs(a @ axis) - 1) < 1e-3 and np.linalg.norm(np.cross(pt - q, a)) < 1.5
+                   for q, a in hole_cache[id(s)]):
+                sp = spans.setdefault(id(s), [s, t, t])
+                sp[1], sp[2] = min(sp[1], t), max(sp[2], t)
+    return [(s, lo - 1, hi + 1) for s, lo, hi in spans.values()]
+
+
+def long_pins(parts):
+    """检查每根 6558 长销能不能装上。返回问题列表 (字符串)。
+
+    1. 挡肩必须落在两层零件的接缝上, 不能在某个零件的孔中间;
+    2. 同一个零件不能同时出现在挡肩两侧 (例如马达两片耳朵之间夹一层: 挡肩要穿过一片耳朵才能到位);
+    3. 挡肩两侧的零件不能在更早的步骤里已经用别的销/轴连成一体 (那样只能从一端穿, 挡肩过不去)。
+    同一侧的几层事先连在一起没有关系: 从那一侧的外端插进去, 挡肩停在接缝上。
+    """
+    problems = []
+    solids = [p for p in parts if p.kind == "solid"]
+    hole_cache = {id(p): _hole_lines(p) for p in solids}
+    boxes = {id(p): _obb(p) for p in solids}
+    layers = {id(c): _pin_layers(c, solids, hole_cache, boxes) for c in parts if c.kind in ("pin", "axle")}
+
+    def joined_before(step):
+        """步骤 < step 的销/轴连成的零件分组 (并查集)。"""
+        root = {}
+
+        def find(x):
+            while root.get(x, x) != x:
+                x = root[x]
+            return x
+
+        for c in parts:
+            if c.kind in ("pin", "axle") and c.step < step:
+                ids = [id(s) for s, _, _ in layers[id(c)]]
+                for a in ids[1:]:
+                    root[find(a)] = find(ids[0])
+        return find
+
+    for c in parts:
+        if c.name != "6558.dat":
+            continue
+        where = f"{CATALOG_NAME(c)} @ {np.round(c.pos, 1).tolist()}"
+        short = [s for s, lo, hi in layers[id(c)] if lo < LPIN_COLLAR - 0.5]
+        long_ = [s for s, lo, hi in layers[id(c)] if hi > LPIN_COLLAR + 0.5]
+        inside = [s for s, lo, hi in layers[id(c)] if lo < LPIN_COLLAR - 0.5 and hi > LPIN_COLLAR + 0.5]
+        if inside:
+            problems.append(f"{where}: 挡肩落在 {CATALOG_NAME(inside[0])} 的孔中间, 装不进去 (销的方向可能反了)")
+            continue
+        find = joined_before(c.step)
+        pre = [(a, b) for a in short for b in long_ if find(id(a)) == find(id(b))]
+        if pre:
+            a, b = pre[0]
+            problems.append(f"{where}: 挡肩两侧的 {CATALOG_NAME(a)} 和 {CATALOG_NAME(b)} 在之前的步骤里已经连成一体, "
+                            "只能从一端穿过, 挡肩过不去")
+    return problems
