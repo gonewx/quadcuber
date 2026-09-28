@@ -1,0 +1,471 @@
+{
+  "wires": [
+    {
+      "code": "P03",
+      "group": "power",
+      "start": "DC.+9V",
+      "end": "BUCK.IN+",
+      "bends": [
+        [
+          300,
+          230
+        ],
+        [
+          300,
+          190
+        ]
+      ],
+      "note": "DC 正极第一根线 → 降压 IN+"
+    },
+    {
+      "code": "P04",
+      "group": "ground",
+      "start": "DRV.GND-L2",
+      "end": "BUCK.IN−",
+      "bends": [
+        [
+          90,
+          970
+        ],
+        [
+          90,
+          340
+        ],
+        [
+          650,
+          340
+        ],
+        [
+          650,
+          290
+        ]
+      ],
+      "note": "驱动左排第8脚 GND → 降压 IN−"
+    },
+    {
+      "code": "P07",
+      "group": "power",
+      "start": "DC.+9V",
+      "end": "DRV.VM",
+      "bends": [
+        [
+          270,
+          230
+        ],
+        [
+          270,
+          380
+        ],
+        [
+          120,
+          380
+        ],
+        [
+          120,
+          620
+        ]
+      ],
+      "note": "DC 正极第二根线 → 驱动 VM（直接线）"
+    },
+    {
+      "code": "P08",
+      "group": "ground",
+      "start": "DC.GND",
+      "end": "DRV.GND-L1",
+      "bends": [
+        [
+          260,
+          270
+        ],
+        [
+          260,
+          410
+        ],
+        [
+          180,
+          410
+        ],
+        [
+          180,
+          720
+        ]
+      ],
+      "note": "DC 负极 → 驱动左排第3脚 GND（直接线）"
+    },
+    {
+      "code": "P09",
+      "group": "power",
+      "start": "BUCK.OUT+",
+      "end": "BB.+38",
+      "bends": [
+        [
+          1040,
+          190
+        ],
+        [
+          1040,
+          147
+        ],
+        [
+          1735,
+          147
+        ],
+        [
+          1735,
+          450
+        ],
+        [
+          1615,
+          450
+        ]
+      ],
+      "note": "降压 OUT+ 直接接面包板上 + 第38孔"
+    },
+    {
+      "code": "P10",
+      "group": "ground",
+      "start": "DRV.GND-R",
+      "end": "BB.-38",
+      "bends": [
+        [
+          520,
+          970
+        ],
+        [
+          520,
+          360
+        ],
+        [
+          1770,
+          360
+        ],
+        [
+          1770,
+          510
+        ]
+      ],
+      "note": "驱动右排第8脚 GND → 面包板上 − 第38孔"
+    },
+    {
+      "code": "G01",
+      "group": "ground",
+      "start": "BB.a5",
+      "end": "BB.-5",
+      "bends": [],
+      "note": "Pico GND：a5 → 上 − 第5孔"
+    },
+    {
+      "code": "G02",
+      "group": "ground",
+      "start": "BB.-40",
+      "end": "BB.G40",
+      "bends": [
+        [
+          1745,
+          510
+        ],
+        [
+          1745,
+          880
+        ]
+      ],
+      "note": "上下地轨相连"
+    },
+    {
+      "code": "G03",
+      "group": "ground",
+      "start": "BB.-20",
+      "end": "BB.-21",
+      "bends": [
+        [
+          1165,
+          493
+        ],
+        [
+          1190,
+          493
+        ]
+      ],
+      "note": "跨接该电源轨中间断口（有断口时）"
+    },
+    {
+      "code": "G04",
+      "group": "ground",
+      "start": "BB.G20",
+      "end": "BB.G21",
+      "bends": [
+        [
+          1165,
+          863
+        ],
+        [
+          1190,
+          863
+        ]
+      ],
+      "note": "跨接该电源轨中间断口（有断口时）"
+    },
+    {
+      "code": "P11",
+      "group": "power",
+      "start": "BB.+20",
+      "end": "BB.+21",
+      "bends": [
+        [
+          1165,
+          468
+        ],
+        [
+          1190,
+          468
+        ]
+      ],
+      "note": "跨接该电源轨中间断口（有断口时）"
+    },
+    {
+      "code": "C01",
+      "group": "control",
+      "start": "BB.j6",
+      "end": "DRV.AIN1",
+      "bends": [
+        [
+          815,
+          926
+        ],
+        [
+          580,
+          926
+        ],
+        [
+          580,
+          720
+        ]
+      ],
+      "note": "GP2 / 物理4脚：j6 → AIN1"
+    },
+    {
+      "code": "C02",
+      "group": "control",
+      "start": "BB.j7",
+      "end": "DRV.AIN2",
+      "bends": [
+        [
+          840,
+          951
+        ],
+        [
+          555,
+          951
+        ],
+        [
+          555,
+          670
+        ]
+      ],
+      "note": "GP3 / 物理5脚：j7 → AIN2"
+    },
+    {
+      "code": "C03",
+      "group": "control",
+      "start": "BB.a7",
+      "end": "DRV.STBY",
+      "bends": [
+        [
+          840,
+          390
+        ],
+        [
+          600,
+          390
+        ],
+        [
+          600,
+          770
+        ]
+      ],
+      "note": "Pico 3V3 / 物理36脚：a7 → STBY"
+    },
+    {
+      "code": "M01",
+      "group": "motor",
+      "start": "DRV.AO1",
+      "end": "EV3.1",
+      "bends": [
+        [
+          150,
+          770
+        ]
+      ],
+      "note": "AO1 → EV3 1脚（直接线）"
+    },
+    {
+      "code": "M02",
+      "group": "motor",
+      "start": "DRV.AO2",
+      "end": "EV3.2",
+      "bends": [
+        [
+          200,
+          820
+        ]
+      ],
+      "note": "AO2 → EV3 2脚（直接线）"
+    },
+    {
+      "code": "E01",
+      "group": "ground",
+      "start": "EV3.3",
+      "end": "BB.-37",
+      "bends": [
+        [
+          250,
+          1029
+        ],
+        [
+          1755,
+          1029
+        ],
+        [
+          1755,
+          510
+        ]
+      ],
+      "note": "EV3 3脚 → 面包板 GND"
+    },
+    {
+      "code": "E02",
+      "group": "power",
+      "start": "EV3.4",
+      "end": "BB.+40",
+      "bends": [
+        [
+          300,
+          1044
+        ],
+        [
+          1700,
+          1044
+        ],
+        [
+          1700,
+          485
+        ]
+      ],
+      "note": "EV3 4脚 → 面包板 5V"
+    },
+    {
+      "code": "E03",
+      "group": "encoder",
+      "start": "EV3.5",
+      "end": "BB.h33",
+      "bends": [
+        [
+          350,
+          1059
+        ],
+        [
+          1490,
+          1059
+        ]
+      ],
+      "note": "EV3 5脚 → h33，进入 A组10kΩ"
+    },
+    {
+      "code": "E04",
+      "group": "encoder",
+      "start": "EV3.6",
+      "end": "BB.h31",
+      "bends": [
+        [
+          400,
+          1085
+        ],
+        [
+          1440,
+          1085
+        ]
+      ],
+      "note": "EV3 6脚 → h31，进入 B组10kΩ"
+    },
+    {
+      "code": "E05",
+      "group": "encoder",
+      "start": "BB.i26",
+      "end": "BB.i8",
+      "bends": [
+        [
+          1285,
+          785
+        ],
+        [
+          1285,
+          981
+        ],
+        [
+          865,
+          981
+        ]
+      ],
+      "note": "A分压点 i26 → GP4 i8（物理6脚）"
+    },
+    {
+      "code": "E06",
+      "group": "encoder",
+      "start": "BB.i28",
+      "end": "BB.i9",
+      "bends": [
+        [
+          1395,
+          785
+        ],
+        [
+          1395,
+          1006
+        ],
+        [
+          890,
+          1006
+        ]
+      ],
+      "note": "B分压点 i28 → GP5 i9（物理7脚）"
+    }
+  ],
+  "resistors": [
+    [
+      "R1",
+      "BB.f33",
+      "BB.f26",
+      10000
+    ],
+    [
+      "R2",
+      "BB.j26",
+      "BB.G26",
+      20000
+    ],
+    [
+      "R3",
+      "BB.g31",
+      "BB.g28",
+      10000
+    ],
+    [
+      "R4",
+      "BB.j28",
+      "BB.G28",
+      20000
+    ]
+  ],
+  "internal_connections": [
+    [
+      "DRV.GND-L1",
+      "DRV.GND-L2",
+      "DRV.GND-R"
+    ],
+    [
+      "BUCK.IN−",
+      "BUCK.OUT−"
+    ]
+  ],
+  "precondition": "降压模块 IN− 与 OUT− 内部共地；DRV8833 三个 GND 板内相通。"
+}

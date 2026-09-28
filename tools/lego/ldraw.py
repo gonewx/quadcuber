@@ -47,6 +47,12 @@ def get(name):
     if os.path.exists(custom):
         with open(custom, encoding="utf-8") as f:
             return f.read()
+    # 完整零件库已缓存在本地时，先查完所有目录，避免为基元先请求不存在的 parts/ 路径。
+    for pre in SEARCH:
+        cached = os.path.join(CACHE, "complete/ldraw/" + pre + name)
+        if os.path.exists(cached):
+            with open(cached, encoding="utf-8", errors="replace") as f:
+                return f.read()
     for pre in SEARCH:
         data = fetch_rel("complete/ldraw/" + pre + name)
         if data is not None:

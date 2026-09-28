@@ -1,0 +1,73 @@
+{
+  "supply_v_user_reported": 9,
+  "targets": [
+    90,
+    0
+  ],
+  "moves": [
+    {
+      "loops": 1010,
+      "overshoot": 0.0,
+      "t_reach": 1.6435,
+      "type": "move",
+      "t_settle": 1.6744,
+      "target": 90,
+      "state": "done",
+      "q": null,
+      "tag": "medium_installed_auto",
+      "err": 1.0,
+      "err_rest": 1.0,
+      "ok": true,
+      "max_dt_us": 10531,
+      "t_profile": 1.8,
+      "start": 0.0,
+      "max_track_err": 3.29
+    },
+    {
+      "loops": 992,
+      "overshoot": 0.0,
+      "t_reach": 1.5985,
+      "type": "move",
+      "t_settle": 1.6953,
+      "target": 0,
+      "state": "done",
+      "q": null,
+      "tag": "medium_installed_auto",
+      "err": 0.0,
+      "err_rest": 0.0,
+      "ok": true,
+      "max_dt_us": 10522,
+      "t_profile": 1.7833,
+      "start": 89.00001,
+      "max_track_err": 2.52
+    }
+  ],
+  "conditions": {
+    "motor": "EV3中马达",
+    "mechanism": "已装机械臂，无魔方，舵机不通电",
+    "zero": "用户确认线缆自然舒展的中位",
+    "counts_per_motor_rev": 720,
+    "gear_ratio": 1,
+    "angle_measurement": "编码器换算，非独立角度测量",
+    "end_state": "返回中位后motor.coast，servo.off；Pico保留arm对象，处于Python REPL"
+  },
+  "gains": {
+    "kfs": 0.42,
+    "umax": 0.75,
+    "vmax": 60,
+    "amax": 200,
+    "max_err": 15,
+    "tol": 2,
+    "stall_time": 0.15,
+    "vtol": 60,
+    "stall_vel": 20,
+    "tau": 0.05,
+    "ki": 0,
+    "timeout": 0.5,
+    "kd": 0.0008,
+    "settle": 0.02,
+    "v_full": 1000,
+    "kp": 0.03
+  },
+  "hold_ms": 50
+}

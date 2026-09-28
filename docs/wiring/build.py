@@ -10,6 +10,7 @@
 import html
 import os
 import perfboard_layout
+import direct_wiring
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -648,7 +649,8 @@ def perfboard_page():
             '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
             '<title>quadcuber 洞洞板接线设计</title>\n'
             f'<style>{CSS}</style>\n</head>\n<body>\n<main class="wrap">\n'
-            '<nav><a href="index.html#perfboard">返回完整接线指南</a></nav>\n'
+            '<nav><a href="direct-breadboard.html">当前调试：面包板＋动力直连接线图</a> · '
+            '<a href="index.html#perfboard">返回完整接线指南</a></nav>\n'
             + perfboard_section() + '\n</main>\n</body>\n</html>\n')
 
 
@@ -665,7 +667,8 @@ def page():
                '<p>一个 EV3 马达 (大马达或中马达接法相同)、一个灰色 Geekservo、一块 DRV8833、4 个电阻 (10kΩ ×2、20kΩ ×2)。'
                '引脚按 <span class="mono">firmware/pico/config.py</span> 的 R 臂分配, 接完按 '
                '<span class="mono">docs/single_arm.md</span> 第 4、5 节刷程序和测试。</p>'
-               '<p><a href="#perfboard">洞洞板布局与端子表</a> · <a href="#breadboard">面包板接线</a></p></header>')
+               '<p><a href="direct-breadboard.html">当前调试：面包板＋动力直连（无洞洞板）</a> · '
+               '<a href="#perfboard">洞洞板布局与端子表</a> · <a href="#breadboard">原面包板接线</a></p></header>')
     out.append('<div class="warn"><b>2026-09-27 更新：编码器改用电阻分压, 不再用电平转换模块。</b>'
                'BSS138 模块与 EV3 马达内部的串联电阻不匹配, 低电平降不下来。'
                '原因和测量依据见 <a href="../ev3-interface-verification.md">接口复核报告</a>。</div>')
@@ -772,6 +775,7 @@ def page():
 
 
 if __name__ == "__main__":
+    direct_wiring.main()
     perfboard_layout.write_assets(HERE)
     with open(os.path.join(HERE, "index.html"), "w", encoding="utf-8") as f:
         f.write(page())

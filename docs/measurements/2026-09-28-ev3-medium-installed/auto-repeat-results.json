@@ -1,0 +1,71 @@
+{
+  "targets": [
+    -90,
+    0,
+    90,
+    0,
+    -90,
+    0,
+    90,
+    0,
+    -90,
+    0
+  ],
+  "moves": [
+    {
+      "loops": 1007,
+      "overshoot": 0.0,
+      "t_reach": 1.666,
+      "type": "move",
+      "t_settle": 1.7227,
+      "target": -90,
+      "state": "done",
+      "q": null,
+      "tag": "medium_installed_repeat",
+      "err": 0.0,
+      "err_rest": 0.0,
+      "ok": true,
+      "max_dt_us": 10510,
+      "t_profile": 1.8,
+      "start": 0.0,
+      "max_track_err": 3.39
+    },
+    {
+      "loops": 1008,
+      "overshoot": 0.0,
+      "t_reach": 1.6539,
+      "type": "move",
+      "t_settle": 1.6831,
+      "target": 0,
+      "state": "done",
+      "q": null,
+      "tag": "medium_installed_repeat",
+      "err": 1.0,
+      "err_rest": 1.0,
+      "ok": true,
+      "max_dt_us": 10490,
+      "t_profile": 1.8,
+      "start": -90.0,
+      "max_track_err": 2.58
+    },
+    {
+      "loops": 870,
+      "overshoot": 0.0,
+      "t_reach": null,
+      "type": "move",
+      "t_settle": null,
+      "target": 90,
+      "state": "stall",
+      "q": null,
+      "tag": "medium_installed_repeat",
+      "err": 18.0,
+      "err_rest": 18.0,
+      "ok": false,
+      "max_dt_us": 10478,
+      "t_profile": 1.8167,
+      "start": -1.0,
+      "max_track_err": 14.16
+    }
+  ],
+  "parameters_reference": "auto-90-results.json"
+}

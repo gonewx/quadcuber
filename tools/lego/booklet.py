@@ -68,6 +68,9 @@ def ldr_for_step(parts, k):
         fit_old = [p for p in old if head_part(p) and p.name not in ("95658.dat", "99455.dat")]
     elif s["focus"] == "new":
         fit_old = []
+    elif s["focus"] == "mount":
+        fit_old = [p for p in old if model.STEPS[p.step - 1]["title"] in
+                   {"底座 1", "马达支架", "马达面板", "装马达", "承重横梁", "承重垫梁", "先装上方横销"}]
     else:
         fit_old = old
     far = [p for p in old if p not in fit_old]
@@ -277,6 +280,16 @@ def write_html(parts, step_new, keys, subs):
     out.append(f"<p>一个 {MOTOR_NAME[MOTOR]}带动机械手旋转, 一个灰色 Geekservo 推拉叉子夹紧或松开魔方。"
                "测试架把马达和一个固定叉连在一起, 固定叉卡住魔方背面的中间一列, 这样机械手就可以单独拧魔方的一层。"
                "搭好后按 <b>docs/single_arm.md</b> 接线和测试。</p>")
+    if MOTOR == "medium":
+        out.append('<div class="note" id="support-update"><b>本中马达方案已停止优化，以下保留归档；后续按大马达方案继续验证。</b>'
+                   '<br><b>2026-09-28 固定支架补强版：</b>'
+                   '实物发现马达固定端悬臂下垂，本版新增<a href="#s9">第9–12步承重支撑</a>。'
+                   '已搭好旧版时，只需补装这四步，原马达、联轴件、舵机和夹爪保留。'
+                   '<b>先装上方横销，底部改用无挡肩的4号轴＋半轴套；蓝色长销不能从一端穿过三层孔。</b>'
+                   '新增：7×5框架1块、7孔粗梁2根、9孔粗梁1根、2孔长摩擦销6个、4号轴2根、半轴套4个。'
+                   '<b>几何检查已通过，补强后的承重效果仍待实物确认。</b>'
+                   '先断开9V和USB再搭建；装好后检查马达是否仍下垂、轴线是否对正、转动是否顺畅，'
+                   '再恢复动力测试。详细说明见<a href="support-fix.md">补装与验收记录</a>。</div>')
     out.append('<div class="plate">' + img("cover_closed.png", "整机总览", w=1400, h=900) + "</div>")
     out.append('<div class="facts">'
                f'<div class="fact"><b>{len(steps)}</b><span>个步骤</span></div>'
@@ -291,7 +304,7 @@ def write_html(parts, step_new, keys, subs):
                + f'</div><figcaption class="cap">俯视: 松开 (叉子后退 {model.STROKE * 0.4:.1f}mm, 叉齿离开魔方)</figcaption></figure>'
                "</div>")
     out.append('<div class="note"><b>请先读这里:</b> 这份说明书是按官方 LDraw 零件的精确尺寸建模的, 程序检查过所有零件没有'
-               '互相穿模、每个销和轴都插在孔里、机械手转一整圈不会碰到测试架。但它<b>没有被实物搭过</b>, '
+               '互相穿模、每个销和轴都插在孔里、已建模的机械手零件转一整圈不会碰到测试架。<b>检查不包含线缆, 不代表实物可连续旋转</b>。'
                'Geekservo 的外形按你给的图纸建模, 摩擦力、零件松紧和整体刚度只能靠实物检验。'
                '搭的过程中哪一步对不上, 拍照发给我。</div>')
     # 目录
@@ -351,11 +364,11 @@ def write_html(parts, step_new, keys, subs):
                '<tr><td>叉子松开时, 魔方整体翻转 0~90° 不碰机械手 (将来四臂时需要)</td><td class="ok">通过</td></tr>'
                "</table></div>")
     out.append('<div class="tbl"><table><tr><th>待实物验证</th><th>怎么看</th></tr>'
-               "<tr><td>Geekservo 外形 (按图纸建模, 线缆位置未知)</td><td>第 12 步装上后, 舵机不应碰到转动座; 线缆留够长, 能正反各转 180°</td></tr>"
-               "<tr><td>叉子在导轨上是否顺滑</td><td>第 15 步: 用手推叉子, 应能轻松滑动, 不卡不晃</td></tr>"
+               "<tr><td>Geekservo 外形 (按图纸建模, 线缆位置未知)</td><td>舵机随转动座旋转; 线缆需留活动弯并避开运动零件。断电确认实际允许转角, 不能由模型保证正反各180°</td></tr>"
+               "<tr><td>叉子在导轨上是否顺滑</td><td>滑块装上导轨后, 用手推叉子, 应能轻松滑动, 不卡不晃</td></tr>"
                "<tr><td>曲柄连杆能否把叉子推到位</td><td>用 servo 命令慢慢改脉宽, 找到叉子最前和最后的位置</td></tr>"
-               "<tr><td>叉齿间距是否刚好夹住魔方</td><td>第 20 步: 魔方应能推进去, 不松不紧; 太紧可换 55mm 魔方</td></tr>"
-               "<tr><td>整体刚度</td><td>拧面时测试架、转动座、叉子不应明显晃动</td></tr>"
+               "<tr><td>叉齿间距是否刚好夹住魔方</td><td>最后放入魔方时应能推进去, 不松不紧; 太紧可换 55mm 魔方</td></tr>"
+               "<tr><td>整体刚度</td><td>自重下马达固定端不应明显下垂; 托起再放开不应出现明显倾斜。拧面时测试架、转动座、叉子不应明显晃动。几何检查不能代替承重验证</td></tr>"
                "</table></div>")
     out.append('<p class="cap">模型文件 model.ldr 可以用 Stud.io、LeoCAD 或 LDView 打开 (需要把 tools/lego/parts/ 里的 '
                'geekservo.dat、cube56.dat 放进它们的零件目录)。</p>')
