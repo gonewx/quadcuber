@@ -266,7 +266,7 @@ def write_html(parts, step_new, keys, subs):
                + '</div><figcaption class="cap">官方 42082 (利勃海尔 R 9800) 原件, 从背面看: 转盘下半的凸台卡在 7x5 框架开口里, '
                '两根 5 孔粗梁压住背面 (LDraw 官方模型库)。这种做法也可以用</figcaption></figure>'
                '<figure style="margin:0" class="cover"><div class="plate">' + img("step03.png", "v3 转盘下半", w=1200, h=860)
-               + '</div><figcaption class="cap">v3 第 3 步: 同样卡在框架开口里, 两头各用 1 根红色带挡套长销 32054 从框架外面穿进凸台 (官方 42042 等模型的用法)</figcaption></figure>'
+               + '</div><figcaption class="cap">v3 第 3 步: 同样卡在框架开口里, 2 根红色带挡套长销 32054 从转盘中孔里面往外插, 穿过凸台端壁进框架, 一上一下错开, 挡套藏在里面</figcaption></figure>'
                "</div>")
     out.append('<div class="two">'
                '<figure style="margin:0" class="cover"><div class="plate">' + img("servo_closed.png", "舵机夹紧", w=1000, h=620)

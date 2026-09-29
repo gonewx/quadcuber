@@ -100,7 +100,7 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 <section id="idea" class="cover"><h2>设计思路</h2>
 <div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/mech_closed.png" alt="夹紧" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">侧视, 夹紧: 两根黄色连杆和推杆垂直 (死点), 夹指合拢在魔方外层上下两侧</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/mech_open.png" alt="松开" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">侧视, 松开: 推杆后退 12mm, 夹指张开约 18°</figcaption></figure></div>
 <ul class="plain"><li><b>肘节锁紧的夹指。</b>每只机械手两片 7 孔粗梁当夹指, 绕根部的 5 号轴转动。十字接头往前推, 两根连杆把夹指根部往外撑, 前端合拢。推到连杆和推杆垂直 (死点) 时, 魔方把夹指往外推的力沿连杆传到十字接头, 上下两根互相抵消, 推杆上没有分力, 所以舵机不受力, 夹指也推不开。水平姿态下同样夹得住, 不再依赖摩擦。</li><li><b>舵机不跟着转。</b>舵机固定在机械手后面的平台上, 曲柄和连杆同样拉到死点, 通过十字块推拉一根 12 号轴。推杆穿过转盘中孔和导向框架两条边上的圆孔, 机械手转动时推杆跟着转, 十字块在推杆上一起转 (两侧半轴套锁住轴向位置)。转动部分没有任何线缆。</li><li><b>齿轮带转盘外圈。</b>60 齿转盘仍然是主轴承 (v2 的结论保留), 但不再用马达输出轴直接带, 而是马达偏到侧面, 36 齿齿轮和转盘外圈啮合。这样转盘中孔留给推杆, 马达只传扭矩, 1.67 倍减速同时缩小马达回差。</li><li><b>模块化。</b>一个模块 = 竖墙 + 转盘 + 马达 + 舵机平台 + 机械头, 四个完全一样。底座的孔位让四根轴线严格过魔方中心、两两垂直, 不用调。模块整体往魔方方向挪了半个孔距, 这是让相邻模块的孔位对得上的关键 (否则会差半个孔)。</li></ul>
-<div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/ref42082.png" alt="官方 42082" class="" loading="lazy" width="1000" height="700"></div><figcaption class="cap">官方 42082 (利勃海尔 R 9800) 原件, 从背面看: 转盘下半的凸台卡在 7x5 框架开口里, 两根 5 孔粗梁压住背面 (LDraw 官方模型库)。这种做法也可以用</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/step03.png" alt="v3 转盘下半" class="" loading="lazy" width="1200" height="860"></div><figcaption class="cap">v3 第 3 步: 同样卡在框架开口里, 两头各用 1 根红色带挡套长销 32054 从框架外面穿进凸台 (官方 42042 等模型的用法)</figcaption></figure></div>
+<div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/ref42082.png" alt="官方 42082" class="" loading="lazy" width="1000" height="700"></div><figcaption class="cap">官方 42082 (利勃海尔 R 9800) 原件, 从背面看: 转盘下半的凸台卡在 7x5 框架开口里, 两根 5 孔粗梁压住背面 (LDraw 官方模型库)。这种做法也可以用</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/step03.png" alt="v3 转盘下半" class="" loading="lazy" width="1200" height="860"></div><figcaption class="cap">v3 第 3 步: 同样卡在框架开口里, 2 根红色带挡套长销 32054 从转盘中孔里面往外插, 穿过凸台端壁进框架, 一上一下错开, 挡套藏在里面</figcaption></figure></div>
 <div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/servo_closed.png" alt="舵机夹紧" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">舵机侧, 夹紧: 曲柄和连杆拉成一条直线</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/servo_open.png" alt="舵机松开" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">舵机侧, 松开: 曲柄转过约 115°, 十字块带推杆后退</figcaption></figure></div>
 </section>
 <section id="four" class="cover"><h2>四臂检查 (tools/lego/v3/four_arm.py)</h2>
@@ -169,7 +169,7 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 </div>
 <div class="callout"><div class="chip"><img src="img/part_18939_71.png" alt="60 齿转盘 下半" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">60 齿转盘 下半</div></div><div class="chip"><img src="img/part_32054_4.png" alt="带挡套长销 (3 孔长, 红色)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">带挡套长销 (3 孔长, 红色)</div></div></div>
 <div class="plate"><img src="img/step03.png" alt="转盘下半" class="" loading="lazy" width="1200" height="860"></div>
-<p>60 齿转盘的下半 (没有齿): 底部的长方形凸台从正面 (朝魔方的一面) 塞进最上面那块框架的开口, 长边沿框架的长边, 圆盘的边沿贴住框架正面。然后在框架两头短边中间的侧孔, 各从外面插 1 根红色带挡套长销, 穿过框架插进凸台两头的销孔, 挡套留在框架外面。转盘下半这样就前后都卡住了。</p>
+<p>60 齿转盘的下半 (没有齿): 底部的长方形凸台从正面 (朝魔方的一面) 塞进最上面那块框架的开口, 长边沿框架的长边, 圆盘的边沿贴住框架正面。然后从转盘中孔里面插 2 根红色带挡套长销: 把销平放进凸台里面 (凸台两端壁之间正好放下一根, 很紧), 再往外推, 销穿过凸台端壁插进框架短边, 挡套留在凸台里面。一根用上排孔, 另一根用另一头的下排孔 (同一排两根的挡套会互相挡住)。</p>
 </section>
 <section class="step sub" id="s4">
 <div class="step-head">
@@ -209,7 +209,7 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 </div>
 <div class="callout"><div class="chip"><img src="img/part_44294_0.png" alt="7 号轴" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7 号轴</div></div><div class="chip"><img src="img/part_32123a_72.png" alt="半轴套" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">半轴套</div></div><div class="chip"><img src="img/part_3713_72.png" alt="轴套" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">轴套</div></div><div class="chip"><img src="img/part_32498_14.png" alt="36 齿双面锥齿轮" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">36 齿双面锥齿轮</div></div></div>
 <div class="plate"><img src="img/step07.png" alt="齿轮" class="" loading="lazy" width="1200" height="860"></div>
-<p>7 号轴插进马达输出盘中间的十字孔, 依次套上半轴套、轴套、36 齿齿轮, 最前面再套一个半轴套。</p>
+<p>7 号轴从这一面插进马达输出盘中间的十字孔, 一直推到底: 输出盘的十字孔是贯通的 (马达两面都有输出盘), 轴的另一头和马达另一面的输出盘基本平齐 (只露出不到 1 mm)。这样马达里占 3 个孔长, 外面露出约 4 个孔长。然后依次套上半轴套、轴套、36 齿齿轮, 最前面再套一个半轴套, 半轴套外面还剩约半个孔长的轴。</p>
 </section>
 <section class="step" id="s8">
 <div class="step-head">
