@@ -15,9 +15,9 @@ v1 (tools/lego/model.py)、v2 (tools/lego/v2/) 都不改; v3 自成一体, 只�
 5. **四个一样的模块**, 放在 R / L / F / B 四个方向, 底座连成一个整体。
 
 模块坐标 (LDU, LDraw 约定 -Y 向上, 1 孔距 = 20 LDU = 8mm): 魔方中心在原点, 这个模块从 -X 方向夹住 L 面,
-轴线就是 X 轴。其他三个模块由它绕 Y 轴转 90° / 180° / 270° 得到。桌面在 y = 270。
+轴线就是 X 轴。其他三个模块由它绕 Y 轴转 90° / 180° / 270° 得到。桌面在 y = 290 (底座是两层梁)。
 下面的尺寸常数是模块自身的坐标, 最后整体往魔方方向挪 MODULE_DX = 10 (半个孔距): 这样竖墙落在 x = -240 的整孔位上,
-四个模块转 90° 之后孔位仍然对得上, 底座才能用同一套 7x5 框架把它们连成一体 (墙在 -250 时, 相邻模块的孔位差半个孔距)。
+四个模块转 90° 之后孔位仍然对得上, 底座才能用同一套孔格把它们连成一体 (墙在 -250 时, 相邻模块的孔位差半个孔距)。
 
 所有推导见 docs/lego/v3/README.md。
 """
@@ -152,7 +152,7 @@ C_GEAR = 14
 CUBE_HALF = 70.0
 TT_C = np.array([-230.0, 0.0, 0.0])  # 转盘中心; 上半的耳朵在 x = -210, 下半的耳朵在 x = -250
 WALL_X = -250.0  # 转盘支座 (竖墙) 所在平面, 和转盘下半的耳朵共面
-TABLE_Y = 270.0
+TABLE_Y = 290.0
 MODULE_DX = 10.0  # 模块整体往魔方方向挪半个孔距 (见文件开头)
 
 # 夹指 (7 孔粗梁, 孔沿 Z): 孔在 x = -170 ... -50, 前端圆头到 x = -40
@@ -314,11 +314,11 @@ def module(open_s=0.0, angle=0.0, steps=True, on_base=False):
     def madd(name, color, lpos, lrot, s, note=""):
         return add(name, color, MOTOR_ROT @ np.asarray(lpos, float) + mpos, MOTOR_ROT @ lrot, s, note=note)
 
-    s = st("马达尾脚", "一根 7 孔粗梁竖着插进马达尾部两片耳朵之间的缝里, 上端两个孔对准耳朵的两个圆孔, "
+    s = st("马达尾脚", "一根 9 孔粗梁竖着插进马达尾部两片耳朵之间的缝里, 第 2、4 个孔对准耳朵的两个圆孔, "
            "两根红色带挡套长销从同一侧穿过耳朵和梁 (TRACK3R 的耳朵固定方式)。梁的下端伸出马达底面, 马达立起来时踩在桌面上。", sub="马达", view=(60, -20))
     add("95658.dat", C_MOTOR, mpos, MOTOR_ROT, s)
     # 耳朵缝里原来插一块 7x5 框架; 马达已经由颈部的梁固定在竖墙上, 这里只需要一根竖梁当脚 (框架换横梁)
-    add("32524.dat", C_BEAM, (-310, 200, -120), BEAM_Y_HOLES_X, s)
+    add("40490.dat", C_BEAM, (-310, 200, -120), BEAM_Y_HOLES_X, s)
     for z in (-180, -140):
         madd("32054.dat", C_SPIN, (-20, 0, z), ALONG_X, s)
     # 马达前端: 输出盘和下面的方箱在同一个面上, 中间带 3 个孔的 "颈部" 缩进去 2 个孔。颈部的孔在一竖列上
@@ -380,7 +380,7 @@ def module(open_s=0.0, angle=0.0, steps=True, on_base=False):
         add("32526.dat", C_BEAM, (lx, 140, z_l), lrot, s)
         for x in (lx, lx + 40 * arm_dir):
             add("2780.dat", C_PIN, (x, 60, z_e), ALONG_Z, s)
-        add("32525.dat", C_BEAM, (lx, 160, z_b), BEAM_Y_HOLES_Z, s)
+        add("32525.dat", C_BEAM, (lx, 180, z_b), BEAM_Y_HOLES_Z, s)
         for y in (100, 140):
             add("2780.dat", C_PIN, (lx, y, (z_l + z_b) / 2), ALONG_Z, s)
     gf_c = np.array([-350.0, 0.0, 0.0])
@@ -489,27 +489,30 @@ def module(open_s=0.0, angle=0.0, steps=True, on_base=False):
     return parts
 
 
-# ---- 底座: 16 块 7x5 框架拼成风车形的方框 -------------------------------------------
-# 每个方向一排 4 块框架 (长边沿 X, 沿 Z 方向长边对长边拼接), 四排绕中心转 90° 首尾相接:
-# 一排的最后一块用短边顶住下一排第一块的长边, 2 个摩擦销穿侧孔。竖墙压在每排的第 2 块上。
-BASE_CX = -220.0
-BASE_CZ = (-100.0, 0.0, 100.0, 200.0)
-BASE_Y = TABLE_Y - 10
+# ---- 底座: 横梁上下两层交叉铺成的平台 (不用框架, 2026-09-29 用户要求) ------------------------------
+# 每条边是一条 5 个孔宽的带子, 竖墙立在带子正中那一列上。上层 5 根长梁沿边的方向并排铺满 (每列一根 15 孔 + 一根 9 孔,
+# 首尾相接), 形成完整的面; 下层 5 孔短梁横着垫在下面, 每隔一个孔一根, 每根 3 个销和上层的 5 列连起来。
+# 四个角按风车方向分配: 每条边的上层占住它逆时针方向的那个角; 另一个角由下层 7 孔梁沿边方向铺, 这些梁同时垫在
+# 本边上层长梁的末端和下一条边上层长梁的下面, 把相邻两条边连成一体。所有销都竖直。
+BASE_Y = TABLE_Y - 30  # 上层梁中心; 下层在 TABLE_Y - 10, 直接放在桌面上
+BASE_XS = (-280, -260, -240, -220, -200)  # 带子的 5 列 (竖墙在 -240)
 
 
-def base_blade(s, seam=True):
-    """L 一侧的一排 (世界坐标, 其余三排由它转出)。seam=False: 不插和下一排之间的销。
-    四排围成一圈, 最后一条缝的两边已经分别连在别的排上, 两组销方向垂直, 带挡环的销插不进去, 所以最后一条缝不插销。"""
+def base_blade(s):
+    """L 一侧的一条边 (世界坐标, 其余三条由它转出)。"""
     out = []
-    for cz in BASE_CZ:
-        out.append(Part("64179.dat", C_BASE, (BASE_CX, BASE_Y, cz), FRAME_XZ_LONG_X, s))
-    for cz in BASE_CZ[:-1]:
-        for dx in (-40, 0, 40):
-            out.append(Part("2780.dat", C_PIN, (BASE_CX + dx, BASE_Y, cz + 50), ALONG_Z, s))
-    # 和下一排 (F 一侧) 的接缝: 本排最后一块的短边 (x = -150) 对下一排第一块的长边
-    if seam:
-        for z in (180, 220):
-            out.append(Part("2780.dat", C_PIN, (BASE_CX + 70, BASE_Y, z), ALONG_X, s))
+    yu, yd, yp = BASE_Y, BASE_Y + 20, BASE_Y + 10
+    for x in BASE_XS:
+        out.append(Part("32278.dat", C_BASE, (x, yu, -140), BEAM_Z_HOLES_Y, s))  # 上层: z = -280 ... 0
+        out.append(Part("40490.dat", C_BASE, (x, yu, 100), BEAM_Z_HOLES_Y, s))  # 上层: z = 20 ... 180
+    for z in range(-180, 141, 40):  # 下层横梁 (两层长梁的接缝两侧都有)
+        out.append(Part("32316.dat", C_BASE, (-240, yd, z), BASE_BEAM_X, s))
+        for x in (-280, -240, -200):
+            out.append(Part("2780.dat", C_PIN, (x, yp, z), ALONG_Y, s))
+    for x in BASE_XS:  # 角上: 下层 7 孔梁 z = 160 ... 280, 接本边上层末端 (160、180) 和下一条边的上层 (240、280)
+        out.append(Part("32524.dat", C_BASE, (x, yd, 220), BEAM_Z_HOLES_Y, s))
+        for z in (160, 180, 240, 280):
+            out.append(Part("2780.dat", C_PIN, (x, yp, z), ALONG_Y, s))
     return out
 
 
@@ -519,11 +522,13 @@ def build(state=None, with_cube=True):
     STEPS.clear()
     state = state or {}
     parts = []
-    s = step("底座", "16 块 7x5 框架平放, 拼成风车形的方框: 每一排 4 块长边对长边, 每条缝 3 个摩擦销; "
-             "一排的最后一块用短边顶住下一排第一块的长边, 2 个摩擦销。四排绕中心转 90° 首尾相接, 中间留出放魔方的空间。"
-             "最后合拢的那条缝不插销 (两边已经各自连成一体, 销插不进去), 只是顶住; 其余三条缝已经让底座连成一个整体。", sub="底座", view=(35, 60))
+    s = step("底座", "底座全部用横梁铺成, 四条边各是一条 5 个孔宽的平台带子, 围成方框, 中间留出放魔方的空间。"
+             "先铺下层: 每条边 9 根 5 孔梁横着摆 (每隔一个孔一根), 角上 5 根 7 孔梁顺着边摆; 在要连接的孔里插好摩擦销。"
+             "再铺上层: 每条边 5 列, 每列一根 15 孔梁接一根 9 孔梁, 并排压在下层的销上, 铺成一整块平面。"
+             "四条边按同一个转向排成风车形: 每条边的上层伸到一个角上, 另一个角由下一条边的上层盖住, 下层的 7 孔梁把两条边连起来。"
+             "竖墙将来立在每条边正中那一列上。", sub="底座", view=(35, 60))
     for arm in ARMS:
-        for p in base_blade(s, seam=(arm != ARMS[-1])):
+        for p in base_blade(s):
             parts.append(p.moved(ARM_ROT[arm]))
     rest = []
     order = ["L"] + [a for a in ARMS if a != "L"]
