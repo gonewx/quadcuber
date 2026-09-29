@@ -1,7 +1,7 @@
 // 说明书里可旋转的 3D 模型 (booklet.py 复制到 docs/lego/v3/viewer.js)。
 // 读取同目录的 model.mpd (整机 + 全部零件几何, 按步骤分段), 用 three.js 的 LDrawLoader 解析。
 // 页面里要有: #v3d (放画布的容器)、#v3d-step (步骤滑块)、#v3d-label (步骤名)、#v3d-status (加载提示)、
-// window.V3D_STEPS = [步骤名, ...]。
+// window.V3D_STEPS = [步骤名, ...]、window.V3D_STEPMAP = [有零件的步骤号, ...]。
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { LDrawLoader } from 'three/addons/loaders/LDrawLoader.js';
@@ -12,6 +12,7 @@ const slider = document.getElementById('v3d-step');
 const label = document.getElementById('v3d-label');
 const status = document.getElementById('v3d-status');
 const names = window.V3D_STEPS || [];
+const stepMap = window.V3D_STEPMAP || [];
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
@@ -41,7 +42,9 @@ let fitted = false;
 function showStep(n) {
   if (!group) return;
   for (const c of group.children) {
-    const st = (c.userData.buildingStep ?? 0) + 1;  // 第 1 步的零件 buildingStep 为 0
+    // LDrawLoader 把连续的空步骤并成一步, buildingStep 是第几个有零件的步骤 (从 0 起); 用 V3D_STEPMAP 换回真正的步骤号
+    const k = c.userData.buildingStep ?? 0;
+    const st = stepMap[k] ?? k + 1;
     c.visible = st <= n;
     c.traverse(o => {
       if (!o.material || !o.userData.baseMaterial) return;
@@ -92,6 +95,46 @@ fetch('model.mpd').then(r => {
 });
 
 slider.addEventListener('input', () => showStep(Number(slider.value)));
+
+// 键盘快捷键: ←/→ 上一步/下一步, Home/End 第一步/全部, A/D 左右转, W/S 上下转, +/- 缩放, R 复位
+function setStep(n) {
+  if (!group) return;
+  n = Math.max(1, Math.min(names.length, n));
+  slider.value = String(n);
+  showStep(n);
+}
+function orbit(dAz, dPol) {
+  const off = camera.position.clone().sub(controls.target);
+  const sph = new THREE.Spherical().setFromVector3(off);
+  sph.theta += dAz;
+  sph.phi = Math.max(0.05, Math.min(Math.PI - 0.05, sph.phi + dPol));
+  camera.position.copy(controls.target).add(new THREE.Vector3().setFromSpherical(sph));
+  controls.update();
+}
+function zoom(k) {
+  const off = camera.position.clone().sub(controls.target).multiplyScalar(k);
+  camera.position.copy(controls.target).add(off);
+  controls.update();
+}
+const STEP = Math.PI / 24;  // 7.5°
+document.addEventListener('keydown', e => {
+  if (!group || e.ctrlKey || e.metaKey || e.altKey) return;
+  const t = e.target;
+  if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) && t !== slider)) return;
+  const n = Number(slider.value);
+  const act = {
+    ArrowLeft: () => setStep(n - 1), ArrowRight: () => setStep(n + 1),
+    Home: () => setStep(1), End: () => setStep(names.length),
+    a: () => orbit(STEP, 0), d: () => orbit(-STEP, 0), w: () => orbit(0, -STEP), s: () => orbit(0, STEP),
+    '+': () => zoom(0.85), '=': () => zoom(0.85), '-': () => zoom(1 / 0.85), r: () => fit(),
+  }[e.key.length === 1 ? e.key.toLowerCase() : e.key];
+  if (!act) return;
+  // 只在 3D 区域在屏幕上时响应, 免得看下面步骤时方向键被抢走
+  const r = box.getBoundingClientRect();
+  if (r.bottom < 0 || r.top > window.innerHeight) return;
+  e.preventDefault();
+  act();
+});
 document.getElementById('v3d-fit').addEventListener('click', () => group && fit());
 
 (function loop() {
@@ -100,3 +143,4 @@ document.getElementById('v3d-fit').addEventListener('click', () => group && fit(
   renderer.render(scene, camera);
 })();
 window.v3dReady = () => group !== null;
+window.v3dCount = () => group.children.filter(c => c.visible).length;  // 测试用

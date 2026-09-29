@@ -230,6 +230,7 @@ CSS = _v1.CSS + """
 #v3d canvas{display:block;width:100%;height:100%}
 #v3d-status[hidden]{display:none}
 #v3d-status{position:absolute;inset:0;display:grid;place-items:center;color:#5a6778;font-size:14px;padding:16px;text-align:center}
+kbd{font:12px "JetBrains Mono",ui-monospace,monospace;padding:1px 5px;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;background:var(--sheet);color:var(--ink)}
 .v3d-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
 .v3d-bar input{flex:1 1 220px;min-width:0}
 .v3d-bar span{flex:1 1 160px;min-width:0;font-weight:700}
@@ -294,11 +295,12 @@ def write_html(parts, step_new, keys, subs):
     # 可旋转的 3D 模型 (viewer.js + model.mpd + 本地的 three.js, 不需要联网拉脚本)
     out.append('<script type="importmap">{"imports":{"three":"./three/three.module.min.js","three/addons/":"./three/addons/"}}</script>')
     out.append('<section id="v3d-sec" class="cover"><h2>3D 模型 (可旋转)</h2>'
-               '<p class="cap">拖动旋转, 滚轮或双指缩放, 右键或双指拖动平移。滑块选到第几步, 就显示到那一步为止的零件, 这一步新加的零件会提亮。</p>'
+               '<p class="cap">拖动旋转, 滚轮或双指缩放, 右键或双指拖动平移。滑块选到第几步, 就显示到那一步为止的零件, 这一步新加的零件会提亮。键盘: <kbd>←</kbd> <kbd>→</kbd> 上一步/下一步, <kbd>Home</kbd> <kbd>End</kbd> 第一步/全部, <kbd>A</kbd> <kbd>D</kbd> 左右转, <kbd>W</kbd> <kbd>S</kbd> 上下转, <kbd>+</kbd> <kbd>-</kbd> 缩放, <kbd>R</kbd> 复位 (3D 区域在屏幕上时有效)。</p>'
                '<div id="v3d" class="plate"><div id="v3d-status">正在加载 3D 模型 (约 0.6 MB)…</div></div>'
                '<div class="v3d-bar"><input id="v3d-step" type="range" min="1" max="1" value="1" disabled aria-label="步骤">'
                '<span id="v3d-label"></span><button id="v3d-fit" type="button">复位</button></div>'
-               f'<script>window.V3D_STEPS = {json.dumps([st["title"] for st in steps], ensure_ascii=False)};</script>'
+               f'<script>window.V3D_STEPS = {json.dumps([st["title"] for st in steps], ensure_ascii=False)};'
+               f'window.V3D_STEPMAP = {json.dumps(sorted({p.step for p in parts}))};</script>'
                '<script type="module" src="viewer.js"></script></section>')
     out.append('<nav class="toc"><a href="#v3d-sec">3D 模型</a><a href="#eval">v2 评估</a><a href="#idea">设计思路</a><a href="#four">四臂检查</a>'
                '<a href="#buy">要买的零件</a><a href="#bom">零件清单</a>'
