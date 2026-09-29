@@ -330,7 +330,7 @@ def write_html(parts, step_new, keys, subs):
             chips.append(f'<div class="chip">{img(f"sub{subs.index(g)}.png", g, w=TW, h=TH)}'
                          f'<div class="x">1×</div><div class="n">做好的{esc(g)}</div></div>')
         if s["title"] == "装另外三个机械手":
-            chips.append('<div class="chip"><div class="x">3×</div><div class="n">照第 2~19 步做好的机械手模块</div></div>')
+            chips.append('<div class="chip"><div class="x">3×</div><div class="n">照第 2~20 步做好的机械手模块</div></div>')
             own = Counter()
         else:
             own = Counter(part_key(p) for p in new if p.step == k)

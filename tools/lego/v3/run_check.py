@@ -50,6 +50,22 @@ check._allowed = _allowed
 COLLAR = {"2780.dat": 0.0, "3673.dat": 0.0, "3749.dat": 0.0, "6558.dat": -10.0, "32556a.dat": -10.0}
 
 
+def pin_depth(parts):
+    """按孔段的实际长度 (不是无限长的孔线) 检查每个销是否真的插进了至少两个零件。
+    check.connections 用无限长的孔线判断, 销悬在空中、只是对准了远处的孔也会被当成连上 (第一版马达前板就是这样漏掉的)。"""
+    solids = [p for p in parts if p.kind == "solid"]
+    boxes = {id(p): check._obb(p) for p in solids}
+    out = []
+    for c in parts:
+        if c.kind != "pin" or c.name == "32054.dat":
+            continue
+        layers = check._pin_layers(c, solids, None, boxes)
+        if len(layers) < 2:
+            out.append(f"{check.CATALOG_NAME(c)} @ {np.round(c.pos, 1).tolist()}: 按孔的实际深度只插进了 "
+                       f"{len(layers)} 个零件 {[check.CATALOG_NAME(s) for s, _, _ in layers]}")
+    return out
+
+
 def collar_pins(parts):
     """按搭建步骤模拟装配, 检查带挡环的销能不能装上。返回问题列表。
 
@@ -144,6 +160,9 @@ def report(parts, label):
     for p in check.long_pins(parts):
         n += 1
         print(f"[{label}] 长销: {p}")
+    for p in pin_depth(parts):
+        n += 1
+        print(f"[{label}] 插深: {p}")
     for p in collar_pins(parts):
         n += 1
         print(f"[{label}] 插销: {p}")
