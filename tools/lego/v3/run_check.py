@@ -14,6 +14,7 @@ sys.path.append(os.path.join(HERE, ".."))
 import numpy as np  # noqa: E402
 
 import check  # noqa: E402
+import ldraw  # noqa: E402
 import model  # noqa: E402
 
 check.CONNECTOR_LEN.update(model.CONNECTOR_LEN)
@@ -63,6 +64,37 @@ def pin_depth(parts):
         if len(layers) < 2:
             out.append(f"{check.CATALOG_NAME(c)} @ {np.round(c.pos, 1).tolist()}: 按孔的实际深度只插进了 "
                        f"{len(layers)} 个零件 {[check.CATALOG_NAME(s) for s, _, _ in layers]}")
+    return out
+
+
+def pins_in_axle_holes(parts):
+    """圆销 (摩擦销、无摩擦销、长销) 插进了十字孔: 插不进去。连接检查只看孔的轴线, 分不出圆孔和十字孔
+    (第 16 步把无摩擦长销穿进 32039 横着的十字孔就是这样漏掉的, 2026-09-29 用户实物发现)。
+    判断方法: 在销插进这个零件的那一段, 离轴线 3.5 LDU 取一圈点。十字孔的四个斜角方向是实体、四个正方向是空的;
+    圆孔 (半径 6) 各方向都是空的。"""
+    solids = [p for p in parts if p.kind == "solid"]
+    boxes = {id(p): check._obb(p) for p in solids}
+    out = []
+    for c in parts:
+        if c.kind != "pin" or c.name == "3749.dat":  # 3749 半销半轴, 轴那一半本来就插十字孔
+            continue
+        u = c.rot[:, 0]
+        for s, lo, hi in check._pin_layers(c, solids, None, boxes):
+            S = check.Solid(s.name)
+            hits = 0
+            for t in np.linspace(lo + 3, hi - 3, 3):
+                ctr = s.rot.T @ (c.pos + t * u - s.pos)
+                ax = s.rot.T @ u
+                e1 = np.cross(ax, [0, 1, 0] if abs(ax[1]) < 0.9 else [1, 0, 0])
+                e1 /= np.linalg.norm(e1)
+                e2 = np.cross(ax, e1)
+                # 十字的方向不知道, 取 8 个方向: 十字孔有 4 个实体 4 个空, 圆孔全空
+                pts = np.array([ctr + 3.5 * (math.cos(a) * e1 + math.sin(a) * e2) for a in np.radians(np.arange(0, 360, 45))])
+                inside = S.inside(pts, deep=False)
+                if inside.sum() == 4 and all(inside[k] != inside[k + 1] for k in range(7)):
+                    hits += 1
+            if hits >= 2:
+                out.append(f"{check.CATALOG_NAME(c)} @ {np.round(c.pos, 1).tolist()}: 插在 {check.CATALOG_NAME(s)} 的十字孔里")
     return out
 
 
@@ -166,6 +198,9 @@ def report(parts, label):
     for p in collar_pins(parts):
         n += 1
         print(f"[{label}] 插销: {p}")
+    for p in pins_in_axle_holes(parts):
+        n += 1
+        print(f"[{label}] 十字孔: {p}")
     return n
 
 
