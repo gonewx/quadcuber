@@ -37,32 +37,40 @@ W, H = 1200, 860
 TW, TH = 260, 200
 
 
-def visible_parts(parts, k):
-    st = model.STEPS
-    sub = st[k - 1]["sub"]
-    attach_at = {}
-    for i, s in enumerate(st, 1):
+def _attach_info():
+    """子组件 -> (第几步装上去, 装进哪个子组件; None 表示主线)。"""
+    info = {}
+    for i, s in enumerate(model.STEPS, 1):
         for g in s["attach"]:
-            attach_at.setdefault(g, i)
-    out = []
-    for p in parts:
-        ps = st[p.step - 1]
-        if p.step > k:
-            continue
-        if sub is not None:
-            if ps["sub"] == sub:
-                out.append(p)
-        elif ps["sub"] is None or attach_at.get(ps["sub"], 10**9) <= k:
-            out.append(p)
-    return out
+            info.setdefault(g, (i, s["sub"]))
+    return info
+
+
+def _in_group(g, target, k, info, depth=0):
+    """到第 k 步时, 子组件 g 的零件是否已经在 target 里 (子组件可以先装进另一个子组件, 如马达先装到竖墙上)。"""
+    if g == target:
+        return True
+    if g is None or depth > 8 or g not in info:
+        return False
+    i, into = info[g]
+    return i <= k and _in_group(into, target, k, info, depth + 1)
+
+
+def visible_parts(parts, k, sub=False):
+    """第 k 步图里能看到的零件; sub 默认用第 k 步所属的子组件。"""
+    info = _attach_info()
+    if sub is False:
+        sub = model.STEPS[k - 1]["sub"]
+    return [p for p in parts if p.step <= k and _in_group(model.STEPS[p.step - 1]["sub"], sub, k, info)]
 
 
 def ldr_for_step(parts, k):
     """三段 LDraw: STEP1 不参与取景的旧零件, STEP2 参与取景的旧零件, STEP3 本步零件。"""
     s = model.STEPS[k - 1]
     vis = visible_parts(parts, k)
-    new = [p for p in vis if p.step == k or (model.STEPS[p.step - 1]["sub"] in s["attach"] and s["sub"] is None
-                                             and model.STEPS[p.step - 1]["sub"] != "底座")]
+    # 本步新出现的: 本步的零件, 以及本步刚装进来的子组件 (底座除外, 它太大, 高亮反而看不清)
+    before = set(map(id, visible_parts(parts, k - 1, s["sub"]))) if k > 1 else set()
+    new = [p for p in vis if p.step == k or (id(p) not in before and model.STEPS[p.step - 1]["sub"] != "底座")]
     old = [p for p in vis if p not in new]
     if s["focus"] == "module":
         fit_old = [p for p in old if p.arm == "L"]
