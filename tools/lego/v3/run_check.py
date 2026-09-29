@@ -28,7 +28,7 @@ def _allowed(a, b):
     """有意的 "干涉":
     - 转盘上下两半本来就互相卡在一起;
     - 舵机十字输出轴插在曲柄 (2 孔细梁) 的十字孔里;
-    - 20 齿双面锥齿轮和转盘上半的齿啮合 (齿轮轴线离转盘轴线 100 = 两个节圆半径之和, 照官方 42100 的做法)。"""
+    - 24 齿直齿轮和转盘上半的齿啮合 (齿轮轴线离转盘轴线 100; 用户实测 24 齿在这个距离咬合最好)。"""
     names = {a.name, b.name}
     if names == {"18938.dat", "18939.dat"}:
         return True
@@ -37,8 +37,8 @@ def _allowed(a, b):
         out_pt = servo.world((10, -43, 0))
         out_ax = servo.rot @ np.array([0, 1.0, 0])
         return _axis_dist(crank.world((0, 0, 0)), out_pt, out_ax) < 1.0
-    if names == {"32269.dat", "18938.dat"}:
-        g, t = (a, b) if a.name == "32269.dat" else (b, a)
+    if names == {"3648b.dat", "18938.dat"}:
+        g, t = (a, b) if a.name == "3648b.dat" else (b, a)
         ga, ta = g.rot[:, 2], t.rot[:, 1]
         d = _axis_dist(g.pos, t.pos, ta)
         return abs(abs(ga @ ta) - 1) < 1e-6 and abs(d - 100) < 1.0
