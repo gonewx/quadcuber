@@ -90,8 +90,8 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 <h1>四臂整机: 死点锁紧夹爪 + 不随转的舵机</h1>
 <p class="lead">v2 解决了 "机械臂挂在马达输出轴上" 的问题, 但它仍然是一只单臂, 转动部分又长又重, 舵机跟着转。CubeStormer 3 这一级别的机器, 专业性体现在整机: 四只机械手又短又轻、夹得住也松得开、能连续旋转, 四只之间互不干涉。v3 按这个目标从整机重新设计, 自成一套模型和检查。之前的版本都保留不动: <a href="https://claude.ai/artifact/BWgtEpkX4PGRGnYzvNV2L4">v1 大马达版</a>、<a href="https://claude.ai/artifact/9yGEt1ogaxxmStkyxYWYBL">v2 转盘版</a>。</p>
 <div class="plate"><img src="img/cover.png" alt="四臂整机总览" class="" loading="lazy" width="1400" height="900"></div>
-<div class="facts"><div class="fact"><b>22</b><span>个步骤 (一个模块的完整步骤, 其余三个照做)</span></div><div class="fact"><b>478</b><span>个乐高零件, 另加 EV3 大马达和 Geekservo 各 4 个</span></div><div class="fact"><b>约 52 mm</b><span>转动部分长度 (v2 约 144mm)</span></div><div class="fact"><b>无限</b><span>机械手旋转范围 (舵机不跟着转)</span></div></div>
-<nav class="toc"><a href="#eval">v2 评估</a><a href="#idea">设计思路</a><a href="#four">四臂检查</a><a href="#buy">要买的零件</a><a href="#bom">零件清单</a><a href="#s1">1. 底座</a><a href="#s2">2. 竖墙</a><a href="#s3">3. 转盘下半</a><a href="#s4">4. 压住转盘</a><a href="#s5">5. 马达固定板</a><a href="#s6">6. 马达前梁</a><a href="#s7">7. 马达前板</a><a href="#s8">8. 齿轮</a><a href="#s9">9. 装竖墙</a><a href="#s10">10. 装马达</a><a href="#s11">11. 舵机平台</a><a href="#s12">12. 舵机</a><a href="#s13">13. 装平台</a><a href="#s14">14. 十字块和舵机连杆</a><a href="#s15">15. 侧板与夹指架</a><a href="#s16">16. 转盘上半</a><a href="#s17">17. 夹指</a><a href="#s18">18. 连杆与十字接头</a><a href="#s19">19. 推杆</a><a href="#s20">20. 装机械头</a><a href="#s21">21. 装另外三个机械手</a><a href="#s22">22. 放入魔方</a><a href="#checks">检查与待验证</a><a href="#safety">上电前</a></nav>
+<div class="facts"><div class="fact"><b>21</b><span>个步骤 (一个模块的完整步骤, 其余三个照做)</span></div><div class="fact"><b>462</b><span>个乐高零件, 另加 EV3 大马达和 Geekservo 各 4 个</span></div><div class="fact"><b>约 52 mm</b><span>转动部分长度 (v2 约 144mm)</span></div><div class="fact"><b>无限</b><span>机械手旋转范围 (舵机不跟着转)</span></div></div>
+<nav class="toc"><a href="#eval">v2 评估</a><a href="#idea">设计思路</a><a href="#four">四臂检查</a><a href="#buy">要买的零件</a><a href="#bom">零件清单</a><a href="#s1">1. 底座</a><a href="#s2">2. 竖墙</a><a href="#s3">3. 转盘下半</a><a href="#s4">4. 马达固定板</a><a href="#s5">5. 马达前梁</a><a href="#s6">6. 马达前板</a><a href="#s7">7. 齿轮</a><a href="#s8">8. 装竖墙</a><a href="#s9">9. 装马达</a><a href="#s10">10. 舵机平台</a><a href="#s11">11. 舵机</a><a href="#s12">12. 装平台</a><a href="#s13">13. 十字块和舵机连杆</a><a href="#s14">14. 侧板与夹指架</a><a href="#s15">15. 转盘上半</a><a href="#s16">16. 夹指</a><a href="#s17">17. 连杆与十字接头</a><a href="#s18">18. 推杆</a><a href="#s19">19. 装机械头</a><a href="#s20">20. 装另外三个机械手</a><a href="#s21">21. 放入魔方</a><a href="#checks">检查与待验证</a><a href="#safety">上电前</a></nav>
 </header>
 <section id="eval" class="cover"><h2>v2 评估: 离 CubeStormer 3 的专业水准还差在整机</h2>
 <p>CubeStormer 3 没有公开图纸和源码, 下表 "CS3 级别的做法" 一列是从公开视频能看到的整体特征归纳出来的, 不是对它内部结构的复刻。v3 的每个具体结构都是在这里重新推导、并用程序检查过的。</p>
@@ -100,7 +100,7 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 <section id="idea" class="cover"><h2>设计思路</h2>
 <div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/mech_closed.png" alt="夹紧" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">侧视, 夹紧: 两根黄色连杆和推杆垂直 (死点), 夹指合拢在魔方外层上下两侧</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/mech_open.png" alt="松开" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">侧视, 松开: 推杆后退 12mm, 夹指张开约 18°</figcaption></figure></div>
 <ul class="plain"><li><b>肘节锁紧的夹指。</b>每只机械手两片 7 孔粗梁当夹指, 绕根部的 5 号轴转动。十字接头往前推, 两根连杆把夹指根部往外撑, 前端合拢。推到连杆和推杆垂直 (死点) 时, 魔方把夹指往外推的力沿连杆传到十字接头, 上下两根互相抵消, 推杆上没有分力, 所以舵机不受力, 夹指也推不开。水平姿态下同样夹得住, 不再依赖摩擦。</li><li><b>舵机不跟着转。</b>舵机固定在机械手后面的平台上, 曲柄和连杆同样拉到死点, 通过十字块推拉一根 12 号轴。推杆穿过转盘中孔和导向框架两条边上的圆孔, 机械手转动时推杆跟着转, 十字块在推杆上一起转 (两侧半轴套锁住轴向位置)。转动部分没有任何线缆。</li><li><b>齿轮带转盘外圈。</b>60 齿转盘仍然是主轴承 (v2 的结论保留), 但不再用马达输出轴直接带, 而是马达偏到侧面, 36 齿齿轮和转盘外圈啮合。这样转盘中孔留给推杆, 马达只传扭矩, 1.67 倍减速同时缩小马达回差。</li><li><b>模块化。</b>一个模块 = 竖墙 + 转盘 + 马达 + 舵机平台 + 机械头, 四个完全一样。底座的孔位让四根轴线严格过魔方中心、两两垂直, 不用调。模块整体往魔方方向挪了半个孔距, 这是让相邻模块的孔位对得上的关键 (否则会差半个孔)。</li></ul>
-<div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/ref42082.png" alt="官方 42082" class="" loading="lazy" width="1000" height="700"></div><figcaption class="cap">官方 42082 (利勃海尔 R 9800) 原件, 从背面看: 转盘下半的凸台卡在 7x5 框架开口里, 两根 5 孔粗梁压住背面。凸台两头的孔不用 (LDraw 官方模型库)</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/step04.png" alt="v3 转盘下半" class="" loading="lazy" width="1200" height="860"></div><figcaption class="cap">v3 第 4 步, 同一角度: 做法和 42082 一样</figcaption></figure></div>
+<div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/ref42082.png" alt="官方 42082" class="" loading="lazy" width="1000" height="700"></div><figcaption class="cap">官方 42082 (利勃海尔 R 9800) 原件, 从背面看: 转盘下半的凸台卡在 7x5 框架开口里, 两根 5 孔粗梁压住背面 (LDraw 官方模型库)。这种做法也可以用</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/step03.png" alt="v3 转盘下半" class="" loading="lazy" width="1200" height="860"></div><figcaption class="cap">v3 第 3 步: 同样卡在框架开口里, 两头各用 1 根红色带挡套长销 32054 从框架外面穿进凸台 (官方 42042 等模型的用法)</figcaption></figure></div>
 <div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/servo_closed.png" alt="舵机夹紧" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">舵机侧, 夹紧: 曲柄和连杆拉成一条直线</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/servo_open.png" alt="舵机松开" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">舵机侧, 松开: 曲柄转过约 115°, 十字块带推杆后退</figcaption></figure></div>
 </section>
 <section id="four" class="cover"><h2>四臂检查 (tools/lego/v3/four_arm.py)</h2>
@@ -110,14 +110,14 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 <div class="note"><b>相邻两只机械手不能同时水平。</b>这是任何从外侧夹住魔方的夹爪都有的几何限制: 两只相邻机械手都转到水平时, 两副夹指会在魔方棱边外面的同一个位置相遇。v3 把它写进了规划器的可选约束 (<code>python -m quadcuber plan ... --no-adjacent-horizontal</code>): 转动中的机械手, 两侧邻居必须竖直且不同时转动。按现在的估算耗时, 20 步随机序列平均从 7.95 秒变成 9.69 秒 (约 +22%)。</div>
 </section>
 <section id="buy" class="cover"><h2>要买的零件</h2>
-<div class="tbl"><table><tr><th>零件</th><th>编号</th><th>整机数量</th><th>说明</th></tr><tr><td>60 齿转盘 上半 + 下半</td><td>18938 + 18939</td><td>4 套</td><td>每只机械手 1 套; v2 已经买了 1 套的话再买 3 套</td></tr><tr><td>36 齿双面锥齿轮</td><td>32498</td><td>4</td><td>和转盘外圈啮合</td></tr><tr><td>7x5 框架</td><td>64179</td><td>68</td><td>底座 16 块, 每个模块 13 块</td></tr><tr><td>十字轴接头 (带圆孔)</td><td>32039</td><td>4</td><td>夹爪的十字接头</td></tr><tr><td>十字块 1x2</td><td>6536</td><td>4</td><td>推杆上的十字块</td></tr><tr><td>2 孔细梁 (两端十字孔)</td><td>41677</td><td>4</td><td>舵机曲柄</td></tr><tr><td>无摩擦长销 / 无摩擦销</td><td>32556a / 3673</td><td>4 / 8</td><td>夹爪的活动关节</td></tr><tr><td>摩擦销</td><td>2780</td><td>246</td><td>多买一些备用</td></tr><tr><td>EV3 大马达 / Geekservo 灰色</td><td>—</td><td>4 / 4</td><td>现在只有 2 个大马达, 还缺 2 个</td></tr></table></div>
+<div class="tbl"><table><tr><th>零件</th><th>编号</th><th>整机数量</th><th>说明</th></tr><tr><td>60 齿转盘 上半 + 下半</td><td>18938 + 18939</td><td>4 套</td><td>每只机械手 1 套; v2 已经买了 1 套的话再买 3 套</td></tr><tr><td>36 齿双面锥齿轮</td><td>32498</td><td>4</td><td>和转盘外圈啮合</td></tr><tr><td>7x5 框架</td><td>64179</td><td>68</td><td>底座 16 块, 每个模块 13 块</td></tr><tr><td>十字轴接头 (带圆孔)</td><td>32039</td><td>4</td><td>夹爪的十字接头</td></tr><tr><td>十字块 1x2</td><td>6536</td><td>4</td><td>推杆上的十字块</td></tr><tr><td>2 孔细梁 (两端十字孔)</td><td>41677</td><td>4</td><td>舵机曲柄</td></tr><tr><td>无摩擦长销 / 无摩擦销</td><td>32556a / 3673</td><td>4 / 8</td><td>夹爪的活动关节</td></tr><tr><td>摩擦销</td><td>2780</td><td>230</td><td>多买一些备用</td></tr><tr><td>EV3 大马达 / Geekservo 灰色</td><td>—</td><td>4 / 4</td><td>现在只有 2 个大马达, 还缺 2 个</td></tr></table></div>
 <p class="cap">可以先只搭一个模块 (底座只要它那一排 4 块框架) 做单臂实测, 验证夹持和转速后再买齐四套。</p>
 </section>
 <section id="bom" class="cover"><h2>零件清单 (整机)</h2><p class="cap">颜色不限, 图中颜色只是为了区分 (深灰是底座, 红色是夹指, 黄色是连杆)。另需 56mm 魔方 1 个。</p><div class="bom">
 <div class="item"><img src="img/part_18938_71.png" alt="60 齿转盘 上半" class="" loading="lazy" width="260" height="200"><div class="qty">4×</div><div>60 齿转盘 上半</div><div class="mono">18938</div></div>
 <div class="item"><img src="img/part_18939_71.png" alt="60 齿转盘 下半" class="" loading="lazy" width="260" height="200"><div class="qty">4×</div><div>60 齿转盘 下半</div><div class="mono">18939</div></div>
 <div class="item"><img src="img/part_32039_0.png" alt="十字轴接头 (带圆孔)" class="" loading="lazy" width="260" height="200"><div class="qty">4×</div><div>十字轴接头 (带圆孔)</div><div class="mono">32039</div></div>
-<div class="item"><img src="img/part_32316_0.png" alt="5 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="qty">24×</div><div>5 孔粗梁</div><div class="mono">32316</div></div>
+<div class="item"><img src="img/part_32316_0.png" alt="5 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="qty">16×</div><div>5 孔粗梁</div><div class="mono">32316</div></div>
 <div class="item"><img src="img/part_32316_14.png" alt="5 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="qty">12×</div><div>5 孔粗梁</div><div class="mono">32316</div></div>
 <div class="item"><img src="img/part_32498_14.png" alt="36 齿双面锥齿轮" class="" loading="lazy" width="260" height="200"><div class="qty">4×</div><div>36 齿双面锥齿轮</div><div class="mono">32498</div></div>
 <div class="item"><img src="img/part_32524_4.png" alt="7 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="qty">8×</div><div>7 孔粗梁</div><div class="mono">32524</div></div>
@@ -128,8 +128,8 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 <div class="item"><img src="img/part_6536_0.png" alt="十字块 1x2 (十字孔 + 圆孔)" class="" loading="lazy" width="260" height="200"><div class="qty">4×</div><div>十字块 1x2 (十字孔 + 圆孔)</div><div class="mono">6536</div></div>
 <div class="item"><img src="img/part_95658_15.png" alt="EV3 大马达" class="" loading="lazy" width="260" height="200"><div class="qty">4×</div><div>EV3 大马达</div><div class="mono">95658</div></div>
 <div class="item"><img src="img/part_geekservo_72.png" alt="Geekservo 舵机 (灰色, 270°)" class="" loading="lazy" width="260" height="200"><div class="qty">4×</div><div>Geekservo 舵机 (灰色, 270°)</div><div class="mono">geekservo</div></div>
-<div class="item"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="qty">246×</div><div>摩擦销 (2 孔长)</div><div class="mono">2780</div></div>
-<div class="item"><img src="img/part_32054_4.png" alt="带挡套长销 (3 孔长, 红色)" class="" loading="lazy" width="260" height="200"><div class="qty">8×</div><div>带挡套长销 (3 孔长, 红色)</div><div class="mono">32054</div></div>
+<div class="item"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="qty">230×</div><div>摩擦销 (2 孔长)</div><div class="mono">2780</div></div>
+<div class="item"><img src="img/part_32054_4.png" alt="带挡套长销 (3 孔长, 红色)" class="" loading="lazy" width="260" height="200"><div class="qty">16×</div><div>带挡套长销 (3 孔长, 红色)</div><div class="mono">32054</div></div>
 <div class="item"><img src="img/part_32062_0.png" alt="2 号轴" class="" loading="lazy" width="260" height="200"><div class="qty">8×</div><div>2 号轴</div><div class="mono">32062</div></div>
 <div class="item"><img src="img/part_32073_0.png" alt="5 号轴" class="" loading="lazy" width="260" height="200"><div class="qty">8×</div><div>5 号轴</div><div class="mono">32073</div></div>
 <div class="item"><img src="img/part_32123a_72.png" alt="半轴套" class="" loading="lazy" width="260" height="200"><div class="qty">16×</div><div>半轴套</div><div class="mono">32123a</div></div>
@@ -167,191 +167,181 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 <div class="subtag">子组件 · 竖墙</div>
 <h3>转盘下半</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_18939_71.png" alt="60 齿转盘 下半" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">60 齿转盘 下半</div></div></div>
+<div class="callout"><div class="chip"><img src="img/part_18939_71.png" alt="60 齿转盘 下半" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">60 齿转盘 下半</div></div><div class="chip"><img src="img/part_32054_4.png" alt="带挡套长销 (3 孔长, 红色)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">带挡套长销 (3 孔长, 红色)</div></div></div>
 <div class="plate"><img src="img/step03.png" alt="转盘下半" class="" loading="lazy" width="1200" height="860"></div>
-<p>60 齿转盘的下半 (没有齿): 底部的长方形凸台从正面 (朝魔方的一面) 塞进最上面那块框架的开口, 长边沿框架的长边, 圆盘的边沿贴住框架正面。凸台两头的销孔不用插销。</p>
+<p>60 齿转盘的下半 (没有齿): 底部的长方形凸台从正面 (朝魔方的一面) 塞进最上面那块框架的开口, 长边沿框架的长边, 圆盘的边沿贴住框架正面。然后在框架两头短边中间的侧孔, 各从外面插 1 根红色带挡套长销, 穿过框架插进凸台两头的销孔, 挡套留在框架外面。转盘下半这样就前后都卡住了。</p>
 </section>
 <section class="step sub" id="s4">
 <div class="step-head">
 <div class="num">4</div><div class="title-block">
-<div class="subtag">子组件 · 竖墙</div>
-<h3>压住转盘</h3></div>
+<div class="subtag">子组件 · 马达</div>
+<h3>马达固定板</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_32316_0.png" alt="5 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">5 孔粗梁</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
-<div class="plate"><img src="img/step04.png" alt="压住转盘" class="" loading="lazy" width="1200" height="860"></div>
-<p>在墙的背面, 两根 5 孔粗梁竖着贴在转盘凸台背面, 推杆位置左右各一根 (中间留出推杆)。每根两端各用 1 个摩擦销插进框架长边上的正面孔: 先把销插进框架, 再把梁压上去。转盘下半这样就前后都卡住了。这是 LEGO 官方 42082 (利勃海尔 R 9800) 固定转盘下半的原样做法。</p>
+<div class="callout"><div class="chip"><img src="img/part_95658_15.png" alt="EV3 大马达" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">EV3 大马达</div></div><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_32054_4.png" alt="带挡套长销 (3 孔长, 红色)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">带挡套长销 (3 孔长, 红色)</div></div></div>
+<div class="plate"><img src="img/step04.png" alt="马达固定板" class="" loading="lazy" width="1200" height="860"></div>
+<p>7x5 框架插进马达尾部两片耳朵之间的缝里, 两根红色带挡套长销从同一侧穿过耳朵和框架 (TRACK3R 的做法)。</p>
 </section>
 <section class="step sub" id="s5">
 <div class="step-head">
 <div class="num">5</div><div class="title-block">
 <div class="subtag">子组件 · 马达</div>
-<h3>马达固定板</h3></div>
+<h3>马达前梁</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_95658_15.png" alt="EV3 大马达" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">EV3 大马达</div></div><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_32054_4.png" alt="带挡套长销 (3 孔长, 红色)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">带挡套长销 (3 孔长, 红色)</div></div></div>
-<div class="plate"><img src="img/step05.png" alt="马达固定板" class="" loading="lazy" width="1200" height="860"></div>
-<p>7x5 框架插进马达尾部两片耳朵之间的缝里, 两根红色带挡套长销从同一侧穿过耳朵和框架 (TRACK3R 的做法)。</p>
+<div class="callout"><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">6×</div><div class="n">摩擦销 (2 孔长)</div></div><div class="chip"><img src="img/part_32316_0.png" alt="5 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">5 孔粗梁</div></div></div>
+<div class="plate"><img src="img/step05.png" alt="马达前梁" class="" loading="lazy" width="1200" height="860"></div>
+<p>马达靠输出盘那一侧, 输出盘下面有一段缩进去 2 个孔深的 &quot;颈部&quot;, 上面有 3 个横穿马达的孔 (两个圆孔夹一个十字孔)。两个圆孔各插 1 个摩擦销, 各套一根 5 孔粗梁 (横放, 朝马达高的一侧伸出, 不要朝输出盘那边)。每根梁外面再用 2 个摩擦销叠第二根 5 孔粗梁。两层梁正好填满颈部缩进去的深度, 外表面和输出盘、下面的方箱平齐。</p>
 </section>
 <section class="step sub" id="s6">
 <div class="step-head">
 <div class="num">6</div><div class="title-block">
 <div class="subtag">子组件 · 马达</div>
-<h3>马达前梁</h3></div>
+<h3>马达前板</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">6×</div><div class="n">摩擦销 (2 孔长)</div></div><div class="chip"><img src="img/part_32316_0.png" alt="5 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">5 孔粗梁</div></div></div>
-<div class="plate"><img src="img/step06.png" alt="马达前梁" class="" loading="lazy" width="1200" height="860"></div>
-<p>马达靠输出盘那一侧, 输出盘下面有一段缩进去 2 个孔深的 &quot;颈部&quot;, 上面有 3 个横穿马达的孔 (两个圆孔夹一个十字孔)。两个圆孔各插 1 个摩擦销, 各套一根 5 孔粗梁 (横放, 朝马达高的一侧伸出, 不要朝输出盘那边)。每根梁外面再用 2 个摩擦销叠第二根 5 孔粗梁。两层梁正好填满颈部缩进去的深度, 外表面和输出盘、下面的方箱平齐。</p>
+<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
+<div class="plate"><img src="img/step06.png" alt="马达前板" class="" loading="lazy" width="1200" height="860"></div>
+<p>7x5 框架竖着 (长边竖直) 贴在马达方箱和两根外层梁的外面。先在外层梁两头的孔各插 1 个摩擦销, 再把框架压上去: 4 个销进框架的正面孔。</p>
 </section>
 <section class="step sub" id="s7">
 <div class="step-head">
 <div class="num">7</div><div class="title-block">
 <div class="subtag">子组件 · 马达</div>
-<h3>马达前板</h3></div>
-</div>
-<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
-<div class="plate"><img src="img/step07.png" alt="马达前板" class="" loading="lazy" width="1200" height="860"></div>
-<p>7x5 框架竖着 (长边竖直) 贴在马达方箱和两根外层梁的外面。先在外层梁两头的孔各插 1 个摩擦销, 再把框架压上去: 4 个销进框架的正面孔。</p>
-</section>
-<section class="step sub" id="s8">
-<div class="step-head">
-<div class="num">8</div><div class="title-block">
-<div class="subtag">子组件 · 马达</div>
 <h3>齿轮</h3></div>
 </div>
 <div class="callout"><div class="chip"><img src="img/part_44294_0.png" alt="7 号轴" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7 号轴</div></div><div class="chip"><img src="img/part_32123a_72.png" alt="半轴套" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">半轴套</div></div><div class="chip"><img src="img/part_3713_72.png" alt="轴套" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">轴套</div></div><div class="chip"><img src="img/part_32498_14.png" alt="36 齿双面锥齿轮" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">36 齿双面锥齿轮</div></div></div>
-<div class="plate"><img src="img/step08.png" alt="齿轮" class="" loading="lazy" width="1200" height="860"></div>
+<div class="plate"><img src="img/step07.png" alt="齿轮" class="" loading="lazy" width="1200" height="860"></div>
 <p>7 号轴插进马达输出盘中间的十字孔, 依次套上半轴套、轴套、36 齿齿轮, 最前面再套一个半轴套。</p>
+</section>
+<section class="step" id="s8">
+<div class="step-head">
+<div class="num">8</div><div class="title-block">
+<h3>装竖墙</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/sub0.png" alt="底座" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的底座</div></div><div class="chip"><img src="img/sub1.png" alt="竖墙" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的竖墙</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
+<div class="plate"><img src="img/step08.png" alt="装竖墙" class="" loading="lazy" width="1200" height="860"></div>
+<p>做好的竖墙立在底座这一排的第 2 块框架上, 墙面朝魔方。2 个摩擦销竖着从墙底边的侧孔插进底座框架。</p>
 </section>
 <section class="step" id="s9">
 <div class="step-head">
 <div class="num">9</div><div class="title-block">
-<h3>装竖墙</h3></div>
-</div>
-<div class="callout"><div class="chip"><img src="img/sub0.png" alt="底座" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的底座</div></div><div class="chip"><img src="img/sub1.png" alt="竖墙" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的竖墙</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
-<div class="plate"><img src="img/step09.png" alt="装竖墙" class="" loading="lazy" width="1200" height="860"></div>
-<p>做好的竖墙立在底座这一排的第 2 块框架上, 墙面朝魔方。2 个摩擦销竖着从墙底边的侧孔插进底座框架。</p>
-</section>
-<section class="step" id="s10">
-<div class="step-head">
-<div class="num">10</div><div class="title-block">
 <h3>装马达</h3></div>
 </div>
 <div class="callout"><div class="chip"><img src="img/sub2.png" alt="马达" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的马达</div></div><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
-<div class="plate"><img src="img/step10.png" alt="装马达" class="" loading="lazy" width="1200" height="860"></div>
+<div class="plate"><img src="img/step09.png" alt="装马达" class="" loading="lazy" width="1200" height="860"></div>
 <p>再用一块 7x5 框架接在马达前板和竖墙之间, 4 个摩擦销穿侧孔连起来: 先把这块框架接到马达前板上, 再把整个马达组件推向竖墙, 同时 36 齿齿轮和转盘上半的齿啮合 (两轴相距 3 个孔 = 两个节圆半径之和)。</p>
+</section>
+<section class="step sub" id="s10">
+<div class="step-head">
+<div class="num">10</div><div class="title-block">
+<div class="subtag">子组件 · 平台</div>
+<h3>舵机平台</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">5×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">11×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
+<div class="plate"><img src="img/step10.png" alt="舵机平台" class="" loading="lazy" width="1200" height="860"></div>
+<p>两块 7x5 框架平放, 短边对短边, 3 个摩擦销沿长度方向连成一条平台。平台后端下面竖着上下拼两块框架当支腿 (立在桌面上)。平台前半段上面竖立一块框架当推杆导向: 它长边沿推杆方向, 底边用 3 个摩擦销竖着插进平台; 两条短边上正中的侧孔 (圆孔) 就是推杆的两个轴承。</p>
 </section>
 <section class="step sub" id="s11">
 <div class="step-head">
 <div class="num">11</div><div class="title-block">
 <div class="subtag">子组件 · 平台</div>
-<h3>舵机平台</h3></div>
-</div>
-<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">5×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">11×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
-<div class="plate"><img src="img/step11.png" alt="舵机平台" class="" loading="lazy" width="1200" height="860"></div>
-<p>两块 7x5 框架平放, 短边对短边, 3 个摩擦销沿长度方向连成一条平台。平台后端下面竖着上下拼两块框架当支腿 (立在桌面上)。平台前半段上面竖立一块框架当推杆导向: 它长边沿推杆方向, 底边用 3 个摩擦销竖着插进平台; 两条短边上正中的侧孔 (圆孔) 就是推杆的两个轴承。</p>
-</section>
-<section class="step sub" id="s12">
-<div class="step-head">
-<div class="num">12</div><div class="title-block">
-<div class="subtag">子组件 · 平台</div>
 <h3>舵机</h3></div>
 </div>
 <div class="callout"><div class="chip"><img src="img/part_geekservo_72.png" alt="Geekservo 舵机 (灰色, 270°)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">Geekservo 舵机 (灰色, 270°)</div></div><div class="chip"><img src="img/part_6558_1.png" alt="长摩擦销 (3 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">长摩擦销 (3 孔长)</div></div></div>
-<div class="plate"><img src="img/step12.png" alt="舵机" class="" loading="lazy" width="1200" height="860"></div>
+<div class="plate"><img src="img/step11.png" alt="舵机" class="" loading="lazy" width="1200" height="860"></div>
 <p>舵机平放在平台后端, 输出轴朝推杆那一侧。2 根蓝色长摩擦销从上面插进舵机两只耳朵, 1 孔长的那段朝下插进平台框架。</p>
+</section>
+<section class="step" id="s12">
+<div class="step-head">
+<div class="num">12</div><div class="title-block">
+<h3>装平台</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/sub3.png" alt="平台" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的平台</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
+<div class="plate"><img src="img/step12.png" alt="装平台" class="" loading="lazy" width="1200" height="860"></div>
+<p>平台前端顶住竖墙背面, 2 个摩擦销沿推杆方向穿进墙的孔。检查导向框架的两个轴承孔、转盘中孔在一条直线上。</p>
 </section>
 <section class="step" id="s13">
 <div class="step-head">
 <div class="num">13</div><div class="title-block">
-<h3>装平台</h3></div>
-</div>
-<div class="callout"><div class="chip"><img src="img/sub3.png" alt="平台" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的平台</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
-<div class="plate"><img src="img/step13.png" alt="装平台" class="" loading="lazy" width="1200" height="860"></div>
-<p>平台前端顶住竖墙背面, 2 个摩擦销沿推杆方向穿进墙的孔。检查导向框架的两个轴承孔、转盘中孔在一条直线上。</p>
-</section>
-<section class="step" id="s14">
-<div class="step-head">
-<div class="num">14</div><div class="title-block">
 <h3>十字块和舵机连杆</h3></div>
 </div>
 <div class="callout"><div class="chip"><img src="img/part_6536_0.png" alt="十字块 1x2 (十字孔 + 圆孔)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">十字块 1x2 (十字孔 + 圆孔)</div></div><div class="chip"><img src="img/part_32123a_72.png" alt="半轴套" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">半轴套</div></div><div class="chip"><img src="img/part_32062_0.png" alt="2 号轴" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">2 号轴</div></div><div class="chip"><img src="img/part_41677_0.png" alt="2 孔细梁 (两端十字孔)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">2 孔细梁 (两端十字孔)</div></div><div class="chip"><img src="img/part_32316_14.png" alt="5 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">5 孔粗梁</div></div></div>
-<div class="plate"><img src="img/step14.png" alt="十字块和舵机连杆" class="" loading="lazy" width="1200" height="860"></div>
+<div class="plate"><img src="img/step13.png" alt="十字块和舵机连杆" class="" loading="lazy" width="1200" height="860"></div>
 <p>十字块 (圆孔在上) 两边各贴一个半轴套, 放进导向框架的开口里, 圆孔对准两个轴承孔 (推杆最后从前面穿进来)。2 号轴插进十字块下面的十字孔, 黄色 5 孔连杆的一端套在 2 号轴上。先让舵机转到 &quot;夹紧&quot; 角度, 再把曲柄 (2 孔细梁) 的十字孔套到舵机输出轴上, 让曲柄指向十字块、和连杆拉成一条直线 (死点); 最后用一根 2 号轴穿过连杆另一端的圆孔, 插进曲柄另一头的十字孔。</p>
+</section>
+<section class="step sub" id="s14">
+<div class="step-head">
+<div class="num">14</div><div class="title-block">
+<div class="subtag">子组件 · 机械头</div>
+<h3>侧板与夹指架</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_40490_0.png" alt="9 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">9 孔粗梁</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">8×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
+<div class="plate"><img src="img/step14.png" alt="侧板与夹指架" class="" loading="lazy" width="1200" height="860"></div>
+<p>两块 7x5 框架竖放 (5 孔方向沿推杆), 各在内侧贴一根 9 孔粗梁 (竖直), 每根用 4 个摩擦销连起来。粗梁贴在框架靠魔方的那条短边上, 它上下两端的孔就是夹指的转轴孔。这样做两套, 左右对称。</p>
 </section>
 <section class="step sub" id="s15">
 <div class="step-head">
 <div class="num">15</div><div class="title-block">
 <div class="subtag">子组件 · 机械头</div>
-<h3>侧板与夹指架</h3></div>
+<h3>转盘上半</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_64179_71.png" alt="7x5 框架" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">7x5 框架</div></div><div class="chip"><img src="img/part_40490_0.png" alt="9 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">9 孔粗梁</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">8×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
-<div class="plate"><img src="img/step15.png" alt="侧板与夹指架" class="" loading="lazy" width="1200" height="860"></div>
-<p>两块 7x5 框架竖放 (5 孔方向沿推杆), 各在内侧贴一根 9 孔粗梁 (竖直), 每根用 4 个摩擦销连起来。粗梁贴在框架靠魔方的那条短边上, 它上下两端的孔就是夹指的转轴孔。这样做两套, 左右对称。</p>
+<div class="callout"><div class="chip"><img src="img/part_18938_71.png" alt="60 齿转盘 上半" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">60 齿转盘 上半</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
+<div class="plate"><img src="img/step15.png" alt="转盘上半" class="" loading="lazy" width="1200" height="860"></div>
+<p>60 齿转盘的上半 (有齿): 先在底部凸台两头各插 2 个摩擦销 (上下两个孔, 挡环贴住凸台端面), 有齿的一面朝后。再把两套侧板从左右两边压到销上, 侧板后端的孔对准销, 粗梁在内侧朝魔方。</p>
 </section>
 <section class="step sub" id="s16">
 <div class="step-head">
 <div class="num">16</div><div class="title-block">
 <div class="subtag">子组件 · 机械头</div>
-<h3>转盘上半</h3></div>
+<h3>夹指</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_18938_71.png" alt="60 齿转盘 上半" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">60 齿转盘 上半</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
-<div class="plate"><img src="img/step16.png" alt="转盘上半" class="" loading="lazy" width="1200" height="860"></div>
-<p>60 齿转盘的上半 (有齿): 先在底部凸台两头各插 2 个摩擦销 (上下两个孔, 挡环贴住凸台端面), 有齿的一面朝后。再把两套侧板从左右两边压到销上, 侧板后端的孔对准销, 粗梁在内侧朝魔方。</p>
+<div class="callout"><div class="chip"><img src="img/part_32524_4.png" alt="7 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">7 孔粗梁</div></div><div class="chip"><img src="img/part_32073_0.png" alt="5 号轴" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">5 号轴</div></div><div class="chip"><img src="img/part_3713_72.png" alt="轴套" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">轴套</div></div></div>
+<div class="plate"><img src="img/step16.png" alt="夹指" class="" loading="lazy" width="1200" height="860"></div>
+<p>两根红色 7 孔粗梁当夹指, 一上一下。每根从前数第 5 个孔套在一根 5 号轴上, 5 号轴两端穿过两根 9 孔粗梁最外面的孔, 夹指两侧各套一个轴套定位。夹指应能绕 5 号轴自由摆动。</p>
 </section>
 <section class="step sub" id="s17">
 <div class="step-head">
 <div class="num">17</div><div class="title-block">
 <div class="subtag">子组件 · 机械头</div>
-<h3>夹指</h3></div>
+<h3>连杆与十字接头</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/part_32524_4.png" alt="7 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">7 孔粗梁</div></div><div class="chip"><img src="img/part_32073_0.png" alt="5 号轴" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">5 号轴</div></div><div class="chip"><img src="img/part_3713_72.png" alt="轴套" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">轴套</div></div></div>
-<div class="plate"><img src="img/step17.png" alt="夹指" class="" loading="lazy" width="1200" height="860"></div>
-<p>两根红色 7 孔粗梁当夹指, 一上一下。每根从前数第 5 个孔套在一根 5 号轴上, 5 号轴两端穿过两根 9 孔粗梁最外面的孔, 夹指两侧各套一个轴套定位。夹指应能绕 5 号轴自由摆动。</p>
+<div class="callout"><div class="chip"><img src="img/part_32039_0.png" alt="十字轴接头 (带圆孔)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">十字轴接头 (带圆孔)</div></div><div class="chip"><img src="img/part_32556a_19.png" alt="无摩擦长销 (3 孔长, 米色)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">无摩擦长销 (3 孔长, 米色)</div></div><div class="chip"><img src="img/part_32316_14.png" alt="5 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">5 孔粗梁</div></div><div class="chip"><img src="img/part_3673_71.png" alt="无摩擦销 (2 孔长, 灰色)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">无摩擦销 (2 孔长, 灰色)</div></div></div>
+<div class="plate"><img src="img/step17.png" alt="连杆与十字接头" class="" loading="lazy" width="1200" height="860"></div>
+<p>十字接头的圆孔里穿一根米色无摩擦长销, 两根黄色 5 孔连杆一上一下套在长销两端; 连杆另一端各用一个灰色无摩擦销接到夹指从前数第 6 个孔。十字接头往前推时连杆把夹指根部往外撑, 夹指前端合拢; 推到两根连杆和推杆垂直时就是死点, 魔方把夹指往外推的力传不回推杆。</p>
 </section>
 <section class="step sub" id="s18">
 <div class="step-head">
 <div class="num">18</div><div class="title-block">
 <div class="subtag">子组件 · 机械头</div>
-<h3>连杆与十字接头</h3></div>
-</div>
-<div class="callout"><div class="chip"><img src="img/part_32039_0.png" alt="十字轴接头 (带圆孔)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">十字轴接头 (带圆孔)</div></div><div class="chip"><img src="img/part_32556a_19.png" alt="无摩擦长销 (3 孔长, 米色)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">无摩擦长销 (3 孔长, 米色)</div></div><div class="chip"><img src="img/part_32316_14.png" alt="5 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">5 孔粗梁</div></div><div class="chip"><img src="img/part_3673_71.png" alt="无摩擦销 (2 孔长, 灰色)" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">无摩擦销 (2 孔长, 灰色)</div></div></div>
-<div class="plate"><img src="img/step18.png" alt="连杆与十字接头" class="" loading="lazy" width="1200" height="860"></div>
-<p>十字接头的圆孔里穿一根米色无摩擦长销, 两根黄色 5 孔连杆一上一下套在长销两端; 连杆另一端各用一个灰色无摩擦销接到夹指从前数第 6 个孔。十字接头往前推时连杆把夹指根部往外撑, 夹指前端合拢; 推到两根连杆和推杆垂直时就是死点, 魔方把夹指往外推的力传不回推杆。</p>
-</section>
-<section class="step sub" id="s19">
-<div class="step-head">
-<div class="num">19</div><div class="title-block">
-<div class="subtag">子组件 · 机械头</div>
 <h3>推杆</h3></div>
 </div>
 <div class="callout"><div class="chip"><img src="img/part_3708_71.png" alt="12 号轴" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">12 号轴</div></div></div>
-<div class="plate"><img src="img/step19.png" alt="推杆" class="" loading="lazy" width="1200" height="860"></div>
+<div class="plate"><img src="img/step18.png" alt="推杆" class="" loading="lazy" width="1200" height="860"></div>
 <p>12 号轴插进十字接头后端的十字孔。</p>
+</section>
+<section class="step" id="s19">
+<div class="step-head">
+<div class="num">19</div><div class="title-block">
+<h3>装机械头</h3></div>
+</div>
+<div class="callout"><div class="chip"><img src="img/sub4.png" alt="机械头" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的机械头</div></div></div>
+<div class="plate"><img src="img/step19.png" alt="装机械头" class="" loading="lazy" width="1200" height="860"></div>
+<p>推杆从转盘下半的中孔往后穿, 依次穿过导向框架前面的轴承孔、半轴套、十字块、半轴套、后面的轴承孔。转盘上半对准下半扣上 (两半本身卡在一起, 不用销)。最后把两个半轴套推到贴住十字块, 让十字块和推杆一起前后移动。</p>
 </section>
 <section class="step" id="s20">
 <div class="step-head">
 <div class="num">20</div><div class="title-block">
-<h3>装机械头</h3></div>
+<h3>装另外三个机械手</h3></div>
 </div>
-<div class="callout"><div class="chip"><img src="img/sub4.png" alt="机械头" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">做好的机械头</div></div></div>
-<div class="plate"><img src="img/step20.png" alt="装机械头" class="" loading="lazy" width="1200" height="860"></div>
-<p>推杆从转盘下半的中孔往后穿, 依次穿过导向框架前面的轴承孔、半轴套、十字块、半轴套、后面的轴承孔。转盘上半对准下半扣上 (两半本身卡在一起, 不用销)。最后把两个半轴套推到贴住十字块, 让十字块和推杆一起前后移动。</p>
+<div class="callout"><div class="chip"><div class="x">3×</div><div class="n">照第 2~19 步做好的机械手模块</div></div></div>
+<div class="plate"><img src="img/step20.png" alt="装另外三个机械手" class="" loading="lazy" width="1200" height="860"></div>
+<p>照上面的步骤再做三个一样的机械手, 装到底座的另外三排上。四根推杆的轴线都过魔方中心, 两两垂直 (底座的孔位保证了这一点, 不用调)。</p>
 </section>
 <section class="step" id="s21">
 <div class="step-head">
 <div class="num">21</div><div class="title-block">
-<h3>装另外三个机械手</h3></div>
-</div>
-<div class="callout"><div class="chip"><div class="x">3×</div><div class="n">照第 2~20 步做好的机械手模块</div></div></div>
-<div class="plate"><img src="img/step21.png" alt="装另外三个机械手" class="" loading="lazy" width="1200" height="860"></div>
-<p>照上面的步骤再做三个一样的机械手, 装到底座的另外三排上。四根推杆的轴线都过魔方中心, 两两垂直 (底座的孔位保证了这一点, 不用调)。</p>
-</section>
-<section class="step" id="s22">
-<div class="step-head">
-<div class="num">22</div><div class="title-block">
 <h3>放入魔方</h3></div>
 </div>
 <div class="callout"><div class="chip"><img src="img/part_cube56_16.png" alt="56mm 魔方 (示意)" class="" loading="lazy" width="260" height="200"><div class="x">1×</div><div class="n">56mm 魔方 (示意)</div></div></div>
-<div class="plate"><img src="img/step22.png" alt="放入魔方" class="" loading="lazy" width="1200" height="860"></div>
+<div class="plate"><img src="img/step21.png" alt="放入魔方" class="" loading="lazy" width="1200" height="860"></div>
 <p>四个舵机都转到 &quot;松开&quot;, 四个机械手都转到竖直 (夹指一上一下)。魔方放在中间, 先夹紧 L、R, 再夹紧 F、B。</p>
 </section>
 <section id="checks" class="cover"><h2>检查与待验证</h2>

@@ -264,9 +264,9 @@ def write_html(parts, step_new, keys, subs):
     out.append('<div class="two">'
                '<figure style="margin:0" class="cover"><div class="plate">' + img("ref42082.png", "官方 42082", w=1000, h=700)
                + '</div><figcaption class="cap">官方 42082 (利勃海尔 R 9800) 原件, 从背面看: 转盘下半的凸台卡在 7x5 框架开口里, '
-               '两根 5 孔粗梁压住背面。凸台两头的孔不用 (LDraw 官方模型库)</figcaption></figure>'
-               '<figure style="margin:0" class="cover"><div class="plate">' + img("step04.png", "v3 转盘下半", w=1200, h=860)
-               + '</div><figcaption class="cap">v3 第 4 步, 同一角度: 做法和 42082 一样</figcaption></figure>'
+               '两根 5 孔粗梁压住背面 (LDraw 官方模型库)。这种做法也可以用</figcaption></figure>'
+               '<figure style="margin:0" class="cover"><div class="plate">' + img("step03.png", "v3 转盘下半", w=1200, h=860)
+               + '</div><figcaption class="cap">v3 第 3 步: 同样卡在框架开口里, 两头各用 1 根红色带挡套长销 32054 从框架外面穿进凸台 (官方 42042 等模型的用法)</figcaption></figure>'
                "</div>")
     out.append('<div class="two">'
                '<figure style="margin:0" class="cover"><div class="plate">' + img("servo_closed.png", "舵机夹紧", w=1000, h=620)
@@ -330,7 +330,7 @@ def write_html(parts, step_new, keys, subs):
             chips.append(f'<div class="chip">{img(f"sub{subs.index(g)}.png", g, w=TW, h=TH)}'
                          f'<div class="x">1×</div><div class="n">做好的{esc(g)}</div></div>')
         if s["title"] == "装另外三个机械手":
-            chips.append('<div class="chip"><div class="x">3×</div><div class="n">照第 2~20 步做好的机械手模块</div></div>')
+            chips.append('<div class="chip"><div class="x">3×</div><div class="n">照第 2~19 步做好的机械手模块</div></div>')
             own = Counter()
         else:
             own = Counter(part_key(p) for p in new if p.step == k)
