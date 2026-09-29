@@ -100,6 +100,7 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 <section id="idea" class="cover"><h2>设计思路</h2>
 <div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/mech_closed.png" alt="夹紧" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">侧视, 夹紧: 两根黄色连杆和推杆垂直 (死点), 夹指合拢在魔方外层上下两侧</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/mech_open.png" alt="松开" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">侧视, 松开: 推杆后退 12mm, 夹指张开约 18°</figcaption></figure></div>
 <ul class="plain"><li><b>肘节锁紧的夹指。</b>每只机械手两片 7 孔粗梁当夹指, 绕根部的 5 号轴转动。十字接头往前推, 两根连杆把夹指根部往外撑, 前端合拢。推到连杆和推杆垂直 (死点) 时, 魔方把夹指往外推的力沿连杆传到十字接头, 上下两根互相抵消, 推杆上没有分力, 所以舵机不受力, 夹指也推不开。水平姿态下同样夹得住, 不再依赖摩擦。</li><li><b>舵机不跟着转。</b>舵机固定在机械手后面的平台上, 曲柄和连杆同样拉到死点, 通过十字块推拉一根 12 号轴。推杆穿过转盘中孔和导向框架两条边上的圆孔, 机械手转动时推杆跟着转, 十字块在推杆上一起转 (两侧半轴套锁住轴向位置)。转动部分没有任何线缆。</li><li><b>齿轮带转盘外圈。</b>60 齿转盘仍然是主轴承 (v2 的结论保留), 但不再用马达输出轴直接带, 而是马达偏到侧面, 36 齿齿轮和转盘外圈啮合。这样转盘中孔留给推杆, 马达只传扭矩, 1.67 倍减速同时缩小马达回差。</li><li><b>模块化。</b>一个模块 = 竖墙 + 转盘 + 马达 + 舵机平台 + 机械头, 四个完全一样。底座的孔位让四根轴线严格过魔方中心、两两垂直, 不用调。模块整体往魔方方向挪了半个孔距, 这是让相邻模块的孔位对得上的关键 (否则会差半个孔)。</li></ul>
+<div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/ref42082.png" alt="官方 42082" class="" loading="lazy" width="1000" height="700"></div><figcaption class="cap">官方 42082 (利勃海尔 R 9800) 原件, 从背面看: 转盘下半的凸台卡在 7x5 框架开口里, 两根 5 孔粗梁压住背面。凸台两头的孔不用 (LDraw 官方模型库)</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/step04.png" alt="v3 转盘下半" class="" loading="lazy" width="1200" height="860"></div><figcaption class="cap">v3 第 4 步, 同一角度: 做法和 42082 一样</figcaption></figure></div>
 <div class="two"><figure style="margin:0" class="cover"><div class="plate"><img src="img/servo_closed.png" alt="舵机夹紧" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">舵机侧, 夹紧: 曲柄和连杆拉成一条直线</figcaption></figure><figure style="margin:0" class="cover"><div class="plate"><img src="img/servo_open.png" alt="舵机松开" class="" loading="lazy" width="1000" height="620"></div><figcaption class="cap">舵机侧, 松开: 曲柄转过约 115°, 十字块带推杆后退</figcaption></figure></div>
 </section>
 <section id="four" class="cover"><h2>四臂检查 (tools/lego/v3/four_arm.py)</h2>
@@ -178,7 +179,7 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 </div>
 <div class="callout"><div class="chip"><img src="img/part_32316_0.png" alt="5 孔粗梁" class="" loading="lazy" width="260" height="200"><div class="x">2×</div><div class="n">5 孔粗梁</div></div><div class="chip"><img src="img/part_2780_0.png" alt="摩擦销 (2 孔长)" class="" loading="lazy" width="260" height="200"><div class="x">4×</div><div class="n">摩擦销 (2 孔长)</div></div></div>
 <div class="plate"><img src="img/step04.png" alt="压住转盘" class="" loading="lazy" width="1200" height="860"></div>
-<p>在墙的背面, 两根 5 孔粗梁竖着贴在转盘凸台背面, 推杆位置左右各一根 (中间留出推杆)。每根两端各用 1 个摩擦销插进框架长边上的正面孔: 先把销插进框架, 再把梁压上去。转盘下半这样就前后都卡住了。</p>
+<p>在墙的背面, 两根 5 孔粗梁竖着贴在转盘凸台背面, 推杆位置左右各一根 (中间留出推杆)。每根两端各用 1 个摩擦销插进框架长边上的正面孔: 先把销插进框架, 再把梁压上去。转盘下半这样就前后都卡住了。这是 LEGO 官方 42082 (利勃海尔 R 9800) 固定转盘下半的原样做法。</p>
 </section>
 <section class="step sub" id="s5">
 <div class="step-head">

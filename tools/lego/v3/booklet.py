@@ -262,6 +262,13 @@ def write_html(parts, step_new, keys, subs):
                "不用调。模块整体往魔方方向挪了半个孔距, 这是让相邻模块的孔位对得上的关键 (否则会差半个孔)。</li>"
                "</ul>")
     out.append('<div class="two">'
+               '<figure style="margin:0" class="cover"><div class="plate">' + img("ref42082.png", "官方 42082", w=1000, h=700)
+               + '</div><figcaption class="cap">官方 42082 (利勃海尔 R 9800) 原件, 从背面看: 转盘下半的凸台卡在 7x5 框架开口里, '
+               '两根 5 孔粗梁压住背面。凸台两头的孔不用 (LDraw 官方模型库)</figcaption></figure>'
+               '<figure style="margin:0" class="cover"><div class="plate">' + img("step04.png", "v3 转盘下半", w=1200, h=860)
+               + '</div><figcaption class="cap">v3 第 4 步, 同一角度: 做法和 42082 一样</figcaption></figure>'
+               "</div>")
+    out.append('<div class="two">'
                '<figure style="margin:0" class="cover"><div class="plate">' + img("servo_closed.png", "舵机夹紧", w=1000, h=620)
                + '</div><figcaption class="cap">舵机侧, 夹紧: 曲柄和连杆拉成一条直线</figcaption></figure>'
                '<figure style="margin:0" class="cover"><div class="plate">' + img("servo_open.png", "舵机松开", w=1000, h=620)
