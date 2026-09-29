@@ -27,6 +27,10 @@
 4. 松开的机械手可以自由旋转 (用于把夹条恢复到竖直), 可与其他动作同时进行。
 5. 若设置了角度限制 (夹爪上的舵机线缆不能无限缠绕), 每个机械手的累计角度
    必须在 [-limit, +limit] 个 90 度之内。
+6. 若开启 no_adjacent_horizontal (v3 四臂结构, 见 tools/lego/v3/four_arm.py):
+   相邻两个机械手的夹指同时处于水平附近 (约 80° 以上) 时会在魔方棱边外相撞。
+   因此正在转动的机械手 (拧面、空转、整体翻转), 它两侧相邻的机械手必须竖直且不在同一步里转动。
+   转 180° 也会经过水平, 同样适用。初始状态全部竖直, 按此规则永远不会出现相邻两个都水平。
 """
 
 from __future__ import annotations
@@ -189,6 +193,7 @@ class InvalidStep(Exception):
 class Machine:
     timing: Timing = field(default_factory=Timing)
     angle_limit: Optional[int] = None  # None 表示机械手可以无限旋转
+    no_adjacent_horizontal: bool = False  # 约束 6: 相邻机械手不能同时经过水平 (v3 结构需要)
 
     # -- 基础工具 -----------------------------------------------------------
 
@@ -302,6 +307,18 @@ class Machine:
             for p in (a, b):
                 if not self._angle_ok(g[p].angle + self._cube_angle_delta(p, c.q)):
                     raise InvalidStep(f"{p} 超出角度限制")
+
+        # 相邻机械手防碰撞
+        if self.no_adjacent_horizontal:
+            movers = [a.pos for a in turns] + [r.pos for r in rotates]
+            for c in cube_rots:
+                movers.extend(AXIS_PAIR[c.axis])
+            for p in movers:
+                for n in perpendicular(p):
+                    if n in movers:
+                        raise InvalidStep(f"相邻的 {p}、{n} 不能在同一步里转动")
+                    if not g[n].vertical:
+                        raise InvalidStep(f"{n} 的夹指是水平的, {p} 转动时会和它相撞")
 
     @staticmethod
     def _cube_angle_delta(pos: str, q: int) -> int:

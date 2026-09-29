@@ -63,6 +63,18 @@ class PlannerTest(unittest.TestCase):
             for g in st.grippers:
                 self.assertLessEqual(abs(g.angle), 2)
 
+    def test_no_adjacent_horizontal(self):
+        # v3 四臂结构: 相邻两个机械手的夹指不能同时处于水平
+        from quadcuber.machine import perpendicular
+        m = Machine(no_adjacent_horizontal=True)
+        rng = random.Random(5)
+        for _ in range(3):
+            p = self.check_solves(invert(random_scramble(12, rng)), machine=m)
+            for st in p.states:
+                for pos in ("R", "L"):
+                    for n in perpendicular(pos):
+                        self.assertFalse(not st.gripper(pos).vertical and not st.gripper(n).vertical)
+
 
 if __name__ == "__main__":
     unittest.main()

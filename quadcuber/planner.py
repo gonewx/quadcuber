@@ -421,7 +421,7 @@ def plan(
     groups = group_moves(moves)
     limited = machine.angle_limit is not None
     exact = _Searcher(machine, options, weight)
-    free = _Searcher(Machine(machine.timing, None), options, weight) if limited else exact
+    free = _Searcher(Machine(machine.timing, None, machine.no_adjacent_horizontal), options, weight) if limited else exact
 
     steps: List[Step] = []
     states: List[State] = [state]

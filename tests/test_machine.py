@@ -45,6 +45,22 @@ class MachineRulesTest(unittest.TestCase):
         s = self.m.apply(self.s0, (Open("F"), Open("B")))
         self.assertInvalid(s, (Turn("R", 1),))
 
+    def test_no_adjacent_horizontal(self):
+        m = Machine(no_adjacent_horizontal=True)
+        s = m.apply(self.s0, (Turn("R", 1),))  # R 水平夹紧
+        s = m.apply(s, (Open("R"),))
+        # 默认规则允许松开的 R 水平时拧 F; v3 结构下 F 的夹指会撞上 R 的夹指
+        self.m.check(s, (Turn("F", 1),))
+        with self.assertRaises(InvalidStep):
+            m.check(s, (Turn("F", 1),))
+        m.check(s, (Rotate("R", 1),))  # 先把 R 转回竖直
+        s2 = m.apply(self.s0, (Open("F"), Open("B")))
+        with self.assertRaises(InvalidStep):
+            m.check(s2, (Rotate("F", 1), Rotate("R", 1)))  # R 夹紧不能空转, 换成相邻的同时空转
+        s3 = m.apply(self.s0, (Open("R"), Open("L")))
+        with self.assertRaises(InvalidStep):
+            m.check(s3, (Rotate("R", 1), Turn("F", 1)))  # 相邻两个同一步转动
+
     def test_double_turn_only_opposite(self):
         self.m.check(self.s0, (Turn("R", 1), Turn("L", -1)))
         self.assertInvalid(self.s0, (Turn("R", 1), Turn("F", 1)))
