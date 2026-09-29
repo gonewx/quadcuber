@@ -364,9 +364,12 @@
 1 0 -350.501 20 0 0 0 1 0 -1 0 1 0 0 6536.dat
 1 72 -365.501 0 0 0 0 1 0 1 0 -1 0 0 32123a.dat
 1 72 -335.501 0 0 0 0 1 0 1 0 -1 0 0 32123a.dat
-1 0 -350.501 20 10 0 0 -1 0 1 0 1 0 0 32062.dat
+1 0 -350.501 20 10 0 0 -1 0 1 0 1 0 0 4519.dat
+1 72 -350.501 20 -15 1 0 0 0 1 0 0 0 1 32123a.dat
+1 72 -350.501 20 35 1 0 0 0 1 0 0 0 1 32123a.dat
 1 0 -450 30 35 0.1 0 0.995 0.995 0 -0.1 0 1 0 41677.dat
 1 0 -430.1 28 20 0 0 -1 0 1 0 1 0 0 32062.dat
+1 72 -430.1 28 5 1 0 0 0 1 0 0 0 1 32123a.dat
 1 14 -390.301 24 20 -0.1 0 -0.995 -0.995 0 0.1 0 1 0 32316.dat
 0 STEP
 1 71 -200 -20 60 0 0 1 -1 0 0 0 -1 0 32526.dat
@@ -406,7 +409,7 @@
 1 14 -140 -40 -20 1 0 0 0 0 -1 0 1 0 32316.dat
 1 71 -140 -80 -10 0 0 -1 0 1 0 1 0 0 3673.dat
 0 STEP
-1 71 -280 0 0 1 0 0 0 1 0 0 0 1 3708.dat
+1 71 -310 0 0 1 0 0 0 1 0 0 0 1 50451.dat
 0 STEP
 0 STEP
 1 71 240 0 0 0 1 0 1 0 0 0 0 -1 64179.dat
@@ -490,9 +493,12 @@
 1 0 350.501 20 0 0 0 -1 0 -1 0 -1 0 0 6536.dat
 1 72 365.501 0 0 0 0 -1 0 1 0 1 0 0 32123a.dat
 1 72 335.501 0 0 0 0 -1 0 1 0 1 0 0 32123a.dat
-1 0 350.501 20 -10 0 0 1 0 1 0 -1 0 0 32062.dat
+1 0 350.501 20 -10 0 0 1 0 1 0 -1 0 0 4519.dat
+1 72 350.501 20 15 -1 0 0 0 1 0 0 0 -1 32123a.dat
+1 72 350.501 20 -35 -1 0 0 0 1 0 0 0 -1 32123a.dat
 1 0 450 30 -35 -0.1 0 -0.995 0.995 0 -0.1 0 -1 0 41677.dat
 1 0 430.1 28 -20 0 0 1 0 1 0 -1 0 0 32062.dat
+1 72 430.1 28 -5 -1 0 0 0 1 0 0 0 -1 32123a.dat
 1 14 390.301 24 -20 0.1 0 0.995 -0.995 0 0.1 0 -1 0 32316.dat
 1 71 200 -20 -60 0 0 -1 -1 0 0 0 1 0 32526.dat
 1 71 200 20 -60 0 0 -1 1 0 0 0 -1 0 32526.dat
@@ -527,7 +533,7 @@
 1 71 140 80 -10 0 0 1 0 1 0 -1 0 0 3673.dat
 1 14 140 -40 20 -1 0 0 0 0 -1 0 -1 0 32316.dat
 1 71 140 -80 10 0 0 1 0 1 0 -1 0 0 3673.dat
-1 71 280 0 0 -1 0 0 0 1 0 0 0 -1 3708.dat
+1 71 310 0 0 -1 0 0 0 1 0 0 0 -1 50451.dat
 1 71 0 0 240 0 0 1 1 0 0 0 1 0 64179.dat
 1 71 0 100 240 0 0 1 1 0 0 0 1 0 64179.dat
 1 71 0 200 240 0 0 1 1 0 0 0 1 0 64179.dat
@@ -609,9 +615,12 @@
 1 0 0 20 350.501 1 0 0 0 -1 0 0 0 -1 6536.dat
 1 72 0 0 365.501 -1 0 0 0 1 0 0 0 -1 32123a.dat
 1 72 0 0 335.501 -1 0 0 0 1 0 0 0 -1 32123a.dat
-1 0 10 20 350.501 1 0 0 0 1 0 0 0 1 32062.dat
+1 0 10 20 350.501 1 0 0 0 1 0 0 0 1 4519.dat
+1 72 -15 20 350.501 0 0 1 0 1 0 -1 0 0 32123a.dat
+1 72 35 20 350.501 0 0 1 0 1 0 -1 0 0 32123a.dat
 1 0 35 30 450 0 1 0 0.995 0 -0.1 -0.1 0 -0.995 41677.dat
 1 0 20 28 430.1 1 0 0 0 1 0 0 0 1 32062.dat
+1 72 5 28 430.1 0 0 1 0 1 0 -1 0 0 32123a.dat
 1 14 20 24 390.301 0 1 0 -0.995 0 0.1 0.1 0 0.995 32316.dat
 1 71 60 -20 200 0 -1 0 -1 0 0 0 0 -1 32526.dat
 1 71 60 20 200 0 1 0 1 0 0 0 0 -1 32526.dat
@@ -646,7 +655,7 @@
 1 71 10 80 140 1 0 0 0 1 0 0 0 1 3673.dat
 1 14 -20 -40 140 0 1 0 0 0 -1 -1 0 0 32316.dat
 1 71 -10 -80 140 1 0 0 0 1 0 0 0 1 3673.dat
-1 71 0 0 280 0 0 1 0 1 0 -1 0 0 3708.dat
+1 71 0 0 310 0 0 1 0 1 0 -1 0 0 50451.dat
 1 71 0 0 -240 0 0 -1 1 0 0 0 -1 0 64179.dat
 1 71 0 100 -240 0 0 -1 1 0 0 0 -1 0 64179.dat
 1 71 0 200 -240 0 0 -1 1 0 0 0 -1 0 64179.dat
@@ -728,9 +737,12 @@
 1 0 0 20 -350.501 -1 0 0 0 -1 0 0 0 1 6536.dat
 1 72 0 0 -365.501 1 0 0 0 1 0 0 0 1 32123a.dat
 1 72 0 0 -335.501 1 0 0 0 1 0 0 0 1 32123a.dat
-1 0 -10 20 -350.501 -1 0 0 0 1 0 0 0 -1 32062.dat
+1 0 -10 20 -350.501 -1 0 0 0 1 0 0 0 -1 4519.dat
+1 72 15 20 -350.501 0 0 -1 0 1 0 1 0 0 32123a.dat
+1 72 -35 20 -350.501 0 0 -1 0 1 0 1 0 0 32123a.dat
 1 0 -35 30 -450 0 -1 0 0.995 0 -0.1 0.1 0 0.995 41677.dat
 1 0 -20 28 -430.1 -1 0 0 0 1 0 0 0 -1 32062.dat
+1 72 -5 28 -430.1 0 0 -1 0 1 0 1 0 0 32123a.dat
 1 14 -20 24 -390.301 0 -1 0 -0.995 0 0.1 -0.1 0 -0.995 32316.dat
 1 71 -60 -20 -200 0 1 0 -1 0 0 0 0 1 32526.dat
 1 71 -60 20 -200 0 -1 0 1 0 0 0 0 1 32526.dat
@@ -765,7 +777,7 @@
 1 71 -10 80 -140 -1 0 0 0 1 0 0 0 -1 3673.dat
 1 14 20 -40 -140 0 -1 0 0 0 -1 1 0 0 32316.dat
 1 71 10 -80 -140 -1 0 0 0 1 0 0 0 -1 3673.dat
-1 71 0 0 -280 0 0 -1 0 1 0 1 0 0 3708.dat
+1 71 0 0 -310 0 0 -1 0 1 0 1 0 0 50451.dat
 0 STEP
 1 16 0 0 0 1 0 0 0 1 0 0 0 1 cube56.dat
 0 STEP
@@ -8536,25 +8548,23 @@
 
 4 16 10 0 0 9.239 0 3.827 8.3151 0 3.4443 9 0 0
 4 16 9.239 0 3.827 7.071 0 7.071 6.3639 0 6.3639 8.3151 0 3.4443
-0 FILE 44294.dat
-0 Technic Axle  7
-0 Name: 44294.dat
+0 FILE 50451.dat
+0 Technic Axle 16
+0 Name: 50451.dat
 0 Author: Magnus Forsberg [MagFors]
 0 !LDRAW_ORG Part UPDATE 2025-09
 0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt
 
 0 BFC CERTIFY CCW
 
-0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
-0 !HISTORY 2007-07-04 [PTadmin] Header formatted for Contributor Agreement
-0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01
 0 !HISTORY 2025-09-01 [MagFors] Beveled axle ends
-0 !HISTORY 2025-09-01 [MagFors] Complete rework, original by Dan Boger
+0 !HISTORY 2025-09-01 [MagFors] Complete rework, original by Guy Vivan
 0 !HISTORY 2025-09-29 [OrionP] Official Update 2025-09
 
-1 16 70 0 0 0 -1 0 1 0 0 0 0 1 axleend2.dat
-1 16 -70 0 0 0 1 0 1 0 0 0 0 -1 axleend2.dat
-1 16 67.5 0 0 0 -135 0 1 0 0 0 0 1 axlehol8.dat
+1 16 160 0 0 0 -1 0 1 0 0 0 0 1 axleend2.dat
+1 16 -160 0 0 0 1 0 1 0 0 0 0 -1 axleend2.dat
+1 16 157.5 0 0 0 -315 0 1 0 0 0 0 1 axlehol8.dat
 0 FILE axlehol8.dat
 0 Technic Axle Perimeter
 0 Name: axlehol8.dat
@@ -8760,6 +8770,44 @@
 5 24 6 2.5 0 5.6023 2.5 -2 6 3.5 0 5.2765 1.0858 0
 5 24 -6 2.5 0 -5.6023 2.5 -2 -5.2765 1.0858 0 -6 3.5 0
 5 24 0 2.5 -6 2 2.5 -5.6023 0 3.5 -6 0 1.0858 -5.2765
+0 FILE 4519.dat
+0 Technic Axle  3
+0 Name: 4519.dat
+0 Author: James Jessiman
+0 !LDRAW_ORG Part UPDATE 2025-09
+0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !HISTORY 2004-07-11 [guyvivan] BFC'ed
+0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+0 !HISTORY 2007-07-08 [PTadmin] Header formatted for Contributor Agreement
+0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+0 !HISTORY 2025-09-01 [MagFors] Beveled axle ends
+0 !HISTORY 2025-09-29 [OrionP] Official Update 2025-09
+
+1 16 30 0 0 0 -1 0 1 0 0 0 0 1 axleend2.dat
+1 16 -30 0 0 0 1 0 1 0 0 0 0 -1 axleend2.dat
+1 16 27.5 0 0 0 -55 0 1 0 0 0 0 1 axlehol8.dat
+0 FILE 44294.dat
+0 Technic Axle  7
+0 Name: 44294.dat
+0 Author: Magnus Forsberg [MagFors]
+0 !LDRAW_ORG Part UPDATE 2025-09
+0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+0 !HISTORY 2007-07-04 [PTadmin] Header formatted for Contributor Agreement
+0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+0 !HISTORY 2025-09-01 [MagFors] Beveled axle ends
+0 !HISTORY 2025-09-01 [MagFors] Complete rework, original by Dan Boger
+0 !HISTORY 2025-09-29 [OrionP] Official Update 2025-09
+
+1 16 70 0 0 0 -1 0 1 0 0 0 0 1 axleend2.dat
+1 16 -70 0 0 0 1 0 1 0 0 0 0 -1 axleend2.dat
+1 16 67.5 0 0 0 -135 0 1 0 0 0 0 1 axlehol8.dat
 0 FILE 41677.dat
 0 Technic Beam  2 x  0.5 Liftarm
 0 Name: 41677.dat
@@ -9564,25 +9612,6 @@
 5 24 2.68 6.47 -4 3.44 8.31 -3 4.95 4.95 -4 0 7 -4
 5 24 4.95 4.95 -4 5.76 5.76 -3.43 6.47 2.68 -4 2.68 6.47 -4
 5 24 6.47 2.68 -4 8.31 3.44 -3 7 0 -4 4.95 4.95 -4
-0 FILE 3708.dat
-0 Technic Axle 12
-0 Name: 3708.dat
-0 Author: James Jessiman
-0 !LDRAW_ORG Part UPDATE 2025-09
-0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt
-
-0 BFC CERTIFY CCW
-
-0 !HISTORY 2004-07-11 [guyvivan] BFC'ed
-0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
-0 !HISTORY 2007-06-29 [PTadmin] Header formatted for Contributor Agreement
-0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
-0 !HISTORY 2025-09-01 [MagFors] Beveled axle ends
-0 !HISTORY 2025-09-29 [OrionP] Official Update 2025-09
-
-1 16 120 0 0 0 -1 0 1 0 0 0 0 1 axleend2.dat
-1 16 -120 0 0 0 1 0 1 0 0 0 0 -1 axleend2.dat
-1 16 117.5 0 0 0 -235 0 1 0 0 0 0 1 axlehol8.dat
 0 FILE 3673.dat
 0 Technic Pin
 0 Name: 3673.dat

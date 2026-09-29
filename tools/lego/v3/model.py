@@ -125,13 +125,14 @@ CATALOG = {
     "32073.dat": ("5 号轴", "axle"),
     "44294.dat": ("7 号轴", "axle"),
     "3708.dat": ("12 号轴", "axle"),
+    "50451.dat": ("16 号轴", "axle"),
     "3713.dat": ("轴套", "bush"),
     "32123a.dat": ("半轴套", "bush"),
     "cube56.dat": ("56mm 魔方 (示意)", "other"),
 }
 # 检查用的销/轴长度 (LDU), 补到 check.CONNECTOR_LEN 里
 CONNECTOR_LEN = {"3673.dat": 40, "32556a.dat": 60, "3749.dat": 40, "32062.dat": 40, "32073.dat": 100,
-                 "44294.dat": 140, "4519.dat": 60}
+                 "44294.dat": 140, "4519.dat": 60, "50451.dat": 320}
 
 C_FRAME = 71  # 浅灰
 C_BASE = 72  # 深灰: 底座
@@ -169,7 +170,7 @@ CROSS_CLOSED_X = JOINT_X  # 夹紧时十字接头的销正好在两个连杆孔�
 JAW_TIP_X = -40.0
 
 # 推杆 (16 号轴): 前端插进十字接头 32013 的十字孔
-ROD_FRONT_IN = 10.0  # 插进十字孔的深度
+ROD_FRONT_IN = 20.0  # 插进十字孔的深度: 插到底 (2026-09-29 用户实物: 原来只插一半, 实际会插到底, 十字接头就差半个孔到不了死点)
 
 # 舵机 (固定在底座平台上): 输出轴沿 Z, 在十字块后面; 夹紧时曲柄和连杆拉成一条直线 (死点)
 SERVO_C = np.array([-450.0, 30.0, 80.0])  # 舵机本体中心
@@ -437,17 +438,24 @@ def module(open_s=0.0, angle=0.0, steps=True, on_base=False):
     crank_pin = CRANK_C + CRANK_R * np.array([math.cos(th), math.sin(th)])
     bx = crank_pin[0] + math.sqrt(LINK2_L ** 2 - (crank_pin[1] - BLOCK_Y) ** 2)  # 十字块上连杆轴的 x
     s = st("十字块和舵机连杆", "十字块 (圆孔在上) 两边各贴一个半轴套, 放进导向框架的开口里, 圆孔对准两个轴承孔 "
-           "(推杆最后从前面穿进来)。2 号轴插进十字块下面的十字孔, 黄色 5 孔连杆的一端套在 2 号轴上。"
+           "(推杆最后从前面穿进来)。3 号轴插进十字块下面的十字孔, 两头各露出半个孔; 黄色 5 孔连杆的一端套在 3 号轴上, 连杆外面再套 1 个半轴套挡住, "
+           "另一头 (十字块另一面) 也套 1 个半轴套。"
            "先让舵机转到 \"夹紧\" 角度, 再把曲柄 (2 孔细梁) 的十字孔套到舵机输出轴上, 让曲柄指向十字块、和连杆拉成一条直线 "
-           "(死点); 最后用一根 2 号轴穿过连杆另一端的圆孔, 插进曲柄另一头的十字孔。", view=(30, 30))
+           "(死点); 最后用一根 2 号轴从连杆这一面穿过连杆另一端的圆孔, 插进曲柄另一头的十字孔, 连杆外面露出的半个孔套 1 个半轴套挡住。"
+           "(轴在连杆的圆孔里只是转, 两头不挡的话会慢慢滑出来; 用户 2026-09-29 实物发现。)", view=(30, 30))
     add("6536.dat", C_BEAM, (bx, BLOCK_Y, 0), BLOCK_ROT, s)
     for dx in (-15, 15):
         add("32123a.dat", C_BUSH, (bx + dx, 0, 0), BUSH_X, s)
-    add("32062.dat", C_AXLE, (bx, BLOCK_Y, 10), ALONG_Z, s)
+    # 十字块的十字孔 (z = -10 ... 10) + 连杆 (10 ... 30): 用 3 号轴 (-20 ... 40), 两头各套一个半轴套挡住
+    add("4519.dat", C_AXLE, (bx, BLOCK_Y, 10), ALONG_Z, s)
+    for z in (-15, 35):
+        add("32123a.dat", C_BUSH, (bx, BLOCK_Y, z), BUSH_Z, s)
     cdir = np.array([math.cos(th), math.sin(th), 0.0])
     add("41677.dat", C_BEAM, (CRANK_C[0], CRANK_C[1], 35), orient(np.cross([0, 0, 1.0], cdir), "+z", cdir), s)
     # 曲柄 (十字孔) 和连杆 (圆孔) 之间用 2 号轴: 轴卡在曲柄里, 连杆绕轴转
+    # 2 号轴 (z = 0 ... 40): 曲柄 30 ... 40, 连杆 10 ... 30, 连杆下面露出的 0 ... 10 套半轴套, 轴和连杆都不会滑出
     add("32062.dat", C_AXLE, (crank_pin[0], crank_pin[1], 20), ALONG_Z, s)
+    add("32123a.dat", C_BUSH, (crank_pin[0], crank_pin[1], 5), BUSH_Z, s)
     e = np.array([crank_pin[0] - bx, crank_pin[1] - BLOCK_Y, 0.0])
     e /= np.linalg.norm(e)
     mid = (np.array([bx, BLOCK_Y]) + crank_pin) / 2
@@ -509,12 +517,14 @@ def module(open_s=0.0, angle=0.0, steps=True, on_base=False):
         zl = 20.0 * sy
         hadd("32316.dat", C_LINK, (c + j) / 2 + [0, 0, zl], orient(np.cross([0, 0, 1.0], d), "+z", d), s)
         hadd("3673.dat", C_FPIN, j + [0, 0, 10 * sy], ALONG_Z, s)
-    s = st("推杆", "12 号轴插进十字接头后端的十字孔。", sub="机械头", view=(40, 25))
+    # 推杆用 16 号轴: 12 号轴插到底后, 后端只剩 1 孔多, 退不到导向框架后面的轴承孔 (2026-09-29 用户实物)
+    s = st("推杆", "16 号轴插进十字接头后端的十字孔, 一直插到底。", sub="机械头", view=(40, 25))
     rod_front = xc - 30 + ROD_FRONT_IN
-    hadd("3708.dat", C_ROD, (rod_front - 120, 0, 0), ALONG_X, s)
+    hadd("50451.dat", C_ROD, (rod_front - 160, 0, 0), ALONG_X, s)
     st("装机械头", "推杆从转盘下半的中孔往后穿, 依次穿过导向框架前面的轴承孔、半轴套、十字块、半轴套、后面的轴承孔。"
-       "转盘上半对准下半扣上 (两半本身卡在一起, 不用销)。最后把两个半轴套推到贴住十字块, "
-       "让十字块和推杆一起前后移动。", attach=("机械头",), view=(40, 25), focus="module")
+       "转盘上半对准下半扣上 (两半本身卡在一起, 不用销)。最后定死点: 舵机转到 \"夹紧\" (曲柄和舵机连杆拉成一条直线), "
+       "用手把推杆往前推, 直到两根黄色连杆和推杆垂直、两片夹指合到最紧, 按住不动, 再把十字块两边的半轴套推到贴住十字块。"
+       "这样舵机在夹紧位置时夹爪正好在死点; 半轴套的位置决定死点, 不对就松开重调。", attach=("机械头",), view=(40, 25), focus="module")
 
     if angle:
         R = rot_x(angle)
