@@ -178,7 +178,7 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 
 EVAL_ROWS = [
     ("整机形态", "只有单臂; 四臂怎么排、底座怎么连都没有设计, 也没有四臂之间的干涉检查",
-     "四个一样的模块两两垂直, 固定在一个整体底座上", "四个相同模块 + 16 块框架的风车形底座, 孔位保证四根轴线过魔方中心、两两垂直; 四臂干涉按全部状态组合扫描过"),
+     "四个一样的模块两两垂直, 固定在一个整体底座上", "四个相同模块 + 8 根 15 孔梁上下两层拼成的方框底座, 孔位保证四根轴线过魔方中心、两两垂直; 四臂干涉按全部状态组合扫描过"),
     ("转动部分", "转盘上装着舵机、叉子盒、两根 16 号导轨, 从转盘端面到魔方约 144mm, 转动惯量大",
      "夹爪短而轻, 马达和舵机都不跟着转", "转动的只有转盘上半、两块侧板、夹指、连杆和推杆, 约 52mm 长, 没有舵机和马达"),
     ("夹紧", "U 形叉沿轴向插入, 水平时没有压紧力, 曲柄停在死点不等于锁紧 (外部评审 ① ②)",
@@ -295,7 +295,8 @@ def write_html(parts, step_new, keys, subs):
     out.append('<div class="tbl"><table><tr><th>零件</th><th>编号</th><th>整机数量</th><th>说明</th></tr>'
                "<tr><td>60 齿转盘 上半 + 下半</td><td>18938 + 18939</td><td>4 套</td><td>每只机械手 1 套; v2 已经买了 1 套的话再买 3 套</td></tr>"
                "<tr><td>36 齿双面锥齿轮</td><td>32498</td><td>4</td><td>和转盘外圈啮合</td></tr>"
-               f"<tr><td>7x5 框架</td><td>64179</td><td>{byname['64179.dat']}</td><td>底座 16 块, 每个模块 13 块</td></tr>"
+               f"<tr><td>7x5 框架</td><td>64179</td><td>{byname['64179.dat']}</td><td>每个模块 10 块 (竖墙 3、机械头侧板 2、导向 1、平台 1、支腿 2、马达尾部 1), 底座不用框架</td></tr>"
+               f"<tr><td>15 孔 / 11 孔 / 3 孔粗梁</td><td>32278 / 32525 / 32523</td><td>{byname['32278.dat']} / {byname['32525.dat']} / {byname['32523.dat']}</td><td>底座 8 根 15 孔, 平台每个 2 根 15 孔; 马达前端的梁</td></tr>"
                "<tr><td>十字轴接头 (带圆孔)</td><td>32039</td><td>4</td><td>夹爪的十字接头</td></tr>"
                "<tr><td>十字块 1x2</td><td>6536</td><td>4</td><td>推杆上的十字块</td></tr>"
                "<tr><td>2 孔细梁 (两端十字孔)</td><td>41677</td><td>4</td><td>舵机曲柄</td></tr>"
@@ -303,7 +304,7 @@ def write_html(parts, step_new, keys, subs):
                f"<tr><td>摩擦销</td><td>2780</td><td>{byname['2780.dat']}</td><td>多买一些备用</td></tr>"
                "<tr><td>EV3 大马达 / Geekservo 灰色</td><td>—</td><td>4 / 4</td><td>现在只有 2 个大马达, 还缺 2 个</td></tr>"
                "</table></div>")
-    out.append('<p class="cap">可以先只搭一个模块 (底座只要它那一排 4 块框架) 做单臂实测, 验证夹持和转速后再买齐四套。</p>')
+    out.append('<p class="cap">可以先只搭一个模块 (底座只要它那一条边的 2 根 15 孔梁) 做单臂实测, 验证夹持和转速后再买齐四套。</p>')
     out.append("</section>")
 
     out.append('<section id="bom" class="cover"><h2>零件清单 (整机)</h2>'
@@ -330,7 +331,7 @@ def write_html(parts, step_new, keys, subs):
             chips.append(f'<div class="chip">{img(f"sub{subs.index(g)}.png", g, w=TW, h=TH)}'
                          f'<div class="x">1×</div><div class="n">做好的{esc(g)}</div></div>')
         if s["title"] == "装另外三个机械手":
-            chips.append('<div class="chip"><div class="x">3×</div><div class="n">照第 2~19 步做好的机械手模块</div></div>')
+            chips.append('<div class="chip"><div class="x">3×</div><div class="n">照第 2~18 步做好的机械手模块</div></div>')
             own = Counter()
         else:
             own = Counter(part_key(p) for p in new if p.step == k)
