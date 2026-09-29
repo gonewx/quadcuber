@@ -1,6 +1,6 @@
 # 单臂原型 v2（转盘主轴承版）
 
-v1 在上一级目录，保持不动。本目录是重新设计的 v2。评估结论和设计推导见 `docs/lego/v2/README.md`。
+v1 在上一级目录，保持不动。本目录是重新设计的 v2，说明书已发布在 https://claude.ai/artifact/9yGEt1ogaxxmStkyxYWYBL 。评估结论和设计推导见 `docs/lego/v2/README.md`。
 
 | 文件 | 作用 |
 | --- | --- |
