@@ -19,6 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 sys.path.append(os.path.join(HERE, ".."))
 
+import ldraw  # noqa: E402
 import model  # noqa: E402
 import run_check  # noqa: E402,F401  (补 CONNECTOR_LEN 和豁免规则)
 
@@ -164,12 +165,62 @@ def main(render=True):
         subprocess.run(["node", "render.js", jobs_path], cwd=os.path.join(HERE, "..", "render"), check=True, env=env)
 
     write(os.path.join(OUT, "model.ldr"), model.to_ldr(parts, "quadcuber 四臂整机 v3"))
+    write(os.path.join(OUT, "model.mpd"), pack_mpd(parts, len(steps)))
+    with open(os.path.join(HERE, "viewer.js"), encoding="utf-8") as f:
+        write(os.path.join(OUT, "viewer.js"), f.read())
     write_html(parts, step_new, keys, list(subs))
+
+
+# ---- 可旋转的 3D 模型: 把整机和用到的全部零件、基元打包成一个 MPD 文件 ---------------------------------------
+
+def pack_mpd(parts, n_steps):
+    """网页里的 3D 视图用: 主模型按说明书的步骤分段 (每步后面一个 0 STEP, 空步骤也保留, 这样 buildingStep 和步骤号对齐),
+    后面用 0 FILE 附上所有被引用的零件和基元, 开头附上颜色定义, 网页不需要再访问零件库。"""
+    colors = [ln for ln in ldraw.fetch_rel("colors/ldcfgalt.ldr").decode("utf-8", "replace").splitlines()
+              if ln.startswith("0 !COLOUR")]
+    main_lines = ["0 FILE quadcuber_v3.ldr", "0 quadcuber 四臂整机 v3", "0 Name: quadcuber_v3.ldr"] + colors
+    for k in range(1, n_steps + 1):
+        main_lines += [p.ldraw() for p in parts if p.step == k]
+        main_lines.append("0 STEP")
+    files, order, todo = {}, [], sorted({p.name.lower() for p in parts})
+    while todo:
+        name = todo.pop()
+        if name in files:
+            continue
+        text = ldraw.get(name)
+        files[name] = text
+        order.append(name)
+        for ln in text.splitlines():
+            f = ln.split()
+            if len(f) >= 15 and f[0] == "1":
+                sub = " ".join(f[14:]).replace("\\", "/").lower()
+                if sub not in files:
+                    todo.append(sub)
+    out = main_lines
+    for name in order:
+        # LDrawLoader 把 s/ 开头的引用改成 parts/s/, 48/ 开头的改成 p/48/ 再查缓存, 打包的文件名要跟着改
+        key = "parts/" + name if name.startswith("s/") else "p/" + name if name.startswith("48/") else name
+        out.append(f"0 FILE {key}")
+        out += [ln for ln in files[name].splitlines() if not ln.startswith("0 FILE")]
+    return "\n".join(out) + "\n"
 
 
 # ---- HTML ----------------------------------------------------------------------
 
+# SPIKE Prime 扩展套装 45680 的零件数 (Brickset 清单, 2026-09-29 查; 同一型号不同颜色合并)
+SET_45680 = {"18938.dat": 2, "18939.dat": 2, "32498.dat": 2, "39794.dat": 4, "64179.dat": 8, "32526.dat": 10,
+             "32278.dat": 6, "32525.dat": 6, "40490.dat": 8, "32524.dat": 6, "32316.dat": 8, "32523.dat": 10,
+             "2780.dat": 80, "6558.dat": 36, "32054.dat": 12}
+
 CSS = _v1.CSS + """
+#v3d{--v3d-bg:#ffffff;position:relative;height:min(70vh,560px);touch-action:none}
+#v3d canvas{display:block;width:100%;height:100%}
+#v3d-status[hidden]{display:none}
+#v3d-status{position:absolute;inset:0;display:grid;place-items:center;color:#5a6778;font-size:14px;padding:16px;text-align:center}
+.v3d-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.v3d-bar input{flex:1 1 220px;min-width:0}
+.v3d-bar span{flex:1 1 160px;min-width:0;font-weight:700}
+.v3d-bar button{font:inherit;padding:6px 14px;border:1px solid var(--line);border-radius:6px;background:var(--sheet);color:var(--ink);cursor:pointer}
 .cmp td:first-child{white-space:nowrap;font-weight:600}
 .cmp td{min-width:9em}
 .lead{font-size:16px}
@@ -227,7 +278,17 @@ def write_html(parts, step_new, keys, subs):
                '<div class="fact"><b>约 52 mm</b><span>转动部分长度 (v2 约 144mm)</span></div>'
                '<div class="fact"><b>无限</b><span>机械手旋转范围 (舵机不跟着转)</span></div>'
                "</div>")
-    out.append('<nav class="toc"><a href="#eval">v2 评估</a><a href="#idea">设计思路</a><a href="#four">四臂检查</a>'
+    # 可旋转的 3D 模型 (viewer.js + model.mpd, three.js 从 jsDelivr 加载)
+    out.append('<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",'
+               '"three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>')
+    out.append('<section id="v3d-sec" class="cover"><h2>3D 模型 (可旋转)</h2>'
+               '<p class="cap">拖动旋转, 滚轮或双指缩放, 右键或双指拖动平移。滑块选到第几步, 就显示到那一步为止的零件, 这一步新加的零件会提亮。</p>'
+               '<div id="v3d" class="plate"><div id="v3d-status">正在加载 3D 模型 (约 0.6 MB)…</div></div>'
+               '<div class="v3d-bar"><input id="v3d-step" type="range" min="1" max="1" value="1" disabled aria-label="步骤">'
+               '<span id="v3d-label"></span><button id="v3d-fit" type="button">复位</button></div>'
+               f'<script>window.V3D_STEPS = {json.dumps([st["title"] for st in steps], ensure_ascii=False)};</script>'
+               '<script type="module" src="viewer.js"></script></section>')
+    out.append('<nav class="toc"><a href="#v3d-sec">3D 模型</a><a href="#eval">v2 评估</a><a href="#idea">设计思路</a><a href="#four">四臂检查</a>'
                '<a href="#buy">要买的零件</a><a href="#bom">零件清单</a>'
                + "".join(f'<a href="#s{k}">{k}. {esc(s["title"])}</a>' for k, s in enumerate(steps, 1))
                + '<a href="#checks">检查与待验证</a><a href="#safety">上电前</a></nav>')
@@ -292,20 +353,41 @@ def write_html(parts, step_new, keys, subs):
     out.append("</section>")
 
     out.append('<section id="buy" class="cover"><h2>要买的零件</h2>')
-    out.append('<div class="tbl"><table><tr><th>零件</th><th>编号</th><th>整机数量</th><th>说明</th></tr>'
-               "<tr><td>60 齿转盘 上半 + 下半</td><td>18938 + 18939</td><td>4 套</td><td>每只机械手 1 套; v2 已经买了 1 套的话再买 3 套</td></tr>"
-               "<tr><td>36 齿双面锥齿轮</td><td>32498</td><td>4</td><td>和转盘外圈啮合</td></tr>"
-               f"<tr><td>7x5 框架</td><td>64179</td><td>{byname['64179.dat']}</td><td>每个模块 5 块 (竖墙 3、推杆导向 1、平台前半 1); 底座和其余部分都是梁</td></tr>"
-               f"<tr><td>3x5 L 形粗梁</td><td>32526</td><td>{byname['32526.dat']}</td><td>机械头侧板每侧 2 根, 平台支腿每侧 1 根</td></tr>"
-               f"<tr><td>15 孔 / 11 孔 / 3 孔粗梁</td><td>32278 / 32525 / 32523</td><td>{byname['32278.dat']} / {byname['32525.dat']} / {byname['32523.dat']}</td><td>底座上层每条边 3 根 15 孔; 平台下的梁、支腿竖梁、马达前端的梁</td></tr>"
-               "<tr><td>十字轴接头 (带圆孔)</td><td>32039</td><td>4</td><td>夹爪的十字接头</td></tr>"
-               "<tr><td>十字块 1x2</td><td>6536</td><td>4</td><td>推杆上的十字块</td></tr>"
-               "<tr><td>2 孔细梁 (两端十字孔)</td><td>41677</td><td>4</td><td>舵机曲柄</td></tr>"
-               "<tr><td>无摩擦长销 / 无摩擦销</td><td>32556a / 3673</td><td>4 / 8</td><td>夹爪的活动关节</td></tr>"
-               f"<tr><td>摩擦销</td><td>2780</td><td>{byname['2780.dat']}</td><td>多买一些备用</td></tr>"
-               "<tr><td>EV3 大马达 / Geekservo 灰色</td><td>—</td><td>4 / 4</td><td>现在只有 2 个大马达, 还缺 2 个</td></tr>"
-               "</table></div>")
-    out.append('<p class="cap">可以先只搭一个模块 (底座只要它那一条边) 做单臂实测, 验证夹持和转速后再买齐四套。</p>')
+    # (名称, 编号, 零件文件 (数量从模型里数) 或固定数量, 说明)
+    buy = [("60 齿转盘 上半 + 下半 (套)", "18938 + 18939", "18938.dat", "每只机械手 1 套"),
+           ("36 齿双面锥齿轮", "32498", "32498.dat", "和转盘外圈啮合"),
+           ("7x11 框架", "39794", "39794.dat", "底座, 每个模块 1 块"),
+           ("7x5 框架", "64179", "64179.dat", "每个模块 5 块 (竖墙 3、推杆导向 1、平台前半 1)"),
+           ("3x5 L 形粗梁", "32526", "32526.dat", "机械头侧板每侧 2 根, 平台支腿每侧 1 根, 底座每个角 1 根"),
+           ("15 孔粗梁", "32278", "32278.dat", "平台下 2 根, 底座每个角 2 根"),
+           ("11 孔粗梁", "32525", "32525.dat", "支腿竖梁、马达前端"),
+           ("9 孔粗梁", "40490", "40490.dat", "马达尾脚、马达前端、机械头"),
+           ("7 孔粗梁", "32524", "32524.dat", "夹指"),
+           ("5 孔粗梁", "32316", "32316.dat", "舵机垫块、连杆、平台后端横撑"),
+           ("3 孔粗梁", "32523", "32523.dat", "马达颈部"),
+           ("摩擦销", "2780", "2780.dat", "多买一些备用"),
+           ("蓝色长摩擦销", "6558", "6558.dat", ""),
+           ("带挡套长销", "32054", "32054.dat", "转盘下半和马达耳朵"),
+           ("无摩擦销 / 无摩擦长销", "3673 / 32556a", None, "夹爪的活动关节: 8 / 4"),
+           ("2 号 / 5 号 / 7 号 / 12 号轴", "32062 / 32073 / 44294 / 3708", None, "8 / 8 / 4 / 4"),
+           ("轴套 / 半轴套", "3713 / 32123", None, "20 / 16"),
+           ("十字轴接头 (带圆孔) / 十字块 1x2 / 2 孔细梁", "32039 / 6536 / 41677", None, "各 4"),
+           ("EV3 大马达 / Geekservo 灰色", "—", None, "4 / 4; 现在只有 2 个大马达, 还缺 2 个")]
+    rows = []
+    for name, num, f, note in buy:
+        need = byname[f] if f else None
+        have = SET_45680.get(f, 0) if f else None
+        if f is None:
+            cells = ["—", "—", "—"]
+        else:
+            cells = [str(need), str(have) if have else "—", str(max(need - have, 0)) if need > have else "不用买"]
+        rows.append(f"<tr><td>{esc(name)}</td><td>{num}</td>" + "".join(f"<td>{c}</td>" for c in cells)
+                    + f"<td>{esc(note)}</td></tr>")
+    out.append('<div class="tbl"><table><tr><th>零件</th><th>编号</th><th>整机</th><th>45680 里有</th><th>还要买</th><th>说明</th></tr>'
+               + "".join(rows) + "</table></div>")
+    out.append('<p class="cap">"45680 里有" 按 Brickset 的 45680 (SPIKE Prime 扩展套装) 零件清单, 不分颜色; '
+               "最后几行 45680 里没有或数量对不上型号的, 按 \"说明\" 里的数量买。你手上其他零件没算进去。</p>")
+    out.append('<p class="cap">可以先只搭一个模块 (底座只要它那一块 7x11 框架) 做单臂实测, 验证夹持和转速后再买齐四套。</p>')
     out.append("</section>")
 
     out.append('<section id="bom" class="cover"><h2>零件清单 (整机)</h2>'
