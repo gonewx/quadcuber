@@ -292,7 +292,7 @@ def write_html(parts, step_new, keys, subs):
                "<tr><td>十字轴接头 (带圆孔)</td><td>32039</td><td>4</td><td>夹爪的十字接头</td></tr>"
                "<tr><td>十字块 1x2</td><td>6536</td><td>4</td><td>推杆上的十字块</td></tr>"
                "<tr><td>2 孔细梁 (两端十字孔)</td><td>41677</td><td>4</td><td>舵机曲柄</td></tr>"
-               "<tr><td>轴销 / 无摩擦长销 / 无摩擦销</td><td>3749 / 32556a / 3673</td><td>4 / 4 / 8</td><td>活动关节</td></tr>"
+               "<tr><td>无摩擦长销 / 无摩擦销</td><td>32556a / 3673</td><td>4 / 8</td><td>夹爪的活动关节</td></tr>"
                f"<tr><td>摩擦销</td><td>2780</td><td>{byname['2780.dat']}</td><td>多买一些备用</td></tr>"
                "<tr><td>EV3 大马达 / Geekservo 灰色</td><td>—</td><td>4 / 4</td><td>现在只有 2 个大马达, 还缺 2 个</td></tr>"
                "</table></div>")
@@ -323,7 +323,7 @@ def write_html(parts, step_new, keys, subs):
             chips.append(f'<div class="chip">{img(f"sub{subs.index(g)}.png", g, w=TW, h=TH)}'
                          f'<div class="x">1×</div><div class="n">做好的{esc(g)}</div></div>')
         if s["title"] == "装另外三个机械手":
-            chips.append('<div class="chip"><div class="x">3×</div><div class="n">照第 2~18 步做好的机械手模块</div></div>')
+            chips.append('<div class="chip"><div class="x">3×</div><div class="n">照第 2~19 步做好的机械手模块</div></div>')
             own = Counter()
         else:
             own = Counter(part_key(p) for p in new if p.step == k)
@@ -339,12 +339,15 @@ def write_html(parts, step_new, keys, subs):
     out.append('<div class="tbl"><table><tr><th>程序检查</th><th>结果</th></tr>'
                '<tr><td>单模块夹紧、松开, 以及夹指行程中间 7 个位置: 零件互相穿模</td><td class="ok">无</td></tr>'
                '<tr><td>整机: 每个销、轴都插在孔里且至少连接两个零件; 长销挡肩位置</td><td class="ok">通过</td></tr>'
+               '<tr><td>按搭建顺序模拟插销: 带挡环的销两侧零件能沿销轴压上去 (不会出现 "两头都要插、只能插进一半")</td>'
+               '<td class="ok">通过</td></tr>'
                '<tr><td>四臂转动干涉 (上一节)</td><td class="ok">只有 "相邻两只同时水平", 已写进规划器约束</td></tr>'
                "</table></div>")
     out.append('<div class="tbl"><table><tr><th>待实物验证 (模型保证不了)</th><th>怎么看</th></tr>'
                "<tr><td>夹指预紧</td><td>死点位置按 56mm 魔方算, 实际魔方尺寸有误差。建议在两片夹指前端之间套一根橡皮筋, 或在夹指内侧贴一层薄橡胶, "
                "让死点时有一点压紧量。夹紧后用手扭魔方外层, 看夹指是否打滑</td></tr>"
                "<tr><td>舵机死点标定</td><td>装曲柄前先把舵机转到 \"夹紧\" 角度; 装好后微调角度, 让曲柄和连杆正好拉直 (过死点一点点更好, 需加限位)</td></tr>"
+               "<tr><td>转盘下半卡在框架开口里</td><td>按零件尺寸凸台正好是 5x3 孔大小; 如果实物偏松, 在凸台和框架之间垫一层胶带, 或在凸台两头的孔里各插一根 2 号轴 (没有挡环, 可以从框架外面推进去) 加固</td></tr>"
                "<tr><td>马达前板的销孔</td><td>模型假设马达靠近输出盘的侧面两个孔可以插摩擦销; 如果不是通孔或深度不够, 改用 TRACK3R 的耳朵固定加一根竖梁</td></tr>"
                "<tr><td>齿轮啮合和回差</td><td>36 齿和 60 齿转盘外圈中心距 3 个孔 (官方组合); 手转机械手应顺滑, 马达锁住时晃动机械手看回差</td></tr>"
                "<tr><td>舵机平台刚度</td><td>平台前端接墙、后端支腿立在桌上; 舵机开合时看平台是否弹动, 必要时后端支腿和底座之间加连接</td></tr>"

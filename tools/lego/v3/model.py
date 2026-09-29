@@ -281,7 +281,7 @@ def module(open_s=0.0, angle=0.0, steps=True, on_base=False):
         return p
 
     # ================= 1. 竖墙 (转盘支座) =================
-    # 三块 7x5 框架竖着上下拼成 7x15 的墙, 和转盘下半的耳朵共面 (官方 42082 / 42100 的做法)。
+    # 三块 7x5 框架竖着上下拼成 7x15 的墙。转盘下半底部的长方形凸台 (5x3 孔大小) 正好卡在最上面那块框架的开口里。
     s = st("竖墙", "三块 7x5 框架竖着上下对齐, 相邻长边各用 3 个摩擦销穿侧孔连起来, 拼成一面 7x15 的墙。",
            sub="竖墙", view=(60, 20))
     for yc in (0, 100, 200):
@@ -289,15 +289,18 @@ def module(open_s=0.0, angle=0.0, steps=True, on_base=False):
     for y in (50, 150):
         for z in (-40, 0, 40):
             add("2780.dat", C_PIN, (WALL_X, y, z), ALONG_Y, s)
-    s = st("转盘下半", "60 齿转盘的下半 (没有齿) 放进最上面那块框架的开口, 两侧耳朵对准框架的两条短边。"
-           "每侧 3 个摩擦销从外面沿短边侧孔插进耳朵 (官方 42082 / 42100 固定转盘的做法)。", sub="竖墙", view=(60, 20))
+    # 凸台两头的销孔不用: 框架把凸台四面围住, 摩擦销中间有挡环, 从外面只能插进一半 (用户实物反馈, 2026-09-29)。
+    # 凸台卡在开口里, 上下左右和转动都被框架挡住; 圆盘的边沿贴住框架正面, 背面用两根 7 孔粗梁压住, 前后也固定了。
+    s = st("转盘下半", "60 齿转盘的下半 (没有齿): 底部的长方形凸台从正面 (朝魔方的一面) 塞进最上面那块框架的开口, "
+           "长边沿框架的长边, 圆盘的边沿贴住框架正面。凸台两头的销孔不用插销。", sub="竖墙", view=(60, 20))
     add("18939.dat", C_TT, TT_C, TT_ROT, s)
+    s = st("压住转盘", "在墙的背面, 两根 5 孔粗梁竖着贴在转盘凸台背面, 推杆位置左右各一根 (中间留出推杆)。"
+           "每根两端各用 1 个摩擦销插进框架长边上的正面孔: 先把销插进框架, 再把梁压上去。转盘下半这样就前后都卡住了。",
+           sub="竖墙", view=(240, 20))
     for sz in (1, -1):
-        for y in (-20, 0, 20):
-            add("2780.dat", C_PIN, (WALL_X, y, 50 * sz), ALONG_Z, s)
-    s = st("转盘上半", "60 齿转盘的上半 (有齿) 扣在下半上, 有齿的一面朝魔方。转到两只耳朵和下半的耳朵对齐 "
-           "(一左一右, 耳朵上的销孔水平)。", sub="竖墙", view=(60, 25))
-    head_tt = add("18938.dat", C_TT, TT_C, TT_ROT, s, head=True)
+        add("32316.dat", C_BEAM, (WALL_X - 20, 0, 20 * sz), orient("+z", "+x", "+y"), s)
+        for sy in (1, -1):
+            add("2780.dat", C_PIN, (WALL_X - 10, 40 * sy, 20 * sz), ALONG_X, s)
 
     # ================= 2. 马达 =================
     # 马达偏在 -Z 一侧, 输出轴和转盘轴线相距 120 (= 36 齿和 60 齿的节圆半径之和), 本体朝下。
@@ -377,14 +380,15 @@ def module(open_s=0.0, angle=0.0, steps=True, on_base=False):
     s = st("十字块和舵机连杆", "十字块 (圆孔在上) 两边各贴一个半轴套, 放进导向框架的开口里, 圆孔对准两个轴承孔 "
            "(推杆最后从前面穿进来)。2 号轴插进十字块下面的十字孔, 黄色 5 孔连杆的一端套在 2 号轴上。"
            "先让舵机转到 \"夹紧\" 角度, 再把曲柄 (2 孔细梁) 的十字孔套到舵机输出轴上, 让曲柄指向十字块、和连杆拉成一条直线 "
-           "(死点); 最后用轴销把连杆另一端接到曲柄上。", view=(30, 30))
+           "(死点); 最后用一根 2 号轴穿过连杆另一端的圆孔, 插进曲柄另一头的十字孔。", view=(30, 30))
     add("6536.dat", C_BEAM, (bx, BLOCK_Y, 0), BLOCK_ROT, s)
     for dx in (-15, 15):
         add("32123a.dat", C_BUSH, (bx + dx, 0, 0), BUSH_X, s)
     add("32062.dat", C_AXLE, (bx, BLOCK_Y, 10), ALONG_Z, s)
     cdir = np.array([math.cos(th), math.sin(th), 0.0])
     add("41677.dat", C_BEAM, (CRANK_C[0], CRANK_C[1], 35), orient(np.cross([0, 0, 1.0], cdir), "+z", cdir), s)
-    add("3749.dat", C_TPIN, (crank_pin[0], crank_pin[1], 20), orient("+z", "+y"), s)
+    # 曲柄 (十字孔) 和连杆 (圆孔) 之间用 2 号轴: 轴卡在曲柄里, 连杆绕轴转
+    add("32062.dat", C_AXLE, (crank_pin[0], crank_pin[1], 20), ALONG_Z, s)
     e = np.array([crank_pin[0] - bx, crank_pin[1] - BLOCK_Y, 0.0])
     e /= np.linalg.norm(e)
     mid = (np.array([bx, BLOCK_Y]) + crank_pin) / 2
@@ -400,14 +404,22 @@ def module(open_s=0.0, angle=0.0, steps=True, on_base=False):
         head.append(p)
         return p
 
-    head.append(head_tt)
+    # 转盘上半是机械头的底座: 先把销插进它两头的孔, 再从两侧把侧板压上去 (侧板装上以后两块就连成一体了, 那时再插不进去)
     s = st("侧板与夹指架", "两块 7x5 框架竖放 (5 孔方向沿推杆), 各在内侧贴一根 9 孔粗梁 (竖直), 每根用 4 个摩擦销连起来。"
-           "粗梁贴在框架靠魔方的那条短边上, 它上下两端的孔就是夹指的转轴孔。", sub="机械头", view=(40, 25))
+           "粗梁贴在框架靠魔方的那条短边上, 它上下两端的孔就是夹指的转轴孔。这样做两套, 左右对称。",
+           sub="机械头", view=(40, 25))
     for sz in (1, -1):
         hadd("64179.dat", C_FRAME, (-170, 0, 60 * sz), FRAME_XY_LONG_Y_5X, s)
         hadd("40490.dat", C_BEAM, (PIVOT_X, 0, 40 * sz), BEAM_Y_HOLES_Z, s)
         for y in (-60, -20, 20, 60):
             hadd("2780.dat", C_PIN, (PIVOT_X, y, 50 * sz), ALONG_Z, s)
+    s = st("转盘上半", "60 齿转盘的上半 (有齿): 先在底部凸台两头各插 2 个摩擦销 (上下两个孔, 挡环贴住凸台端面), "
+           "有齿的一面朝后。再把两套侧板从左右两边压到销上, 侧板后端的孔对准销, 粗梁在内侧朝魔方。",
+           sub="机械头", view=(40, 25))
+    hadd("18938.dat", C_TT, TT_C, TT_ROT, s)
+    for sz in (1, -1):
+        for y in (-20, 20):
+            hadd("2780.dat", C_PIN, (-210, y, 50 * sz), ALONG_Z, s)
     s = st("夹指", "两根红色 7 孔粗梁当夹指, 一上一下。每根从前数第 5 个孔套在一根 5 号轴上, "
            "5 号轴两端穿过两根 9 孔粗梁最外面的孔, 夹指两侧各套一个轴套定位。夹指应能绕 5 号轴自由摆动。",
            sub="机械头", view=(40, 25))
@@ -435,12 +447,9 @@ def module(open_s=0.0, angle=0.0, steps=True, on_base=False):
     s = st("推杆", "12 号轴插进十字接头后端的十字孔。", sub="机械头", view=(40, 25))
     rod_front = xc - 30 + ROD_FRONT_IN
     hadd("3708.dat", C_ROD, (rod_front - 120, 0, 0), ALONG_X, s)
-    s = st("装机械头", "推杆从转盘上半的中孔往后穿, 依次穿过导向框架前面的轴承孔、半轴套、十字块、半轴套、后面的轴承孔。"
-           "两块侧板后端的孔对准转盘上半的两只耳朵, 每侧 2 个摩擦销固定。最后把两个半轴套推到贴住十字块, "
-           "让十字块和推杆一起前后移动。", attach=("机械头",), view=(40, 25), focus="module")
-    for sz in (1, -1):
-        for y in (-20, 20):
-            hadd("2780.dat", C_PIN, (-210, y, 50 * sz), ALONG_Z, s)
+    st("装机械头", "推杆从转盘下半的中孔往后穿, 依次穿过导向框架前面的轴承孔、半轴套、十字块、半轴套、后面的轴承孔。"
+       "转盘上半对准下半扣上 (两半本身卡在一起, 不用销)。最后把两个半轴套推到贴住十字块, "
+       "让十字块和推杆一起前后移动。", attach=("机械头",), view=(40, 25), focus="module")
 
     if angle:
         R = rot_x(angle)
@@ -460,8 +469,9 @@ BASE_CZ = (-100.0, 0.0, 100.0, 200.0)
 BASE_Y = TABLE_Y - 10
 
 
-def base_blade(s):
-    """L 一侧的一排 (世界坐标, 其余三排由它转出)。"""
+def base_blade(s, seam=True):
+    """L 一侧的一排 (世界坐标, 其余三排由它转出)。seam=False: 不插和下一排之间的销。
+    四排围成一圈, 最后一条缝的两边已经分别连在别的排上, 两组销方向垂直, 带挡环的销插不进去, 所以最后一条缝不插销。"""
     out = []
     for cz in BASE_CZ:
         out.append(Part("64179.dat", C_BASE, (BASE_CX, BASE_Y, cz), FRAME_XZ_LONG_X, s))
@@ -469,8 +479,9 @@ def base_blade(s):
         for dx in (-40, 0, 40):
             out.append(Part("2780.dat", C_PIN, (BASE_CX + dx, BASE_Y, cz + 50), ALONG_Z, s))
     # 和下一排 (F 一侧) 的接缝: 本排最后一块的短边 (x = -150) 对下一排第一块的长边
-    for z in (180, 220):
-        out.append(Part("2780.dat", C_PIN, (BASE_CX + 70, BASE_Y, z), ALONG_X, s))
+    if seam:
+        for z in (180, 220):
+            out.append(Part("2780.dat", C_PIN, (BASE_CX + 70, BASE_Y, z), ALONG_X, s))
     return out
 
 
@@ -482,9 +493,9 @@ def build(state=None, with_cube=True):
     parts = []
     s = step("底座", "16 块 7x5 框架平放, 拼成风车形的方框: 每一排 4 块长边对长边, 每条缝 3 个摩擦销; "
              "一排的最后一块用短边顶住下一排第一块的长边, 2 个摩擦销。四排绕中心转 90° 首尾相接, 中间留出放魔方的空间。"
-             "", sub="底座", view=(35, 60))
+             "最后合拢的那条缝不插销 (两边已经各自连成一体, 销插不进去), 只是顶住; 其余三条缝已经让底座连成一个整体。", sub="底座", view=(35, 60))
     for arm in ARMS:
-        for p in base_blade(s):
+        for p in base_blade(s, seam=(arm != ARMS[-1])):
             parts.append(p.moved(ARM_ROT[arm]))
     rest = []
     order = ["L"] + [a for a in ARMS if a != "L"]

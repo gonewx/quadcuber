@@ -46,6 +46,91 @@ def _allowed(a, b):
 
 check._allowed = _allowed
 
+# 销中间的挡环 (销局部 x): 挡环过不了孔, 所以销只能先插进一边的零件, 再把另一边的零件沿销轴压上去。
+COLLAR = {"2780.dat": 0.0, "3673.dat": 0.0, "3749.dat": 0.0, "6558.dat": -10.0, "32556a.dat": -10.0}
+
+
+def collar_pins(parts):
+    """按搭建步骤模拟装配, 检查带挡环的销能不能装上。返回问题列表。
+
+    两组已经各自连成一体的零件, 用带挡环的销连接时, 只能沿销轴把一组压到另一组上。
+    所以两组之间的全部销必须同轴向、同方向 (从 A 组指向 B 组); 否则 (比如一个零件夹在同一个零件的
+    两条边之间、两头都要插销) 从外面插, 销只能进一半, 装不上。
+    同一步骤里的零件按能装的顺序尝试 (贪心): 先合并方向一致的组, 最后剩下的就是装不上的。
+    轴没有挡环, 可以事后穿进去, 不参与方向判断。
+    """
+    solids = [p for p in parts if p.kind == "solid"]
+    boxes = {id(p): check._obb(p) for p in solids}
+    root = {}
+
+    def find(x):
+        while root.get(x, x) != x:
+            x = root[x]
+        return x
+
+    def union(a, b):
+        root[find(a)] = find(b)
+
+    problems = []
+    info = []  # (步骤, 销, [(A 侧零件)], [(B 侧零件)])
+    axles = []
+    for c in parts:
+        if c.kind not in ("pin", "axle"):
+            continue
+        layers = check._pin_layers(c, solids, None, boxes)
+        if c.name in COLLAR:
+            k = COLLAR[c.name]
+            a = [s for s, lo, hi in layers if hi <= k + 0.5]
+            b = [s for s, lo, hi in layers if lo >= k - 0.5]
+            mid = [s for s, lo, hi in layers if lo < k - 0.5 and hi > k + 0.5]
+            if mid:
+                problems.append(f"{check.CATALOG_NAME(c)} @ {np.round(c.pos, 1).tolist()}: 挡环落在 "
+                                f"{check.CATALOG_NAME(mid[0])} 的孔中间")
+                continue
+            info.append((c.step, c, a, b))
+        else:
+            axles.append((c.step, [s for s, _, _ in layers]))
+    for step in sorted({i[0] for i in info} | {a[0] for a in axles}):
+        todo = [i for i in info if i[0] == step and i[2] and i[3]]
+        while todo:
+            pairs = {}
+            for st, c, a, b in todo:
+                ga, gb = find(id(a[0])), find(id(b[0]))
+                for s in a[1:] + b[1:]:
+                    pass
+                if ga == gb:
+                    continue
+                u = c.rot[:, 0]
+                key, d = ((ga, gb), u) if ga < gb else ((gb, ga), -u)
+                pairs.setdefault(key, []).append((d, c))
+            todo = [i for i in todo if find(id(i[2][0])) != find(id(i[3][0]))]
+            if not pairs:
+                break
+            ok = [k for k, v in pairs.items() if all(np.allclose(d, v[0][0]) for d, _ in v)]
+            if ok:
+                union(*ok[0])
+                continue
+            for k, v in pairs.items():
+                dirs = sorted({tuple(np.round(d, 2)) for d, _ in v})
+                c = v[0][1]
+                problems.append(f"{check.CATALOG_NAME(c)} @ {np.round(c.pos, 1).tolist()} 等 {len(v)} 个销: "
+                                f"两组零件之间的销方向不一致 {dirs}, 只能从外面插, 挡环挡住插不到位")
+                union(*k)
+        # 同一个销两侧各自的多层, 以及轴, 在这一步结束时并进去
+        for st, c, a, b in info:
+            if st == step:
+                for s in a[1:]:
+                    union(id(s), id(a[0]))
+                for s in b[1:]:
+                    union(id(s), id(b[0]))
+                if a and b:
+                    union(id(a[0]), id(b[0]))
+        for st, ss in axles:
+            if st == step:
+                for s in ss[1:]:
+                    union(id(s), id(ss[0]))
+    return problems
+
 
 def report(parts, label):
     n = 0
@@ -59,6 +144,9 @@ def report(parts, label):
     for p in check.long_pins(parts):
         n += 1
         print(f"[{label}] 长销: {p}")
+    for p in collar_pins(parts):
+        n += 1
+        print(f"[{label}] 插销: {p}")
     return n
 
 
