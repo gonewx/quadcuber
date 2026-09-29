@@ -180,6 +180,27 @@ def collar_pins(parts):
     return problems
 
 
+def shared_holes(parts):
+    """两个销/轴插在同一个孔里、长度上重叠 (比如底座梁的销已经占满大框的竖孔, 后面的步骤又要往这个孔里插销;
+    2026-09-29 用户第 8 步实物发现)。碰撞检查不管销和销之间, 所以单独查: 轴线重合且重叠超过 2 LDU 就报。"""
+    cs = [c for c in parts if c.name in check.CONNECTOR_LEN]
+    problems = []
+    for i, a in enumerate(cs):
+        ax = a.rot[:, 0]
+        La = check.CONNECTOR_LEN[a.name]
+        for b in cs[i + 1:]:
+            bx = b.rot[:, 0]
+            if abs(abs(ax @ bx) - 1) > 1e-3 or np.linalg.norm(np.cross(b.pos - a.pos, ax)) > 1.5:
+                continue
+            Lb = check.CONNECTOR_LEN[b.name]
+            t = (b.pos - a.pos) @ ax
+            overlap = min(La / 2, t + Lb / 2) - max(-La / 2, t - Lb / 2)
+            if overlap > 2:
+                problems.append(f"{check.CATALOG_NAME(a)} {a.pos.round(1).tolist()} 和 "
+                                f"{check.CATALOG_NAME(b)} {b.pos.round(1).tolist()} 在同一个孔里重叠 {overlap:.0f} LDU")
+    return problems
+
+
 def report(parts, label):
     n = 0
     for a, b, k in check.collisions(parts):
@@ -201,6 +222,9 @@ def report(parts, label):
     for p in pins_in_axle_holes(parts):
         n += 1
         print(f"[{label}] 十字孔: {p}")
+    for p in shared_holes(parts):
+        n += 1
+        print(f"[{label}] 同孔: {p}")
     return n
 
 
