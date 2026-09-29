@@ -11,6 +11,7 @@ import importlib.util
 import json
 import math
 import os
+import shutil
 import subprocess
 import sys
 from collections import Counter, OrderedDict
@@ -168,6 +169,11 @@ def main(render=True):
     write(os.path.join(OUT, "model.mpd"), pack_mpd(parts, len(steps)))
     with open(os.path.join(HERE, "viewer.js"), encoding="utf-8") as f:
         write(os.path.join(OUT, "viewer.js"), f.read())
+    # three.js 0.170.0 (MIT) 从渲染用的 node_modules 复制到说明书目录, 页面本地加载
+    three = os.path.join(HERE, "..", "render", "node_modules", "three")
+    for src, dst in THREE_FILES:
+        os.makedirs(os.path.dirname(os.path.join(OUT, "three", dst)), exist_ok=True)
+        shutil.copyfile(os.path.join(three, src), os.path.join(OUT, "three", dst))
     write_html(parts, step_new, keys, list(subs))
 
 
@@ -206,6 +212,12 @@ def pack_mpd(parts, n_steps):
 
 
 # ---- HTML ----------------------------------------------------------------------
+
+# 3D 模型用到的 three.js 文件 (node_modules 里的路径, 说明书目录 three/ 下的路径)
+THREE_FILES = [("build/three.module.min.js", "three.module.min.js"), ("LICENSE", "LICENSE"),
+               ("examples/jsm/controls/OrbitControls.js", "addons/controls/OrbitControls.js"),
+               ("examples/jsm/loaders/LDrawLoader.js", "addons/loaders/LDrawLoader.js"),
+               ("examples/jsm/materials/LDrawConditionalLineMaterial.js", "addons/materials/LDrawConditionalLineMaterial.js")]
 
 # SPIKE Prime 扩展套装 45680 的零件数 (Brickset 清单, 2026-09-29 查; 同一型号不同颜色合并)。
 # 15x11 大框 Brickset 写 2 块, 用户实际有 4 块, 按用户的算
@@ -279,9 +291,8 @@ def write_html(parts, step_new, keys, subs):
                '<div class="fact"><b>约 52 mm</b><span>转动部分长度 (v2 约 144mm)</span></div>'
                '<div class="fact"><b>无限</b><span>机械手旋转范围 (舵机不跟着转)</span></div>'
                "</div>")
-    # 可旋转的 3D 模型 (viewer.js + model.mpd, three.js 从 jsDelivr 加载)
-    out.append('<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",'
-               '"three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>')
+    # 可旋转的 3D 模型 (viewer.js + model.mpd + 本地的 three.js, 不需要联网拉脚本)
+    out.append('<script type="importmap">{"imports":{"three":"./three/three.module.min.js","three/addons/":"./three/addons/"}}</script>')
     out.append('<section id="v3d-sec" class="cover"><h2>3D 模型 (可旋转)</h2>'
                '<p class="cap">拖动旋转, 滚轮或双指缩放, 右键或双指拖动平移。滑块选到第几步, 就显示到那一步为止的零件, 这一步新加的零件会提亮。</p>'
                '<div id="v3d" class="plate"><div id="v3d-status">正在加载 3D 模型 (约 0.6 MB)…</div></div>'
