@@ -183,22 +183,26 @@ def collar_pins(parts):
 def shared_holes(parts):
     """两个销/轴插在同一个孔里、长度上重叠 (比如底座梁的销已经占满大框的竖孔, 后面的步骤又要往这个孔里插销;
     2026-09-29 用户第 8 步实物发现)。碰撞检查不管销和销之间, 所以单独查: 轴线重合且重叠超过 2 LDU 就报。"""
-    cs = [c for c in parts if c.name in check.CONNECTOR_LEN]
+    # (名字, 中心, 轴线, 长度); 零件自带的销 (55615 的 4 个销) 也算进来 (2026-09-30 用户发现 55615 的销插进了垫块销占着的孔)
+    cs = [(check.CATALOG_NAME(c), c.pos, c.rot[:, 0], check.CONNECTOR_LEN[c.name]) for c in parts if c.name in check.CONNECTOR_LEN]
+    for c in parts:
+        for (cpt, cax) in BUILTIN_PINS.get(c.name, ()):
+            cs.append((check.CATALOG_NAME(c) + " 自带的销", c.world(cpt), c.rot @ np.array(cax, float), 20.0))
     problems = []
-    for i, a in enumerate(cs):
-        ax = a.rot[:, 0]
-        La = check.CONNECTOR_LEN[a.name]
-        for b in cs[i + 1:]:
-            bx = b.rot[:, 0]
-            if abs(abs(ax @ bx) - 1) > 1e-3 or np.linalg.norm(np.cross(b.pos - a.pos, ax)) > 1.5:
+    for i, (na, pa, ax, La) in enumerate(cs):
+        for (nb, pb, bx, Lb) in cs[i + 1:]:
+            if abs(abs(ax @ bx) - 1) > 1e-3 or np.linalg.norm(np.cross(pb - pa, ax)) > 1.5:
                 continue
-            Lb = check.CONNECTOR_LEN[b.name]
-            t = (b.pos - a.pos) @ ax
+            t = (pb - pa) @ ax
             overlap = min(La / 2, t + Lb / 2) - max(-La / 2, t - Lb / 2)
             if overlap > 2:
-                problems.append(f"{check.CATALOG_NAME(a)} {a.pos.round(1).tolist()} 和 "
-                                f"{check.CATALOG_NAME(b)} {b.pos.round(1).tolist()} 在同一个孔里重叠 {overlap:.0f} LDU")
+                problems.append(f"{na} {np.round(pa, 1).tolist()} 和 {nb} {np.round(pb, 1).tolist()} 在同一个孔里重叠 {overlap:.0f} LDU")
     return problems
+
+
+# 零件自带的销: 零件局部坐标里销段的中点和轴线 (销长 20)。55615 的销从本体表面伸出 1 孔 (LDraw 55615.dat 的 connect7 位置)。
+BUILTIN_PINS = {"55615.dat": [((0, 0, -20), (0, 0, 1)), ((0, -40, -20), (0, 0, 1)),
+                              ((0, 20, 0), (0, 1, 0)), ((0, 20, 40), (0, 1, 0))]}
 
 
 def report(parts, label):
