@@ -110,7 +110,8 @@ class ArmTestCommands(unittest.TestCase):
     def test_speed_and_friction(self):
         out = self.run_cmd("speed")
         r = self.results(out, "speed")[0]
-        self.assertAlmostEqual(r["v_ss"], 920, delta=30)  # 模型: 1000 * (1 - 0.08)
+        # 模型马达: 1000 * (1 - 0.08) 度/秒; 结果按机械手换算, 要除以齿轮比
+        self.assertAlmostEqual(r["v_ss"], 920 / self.at.config.GEAR_RATIO, delta=30 / self.at.config.GEAR_RATIO)
         self.assertAlmostEqual(r["tau"], 0.05, delta=0.015)
         out = self.run_cmd("friction")
         r = self.results(out, "friction")[0]
