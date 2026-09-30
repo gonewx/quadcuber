@@ -17,8 +17,8 @@ ENC_SM = (0, 1)  # 编码器占用的两个 PIO 状态机 (0~3 在 PIO0, 4~7 在
 # 正方向: 从机械手后面 (舵机那头) 朝魔方看, 机械头顺时针 (和规划器 quadcuber/machine.py 的约定一致)。
 # 1) check: 正占空比应让编码器读数增加, 不一致时把 ENC_INVERT 改成相反的值;
 # 2) duty 0.3 500: 机械头应顺时针转, 反了就把两个都改成相反的值。齿轮会反向, 只看机械头, 不看马达。
-MOTOR_INVERT = False
-ENC_INVERT = False
+MOTOR_INVERT = True
+ENC_INVERT = True
 # 编码器经电阻分压 (10k 串联 + 20k 下拉) 接入; 内部上拉会抬高分压点, 必须保持 False。见 docs/single_arm.md 第 3 节。
 ENC_PULLUP = False
 

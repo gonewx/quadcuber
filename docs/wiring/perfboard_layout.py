@@ -5,6 +5,7 @@ DRV8833 引脚由用户实物丝印确认；模块机械排距暂按10.16mm。
 """
 from html import escape
 from pathlib import Path
+from spec import DRV_LEFT, DRV_RIGHT
 
 COLS, ROWS, PITCH = 32, 24, 28
 OX, OY = 96, 104
@@ -16,8 +17,8 @@ TERMINALS = [
     ('J1', '开关后 9V 输入', [(3, 3), (5, 3)], ['+9V', 'GND'], 'top'),
     ('J4', 'EV3 马达 1 / 2 脚', [(3, 22), (5, 22)], ['M1', 'M2'], 'bottom'),
 ]
-LEFT = ['VM', 'NC', 'GND', 'AO1', 'AO2', 'BO2', 'BO1', 'GND']
-RIGHT = ['NC', 'AIN2', 'AIN1', 'STBY', 'BIN1', 'BIN2', 'NC', 'GND']
+LEFT = DRV_LEFT
+RIGHT = DRV_RIGHT
 HEADERS = [
     ('J5', 'male', [(23,22),(24,22),(25,22)], ['GND','+5V','SIG'], '接舵机三孔母头'),
     ('J6', 'female', [(15,22),(16,22)], ['+5V','GND'], '接面包板公头线'),

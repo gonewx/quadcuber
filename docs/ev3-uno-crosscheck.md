@@ -1,5 +1,7 @@
 # 用 Uno 和 Bricktronics Motor Driver 交叉检查编码器
 
+> 独立排障工具：用于 Uno＋Bricktronics 测试台，不属于当前 Pico 接线方案。当前接线及实测状态见[电路总览](wiring/README.md)。
+
 适用器材：5V Arduino Uno、带两个 LEGO 插座及 EN/DIR/PWM/T1/T2 标识的 Bricktronics Motor Driver、一只 EV3 大马达、一只中马达、至少两根完整 EV3 线。
 
 目标：用同一测试台对比马达、线缆及接口。只检查编码器供电、信号和正交顺序，不检查电机带载能力或闭环性能。两只未知状态的马达都失败时，不能直接断定两只都损坏。

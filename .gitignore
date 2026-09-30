@@ -5,3 +5,4 @@ build/
 dist/
 tools/lego/.cache/
 tools/lego/render/node_modules/
+arm.log

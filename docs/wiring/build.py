@@ -8,11 +8,14 @@
 """
 
 import html
-import os
+import argparse
+from pathlib import Path
+from tempfile import TemporaryDirectory
+import spec
 import perfboard_layout
 import direct_wiring
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = Path(__file__).resolve().parent
 
 # ---- 通用绘图 -------------------------------------------------------------------
 
@@ -656,11 +659,13 @@ def perfboard_page():
 
 def page():
     esc = html.escape
-    out = ['<title>quadcuber 单臂接线</title>',
+    out = ['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">',
+           '<meta name="viewport" content="width=device-width, initial-scale=1">',
+           '<title>quadcuber 单臂接线</title>',
            '<link rel="preconnect" href="https://fonts.googleapis.com">',
            '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600'
            '&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap">',
-           f"<style>{CSS}</style>", '<div class="wrap">']
+           f"<style>{CSS}</style></head><body>", '<div class="wrap">']
     out.append('<header style="display:flex;flex-direction:column;gap:10px">'
                '<div class="eyebrow">quadcuber · 单臂原型 · 接线指南</div>'
                '<h1>把机械手接到 Pico 上</h1>'
@@ -668,7 +673,7 @@ def page():
                '引脚按 <span class="mono">firmware/pico/config.py</span> 的 R 臂分配, 接完按 '
                '<span class="mono">docs/single_arm.md</span> 第 4、5 节刷程序和测试。</p>'
                '<p><a href="direct-breadboard.html">当前调试：面包板＋动力直连（无洞洞板）</a> · '
-               '<a href="#perfboard">洞洞板布局与端子表</a> · <a href="#breadboard">原面包板接线</a></p></header>')
+               '<a href="README.md">电路总览与验证状态</a> · <a href="#perfboard">可选洞洞板</a> · <a href="#breadboard">洞洞板配套面包板</a></p></header>')
     out.append('<div class="warn"><b>2026-09-27 更新：编码器改用电阻分压, 不再用电平转换模块。</b>'
                'BSS138 模块与 EV3 马达内部的串联电阻不匹配, 低电平降不下来。'
                '原因和测量依据见 <a href="../ev3-interface-verification.md">接口复核报告</a>。</div>')
@@ -704,7 +709,7 @@ def page():
 
     rows = "".join(f"<tr><td>{a}</td><td class=\"mono\">{b}</td><td>{c}</td></tr>" for a, b, c in BB_TABLE)
     out.append(perfboard_section())
-    out.append('<section id="breadboard"><h2>面包板怎么插</h2>'
+    out.append('<section id="breadboard"><h2>可选洞洞板配套：面包板怎么插</h2>'
                '<p>与洞洞板之间的 6 根线见 <a href="perfboard.html#bridge">④ 两板实际连接图</a>。下图的板内跳线保留，板外接线经 J6/J7 插座。</p>'
                '<p>信号线走面包板; 大电流的线 (9V、马达线、舵机电源) 不走面包板, 直接连。'
                '孔的坐标写法: 字母是行, 数字是列, 例如 <span class="mono">a5</span> 是 a 行第 5 列。</p>'
@@ -721,12 +726,8 @@ def page():
     out.append('<section><h2>Pico 引脚</h2><figure><div class="scroll">' + pinout_svg() + "</div>"
                "<figcaption>从正面 (有 RP2040 芯片的一面) 看, USB 口朝上, 左上角是 1 号脚。彩色的是单臂原型要接的脚; "
                "GP0/GP1 以后接 Zero W 的串口, 现在空着。</figcaption></figure>"
-               '<details class="card"><summary>四个机械手的完整引脚分配</summary><div class="tbl" style="margin-top:10px"><table>'
-               "<tr><th>用途</th><th>R 臂</th><th>L 臂</th><th>F 臂</th><th>B 臂</th></tr>"
-               "<tr><td>马达 IN1 / IN2</td><td>GP2 / GP3</td><td>GP6 / GP7</td><td>GP10 / GP11</td><td>GP14 / GP15</td></tr>"
-               "<tr><td>编码器 A / B</td><td>GP4 / GP5</td><td>GP12 / GP13</td><td>GP16 / GP17</td><td>GP18 / GP19</td></tr>"
-               "<tr><td>舵机</td><td>GP8</td><td>GP9</td><td>GP20</td><td>GP21</td></tr>"
-               "</table></div></details></section>")
+               '<details class="card"><summary>四个机械手的完整引脚分配</summary><div class="tbl" style="margin-top:10px">'
+               + spec.pin_table_html() + "</div></details></section>")
 
     ev3 = [("#f4f4f4", "1", "白", "马达 M1", "DRV8833 AOUT1"), ("#222", "2", "黑", "马达 M2", "DRV8833 AOUT2"),
            ("#d9282f", "3", "红", "地 GND", "公共地"), ("#2f9e44", "4", "绿", "编码器电源", "5V"),
@@ -741,7 +742,7 @@ def page():
     out.append('<section><h2>编码器为什么用分压</h2>'
                '<p>LEGO 官方电路: EV3 马达里两路编码器都是推挽输出 0V/5V, 各经一个串联电阻到插头 (蓝线 3.3kΩ; '
                '黄线的电阻兼作型号识别, 大马达 3.3kΩ、中马达 6.8kΩ)。加上外接的 10kΩ 和 20kΩ, 高电平约 3.0V (中马达黄线约 2.7V), '
-               '低电平约 0V, Pico 读得很可靠。</p>'
+               '低电平约 0V；已有大马达空载计数和闭环记录，装机后仍需验收。</p>'
                '<p>BSS138 电平转换模块的上拉会和马达内部电阻分压, 低电平只能降到约 1.65V (实测 1.60~1.64V), 不能用; '
                'TXS0108E 要求信号源内阻很低, 也不能用。'
                '<a href="../ev3-interface-verification.md">详细依据</a>。</p></section>')
@@ -752,32 +753,72 @@ def page():
               ("5V 与 GND 之间", "断电, 电阻档", "不能是 0Ω"),
               ("各模块的 GND 之间", "断电, 蜂鸣档", "全部相通"),
               ("EV3 线 1、2 脚之间", "断电, 电阻档", "几欧到十几欧 (马达线圈)"),
-              ("DRV8833 nSLEEP 对地", "通电后, 直流电压档", "约 3.3V 或 5V (高电平)"),
+              ("DRV8833 nSLEEP 对地", "通电后, 直流电压档", "约 3.3V（本项目固定接 Pico 3V3）"),
               ("分压点 (第 26、28 列) 对地", "通电后、先不接 GP4/GP5 跳线, 手转马达, 每次转一点停下读", "在约 0V 和 3V 之间跳变, 任何时候不超过 3.3V")]
     rows = "".join(f"<tr><td>{a}</td><td>{b}</td><td>{c}</td></tr>" for a, b, c in checks)
     out.append('<section><h2>上电前用万用表检查</h2><div class="tbl"><table>'
                "<tr><th>测什么</th><th>怎么测</th><th>应该是</th></tr>" + rows + "</table></div></section>")
 
-    out.append('<section><h2>第一次上电的顺序</h2><ol class="flow">'
+    out.append('<section><h2>完整接线后的上电与分项测试</h2>'
+               '<p>马达、编码器和舵机可一次接齐。当前直连方案先按 '
+               '<a href="direct-breadboard.html#complete-wiring">完整接线说明</a>连接 P04 与舵机；分项测试时无需反复插拔。</p><ol class="flow">'
                "<li>先<b>只插 USB</b>。用 Thonny 或 mpremote 进入 REPL, 运行 <code>import arm_test; arm_test.main()</code>, "
-               "输入 <code>help</code> 应有命令列表。</li>"
+               "出现 <code>arm&gt;</code> 后输入 <code>off</code>，再用 <code>help</code> 查看命令列表。</li>"
                "<li>接通 <b>9V</b>。马达此时不会转: 程序没发指令时 DRV8833 输入为低, 马达处于断开状态。"
                "如果马达自己转或者发烫, 立刻断电, 检查 AIN1/AIN2 的接线。</li>"
                "<li>输入 <code>enc</code>, 用手把马达输出轴转一圈, 再输入 <code>enc</code>。计数应变化约 720 "
                "(方向取决于转向)。没有变化就检查 5V、分压电阻、黄/蓝线通断和 GP4/GP5。</li>"
                "<li>输入 <code>check</code>, 马达应短暂正转并显示 <b>方向正确</b>。方向相反就按提示改 "
                "<span class=\"mono\">config.py</span>。方向确认之前不要运行 <code>rot</code>。</li>"
-               "<li>输入 <code>servo 1500</code>, 舵机应转到中间位置; 然后按 <span class=\"mono\">docs/single_arm.md</span> "
-               "第 5 节继续。</li></ol></section>")
+               "<li>马达方向和齿轮比确认后，按 <span class=\"mono\">docs/single_arm.md</span> "
+               "第 5 节标定舵机，再做旋转及联合测试。首次定位必须脱开曲柄与连杆，空载定位后断电连接，再小步标定；标定前不运行旧的开合预设。</li></ol></section>")
     out.append("</div>")
-    out.append(f"<script>{JS}</script>")
+    out.append(f"<script>{JS}</script></body></html>")
     return "\n".join(out) + "\n"
 
 
+def build(directory=HERE):
+    """统一生成；输出目录的父级是 docs，用于 Markdown 产物。"""
+    spec.validate()
+    directory = Path(directory)
+    directory.mkdir(parents=True, exist_ok=True)
+    direct_wiring.main(directory)
+    perfboard_layout.write_assets(directory)
+    (directory / "index.html").write_text(page(), encoding="utf-8")
+    (directory / "perfboard.html").write_text(perfboard_page(), encoding="utf-8")
+    (directory.parent / "single_arm.md").write_text(spec.single_arm_document(), encoding="utf-8")
+
+
+def check():
+    """在临时目录重建，逐字节检查产物，不修改工作区。"""
+    with TemporaryDirectory() as tmp:
+        docs = Path(tmp) / "docs"
+        build(docs / "wiring")
+        stale = []
+        for generated in sorted(docs.rglob("*")):
+            if not generated.is_file():
+                continue
+            relative = generated.relative_to(docs)
+            current = HERE.parent / relative
+            if not current.exists() or current.read_bytes() != generated.read_bytes():
+                stale.append(str(relative))
+        if stale:
+            print("生成文件缺失或过期：" + "、".join(stale))
+            print("请运行 python docs/wiring/build.py 并一起保存生成文件。")
+            return 1
+    print("电路配置、网络及生成文件一致性检查通过。")
+    return 0
+
+
+def main():
+    parser = argparse.ArgumentParser(description="生成或检查电路文档")
+    parser.add_argument("--check", action="store_true", help="只检查，不修改文件")
+    args = parser.parse_args()
+    if args.check:
+        return check()
+    build()
+    return 0
+
+
 if __name__ == "__main__":
-    direct_wiring.main()
-    perfboard_layout.write_assets(HERE)
-    with open(os.path.join(HERE, "index.html"), "w", encoding="utf-8") as f:
-        f.write(page())
-    with open(os.path.join(HERE, "perfboard.html"), "w", encoding="utf-8") as f:
-        f.write(perfboard_page())
+    raise SystemExit(main())

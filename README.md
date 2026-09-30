@@ -9,6 +9,15 @@
 
 规划器纯 Python 实现，不依赖第三方库，可以在 PC 或树莓派 Zero W 上运行。
 
+## 电路与硬件验证
+
+从[电路总览](docs/wiring/README.md)进入：当前使用面包板＋动力直连，洞洞板是可选装配方案。大马达空载闭环已通过；v3 机械头、舵机和四臂供电仍待验证。
+
+```bash
+python docs/wiring/build.py          # 生成全部电路文档及图纸
+python docs/wiring/build.py --check  # 检查配置、网络和生成文件是否同步
+```
+
 ## 机器模型
 
 ```
