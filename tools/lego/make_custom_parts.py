@@ -1,4 +1,4 @@
-"""生成 LDraw 零件库里没有的自定义零件: Geekservo 舵机、56mm 魔方。
+"""生成 LDraw 零件库里没有的自定义零件: Geekservo 舵机、56mm 魔方、绕在夹指上的乐高皮带。
 
 Geekservo 尺寸取自用户提供的图纸 (单位 mm, 1mm = 2.5 LDU):
 - 本体 24 x 28.8 (高) x 16, 两侧耳朵连外壳总长 40;
@@ -7,6 +7,7 @@ Geekservo 尺寸取自用户提供的图纸 (单位 mm, 1mm = 2.5 LDU):
 局部坐标: X 沿长度, Y 为高度 (输出朝 -Y, 即 LDraw 的 "上"), Z 沿 16mm 厚度, 原点在本体中心。
 """
 
+import math
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -78,9 +79,55 @@ def cube56():
     return "\n".join(lines) + "\n"
 
 
+def rubberband_on_beam(turns=2, pitch=4.0, r=1.75, gap=0.3, corner=3.0):
+    """乐高 Technic 皮带 (15mm, BrickLink x37) 横向绕在 1 孔宽粗梁上的样子 (v3 夹指预压用, 2026-09-30)。
+
+    LDraw 库里没有皮带零件, 这里按 "绕好以后" 的形状画: 每圈是一个套在梁截面 (18 x 20 LDU) 外面的圆环管,
+    截面直径 2r = 3.5 LDU (约 1.4mm, 按 15mm 皮带估计, 实物要量); turns 圈沿梁长度方向并排, 间距 pitch。
+    局部坐标和 32524 粗梁一样: X 是梁的宽度方向 (±9), Y 是孔的方向 (±10), Z 沿梁长, 圈的中心在 Z = 0。
+    只画面, 不画边线 (皮带是圆截面, 没有棱)。"""
+    hx, hy = 9.0 + gap + r, 10.0 + gap + r  # 皮带中心线到梁轴线的距离
+    rc = corner + r  # 中心线在四个角上的圆角半径
+    # 中心线: 圆角矩形, 每个角 4 段, 每条直边 1 段
+    path = []
+    for (cx, cy, a0) in ((hx - rc, hy - rc, 0.0), (-(hx - rc), hy - rc, 90.0), (-(hx - rc), -(hy - rc), 180.0), (hx - rc, -(hy - rc), 270.0)):
+        for k in range(5):
+            a = math.radians(a0 + 22.5 * k)
+            path.append((cx + rc * math.cos(a), cy + rc * math.sin(a)))
+    n = len(path)
+    lines = [
+        f"0 Technic Rubber Belt 15mm wrapped {turns}x around 1-wide beam (approximate)",
+        "0 Name: rubberband.dat",
+        "0 Author: quadcuber (按绕好后的形状建模, 皮带截面直径按 1.4mm 估计)",
+        "0 !LDRAW_ORG Unofficial_Part",
+        "0 BFC NOCERTIFY",
+        "",
+    ]
+    seg = 8
+    for t in range(turns):
+        z0 = (t - (turns - 1) / 2) * pitch
+        ring = []
+        for i in range(n):
+            x, y = path[i]
+            nx, ny = path[(i + 1) % n]
+            px, py = path[i - 1]
+            # 中心线的外法线 (相邻两段的平均方向旋转 90°)
+            tx, ty = nx - px, ny - py
+            L = math.hypot(tx, ty)
+            ox, oy = ty / L, -tx / L
+            ring.append([(x + r * math.cos(b) * ox, y + r * math.cos(b) * oy, z0 + r * math.sin(b))
+                         for b in (math.radians(360 / seg * j) for j in range(seg))])
+        for i in range(n):
+            a, b = ring[i], ring[(i + 1) % n]
+            for j in range(seg):
+                p0, p1, p2, p3 = a[j], b[j], b[(j + 1) % seg], a[(j + 1) % seg]
+                lines.append("4 16 " + " ".join(f"{v:.3f}" for q in (p0, p1, p2, p3) for v in q))
+    return "\n".join(lines) + "\n"
+
+
 def main():
     os.makedirs(PARTS, exist_ok=True)
-    for name, text in (("geekservo.dat", geekservo()), ("cube56.dat", cube56())):
+    for name, text in (("geekservo.dat", geekservo()), ("cube56.dat", cube56()), ("rubberband.dat", rubberband_on_beam())):
         with open(os.path.join(PARTS, name), "w", encoding="utf-8") as f:
             f.write(text)
 
