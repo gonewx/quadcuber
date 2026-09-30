@@ -187,7 +187,7 @@ def cmd_check(arm, args):
     elif d < 0:
         print("!! 方向相反: 把 config.py 里的 ENC_INVERT 改成相反的值 (或 MOTOR_INVERT)")
     else:
-        print("方向正确")
+        print("方向正确 (马达和编码器一致)。机械头转向还要用 duty 0.3 500 目测: 从舵机那头朝魔方看应为顺时针, 见 docs/single_arm.md 第 5 节")
     arm.nominal = round(arm.angle() / 90) * 90
 
 
@@ -409,7 +409,7 @@ HELP = """命令:
   duty <u> [ms]         开环驱动 (u: -1~1, 默认 300ms) 后刹车
   speed [u] [ms]        测空载速度和时间常数 (v_full, tau)
   friction              测起转占空比 (kfs)
-  rot <q> [tag]         机械手转 q*90 度 (q = 1, -1, 2, -2)
+  rot <q> [tag]         机械手转 q*90 度 (q = 1, -1, 2, -2; 正 = 从舵机那头朝魔方看顺时针)
   goto <度>             转到绝对角度
   bench <q> [n] [tag]   来回转 n 次并统计; tag: free (空转) / load (夹着魔方拧一层)
   cycle [n] [q]         夹紧 -> 拧 -> 松开 -> 转回, 重复 n 次
