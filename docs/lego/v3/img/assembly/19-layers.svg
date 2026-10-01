@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="620" viewBox="0 0 1280 620">
+<rect width="1280" height="620" fill="white"/><g font-family="Noto Sans CJK SC, sans-serif" fill="#172535">
+<text x="40" y="55" font-size="32" font-weight="700">公共轴：从中央向两侧，顺序完全相同</text>
+<text x="40" y="100" font-size="23">截面示意 · 5号轴共40mm · 半套贴近，不挤紧圆孔转动件</text>
+<rect x="100" y="176" width="108" height="105" fill="#b6c1cc" stroke="white" stroke-width="3"/>
+<text x="154.0" y="153" text-anchor="middle" font-size="21">32123a</text>
+<text x="154.0" y="318" text-anchor="middle" font-size="20">半套</text>
+<text x="154.0" y="354" text-anchor="middle" font-size="22">4mm</text>
+<rect x="208" y="176" width="108" height="105" fill="#eeb900" stroke="white" stroke-width="3"/>
+<text x="262.0" y="153" text-anchor="middle" font-size="21">11478</text>
+<text x="262.0" y="318" text-anchor="middle" font-size="20">中圆孔</text>
+<text x="262.0" y="354" text-anchor="middle" font-size="22">4mm</text>
+<rect x="316" y="176" width="108" height="105" fill="#f7d257" stroke="white" stroke-width="3"/>
+<text x="370.0" y="153" text-anchor="middle" font-size="21">32017</text>
+<text x="370.0" y="318" text-anchor="middle" font-size="20">端圆孔</text>
+<text x="370.0" y="354" text-anchor="middle" font-size="22">4mm</text>
+<rect x="424" y="176" width="108" height="105" fill="#dba900" stroke="white" stroke-width="3"/>
+<text x="478.0" y="153" text-anchor="middle" font-size="21">32449</text>
+<text x="478.0" y="318" text-anchor="middle" font-size="20">端十字孔</text>
+<text x="478.0" y="354" text-anchor="middle" font-size="22">4mm</text>
+<rect x="532" y="176" width="216" height="105" fill="#b6c1cc" stroke="white" stroke-width="3"/>
+<text x="640.0" y="153" text-anchor="middle" font-size="21">3713</text>
+<text x="640.0" y="318" text-anchor="middle" font-size="20">中央整套</text>
+<text x="640.0" y="354" text-anchor="middle" font-size="22">8mm</text>
+<rect x="748" y="176" width="108" height="105" fill="#dba900" stroke="white" stroke-width="3"/>
+<text x="802.0" y="153" text-anchor="middle" font-size="21">32449</text>
+<text x="802.0" y="318" text-anchor="middle" font-size="20">端十字孔</text>
+<text x="802.0" y="354" text-anchor="middle" font-size="22">4mm</text>
+<rect x="856" y="176" width="108" height="105" fill="#f7d257" stroke="white" stroke-width="3"/>
+<text x="910.0" y="153" text-anchor="middle" font-size="21">32017</text>
+<text x="910.0" y="318" text-anchor="middle" font-size="20">端圆孔</text>
+<text x="910.0" y="354" text-anchor="middle" font-size="22">4mm</text>
+<rect x="964" y="176" width="108" height="105" fill="#eeb900" stroke="white" stroke-width="3"/>
+<text x="1018.0" y="153" text-anchor="middle" font-size="21">11478</text>
+<text x="1018.0" y="318" text-anchor="middle" font-size="20">中圆孔</text>
+<text x="1018.0" y="354" text-anchor="middle" font-size="22">4mm</text>
+<rect x="1072" y="176" width="108" height="105" fill="#b6c1cc" stroke="white" stroke-width="3"/>
+<text x="1126.0" y="153" text-anchor="middle" font-size="21">32123a</text>
+<text x="1126.0" y="318" text-anchor="middle" font-size="20">半套</text>
+<text x="1126.0" y="354" text-anchor="middle" font-size="22">4mm</text>
+<path d="M100 228H1180" stroke="#405364" stroke-width="13"/>
+<text x="40" y="421" font-size="28" font-weight="700">输入杆与主臂：止挡头必须在输入薄梁外侧</text>
+<rect x="160" y="462" width="85" height="66" fill="#b6c1cc" stroke="white" stroke-width="3"/>
+<text x="202.5" y="563" text-anchor="middle" font-size="22">内半套</text>
+<rect x="245" y="462" width="160" height="66" fill="#d94a3a" stroke="white" stroke-width="3"/>
+<text x="325.0" y="563" text-anchor="middle" font-size="22">主臂第2孔</text>
+<rect x="405" y="462" width="130" height="66" fill="#b6c1cc" stroke="white" stroke-width="3"/>
+<text x="470.0" y="563" text-anchor="middle" font-size="22">间隔半套</text>
+<rect x="535" y="462" width="130" height="66" fill="#f7d257" stroke="white" stroke-width="3"/>
+<text x="600.0" y="563" text-anchor="middle" font-size="22">输入薄梁</text>
+<rect x="665" y="462" width="90" height="66" fill="#405364" stroke="white" stroke-width="3"/>
+<text x="710.0" y="563" text-anchor="middle" font-size="22">止挡头</text>
+<path d="M160 495H747" stroke="#405364" stroke-width="10"/>
+<text x="885" y="486" font-size="23">24316 三号止挡轴</text>
+<text x="885" y="531" font-size="23">上、下关节镜像安装</text>
+</g></svg>

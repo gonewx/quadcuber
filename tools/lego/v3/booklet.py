@@ -190,6 +190,7 @@ def main(render=True):
             subprocess.run([sys.executable, os.path.join(HERE, "..", "render", "software.py"), jobs_path], check=True)
         else:
             subprocess.run(["node", "render.js", jobs_path, os.environ.get("LDRAW_RENDER_PORT", "8765")], cwd=os.path.join(HERE, "..", "render"), check=True, env=env)
+        subprocess.run([sys.executable, os.path.join(HERE, "assembly_instructions.py")], check=True)
 
     write(os.path.join(OUT, "model.ldr"), model.to_ldr(parts, "quadcuber 四臂整机 v3"))
     write(os.path.join(OUT, "model.mpd"), pack_mpd(parts, len(steps)))
@@ -265,12 +266,33 @@ kbd{font:12px "JetBrains Mono",ui-monospace,monospace;padding:1px 5px;border:1px
 .cmp td{min-width:9em}
 .lead{font-size:16px}
 ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
+.assembly-grid{display:grid;gap:24px;min-width:0}
+.assembly-card{margin:0;min-width:0;scroll-margin-top:20px}
+.assembly-card>a{display:block;background:white;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.assembly-card img{display:block;width:100%;height:auto}
+.assembly-card figcaption{padding:8px 4px;font-size:15px}
+.assembly-card figcaption b{margin-right:10px}
+.assembly-overview{border:1px solid var(--line);border-radius:8px;padding:12px}
+.assembly-overview summary{cursor:pointer;font-weight:600}
+.assembly-overview[open]{display:grid;gap:14px}
+.assembly-nav{position:sticky;top:0;z-index:2;display:flex;gap:12px;flex-wrap:wrap;padding:8px 12px;background:var(--sheet);border:1px solid var(--line);border-radius:8px}
+.assembly-nav a{font-size:14px}
+@media(max-width:640px){.assembly-card figcaption{font-size:16px}.assembly-grid{gap:20px}}
+@media print{.assembly-nav,.assembly-overview{display:none}.assembly-card{break-inside:avoid}.assembly-card>a{border:0}.assembly-card img{max-height:85vh;object-fit:contain}}
 """
 
 def write_html(parts, step_new, keys, subs):
     import csv
     steps = model.STEPS
     esc = html.escape
+    assembly_path = os.path.join(OUT, 'assembly.json')
+    assembly = json.loads(open(assembly_path).read()) if os.path.exists(assembly_path) else {'cards': []}
+    if assembly['cards']:
+        import hashlib
+        if assembly['model_sha256'] != hashlib.sha256(model.to_ldr(parts).encode()).hexdigest():
+            raise ValueError('模型已变更，请先运行 assembly_instructions.py 更新装配图')
+        if {c['step'] for c in assembly['cards']} != set(range(1, 24)):
+            raise ValueError('分步图尚未生成完整，请运行 assembly_instructions.py')
     byname = Counter(p.name for p in parts if p.name != "cube56.dat")
     one = Counter(p.name for p in model.module(steps=False))
     radius = model.TYRE_RADIUS
@@ -298,7 +320,7 @@ def write_html(parts, step_new, keys, subs):
            f'<div class="fact"><b>{gap:.2f} mm</b><span>估算自由夹口 · 魔方 56 mm</span></div>'
            f'<div class="fact"><b>{stroke:.2f} mm</b><span>推杆开合行程</span></div>'
            '<div class="fact"><b>25°</b><span>主臂松开角</span></div></div>',
-           '<nav class="toc"><a href="#jaw">压头详图</a><a href="#v3d-sec">可旋转模型</a><a href="#bom">零件清单</a>'
+           '<nav class="toc" id="step-nav"><a href="#s19">公共轴分步图</a><a href="#s1">从第1步搭建</a><a href="#jaw">压头详图</a><a href="#v3d-sec">可旋转模型</a><a href="#bom">零件清单</a>'
            + ''.join(f'<a href="#s{k}">{k}. {esc(st["title"])}</a>' for k, st in enumerate(steps, 1))
            + '<a href="#checks">验证与标定</a></nav></header>',
            '<section id="jaw" class="cover"><h2>压头与传力</h2>',
@@ -344,13 +366,32 @@ def write_html(parts, step_new, keys, subs):
     out.append('</table></div><p class="cap">套装数量沿用仓库清单，大框按已有 4 块计。42610、50945 已有各 4 件，整机各需 8 件，按用户确认另补各 4 件。32449 整机需 24 根（轮端16根、驱动8根），未确认库存；11478五孔薄梁用于Watt横梁，整机需8根；不能替换轮端四孔32449或全圆孔32017。其他未录入的零件按 0 计；补充数量需先扣除散件库存。马达已有 2 个，整机还需 2 个。</p></section>')
     for k, st in enumerate(steps, 1):
         out.append(f'<section class="cover" id="s{k}"><h2>{k:02d} · {esc(st["title"])}</h2>')
+        mini = [c for c in assembly['cards'] if c['step'] == k]
+        if mini:
+            out.append('<nav class="assembly-nav" aria-label="本步导航"><a href="#step-nav">步骤目录</a>'
+                       + (f'<a href="#s{k-1}">← 上一步</a>' if k > 1 else '')
+                       + f'<a href="#s{k+1}">下一步 →</a><span>{len(mini)}张图 · 点击图可放大</span></nav>')
+            out.append('<p class="cap">浅色：已装件 · 实色：本次加件 · 蓝箭头：装入方向 · 右图：完成状态</p><div class="assembly-grid">')
+            for card in mini:
+                label = f'{k}.{card["number"]} · {card["title"]}'
+                out.append(f'<figure class="assembly-card" id="s{k}-{card["number"]}">'
+                           f'<a href="{card["file"]}" target="_blank" rel="noopener" aria-label="放大：{esc(label)}">'
+                           f'<img src="{card["file"]}" width="1280" height="860" loading="lazy" alt="{esc(label + "。" + card["tip"])}"></a>'
+                           f'<figcaption><b>{esc(label)}</b>{esc(card["tip"])}</figcaption></figure>')
+            out.append('</div>')
+            if k == 19:
+                out.append(figure('assembly/19-layers.svg', '公共轴轴向顺序：两侧从中央向外装；尺寸为名义厚度。', 1280, 620))
+            out.append('<details class="assembly-overview"><summary>本步总览、完整零件清单与补充说明</summary>')
         chips = []
         for (name, color), count in Counter(part_key(p) for p in step_new[k-1]).items():
             number = '50945' if name == '50945_nominal.dat' else name[:-4]
             chips.append('<div class="chip">' + img(f'part_{name[:-4]}_{color}.png', model.CATALOG[name][0], TW, TH)
                          + f'<div class="x">{count}×</div><div class="n">{esc(model.CATALOG[name][0])} · {number}</div></div>')
         out.append('<div class="callout">' + ''.join(chips) + '</div><div class="plate">' + img(f'step{k:02d}.png', st['title']) + '</div>')
-        out.append(f'<p>{esc(st["text"])}</p></section>')
+        out.append(f'<p>{esc(st["text"])}</p>')
+        if mini:
+            out.append('</details>')
+        out.append('</section>')
     out += ['<section id="checks" class="cover"><h2>验证与单臂验收</h2><p><a href="gravity_test.md">重力承重与下沉测试</a> · <a href="gravity_test.csv">承重记录表</a>：先测整头倾斜、上下轮端位移和魔方中心下沉，再进行交接与翻转。</p>',
             '<p>以下为承重导向版的实物试装与标定步骤。检查范围和结果见 <a href="mechanical_audit.md">完整机械审查</a>。夹紧力、刚度和轮胎保持力均待实测。</p>',
             figure('flip.png', '整块翻转：L、R 夹持，F、B 松开并保持竖直。', 1400, 900),

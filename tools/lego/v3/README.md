@@ -13,6 +13,19 @@ v1（上一级目录）和 v2（`../v2/`）都保持不动。本目录是四臂�
 | `test_open_stops.py` | 无实体限位和允许超程的回归检查 |
 | `test_dual_support.py` | 双侧贯穿轴与后部两处旧碰撞的回归测试 |
 | `booklet.py` | 生成 `docs/lego/v3/index.html`、步骤图和 `model.ldr`（渲染用 `../render/`） |
+| `assembly_instructions.py` | 生成179张分步装配图及公共轴叠层示意，核对新增件与模型清单 |
+
+## 更新分步图
+
+分步图使用模型的真实 LDraw 网格，浅色为已装件、实色为本次加件。图中爆炸平移只用于解释装配方向。前23个主步骤有分步图，第24步放魔方保留整机图；主步骤编号与3D查看器不变。
+
+```bash
+tools/lego/.cache/venv/bin/python tools/lego/v3/assembly_instructions.py --check
+tools/lego/.cache/venv/bin/python tools/lego/v3/assembly_instructions.py
+tools/lego/.cache/venv/bin/python tools/lego/v3/booklet.py --no-render
+```
+
+生成器默认使用3个渲染进程；`--workers 1`可降低并行开销。只调整图解时可用`--step 19`重画该步。模型改变后须全量生成，不能合并旧模型的图。SVG自包含，网页支持点击放大、手机浏览和打印；`assembly.json`记录小步骤、零件数量和模型指纹。渲染缓存放在`tools/lego/.cache/assembly/`。
 
 ```bash
 cd tools/lego/v3
