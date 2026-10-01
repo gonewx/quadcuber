@@ -97,9 +97,10 @@ def main():
         assert counts[name] == 8, (name, counts[name])
     beta = model.CLAMP_BETA
     assert counts["42003.dat"] == counts["6587.dat"] == 0
-    assert counts["32017.dat"] == 32
+    assert counts["32017.dat"] == 24  # 8片输入杆＋16片Watt摆杆
     assert counts["32449.dat"] == 24  # 16片轮端支承＋8片推杆铰接薄梁
-    assert counts["11478.dat"] == counts["32002.dat"] == 0
+    assert counts["11478.dat"] == 8  # Watt横梁端孔固定活动轴
+    assert counts["32002.dat"] == 0
     inner_edge = model.JAW_Y + model.JAW_REACH * math.sin(beta) - model.TYRE_RADIUS
     assert abs(inner_edge - (model.CUBE_HALF - model.TYRE_PRELOAD)) < 1e-6
     assert 0 < model.TYRE_PRELOAD < 1.5

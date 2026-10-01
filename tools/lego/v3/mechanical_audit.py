@@ -225,6 +225,36 @@ def fixed_rod_checks():
     return list(results.values())
 
 
+def guide_drive_clearance():
+    """活动轴对驱动组件的连续开合下界；不依赖开度采样。
+
+    机构只在XY平面内运动，轴向区间保持不变。两连接轴中心分别距
+    公共轴40、60 LDU，反三角不等式保证中心距至少20 LDU；减去
+    零件完整截面的最大半径，得到不依赖轴自转相位的径向下界。
+    """
+    parts=model.module(0.,steps=False)
+    axles=[p for p in parts if p.note=='Watt活动轴']
+    links=[p for p in parts if p.note=='推杆铰接薄梁']
+    bushes=[p for p in parts if p.note=='推杆铰轴半套']
+    def interval(p):
+        vertices=world(p).reshape(-1,3)
+        return float(vertices[:,2].min()),float(vertices[:,2].max())
+    axial=min(max(interval(b)[0]-interval(a)[1],interval(a)[0]-interval(b)[1],0.)
+              for a in axles for b in links)
+    def radius(p):
+        return float(np.linalg.norm(world(p).reshape(-1,3)[:,:2]-p.pos[:2],axis=1).max())
+    center_distance=abs(model.DRIVE_LINK_L-model.WATT_HALF_SPAN)
+    axle_radius=max(map(radius,axles));bush_radius=max(map(radius,bushes))
+    radial=center_distance-axle_radius-bush_radius
+    return {'活动轴对驱动薄梁轴向下界_mm':axial*.4,
+            '活动轴对驱动半轴套径向下界_mm':radial*.4,
+            '连续开合间隙下界_mm':min(axial,radial)*.4,
+            '中心距下界_mm':center_distance*.4,
+            '活动轴截面半径上界_mm':axle_radius*.4,
+            '半轴套截面半径上界_mm':bush_radius*.4,
+            '范围':'真实杆长闭合、轴向叠层保持时的连续开合；不含轴窜动、制造公差和变形。'}
+
+
 def rotating_bush_checks():
     """推杆两侧半轴套的完整360°外包圆柱，对固定舵机连杆；81个行程。"""
     rows=[]
@@ -272,13 +302,14 @@ def main():
     bushes = rotating_bush_checks()
     failed = rod['状态']=='失败' or any(r['径向余量_mm'] < -1e-8 and not r['有意配合'] for r in fixed)
     unresolved = any(r['状态']=='需细查' for r in cubes) or bushes['最差']['连续回转间隙下界_mm']<=0
-    data = {'几何源':'双侧32449支承＋后移舵机＋7孔粗连杆；以文件SHA256为准',
+    data = {'几何源':'双侧轮胎支承＋11478承重横梁＋空余孔朝曲柄的7孔粗连杆；以文件SHA256为准',
             'model.py_SHA256':hashlib.sha256(Path(model.__file__).read_bytes()).hexdigest(),
             '零件三角网格_SHA256':{name:hashlib.sha256(np.ascontiguousarray(ldraw.geometry(name)[0],dtype='<f8').tobytes()).hexdigest()
                                       for name in sorted({p.name for p in model.build()})},
             '结论':('发现后部回转干涉' if failed else '本脚本未检出后部包络干涉')+'；实物刚度与保持力待测',
             '曲柄轴与推杆':rod, '推杆直段对固定件_41行程位置':fixed,
-            '旋转半轴套对舵机连杆':bushes, '魔方连续回转包络':cubes, '薄梁受力估算':stiffness(),
+            '旋转半轴套对舵机连杆':bushes, '导向活动轴对驱动组件':guide_drive_clearance(),
+            '魔方连续回转包络':cubes, '薄梁受力估算':stiffness(),
             '范围限制':['魔方工况使用完整表面三角形和连续角度包络；正距离可证明名义网格分离。',
                       '三角网格是名义外形；不包含公差、材料变形、轴窜动及未建模线缆。',
                       '整机所有零件对并未获得连续开合与回转的联合证明；原离散扫描保留为补充。',
