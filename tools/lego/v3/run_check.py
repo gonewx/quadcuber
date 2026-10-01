@@ -264,5 +264,14 @@ if __name__ == "__main__":
     if "all" in only:
         ps = model.build()
         total += report(ps, "整机 夹紧")
+    # 体素侵蚀会漏掉浅穿入；该轴与推杆必须另查连续回转包络。
+    from mechanical_audit import rod_check
+    rod_result = rod_check()
+    if rod_result['状态'] == '失败':
+        total += 1
+        worst = rod_result['最差']
+        print(f"[连续回转] 32062 曲柄轴侵入 3708 推杆回转包络："
+              f"余量 {worst['回转包络径向余量_mm']:.3f}mm，"
+              f"行程 {worst['行程比例']:.3%}。见 mechanical_audit.py。")
     print("问题数:", total)
     sys.exit(1 if total else 0)

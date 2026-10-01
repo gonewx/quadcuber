@@ -282,7 +282,7 @@ def write_html(parts, step_new, keys, subs):
            '<h1>上下相同的轮胎压头</h1>',
            '<p class="lead">沿用转盘和 5 孔输入连杆；每个模块向外移 16mm，上下主臂都用 7 孔粗梁，底座四角改用 7×5 框架连接。每臂上下各一组 42610＋50945，四臂共需八组轮胎。</p>',
            '<p>轮毂装在 32002 圆销上，可以转动。上下压头采用相同零件和孔位，轮胎圆弧与橡胶变形形成接触面。前端用 11478 两端十字孔薄梁，舵机用 32316 粗连杆，整机不需要 32017 圆孔薄梁。</p>',
-           '<p><b>这是供单臂试装的 CAD 方案。</b>按用户给定的 14×6mm 轮胎外形建模；夹紧力和沿轮轴方向的保持能力尚未经过实物验证。请先按本页的验收步骤搭一只压头，再复制四臂。</p>',
+           '<p><b>当前验证未通过：后部曲柄轴与旋转推杆相碰，回转包络最大侵入约 0.52mm。</b>旧版“0 干涉”结论已被补充检查更正。先修正后部避让，再进行带动力测试和四臂复制。<a href="mechanical_audit.md">完整审查、刚度计算与测试指标</a> · <a href="load_test_template.csv">实测记录表</a></p>',
            '<div class="plate">' + img('cover.png', '整机装配总览', 1400, 900) + '</div>',
            '<div class="facts">'
            f'<div class="fact"><b>{len(steps)} 步</b><span>完整装配</span></div>'
@@ -340,7 +340,7 @@ def write_html(parts, step_new, keys, subs):
         out.append('<div class="callout">' + ''.join(chips) + '</div><div class="plate">' + img(f'step{k:02d}.png', st['title']) + '</div>')
         out.append(f'<p>{esc(st["text"])}</p></section>')
     out += ['<section id="checks" class="cover"><h2>验证与单臂验收</h2>',
-            '<p>检查范围和结果见 <a href="README.md">验证记录</a>。CAD 检查不能证明轮胎配合牢固，也不能给出实际夹紧力。</p>',
+            '<p>当前存在后部干涉；以下装配与标定步骤须在修正后使用。检查范围和结果见 <a href="mechanical_audit.md">完整机械审查</a>。夹紧力、刚度和轮胎保持力均待实测。</p>',
             figure('flip.png', '整块翻转：L、R 夹持，F、B 松开并保持竖直。', 1400, 900),
             '<ol><li>先将 50945 套在 42610 上，用 32002 连接薄梁；检查轮毂轴向保持及轮胎配合。</li>'
             '<li>确认薄梁后端十字孔装轴销、相邻圆孔装黑销；轮毂装第 4 圆孔。舵机用 5 孔粗连杆，曲柄端 2 号轴不加内侧半轴套，并检查轴是否松脱。</li>'

@@ -96,7 +96,7 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 <h1>上下相同的轮胎压头</h1>
 <p class="lead">沿用转盘和 5 孔输入连杆；每个模块向外移 16mm，上下主臂都用 7 孔粗梁，底座四角改用 7×5 框架连接。每臂上下各一组 42610＋50945，四臂共需八组轮胎。</p>
 <p>轮毂装在 32002 圆销上，可以转动。上下压头采用相同零件和孔位，轮胎圆弧与橡胶变形形成接触面。前端用 11478 两端十字孔薄梁，舵机用 32316 粗连杆，整机不需要 32017 圆孔薄梁。</p>
-<p><b>这是供单臂试装的 CAD 方案。</b>按用户给定的 14×6mm 轮胎外形建模；夹紧力和沿轮轴方向的保持能力尚未经过实物验证。请先按本页的验收步骤搭一只压头，再复制四臂。</p>
+<p><b>当前验证未通过：后部曲柄轴与旋转推杆相碰，回转包络最大侵入约 0.52mm。</b>旧版“0 干涉”结论已被补充检查更正。先修正后部避让，再进行带动力测试和四臂复制。<a href="mechanical_audit.md">完整审查、刚度计算与测试指标</a> · <a href="load_test_template.csv">实测记录表</a></p>
 <div class="plate"><img src="img/cover.png" alt="整机装配总览" width="1400" height="900" loading="lazy"></div>
 <div class="facts"><div class="fact"><b>21 步</b><span>完整装配</span></div><div class="fact"><b>55.36 mm</b><span>估算自由夹口 · 魔方 56 mm</span></div><div class="fact"><b>10.00 mm</b><span>推杆开合行程</span></div><div class="fact"><b>25°</b><span>主臂松开角</span></div></div>
 <nav class="toc"><a href="#jaw">压头详图</a><a href="#v3d-sec">可旋转模型</a><a href="#bom">零件清单</a><a href="#s1">1. 底座</a><a href="#s2">2. 竖墙</a><a href="#s3">3. 马达底块</a><a href="#s4">4. 马达前梁</a><a href="#s5">5. 齿轮</a><a href="#s6">6. 装马达</a><a href="#s7">7. 转盘下半</a><a href="#s8">8. 装竖墙</a><a href="#s9">9. 舵机平台</a><a href="#s10">10. 舵机</a><a href="#s11">11. 装平台</a><a href="#s12">12. 十字块和舵机连杆</a><a href="#s13">13. 侧板与夹指架</a><a href="#s14">14. 转盘上半</a><a href="#s15">15. 夹指</a><a href="#s16">16. 上下相同的轮胎压头</a><a href="#s17">17. 连杆与十字接头</a><a href="#s18">18. 推杆</a><a href="#s19">19. 装机械头</a><a href="#s20">20. 装另外三个机械手</a><a href="#s21">21. 放入魔方</a><a href="#checks">验证与标定</a></nav></header>
@@ -213,6 +213,6 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 <div class="callout"><div class="chip"><img src="img/part_cube56_16.png" alt="56mm 魔方 (示意)" width="260" height="200" loading="lazy"><div class="x">1×</div><div class="n">56mm 魔方 (示意) · cube56</div></div></div><div class="plate"><img src="img/step21.png" alt="放入魔方" width="1200" height="860" loading="lazy"></div>
 <p>四个舵机都转到 &quot;松开&quot;, 四个机械手都转到竖直 (夹指一上一下)。魔方放在中间, 先夹紧 L、R, 再夹紧 F、B。</p></section>
 <section id="checks" class="cover"><h2>验证与单臂验收</h2>
-<p>检查范围和结果见 <a href="README.md">验证记录</a>。CAD 检查不能证明轮胎配合牢固，也不能给出实际夹紧力。</p>
+<p>当前存在后部干涉；以下装配与标定步骤须在修正后使用。检查范围和结果见 <a href="mechanical_audit.md">完整机械审查</a>。夹紧力、刚度和轮胎保持力均待实测。</p>
 <figure class="cover"><div class="plate"><img src="img/flip.png" alt="整块翻转：L、R 夹持，F、B 松开并保持竖直。" width="1400" height="900" loading="lazy"></div><figcaption class="cap">整块翻转：L、R 夹持，F、B 松开并保持竖直。</figcaption></figure>
 <ol><li>先将 50945 套在 42610 上，用 32002 连接薄梁；检查轮毂轴向保持及轮胎配合。</li><li>确认薄梁后端十字孔装轴销、相邻圆孔装黑销；轮毂装第 4 圆孔。舵机用 5 孔粗连杆，曲柄端 2 号轴不加内侧半轴套，并检查轴是否松脱。</li><li>按 <a href="../../single_arm.md#servo-calibration">单臂标定步骤</a>先脱开曲柄、空载定位，再在行程中间断电连接。</li><li>夹紧端以接触和轻微压缩为准，小步推进；图示 3.84° 是参考值，旧版脉宽不能直接使用。检查推杆十字块两侧半轴套有没有沿轴滑移。</li><li>开端参考推杆后退 10.00mm、主臂外张 25°。改变轮胎、轴长或开角后重新检查避让。</li><li>单臂夹紧后检查横向滑动、轴向滑动和拧层阻力，再低速测试翻转。记录实测外径、脉宽、夹紧保持情况，之后再复制四臂。</li></ol><p>相邻机械手保持竖直时才允许另一只转动；使用 <code>--no-adjacent-horizontal</code>。禁止把相邻机械手同时转到水平。</p></section></div></html>
