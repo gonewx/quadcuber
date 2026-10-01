@@ -211,7 +211,7 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 <section class="cover" id="s21"><h2>21 · 放入魔方</h2>
 <div class="callout"><div class="chip"><img src="img/part_cube56_16.png" alt="56mm 魔方 (示意)" width="260" height="200" loading="lazy"><div class="x">1×</div><div class="n">56mm 魔方 (示意) · cube56</div></div></div><div class="plate"><img src="img/step21.png" alt="放入魔方" width="1200" height="860" loading="lazy"></div>
 <p>四个舵机都转到 &quot;松开&quot;, 四个机械手都转到竖直 (夹指一上一下)。魔方放在中间, 先夹紧 L、R, 再夹紧 F、B。</p></section>
-<section id="checks" class="cover"><h2>验证与单臂验收</h2>
+<section id="checks" class="cover"><h2>验证与单臂验收</h2><p><a href="gravity_test.md">重力承重与下沉测试</a> · <a href="gravity_test.csv">承重记录表</a>：先测整头倾斜、上下轮端位移和魔方中心下沉，再进行交接与翻转。</p>
 <p>以下为双侧版的实物试装与标定步骤。检查范围和结果见 <a href="mechanical_audit.md">完整机械审查</a>。夹紧力、刚度和轮胎保持力均待实测。</p>
 <figure class="cover"><div class="plate"><img src="img/flip.png" alt="整块翻转：L、R 夹持，F、B 松开并保持竖直。" width="1400" height="900" loading="lazy"></div><figcaption class="cap">整块翻转：L、R 夹持，F、B 松开并保持竖直。</figcaption></figure>
 <ol><li>先将 50945 套在 42610 上，用二号轴安装在两片 32449 之间；检查轮毂转动、轮轴保持及轮胎配合。</li><li>确认薄梁第 1 十字孔装三号轴和两只半轴套、第 2 圆孔装挡套长销；轮毂装第 4 十字孔。舵机七孔粗连杆用第 2、7 孔，曲柄二号轴内侧装半轴套。</li><li>按 <a href="../../single_arm.md#servo-calibration">单臂标定步骤</a>先脱开曲柄、空载定位，再在行程中间断电连接。</li><li>夹紧端以接触和轻微压缩为准，小步推进；图示 3.84° 是参考值，旧版脉宽不能直接使用。检查推杆十字块两侧半轴套有没有沿轴滑移。</li><li>开端参考推杆后退 10.00mm、主臂外张 25°。改变轮胎、轴长或开角后重新检查避让。</li><li>单臂夹紧后检查横向滑动、轴向滑动和拧层阻力，再低速测试翻转。记录实测外径、脉宽、夹紧保持情况，之后再复制四臂。</li></ol><p>相邻机械手保持竖直时才允许另一只转动；使用 <code>--no-adjacent-horizontal</code>。禁止把相邻机械手同时转到水平。</p></section></div></html>

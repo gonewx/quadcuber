@@ -11,6 +11,8 @@
 - [完整验证日志](validation.txt) · [压头专项检查](pressure_pad_checks.json)
 - [实物加载记录表](load_test_template.csv)
 
+重力承重专项：[下沉分析与测试步骤](gravity_test.md) · [承重记录表](gravity_test.csv)。实际下沉尚未测得；理想推杆退让改变夹口，上下不对称变形和整头倾斜另测。
+
 ## 前端孔位和装配
 
 孔号从后端（靠转盘）数，上下相同。每个轮毂保持在主臂中面，距主转轴 40mm。

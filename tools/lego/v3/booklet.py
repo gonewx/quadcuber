@@ -338,7 +338,7 @@ def write_html(parts, step_new, keys, subs):
                          + f'<div class="x">{count}×</div><div class="n">{esc(model.CATALOG[name][0])} · {number}</div></div>')
         out.append('<div class="callout">' + ''.join(chips) + '</div><div class="plate">' + img(f'step{k:02d}.png', st['title']) + '</div>')
         out.append(f'<p>{esc(st["text"])}</p></section>')
-    out += ['<section id="checks" class="cover"><h2>验证与单臂验收</h2>',
+    out += ['<section id="checks" class="cover"><h2>验证与单臂验收</h2><p><a href="gravity_test.md">重力承重与下沉测试</a> · <a href="gravity_test.csv">承重记录表</a>：先测整头倾斜、上下轮端位移和魔方中心下沉，再进行交接与翻转。</p>',
             '<p>以下为双侧版的实物试装与标定步骤。检查范围和结果见 <a href="mechanical_audit.md">完整机械审查</a>。夹紧力、刚度和轮胎保持力均待实测。</p>',
             figure('flip.png', '整块翻转：L、R 夹持，F、B 松开并保持竖直。', 1400, 900),
             '<ol><li>先将 50945 套在 42610 上，用二号轴安装在两片 32449 之间；检查轮毂转动、轮轴保持及轮胎配合。</li>'
