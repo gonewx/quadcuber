@@ -161,14 +161,14 @@ def main(render=True):
     for tag, s in (("closed", 0.0), ("open", model.OPEN_S)):
         module_parts = model.build({"L": (s, 0.0)}, with_cube=False)
         linkage_step = next(k for k, st in enumerate(model.STEPS, 1) if st["title"] == "十字块和舵机连杆")
-        ps = [p for p in module_parts if p.arm == "L" and (p.step == linkage_step or p.name in ("geekservo.dat", "3708.dat"))]
+        ps = [p for p in module_parts if p.arm == "L" and (p.step == linkage_step or p.name == "geekservo.dat" or p.note == "推杆长轴")]
         path = write(os.path.join(WORK, f"servo_{tag}.ldr"), "0 servo\n" + "\n".join(p.ldraw() for p in ps) + "\n")
         jobs.append({"model": path, "out": os.path.join(IMG, f"servo_{tag}.png"),
                      "opts": {"w": 1000, "h": 620, "yaw": 20, "pitch": 30, "margin": 0.05}})
     # 承重导向特写：完整显示前后铰点、固定侧架和转盘安装耳。
     for tag, stroke in (("closed", 0.), ("open", model.OPEN_S)):
         ps = [p for p in model.build({"L": (stroke, 0.)}, with_cube=False)
-              if p.arm == "L" and p.head and p.pos[0] > -370 and p.name != "3708.dat"]
+              if p.arm == "L" and p.head and p.pos[0] > -370 and p.note != "推杆长轴"]
         path = write(os.path.join(WORK, f"guide_{tag}.ldr"), "0 guide\n" + "\n".join(p.ldraw() for p in ps) + "\n")
         jobs.append({"model": path, "out": os.path.join(IMG, f"guide_{tag}.png"),
                      "opts": {"w": 1400, "h": 1000, "yaw": 28, "pitch": 25, "margin": .06}})
@@ -288,7 +288,7 @@ def write_html(parts, step_new, keys, subs):
            '<header class="cover"><div class="eyebrow">quadcuber · research/self-aligning-jaws</div>',
            '<h1>Watt 承重导向与轮胎压头</h1>',
            '<p class="lead">公共接头两侧增加 Watt 承重导向，通过铰接薄梁连接直推杆；输入杆改用 32017 五孔薄梁。转盘及固定支座后移32mm，底座增加后端落地梁。每臂上下各一组 42610＋50945，四臂共需八组轮胎。</p>',
-           '<p>每个轮毂由两根 32449 四孔薄梁夹持，用 32062 二号轴贯穿；轮毂圆孔可以绕轴转动。舵机后移 8mm，使用 32524 七孔粗连杆的第 1、6 孔。</p>',
+           '<p>每个轮毂由两根 32449 四孔薄梁夹持，用 32062 二号轴贯穿；轮毂圆孔可以绕轴转动。舵机与导向框前移16mm，推杆改为2L＋11L，总长104mm；仍使用32524七孔粗连杆的第1、6孔。</p>',
            '<p><b>承重闭环与侧架连接已落实，名义 CAD 检查通过。</b>公共接头的上翘反力经 Watt 摆杆传到侧架。<a href="load_path.md">承重结构、静力与限制</a>。实物刚度、保持力和带载间隙仍待单臂验收。<a href="mechanical_audit.md">完整审查、刚度计算与测试指标</a> · <a href="load_test_template.csv">实测记录表</a></p>',
            '<p><b>当前图、模型与清单包含独立开限位。</b>邻臂单层连续回转间隙下界 1.333mm；后部旋转半轴套对连杆的下界约2.577mm（81个开度）；活动轴对驱动组件连续开合下界约2.0mm。导向内部另有约0.800～0.977mm运动间隙，仍需实测，不能据 CAD 通过认定带载合格。</p>',
            '<p><b>实物曾出现后拉翻折：</b>本版新增上下独立挡轴，正常开端上25°、下24.65°，名义约29.8°挡止。必须手动核对并重标舵机开端。<a href="open_stops.md">失效原因、改装清单与验收步骤</a> · <a href="open_stop_checks.json">限位检查数据</a></p>',

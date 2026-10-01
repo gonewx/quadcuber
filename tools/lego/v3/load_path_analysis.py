@@ -119,10 +119,24 @@ def static_case(weight_N,preload_N=0.,stroke=0.):
     assert np.linalg.norm(virtual_work-q)<1e-9
     assert np.linalg.norm(total_force-[0.,weight_N])<1e-9
     assert abs(total_moment-expected_moment)<1e-8
+    spatial=crosshead_spatial_balance(c,ends,guide_directions,drive_direction,input_loads,stroke)
+    # 不能用驱动薄梁的合力替代完整载荷：正负Z两片轴力不同，会传入绕Y的弯矩。
+    # 两片梁是二力杆，D端受力分别与C端相反；孔轴弯矩等仍沿用算例的省略假设。
+    rod_force=np.zeros(3);rod_moment=np.zeros(3)
+    parts=m.module(stroke,steps=False)
+    for side,label in ((-1,'负Z'),(1,'正Z')):
+        z=next(p.pos[2] for p in parts if p.note=='推杆铰接薄梁' and p.pos[2]*side>0)*.4
+        force=-spatial['各侧驱动薄梁轴力_N'][label]*np.r_[drive_direction,0.]
+        rod_force+=force
+        rod_moment+=np.cross([0.,0.,z],force)
     return {'单臂分担重量_N':weight_N,'每个上接触预载_N':preload_N,
             '夹指':jaws,'输入杆传给公共接头的力_N':q.tolist(),
             '两侧合计的前后导向杆轴力_N':forces[:2].tolist(),
-            '公共接头组合体空间平衡':crosshead_spatial_balance(c,ends,guide_directions,drive_direction,input_loads,stroke),
+            '公共接头组合体空间平衡':spatial,
+            '推杆前接头载荷':{'合力_xyz_N':rod_force.tolist(),'合矩_xyz_Nmm':rod_moment.tolist(),
+                '绕推杆轴线的扭矩_Nmm':float(rod_moment[0]),
+                '横向弯矩幅值_Nmm':float(np.linalg.norm(rod_moment[1:])),
+                '假设':'由同一空间二力杆算例的两侧D端反力合成；合力很小不代表合矩为零。'},
             '符号':'导向杆正值为压缩，负值为拉伸；两侧分配须计输入杆轴向偏心。',
             '铰接驱动轴力_N':float(forces[2]),
             '推杆铰接头竖向反力幅值_N':float(abs(forces[2]*drive_direction[1])),

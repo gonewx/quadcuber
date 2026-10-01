@@ -145,7 +145,7 @@ def rod_check():
     rows, worst = [], None
     for stroke in sorted(set(strokes)):
         parts = model.module(stroke, steps=False)
-        rod = next(p for p in parts if p.name == '3708.dat')
+        rod = next(p for p in parts if p.note == '推杆长轴')
         targets = [p for p in parts if p.note in ('曲柄端轴','曲柄端内限位')]
         if not targets:  # 也能复现旧单侧版的失败。
             targets = [next(p for p in parts if p.name=='32062.dat' and not p.head)]
@@ -205,7 +205,7 @@ def fixed_rod_checks():
     results = {}
     for s in np.linspace(0, model.OPEN_S, 41):
         parts = model.module(s, steps=False)
-        rod = next(p for p in parts if p.name == '3708.dat')
+        rod = next(p for p in parts if p.note == '推杆长轴')
         for i,p in enumerate(parts):
             if p.head:
                 continue

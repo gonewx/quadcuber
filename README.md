@@ -1,6 +1,6 @@
 > 本项工作统一使用主目录的 `research/self-aligning-jaws` 分支。当前模型为四臂上下 42610/50945 轮胎压头，整机共需 8 组；压头用两端十字孔薄梁，舵机用粗连杆。
 > [图文搭建说明](docs/lego/v3/index.html) · [设计与验证](docs/lego/v3/README.md) · [零件清单](docs/lego/v3/bom.csv)
-> 当前采用双侧轮胎支承、Watt 承重导向、铰接推杆和独立防翻折开限位。[承重结构报告](docs/lego/v3/load_path.md)说明公共接头支承与载荷路径。正常行程 CAD 检查通过；实物限位须手动验收并重新标定舵机开端。实物刚度、保持力及小间隙部位仍待验收。本轮两处间隙扩大到约2.0mm、2.577mm，其他小间隙仍待处理与实测。详见[搭建说明](docs/lego/v3/index.html)、[间隙修订](docs/lego/v3/motion_clearance_update.md)和[机械审查](docs/lego/v3/mechanical_audit.md)。
+> 当前采用双侧轮胎支承、Watt 承重导向、铰接推杆和独立防翻折开限位。[承重结构报告](docs/lego/v3/load_path.md)说明公共接头支承与载荷路径。正常行程 CAD 检查通过；实物限位须手动验收并重新标定舵机开端。实物刚度、保持力及小间隙部位仍待验收。本轮两处间隙扩大到约2.0mm、2.577mm，其他小间隙仍待处理与实测。推杆已从120mm缩至104mm，前悬伸从63.823mm减至47.823mm，见[推杆支承修订](docs/lego/v3/rod_support_update.md)。详见[搭建说明](docs/lego/v3/index.html)、[间隙修订](docs/lego/v3/motion_clearance_update.md)和[机械审查](docs/lego/v3/mechanical_audit.md)。
 > 代码与说明书分别以 `tools/lego/v3/`、`docs/lego/v3/` 为唯一入口；旧方案保存在 Git 历史中。
 
 # quadcuber

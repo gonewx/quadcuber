@@ -65,12 +65,13 @@ def main():
         crank_axle = next(p for p in parts if p.note == '曲柄端轴')
         assert np.allclose(sorted([crank_axle.world([-20,0,0])[2],crank_axle.world([20,0,0])[2]]),[0,40])
         assert any(p.note == '曲柄端内限位' and np.linalg.norm(p.pos-(crank_axle.pos+[0,0,-15]))<1e-6 for p in parts)
-        # 两个导向轴承都必须完整落在后段 12L 推杆之内，不能只看无限长轴线。
-        rod = next(p for p in parts if p.name == '3708.dat')
+        # 两个导向轴承都必须完整落在后段推杆之内，不能只看无限长轴线。
+        rod = next(p for p in parts if p.note == '推杆长轴')
+        rod_lo,rod_hi=check.connector_bounds(rod.name)
         for bearing_x in model.ROD_BEARING_X:
             hole_x=bearing_x+model.MODULE_DX
-            assert rod.pos[0] - 120 <= hole_x - 10
-            assert rod.pos[0] + 120 >= hole_x + 10
+            assert rod.pos[0] + rod_lo <= hole_x - 10
+            assert rod.pos[0] + rod_hi >= hole_x + 10
 
     # 前后推杆会随头回转；中间行程也要检查它与固定舵机连杆的相对姿态。
     for fraction in range(1, 8):

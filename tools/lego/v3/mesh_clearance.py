@@ -51,6 +51,24 @@ def mounting_contact(a,b):
     return distance>=.999e-4
 
 
+def rod_socket_contact(a,b):
+    """2L短轴使固定的32013与59443端面贴合；仅容许零件网格0.0005LDU舍入误差。
+
+    不用于运动件避让。两件须同轴、中心距50LDU，向后移0.001LDU后须完全分离。
+    """
+    joint,sleeve=(a,b) if a.note=='推杆铰接头' else (b,a)
+    if (joint.name,joint.note,sleeve.name,sleeve.note)!=('32013.dat','推杆铰接头','59443.dat','推杆连接器'):
+        return False
+    axis=sleeve.rot[:,2]  # 59443的轴孔沿零件局部Z。
+    if not np.allclose(joint.pos-sleeve.pos,50*axis,atol=1e-8,rtol=0):
+        return False
+    if abs(abs(joint.rot[:,2]@axis)-1)>1e-8:
+        return False
+    moved=sleeve.moved(np.eye(3));moved.pos-=.001*axis
+    distance=fcl.distance(obj(joint),obj(moved),fcl.DistanceRequest(),fcl.DistanceResult())
+    return distance>=.000499
+
+
 def front_rotation_check():
     """新前端对本臂固定件和竖直邻臂，用网格距离补查旧体素姿态扫描。"""
     worst=None; hits=[]; tested=0; states=0
@@ -103,7 +121,7 @@ def main():
                     contacts.add(key);continue
                 dist=fcl.distance(objects[id(a)],objects[id(b)],fcl.DistanceRequest(),fcl.DistanceResult())*.4
                 tested+=1
-                if dist<=1e-8 and mounting_contact(a,b):
+                if dist<=1e-8 and (mounting_contact(a,b) or rod_socket_contact(a,b)):
                     contacts.add(key);continue
                 row={'零件对':key,'间隙_mm':dist,'行程比例':float(frac)}
                 if key not in worst or dist<worst[key]['间隙_mm']:

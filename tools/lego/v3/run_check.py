@@ -270,7 +270,7 @@ if __name__ == "__main__":
     if rod_result['状态'] == '失败':
         total += 1
         worst = rod_result['最差']
-        print(f"[连续回转] 32062 曲柄轴侵入 3708 推杆回转包络："
+        print(f"[连续回转] 32062 曲柄轴侵入推杆回转包络："
               f"余量 {worst['回转包络径向余量_mm']:.3f}mm，"
               f"行程 {worst['行程比例']:.3%}。见 mechanical_audit.py。")
     print("问题数:", total)
