@@ -21,19 +21,32 @@ def main():
     ps=m.module(0,steps=False)
     stops=[p for p in ps if p.note=='开限位挡轴']
     assert len(stops)==2
-    tangent_dx=math.sqrt((m.JAW_A+m.LINK_L)**2-m.JAW_Y**2)
-    tangent_angle=math.degrees(math.atan2(m.JAW_Y,tangent_dx))
-    tangent_stroke=(tangent_dx-(m.PIVOT_X-m.CROSS_CLOSED_X))*.4
+    tangencies={}
+    for side in (-1,1):
+        lo,hi=m.OPEN_S,m.OPEN_S+10.
+        for _ in range(60):
+            mid=(lo+hi)/2;c,_=m.crosshead_pose(mid)
+            radius=math.hypot(m.PIVOT_X-c[0],side*m.JAW_Y-c[1])
+            if radius>m.JAW_A+m.LINK_L:hi=mid
+            else:lo=mid
+        stroke=(lo+hi)/2;c,_=m.crosshead_pose(stroke)
+        angle=math.degrees(math.atan2(m.JAW_Y-side*c[1],m.PIVOT_X-c[0]))
+        tangencies[side]={'推杆行程_LDU':stroke,'汇合角_deg':angle}
+    tangent_stroke=min(row['推杆行程_LDU'] for row in tangencies.values())*.4
     branches=[]
     for s in (0.,m.OPEN_S):
-        dx=m.PIVOT_X-m.CROSS_CLOSED_X+s;r=math.hypot(dx,m.JAW_Y)
-        alpha=math.atan2(m.JAW_Y,dx)
-        delta=math.acos((r*r+m.JAW_A**2-m.LINK_L**2)/(2*r*m.JAW_A))
-        branches.append({'推杆后退_mm':s*.4,'正常角_deg':math.degrees(alpha-delta),'另一解_deg':math.degrees(alpha+delta)})
+        c,_=m.crosshead_pose(s)
+        for side in (-1,1):
+            dx,dy=m.PIVOT_X-c[0],m.JAW_Y-side*c[1]
+            r=math.hypot(dx,dy);alpha=math.atan2(dy,dx)
+            delta=math.acos((r*r+m.JAW_A**2-m.LINK_L**2)/(2*r*m.JAW_A))
+            branches.append({'夹指':'下' if side>0 else '上','推杆后退_mm':s*.4,
+                             '正常角_deg':math.degrees(alpha-delta),'另一解_deg':math.degrees(alpha+delta)})
     rows=[]
     for stop in stops:
         sy=np.sign(stop.pos[1]);pivot=np.array([m.PIVOT_X+m.MODULE_DX,sy*m.JAW_Y,0.])
         beam=m.Part('32524.dat',4,pivot,m.I,0)
+        tangent_angle=tangencies[sy]["汇合角_deg"]
         for roll in range(0,91,5):
             stop.rot=m.ALONG_Z@m.rot_x(roll)
             def at(deg):
@@ -49,11 +62,18 @@ def main():
                 else:lo=mid
             # 异常挡止后的角度继续取样，不能只证明一个零宽度接触点。
             assert all(at(deg)<=1e-8 for deg in np.linspace(hi+.01,tangent_angle,50))
-            stroke=(m.CROSS_CLOSED_X-m.cross_x_for_beta(math.radians(hi)))*.4
+            first_contact=hi
+            slo,shi=0.,tangencies[sy]['推杆行程_LDU']-1e-9
+            for _ in range(60):
+                smid=(slo+shi)/2
+                if math.degrees(m.jaw_beta(smid,sy))>first_contact:shi=smid
+                else:slo=smid
+            stroke=(slo+shi)*.2
             rows.append({'夹指':'下' if sy>0 else '上','挡轴自转_deg':roll,'25度工作间隙_mm':work_gap,
-                         '首次接触角_deg':hi,'接触对应推杆后退_mm':stroke,'距汇合点行程_mm':tangent_stroke-stroke})
+                         '首次接触角_deg':first_contact,'接触对应推杆后退_mm':stroke,'距汇合点行程_mm':tangencies[sy]['推杆行程_LDU']*.4-stroke})
     out={'model.py_SHA256':hashlib.sha256(Path(m.__file__).read_bytes()).hexdigest(),
-         '两组角度':branches,'汇合角_deg':tangent_angle,'汇合行程_mm':tangent_stroke,
+         '两组角度':branches,'各夹指汇合点':{str(side):{'汇合角_deg':r['汇合角_deg'],'汇合行程_mm':r['推杆行程_LDU']*.4} for side,r in tangencies.items()},
+         '最早汇合行程_mm':tangent_stroke,
          '正常开行程_mm':m.OPEN_S*.4,'两组解汇合前剩余后拉_mm':tangent_stroke-m.OPEN_S*.4,
          '名义挡轴方向接触':[r for r in rows if r['挡轴自转_deg']==0],
          '挡轴自转采样接触角范围_deg':[min(r['首次接触角_deg'] for r in rows),max(r['首次接触角_deg'] for r in rows)],

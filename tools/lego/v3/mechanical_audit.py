@@ -14,6 +14,9 @@ import numpy as np
 
 import model
 import ldraw
+import check
+
+check.CONNECTOR_LEN.update(model.CONNECTOR_LEN)
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / 'docs/lego/v3/mechanical_audit.json'
@@ -148,15 +151,19 @@ def rod_check():
             targets = [next(p for p in parts if p.name=='32062.dat' and not p.head)]
         for part in targets:
             tris = world(part)
-            assert tris[:,:,0].min() > rod.pos[0]-117.5
-            assert tris[:,:,0].max() < rod.pos[0]+117.5
+            # 推杆前端改为铰接后，曲柄轴可能只覆盖长轴末段；按真实轴向范围裁剪。
+            axial_min,axial_max=check.connector_bounds(rod.name)
+            tris=clip_x(tris,rod.pos[0]+axial_min,rod.pos[0]+axial_max)
+            if not len(tris):
+                rows.append({'行程比例':stroke/model.OPEN_S,'零件':part.name,'用途':part.note,'轴向范围分离':True})
+                continue
             radii,_ = projected_minimum(tris)
             gap = (float(radii.min())-6)*.4
             vertices = tris.reshape(-1,3)
             witness = vertices[np.linalg.norm(vertices[:,1:],axis=1).argmin()]
             angle = math.degrees(math.atan2(witness[2],witness[1]))
             local = (witness-rod.pos) @ model.rot_x(angle)
-            collision = abs(local[0])<117.5 and 0<local[1]<6 and abs(local[2])<1e-8
+            collision = axial_min<local[0]<axial_max and 0<local[1]<6 and abs(local[2])<1e-8
             row = {'行程比例':stroke/model.OPEN_S, '零件':part.name, '用途':part.note,
                    '回转包络径向余量_mm':gap, '表面见证顶点_LDU':witness.tolist(),
                    '见证角_deg':angle, '顶点在推杆实体内':bool(collision)}
@@ -164,7 +171,7 @@ def rod_check():
             if worst is None or gap<worst['回转包络径向余量_mm']:
                 worst = row
     return {'状态':'失败' if worst['回转包络径向余量_mm']<0 else '通过',
-            '推杆回转半径_mm':2.4, '最差':worst, '行程记录':rows,
+            '推杆回转半径_mm':2.4, '轴向范围':'按连接轴名义长度裁剪，含端部保守包络', '最差':worst, '行程记录':rows,
             '曲柄角范围_deg':[math.degrees(th0),math.degrees(th1)],
             '连续行程径向保守余量_mm':(min(model.CRANK_C[1]+model.CRANK_R*math.sin(th0),
                                          model.CRANK_C[1]+model.CRANK_R*math.sin(th1))-9.001-6)*.4}
@@ -205,7 +212,8 @@ def fixed_rod_checks():
             tris = world(p)
             if np.any(tris.min((0,1))[1:] > 12) or np.any(tris.max((0,1))[1:] < -12):
                 continue
-            tris = clip_x(tris, rod.pos[0]-117.5, rod.pos[0]+117.5)
+            axial_min,axial_max=check.connector_bounds(rod.name)
+            tris = clip_x(tris, rod.pos[0]+axial_min, rod.pos[0]+axial_max)
             if not len(tris):
                 continue
             r,_ = projected_minimum(tris)

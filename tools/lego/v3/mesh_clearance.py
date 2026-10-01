@@ -37,6 +37,20 @@ def fitting(a,b):
     return None
 
 
+def mounting_contact(a,b):
+    """转盘安装耳端面与相邻支承梁的名义贴合；不是体积穿入豁免。"""
+    turntable,pad=(a,b) if a.name=='18938.dat' else (b,a)
+    if turntable.name!='18938.dat' or pad.note not in ('转盘垫梁','转盘后横梁'):
+        return False
+    moved=pad.moved(np.eye(3))
+    # 用转盘局部耳方向，因而也适用于机械头已回转的姿态。
+    normal=turntable.rot[:,0]
+    sign=np.sign((pad.pos-turntable.pos)@normal)
+    moved.pos+=sign*normal*1e-4
+    distance=fcl.distance(obj(turntable),obj(moved),fcl.DistanceRequest(),fcl.DistanceResult())
+    return distance>=.999e-4
+
+
 def front_rotation_check():
     """新前端对本臂固定件和竖直邻臂，用网格距离补查旧体素姿态扫描。"""
     worst=None; hits=[]; tested=0; states=0
@@ -55,6 +69,7 @@ def front_rotation_check():
                     candidates=np.flatnonzero(np.linalg.norm(np.maximum(np.maximum(flo-hi,lo-fhi),0),axis=1)<5)
                     for index in candidates:
                         b=fixed[index]
+                        if fitting(a,b):continue
                         dist=fcl.distance(obj(a),obj(b),fcl.DistanceRequest(),fcl.DistanceResult())*.4
                         tested+=1
                         row={'零件对':[a.name,a.note,b.name,b.note],'邻臂':b.arm,
@@ -88,6 +103,8 @@ def main():
                     contacts.add(key);continue
                 dist=fcl.distance(objects[id(a)],objects[id(b)],fcl.DistanceRequest(),fcl.DistanceResult())*.4
                 tested+=1
+                if dist<=1e-8 and mounting_contact(a,b):
+                    contacts.add(key);continue
                 row={'零件对':key,'间隙_mm':dist,'行程比例':float(frac)}
                 if key not in worst or dist<worst[key]['间隙_mm']:
                     worst[key]=row

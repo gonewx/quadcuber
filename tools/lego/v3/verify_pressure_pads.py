@@ -1,4 +1,4 @@
-"""补充检查：上下对称的轮胎压头、固定轴销与双侧轮轴、推杆导向覆盖和魔方本体/相邻两层避让。
+"""补充检查：上下轮胎压头及各自的真实运动轨迹、固定轴销与双侧轮轴、推杆导向覆盖和魔方本体/相邻两层避让。
 
 表面离散采样只能给出 CAD 筛查结果，不能证明实物公差、轮胎保持力或夹紧力。
 """
@@ -31,9 +31,9 @@ def cube_clearance(parts, lower, upper):
 
 def main():
     for stroke in np.linspace(0, model.OPEN_S, 25):
-        beta = model.jaw_beta(stroke)
         parts = model.module(stroke, steps=False)
         for sy in (1, -1):
+            beta=model.jaw_beta(stroke,sy)
             pivot = np.array([model.PIVOT_X + model.MODULE_DX, sy * model.JAW_Y, 0])
             rotation = model.rot_z(sy * beta)
             front = pivot + rotation @ [model.JAW_REACH, 0, 0]
@@ -67,7 +67,8 @@ def main():
         assert any(p.note == '曲柄端内限位' and np.linalg.norm(p.pos-(crank_axle.pos+[0,0,-15]))<1e-6 for p in parts)
         # 两个导向轴承都必须完整落在后段 12L 推杆之内，不能只看无限长轴线。
         rod = next(p for p in parts if p.name == '3708.dat')
-        for hole_x in (-450 + model.MODULE_DX, -330 + model.MODULE_DX):
+        for bearing_x in model.ROD_BEARING_X:
+            hole_x=bearing_x+model.MODULE_DX
             assert rod.pos[0] - 120 <= hole_x - 10
             assert rod.pos[0] + 120 >= hole_x + 10
 
@@ -95,14 +96,15 @@ def main():
     for name in ('42610.dat','50945_nominal.dat'):
         assert counts[name] == 8, (name, counts[name])
     beta = model.CLAMP_BETA
-    assert counts["42003.dat"] == counts["6587.dat"] == counts["32017.dat"] == 0
-    assert counts["32449.dat"] == 16
+    assert counts["42003.dat"] == counts["6587.dat"] == 0
+    assert counts["32017.dat"] == 32
+    assert counts["32449.dat"] == 24  # 16片轮端支承＋8片推杆铰接薄梁
     assert counts["11478.dat"] == counts["32002.dat"] == 0
     inner_edge = model.JAW_Y + model.JAW_REACH * math.sin(beta) - model.TYRE_RADIUS
     assert abs(inner_edge - (model.CUBE_HALF - model.TYRE_PRELOAD)) < 1e-6
     assert 0 < model.TYRE_PRELOAD < 1.5
     results['名义尺寸'] = {
-        '夹紧主臂角_deg': math.degrees(beta), '松开主臂角_deg': math.degrees(model.OPEN_BETA),
+        '夹紧主臂角_deg': math.degrees(beta), '松开主臂角_deg': {str(side):math.degrees(model.jaw_beta(model.OPEN_S,side)) for side in (-1,1)},
         '推杆行程_mm': model.OPEN_S * .4,
         '自由夹口_mm': 2 * (model.CUBE_HALF - model.TYRE_PRELOAD) * .4,
         '每侧橡胶名义压缩_mm': model.TYRE_PRELOAD * .4,

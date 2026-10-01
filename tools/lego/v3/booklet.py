@@ -149,7 +149,7 @@ def main(render=True):
                               "margin": 0.04}})
     # 单个模块的机械头: 夹紧 / 松开, 从侧面看 (视线沿 Z)
     for tag, s in (("closed", 0.0), ("open", model.OPEN_S)):
-        ps = [p for p in model.build({"L": (s, 0.0)}) if (p.arm == "L" and p.head and p.pos[0] > -235) or p.name == "cube56.dat"]
+        ps = [p for p in model.build({"L": (s, 0.0)}) if (p.arm == "L" and p.head and p.pos[0] > -370) or p.name == "cube56.dat"]
         path = write(os.path.join(WORK, f"mech_{tag}.ldr"), "0 mech\n" + "\n".join(p.ldraw() for p in ps) + "\n")
         jobs.append({"model": path, "out": os.path.join(IMG, f"mech_{tag}.png"),
                      "opts": {"w": 1000, "h": 620, "yaw": 0, "pitch": 0, "margin": 0.05}})
@@ -165,6 +165,13 @@ def main(render=True):
         path = write(os.path.join(WORK, f"servo_{tag}.ldr"), "0 servo\n" + "\n".join(p.ldraw() for p in ps) + "\n")
         jobs.append({"model": path, "out": os.path.join(IMG, f"servo_{tag}.png"),
                      "opts": {"w": 1000, "h": 620, "yaw": 20, "pitch": 30, "margin": 0.05}})
+    # 承重导向特写：完整显示前后铰点、固定侧架和转盘安装耳。
+    for tag, stroke in (("closed", 0.), ("open", model.OPEN_S)):
+        ps = [p for p in model.build({"L": (stroke, 0.)}, with_cube=False)
+              if p.arm == "L" and p.head and p.pos[0] > -370 and p.name != "3708.dat"]
+        path = write(os.path.join(WORK, f"guide_{tag}.ldr"), "0 guide\n" + "\n".join(p.ldraw() for p in ps) + "\n")
+        jobs.append({"model": path, "out": os.path.join(IMG, f"guide_{tag}.png"),
+                     "opts": {"w": 1400, "h": 1000, "yaw": 28, "pitch": 25, "margin": .06}})
     # 翻转状态: L、R 夹紧转到一半, F、B 松开
     flip = model.build({"L": (0.0, 45.0), "R": (0.0, -45.0), "F": (model.OPEN_S, 0.0), "B": (model.OPEN_S, 0.0)})
     for p in flip:
@@ -277,14 +284,14 @@ def write_html(parts, step_new, keys, subs):
         return '<figure class="cover"><div class="plate">' + img(src, caption, w, h) + f'</div><figcaption class="cap">{caption}</figcaption></figure>'
 
     out = ['<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
-           '<title>quadcuber · 上下相同的轮胎压头</title>', f'<style>{CSS}</style><div class="wrap">',
+           '<title>quadcuber · Watt 承重导向与轮胎压头</title>', f'<style>{CSS}</style><div class="wrap">',
            '<header class="cover"><div class="eyebrow">quadcuber · research/self-aligning-jaws</div>',
-           '<h1>双侧轮胎压头与防翻折限位</h1>',
-           '<p class="lead">沿用转盘和 5 孔输入连杆；每个模块向外移 16mm，上下主臂都用 7 孔粗梁，底座四角改用 7×5 框架连接。每臂上下各一组 42610＋50945，四臂共需八组轮胎。</p>',
+           '<h1>Watt 承重导向与轮胎压头</h1>',
+           '<p class="lead">公共接头两侧增加 Watt 承重导向，通过铰接薄梁连接直推杆；输入杆改用 32017 五孔薄梁。转盘及固定支座后移32mm，底座增加后端落地梁。每臂上下各一组 42610＋50945，四臂共需八组轮胎。</p>',
            '<p>每个轮毂由两根 32449 四孔薄梁夹持，用 32062 二号轴贯穿；轮毂圆孔可以绕轴转动。舵机后移 8mm，使用 32524 七孔粗连杆的第 2、7 孔。</p>',
-           '<p><b>双侧支承与后部避让已落实，名义 CAD 检查通过。</b>曲柄改走远离推杆的圆弧，并加内侧半轴套。实物刚度、保持力和带载间隙仍待单臂验收。<a href="mechanical_audit.md">完整审查、刚度计算与测试指标</a> · <a href="load_test_template.csv">实测记录表</a></p>',
-           '<p><b>当前图、模型与清单包含独立开限位。</b>邻臂单层连续回转间隙下界 1.333mm；后部旋转半轴套对连杆的下界约 0.878mm（81 个开度）。这两处是实测重点，不能据 CAD 通过认定带载合格。</p>',
-           '<p><b>实物曾出现后拉翻折：</b>本版新增上下独立挡轴，正常开角25°，名义约29.8°挡止。必须手动核对并重标舵机开端。<a href="open_stops.md">失效原因、改装清单与验收步骤</a> · <a href="open_stop_checks.json">限位检查数据</a></p>',
+           '<p><b>承重闭环与侧架连接已落实，名义 CAD 检查通过。</b>公共接头的上翘反力经 Watt 摆杆传到侧架。<a href="load_path.md">承重结构、静力与限制</a>。实物刚度、保持力和带载间隙仍待单臂验收。<a href="mechanical_audit.md">完整审查、刚度计算与测试指标</a> · <a href="load_test_template.csv">实测记录表</a></p>',
+           '<p><b>当前图、模型与清单包含独立开限位。</b>邻臂单层连续回转间隙下界 1.333mm；后部旋转半轴套对连杆的下界约 0.878mm（81 个开度）。导向活动轴对驱动薄梁全开名义间隙仅约0.265mm。这些部位是实测重点，不能据 CAD 通过认定带载合格。</p>',
+           '<p><b>实物曾出现后拉翻折：</b>本版新增上下独立挡轴，正常开端上25°、下24.65°，名义约29.8°挡止。必须手动核对并重标舵机开端。<a href="open_stops.md">失效原因、改装清单与验收步骤</a> · <a href="open_stop_checks.json">限位检查数据</a></p>',
            '<div class="plate">' + img('cover.png', '整机装配总览', 1400, 900) + '</div>',
            '<div class="facts">'
            f'<div class="fact"><b>{len(steps)} 步</b><span>完整装配</span></div>'
@@ -297,7 +304,7 @@ def write_html(parts, step_new, keys, subs):
            '<section id="jaw" class="cover"><h2>压头与传力</h2>',
            figure('jaw_detail.png', '上下均为 42610＋50945 轮胎；每只轮毂两侧各有一根 32449 薄梁。', 1400, 1000),
            '<div class="two">' + figure('mech_closed.png', f'夹紧参考：主臂外张 3.84°，每侧名义压缩约 {(56-gap)/2:.2f}mm。', 1000, 620)
-           + figure('mech_open.png', f'松开参考：主臂外张 25°，推杆后退 {stroke:.2f}mm。', 1000, 620) + '</div>',
+           + figure('mech_open.png', f'松开参考：上夹指25°、下夹指24.65°，推杆后退 {stroke:.2f}mm。', 1000, 620) + '</div>',
            figure('jaw_layers.svg', '孔位与轴向叠放：4mm 薄梁＋8mm 轮毂＋4mm 薄梁；二号轴两端齐平。', 1500, 1000),
            '<ul class="plain"><li>每臂前端：42610 ×2、50945 ×2、32449 ×4、32062 ×2、4519 ×2、32123a ×4、32054 ×2。</li>'
            '<li>上下均为 7 孔主臂：第 2 孔接连杆，第 4 孔作支点，第 6、7 孔接薄梁。</li>'
@@ -305,10 +312,14 @@ def write_html(parts, step_new, keys, subs):
            '<li>50945 按 14×6mm 外包络；42610 标称 11×8mm，CAD 网格外缘约 11.2mm。轮胎安装内槽保留原网格。</li>'
            '<li>轮毂可以滚动；旋转魔方时需要轮胎沿轮轴方向的摩擦力。需要实测轴向滑移、拧层阻力和轮胎保持。</li></ul></section>',
            '<section class="cover"><h2>防翻折开限位</h2>' + figure('open_stop_layout.svg', '下夹指侧视与限位装配；上夹指镜像安装。', 1500, 950) + '<p><a href="open_stops.md">改装步骤与限位检查</a>。正常开合留隙，只有异常继续张开才接触挡轴。</p></section>',
+           '<section class="cover"><h2>公共接头承重导向</h2>',
+           figure('guide_closed.png', '夹紧：Watt 摆杆支承公共接头；32140 根支架用两点接入侧架。', 1400, 1000),
+           figure('guide_open.png', '松开：公共接头横移约0.0284mm，铰接驱动保持真实杆长闭合。', 1400, 1000),
+           '<p>侧架前角两点固定，后部6632与41677通过3749十字轴段锁定相对角度；87083止挡轴穿过间隔套和外侧梁。按步骤保留装轴方向和止挡位置。两侧装配完成后确认活动铰点自由转动。<a href="load_path.md">轴向叠层与承重说明</a></p></section>',
            '<section class="cover"><h2>舵机粗连杆</h2>',
            '<div class="two">' + figure('servo_closed.png', '夹紧：7 孔粗连杆第 2 孔接十字块，第 7 孔接曲柄。', 1000, 620)
            + figure('servo_open.png', '松开：曲柄沿远离推杆的一侧转开，二号轴内端加半轴套。', 1000, 620) + '</div>',
-           '<p>舵机相对旧版后移一孔（8mm），垫梁的黑销孔位也已调整。十字块端用三号轴和两只半轴套；粗连杆直接贴十字块。曲柄端二号轴内侧加半轴套，外端齐平。连杆第 1 孔朝魔方留空，不能反装；曲柄总行程约 97.10°。</p></section>',
+           '<p>舵机相对旧版后移一孔（8mm），垫梁的黑销孔位也已调整。十字块端用三号轴和两只半轴套；粗连杆直接贴十字块。曲柄端二号轴内侧加半轴套，外端齐平。连杆第 1 孔朝魔方留空，不能反装；曲柄总行程约 96.83°。</p></section>',
            '<script type="importmap">{"imports":{"three":"./three/three.module.min.js","three/addons/":"./three/addons/"}}</script>',
            '<section id="v3d-sec" class="cover"><h2>可旋转模型</h2><p>拖动旋转、滚轮缩放、右键平移；滑块按步骤查看。</p>'
            '<div id="v3d" class="plate"><div id="v3d-status">正在加载模型…</div></div>'
@@ -330,7 +341,7 @@ def write_html(parts, step_new, keys, subs):
             row = [model.CATALOG[name][0], number, one[name], count, available, needed]
             writer.writerow(row)
             out.append('<tr>' + ''.join(f'<td>{esc(str(v))}</td>' for v in row) + '</tr>')
-    out.append('</table></div><p class="cap">套装数量沿用仓库清单，大框按已有 4 块计。42610、50945 已有各 4 件，整机各需 8 件，按用户确认另补各 4 件。32449 整机需 16 根，未确认库存；原有 11478 五孔薄梁不能按同一孔位直接替换。其他未录入的零件按 0 计；补充数量需先扣除散件库存。马达已有 2 个，整机还需 2 个。</p></section>')
+    out.append('</table></div><p class="cap">套装数量沿用仓库清单，大框按已有 4 块计。42610、50945 已有各 4 件，整机各需 8 件，按用户确认另补各 4 件。32449 整机需 24 根（轮端16根、驱动8根），未确认库存；原有 11478 五孔薄梁不能按同一孔位直接替换。其他未录入的零件按 0 计；补充数量需先扣除散件库存。马达已有 2 个，整机还需 2 个。</p></section>')
     for k, st in enumerate(steps, 1):
         out.append(f'<section class="cover" id="s{k}"><h2>{k:02d} · {esc(st["title"])}</h2>')
         chips = []
@@ -341,7 +352,7 @@ def write_html(parts, step_new, keys, subs):
         out.append('<div class="callout">' + ''.join(chips) + '</div><div class="plate">' + img(f'step{k:02d}.png', st['title']) + '</div>')
         out.append(f'<p>{esc(st["text"])}</p></section>')
     out += ['<section id="checks" class="cover"><h2>验证与单臂验收</h2><p><a href="gravity_test.md">重力承重与下沉测试</a> · <a href="gravity_test.csv">承重记录表</a>：先测整头倾斜、上下轮端位移和魔方中心下沉，再进行交接与翻转。</p>',
-            '<p>以下为双侧版的实物试装与标定步骤。检查范围和结果见 <a href="mechanical_audit.md">完整机械审查</a>。夹紧力、刚度和轮胎保持力均待实测。</p>',
+            '<p>以下为承重导向版的实物试装与标定步骤。检查范围和结果见 <a href="mechanical_audit.md">完整机械审查</a>。夹紧力、刚度和轮胎保持力均待实测。</p>',
             figure('flip.png', '整块翻转：L、R 夹持，F、B 松开并保持竖直。', 1400, 900),
             '<ol><li>先将 50945 套在 42610 上，用二号轴安装在两片 32449 之间；检查轮毂转动、轮轴保持及轮胎配合。</li>'
             '<li>确认薄梁第 1 十字孔装三号轴和两只半轴套、第 2 圆孔装挡套长销；轮毂装第 4 十字孔。舵机七孔粗连杆用第 2、7 孔，曲柄二号轴内侧装半轴套。</li>'
