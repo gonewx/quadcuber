@@ -265,7 +265,7 @@ def write_html(parts, step_new, keys, subs):
     byname = Counter(p.name for p in parts if p.name != "cube56.dat")
     one = Counter(p.name for p in model.module(steps=False))
     radius = model.TYRE_RADIUS
-    gap = 2 * (model.JAW_Y + model.JAW_REACH * math.sin(model.CLAMP_BETA) - radius) * .4
+    gap = (2 * model.CUBE_HALF - model.TYRE_PRELOAD) * .4
     stroke = model.OPEN_S * .4
 
     def img(src, alt, w=1200, h=860):
@@ -275,12 +275,12 @@ def write_html(parts, step_new, keys, subs):
         return '<figure class="cover"><div class="plate">' + img(src, caption, w, h) + f'</div><figcaption class="cap">{caption}</figcaption></figure>'
 
     out = ['<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
-           '<title>quadcuber · 乐高圆弧压头</title>', f'<style>{CSS}</style><div class="wrap">',
+           '<title>quadcuber · 四组轮胎压头</title>', f'<style>{CSS}</style><div class="wrap">',
            '<header class="cover"><div class="eyebrow">quadcuber · design/swivel-pressure-pads</div>',
-           '<h1>乐高圆弧压头</h1>',
-           '<p class="lead">沿用转盘和 5 孔输入连杆；每个模块向外移 16mm，主臂改为 9 孔粗梁，底座四角改用 7×5 框架连接。前端用固定的小橡胶胎接触魔方，圆弧接触点随主臂角度变化，橡胶受压形成接触面。</p>',
-           '<p>没有从动臂。压头轴由 3 孔薄梁固定，避免夹持时自由滚动。主臂夹紧时外张 4.40°，不要求与魔方平行。</p>',
-           '<p><b>这是供单臂试装的 CAD 方案。</b>轮胎套半轴套的配合、受压后外径和夹紧力尚未经过实物验证。请先按本页的验收步骤搭一只压头，再复制四臂。</p>',
+           '<h1>四组轮胎压头</h1>',
+           '<p class="lead">沿用转盘和 5 孔输入连杆；每个模块向外移 16mm，上侧主臂用 7 孔粗梁、下侧用 5 孔粗梁，底座四角改用 7×5 框架连接。每臂上侧一组 42610＋50945，下侧一个带凸点硬压头，四臂共用四组轮胎。</p>',
+           '<p>轮毂装在 32002 圆销上，可以转动。下侧 6587 轴肩抵住 42003 块体承受推力；凸点端面随主臂倾斜，接触边缘不能视为平面摆动压块。</p>',
+           '<p><b>这是供单臂试装的 CAD 方案。</b>按用户给定的 14×6mm 轮胎外形建模；夹紧力和沿轮轴方向的保持能力尚未经过实物验证。请先按本页的验收步骤搭一只压头，再复制四臂。</p>',
            '<div class="plate">' + img('cover.png', '整机装配总览', 1400, 900) + '</div>',
            '<div class="facts">'
            f'<div class="fact"><b>{len(steps)} 步</b><span>完整装配</span></div>'
@@ -291,15 +291,15 @@ def write_html(parts, step_new, keys, subs):
            + ''.join(f'<a href="#s{k}">{k}. {esc(st["title"])}</a>' for k, st in enumerate(steps, 1))
            + '<a href="#checks">验证与标定</a></nav></header>',
            '<section id="jaw" class="cover"><h2>压头与传力</h2>',
-           figure('jaw_detail.png', '红色粗梁承载；红色短薄梁固定两根轴；黑色橡胶胎接触魔方。上下轮胎装在主臂同一侧。', 1400, 1000),
-           '<div class="two">' + figure('mech_closed.png', f'夹紧参考：主臂外张 4.40°，每侧名义压缩约 {(56-gap)/2:.2f}mm。', 1000, 620)
+           figure('jaw_detail.png', '上侧轮胎、下侧凸点硬压头；两根薄梁分别通过两个销与主臂固定。', 1400, 1000),
+           '<div class="two">' + figure('mech_closed.png', f'夹紧参考：主臂外张 3.64°，橡胶侧名义压缩约 {56-gap:.2f}mm。', 1000, 620)
            + figure('mech_open.png', f'松开参考：主臂外张 25°，推杆后退 {stroke:.2f}mm。', 1000, 620) + '</div>',
-           figure('jaw_layers.svg', '轴向叠放与孔位。上、下轮胎装在主臂同一侧；不可任意加长前轴。', 1500, 1000),
-           '<ul class="plain"><li>每个压头：6632 薄梁 ×1、32062（2 号轴）×2、32123a 半轴套 ×2、3139b 小胎 ×1。</li>'
-           '<li>两根轴相隔两孔（16mm），穿主臂从后数第 7、9 孔。薄梁两端必须是十字孔，不能用圆孔梁代替固定梁。</li>'
-           '<li>轮胎内唇原半径约 3.2mm，半轴套外缘半径约 3.6mm。模型用径向变形估算装后外半径 7.39mm；这不是经过实物确认的配合尺寸。</li>'
-           '<li>无摩擦销仍能传递横向力。输入销和连杆的任务是传力并转动，不需要依靠销轴摩擦锁死。</li>'
-           '<li>轴芯固定后，前端通过圆弧形状和橡胶变形贴合。此版没有独立的平面摆动压块。</li></ul></section>',
+           figure('jaw_layers.svg', '孔位与轴向叠放。轮毂使用 32002 短销；硬压头保留完整 6587 轴尾。', 1500, 1000),
+           '<ul class="plain"><li>每臂：42610 ×1、50945 ×1、32002 ×1、42003 ×1、6587 ×1、32123a ×1、32017 ×2、2780 ×6（仅计压头组件）。</li>'
+           '<li>上侧 7 孔主臂：第 2 孔接连杆，第 4 孔作支点，第 5、7 孔接薄梁。下侧 5 孔主臂：第 1 孔接连杆，第 3 孔作支点，第 4、5 孔接薄梁。</li>'
+           '<li>上侧薄梁第 5 孔装轮毂；下侧薄梁第 3、4 孔装 42003 的两个圆孔。6587 的凸点朝魔方，轴肩贴住块体，外侧半轴套防脱。</li>'
+           '<li>50945 按 14×6mm 外包络；42610 标称 11×8mm，CAD 网格外缘约 11.2mm。轮胎安装内槽保留原网格。</li>'
+           '<li>轮毂可以滚动；旋转魔方时需要轮胎沿轮轴方向的摩擦力。只有一侧橡胶，必须实测轴向滑移、拧层阻力及硬凸点对魔方表面的影响。</li></ul></section>',
            '<script type="importmap">{"imports":{"three":"./three/three.module.min.js","three/addons/":"./three/addons/"}}</script>',
            '<section id="v3d-sec" class="cover"><h2>可旋转模型</h2><p>拖动旋转、滚轮缩放、右键平移；滑块按步骤查看。</p>'
            '<div id="v3d" class="plate"><div id="v3d-status">正在加载模型…</div></div>'
@@ -309,23 +309,23 @@ def write_html(parts, step_new, keys, subs):
            f'window.V3D_STEPMAP = {json.dumps(sorted({p.step for p in parts}))};</script>'
            '<script type="module" src="viewer.js"></script>'
            '<p><a href="model.mpd" download>下载含零件库的 MPD</a> · <a href="model.ldr" download>LDraw 模型</a> · <a href="bom.csv" download>零件清单 CSV</a> · <a href="README.md">设计与验证记录</a></p></section>',
-           '<section id="bom" class="cover"><h2>零件清单</h2><p>单模块不含公共底座；整机包含四个马达和四个舵机。轮胎按真实乐高编号列出，模型中使用装配变形示意。</p>',
+           '<section id="bom" class="cover"><h2>零件清单</h2><p>单模块不含公共底座；整机包含四个马达和四个舵机。轮胎按真实乐高编号列出，模型中使用用户给定尺寸的名义外包络。</p>',
            '<div class="tbl"><table><tr><th>零件</th><th>编号</th><th>单模块</th><th>整机</th><th>已计库存</th><th>扣除后补充</th></tr>']
     with open(os.path.join(OUT, 'bom.csv'), 'w', encoding='utf-8-sig', newline='') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(['零件', '编号', '单模块不含底座', '整机', '已计库存', '扣除后补充'])
         for name, count in sorted(byname.items()):
-            available = 2 if name == "95658.dat" else SET_45680.get(name, 0)
-            number = '3139b' if name == 'grip_tyre.dat' else name[:-4]
+            available = 4 if name in {"42610.dat", "50945_nominal.dat", "42003.dat", "6587.dat"} else (2 if name == "95658.dat" else SET_45680.get(name, 0))
+            number = '50945' if name == '50945_nominal.dat' else name[:-4]
             row = [model.CATALOG[name][0], number, one[name], count, available, max(0, count - available)]
             writer.writerow(row)
             out.append('<tr>' + ''.join(f'<td>{esc(str(v))}</td>' for v in row) + '</tr>')
-    out.append('</table></div><p class="cap">套装数量沿用仓库清单，大框按已有 4 块计。未录入的零件按 0 计；补充数量需先扣除散件库存。马达已有 2 个，整机还需 2 个。</p></section>')
+    out.append('</table></div><p class="cap">套装数量沿用仓库清单，大框按已有 4 块计。42610、50945、42003、6587 各按已确认的 4 件库存计。未录入的零件按 0 计；补充数量需先扣除散件库存。马达已有 2 个，整机还需 2 个。</p></section>')
     for k, st in enumerate(steps, 1):
         out.append(f'<section class="cover" id="s{k}"><h2>{k:02d} · {esc(st["title"])}</h2>')
         chips = []
         for (name, color), count in Counter(part_key(p) for p in step_new[k-1]).items():
-            number = '3139b' if name == 'grip_tyre.dat' else name[:-4]
+            number = '50945' if name == '50945_nominal.dat' else name[:-4]
             chips.append('<div class="chip">' + img(f'part_{name[:-4]}_{color}.png', model.CATALOG[name][0], TW, TH)
                          + f'<div class="x">{count}×</div><div class="n">{esc(model.CATALOG[name][0])} · {number}</div></div>')
         out.append('<div class="callout">' + ''.join(chips) + '</div><div class="plate">' + img(f'step{k:02d}.png', st['title']) + '</div>')
@@ -333,10 +333,10 @@ def write_html(parts, step_new, keys, subs):
     out += ['<section id="checks" class="cover"><h2>验证与单臂验收</h2>',
             '<p>检查范围和结果见 <a href="README.md">验证记录</a>。CAD 检查不能证明轮胎配合牢固，也不能给出实际夹紧力。</p>',
             figure('flip.png', '整块翻转：L、R 夹持，F、B 松开并保持竖直。', 1400, 900),
-            '<ol><li>先试装一只轮胎与半轴套。轮胎不得松脱或相对轮芯打滑；若配合不可靠，停止复制整机。</li>'
-            '<li>装好短薄梁与两根轴，手转橡胶胎：轴芯必须被薄梁固定。轴不能窜出，轮胎不能蹭到主臂。</li>'
+            '<ol><li>先将 50945 套在 42610 上，用 32002 连接薄梁；检查轮毂轴向保持及轮胎配合。</li>'
+            '<li>确认两侧薄梁各有两个固定销，42003 也由两个销固定。6587 轴肩贴块体，外侧半轴套贴紧防脱。轮毂可转动。</li>'
             '<li>按 <a href="../../single_arm.md#servo-calibration">单臂标定步骤</a>先脱开曲柄、空载定位，再在行程中间断电连接。</li>'
-            '<li>夹紧端以接触和轻微压缩为准，小步推进；图示 4.40° 是参考值，旧版脉宽不能直接使用。检查推杆十字块两侧半轴套有没有沿轴滑移。</li>'
+            '<li>夹紧端以接触和轻微压缩为准，小步推进；图示 3.64° 是参考值，旧版脉宽不能直接使用。检查推杆十字块两侧半轴套有没有沿轴滑移。</li>'
             f'<li>开端参考推杆后退 {stroke:.2f}mm、主臂外张 25°。改变轮胎、轴长或开角后重新检查避让。</li>'
             '<li>单臂夹紧后检查横向滑动、轴向滑动和拧层阻力，再低速测试翻转。记录实测外径、脉宽、夹紧保持情况，之后再复制四臂。</li></ol>'
             '<p>相邻机械手保持竖直时才允许另一只转动；使用 <code>--no-adjacent-horizontal</code>。禁止把相邻机械手同时转到水平。</p></section></div></html>']

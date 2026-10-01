@@ -1,4 +1,4 @@
-"""补充检查：压头两端十字孔、推杆导向覆盖和魔方本体/相邻两层避让。
+"""补充检查：压头固定销、轮毂短销与硬压头轴肩、推杆导向覆盖和魔方本体/相邻两层避让。
 
 表面离散采样只能给出 CAD 筛查结果，不能证明实物公差、轮胎保持力或夹紧力。
 """
@@ -37,21 +37,37 @@ def main():
             pivot = np.array([model.PIVOT_X + model.MODULE_DX, sy * model.JAW_Y, 0])
             rotation = model.rot_z(sy * beta)
             front = pivot + rotation @ [model.JAW_REACH, 0, 0]
-            back = front + rotation @ [-40, 0, 0]
-            lock = min((p for p in parts if p.name == '6632.dat'), key=lambda p: np.linalg.norm(p.pos - back))
-            main_beam = min((p for p in parts if p.name == '40490.dat' and p.color == model.C_JAW), key=lambda p: np.linalg.norm(p.pos - pivot))
-            assert np.linalg.norm(main_beam.world([0, 0, 80]) - front) < 1e-6
-            assert np.linalg.norm(main_beam.world([0, 0, 40]) - back) < 1e-6
-            assert np.linalg.norm(main_beam.world([0, 0, -20]) - pivot) < 1e-6
-            assert np.linalg.norm(main_beam.world([0, 0, -60]) - (pivot + rotation @ [-40, 0, 0])) < 1e-6
-            # 6632 的端孔坐标是 0 和 40，中间孔是圆孔，不能误当作十字孔。
-            for local, expected in (([0, 0, 0], back), ([0, 0, 40], front)):
-                actual = lock.world(local) + [0, 0, 15]
-                assert np.linalg.norm(actual - expected) < 1e-6, '固定薄梁端孔未与主臂对齐'
-                axes = [p for p in parts if p.note == '压头固定轴']
-                assert min(np.linalg.norm(p.pos - expected) for p in axes) < 1e-6
-            tyre = min((p for p in parts if p.name == 'grip_tyre.dat'), key=lambda p: np.linalg.norm(p.pos - front))
-            assert abs(tyre.pos[2] - 15) < 1e-6, '上下压头必须在同一侧'
+            beam = next(p for p in parts if p.head and p.color == model.C_JAW and p.name == ('32524.dat' if sy == -1 else '32316.dat'))
+            assert np.linalg.norm(beam.pos - pivot) < 1e-6
+            assert np.linalg.norm(beam.world([0, 0, -40]) - (pivot + rotation @ [-40, 0, 0])) < 1e-6
+            thin = min((p for p in parts if p.note == '压头延伸薄梁'), key=lambda p: np.linalg.norm(p.pos - front))
+            assert np.linalg.norm(thin.world([0, 0, 40]) - (front + [0, 0, -15])) < 1e-6
+            expected_reaches = (20, 60) if sy == -1 else (20, 40)
+            for reach in expected_reaches:
+                expected = pivot + rotation @ [reach, 0, -10]
+                assert min(np.linalg.norm(p.pos - expected) for p in parts if p.note == '薄梁固定销') < 1e-6
+            if sy == -1:
+                pin = next(p for p in parts if p.note == '轮毂短销')
+                wheel = next(p for p in parts if p.name == '42610.dat')
+                tyre = next(p for p in parts if p.name == '50945_nominal.dat')
+                assert np.linalg.norm(wheel.pos - front) < 1e-6
+                assert np.linalg.norm(tyre.pos - front) < 1e-6
+                assert np.allclose(sorted([pin.world([-20,0,0])[2], pin.world([10,0,0])[2]]), [-20,10])
+                layers = check._pin_layers(pin, [thin, wheel])
+                assert len(layers) == 2 and sorted(round(hi-lo) for _,lo,hi in layers) == [10,20]
+            else:
+                block = next(p for p in parts if p.name == '42003.dat')
+                axle = next(p for p in parts if p.note == '硬压头止挡轴')
+                bush = next(p for p in parts if p.note == '硬压头防脱轴套')
+                # 6587 轴肩的平面抵住块体内面；凸点端面再朝魔方突出 6 LDU。
+                assert np.linalg.norm(axle.world([28,0,0]) - (front + rotation @ [0,-10,0])) < 1e-6
+                assert np.linalg.norm(axle.world([34,0,0]) - (front + rotation @ [0,-16,0])) < 1e-6
+                assert np.linalg.norm(bush.pos - (front + rotation @ [0,15,0])) < 1e-6
+                for reach in (60,80):
+                    expected = pivot + rotation @ [reach,0,-10]
+                    pin = min((p for p in parts if p.note == '硬压头座固定销'), key=lambda p: np.linalg.norm(p.pos - expected))
+                    assert np.linalg.norm(pin.pos - expected) < 1e-6
+                    assert len(check._pin_layers(pin,[thin,block])) == 2
         # 两个导向轴承都必须完整落在后段 12L 推杆之内，不能只看无限长轴线。
         rod = next(p for p in parts if p.name == '3708.dat')
         for hole_x in (-450 + model.MODULE_DX, -330 + model.MODULE_DX):
@@ -77,17 +93,23 @@ def main():
                 best = (distance, angle, part)
         assert best[0] >= 2.0, (name, best)  # 采样间隙至少 0.8mm。
         results[name] = {'最小表面采样间隙_mm': best[0] * .4, '角度': best[1], '零件': best[2]}
+    from collections import Counter
+    counts = Counter(p.name for p in model.build())
+    for name in ('42610.dat','50945_nominal.dat','42003.dat','6587.dat','32002.dat'):
+        assert counts[name] == 4, (name, counts[name])
     beta = model.CLAMP_BETA
-    eps = 1e-6
-    derivative = (model.cross_x_for_beta(beta + eps) - model.cross_x_for_beta(beta - eps)) / (2 * eps)
+    hard_edge = model.JAW_Y + 94 * math.sin(beta) - 16 * math.cos(beta)
+    assert abs(hard_edge - model.CUBE_HALF) < 1e-6
+    assert 0 < model.TYRE_PRELOAD < 1.5
     results['名义尺寸'] = {
         '夹紧主臂角_deg': math.degrees(beta), '松开主臂角_deg': math.degrees(model.OPEN_BETA),
         '推杆行程_mm': model.OPEN_S * .4,
-        '自由夹口_mm': 2 * (model.JAW_Y + model.JAW_REACH * math.sin(beta) - model.TYRE_RADIUS) * .4,
-        '接触中心X_mm': (model.PIVOT_X + model.MODULE_DX + model.JAW_REACH * math.cos(beta)) * .4,
-        '每侧法向力_推杆总轴力比_理想': abs(derivative) / (2 * model.JAW_REACH * math.cos(beta)),
+        '自由夹口_mm': (2 * model.CUBE_HALF - model.TYRE_PRELOAD) * .4,
+        '橡胶侧名义压缩_mm': model.TYRE_PRELOAD * .4,
+        '压头轴中心X_mm': (model.PIVOT_X + model.MODULE_DX + model.JAW_REACH * math.cos(beta)) * .4,
         '舵机曲柄转角_deg': math.degrees(model.servo_theta_for(0)[0] - model.servo_theta_for(model.OPEN_S)[0]),
     }
+    results['库存检查'] = {'42610':4,'50945':4,'42003':4,'6587':4}
     output = Path(__file__).resolve().parents[3] / 'docs/lego/v3/pressure_pad_checks.json'
     output.write_text(json.dumps(results, ensure_ascii=False, indent=2) + '\n')
     print(output.read_text())

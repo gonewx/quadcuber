@@ -33,9 +33,11 @@ def _allowed(a, b):
     names = {a.name, b.name}
     if names == {"18938.dat", "18939.dat"}:
         return True
-    # 轮胎对魔方的名义压缩约 0.32mm；层界与回位另由 verify_pressure_pads.py 检查。
-    if names == {"grip_tyre.dat", "cube56.dat"}:
+    # 轮胎对魔方的名义压缩约 0.46mm；层界与回位另由 verify_pressure_pads.py 检查。
+    if names == {"50945_nominal.dat", "cube56.dat"}:
         return True
+    if names == {"42610.dat", "50945_nominal.dat"}:
+        return np.linalg.norm(a.pos - b.pos) < 1e-6 and abs(abs(a.rot[:, 2] @ b.rot[:, 2]) - 1) < 1e-6
     if names == {"geekservo.dat", "41677.dat"}:
         servo, crank = (a, b) if a.name == "geekservo.dat" else (b, a)
         out_pt = servo.world((10, -43, 0))
@@ -52,7 +54,7 @@ def _allowed(a, b):
 check._allowed = _allowed
 
 # 销中间的挡环 (销局部 x): 挡环过不了孔, 所以销只能先插进一边的零件, 再把另一边的零件沿销轴压上去。
-COLLAR = {"2780.dat": 0.0, "3673.dat": 0.0, "3749.dat": 0.0, "6558.dat": -10.0, "32556a.dat": -10.0}
+COLLAR = {"32002.dat": 0.0, "2780.dat": 0.0, "3673.dat": 0.0, "3749.dat": 0.0, "6558.dat": -10.0, "32556a.dat": -10.0}
 
 
 def pin_depth(parts):
@@ -188,7 +190,7 @@ def shared_holes(parts):
     """两个销/轴插在同一个孔里、长度上重叠 (比如底座梁的销已经占满大框的竖孔, 后面的步骤又要往这个孔里插销;
     2026-09-29 用户第 8 步实物发现)。碰撞检查不管销和销之间, 所以单独查: 轴线重合且重叠超过 2 LDU 就报。"""
     # (名字, 中心, 轴线, 长度); 零件自带的销 (55615 的 4 个销) 也算进来 (2026-09-30 用户发现 55615 的销插进了垫块销占着的孔)
-    cs = [(check.CATALOG_NAME(c), c.pos, c.rot[:, 0], check.CONNECTOR_LEN[c.name]) for c in parts if c.name in check.CONNECTOR_LEN]
+    cs = [(check.CATALOG_NAME(c), c.pos + sum(check.connector_bounds(c.name)) / 2 * c.rot[:, 0], c.rot[:, 0], check.connector_bounds(c.name)[1] - check.connector_bounds(c.name)[0]) for c in parts if c.name in check.CONNECTOR_LEN]
     for c in parts:
         for (cpt, cax) in BUILTIN_PINS.get(c.name, ()):
             cs.append((check.CATALOG_NAME(c) + " 自带的销", c.world(cpt), c.rot @ np.array(cax, float), 20.0))

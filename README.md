@@ -1,6 +1,6 @@
-> 当前分支 `design/swivel-pressure-pads`：9 孔主臂 + 乐高圆弧橡胶压头。
+> 当前分支 `design/swivel-pressure-pads`：四臂各一组 42610/50945 轮胎 + 一个带凸点硬压头。
 > [图文搭建说明](docs/lego/v3/index.html) · [设计与验证](docs/lego/v3/README.md) · [零件清单](docs/lego/v3/bom.csv)
-> CAD 检查已完成；轮胎配合和夹紧保持仍需先搭一只压头实测。
+> CAD 检查已完成；单侧橡胶的夹紧保持仍需先搭一只压头实测。
 
 # quadcuber
 
