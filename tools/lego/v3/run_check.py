@@ -29,12 +29,12 @@ def _allowed(a, b):
     - 转盘上下两半本来就互相卡在一起;
     - 舵机十字输出轴插在曲柄 (2 孔细梁) 的十字孔里;
     - 24 齿直齿轮和转盘上半的齿啮合 (齿轮轴线离转盘轴线 100; 用户实测 24 齿在这个距离咬合最好);
-    - 夹指上的皮带压进魔方面 (压缩量)。"""
+    - 前端轮胎压进魔方面 (名义压缩量)。"""
     names = {a.name, b.name}
     if names == {"18938.dat", "18939.dat"}:
         return True
-    # 夹指上的皮带压进魔方面约 1mm (2.8 LDU): 这是设计的压缩量, 预压和摩擦就靠它 (2026-09-30)
-    if names == {"rubberband.dat", "cube56.dat"}:
+    # 轮胎对魔方的名义压缩约 0.32mm；层界与回位另由 verify_pressure_pads.py 检查。
+    if names == {"grip_tyre.dat", "cube56.dat"}:
         return True
     if names == {"geekservo.dat", "41677.dat"}:
         servo, crank = (a, b) if a.name == "geekservo.dat" else (b, a)

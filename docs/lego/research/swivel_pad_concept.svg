@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#175b91"/></marker></defs>
+<rect width="1600" height="1000" fill="#f7f9fc"/>
+<style>text{font-family:"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#203046;font-size:23px}.small{font-size:19px}.title{font-size:36px;font-weight:700}.label{font-size:25px;font-weight:700}.force{stroke:#175b91;stroke-width:5;marker-end:url(#arrow)}.guide{stroke:#9ba9b8;stroke-width:2;stroke-dasharray:7 7}</style>
+<text x="55" y="60" class="title">候选原理：摆臂负责压紧，前端压块自行贴平</text>
+<text x="55" y="101">二维传力示意，未按乐高孔距绘制；不是已通过装配验证的搭建图。</text>
+<rect x="1125" y="160" width="420" height="650" rx="18" fill="#e9eef5"/>
+<text x="1150" y="205" class="label">接触块要满足三点</text>
+<text x="1150" y="259">1. 转轴投影落在接触区内</text>
+<text x="1150" y="293" class="small">法向力能穿过转轴，贴平后稳定。</text>
+<text x="1150" y="365">2. 只放开需要的摆动方向</text>
+<text x="1150" y="399" class="small">轴由两侧支承；设置小角度限位。</text>
+<text x="1150" y="433" class="small">轻回位只管姿态，不承担夹紧力。</text>
+<text x="1150" y="505">3. 压块先接触，摆臂留间隙</text>
+<text x="1150" y="539" class="small">接触后继续闭合，产生弹性预压。</text>
+<text x="1150" y="573" class="small">不能由主臂裸塑料先顶住魔方。</text>
+<text x="1150" y="662" class="label">正常铰接销仍然传力</text>
+<text x="1150" y="701" class="small">销承受横向载荷，允许相对转动。</text>
+<text x="1150" y="737" class="small">轴套滑移、力臂和变形须另行核查。</text>
+<!-- 固定支架、魔方和对称输入 -->
+<path d="M500 235V765" stroke="#aab5c2" stroke-width="28"/>
+<rect x="740" y="340" width="250" height="320" rx="12" fill="#e7edf4" stroke="#788a9d" stroke-width="3"/>
+<path d="M740 447H990M740 553H990M823 340V660M907 340V660" stroke="#b3bfcc" stroke-width="2"/>
+<text x="826" y="512" class="label">魔方</text>
+<line x1="85" y1="500" x2="285" y2="500" stroke="#64768a" stroke-width="15"/>
+<path d="M350 205L285 500L350 795" fill="none" stroke="#d49f29" stroke-width="16" stroke-linejoin="round"/>
+<path d="M350 205L850 300M350 795L850 700" stroke="#ce5557" stroke-width="20" stroke-linecap="round"/>
+<g fill="#f7f9fc" stroke="#364e64" stroke-width="5"><circle cx="500" cy="233.5" r="13"/><circle cx="500" cy="766.5" r="13"/><circle cx="350" cy="205" r="11"/><circle cx="350" cy="795" r="11"/><circle cx="285" cy="500" r="11"/></g>
+<!-- 独立压块，在中部铰接 -->
+<path d="M850 300V324M850 700V676" stroke="#d49f29" stroke-width="13"/>
+<rect x="791" y="321" width="118" height="13" rx="3" fill="#d49f29"/>
+<rect x="791" y="334" width="118" height="6" rx="2" fill="#4a9d80"/>
+<rect x="791" y="666" width="118" height="13" rx="3" fill="#d49f29"/>
+<rect x="791" y="660" width="118" height="6" rx="2" fill="#4a9d80"/>
+<g fill="#fff" stroke="#175b91" stroke-width="5"><circle cx="850" cy="300" r="11"/><circle cx="850" cy="700" r="11"/></g>
+<path d="M828 284Q850 272 872 284M828 716Q850 728 872 716" fill="none" stroke="#175b91" stroke-width="3" stroke-dasharray="4 4"/>
+<line x1="850" y1="260" x2="850" y2="340" class="guide"/>
+<line x1="850" y1="660" x2="850" y2="740" class="guide"/>
+<!-- 力与标注 -->
+<line x1="105" y1="459" x2="244" y2="459" class="force"/>
+<text x="85" y="426" class="label">推杆轴向力</text>
+<line x1="332" y1="291" x2="346" y2="223" class="force"/>
+<line x1="332" y1="709" x2="346" y2="777" class="force"/>
+<line x1="944" y1="274" x2="944" y2="332" class="force"/>
+<line x1="944" y1="726" x2="944" y2="668" class="force"/>
+<text x="957" y="304" class="small">压紧</text><text x="957" y="709" class="small">压紧</text>
+<text x="410" y="179">主轴：允许摆臂转动</text>
+<text x="570" y="218">主臂可以倾斜</text>
+<text x="760" y="192">接触块独立转动</text><path d="M860 207L855 281" class="guide"/>
+<text x="601" y="379" class="small">仅接触面贴平</text><path d="M742 370L797 339" class="guide"/>
+<text x="86" y="581">上下两根连杆</text>
+<text x="86" y="617" class="small">把推力变为摆臂力矩</text>
+<text x="375" y="847">固定支架承受反力；压块通过铰轴把接触力传回主臂。</text>
+<path d="M55 894H1545" stroke="#c7d1dd" stroke-width="2"/>
+<text x="55" y="935">验证重点：接触后还有有效压紧行程，轴套不滑移，主臂与支架不先发生明显变形。</text>
+<text x="55" y="973" class="small">实际闭合角、压块尺寸、回位与限位形式，须结合零件实体及相邻魔方层的扫掠范围确定。</text>
+</svg>

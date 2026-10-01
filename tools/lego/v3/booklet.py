@@ -97,6 +97,8 @@ def write(path, text):
 
 
 def main(render=True):
+    import jaw_diagram
+    jaw_diagram.main()
     os.makedirs(IMG, exist_ok=True)
     os.makedirs(WORK, exist_ok=True)
     parts = model.build()
@@ -147,10 +149,14 @@ def main(render=True):
                               "margin": 0.04}})
     # 单个模块的机械头: 夹紧 / 松开, 从侧面看 (视线沿 Z)
     for tag, s in (("closed", 0.0), ("open", model.OPEN_S)):
-        ps = [p for p in model.build({"L": (s, 0.0)}) if (p.arm == "L" and p.pos[0] > -330) or p.name == "cube56.dat"]
+        ps = [p for p in model.build({"L": (s, 0.0)}) if (p.arm == "L" and p.head and p.pos[0] > -235) or p.name == "cube56.dat"]
         path = write(os.path.join(WORK, f"mech_{tag}.ldr"), "0 mech\n" + "\n".join(p.ldraw() for p in ps) + "\n")
         jobs.append({"model": path, "out": os.path.join(IMG, f"mech_{tag}.png"),
                      "opts": {"w": 1000, "h": 620, "yaw": 0, "pitch": 0, "margin": 0.05}})
+    ps = [p for p in model.build() if p.arm == "L" and p.head and p.pos[0] > -235]
+    path = write(os.path.join(WORK, "jaw_detail.ldr"), "0 jaw detail\n" + "\n".join(p.ldraw() for p in ps) + "\n")
+    jobs.append({"model": path, "out": os.path.join(IMG, "jaw_detail.png"),
+                 "opts": {"w": 1400, "h": 1000, "yaw": 28, "pitch": 23, "margin": 0.07}})
     # 舵机曲柄滑块: 夹紧 / 松开
     for tag, s in (("closed", 0.0), ("open", model.OPEN_S)):
         ps = [p for p in model.build({"L": (s, 0.0)}, with_cube=False) if p.arm == "L" and p.pos[0] < -250]
@@ -171,7 +177,10 @@ def main(render=True):
         jobs_path = write(os.path.join(WORK, "jobs.json"), json.dumps(jobs))
         env = dict(os.environ)
         env.setdefault("PLAYWRIGHT_MODULE", "/opt/node22/lib/node_modules/playwright")
-        subprocess.run(["node", "render.js", jobs_path], cwd=os.path.join(HERE, "..", "render"), check=True, env=env)
+        if os.environ.get("LDRAW_SOFTWARE_RENDER"):
+            subprocess.run([sys.executable, os.path.join(HERE, "..", "render", "software.py"), jobs_path], check=True)
+        else:
+            subprocess.run(["node", "render.js", jobs_path, os.environ.get("LDRAW_RENDER_PORT", "8765")], cwd=os.path.join(HERE, "..", "render"), check=True, env=env)
 
     write(os.path.join(OUT, "model.ldr"), model.to_ldr(parts, "quadcuber 四臂整机 v3"))
     write(os.path.join(OUT, "model.mpd"), pack_mpd(parts, len(steps)))
@@ -249,246 +258,90 @@ kbd{font:12px "JetBrains Mono",ui-monospace,monospace;padding:1px 5px;border:1px
 ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 """
 
-EVAL_ROWS = [
-    ("整机形态", "只有单臂; 四臂怎么排、底座怎么连都没有设计, 也没有四臂之间的干涉检查",
-     "四个一样的模块两两垂直, 固定在一个整体底座上", "四个相同模块 + 横梁两层交叉搭成的网格底座, 孔位保证四根轴线过魔方中心、两两垂直; 四臂干涉按全部状态组合扫描过"),
-    ("转动部分", "转盘上装着舵机、叉子盒、两根 16 号导轨, 从转盘端面到魔方约 144mm, 转动惯量大",
-     "夹爪短而轻, 马达和舵机都不跟着转", "转动的只有转盘上半、两块侧板、夹指、连杆和推杆, 约 52mm 长, 没有舵机和马达"),
-    ("夹紧", "U 形叉沿轴向插入, 水平时没有压紧力, 曲柄停在死点不等于锁紧 (外部评审 ① ②)",
-     "两片夹指从两侧合拢夹住魔方", "两片会转的夹指 + 肘节连杆: 连杆推到死点时魔方的反推力沿连杆方向互相抵消, 理想对称时推杆轴向载荷降低; "
-     "预压和摩擦靠夹指上绕的乐高皮带 (2026-09-30 实物反馈后加)"),
-    ("旋转范围", "舵机随机械手转动, 线缆会缠, 规划器必须限角度 (±270° 时规划慢 20 多倍)",
-     "机械手可以连续旋转", "舵机固定在后面的平台上, 经穿过转盘中孔的推杆开合夹爪; 机械手可以无限旋转, 规划器不需要角度限制"),
-    ("驱动", "马达输出轴直接带机械手", "—",
-     "马达偏到侧面, 24 齿直齿轮带 60 齿转盘外圈 (中心距 5 个孔, 用户实测咬合最好), 扭矩放大 2.5 倍, 马达的回差和编码器误差在机械手上缩小 2.5 倍; 输出轴不承受弯矩"),
-]
-
-
 def write_html(parts, step_new, keys, subs):
+    import csv
     steps = model.STEPS
     esc = html.escape
-    bom = Counter(part_key(p) for p in parts if p.name != "cube56.dat")
     byname = Counter(p.name for p in parts if p.name != "cube56.dat")
-    n_parts = sum(n for k, n in bom.items() if k[0] not in ("95658.dat", "geekservo.dat"))
-    beta = math.degrees(model.jaw_beta(model.OPEN_S))
+    one = Counter(p.name for p in model.module(steps=False))
+    radius = model.TYRE_RADIUS
+    gap = 2 * (model.JAW_Y + model.JAW_REACH * math.sin(model.CLAMP_BETA) - radius) * .4
+    stroke = model.OPEN_S * .4
 
-    def img(src, alt, cls="", w=None, h=None):
-        size = f' width="{w}" height="{h}"' if w else ""
-        return f'<img src="img/{src}" alt="{esc(alt)}" class="{cls}" loading="lazy"{size}>'
+    def img(src, alt, w=1200, h=860):
+        return f'<img src="img/{src}" alt="{esc(alt)}" width="{w}" height="{h}" loading="lazy">'
 
-    def part_img(k):
-        return f"part_{k[0][:-4]}_{k[1]}.png"
+    def figure(src, caption, w=1200, h=860):
+        return '<figure class="cover"><div class="plate">' + img(src, caption, w, h) + f'</div><figcaption class="cap">{caption}</figcaption></figure>'
 
-    out = []
-    out.append("<title>quadcuber 四臂 v3</title>")
-    out.append('<link rel="preconnect" href="https://fonts.googleapis.com">')
-    out.append('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700'
-               '&family=JetBrains+Mono&family=Noto+Sans+SC:wght@400;700&display=swap">')
-    out.append(f"<style>{CSS}</style>")
-    out.append('<div class="wrap">')
-
-    out.append('<header class="cover">')
-    out.append('<div class="eyebrow">quadcuber · 四臂整机 v3 · 按 CubeStormer 3 的思路重新设计 · 搭建说明书</div>')
-    out.append("<h1>四臂整机: 死点锁紧夹爪 + 不随转的舵机</h1>")
-    out.append('<p class="lead">v2 解决了 "机械臂挂在马达输出轴上" 的问题, 但它仍然是一只单臂, 转动部分又长又重, 舵机跟着转。'
-               "CubeStormer 3 这一级别的机器, 专业性体现在整机: 四只机械手又短又轻、夹得住也松得开、能连续旋转, 四只之间互不干涉。"
-               "v3 按这个目标从整机重新设计, 自成一套模型和检查。"
-               f'之前的版本都保留不动: <a href="{V1_URL}">v1 大马达版</a>、<a href="{V2_URL}">v2 转盘版</a>。</p>')
-    out.append('<div class="plate">' + img("cover.png", "四臂整机总览", w=1400, h=900) + "</div>")
-    out.append('<div class="facts">'
-               f'<div class="fact"><b>{len(steps)}</b><span>个步骤 (一个模块的完整步骤, 其余三个照做)</span></div>'
-               f'<div class="fact"><b>{n_parts}</b><span>个乐高零件, 另加 EV3 大马达和 Geekservo 各 4 个</span></div>'
-               '<div class="fact"><b>约 52 mm</b><span>转动部分长度 (v2 约 144mm)</span></div>'
-               '<div class="fact"><b>无限</b><span>机械手旋转范围 (舵机不跟着转)</span></div>'
-               "</div>")
-    # 可旋转的 3D 模型 (viewer.js + model.mpd + 本地的 three.js, 不需要联网拉脚本)
-    out.append('<script type="importmap">{"imports":{"three":"./three/three.module.min.js","three/addons/":"./three/addons/"}}</script>')
-    out.append('<section id="v3d-sec" class="cover"><h2>3D 模型 (可旋转)</h2>'
-               '<p class="cap">拖动旋转, 滚轮或双指缩放, 右键或双指拖动平移。滑块选到第几步, 就显示到那一步为止的零件, 这一步新加的零件会提亮。键盘: <kbd>←</kbd> <kbd>→</kbd> 上一步/下一步, <kbd>Home</kbd> <kbd>End</kbd> 第一步/全部, <kbd>A</kbd> <kbd>D</kbd> 左右转, <kbd>W</kbd> <kbd>S</kbd> 上下转, <kbd>+</kbd> <kbd>-</kbd> 缩放, <kbd>R</kbd> 复位 (3D 区域在屏幕上时有效)。</p>'
-               '<div id="v3d" class="plate"><div id="v3d-status">正在加载 3D 模型 (约 0.6 MB)…</div></div>'
-               '<div class="v3d-bar"><input id="v3d-step" type="range" min="1" max="1" value="1" disabled aria-label="步骤">'
-               '<span id="v3d-label"></span><button id="v3d-fit" type="button">复位</button></div>'
-               f'<script>window.V3D_STEPS = {json.dumps([st["title"] for st in steps], ensure_ascii=False)};'
-               f'window.V3D_STEPMAP = {json.dumps(sorted({p.step for p in parts}))};</script>'
-               '<script type="module" src="viewer.js"></script></section>')
-    out.append('<nav class="toc"><a href="#v3d-sec">3D 模型</a><a href="#eval">v2 评估</a><a href="#idea">设计思路</a><a href="#four">四臂检查</a>'
-               '<a href="#buy">要买的零件</a><a href="#bom">零件清单</a>'
-               + "".join(f'<a href="#s{k}">{k}. {esc(s["title"])}</a>' for k, s in enumerate(steps, 1))
-               + '<a href="#checks">检查与待验证</a><a href="#safety">上电前</a></nav>')
-    out.append("</header>")
-
-    out.append('<section id="eval" class="cover"><h2>v2 评估: 离 CubeStormer 3 的专业水准还差在整机</h2>')
-    out.append("<p>CubeStormer 3 没有公开图纸和源码, 下表 \"CS3 级别的做法\" 一列是从公开视频能看到的整体特征归纳出来的, "
-               "不是对它内部结构的复刻。v3 的每个具体结构都是在这里重新推导、并用程序检查过的。</p>")
-    out.append('<div class="tbl"><table class="cmp"><tr><th>方面</th><th>v2</th><th>CS3 级别的做法</th><th>v3</th></tr>'
-               + "".join(f"<tr><td>{esc(a)}</td><td>{esc(b)}</td><td>{esc(c)}</td><td>{esc(d)}</td></tr>"
-                         for a, b, c, d in EVAL_ROWS)
-               + "</table></div>")
-    out.append("</section>")
-
-    out.append('<section id="idea" class="cover"><h2>设计思路</h2>')
-    out.append('<div class="two">'
-               '<figure style="margin:0" class="cover"><div class="plate">' + img("mech_closed.png", "夹紧", w=1000, h=620)
-               + '</div><figcaption class="cap">侧视, 夹紧: 两根黄色连杆和推杆垂直 (死点), 夹指合拢在魔方外层上下两侧</figcaption></figure>'
-               '<figure style="margin:0" class="cover"><div class="plate">' + img("mech_open.png", "松开", w=1000, h=620)
-               + f'</div><figcaption class="cap">侧视, 松开: 推杆后退 {model.OPEN_S * 0.4:.0f}mm, 夹指张开约 {beta:.0f}°</figcaption></figure>'
-               "</div>")
-    out.append('<ul class="plain">'
-               "<li><b>肘节锁紧的夹指。</b>每只机械手两片 7 孔粗梁当夹指, 绕根部的 6 号轴转动。十字接头往前推, 两根连杆把夹指根部往外撑, 前端合拢。"
-               "推到连杆和推杆垂直 (死点) 时, 魔方把夹指往外推的力沿连杆传到十字接头, 理想对称时上下两根互相抵消, 推杆轴向载荷减小。"
-               "闭合夹口是由孔位决定的 56.8mm, 比 56mm 魔方大 0.8mm, 到了死点也没有压紧力 (2026-09-30 实物验证: 锁死后仍有间隙、会打滑); "
-               "死点附近推杆走 3mm 夹指才动 0.3mm, 靠舵机推得更用力没有用。所以每根夹指绕一根乐高 15mm 皮带 (第 12 步): 皮带凸出约 1.5mm, 压进魔方约 1mm, 接触面变成橡胶, "
-               "间隙和打滑一起解决, 不改任何零件。</li>"
-               "<li><b>舵机不跟着转。</b>舵机固定在机械手后面的平台上, 曲柄和连杆同样拉到死点, 通过十字块推拉由 3 号轴、光面连接器和 12 号轴组成的推杆。"
-               "推杆穿过转盘中孔和导向框架两条边上的圆孔, 机械手转动时推杆跟着转, 十字块在推杆上一起转 (两侧半轴套锁住轴向位置)。"
-               "转动部分没有任何线缆。</li>"
-               "<li><b>齿轮带转盘外圈。</b>60 齿转盘仍然是主轴承 (v2 的结论保留), 但不再用马达输出轴直接带, 而是马达偏到侧面, "
-               "24 齿直齿轮和转盘外圈啮合 (中心距 5 个孔, 用户实测)。这样转盘中孔留给推杆, 马达只传扭矩, 2.5 倍减速同时缩小马达回差。</li>"
-               "<li><b>模块化。</b>一个模块 = 竖墙 + 转盘 + 马达 + 舵机平台 + 机械头, 四个完全一样。底座的孔位让四根轴线严格过魔方中心、两两垂直, "
-               "不用调。模块整体往魔方方向挪了半个孔距, 这是让相邻模块的孔位对得上的关键 (否则会差半个孔)。</li>"
-               "</ul>")
-    out.append('<div class="two">'
-               '<figure style="margin:0" class="cover"><div class="plate">' + img("ref42082.png", "官方 42082", w=1000, h=700)
-               + '</div><figcaption class="cap">官方 42082 (利勃海尔 R 9800) 原件, 从背面看: 转盘下半的凸台卡在 7x5 框架开口里, '
-               '两根 5 孔粗梁压住背面 (LDraw 官方模型库)。这种做法也可以用</figcaption></figure>'
-               '<figure style="margin:0" class="cover"><div class="plate">' + img("step03.png", "v3 转盘下半", w=1200, h=860)
-               + '</div><figcaption class="cap">v3 第 3 步: 同样卡在框架开口里, 2 根红色带挡套长销 32054 从转盘中孔里面往外插, 穿过凸台端壁进框架, 一上一下错开, 挡套藏在里面</figcaption></figure>'
-               "</div>")
-    out.append('<div class="two">'
-               '<figure style="margin:0" class="cover"><div class="plate">' + img("servo_closed.png", "舵机夹紧", w=1000, h=620)
-               + '</div><figcaption class="cap">舵机侧, 夹紧: 曲柄和连杆拉成一条直线</figcaption></figure>'
-               '<figure style="margin:0" class="cover"><div class="plate">' + img("servo_open.png", "舵机松开", w=1000, h=620)
-               + '</div><figcaption class="cap">舵机侧, 松开: 曲柄转过约 172°, 十字块带推杆后退</figcaption></figure>'
-               "</div>")
-    out.append("</section>")
-
-    out.append('<section id="four" class="cover"><h2>四臂检查 (tools/lego/v3/four_arm.py)</h2>')
-    out.append('<div class="plate">' + img("flip.png", "整体翻转", w=1400, h=900) + "</div>")
-    out.append('<p class="cap">整体翻转到一半: L、R 夹着魔方转, F、B 松开保持竖直。</p>')
-    out.append('<div class="tbl"><table><tr><th>检查</th><th>结果</th></tr>'
-               "<tr><td>一只机械手夹紧或松开, 从竖直转到水平 (每 5° 一格), 两侧邻居在 夹紧/松开 × 竖直/水平 的 16 种组合下</td>"
-               "<td>邻居竖直时全部不碰; 邻居水平时, 转到 80° 左右会和邻居的夹指相撞</td></tr>"
-               "<tr><td>拧一层时, 邻居 (夹紧、竖直) 的零件离转轴的最近距离</td><td class=\"ok\">111 LDU, 比魔方层的扫掠半径大 4.8mm</td></tr>"
-               "<tr><td>整体翻转时, 邻居 (松开、竖直) 的零件离转轴的最近距离</td><td>100.0 LDU (最近的是夹指上的皮带), 比魔方的扫掠半径只大 0.4mm (按尖角算; 没绕皮带时 103.4 LDU、1.7mm)。"
-               "实际魔方的棱边有约 2mm 圆角, 扫掠半径约小 2 LDU, 余量约 1.2mm; 皮带是软的, 蹭到也只是擦一下。要用自己的魔方实测</td></tr>"
-               "</table></div>")
-    out.append('<div class="note"><b>相邻两只机械手不能同时水平。</b>这是任何从外侧夹住魔方的夹爪都有的几何限制: 两只相邻机械手都转到水平时, '
-               "两副夹指会在魔方棱边外面的同一个位置相遇。v3 把它写进了规划器的可选约束 "
-               "(<code>python -m quadcuber plan ... --no-adjacent-horizontal</code>): 转动中的机械手, 两侧邻居必须竖直且不同时转动。"
-               "按现在的估算耗时, 20 步随机序列平均从 7.95 秒变成 9.69 秒 (约 +22%)。</div>")
-    out.append("</section>")
-
-    out.append('<section id="buy" class="cover"><h2>要买的零件</h2>')
-    # (名称, 编号, 零件文件 (数量从模型里数) 或固定数量, 说明)
-    buy = [("60 齿转盘 上半 + 下半 (套)", "18938 + 18939", "18938.dat", "每只机械手 1 套"),
-           ("24 齿直齿轮", "3648", "3648b.dat", "和转盘外圈啮合"),
-           ("15x11 大框", "39790", "39790.dat", "底座, 每个模块 1 块"),
-           ("7x5 框架", "64179", "64179.dat", "每个模块 5 块 (竖墙 3、推杆导向 1、平台前半 1)"),
-           ("3x5 L 形粗梁", "32526", "32526.dat", "机械头侧板每侧 2 根, 底座每个角 1 根"),
-           ("15 孔粗梁", "32278", "32278.dat", "平台下 2 根, 底座每个角 2 根"),
-           ("11 孔粗梁", "32525", "32525.dat", "马达前端"),
-           ("9 孔粗梁", "40490", "40490.dat", "马达前端、机械头、平台后端竖梁"),
-           ("7 孔粗梁", "32524", "32524.dat", "夹指、马达尾脚"),
-           ("5 孔粗梁", "32316", "32316.dat", "连杆、平台后横梁"),
-           ("3 孔粗梁", "32523", "32523.dat", "马达颈部"),
-           ("90° 弯角销连接器 3x3 (带 4 个销)", "55615", "55615.dat", "平台后端支撑, 每个模块 3 个"),
-           ("摩擦销", "2780", "2780.dat", "多买一些备用"),
-           ("蓝色长摩擦销", "6558", "6558.dat", ""),
-           ("带挡套长销", "32054", "32054.dat", "转盘下半和马达耳朵"),
-           ("无摩擦销 / 无摩擦长销", "3673 / 32556a", None, "夹爪的活动关节: 8 / 4"),
-           ("3 号 / 6 号 / 7 号 / 12 号轴", "4519 / 3706 / 44294 / 3708", None, "12 / 8 / 4 / 4; 45680 里有 3 号轴 14 根"),
-           ("轴连接器 (光面)", "59443", "59443.dat", "推杆接长, 4"),
-           ("轴套 / 半轴套", "3713 / 32123", None, "20 / 52"),
-           ("角度连接器 1 号 (一头十字孔一头圆孔) / 十字块 1x2 / 2 孔细梁", "32013 / 6536 / 41677", None, "各 4"),
-           ("EV3 大马达 / Geekservo 灰色", "—", None, "4 / 4; 现在只有 2 个大马达, 还缺 2 个")]
-    rows = []
-    for name, num, f, note in buy:
-        need = byname[f] if f else None
-        have = SET_45680.get(f, 0) if f else None
-        if f is None:
-            cells = ["—", "—", "—"]
-        else:
-            cells = [str(need), str(have) if have else "—", str(max(need - have, 0)) if need > have else "不用买"]
-        rows.append(f"<tr><td>{esc(name)}</td><td>{num}</td>" + "".join(f"<td>{c}</td>" for c in cells)
-                    + f"<td>{esc(note)}</td></tr>")
-    out.append('<div class="tbl"><table><tr><th>零件</th><th>编号</th><th>整机</th><th>45680 里有</th><th>还要买</th><th>说明</th></tr>'
-               + "".join(rows) + "</table></div>")
-    out.append('<p class="cap">"45680 里有" 按 Brickset 的 45680 (SPIKE Prime 扩展套装) 零件清单, 不分颜色; '
-               "最后几行 45680 里没有或数量对不上型号的, 按 \"说明\" 里的数量买。你手上其他零件没算进去。</p>")
-    out.append('<p class="cap">可以先只搭一个模块 (底座只要它那一块大框) 做单臂实测, 验证夹持和转速后再买齐四套。</p>')
-    out.append("</section>")
-
-    out.append('<section id="bom" class="cover"><h2>零件清单 (整机)</h2>'
-               '<p class="cap">颜色不限, 图中颜色只是为了区分 (深灰是底座, 红色是夹指, 黄色是连杆)。另需 56mm 魔方 1 个。</p><div class="bom">')
-    for k, n in sorted(bom.items(), key=lambda kv: (model.CATALOG[kv[0][0]][1] != "solid", kv[0][0])):
-        name = model.CATALOG[k[0]][0]
-        out.append(f'<div class="item">{img(part_img(k), name, w=TW, h=TH)}<div class="qty">{n}×</div>'
-                   f'<div>{esc(name)}</div><div class="mono">{esc(k[0][:-4])}</div></div>')
-    out.append("</div></section>")
-
-    out.append("<h2>搭建步骤</h2>")
-    for k, s in enumerate(steps, 1):
-        new = step_new[k - 1]
-        cls = "step sub" if s["sub"] else "step"
-        out.append(f'<section class="{cls}" id="s{k}">')
-        out.append('<div class="step-head">')
-        out.append(f'<div class="num">{k}</div><div class="title-block">')
-        if s["sub"]:
-            out.append(f'<div class="subtag">子组件 · {esc(s["sub"])}</div>')
-        out.append(f'<h3>{esc(s["title"])}</h3></div>')
-        out.append("</div>")
+    out = ['<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
+           '<title>quadcuber · 乐高圆弧压头</title>', f'<style>{CSS}</style><div class="wrap">',
+           '<header class="cover"><div class="eyebrow">quadcuber · design/swivel-pressure-pads</div>',
+           '<h1>乐高圆弧压头</h1>',
+           '<p class="lead">沿用转盘和 5 孔输入连杆；每个模块向外移 16mm，主臂改为 9 孔粗梁，底座四角改用 7×5 框架连接。前端用固定的小橡胶胎接触魔方，圆弧接触点随主臂角度变化，橡胶受压形成接触面。</p>',
+           '<p>没有从动臂。压头轴由 3 孔薄梁固定，避免夹持时自由滚动。主臂夹紧时外张 4.40°，不要求与魔方平行。</p>',
+           '<p><b>这是供单臂试装的 CAD 方案。</b>轮胎套半轴套的配合、受压后外径和夹紧力尚未经过实物验证。请先按本页的验收步骤搭一只压头，再复制四臂。</p>',
+           '<div class="plate">' + img('cover.png', '整机装配总览', 1400, 900) + '</div>',
+           '<div class="facts">'
+           f'<div class="fact"><b>{len(steps)} 步</b><span>完整装配</span></div>'
+           f'<div class="fact"><b>{gap:.2f} mm</b><span>估算自由夹口 · 魔方 56 mm</span></div>'
+           f'<div class="fact"><b>{stroke:.2f} mm</b><span>推杆开合行程</span></div>'
+           '<div class="fact"><b>25°</b><span>主臂松开角</span></div></div>',
+           '<nav class="toc"><a href="#jaw">压头详图</a><a href="#v3d-sec">可旋转模型</a><a href="#bom">零件清单</a>'
+           + ''.join(f'<a href="#s{k}">{k}. {esc(st["title"])}</a>' for k, st in enumerate(steps, 1))
+           + '<a href="#checks">验证与标定</a></nav></header>',
+           '<section id="jaw" class="cover"><h2>压头与传力</h2>',
+           figure('jaw_detail.png', '红色粗梁承载；红色短薄梁固定两根轴；黑色橡胶胎接触魔方。上下轮胎装在主臂同一侧。', 1400, 1000),
+           '<div class="two">' + figure('mech_closed.png', f'夹紧参考：主臂外张 4.40°，每侧名义压缩约 {(56-gap)/2:.2f}mm。', 1000, 620)
+           + figure('mech_open.png', f'松开参考：主臂外张 25°，推杆后退 {stroke:.2f}mm。', 1000, 620) + '</div>',
+           figure('jaw_layers.svg', '轴向叠放与孔位。上、下轮胎装在主臂同一侧；不可任意加长前轴。', 1500, 1000),
+           '<ul class="plain"><li>每个压头：6632 薄梁 ×1、32062（2 号轴）×2、32123a 半轴套 ×2、3139b 小胎 ×1。</li>'
+           '<li>两根轴相隔两孔（16mm），穿主臂从后数第 7、9 孔。薄梁两端必须是十字孔，不能用圆孔梁代替固定梁。</li>'
+           '<li>轮胎内唇原半径约 3.2mm，半轴套外缘半径约 3.6mm。模型用径向变形估算装后外半径 7.39mm；这不是经过实物确认的配合尺寸。</li>'
+           '<li>无摩擦销仍能传递横向力。输入销和连杆的任务是传力并转动，不需要依靠销轴摩擦锁死。</li>'
+           '<li>轴芯固定后，前端通过圆弧形状和橡胶变形贴合。此版没有独立的平面摆动压块。</li></ul></section>',
+           '<script type="importmap">{"imports":{"three":"./three/three.module.min.js","three/addons/":"./three/addons/"}}</script>',
+           '<section id="v3d-sec" class="cover"><h2>可旋转模型</h2><p>拖动旋转、滚轮缩放、右键平移；滑块按步骤查看。</p>'
+           '<div id="v3d" class="plate"><div id="v3d-status">正在加载模型…</div></div>'
+           '<div class="v3d-bar"><input id="v3d-step" type="range" min="1" max="1" value="1" disabled aria-label="步骤">'
+           '<span id="v3d-label"></span><button id="v3d-fit" type="button">复位</button></div>'
+           f'<script>window.V3D_STEPS = {json.dumps([st["title"] for st in steps], ensure_ascii=False)};'
+           f'window.V3D_STEPMAP = {json.dumps(sorted({p.step for p in parts}))};</script>'
+           '<script type="module" src="viewer.js"></script>'
+           '<p><a href="model.mpd" download>下载含零件库的 MPD</a> · <a href="model.ldr" download>LDraw 模型</a> · <a href="bom.csv" download>零件清单 CSV</a> · <a href="README.md">设计与验证记录</a></p></section>',
+           '<section id="bom" class="cover"><h2>零件清单</h2><p>单模块不含公共底座；整机包含四个马达和四个舵机。轮胎按真实乐高编号列出，模型中使用装配变形示意。</p>',
+           '<div class="tbl"><table><tr><th>零件</th><th>编号</th><th>单模块</th><th>整机</th><th>已计库存</th><th>扣除后补充</th></tr>']
+    with open(os.path.join(OUT, 'bom.csv'), 'w', encoding='utf-8-sig', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['零件', '编号', '单模块不含底座', '整机', '已计库存', '扣除后补充'])
+        for name, count in sorted(byname.items()):
+            available = 2 if name == "95658.dat" else SET_45680.get(name, 0)
+            number = '3139b' if name == 'grip_tyre.dat' else name[:-4]
+            row = [model.CATALOG[name][0], number, one[name], count, available, max(0, count - available)]
+            writer.writerow(row)
+            out.append('<tr>' + ''.join(f'<td>{esc(str(v))}</td>' for v in row) + '</tr>')
+    out.append('</table></div><p class="cap">套装数量沿用仓库清单，大框按已有 4 块计。未录入的零件按 0 计；补充数量需先扣除散件库存。马达已有 2 个，整机还需 2 个。</p></section>')
+    for k, st in enumerate(steps, 1):
+        out.append(f'<section class="cover" id="s{k}"><h2>{k:02d} · {esc(st["title"])}</h2>')
         chips = []
-        for g in s["attach"]:
-            chips.append(f'<div class="chip">{img(f"sub{subs.index(g)}.png", g, w=TW, h=TH)}'
-                         f'<div class="x">1×</div><div class="n">做好的{esc(g)}</div></div>')
-        if s["title"] == "装另外三个机械手":
-            chips.append('<div class="chip"><div class="x">3×</div><div class="n">照第 2~18 步做好的机械手模块</div></div>')
-            own = Counter()
-        else:
-            own = Counter(part_key(p) for p in new if p.step == k)
-        for key, n in own.items():
-            chips.append(f'<div class="chip">{img(part_img(key), model.CATALOG[key[0]][0], w=TW, h=TH)}'
-                         f'<div class="x">{n}×</div><div class="n">{esc(model.CATALOG[key[0]][0])}</div></div>')
-        out.append('<div class="callout">' + "".join(chips) + "</div>")
-        out.append(f'<div class="plate">{img(f"step{k:02d}.png", s["title"], w=W, h=H)}</div>')
-        out.append(f"<p>{esc(s['text'])}</p>")
-        out.append("</section>")
-
-    out.append('<p class="cap">舵机首次装配与定位请按 <a href="../../single_arm.md#servo-calibration">单臂测试第3步</a>执行。</p>')
-    out.append('<section id="checks" class="cover"><h2>检查与待验证</h2>')
-    out.append('<div class="tbl"><table><tr><th>程序检查</th><th>结果</th></tr>'
-               '<tr><td>单模块夹紧、松开, 以及夹指行程中间 7 个位置: 零件互相穿模</td><td class="ok">无</td></tr>'
-               '<tr><td>整机: 每个销、轴都插在孔里且至少连接两个零件; 长销挡肩位置</td><td class="ok">通过</td></tr>'
-               '<tr><td>按搭建顺序模拟插销: 带挡环的销两侧零件能沿销轴压上去 (不会出现 "两头都要插、只能插进一半")</td>'
-               '<td class="ok">通过</td></tr>'
-               '<tr><td>四臂转动干涉 (上一节)</td><td class="ok">只有 "相邻两只同时水平", 已写进规划器约束</td></tr>'
-               "</table></div>")
-    out.append('<div class="tbl"><table><tr><th>待实物验证 (模型保证不了)</th><th>怎么看</th></tr>'
-               "<tr><td>夹指皮带的厚度</td><td>模型按皮带截面 1.4mm 画 (压进魔方 1.1mm)。实物先用卡尺量皮带和魔方: 每侧压缩量 = 皮带厚 − (夹口 56.8 − 魔方边长) / 2, "
-               "目标 0.6 ... 1.1mm; 太厚就只绕 1 圈。绕好后重新标定夹紧脉宽 (判据是曲柄和连杆拉直), 锁紧 1 分钟舵机不应发热 (发热 = 停在死点前面堵转)。"
-               "验收: 锁紧后用手拧其他层, 被夹的层不滑; 机械手转到水平停 10 秒魔方不掉; 向外掰夹指, 看连杆销、6 号轴、9 孔梁哪一处在动</td></tr>"
-               "<tr><td>舵机死点标定</td><td>首次定位必须脱开连杆；空载 servo 1500 后断电，在机构行程中间连接，再以 10～20µs 小步标定。没有实物限位时不尝试越过死点</td></tr>"
-               "<tr><td>转盘下半卡在框架开口里</td><td>按零件尺寸凸台正好是 5x3 孔大小; 如果实物偏松, 在凸台和框架之间垫一层胶带, 或在凸台两头的孔里各插一根 2 号轴 (没有挡环, 可以从框架外面推进去) 加固</td></tr>"
-               "<tr><td>马达前板的销孔</td><td>模型假设马达靠近输出盘的侧面两个孔可以插摩擦销; 如果不是通孔或深度不够, 改用 TRACK3R 的耳朵固定加一根竖梁</td></tr>"
-               "<tr><td>齿轮啮合和回差</td><td>24 齿和 60 齿转盘外圈中心距 5 个孔 (用户实测咬合最好); 手转机械手应顺滑, 马达锁住时晃动机械手看回差</td></tr>"
-               "<tr><td>舵机平台刚度</td><td>平台前端接竖墙、后端经 55615 和竖梁接底座；断电轻推舵机本体，分别检查安装耳、7 孔垫梁和平台支撑是否松动</td></tr>"
-               "<tr><td>推杆在转动时的摩擦</td><td>推杆随机械手一起转, 十字块在导向框架里跟着转; 手转机械手时应不卡, 半轴套别压太紧</td></tr>"
-               "<tr><td>整体翻转的间隙</td><td>绕了皮带后按尖角算只有 0.4mm (皮带占了 1.3mm); 按实际魔方约 2mm 的棱边圆角算约 1.2mm。"
-               "松开夹爪用邻居慢速翻转魔方, 看皮带蹭不蹭; 蹭得厉害就换细一点的皮带或只绕 1 圈 (张开行程已经是 2 孔曲柄的极限 16mm, 再大要换 3 孔曲柄并重扫四臂干涉)</td></tr>"
-               "<tr><td>魔方尺寸</td><td>按 56mm 魔方设计; 57mm 魔方放不进</td></tr>"
-               "</table></div>")
-    out.append('<p class="cap">模型文件 model.ldr 可以用 Stud.io、LeoCAD 或 LDView 打开 (需要把 tools/lego/parts/ 里的 '
-               'geekservo.dat、cube56.dat 放进它们的零件目录)。设计推导见仓库 docs/lego/v3/README.md。</p>')
-    out.append("</section>")
-
-    out.append('<section id="safety" class="cover"><h2>上电前</h2><ul class="plain">'
-               "<li>4 个舵机用单独的 5V 降压电源 (DSN5000 先调到 5.0V 再接), 不要从 Pico 取电; 四个同时动作的峰值电流按 3A 以上准备。</li>"
-               "<li>4 个大马达由 2 块 DRV8833 驱动, 马达电压不超过 10.8V (用 9V)。</li>"
-               "<li>编码器信号照旧经 10k/20k 分压后再接 Pico, 四臂一共 8 路。</li>"
-               "<li>首次舵机定位不放魔方，曲柄与连杆必须脱开；定位后断电连接，再小步标定。底座抬起、销退出或机构顶住时立即关闭9V。完整步骤见 docs/single_arm.md 第3步。</li>"
-               "</ul></section></div>")
-    write(os.path.join(OUT, "index.html"), "\n".join(out) + "\n")
+        for (name, color), count in Counter(part_key(p) for p in step_new[k-1]).items():
+            number = '3139b' if name == 'grip_tyre.dat' else name[:-4]
+            chips.append('<div class="chip">' + img(f'part_{name[:-4]}_{color}.png', model.CATALOG[name][0], TW, TH)
+                         + f'<div class="x">{count}×</div><div class="n">{esc(model.CATALOG[name][0])} · {number}</div></div>')
+        out.append('<div class="callout">' + ''.join(chips) + '</div><div class="plate">' + img(f'step{k:02d}.png', st['title']) + '</div>')
+        out.append(f'<p>{esc(st["text"])}</p></section>')
+    out += ['<section id="checks" class="cover"><h2>验证与单臂验收</h2>',
+            '<p>检查范围和结果见 <a href="README.md">验证记录</a>。CAD 检查不能证明轮胎配合牢固，也不能给出实际夹紧力。</p>',
+            figure('flip.png', '整块翻转：L、R 夹持，F、B 松开并保持竖直。', 1400, 900),
+            '<ol><li>先试装一只轮胎与半轴套。轮胎不得松脱或相对轮芯打滑；若配合不可靠，停止复制整机。</li>'
+            '<li>装好短薄梁与两根轴，手转橡胶胎：轴芯必须被薄梁固定。轴不能窜出，轮胎不能蹭到主臂。</li>'
+            '<li>按 <a href="../../single_arm.md#servo-calibration">单臂标定步骤</a>先脱开曲柄、空载定位，再在行程中间断电连接。</li>'
+            '<li>夹紧端以接触和轻微压缩为准，小步推进；图示 4.40° 是参考值，旧版脉宽不能直接使用。检查推杆十字块两侧半轴套有没有沿轴滑移。</li>'
+            f'<li>开端参考推杆后退 {stroke:.2f}mm、主臂外张 25°。改变轮胎、轴长或开角后重新检查避让。</li>'
+            '<li>单臂夹紧后检查横向滑动、轴向滑动和拧层阻力，再低速测试翻转。记录实测外径、脉宽、夹紧保持情况，之后再复制四臂。</li></ol>'
+            '<p>相邻机械手保持竖直时才允许另一只转动；使用 <code>--no-adjacent-horizontal</code>。禁止把相邻机械手同时转到水平。</p></section></div></html>']
+    write(os.path.join(OUT, 'index.html'), '\n'.join(out) + '\n')
 
 
 if __name__ == "__main__":
-    main(render="--no-render" not in sys.argv)
+    main("--no-render" not in sys.argv)
