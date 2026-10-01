@@ -279,11 +279,12 @@ def write_html(parts, step_new, keys, subs):
     out = ['<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
            '<title>quadcuber · 上下相同的轮胎压头</title>', f'<style>{CSS}</style><div class="wrap">',
            '<header class="cover"><div class="eyebrow">quadcuber · research/self-aligning-jaws</div>',
-           '<h1>上下相同的轮胎压头</h1>',
+           '<h1>双侧轮胎压头与防翻折限位</h1>',
            '<p class="lead">沿用转盘和 5 孔输入连杆；每个模块向外移 16mm，上下主臂都用 7 孔粗梁，底座四角改用 7×5 框架连接。每臂上下各一组 42610＋50945，四臂共需八组轮胎。</p>',
            '<p>每个轮毂由两根 32449 四孔薄梁夹持，用 32062 二号轴贯穿；轮毂圆孔可以绕轴转动。舵机后移 8mm，使用 32524 七孔粗连杆的第 2、7 孔。</p>',
            '<p><b>双侧支承与后部避让已落实，名义 CAD 检查通过。</b>曲柄改走远离推杆的圆弧，并加内侧半轴套。实物刚度、保持力和带载间隙仍待单臂验收。<a href="mechanical_audit.md">完整审查、刚度计算与测试指标</a> · <a href="load_test_template.csv">实测记录表</a></p>',
-           '<p><b>当前图、模型与清单均为双侧薄梁版。</b>邻臂单层连续回转间隙下界 1.333mm；后部旋转半轴套对连杆的下界约 0.878mm（81 个开度）。这两处是实测重点，不能据 CAD 通过认定带载合格。</p>',
+           '<p><b>当前图、模型与清单包含独立开限位。</b>邻臂单层连续回转间隙下界 1.333mm；后部旋转半轴套对连杆的下界约 0.878mm（81 个开度）。这两处是实测重点，不能据 CAD 通过认定带载合格。</p>',
+           '<p><b>实物曾出现后拉翻折：</b>本版新增上下独立挡轴，正常开角25°，名义约29.8°挡止。必须手动核对并重标舵机开端。<a href="open_stops.md">失效原因、改装清单与验收步骤</a> · <a href="open_stop_checks.json">限位检查数据</a></p>',
            '<div class="plate">' + img('cover.png', '整机装配总览', 1400, 900) + '</div>',
            '<div class="facts">'
            f'<div class="fact"><b>{len(steps)} 步</b><span>完整装配</span></div>'
@@ -303,6 +304,7 @@ def write_html(parts, step_new, keys, subs):
            '<li>32449 第 1 十字孔用三号轴贯穿主臂，两端半轴套固定；第 2 圆孔用 32054 挡套长销贯穿。第 3 孔空，第 4 十字孔用二号轴连接轮毂。</li>'
            '<li>50945 按 14×6mm 外包络；42610 标称 11×8mm，CAD 网格外缘约 11.2mm。轮胎安装内槽保留原网格。</li>'
            '<li>轮毂可以滚动；旋转魔方时需要轮胎沿轮轴方向的摩擦力。需要实测轴向滑移、拧层阻力和轮胎保持。</li></ul></section>',
+           '<section class="cover"><h2>防翻折开限位</h2>' + figure('open_stop_layout.svg', '下夹指侧视与限位装配；上夹指镜像安装。', 1500, 950) + '<p><a href="open_stops.md">改装步骤与限位检查</a>。正常开合留隙，只有异常继续张开才接触挡轴。</p></section>',
            '<section class="cover"><h2>舵机粗连杆</h2>',
            '<div class="two">' + figure('servo_closed.png', '夹紧：7 孔粗连杆第 2 孔接十字块，第 7 孔接曲柄。', 1000, 620)
            + figure('servo_open.png', '松开：曲柄沿远离推杆的一侧转开，二号轴内端加半轴套。', 1000, 620) + '</div>',
@@ -343,6 +345,7 @@ def write_html(parts, step_new, keys, subs):
             figure('flip.png', '整块翻转：L、R 夹持，F、B 松开并保持竖直。', 1400, 900),
             '<ol><li>先将 50945 套在 42610 上，用二号轴安装在两片 32449 之间；检查轮毂转动、轮轴保持及轮胎配合。</li>'
             '<li>确认薄梁第 1 十字孔装三号轴和两只半轴套、第 2 圆孔装挡套长销；轮毂装第 4 十字孔。舵机七孔粗连杆用第 2、7 孔，曲柄二号轴内侧装半轴套。</li>'
+            '<li>先按 <a href="open_stops.md">防翻折试装步骤</a>轻推确认上下挡轴有效，正常25°开度留有间隙，不能持续顶住挡轴。</li>'
             '<li>按 <a href="../../single_arm.md#servo-calibration">单臂标定步骤</a>先脱开曲柄、空载定位，再在行程中间断电连接。</li>'
             '<li>夹紧端以接触和轻微压缩为准，小步推进；图示 3.84° 是参考值，旧版脉宽不能直接使用。检查推杆十字块两侧半轴套有没有沿轴滑移。</li>'
             f'<li>开端参考推杆后退 {stroke:.2f}mm、主臂外张 25°。改变轮胎、轴长或开角后重新检查避让。</li>'

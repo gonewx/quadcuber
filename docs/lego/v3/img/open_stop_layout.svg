@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="950" viewBox="0 0 1500 950">
+<rect width="1500" height="950" fill="white"/>
+<g font-family="Noto Sans CJK SC,sans-serif" fill="#172535">
+<text x="55" y="60" font-size="32" font-weight="bold">下夹指开限位：上夹指按镜像安装</text>
+<text x="55" y="105" font-size="22">侧视示意，隐藏轴向厚度。正常开合留隙；挡轴用于阻止异常翻折。</text>
+<path d="M400 150V330" stroke="#88939c" stroke-width="52" stroke-linecap="round"/>
+<path d="M400 250V410H560" fill="none" stroke="#49918a" stroke-width="48" stroke-linejoin="round"/>
+<path d="M182.5 148.6L617.5 351.4" stroke="#c94338" stroke-width="62" stroke-linecap="round"/>
+<path d="M400 250L762.5 419.1" stroke="#c94338" stroke-width="16"/>
+<circle cx="762.5" cy="419.1" r="35" fill="#252b33"/>
+<path d="M400 250L747.2 448.6" stroke="#c28617" stroke-width="8" stroke-dasharray="12 8"/>
+<circle cx="400" cy="250" r="19" fill="white" stroke="#273748" stroke-width="7"/>
+<circle cx="400" cy="330" r="13" fill="#273748"/>
+<circle cx="560" cy="410" r="24" fill="#273748"/>
+<path d="M545 410H575M560 395V425" stroke="white" stroke-width="6"/>
+<text x="60" y="245" font-size="22">八号根轴</text><path d="M175 239L378 250" stroke="#273748" stroke-width="2"/>
+<text x="60" y="335" font-size="22">黑销接十一孔梁端孔</text><path d="M292 329H384" stroke="#273748" stroke-width="2"/>
+<text x="465" y="478" font-size="22">横向八号挡轴</text><path d="M560 450V437" stroke="#273748" stroke-width="2"/>
+<text x="835" y="253" font-size="25" fill="#c94338">红色：正常开端 25°</text>
+<text x="835" y="300" font-size="23">与挡轴名义间隙约 1.77mm。</text>
+<text x="835" y="364" font-size="25" fill="#a8720a">虚线：约 29.77° 开限位</text>
+<text x="835" y="412" font-size="23">不能继续走到 41.81° 翻折点。</text>
+<text x="55" y="555" font-size="27" font-weight="bold">每侧支架用两片 32056 叠合，总厚 8mm</text>
+<text x="55" y="605" font-size="23">根轴穿末端十字孔＋黑销穿中间圆孔：两个固定点必须都装。</text>
+<text x="55" y="652" font-size="23">挡轴穿朝魔方一边的末端十字孔，两端分别由左右支架支承。</text>
+<text x="55" y="712" font-size="25" font-weight="bold">每臂改装用量</text>
+<text x="55" y="758" font-size="23">2 根十一孔竖梁；4 根八号轴（根轴、挡轴各 2）；8 片 32056。</text>
+<text x="55" y="805" font-size="23">新增 4 个黑销、4 个半轴套；原根轴外侧半轴套移到新支架外。</text>
+<text x="55" y="865" font-size="23" font-weight="bold">先手动轻触确认挡止，再重新标定舵机开端。不得让舵机持续顶住挡轴。</text>
+<text x="55" y="910" font-size="21">安装前恢复上下夹指朝魔方伸出的正常姿态；限位不能替代承重刚度测试。</text>
+</g></svg>

@@ -9,6 +9,8 @@ v1（上一级目录）和 v2（`../v2/`）都保持不动。本目录是四臂�
 | `four_arm.py` | 四臂转动干涉扫描（相邻臂 16 种状态组合 × 每 5° 一格）和魔方扫掠间隙 |
 | `mechanical_audit.py` | 连续回转包络、后部避让与薄梁受力估算 |
 | `mesh_clearance.py` | 81 个开度的新增件 FCL 检查，以及 288 个新前端回转姿态的网格外包盒／FCL 检查 |
+| `verify_open_stops.py` | 独立旋转主臂检查挡止、双解与截面方向敏感性 |
+| `test_open_stops.py` | 无实体限位和允许超程的回归检查 |
 | `test_dual_support.py` | 双侧贯穿轴与后部两处旧碰撞的回归测试 |
 | `booklet.py` | 生成 `docs/lego/v3/index.html`、步骤图和 `model.ldr`（渲染用 `../render/`） |
 

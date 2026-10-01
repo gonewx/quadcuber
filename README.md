@@ -1,6 +1,6 @@
 > 本项工作统一使用主目录的 `research/self-aligning-jaws` 分支。当前模型为四臂上下 42610/50945 轮胎压头，整机共需 8 组；压头用两端十字孔薄梁，舵机用粗连杆。
 > [图文搭建说明](docs/lego/v3/index.html) · [设计与验证](docs/lego/v3/README.md) · [零件清单](docs/lego/v3/bom.csv)
-> 当前采用双侧 32449 薄梁支承，后部曲柄避让已修正，名义 CAD 检查通过。实物刚度、保持力及小间隙部位仍待验收。详见[搭建说明](docs/lego/v3/index.html)和[机械审查](docs/lego/v3/mechanical_audit.md)。
+> 当前采用双侧 32449 薄梁支承，已修正后部避让并增加上下独立防翻折开限位。正常行程 CAD 检查通过；实物限位须手动验收并重新标定舵机开端。实物刚度、保持力及小间隙部位仍待验收。详见[搭建说明](docs/lego/v3/index.html)和[机械审查](docs/lego/v3/mechanical_audit.md)。
 > 代码与说明书分别以 `tools/lego/v3/`、`docs/lego/v3/` 为唯一入口；旧方案保存在 Git 历史中。
 
 # quadcuber
