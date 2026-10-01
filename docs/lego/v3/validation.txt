@@ -1,16 +1,16 @@
-当前模型：2L＋11L推杆，前支承与舵机前移16mm。以下命令均退出0。
+当前模型：2L＋11L推杆；3749圆销段接转盘、十字轴段朝外；第14步先装长销再装支架。以下命令均退出0。
 
 $ python -m unittest discover -s tools/lego/v3 -p 'test_*.py'
-........................
+...........................
 ----------------------------------------------------------------------
-Ran 24 tests in 3.386s
+Ran 27 tests in 3.840s
 
 OK
 
 $ python -m unittest discover -s tests
 ....................................................................
 ----------------------------------------------------------------------
-Ran 68 tests in 4.645s
+Ran 68 tests in 4.841s
 
 OK
 
@@ -73,7 +73,7 @@ $ python tools/lego/v3/load_path_analysis.py
 
 $ python tools/lego/v3/verify_open_stops.py
 {
-  "model.py_SHA256": "083ace7251bf9202ec652dd01b22a0046f94b4fd1fb5beae3ae3312a427c05df",
+  "model.py_SHA256": "693b654a75e89fc85ae9f13ed71a40e437e8a00bdcf71a68f456fd5b4737ee13",
   "两组角度": [
     {
       "夹指": "上",
@@ -146,7 +146,7 @@ $ python tools/lego/v3/verify_open_stops.py
 }
 
 $ python tools/lego/v3/mesh_clearance.py
-距离查询数: 17273 相交数: 0
+距离查询数: 17513 相交数: 0
 {'零件对': ('3648b.dat', '', '32123a.dat', '齿轮外限位'), '间隙_mm': 0.15000000000000002, '行程比例': 0.0}
 {'零件对': ('18938.dat', '', '41677.dat', '后短连接梁'), '间隙_mm': 0.4, '行程比例': 0.0}
 {'零件对': ('32062.dat', '推杆短轴', '23948.dat', '推杆长轴'), '间隙_mm': 0.4, '行程比例': 0.0}
@@ -160,7 +160,7 @@ $ python tools/lego/v3/mesh_clearance.py
 $ python tools/lego/v3/mechanical_audit.py
 {
   "几何源": "双侧轮胎支承＋11478承重横梁＋空余孔朝曲柄的7孔粗连杆；以文件SHA256为准",
-  "model.py_SHA256": "083ace7251bf9202ec652dd01b22a0046f94b4fd1fb5beae3ae3312a427c05df",
+  "model.py_SHA256": "693b654a75e89fc85ae9f13ed71a40e437e8a00bdcf71a68f456fd5b4737ee13",
   "零件三角网格_SHA256": {
     "11478.dat": "edf4976f6eb8af4dac506df2c13395fae090b87b4af0ac48f9ebb48a45f3ae43",
     "18938.dat": "95c9e521fc44a9a0afa8e4a4d089c7ada59384d6aeb899915c60b0adc88dfce9",
@@ -368,7 +368,7 @@ $ python tools/lego/v3/mechanical_audit.py
 
 $ python tools/lego/v3/rod_support_analysis.py
 {
-  "model.py_SHA256": "083ace7251bf9202ec652dd01b22a0046f94b4fd1fb5beae3ae3312a427c05df",
+  "model.py_SHA256": "693b654a75e89fc85ae9f13ed71a40e437e8a00bdcf71a68f456fd5b4737ee13",
   "参考版本": {
     "提交": "35db5e5",
     "总名义长度_mm": 120.0,
@@ -406,3 +406,6 @@ $ python tools/lego/v3/rod_support_analysis.py
     "限制": "这些比值只说明缩短的方向性收益，不能作为整机刚度提升或实际下沉量的预测。"
   }
 }
+
+$ python tools/lego/v3/gravity_analysis.py
+/mnt/disk0/project/cube/quadcuber/docs/lego/v3/gravity_calculations.json

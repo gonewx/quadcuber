@@ -5,11 +5,24 @@ import numpy as np
 import model
 import run_check  # noqa: F401
 import check
+import ldraw
 import fcl
 from mesh_clearance import obj
 
 
 class LoadPathTests(unittest.TestCase):
+    def test_axle_pin_halves_follow_the_actual_ldraw_geometry(self):
+        halves={}
+        for line in ldraw.get('3749.dat').splitlines():
+            fields=line.split()
+            if len(fields)>=15 and fields[-1] in ('connect8.dat','axleend20.dat'):
+                values=np.array(list(map(float,fields[2:14])))
+                mesh=ldraw.geometry(fields[-1])[0]@values[3:].reshape(3,3).T+values[:3]
+                halves[fields[-1]]=(mesh[:,:,0].min(),mesh[:,:,0].max())
+        self.assertEqual(set(halves),{'connect8.dat','axleend20.dat'})
+        self.assertTrue(np.allclose(halves['connect8.dat'],(-20.,0.)), '圆销段位于局部负X')
+        self.assertTrue(np.allclose(halves['axleend20.dat'],(0.,19.5)), '十字轴段位于局部正X')
+
     def test_crosshead_has_two_guides_and_an_articulated_drive(self):
         roots_at_closed=None
         for stroke in np.linspace(0,model.OPEN_S,9):
@@ -107,8 +120,14 @@ class LoadPathTests(unittest.TestCase):
                 short=next(p for p in parts if p.note=='后短连接梁' and p.pos[2]*pin.pos[2]>0 and p.pos[1]*pin.pos[1]>0)
                 layers=check._pin_layers(pin,[beam,short])
                 self.assertEqual(len(layers),2)
-                self.assertTrue(all(hi<=1e-8 and hi-lo>9.9 for _,lo,hi in layers),
+                self.assertTrue(all(lo>=-1e-8 and hi-lo>9.9 for _,lo,hi in layers),
                                 '两片固定角的十字孔必须共用轴销的轴段')
+                turntable=next(p for p in parts if p.name=='18938.dat')
+                pin_layers=check._pin_layers(pin,[turntable])
+                self.assertEqual(len(pin_layers),1)
+                # 库中提取到的是安装孔口的2 LDU段，只验证孔口位于圆销半段。
+                self.assertTrue(all(-20.-1e-8<=lo<hi<=1e-8 for _,lo,hi in pin_layers),
+                                '转盘安装耳孔口必须接轴销的圆销段')
 
     def test_side_frame_clears_the_motor_retainer_through_a_whole_turn(self):
         from load_path_analysis import side_frame_gear_clearance
@@ -132,6 +151,15 @@ class LoadPathTests(unittest.TestCase):
 
     def test_round_pins_do_not_enter_cross_holes(self):
         self.assertEqual(run_check.pins_in_axle_holes(model.module(0,steps=False)),[])
+
+    def test_reversed_axle_pins_are_rejected_by_the_hole_check(self):
+        parts=model.module(0,steps=False)
+        pins=[p for p in parts if p.note=='转盘轴销']
+        self.assertEqual(len(pins),4)
+        for pin in pins:
+            pin.rot=pin.rot@model.orient('-x','+y')
+        self.assertGreaterEqual(len(run_check.pins_in_axle_holes(parts)),4,
+                                '3749圆销半段也必须检查，不能把整根轴销豁免')
 
     def test_base_rear_feet_are_connected(self):
         parts=model.build(with_cube=False)

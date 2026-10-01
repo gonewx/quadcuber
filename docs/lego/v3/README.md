@@ -6,6 +6,7 @@
 
 - [图文搭建说明与可旋转模型](index.html)
 - [公共轴与输入薄连杆：14张分步图](index.html#s19) · [从第1步开始](index.html#s1)：复杂步骤共179张装配图，另附公共轴叠层示意；长说明与总览可展开查看。
+- 装配更正：[14.3先插长销，14.4再压支架](index.html#s14-3)；[16.2圆销段进转盘，16.3薄梁接外露十字轴段](index.html#s16-2)。两侧图、整机模型和孔型检查已同步。
 - [完整 MPD 模型](model.mpd) · [BOM](bom.csv)
 - [连接、避让、刚度与实物验收报告](mechanical_audit.md)
 - [连续包络结果](mechanical_audit.json) · [新增件网格检查](mesh_clearance.json)

@@ -1,5 +1,5 @@
 {
-  "model_sha256": "65edcf1c7d14f8329f74be4c7e70da2c0e3fcc666bba4727569941b1d9323808",
+  "model_sha256": "e415441ae8b2c7482ea8a65d3ab71f795944e8f1aec51380efb12fdd5d278dc3",
   "cards": [
     {
       "step": 1,
@@ -625,20 +625,20 @@
     {
       "step": 14,
       "number": 3,
-      "title": "第一侧 · 放上下导向支架",
-      "tip": "长边末端十字孔留给摆杆根轴。",
+      "title": "第一侧 · 先插三根长销",
+      "tip": "长段穿双层侧架；挡肩停在内侧，短段露出。",
       "file": "img/assembly/14-03.svg",
       "repeat": 1,
-      "new_count": 2
+      "new_count": 3
     },
     {
       "step": 14,
       "number": 4,
-      "title": "第一侧 · 三根长销固定",
-      "tip": "下支架另一孔将在第15步共同固定。",
+      "title": "第一侧 · 支架压上长销短段",
+      "tip": "上支架接两销；下支架另一孔在第15步固定。",
       "file": "img/assembly/14-04.svg",
       "repeat": 1,
-      "new_count": 3
+      "new_count": 2
     },
     {
       "step": 14,
@@ -661,20 +661,20 @@
     {
       "step": 14,
       "number": 7,
-      "title": "另一侧 · 放上下导向支架",
-      "tip": "长边末端十字孔留给摆杆根轴。",
+      "title": "另一侧 · 先插三根长销",
+      "tip": "长段穿双层侧架；挡肩停在内侧，短段露出。",
       "file": "img/assembly/14-07.svg",
       "repeat": 1,
-      "new_count": 2
+      "new_count": 3
     },
     {
       "step": 14,
       "number": 8,
-      "title": "另一侧 · 三根长销固定",
-      "tip": "下支架另一孔将在第15步共同固定。",
+      "title": "另一侧 · 支架压上长销短段",
+      "tip": "上支架接两销；下支架另一孔在第15步固定。",
       "file": "img/assembly/14-08.svg",
       "repeat": 1,
-      "new_count": 3
+      "new_count": 2
     },
     {
       "step": 15,
@@ -742,8 +742,8 @@
     {
       "step": 16,
       "number": 2,
-      "title": "第一侧 · 上下两根轴销",
-      "tip": "圆销段进转盘，十字轴段朝外。",
+      "title": "第一侧 · 圆销段朝内插进转盘",
+      "tip": "有开槽的圆销段进转盘；十字轴段露在外面。",
       "file": "img/assembly/16-02.svg",
       "repeat": 1,
       "new_count": 2
@@ -752,7 +752,7 @@
       "step": 16,
       "number": 3,
       "title": "第一侧 · 3孔薄梁套两端十字孔",
-      "tip": "",
+      "tip": "两个端十字孔套在露出的十字轴段上。",
       "file": "img/assembly/16-03.svg",
       "repeat": 1,
       "new_count": 1
@@ -805,8 +805,8 @@
     {
       "step": 16,
       "number": 9,
-      "title": "另一侧 · 上下两根轴销",
-      "tip": "圆销段进转盘，十字轴段朝外。",
+      "title": "另一侧 · 圆销段朝内插进转盘",
+      "tip": "有开槽的圆销段进转盘；十字轴段露在外面。",
       "file": "img/assembly/16-09.svg",
       "repeat": 1,
       "new_count": 2
@@ -815,7 +815,7 @@
       "step": 16,
       "number": 10,
       "title": "另一侧 · 3孔薄梁套两端十字孔",
-      "tip": "",
+      "tip": "两个端十字孔套在露出的十字轴段上。",
       "file": "img/assembly/16-10.svg",
       "repeat": 1,
       "new_count": 1

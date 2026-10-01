@@ -597,9 +597,11 @@ def module(open_s=0.0, angle=0.0, steps=True, on_base=False):
     hadd("18938.dat",C_TT,TT_C,TT_ROT,s)
     for sz in (-1,1):
         inward=LPIN_SHORT_Z if sz==1 else ALONG_Z
+        # 3749 的圆销段在局部 -X、十字轴段在 +X；十字轴朝外接两片薄梁。
+        outward=ALONG_Z if sz==1 else LPIN_SHORT_Z
         hadd("6632.dat",C_FRAME,[-290,-20,55*sz],BEAM_Y_HOLES_Z,s,"转盘后横梁")
         for yy in (-20,20):
-            hadd("3749.dat",C_TPIN,[-290,yy,50*sz],inward,s,"转盘轴销")
+            hadd("3749.dat",C_TPIN,[-290,yy,50*sz],outward,s,"转盘轴销")
             hadd("41677.dat",C_FRAME,[-290,yy,65*sz],BEAM_X_HOLES_Z,s,"后短连接梁")
             hadd("87083.dat",C_AXLE,[-270,yy,98*sz],inward,s,"侧架后连接轴")
             for z in (80,120):

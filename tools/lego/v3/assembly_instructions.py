@@ -20,10 +20,15 @@ import numpy as np
 from PIL import Image
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE.parent / 'render'))
 import model
 import ldraw
-import software
+_search_path = list(sys.path)
+try:
+    sys.path.insert(0, str(HERE.parent / 'render'))
+    import software
+finally:
+    # 软件渲染器会加入上一级目录，不能让它覆盖后续的 v3 同名模块。
+    sys.path[:] = _search_path
 
 OUT = HERE.parents[2] / 'docs/lego/v3'
 CACHE = HERE.parent / '.cache/assembly'
@@ -109,8 +114,8 @@ def recipes():
     for offset, sign in [(0,-1),(7,1)]:
         context=[p for p in steps[13] if p.pos[2]*sign>0]
         seq(14,[('垫梁连接销',[offset+3],(0,0,-60*sign),''),('上侧2孔垫梁',[offset+2],(0,0,-70*sign),''),
-                ('放上下导向支架',[offset,offset+1],(0,0,-90*sign),'长边末端十字孔留给摆杆根轴。'),
-                ('三根长销固定',[offset+4,offset+5,offset+6],(0,0,-90*sign),'下支架另一孔将在第15步共同固定。')],context=context,view=(140 if sign<0 else 40,20))
+                ('先插三根长销',[offset+4,offset+5,offset+6],(0,0,-90*sign),'长段穿双层侧架；挡肩停在内侧，短段露出。'),
+                ('支架压上长销短段',[offset,offset+1],(0,0,-90*sign),'上支架接两销；下支架另一孔在第15步固定。')],context=context,view=(140 if sign<0 else 40,20))
     for offset, sign in [(0,-1),(8,1)]:
         context=[p for p in steps[13]+steps[14] if p.pos[2]*sign>0]
         seq(15,[('上3孔、下2孔垫梁',[offset+1,offset+2],(0,0,-70*sign),''),
@@ -119,8 +124,8 @@ def recipes():
     add(16,'取转盘上半',[steps[16][0]],tip='有齿的一半，先装两侧固定连接架。',view=(65,20))
     for offset, sign in [(0,-1),(11,1)]:
         ps=steps[16]; context=[ps[0]]
-        old=seq(16,[('上下两根轴销',[offset+2,offset+7],(0,0,70*sign),'圆销段进转盘，十字轴段朝外。'),
-                    ('3孔薄梁套两端十字孔',[offset+1],(0,0,80*sign),''),
+        old=seq(16,[('圆销段朝内插进转盘',[offset+2,offset+7],(0,0,70*sign),'有开槽的圆销段进转盘；十字轴段露在外面。'),
+                    ('3孔薄梁套两端十字孔',[offset+1],(0,0,80*sign),'两个端十字孔套在露出的十字轴段上。'),
                     ('两片2孔薄梁朝前',[offset+3,offset+8],(0,0,85*sign),'两片都用十字孔，锁住相对角度。'),
                     ('从内侧穿两根止挡轴',[offset+4,offset+9],(0,0,-80*sign),'止挡头留在内侧，贴薄梁。'),
                     ('先套内侧整轴套',[offset+5,offset+10],(0,0,90*sign),'薄梁与7孔侧梁之间各一整套。')],context=context,view=(138 if sign>0 else 42,22))

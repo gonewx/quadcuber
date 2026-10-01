@@ -82,13 +82,19 @@ def pins_in_axle_holes(parts):
     boxes = {id(p): check._obb(p) for p in solids}
     out = []
     for c in parts:
-        if c.kind != "pin" or c.name == "3749.dat":  # 3749 半销半轴, 轴那一半本来就插十字孔
+        if c.kind != "pin":
             continue
         u = c.rot[:, 0]
         for s, lo, hi in check._pin_layers(c, solids, None, boxes):
+            if c.name == "3749.dat":
+                # 真实网格的圆销段为局部 -20..0；正X十字轴段允许接十字孔。
+                lo, hi = max(lo, -20.), min(hi, 0.)
+                if hi-lo <= 1e-8:
+                    continue
             S = check.Solid(s.name)
             hits = 0
-            for t in np.linspace(lo + 3, hi - 3, 3):
+            margin = min(3., (hi-lo)/4)
+            for t in np.linspace(lo + margin, hi - margin, 3):
                 ctr = s.rot.T @ (c.pos + t * u - s.pos)
                 ax = s.rot.T @ u
                 e1 = np.cross(ax, [0, 1, 0] if abs(ax[1]) < 0.9 else [1, 0, 0])

@@ -1,6 +1,6 @@
 {
   "几何源": "双侧轮胎支承＋11478承重横梁＋空余孔朝曲柄的7孔粗连杆；以文件SHA256为准",
-  "model.py_SHA256": "083ace7251bf9202ec652dd01b22a0046f94b4fd1fb5beae3ae3312a427c05df",
+  "model.py_SHA256": "693b654a75e89fc85ae9f13ed71a40e437e8a00bdcf71a68f456fd5b4737ee13",
   "零件三角网格_SHA256": {
     "11478.dat": "edf4976f6eb8af4dac506df2c13395fae090b87b4af0ac48f9ebb48a45f3ae43",
     "18938.dat": "95c9e521fc44a9a0afa8e4a4d089c7ada59384d6aeb899915c60b0adc88dfce9",
