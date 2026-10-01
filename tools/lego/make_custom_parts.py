@@ -125,9 +125,18 @@ def rubberband_on_beam(turns=2, pitch=4.0, r=1.75, gap=0.3, corner=3.0):
     return "\n".join(lines) + "\n"
 
 
+def jaw_pad():
+    """平行夹块的一对未压缩接触垫: 每条 12.8 x 3.2 x 0.4mm, 厚度含胶。局部 Y 朝夹块外侧。"""
+    lines = ["0 Jaw contact pad pair, each 12.8 x 3.2 x 0.4mm (uncompressed)", "0 Name: jaw_pad.dat",
+             "0 Author: quadcuber", "0 !LDRAW_ORG Unofficial_Part", "0 BFC NOCERTIFY"]
+    for zlo, zhi in ((-19, -11), (11, 19)):
+        lines += box(16, -36, -4, -10, -9, zlo, zhi)
+    return "\n".join(lines) + "\n"
+
+
 def main():
     os.makedirs(PARTS, exist_ok=True)
-    for name, text in (("geekservo.dat", geekservo()), ("cube56.dat", cube56()), ("rubberband.dat", rubberband_on_beam())):
+    for name, text in (("geekservo.dat", geekservo()), ("cube56.dat", cube56()), ("rubberband.dat", rubberband_on_beam()), ("jaw_pad.dat", jaw_pad())):
         with open(os.path.join(PARTS, name), "w", encoding="utf-8") as f:
             f.write(text)
 

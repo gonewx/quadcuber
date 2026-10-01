@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1524" viewBox="0 0 1500 1524">
+<rect width="1500" height="1524" fill="#f8fafc"/>
+<style>text{font-family:"Noto Sans CJK SC","Noto Sans SC",sans-serif;fill:#203046}.title{font-size:30px;font-weight:700}.sub{font-size:20px}.small{font-size:16px}</style>
+<text x="50" y="52" class="title">平行夹块 · 六根轴的装配截面</text>
+<text x="50" y="88" class="sub">前端轴齐平；主轴固定在横梁十字孔中。轴套贴合但不要挤紧活动梁。</text>
+<text x="50" y="148" class="sub" font-weight="700">A　主摆臂根轴 · 7 号轴 44294</text>
+<line x1="400" y1="208" x2="1100" y2="208" stroke="#202c3b" stroke-width="12"/>
+<rect x="400" y="183" width="50" height="50" rx="3" fill="#d5dce4" stroke="#fff" stroke-width="2"/>
+<text x="425.0" y="214" text-anchor="middle" class="small">薄梁</text>
+<rect x="450" y="183" width="50" height="50" rx="3" fill="#d5dce4" stroke="#fff" stroke-width="2"/>
+<text x="475.0" y="214" text-anchor="middle" class="small">薄梁</text>
+<rect x="500" y="183" width="100" height="50" rx="3" fill="#d5dce4" stroke="#fff" stroke-width="2"/>
+<text x="550.0" y="214" text-anchor="middle" class="small">座梁</text>
+<rect x="600" y="183" width="100" height="50" rx="3" fill="#93a3b5" stroke="#fff" stroke-width="2"/>
+<text x="650.0" y="214" text-anchor="middle" class="small">整套</text>
+<rect x="700" y="183" width="100" height="50" rx="3" fill="#e65a57" stroke="#fff" stroke-width="2"/>
+<text x="750.0" y="214" text-anchor="middle" class="small">红梁</text>
+<rect x="800" y="183" width="100" height="50" rx="3" fill="#93a3b5" stroke="#fff" stroke-width="2"/>
+<text x="850.0" y="214" text-anchor="middle" class="small">整套</text>
+<rect x="900" y="183" width="100" height="50" rx="3" fill="#d5dce4" stroke="#fff" stroke-width="2"/>
+<text x="950.0" y="214" text-anchor="middle" class="small">座梁</text>
+<rect x="1000" y="183" width="50" height="50" rx="3" fill="#d5dce4" stroke="#fff" stroke-width="2"/>
+<text x="1025.0" y="214" text-anchor="middle" class="small">薄梁</text>
+<rect x="1050" y="183" width="50" height="50" rx="3" fill="#d5dce4" stroke="#fff" stroke-width="2"/>
+<text x="1075.0" y="214" text-anchor="middle" class="small">薄梁</text>
+<line x1="750" y1="174" x2="750" y2="246" stroke="#263549" stroke-dasharray="4 4"/>
+<line x1="400" y1="236" x2="400" y2="243" stroke="#6d7c8d"/>
+<text x="400" y="264" text-anchor="middle" class="small">-28</text>
+<line x1="450" y1="236" x2="450" y2="243" stroke="#6d7c8d"/>
+<text x="450" y="264" text-anchor="middle" class="small">-24</text>
+<line x1="500" y1="236" x2="500" y2="243" stroke="#6d7c8d"/>
+<text x="500" y="264" text-anchor="middle" class="small">-20</text>
+<line x1="600" y1="236" x2="600" y2="243" stroke="#6d7c8d"/>
+<text x="600" y="264" text-anchor="middle" class="small">-12</text>
+<line x1="700" y1="236" x2="700" y2="243" stroke="#6d7c8d"/>
+<text x="700" y="264" text-anchor="middle" class="small">-4</text>
+<line x1="800" y1="236" x2="800" y2="243" stroke="#6d7c8d"/>
+<text x="800" y="264" text-anchor="middle" class="small">4</text>
+<line x1="900" y1="236" x2="900" y2="243" stroke="#6d7c8d"/>
+<text x="900" y="264" text-anchor="middle" class="small">12</text>
+<line x1="1000" y1="236" x2="1000" y2="243" stroke="#6d7c8d"/>
+<text x="1000" y="264" text-anchor="middle" class="small">20</text>
+<line x1="1050" y1="236" x2="1050" y2="243" stroke="#6d7c8d"/>
+<text x="1050" y="264" text-anchor="middle" class="small">24</text>
+<line x1="1100" y1="236" x2="1100" y2="243" stroke="#6d7c8d"/>
+<text x="1100" y="264" text-anchor="middle" class="small">28</text>
+<text x="50" y="304" class="small">红梁圆孔转动；外侧双薄横梁的十字孔固定轴。座梁为 3 孔梁，双薄横梁为 32449。</text>
+<text x="50" y="370" class="sub" font-weight="700">B　从动臂根轴 · 10 号轴 3737</text>
+<line x1="250" y1="430" x2="1250" y2="430" stroke="#202c3b" stroke-width="12"/>
+<rect x="250" y="405" width="50" height="50" rx="3" fill="#b6c2cf" stroke="#fff" stroke-width="2"/>
+<text x="275.0" y="436" text-anchor="middle" class="small">半套</text>
+<rect x="300" y="405" width="100" height="50" rx="3" fill="#d5dce4" stroke="#fff" stroke-width="2"/>
+<text x="350.0" y="436" text-anchor="middle" class="small">支架</text>
+<rect x="400" y="405" width="100" height="50" rx="3" fill="#93a3b5" stroke="#fff" stroke-width="2"/>
+<text x="450.0" y="436" text-anchor="middle" class="small">整套</text>
+<rect x="500" y="405" width="100" height="50" rx="3" fill="#93a3b5" stroke="#fff" stroke-width="2"/>
+<text x="550.0" y="436" text-anchor="middle" class="small">整套</text>
+<rect x="600" y="405" width="50" height="50" rx="3" fill="#4d83d1" stroke="#fff" stroke-width="2"/>
+<text x="625.0" y="436" text-anchor="middle" class="small">蓝梁</text>
+<rect x="650" y="405" width="50" height="50" rx="3" fill="#b6c2cf" stroke="#fff" stroke-width="2"/>
+<text x="675.0" y="436" text-anchor="middle" class="small">半套</text>
+<rect x="700" y="405" width="100" height="50" rx="3" fill="#93a3b5" stroke="#fff" stroke-width="2"/>
+<text x="750.0" y="436" text-anchor="middle" class="small">整套</text>
+<rect x="800" y="405" width="50" height="50" rx="3" fill="#b6c2cf" stroke="#fff" stroke-width="2"/>
+<text x="825.0" y="436" text-anchor="middle" class="small">半套</text>
+<rect x="850" y="405" width="50" height="50" rx="3" fill="#4d83d1" stroke="#fff" stroke-width="2"/>
+<text x="875.0" y="436" text-anchor="middle" class="small">蓝梁</text>
+<rect x="900" y="405" width="100" height="50" rx="3" fill="#93a3b5" stroke="#fff" stroke-width="2"/>
+<text x="950.0" y="436" text-anchor="middle" class="small">整套</text>
+<rect x="1000" y="405" width="100" height="50" rx="3" fill="#93a3b5" stroke="#fff" stroke-width="2"/>
+<text x="1050.0" y="436" text-anchor="middle" class="small">整套</text>
+<rect x="1100" y="405" width="100" height="50" rx="3" fill="#d5dce4" stroke="#fff" stroke-width="2"/>
+<text x="1150.0" y="436" text-anchor="middle" class="small">支架</text>
+<rect x="1200" y="405" width="50" height="50" rx="3" fill="#b6c2cf" stroke="#fff" stroke-width="2"/>
+<text x="1225.0" y="436" text-anchor="middle" class="small">半套</text>
+<line x1="750" y1="396" x2="750" y2="468" stroke="#263549" stroke-dasharray="4 4"/>
+<line x1="250" y1="458" x2="250" y2="465" stroke="#6d7c8d"/>
+<text x="250" y="486" text-anchor="middle" class="small">-40</text>
+<line x1="300" y1="458" x2="300" y2="465" stroke="#6d7c8d"/>
+<text x="300" y="486" text-anchor="middle" class="small">-36</text>
+<line x1="400" y1="458" x2="400" y2="465" stroke="#6d7c8d"/>
+<text x="400" y="486" text-anchor="middle" class="small">-28</text>
+<line x1="500" y1="458" x2="500" y2="465" stroke="#6d7c8d"/>
+<text x="500" y="486" text-anchor="middle" class="small">-20</text>
+<line x1="600" y1="458" x2="600" y2="465" stroke="#6d7c8d"/>
+<text x="600" y="486" text-anchor="middle" class="small">-12</text>
+<line x1="650" y1="458" x2="650" y2="465" stroke="#6d7c8d"/>
+<text x="650" y="486" text-anchor="middle" class="small">-8</text>
+<line x1="700" y1="458" x2="700" y2="465" stroke="#6d7c8d"/>
+<text x="700" y="486" text-anchor="middle" class="small">-4</text>
+<line x1="800" y1="458" x2="800" y2="465" stroke="#6d7c8d"/>
+<text x="800" y="486" text-anchor="middle" class="small">4</text>
+<line x1="850" y1="458" x2="850" y2="465" stroke="#6d7c8d"/>
+<text x="850" y="486" text-anchor="middle" class="small">8</text>
+<line x1="900" y1="458" x2="900" y2="465" stroke="#6d7c8d"/>
+<text x="900" y="486" text-anchor="middle" class="small">12</text>
+<line x1="1000" y1="458" x2="1000" y2="465" stroke="#6d7c8d"/>
+<text x="1000" y="486" text-anchor="middle" class="small">20</text>
+<line x1="1100" y1="458" x2="1100" y2="465" stroke="#6d7c8d"/>
+<text x="1100" y="486" text-anchor="middle" class="small">28</text>
+<line x1="1200" y1="458" x2="1200" y2="465" stroke="#6d7c8d"/>
+<text x="1200" y="486" text-anchor="middle" class="small">36</text>
+<line x1="1250" y1="458" x2="1250" y2="465" stroke="#6d7c8d"/>
+<text x="1250" y="486" text-anchor="middle" class="small">40</text>
+<text x="50" y="526" class="small">蓝梁十字孔固定轴；轴在 11 孔支架的圆孔中转动。</text>
+<text x="50" y="592" class="sub" font-weight="700">C　主臂—夹块前轴 · 2 号轴 32062</text>
+<line x1="650" y1="652" x2="850" y2="652" stroke="#202c3b" stroke-width="12"/>
+<rect x="650" y="627" width="50" height="50" rx="3" fill="#edab47" stroke="#fff" stroke-width="2"/>
+<text x="675.0" y="658" text-anchor="middle" class="small">夹块</text>
+<rect x="700" y="627" width="100" height="50" rx="3" fill="#e65a57" stroke="#fff" stroke-width="2"/>
+<text x="750.0" y="658" text-anchor="middle" class="small">红梁</text>
+<rect x="800" y="627" width="50" height="50" rx="3" fill="#edab47" stroke="#fff" stroke-width="2"/>
+<text x="825.0" y="658" text-anchor="middle" class="small">夹块</text>
+<line x1="750" y1="618" x2="750" y2="690" stroke="#263549" stroke-dasharray="4 4"/>
+<line x1="650" y1="680" x2="650" y2="687" stroke="#6d7c8d"/>
+<text x="650" y="708" text-anchor="middle" class="small">-8</text>
+<line x1="700" y1="680" x2="700" y2="687" stroke="#6d7c8d"/>
+<text x="700" y="708" text-anchor="middle" class="small">-4</text>
+<line x1="800" y1="680" x2="800" y2="687" stroke="#6d7c8d"/>
+<text x="800" y="708" text-anchor="middle" class="small">4</text>
+<line x1="850" y1="680" x2="850" y2="687" stroke="#6d7c8d"/>
+<text x="850" y="708" text-anchor="middle" class="small">8</text>
+<text x="50" y="748" class="small">两片 L 梁靠魔方一端的十字孔固定轴；中央粗红梁前端圆孔绕轴转。无外侧轴套。</text>
+<text x="50" y="814" class="sub" font-weight="700">D　从动臂—夹块轴 · 3 号轴 4519</text>
+<line x1="600" y1="874" x2="900" y2="874" stroke="#202c3b" stroke-width="12"/>
+<rect x="600" y="849" width="50" height="50" rx="3" fill="#4d83d1" stroke="#fff" stroke-width="2"/>
+<text x="625.0" y="880" text-anchor="middle" class="small">蓝梁</text>
+<rect x="650" y="849" width="50" height="50" rx="3" fill="#edab47" stroke="#fff" stroke-width="2"/>
+<text x="675.0" y="880" text-anchor="middle" class="small">夹块</text>
+<rect x="700" y="849" width="100" height="50" rx="3" fill="#93a3b5" stroke="#fff" stroke-width="2"/>
+<text x="750.0" y="880" text-anchor="middle" class="small">整套</text>
+<rect x="800" y="849" width="50" height="50" rx="3" fill="#edab47" stroke="#fff" stroke-width="2"/>
+<text x="825.0" y="880" text-anchor="middle" class="small">夹块</text>
+<rect x="850" y="849" width="50" height="50" rx="3" fill="#4d83d1" stroke="#fff" stroke-width="2"/>
+<text x="875.0" y="880" text-anchor="middle" class="small">蓝梁</text>
+<line x1="750" y1="840" x2="750" y2="912" stroke="#263549" stroke-dasharray="4 4"/>
+<line x1="600" y1="902" x2="600" y2="909" stroke="#6d7c8d"/>
+<text x="600" y="930" text-anchor="middle" class="small">-12</text>
+<line x1="650" y1="902" x2="650" y2="909" stroke="#6d7c8d"/>
+<text x="650" y="930" text-anchor="middle" class="small">-8</text>
+<line x1="700" y1="902" x2="700" y2="909" stroke="#6d7c8d"/>
+<text x="700" y="930" text-anchor="middle" class="small">-4</text>
+<line x1="800" y1="902" x2="800" y2="909" stroke="#6d7c8d"/>
+<text x="800" y="930" text-anchor="middle" class="small">4</text>
+<line x1="850" y1="902" x2="850" y2="909" stroke="#6d7c8d"/>
+<text x="850" y="930" text-anchor="middle" class="small">8</text>
+<line x1="900" y1="902" x2="900" y2="909" stroke="#6d7c8d"/>
+<text x="900" y="930" text-anchor="middle" class="small">12</text>
+<text x="50" y="970" class="small">蓝梁前端十字孔固定轴；两片 L 梁朝外一边的中间圆孔绕轴转。无外侧轴套。</text>
+<text x="50" y="1036" class="sub" font-weight="700">E　十字接头横轴 · 4 号轴 3705</text>
+<line x1="550" y1="1096" x2="950" y2="1096" stroke="#202c3b" stroke-width="12"/>
+<rect x="550" y="1071" width="50" height="50" rx="3" fill="#b6c2cf" stroke="#fff" stroke-width="2"/>
+<text x="575.0" y="1102" text-anchor="middle" class="small">半套</text>
+<rect x="600" y="1071" width="100" height="50" rx="3" fill="#efcb47" stroke="#fff" stroke-width="2"/>
+<text x="650.0" y="1102" text-anchor="middle" class="small">连杆</text>
+<rect x="700" y="1071" width="100" height="50" rx="3" fill="#7b8797" stroke="#fff" stroke-width="2"/>
+<text x="750.0" y="1102" text-anchor="middle" class="small">接头</text>
+<rect x="800" y="1071" width="100" height="50" rx="3" fill="#efcb47" stroke="#fff" stroke-width="2"/>
+<text x="850.0" y="1102" text-anchor="middle" class="small">连杆</text>
+<rect x="900" y="1071" width="50" height="50" rx="3" fill="#b6c2cf" stroke="#fff" stroke-width="2"/>
+<text x="925.0" y="1102" text-anchor="middle" class="small">半套</text>
+<line x1="750" y1="1062" x2="750" y2="1134" stroke="#263549" stroke-dasharray="4 4"/>
+<line x1="550" y1="1124" x2="550" y2="1131" stroke="#6d7c8d"/>
+<text x="550" y="1152" text-anchor="middle" class="small">-16</text>
+<line x1="600" y1="1124" x2="600" y2="1131" stroke="#6d7c8d"/>
+<text x="600" y="1152" text-anchor="middle" class="small">-12</text>
+<line x1="700" y1="1124" x2="700" y2="1131" stroke="#6d7c8d"/>
+<text x="700" y="1152" text-anchor="middle" class="small">-4</text>
+<line x1="800" y1="1124" x2="800" y2="1131" stroke="#6d7c8d"/>
+<text x="800" y="1152" text-anchor="middle" class="small">4</text>
+<line x1="900" y1="1124" x2="900" y2="1131" stroke="#6d7c8d"/>
+<text x="900" y="1152" text-anchor="middle" class="small">12</text>
+<line x1="950" y1="1124" x2="950" y2="1131" stroke="#6d7c8d"/>
+<text x="950" y="1152" text-anchor="middle" class="small">16</text>
+<text x="50" y="1192" class="small">接头为 32013，两侧直接贴 32526 短边中孔；只在最外侧各放一个半轴套。</text>
+<text x="50" y="1258" class="sub" font-weight="700">F　输入连杆—主臂轴 · 3 号轴 4519（上夹指）</text>
+<line x1="650" y1="1318" x2="950" y2="1318" stroke="#202c3b" stroke-width="12"/>
+<rect x="650" y="1293" width="50" height="50" rx="3" fill="#b6c2cf" stroke="#fff" stroke-width="2"/>
+<text x="675.0" y="1324" text-anchor="middle" class="small">半套</text>
+<rect x="700" y="1293" width="100" height="50" rx="3" fill="#e65a57" stroke="#fff" stroke-width="2"/>
+<text x="750.0" y="1324" text-anchor="middle" class="small">红梁</text>
+<rect x="800" y="1293" width="100" height="50" rx="3" fill="#efcb47" stroke="#fff" stroke-width="2"/>
+<text x="850.0" y="1324" text-anchor="middle" class="small">连杆</text>
+<rect x="900" y="1293" width="50" height="50" rx="3" fill="#b6c2cf" stroke="#fff" stroke-width="2"/>
+<text x="925.0" y="1324" text-anchor="middle" class="small">半套</text>
+<line x1="750" y1="1284" x2="750" y2="1356" stroke="#263549" stroke-dasharray="4 4"/>
+<line x1="650" y1="1346" x2="650" y2="1353" stroke="#6d7c8d"/>
+<text x="650" y="1374" text-anchor="middle" class="small">-8</text>
+<line x1="700" y1="1346" x2="700" y2="1353" stroke="#6d7c8d"/>
+<text x="700" y="1374" text-anchor="middle" class="small">-4</text>
+<line x1="800" y1="1346" x2="800" y2="1353" stroke="#6d7c8d"/>
+<text x="800" y="1374" text-anchor="middle" class="small">4</text>
+<line x1="900" y1="1346" x2="900" y2="1353" stroke="#6d7c8d"/>
+<text x="900" y="1374" text-anchor="middle" class="small">12</text>
+<line x1="950" y1="1346" x2="950" y2="1353" stroke="#6d7c8d"/>
+<text x="950" y="1374" text-anchor="middle" class="small">16</text>
+<text x="50" y="1414" class="small">32526 长边末孔直接贴红梁后端第 2 孔；两端各半轴套。下夹指按此截面左右镜像。</text>
+<text x="50" y="1484" class="small">标尺单位 mm，0 为夹指中面；半套 = 半轴套 32123a，整套 = 轴套 3713。未画孔形和倒角。</text></svg>
