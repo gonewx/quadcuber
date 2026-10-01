@@ -281,9 +281,9 @@ def write_html(parts, step_new, keys, subs):
            '<header class="cover"><div class="eyebrow">quadcuber · research/self-aligning-jaws</div>',
            '<h1>上下相同的轮胎压头</h1>',
            '<p class="lead">沿用转盘和 5 孔输入连杆；每个模块向外移 16mm，上下主臂都用 7 孔粗梁，底座四角改用 7×5 框架连接。每臂上下各一组 42610＋50945，四臂共需八组轮胎。</p>',
-           '<p>轮毂装在 32002 圆销上，可以转动。上下压头采用相同零件和孔位，轮胎圆弧与橡胶变形形成接触面。前端用 11478 两端十字孔薄梁，舵机用 32316 粗连杆，整机不需要 32017 圆孔薄梁。</p>',
-           '<p><b>当前验证未通过：后部曲柄轴与旋转推杆相碰，回转包络最大侵入约 0.52mm。</b>旧版“0 干涉”结论已被补充检查更正。先修正后部避让，再进行带动力测试和四臂复制。<a href="mechanical_audit.md">完整审查、刚度计算与测试指标</a> · <a href="load_test_template.csv">实测记录表</a></p>',
-           '<p><b>后续结构选型：改用双侧薄梁支承。</b>当前图和模型仍为单侧版本，双侧的轮轴、固定销和全行程避让尚待设计与验证。</p>',
+           '<p>每个轮毂由两根 32449 四孔薄梁夹持，用 32062 二号轴贯穿；轮毂圆孔可以绕轴转动。舵机后移 8mm，使用 32524 七孔粗连杆的第 2、7 孔。</p>',
+           '<p><b>双侧支承与后部避让已落实，名义 CAD 检查通过。</b>曲柄改走远离推杆的圆弧，并加内侧半轴套。实物刚度、保持力和带载间隙仍待单臂验收。<a href="mechanical_audit.md">完整审查、刚度计算与测试指标</a> · <a href="load_test_template.csv">实测记录表</a></p>',
+           '<p><b>当前图、模型与清单均为双侧薄梁版。</b>邻臂单层连续回转间隙下界 1.333mm；后部旋转半轴套对连杆的下界约 0.878mm（81 个开度）。这两处是实测重点，不能据 CAD 通过认定带载合格。</p>',
            '<div class="plate">' + img('cover.png', '整机装配总览', 1400, 900) + '</div>',
            '<div class="facts">'
            f'<div class="fact"><b>{len(steps)} 步</b><span>完整装配</span></div>'
@@ -294,19 +294,19 @@ def write_html(parts, step_new, keys, subs):
            + ''.join(f'<a href="#s{k}">{k}. {esc(st["title"])}</a>' for k, st in enumerate(steps, 1))
            + '<a href="#checks">验证与标定</a></nav></header>',
            '<section id="jaw" class="cover"><h2>压头与传力</h2>',
-           figure('jaw_detail.png', '上下均为 42610＋50945 轮胎；两根薄梁分别通过两个销与主臂固定。', 1400, 1000),
+           figure('jaw_detail.png', '上下均为 42610＋50945 轮胎；每只轮毂两侧各有一根 32449 薄梁。', 1400, 1000),
            '<div class="two">' + figure('mech_closed.png', f'夹紧参考：主臂外张 3.84°，每侧名义压缩约 {(56-gap)/2:.2f}mm。', 1000, 620)
            + figure('mech_open.png', f'松开参考：主臂外张 25°，推杆后退 {stroke:.2f}mm。', 1000, 620) + '</div>',
-           figure('jaw_layers.svg', '孔位与轴向叠放。上下轮毂均使用 32002 短销，轮胎与主臂中面对齐。', 1500, 1000),
-           '<ul class="plain"><li>每臂：42610 ×2、50945 ×2、32002 ×2、11478 ×2、3749 ×2、2780 ×2（仅计压头组件）。</li>'
+           figure('jaw_layers.svg', '孔位与轴向叠放：4mm 薄梁＋8mm 轮毂＋4mm 薄梁；二号轴两端齐平。', 1500, 1000),
+           '<ul class="plain"><li>每臂前端：42610 ×2、50945 ×2、32449 ×4、32062 ×2、4519 ×2、32123a ×4、32054 ×2。</li>'
            '<li>上下均为 7 孔主臂：第 2 孔接连杆，第 4 孔作支点，第 6、7 孔接薄梁。</li>'
-           '<li>使用 11478 两端十字孔薄梁：第 1 十字孔用 3749 轴销接主臂，第 2 圆孔用黑销固定；第 4 圆孔装轮毂，第 5 十字孔留空。32002 短段插薄梁、长段插轮毂。</li>'
+           '<li>32449 第 1 十字孔用三号轴贯穿主臂，两端半轴套固定；第 2 圆孔用 32054 挡套长销贯穿。第 3 孔空，第 4 十字孔用二号轴连接轮毂。</li>'
            '<li>50945 按 14×6mm 外包络；42610 标称 11×8mm，CAD 网格外缘约 11.2mm。轮胎安装内槽保留原网格。</li>'
            '<li>轮毂可以滚动；旋转魔方时需要轮胎沿轮轴方向的摩擦力。需要实测轴向滑移、拧层阻力和轮胎保持。</li></ul></section>',
            '<section class="cover"><h2>舵机粗连杆</h2>',
-           '<div class="two">' + figure('servo_closed.png', '夹紧：5 孔粗连杆直接贴十字块，外侧半轴套定位。', 1000, 620)
-           + figure('servo_open.png', '松开：曲柄端只用 2 号轴，靠推杆一侧不加半轴套。', 1000, 620) + '</div>',
-           '<p>十字块端使用 3 号轴，两端各一个半轴套；粗连杆与十字块之间不加轴套。曲柄端的 2 号轴外端与曲柄外面齐平，内端露半孔。检查轴在曲柄十字孔中是否松脱，并手转推杆确认避让。</p></section>',
+           '<div class="two">' + figure('servo_closed.png', '夹紧：7 孔粗连杆第 2 孔接十字块，第 7 孔接曲柄。', 1000, 620)
+           + figure('servo_open.png', '松开：曲柄沿远离推杆的一侧转开，二号轴内端加半轴套。', 1000, 620) + '</div>',
+           '<p>舵机相对旧版后移一孔（8mm），垫梁的黑销孔位也已调整。十字块端用三号轴和两只半轴套；粗连杆直接贴十字块。曲柄端二号轴内侧加半轴套，外端齐平。连杆第 1 孔朝魔方留空，不能反装；曲柄总行程约 97.10°。</p></section>',
            '<script type="importmap">{"imports":{"three":"./three/three.module.min.js","three/addons/":"./three/addons/"}}</script>',
            '<section id="v3d-sec" class="cover"><h2>可旋转模型</h2><p>拖动旋转、滚轮缩放、右键平移；滑块按步骤查看。</p>'
            '<div id="v3d" class="plate"><div id="v3d-status">正在加载模型…</div></div>'
@@ -325,12 +325,10 @@ def write_html(parts, step_new, keys, subs):
             available = 4 if name in {"42610.dat", "50945_nominal.dat"} else (2 if name == "95658.dat" else SET_45680.get(name, 0))
             number = '50945' if name == '50945_nominal.dat' else name[:-4]
             needed = max(0, count - available)
-            if name == "11478.dat":
-                available, needed = "已有，数量待清点", "按实存扣除"
             row = [model.CATALOG[name][0], number, one[name], count, available, needed]
             writer.writerow(row)
             out.append('<tr>' + ''.join(f'<td>{esc(str(v))}</td>' for v in row) + '</tr>')
-    out.append('</table></div><p class="cap">套装数量沿用仓库清单，大框按已有 4 块计。42610、50945 已有各 4 件，整机各需 8 件，按用户确认另补各 4 件。11478 已确认有货但未给数量，整机需 8 根，请按实存扣除。其他未录入的零件按 0 计；补充数量需先扣除散件库存。马达已有 2 个，整机还需 2 个。</p></section>')
+    out.append('</table></div><p class="cap">套装数量沿用仓库清单，大框按已有 4 块计。42610、50945 已有各 4 件，整机各需 8 件，按用户确认另补各 4 件。32449 整机需 16 根，未确认库存；原有 11478 五孔薄梁不能按同一孔位直接替换。其他未录入的零件按 0 计；补充数量需先扣除散件库存。马达已有 2 个，整机还需 2 个。</p></section>')
     for k, st in enumerate(steps, 1):
         out.append(f'<section class="cover" id="s{k}"><h2>{k:02d} · {esc(st["title"])}</h2>')
         chips = []
@@ -341,10 +339,10 @@ def write_html(parts, step_new, keys, subs):
         out.append('<div class="callout">' + ''.join(chips) + '</div><div class="plate">' + img(f'step{k:02d}.png', st['title']) + '</div>')
         out.append(f'<p>{esc(st["text"])}</p></section>')
     out += ['<section id="checks" class="cover"><h2>验证与单臂验收</h2>',
-            '<p>当前存在后部干涉；以下装配与标定步骤须在修正后使用。检查范围和结果见 <a href="mechanical_audit.md">完整机械审查</a>。夹紧力、刚度和轮胎保持力均待实测。</p>',
+            '<p>以下为双侧版的实物试装与标定步骤。检查范围和结果见 <a href="mechanical_audit.md">完整机械审查</a>。夹紧力、刚度和轮胎保持力均待实测。</p>',
             figure('flip.png', '整块翻转：L、R 夹持，F、B 松开并保持竖直。', 1400, 900),
-            '<ol><li>先将 50945 套在 42610 上，用 32002 连接薄梁；检查轮毂轴向保持及轮胎配合。</li>'
-            '<li>确认薄梁后端十字孔装轴销、相邻圆孔装黑销；轮毂装第 4 圆孔。舵机用 5 孔粗连杆，曲柄端 2 号轴不加内侧半轴套，并检查轴是否松脱。</li>'
+            '<ol><li>先将 50945 套在 42610 上，用二号轴安装在两片 32449 之间；检查轮毂转动、轮轴保持及轮胎配合。</li>'
+            '<li>确认薄梁第 1 十字孔装三号轴和两只半轴套、第 2 圆孔装挡套长销；轮毂装第 4 十字孔。舵机七孔粗连杆用第 2、7 孔，曲柄二号轴内侧装半轴套。</li>'
             '<li>按 <a href="../../single_arm.md#servo-calibration">单臂标定步骤</a>先脱开曲柄、空载定位，再在行程中间断电连接。</li>'
             '<li>夹紧端以接触和轻微压缩为准，小步推进；图示 3.84° 是参考值，旧版脉宽不能直接使用。检查推杆十字块两侧半轴套有没有沿轴滑移。</li>'
             f'<li>开端参考推杆后退 {stroke:.2f}mm、主臂外张 25°。改变轮胎、轴长或开角后重新检查避让。</li>'

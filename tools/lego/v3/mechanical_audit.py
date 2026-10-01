@@ -63,11 +63,17 @@ def cylinder_lower_bound(tris, xlo, xhi, radius):
 def refined_cylinder_distance(tris, labels, xlo, xhi, radius, tolerance=.025):
     """细分候选三角形直至上下界相差≤0.01mm，不丢弃潜在更近的表面。"""
     upper = float('inf')
+    upper_label = ''
     for _ in range(24):
         lower, vertex_upper = cylinder_bounds(tris, xlo, xhi, radius)
-        upper = min(upper, float(vertex_upper.min()))
+        u = int(vertex_upper.argmin())
+        if vertex_upper[u] < upper:
+            upper, upper_label = float(vertex_upper[u]), str(labels[u])
         k = int(lower.argmin())
         if upper-lower[k] <= tolerance:
+            # 上一轮下界==上界的三角形可能已被裁掉；保留它的已知最优值。
+            if lower[k] >= upper:
+                return upper, upper, upper_label
             return float(lower[k]), upper, str(labels[k])
         keep = lower < upper
         tris, labels = tris[keep], labels[keep]
@@ -118,57 +124,50 @@ def self_test():
     t = np.array([[[0, 4, 0], [4, 0, 0], [4, 0, 1]]],float)
     lo,hi,_ = refined_cylinder_distance(t,np.array(['test']),-1,1,1)
     assert math.sqrt(2)-.025 <= lo <= math.sqrt(2) <= hi+1e-10
+    # 精确最优面可在细分前被裁掉，剩余候选收敛后不能反而抬高全局下界。
+    t = np.array([[[0,3,0],[0,3,0],[0,3,0]],[[0,10,0],[10,0,0],[10,0,1]]],float)
+    lo,hi,label = refined_cylinder_distance(t,np.array(['exact','loose']),-1,1,1)
+    assert lo == hi == 2 and label == 'exact'
 
 
 def rod_check():
-    # 固定曲柄轴只沿 XY 平移；Y 最小时与推杆的距离最小。
-    # 曲柄 theta=-90° 在本机行程内，额外显式检查，不依赖离散行程命中。
+    """检查曲柄轴与内限位的整个圆周回转包络；行程取样并加入曲柄极值。"""
     from scipy.optimize import brentq
-    special = brentq(lambda s: model.servo_theta_for(s)[0] + math.pi/2, 0, model.OPEN_S)
+    th0 = model.servo_theta_for(0)[0]
+    th1 = model.servo_theta_for(model.OPEN_S)[0]
+    strokes = np.linspace(0, model.OPEN_S, 81).tolist()
+    for theta in (-math.pi/2, 0, math.pi/2):
+        if min(th0, th1) < theta < max(th0, th1):
+            strokes.append(brentq(lambda s:model.servo_theta_for(s)[0]-theta,0,model.OPEN_S))
     rows, worst = [], None
-    for s in sorted(set(np.linspace(0, model.OPEN_S, 41).tolist() + [special])):
-        parts = model.module(s, steps=False)
+    for stroke in sorted(set(strokes)):
+        parts = model.module(stroke, steps=False)
         rod = next(p for p in parts if p.name == '3708.dat')
-        shaft = next(p for p in parts if p.name == '32062.dat')
-        tris = world(shaft)
-        assert tris[:, :, 0].min() > rod.pos[0]-117.5
-        assert tris[:, :, 0].max() < rod.pos[0]+117.5
-        r, yz = projected_minimum(tris)
-        k = int(r.argmin())
-        vertices = tris.reshape(-1, 3)
-        witness = vertices[np.linalg.norm(vertices[:, 1:], axis=1).argmin()]
-        angle = math.degrees(math.atan2(witness[2], witness[1]))
-        # 3708 直段截面 +Y 轴上 0<Y<6 为实体；把此顶点旋入该实体内部。
-        local = (witness-rod.pos) @ model.rot_x(angle)
-        actual_overlap = abs(local[0]) < 117.5 and 0 < local[1] < 6 and abs(local[2]) < 1e-8
-        row = {'行程比例': s/model.OPEN_S, '曲柄轴到推杆轴线最小半径_mm': float(r[k]*.4),
-               '回转包络径向余量_mm': float((r[k]-6)*.4), '相碰见证角_deg': angle,
-               '轴表面见证顶点_LDU': witness.tolist(), '顶点在推杆实体内': bool(actual_overlap)}
-        rows.append(row)
-        if worst is None or row['回转包络径向余量_mm'] < worst['回转包络径向余量_mm']:
-            worst = row
-    # 修改候选只用于几何筛选，不修改正式模型，也不视为通过装配验证。
-    parts = model.module(special, steps=False)
-    shaft = next(p for p in parts if p.name == '32062.dat')
-    servo = next(p for p in parts if p.name == 'geekservo.dat')
-    servo_tris = world(servo)
-    candidates = []
-    for dz in (0, 5, 7.5, 10):
-        tris = world(shaft) + [0, 0, dz]
-        r, _ = projected_minimum(tris)
-        housing_gap = float('inf')
-        for s in np.linspace(0, model.OPEN_S, 41):
-            p = next(p for p in model.module(s, steps=False) if p.name == '32062.dat')
-            # 外包圆柱比十字轴实体大；正下界可证明分离，0 不代表确认相碰。
-            local = (servo_tris-p.pos-[0,0,dz])[:, :, [2,0,1]]
-            lo,_,_ = refined_cylinder_distance(local,np.array(['servo']*len(local)),-19.5,19.5,6)
-            housing_gap = min(housing_gap,lo)
-        candidates.append({'曲柄轴朝舵机平移_mm': dz*.4,
-                           '推杆包络径向余量_mm': float((r.min()-6)*.4),
-                           '轴最外端Z_mm': float(tris[:, :, 2].max()*.4),
-                           '舵机近似网格与轴外包圆柱间隙下界_mm_41行程位置':housing_gap*.4})
-    return {'状态': '失败' if worst['回转包络径向余量_mm'] < 0 else '通过',
-            '推杆回转半径_mm': 2.4, '最差': worst, '行程记录': rows, '修改候选_未采纳': candidates}
+        targets = [p for p in parts if p.note in ('曲柄端轴','曲柄端内限位')]
+        if not targets:  # 也能复现旧单侧版的失败。
+            targets = [next(p for p in parts if p.name=='32062.dat' and not p.head)]
+        for part in targets:
+            tris = world(part)
+            assert tris[:,:,0].min() > rod.pos[0]-117.5
+            assert tris[:,:,0].max() < rod.pos[0]+117.5
+            radii,_ = projected_minimum(tris)
+            gap = (float(radii.min())-6)*.4
+            vertices = tris.reshape(-1,3)
+            witness = vertices[np.linalg.norm(vertices[:,1:],axis=1).argmin()]
+            angle = math.degrees(math.atan2(witness[2],witness[1]))
+            local = (witness-rod.pos) @ model.rot_x(angle)
+            collision = abs(local[0])<117.5 and 0<local[1]<6 and abs(local[2])<1e-8
+            row = {'行程比例':stroke/model.OPEN_S, '零件':part.name, '用途':part.note,
+                   '回转包络径向余量_mm':gap, '表面见证顶点_LDU':witness.tolist(),
+                   '见证角_deg':angle, '顶点在推杆实体内':bool(collision)}
+            rows.append(row)
+            if worst is None or gap<worst['回转包络径向余量_mm']:
+                worst = row
+    return {'状态':'失败' if worst['回转包络径向余量_mm']<0 else '通过',
+            '推杆回转半径_mm':2.4, '最差':worst, '行程记录':rows,
+            '曲柄角范围_deg':[math.degrees(th0),math.degrees(th1)],
+            '连续行程径向保守余量_mm':(min(model.CRANK_C[1]+model.CRANK_R*math.sin(th0),
+                                         model.CRANK_C[1]+model.CRANK_R*math.sin(th1))-9.001-6)*.4}
 
 
 def cube_checks():
@@ -218,17 +217,37 @@ def fixed_rod_checks():
     return list(results.values())
 
 
+def rotating_bush_checks():
+    """推杆两侧半轴套的完整360°外包圆柱，对固定舵机连杆；81个行程。"""
+    rows=[]
+    for stroke in np.linspace(0,model.OPEN_S,81):
+        parts=model.module(float(stroke),steps=False)
+        link=next(p for p in parts if p.note=='舵机连杆')
+        tri=world(link)
+        for bush in (p for p in parts if p.head and p.name=='32123a.dat' and abs(p.pos[1])+abs(p.pos[2])<1e-8):
+            vertices=world(bush).reshape(-1,3)
+            radius=float(np.linalg.norm(vertices[:,1:],axis=1).max())
+            lo,hi,_=refined_cylinder_distance(tri,np.array([link.name]*len(tri)),
+                                            vertices[:,0].min(),vertices[:,0].max(),radius)
+            rows.append({'行程比例':float(stroke/model.OPEN_S),'轴套X_LDU':float(bush.pos[0]),
+                         '连续回转间隙下界_mm':lo*.4,'上界_mm':hi*.4})
+    return {'范围':'81个行程；每个位置覆盖半轴套连续360度回转外包络',
+            '最差':min(rows,key=lambda r:r['连续回转间隙下界_mm']), '行程记录':rows}
+
+
 def stiffness():
-    # 两支点相距8mm，载荷位于第一支点前24mm；∫(M/F)^2 dx = 2048 mm^3。
     integral = 4*8**3/3 + 16**3/3
-    assert abs(integral-2048)<1e-9
     inertia = 7.2*4**3/12
-    return {'假设':'无孔实心矩形薄梁、理想两点支承；不含销孔间隙、扭转、轮销和主臂变形。E 仅作参数示例。',
-            '支点间距_mm':8, '载荷距首支点_mm':24, '惯性矩_mm4':inertia,
-            '支点反力与轮端力之比':[-2,3], '法向力对薄梁中面偏心_mm':6,
-            'E敏感性':[{'E_MPa':E, '单薄梁理想柔度_mm每N':integral/(E*inertia),
-                       '5N理想挠度_mm':5*integral/(E*inertia)} for E in (1000,2000,3000)],
-            '两点均匀分载示例':[{'单臂输出扭矩_Nm':T, '每轮切向力_N':T/(2*.028)} for T in (.05,.1,.2,.5)],
+    in_plane = 4*7.2**3/12
+    return {'假设':'无孔实心矩形薄梁、理想两点支承；不含销孔间隙、扭转、轮轴和主臂变形。E仅作参数示例。',
+            '支点间距_mm':8, '载荷距首支点_mm':24, '面外惯性矩_mm4':inertia,
+            '面内惯性矩_mm4':in_plane, '单片支点反力与分配给该片的轮端力之比':[-2,3],
+            '法向分载':'夹紧法向N作用在两薄梁中间，理想对称时每片N/2；合成偏心距为0。',
+            '轴向分载':'轮轴方向的Ft由轮毂端面推向一侧薄梁，保守按单片承受全Ft；不宣称面外柔度减半。',
+            'E敏感性':[{'E_MPa':E,'轴向Ft单片保守柔度_mm每N':integral/(E*inertia),
+                       '轴向5N理想挠度_mm':5*integral/(E*inertia),
+                       '法向N两片均分理想柔度_mm每N':integral/(2*E*in_plane)} for E in (1000,2000,3000)],
+            '两轮均匀分载示例':[{'单臂输出扭矩_Nm':T,'每轮切向力_N':T/(2*.028)} for T in (.05,.1,.2,.5)],
             '实物验证':'未执行，不给出合格结论'}
 
 
@@ -242,21 +261,22 @@ def main():
         return 0
     rod = rod_check()
     fixed, cubes = fixed_rod_checks(), cube_checks()
+    bushes = rotating_bush_checks()
     failed = rod['状态']=='失败' or any(r['径向余量_mm'] < -1e-8 and not r['有意配合'] for r in fixed)
-    unresolved = any(r['状态']=='需细查' for r in cubes)
-    data = {'几何源':'a2b1bab5232f910739678eb6635034246aa63d8b 基线；以文件 SHA256 为准',
+    unresolved = any(r['状态']=='需细查' for r in cubes) or bushes['最差']['连续回转间隙下界_mm']<=0
+    data = {'几何源':'双侧32449支承＋后移舵机＋7孔粗连杆；以文件SHA256为准',
             'model.py_SHA256':hashlib.sha256(Path(model.__file__).read_bytes()).hexdigest(),
             '零件三角网格_SHA256':{name:hashlib.sha256(np.ascontiguousarray(ldraw.geometry(name)[0],dtype='<f8').tobytes()).hexdigest()
                                       for name in sorted({p.name for p in model.build()})},
             '结论':('发现后部回转干涉' if failed else '本脚本未检出后部包络干涉')+'；实物刚度与保持力待测',
             '曲柄轴与推杆':rod, '推杆直段对固定件_41行程位置':fixed,
-            '魔方连续回转包络':cubes, '薄梁受力估算':stiffness(),
+            '旋转半轴套对舵机连杆':bushes, '魔方连续回转包络':cubes, '薄梁受力估算':stiffness(),
             '范围限制':['魔方工况使用完整表面三角形和连续角度包络；正距离可证明名义网格分离。',
                       '三角网格是名义外形；不包含公差、材料变形、轴窜动及未建模线缆。',
                       '整机所有零件对并未获得连续开合与回转的联合证明；原离散扫描保留为补充。',
                       '圆柱到表面下界不检测一个实体完整包住另一个实体的特殊情况；本报告魔方位于各机械零件外部。']}
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n')
-    print(json.dumps({k:v for k,v in data.items() if k not in ('曲柄轴与推杆',)},ensure_ascii=False,indent=2))
+    print(json.dumps({k:v for k,v in data.items() if k not in ('曲柄轴与推杆','旋转半轴套对舵机连杆')},ensure_ascii=False,indent=2))
     print('曲柄轴检查：',json.dumps(rod['最差'],ensure_ascii=False))
     print('结果：',OUT)
     return int(failed or unresolved)

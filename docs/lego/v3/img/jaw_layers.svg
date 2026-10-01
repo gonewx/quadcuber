@@ -1,47 +1,60 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000">
 <rect width="1500" height="1000" fill="white"/><g font-family="Noto Sans CJK SC, sans-serif" fill="#172535">
-<text x="60" y="65" font-size="36" font-weight="700">上下相同：42610 轮毂＋50945 轮胎</text>
-<text x="60" y="110" font-size="23">孔号从后端数；图示展开孔位，1 孔距 = 8mm，夹紧角约 3.84°。</text>
-<text x="60" y="165" font-size="26">上侧：7 孔粗梁</text>
-<rect x="185" y="200" width="730" height="70" rx="35" fill="#c94338"/>
-<circle cx="220" cy="235" r="20" fill="white"/><text x="220" y="190" text-anchor="middle" font-size="22">1</text>
-<circle cx="330" cy="235" r="20" fill="white"/><text x="330" y="190" text-anchor="middle" font-size="22">2</text>
-<circle cx="440" cy="235" r="20" fill="white"/><text x="440" y="190" text-anchor="middle" font-size="22">3</text>
-<circle cx="550" cy="235" r="20" fill="white"/><text x="550" y="190" text-anchor="middle" font-size="22">4</text>
-<circle cx="660" cy="235" r="20" fill="white"/><text x="660" y="190" text-anchor="middle" font-size="22">5</text>
-<circle cx="770" cy="235" r="20" fill="white"/><text x="770" y="190" text-anchor="middle" font-size="22">6</text>
-<circle cx="880" cy="235" r="20" fill="white"/><text x="880" y="190" text-anchor="middle" font-size="22">7</text>
-<rect x="745" y="280" width="510" height="32" rx="16" fill="#e78360"/>
-<path d="M760 296 H780 M770 286 V306" stroke="white" stroke-width="7"/>
-<circle cx="880" cy="296" r="9" fill="white"/>
-<circle cx="990" cy="296" r="9" fill="white"/>
-<circle cx="1100" cy="296" r="9" fill="white"/>
-<path d="M1200 296 H1220 M1210 286 V306" stroke="white" stroke-width="7"/>
-<path d="M770 240 V320 M880 240 V320" stroke="#172535" stroke-width="8"/>
-<circle cx="1100" cy="235" r="42" fill="#222"/><circle cx="1100" cy="235" r="29" fill="#aaa"/>
-<path d="M1100 235 V315" stroke="#77818b" stroke-width="9"/>
-<text x="60" y="395" font-size="26">下侧：7 孔粗梁</text>
-<rect x="185" y="430" width="730" height="70" rx="35" fill="#c94338"/>
-<circle cx="220" cy="465" r="20" fill="white"/><text x="220" y="420" text-anchor="middle" font-size="22">1</text>
-<circle cx="330" cy="465" r="20" fill="white"/><text x="330" y="420" text-anchor="middle" font-size="22">2</text>
-<circle cx="440" cy="465" r="20" fill="white"/><text x="440" y="420" text-anchor="middle" font-size="22">3</text>
-<circle cx="550" cy="465" r="20" fill="white"/><text x="550" y="420" text-anchor="middle" font-size="22">4</text>
-<circle cx="660" cy="465" r="20" fill="white"/><text x="660" y="420" text-anchor="middle" font-size="22">5</text>
-<circle cx="770" cy="465" r="20" fill="white"/><text x="770" y="420" text-anchor="middle" font-size="22">6</text>
-<circle cx="880" cy="465" r="20" fill="white"/><text x="880" y="420" text-anchor="middle" font-size="22">7</text>
-<rect x="745" y="510" width="510" height="32" rx="16" fill="#e78360"/>
-<path d="M760 526 H780 M770 516 V536" stroke="white" stroke-width="7"/>
-<circle cx="880" cy="526" r="9" fill="white"/>
-<circle cx="990" cy="526" r="9" fill="white"/>
-<circle cx="1100" cy="526" r="9" fill="white"/>
-<path d="M1200 526 H1220 M1210 516 V536" stroke="white" stroke-width="7"/>
-<path d="M770 470 V550 M880 470 V550" stroke="#172535" stroke-width="8"/>
-<circle cx="1100" cy="465" r="42" fill="#222"/><circle cx="1100" cy="465" r="29" fill="#aaa"/>
-<path d="M1100 465 V545" stroke="#77818b" stroke-width="9"/>
-<text x="60" y="610" font-size="25">主臂第 2 孔：输入连杆；第 4 孔：支点；第 6、7 孔：接薄梁。</text>
-<text x="60" y="660" font-size="25">薄梁第 1 十字孔：3749 轴销；第 2 圆孔：黑销；第 4 圆孔：轮毂。</text>
-<text x="60" y="735" font-size="29" font-weight="700">轴向叠放（上下完全相同）</text>
-<text x="60" y="786" font-size="24">4mm 薄梁 │ 8mm 轮毂；32002 短段穿薄梁、长段插轮毂。</text>
-<text x="60" y="837" font-size="24">第 5 十字孔留空。轮胎 14×6mm，轮胎与主臂中面对齐。</text>
-<text x="60" y="904" font-size="24">轮毂可以滚动，沿轮轴方向的夹持能力需实测。整机需 8 组：已有 4 组，补 4 组。</text>
+<text x="55" y="58" font-size="34" font-weight="700">每个轮毂两侧各一根 32449 四孔薄梁</text>
+<text x="55" y="104" font-size="22">孔号从后端数；上下两只压头完全相同。孔距 8mm，图中沿长度方向展开。</text>
+<text x="55" y="210" font-size="23">7 孔主臂</text>
+<rect x="172" y="180" width="716" height="60" rx="17" fill="#c94338"/>
+<circle cx="200" cy="210.0" r="11" fill="white"/>
+<text x="200" y="168" text-anchor="middle" font-size="21">1</text>
+<circle cx="310" cy="210.0" r="11" fill="white"/>
+<text x="310" y="168" text-anchor="middle" font-size="21">2</text>
+<circle cx="420" cy="210.0" r="11" fill="white"/>
+<text x="420" y="168" text-anchor="middle" font-size="21">3</text>
+<circle cx="530" cy="210.0" r="11" fill="white"/>
+<text x="530" y="168" text-anchor="middle" font-size="21">4</text>
+<circle cx="640" cy="210.0" r="11" fill="white"/>
+<text x="640" y="168" text-anchor="middle" font-size="21">5</text>
+<circle cx="750" cy="210.0" r="11" fill="white"/>
+<text x="750" y="168" text-anchor="middle" font-size="21">6</text>
+<circle cx="860" cy="210.0" r="11" fill="white"/>
+<text x="860" y="168" text-anchor="middle" font-size="21">7</text>
+<text x="55" y="320" font-size="23">第一片 32449</text>
+<rect x="722" y="290" width="386" height="34" rx="17" fill="#e78360"/>
+<path d="M740 307.0 H760 M750 297.0 V317.0" stroke="white" stroke-width="7"/>
+<text x="772" y="278" text-anchor="middle" font-size="21">1</text>
+<circle cx="860" cy="307.0" r="11" fill="white"/>
+<text x="882" y="278" text-anchor="middle" font-size="21">2</text>
+<circle cx="970" cy="307.0" r="11" fill="white"/>
+<text x="992" y="278" text-anchor="middle" font-size="21">3</text>
+<path d="M1070 307.0 H1090 M1080 297.0 V317.0" stroke="white" stroke-width="7"/>
+<text x="1102" y="278" text-anchor="middle" font-size="21">4</text>
+<text x="55" y="400" font-size="23">第二片 32449</text>
+<rect x="722" y="370" width="386" height="34" rx="17" fill="#e78360"/>
+<path d="M740 387.0 H760 M750 377.0 V397.0" stroke="white" stroke-width="7"/>
+<text x="772" y="358" text-anchor="middle" font-size="21">1</text>
+<circle cx="860" cy="387.0" r="11" fill="white"/>
+<text x="882" y="358" text-anchor="middle" font-size="21">2</text>
+<circle cx="970" cy="387.0" r="11" fill="white"/>
+<text x="992" y="358" text-anchor="middle" font-size="21">3</text>
+<path d="M1070 387.0 H1090 M1080 377.0 V397.0" stroke="white" stroke-width="7"/>
+<text x="1102" y="358" text-anchor="middle" font-size="21">4</text>
+<path d="M750 220V412 M860 220V412" stroke="#34465b" stroke-width="5" stroke-dasharray="8 5"/>
+<circle cx="1080" cy="230" r="38" fill="#222"/><circle cx="1080" cy="230" r="26" fill="#aaa"/>
+<path d="M1080 230V412" stroke="#77818b" stroke-width="5" stroke-dasharray="8 5"/>
+<text x="55" y="458" font-size="23">主臂第 2 孔接输入杆；第 4 孔作支点；第 6、7 孔固定两片薄梁。</text>
+<text x="55" y="502" font-size="23">薄梁第 1 十字孔装 4519；第 2 圆孔装 32054；第 3 孔空；第 4 十字孔装轮轴。</text>
+<text x="55" y="566" font-size="28" font-weight="700">轮端沿轴向：4mm 薄梁 ＋ 8mm 轮毂 ＋ 4mm 薄梁</text>
+<rect x="300" y="610" width="80" height="92" fill="#e78360"/>
+<text x="340.0" y="735" text-anchor="middle" font-size="20">32449</text>
+<rect x="380" y="610" width="160" height="92" fill="#aaa"/>
+<text x="460.0" y="735" text-anchor="middle" font-size="20">42610</text>
+<rect x="540" y="610" width="80" height="92" fill="#e78360"/>
+<text x="580.0" y="735" text-anchor="middle" font-size="20">32449</text>
+<path d="M300 656H620" stroke="#42566c" stroke-width="12"/>
+<text x="700" y="640" font-size="23">32062 二号轴：两端齐平，不加外轴套。</text>
+<text x="700" y="682" font-size="23">轮毂圆孔绕固定十字轴转动；试装确认不夹死。</text>
+<text x="55" y="800" font-size="24">后固定点：4519 三号轴贯穿薄—粗—薄，外侧各装一个 32123a 半轴套。</text>
+<text x="55" y="846" font-size="24">前固定点：32054 挡套长销贯穿薄—粗—薄，挡套在第一片外侧。</text>
+<text x="55" y="910" font-size="24">四臂合计：16 根 32449；8 组轮毂＋轮胎（已有 4 组，另补 4 组）。</text>
+<text x="55" y="955" font-size="21">轮胎按 14×6mm 建模；保持力、孔隙、薄梁变形及带载间隙须实测。</text>
 </g></svg>

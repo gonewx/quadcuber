@@ -71,11 +71,11 @@ def sweep_clearance():
     n = 0
     ps = model.build({"F": (0.0, 0.0), "B": (0.0, 0.0)}, with_cube=False)
     r = min_radius(ps, "FB", -model.CUBE_HALF - 2, -model.CUBE_HALF + LAYER + 2)
-    print(f"拧 L 层 (F、B 夹紧竖直): 最近零件离轴 {r:.1f} LDU, 魔方层扫掠半径 {CUBE_R}, 余量 {(r - CUBE_R) * 0.4:.1f}mm")
+    print(f"拧 L 层 (F、B 夹紧竖直): 最近零件离轴 {r:.1f} LDU, 魔方层扫掠半径 {CUBE_R}, 切片径向余量 {(r - CUBE_R) * 0.4:.1f}mm（非三维最小距离，完整结果见 mechanical_audit.json）")
     n += r < CUBE_R + 2
     ps = model.build({"F": (model.OPEN_S, 0.0), "B": (model.OPEN_S, 0.0)}, with_cube=False)
     r = min_radius(ps, "FB", -model.CUBE_HALF - 2, model.CUBE_HALF + 2)
-    print(f"整体翻转 (F、B 松开竖直): 最近零件离轴 {r:.1f} LDU, 魔方扫掠半径 {CUBE_R}, 余量 {(r - CUBE_R) * 0.4:.1f}mm")
+    print(f"整体翻转 (F、B 松开竖直): 最近零件离轴 {r:.1f} LDU, 魔方扫掠半径 {CUBE_R}, 切片径向余量 {(r - CUBE_R) * 0.4:.1f}mm（非三维最小距离，完整结果见 mechanical_audit.json）")
     n += r < CUBE_R + 2
     return n
 

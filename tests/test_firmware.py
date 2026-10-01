@@ -143,13 +143,19 @@ class ArmTestCommands(unittest.TestCase):
         self.assertEqual(world.pwm[self.at.config.SERVO], 0)
 
     def test_cal(self):
+        # 手转方向可正可负；显示保留编码器符号，标定圈数使用绝对值。
         orig = builtins.input
-        builtins.input = lambda prompt="": world.set_count(world.count + 720)
+        encoder_sign = -1 if self.at.config.ENC_INVERT else 1
         try:
-            out = self.run_cmd("cal")
+            for delta in (720, -720):
+                with self.subTest(delta=delta):
+                    builtins.input = lambda prompt="": world.set_count(world.count + delta)
+                    out = self.run_cmd("cal")
+                    self.assertIn("机械手一圈 = %d 计数" % (delta * encoder_sign), out)
+                    self.assertIn("COUNTS_PER_MOTOR_REV 应为 %.1f" %
+                                  (abs(delta) / self.at.config.GEAR_RATIO), out)
         finally:
             builtins.input = orig
-        self.assertIn("机械手一圈 = 720 计数", out)
 
     def test_main_loop(self):
         lines = iter(["help", "bogus", "rot 1", "set nope 1", "quit"])

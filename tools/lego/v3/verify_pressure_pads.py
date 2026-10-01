@@ -1,4 +1,4 @@
-"""补充检查：上下对称的轮胎压头、固定销与轮毂短销、推杆导向覆盖和魔方本体/相邻两层避让。
+"""补充检查：上下对称的轮胎压头、固定轴销与双侧轮轴、推杆导向覆盖和魔方本体/相邻两层避让。
 
 表面离散采样只能给出 CAD 筛查结果，不能证明实物公差、轮胎保持力或夹紧力。
 """
@@ -40,29 +40,31 @@ def main():
             beam = min((p for p in parts if p.head and p.color == model.C_JAW and p.name == '32524.dat'), key=lambda p: np.linalg.norm(p.pos - pivot))
             assert np.linalg.norm(beam.pos - pivot) < 1e-6
             assert np.linalg.norm(beam.world([0, 0, -40]) - (pivot + rotation @ [-40, 0, 0])) < 1e-6
-            thin = min((p for p in parts if p.note == '压头延伸薄梁'), key=lambda p: np.linalg.norm(p.pos - front))
-            assert np.linalg.norm(thin.world([0, 0, 20]) - (front + [0, 0, -15])) < 1e-6
-            assert thin.name == "11478.dat"
-            for reach, note in ((40, "薄梁固定轴销"), (60, "薄梁固定销")):
-                expected = pivot + rotation @ [reach, 0, -10]
-                assert min(np.linalg.norm(p.pos - expected) for p in parts if p.note == note) < 1e-6
-            axle_pin = min((p for p in parts if p.note == '薄梁固定轴销'), key=lambda p: np.linalg.norm(p.pos - front))
-            layers_by_name = {part.name:(lo,hi) for part,lo,hi in check._pin_layers(axle_pin,[thin,beam])}
-            assert np.allclose(layers_by_name['11478.dat'],[-10,0]), '轴销十字段应插薄梁端孔'
-            assert np.allclose(layers_by_name['32524.dat'],[0,20]), '轴销圆销段应插主臂'
-            pin = min((p for p in parts if p.note == '轮毂短销'), key=lambda p: np.linalg.norm(p.pos - front))
-            wheel = min((p for p in parts if p.name == '42610.dat'), key=lambda p: np.linalg.norm(p.pos - front))
-            tyre = min((p for p in parts if p.name == '50945_nominal.dat'), key=lambda p: np.linalg.norm(p.pos - front))
-            assert np.linalg.norm(wheel.pos - front) < 1e-6
-            assert np.linalg.norm(tyre.pos - front) < 1e-6
-            assert np.allclose(sorted([pin.world([-20,0,0])[2], pin.world([10,0,0])[2]]), [-20,10])
-            layers = check._pin_layers(pin, [thin, wheel])
-            assert len(layers) == 2 and sorted(round(hi-lo) for _,lo,hi in layers) == [10,20]
-        servo_link = next(p for p in parts if not p.head and p.color == model.C_LINK and p.name == '32316.dat')
-        assert servo_link.pos[2] == 20, '粗连杆应占 z=10..30'
-        crank_axle = next(p for p in parts if not p.head and p.name == '32062.dat')
+            thins = [p for p in parts if p.note == '压头支承薄梁' and np.linalg.norm(p.pos-front)<40]
+            assert len(thins) == 2
+            assert all(p.name == '32449.dat' for p in thins)
+            for reach, note in ((40, '薄梁固定轴'), (60, '薄梁固定挡套销')):
+                z = -10 if reach == 60 else 0
+                expected = pivot + rotation @ [reach, 0, z]
+                assert min(np.linalg.norm(p.pos-expected) for p in parts if p.note == note)<1e-6
+            shaft = min((p for p in parts if p.note == '轮毂贯穿轴'), key=lambda p:np.linalg.norm(p.pos-front))
+            wheel = min((p for p in parts if p.name == '42610.dat'), key=lambda p:np.linalg.norm(p.pos-front))
+            tyre = min((p for p in parts if p.name == '50945_nominal.dat'), key=lambda p:np.linalg.norm(p.pos-front))
+            assert np.linalg.norm(wheel.pos-front)<1e-6 and np.linalg.norm(tyre.pos-front)<1e-6
+            assert np.allclose(sorted([shaft.world([-20,0,0])[2],shaft.world([20,0,0])[2]]),[-20,20])
+            spans = sorted((round(lo),round(hi)) for _,lo,hi in check._pin_layers(shaft,thins+[wheel]))
+            assert spans == [(-20,-10),(-10,10),(10,20)]
+            # 固定轴、挡套长销均真正贯穿薄—粗—薄叠层。
+            for note,expected in (('薄梁固定轴',[(-20,-10),(-10,10),(10,20)]),
+                                  ('薄梁固定挡套销',[(-10,0),(0,20),(20,30)])):
+                connector=min((p for p in parts if p.note==note),key=lambda p:np.linalg.norm(p.pos-front))
+                spans=sorted((round(lo),round(hi)) for _,lo,hi in check._pin_layers(connector,thins+[beam]))
+                assert spans==expected,(note,spans)
+        servo_link = next(p for p in parts if p.note == '舵机连杆')
+        assert servo_link.name == '32524.dat' and servo_link.pos[2] == 20
+        crank_axle = next(p for p in parts if p.note == '曲柄端轴')
         assert np.allclose(sorted([crank_axle.world([-20,0,0])[2],crank_axle.world([20,0,0])[2]]),[0,40])
-        assert not any(p.name == '32123a.dat' and np.linalg.norm(p.pos-(crank_axle.pos+[0,0,-5]))<1 for p in parts)
+        assert any(p.note == '曲柄端内限位' and np.linalg.norm(p.pos-(crank_axle.pos+[0,0,-15]))<1e-6 for p in parts)
         # 两个导向轴承都必须完整落在后段 12L 推杆之内，不能只看无限长轴线。
         rod = next(p for p in parts if p.name == '3708.dat')
         for hole_x in (-450 + model.MODULE_DX, -330 + model.MODULE_DX):
@@ -90,11 +92,12 @@ def main():
         results[name] = {'最小表面采样间隙_mm': best[0] * .4, '角度': best[1], '零件': best[2]}
     from collections import Counter
     counts = Counter(p.name for p in model.build())
-    for name in ('42610.dat','50945_nominal.dat','32002.dat'):
+    for name in ('42610.dat','50945_nominal.dat'):
         assert counts[name] == 8, (name, counts[name])
     beta = model.CLAMP_BETA
     assert counts["42003.dat"] == counts["6587.dat"] == counts["32017.dat"] == 0
-    assert counts["11478.dat"] == 8
+    assert counts["32449.dat"] == 16
+    assert counts["11478.dat"] == counts["32002.dat"] == 0
     inner_edge = model.JAW_Y + model.JAW_REACH * math.sin(beta) - model.TYRE_RADIUS
     assert abs(inner_edge - (model.CUBE_HALF - model.TYRE_PRELOAD)) < 1e-6
     assert 0 < model.TYRE_PRELOAD < 1.5
@@ -104,9 +107,9 @@ def main():
         '自由夹口_mm': 2 * (model.CUBE_HALF - model.TYRE_PRELOAD) * .4,
         '每侧橡胶名义压缩_mm': model.TYRE_PRELOAD * .4,
         '压头轴中心X_mm': (model.PIVOT_X + model.MODULE_DX + model.JAW_REACH * math.cos(beta)) * .4,
-        '舵机曲柄转角_deg': math.degrees(model.servo_theta_for(0)[0] - model.servo_theta_for(model.OPEN_S)[0]),
+        '舵机曲柄转角_deg': math.degrees(model.servo_theta_for(model.OPEN_S)[0] - model.servo_theta_for(0)[0]),
     }
-    results['整机压头用量'] = {'42610':8,'50945':8,'32002':8,'11478':8,'3749':8,'32017':0}
+    results['整机压头用量'] = {'42610':8,'50945':8,'32062_轮轴':8,'32449':16,'4519_固定轴':8,'32123a_固定轴限位':16,'32054_固定销':8}
     output = Path(__file__).resolve().parents[3] / 'docs/lego/v3/pressure_pad_checks.json'
     output.write_text(json.dumps(results, ensure_ascii=False, indent=2) + '\n')
     print(output.read_text())
