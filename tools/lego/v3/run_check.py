@@ -33,7 +33,7 @@ def _allowed(a, b):
     names = {a.name, b.name}
     if names == {"18938.dat", "18939.dat"}:
         return True
-    # 轮胎对魔方的名义压缩约 0.46mm；层界与回位另由 verify_pressure_pads.py 检查。
+    # 轮胎对魔方的名义压缩每侧约 0.32mm；层界与回位另由 verify_pressure_pads.py 检查。
     if names == {"50945_nominal.dat", "cube56.dat"}:
         return True
     if names == {"42610.dat", "50945_nominal.dat"}:
