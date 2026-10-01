@@ -1,4 +1,4 @@
-> 当前分支 `design/swivel-pressure-pads`：四臂上下均用 42610/50945 轮胎压头，整机共需 8 组。
+> 当前分支 `design/swivel-pressure-pads`：四臂上下均用 42610/50945 轮胎压头，整机共需 8 组；压头用两端十字孔薄梁，舵机用粗连杆。
 > [图文搭建说明](docs/lego/v3/index.html) · [设计与验证](docs/lego/v3/README.md) · [零件清单](docs/lego/v3/bom.csv)
 > CAD 检查已完成；轮胎的夹紧保持仍需先搭一只压头实测。
 

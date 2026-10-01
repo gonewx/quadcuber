@@ -159,7 +159,9 @@ def main(render=True):
                  "opts": {"w": 1400, "h": 1000, "yaw": 28, "pitch": 23, "margin": 0.07}})
     # 舵机曲柄滑块: 夹紧 / 松开
     for tag, s in (("closed", 0.0), ("open", model.OPEN_S)):
-        ps = [p for p in model.build({"L": (s, 0.0)}, with_cube=False) if p.arm == "L" and p.pos[0] < -250]
+        module_parts = model.build({"L": (s, 0.0)}, with_cube=False)
+        linkage_step = next(k for k, st in enumerate(model.STEPS, 1) if st["title"] == "十字块和舵机连杆")
+        ps = [p for p in module_parts if p.arm == "L" and (p.step == linkage_step or p.name in ("geekservo.dat", "3708.dat"))]
         path = write(os.path.join(WORK, f"servo_{tag}.ldr"), "0 servo\n" + "\n".join(p.ldraw() for p in ps) + "\n")
         jobs.append({"model": path, "out": os.path.join(IMG, f"servo_{tag}.png"),
                      "opts": {"w": 1000, "h": 620, "yaw": 20, "pitch": 30, "margin": 0.05}})
@@ -279,7 +281,7 @@ def write_html(parts, step_new, keys, subs):
            '<header class="cover"><div class="eyebrow">quadcuber · design/swivel-pressure-pads</div>',
            '<h1>上下相同的轮胎压头</h1>',
            '<p class="lead">沿用转盘和 5 孔输入连杆；每个模块向外移 16mm，上下主臂都用 7 孔粗梁，底座四角改用 7×5 框架连接。每臂上下各一组 42610＋50945，四臂共需八组轮胎。</p>',
-           '<p>轮毂装在 32002 圆销上，可以转动。上下压头采用相同零件和孔位，轮胎圆弧与橡胶变形形成接触面。</p>',
+           '<p>轮毂装在 32002 圆销上，可以转动。上下压头采用相同零件和孔位，轮胎圆弧与橡胶变形形成接触面。前端用 11478 两端十字孔薄梁，舵机用 32316 粗连杆，整机不需要 32017 圆孔薄梁。</p>',
            '<p><b>这是供单臂试装的 CAD 方案。</b>按用户给定的 14×6mm 轮胎外形建模；夹紧力和沿轮轴方向的保持能力尚未经过实物验证。请先按本页的验收步骤搭一只压头，再复制四臂。</p>',
            '<div class="plate">' + img('cover.png', '整机装配总览', 1400, 900) + '</div>',
            '<div class="facts">'
@@ -295,11 +297,15 @@ def write_html(parts, step_new, keys, subs):
            '<div class="two">' + figure('mech_closed.png', f'夹紧参考：主臂外张 3.84°，每侧名义压缩约 {(56-gap)/2:.2f}mm。', 1000, 620)
            + figure('mech_open.png', f'松开参考：主臂外张 25°，推杆后退 {stroke:.2f}mm。', 1000, 620) + '</div>',
            figure('jaw_layers.svg', '孔位与轴向叠放。上下轮毂均使用 32002 短销，轮胎与主臂中面对齐。', 1500, 1000),
-           '<ul class="plain"><li>每臂：42610 ×2、50945 ×2、32002 ×2、32017 ×2、2780 ×4（仅计压头组件）。</li>'
-           '<li>上下均为 7 孔主臂：第 2 孔接连杆，第 4 孔作支点，第 5、7 孔接薄梁。</li>'
-           '<li>上下薄梁第 1、3 孔接主臂，第 5 孔装轮毂；32002 短段插薄梁，长段插轮毂。</li>'
+           '<ul class="plain"><li>每臂：42610 ×2、50945 ×2、32002 ×2、11478 ×2、3749 ×2、2780 ×2（仅计压头组件）。</li>'
+           '<li>上下均为 7 孔主臂：第 2 孔接连杆，第 4 孔作支点，第 6、7 孔接薄梁。</li>'
+           '<li>使用 11478 两端十字孔薄梁：第 1 十字孔用 3749 轴销接主臂，第 2 圆孔用黑销固定；第 4 圆孔装轮毂，第 5 十字孔留空。32002 短段插薄梁、长段插轮毂。</li>'
            '<li>50945 按 14×6mm 外包络；42610 标称 11×8mm，CAD 网格外缘约 11.2mm。轮胎安装内槽保留原网格。</li>'
            '<li>轮毂可以滚动；旋转魔方时需要轮胎沿轮轴方向的摩擦力。需要实测轴向滑移、拧层阻力和轮胎保持。</li></ul></section>',
+           '<section class="cover"><h2>舵机粗连杆</h2>',
+           '<div class="two">' + figure('servo_closed.png', '夹紧：5 孔粗连杆直接贴十字块，外侧半轴套定位。', 1000, 620)
+           + figure('servo_open.png', '松开：曲柄端只用 2 号轴，靠推杆一侧不加半轴套。', 1000, 620) + '</div>',
+           '<p>十字块端使用 3 号轴，两端各一个半轴套；粗连杆与十字块之间不加轴套。曲柄端的 2 号轴外端与曲柄外面齐平，内端露半孔。检查轴在曲柄十字孔中是否松脱，并手转推杆确认避让。</p></section>',
            '<script type="importmap">{"imports":{"three":"./three/three.module.min.js","three/addons/":"./three/addons/"}}</script>',
            '<section id="v3d-sec" class="cover"><h2>可旋转模型</h2><p>拖动旋转、滚轮缩放、右键平移；滑块按步骤查看。</p>'
            '<div id="v3d" class="plate"><div id="v3d-status">正在加载模型…</div></div>'
@@ -317,10 +323,13 @@ def write_html(parts, step_new, keys, subs):
         for name, count in sorted(byname.items()):
             available = 4 if name in {"42610.dat", "50945_nominal.dat"} else (2 if name == "95658.dat" else SET_45680.get(name, 0))
             number = '50945' if name == '50945_nominal.dat' else name[:-4]
-            row = [model.CATALOG[name][0], number, one[name], count, available, max(0, count - available)]
+            needed = max(0, count - available)
+            if name == "11478.dat":
+                available, needed = "已有，数量待清点", "按实存扣除"
+            row = [model.CATALOG[name][0], number, one[name], count, available, needed]
             writer.writerow(row)
             out.append('<tr>' + ''.join(f'<td>{esc(str(v))}</td>' for v in row) + '</tr>')
-    out.append('</table></div><p class="cap">套装数量沿用仓库清单，大框按已有 4 块计。42610、50945 已有各 4 件，整机各需 8 件，按用户确认另补各 4 件。未录入的零件按 0 计；补充数量需先扣除散件库存。马达已有 2 个，整机还需 2 个。</p></section>')
+    out.append('</table></div><p class="cap">套装数量沿用仓库清单，大框按已有 4 块计。42610、50945 已有各 4 件，整机各需 8 件，按用户确认另补各 4 件。11478 已确认有货但未给数量，整机需 8 根，请按实存扣除。其他未录入的零件按 0 计；补充数量需先扣除散件库存。马达已有 2 个，整机还需 2 个。</p></section>')
     for k, st in enumerate(steps, 1):
         out.append(f'<section class="cover" id="s{k}"><h2>{k:02d} · {esc(st["title"])}</h2>')
         chips = []
@@ -334,7 +343,7 @@ def write_html(parts, step_new, keys, subs):
             '<p>检查范围和结果见 <a href="README.md">验证记录</a>。CAD 检查不能证明轮胎配合牢固，也不能给出实际夹紧力。</p>',
             figure('flip.png', '整块翻转：L、R 夹持，F、B 松开并保持竖直。', 1400, 900),
             '<ol><li>先将 50945 套在 42610 上，用 32002 连接薄梁；检查轮毂轴向保持及轮胎配合。</li>'
-            '<li>确认上下薄梁各有两个固定销，轮毂使用 32002 短销。两侧装配相同，轮毂可以转动，但不能脱出。</li>'
+            '<li>确认薄梁后端十字孔装轴销、相邻圆孔装黑销；轮毂装第 4 圆孔。舵机用 5 孔粗连杆，曲柄端 2 号轴不加内侧半轴套，并检查轴是否松脱。</li>'
             '<li>按 <a href="../../single_arm.md#servo-calibration">单臂标定步骤</a>先脱开曲柄、空载定位，再在行程中间断电连接。</li>'
             '<li>夹紧端以接触和轻微压缩为准，小步推进；图示 3.84° 是参考值，旧版脉宽不能直接使用。检查推杆十字块两侧半轴套有没有沿轴滑移。</li>'
             f'<li>开端参考推杆后退 {stroke:.2f}mm、主臂外张 25°。改变轮胎、轴长或开角后重新检查避让。</li>'
