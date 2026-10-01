@@ -29,13 +29,15 @@ def _allowed(a, b):
     - 转盘上下两半本来就互相卡在一起;
     - 舵机十字输出轴插在曲柄 (2 孔细梁) 的十字孔里;
     - 24 齿直齿轮和转盘上半的齿啮合 (齿轮轴线离转盘轴线 100; 用户实测 24 齿在这个距离咬合最好);
-    - 夹指上的皮带压进魔方面 (压缩量)。"""
+    - 前端轮胎压进魔方面 (名义压缩量)。"""
     names = {a.name, b.name}
     if names == {"18938.dat", "18939.dat"}:
         return True
-    # 夹指上的皮带压进魔方面约 1mm (2.8 LDU): 这是设计的压缩量, 预压和摩擦就靠它 (2026-09-30)
-    if names == {"rubberband.dat", "cube56.dat"}:
+    # 轮胎对魔方的名义压缩每侧约 0.32mm；层界与回位另由 verify_pressure_pads.py 检查。
+    if names == {"50945_nominal.dat", "cube56.dat"}:
         return True
+    if names == {"42610.dat", "50945_nominal.dat"}:
+        return np.linalg.norm(a.pos - b.pos) < 1e-6 and abs(abs(a.rot[:, 2] @ b.rot[:, 2]) - 1) < 1e-6
     if names == {"geekservo.dat", "41677.dat"}:
         servo, crank = (a, b) if a.name == "geekservo.dat" else (b, a)
         out_pt = servo.world((10, -43, 0))
@@ -52,7 +54,7 @@ def _allowed(a, b):
 check._allowed = _allowed
 
 # 销中间的挡环 (销局部 x): 挡环过不了孔, 所以销只能先插进一边的零件, 再把另一边的零件沿销轴压上去。
-COLLAR = {"2780.dat": 0.0, "3673.dat": 0.0, "3749.dat": 0.0, "6558.dat": -10.0, "32556a.dat": -10.0}
+COLLAR = {"32002.dat": 0.0, "2780.dat": 0.0, "3673.dat": 0.0, "3749.dat": 0.0, "6558.dat": -10.0, "32556a.dat": -10.0}
 
 
 def pin_depth(parts):
@@ -188,7 +190,7 @@ def shared_holes(parts):
     """两个销/轴插在同一个孔里、长度上重叠 (比如底座梁的销已经占满大框的竖孔, 后面的步骤又要往这个孔里插销;
     2026-09-29 用户第 8 步实物发现)。碰撞检查不管销和销之间, 所以单独查: 轴线重合且重叠超过 2 LDU 就报。"""
     # (名字, 中心, 轴线, 长度); 零件自带的销 (55615 的 4 个销) 也算进来 (2026-09-30 用户发现 55615 的销插进了垫块销占着的孔)
-    cs = [(check.CATALOG_NAME(c), c.pos, c.rot[:, 0], check.CONNECTOR_LEN[c.name]) for c in parts if c.name in check.CONNECTOR_LEN]
+    cs = [(check.CATALOG_NAME(c), c.pos + sum(check.connector_bounds(c.name)) / 2 * c.rot[:, 0], c.rot[:, 0], check.connector_bounds(c.name)[1] - check.connector_bounds(c.name)[0]) for c in parts if c.name in check.CONNECTOR_LEN]
     for c in parts:
         for (cpt, cax) in BUILTIN_PINS.get(c.name, ()):
             cs.append((check.CATALOG_NAME(c) + " 自带的销", c.world(cpt), c.rot @ np.array(cax, float), 20.0))
@@ -262,5 +264,14 @@ if __name__ == "__main__":
     if "all" in only:
         ps = model.build()
         total += report(ps, "整机 夹紧")
+    # 体素侵蚀会漏掉浅穿入；该轴与推杆必须另查连续回转包络。
+    from mechanical_audit import rod_check
+    rod_result = rod_check()
+    if rod_result['状态'] == '失败':
+        total += 1
+        worst = rod_result['最差']
+        print(f"[连续回转] 32062 曲柄轴侵入 3708 推杆回转包络："
+              f"余量 {worst['回转包络径向余量_mm']:.3f}mm，"
+              f"行程 {worst['行程比例']:.3%}。见 mechanical_audit.py。")
     print("问题数:", total)
     sys.exit(1 if total else 0)

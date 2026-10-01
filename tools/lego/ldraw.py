@@ -140,6 +140,9 @@ def _walk_holes(name, m, pos, depth, out):
 def holes(name):
     """零件的孔: [(轴线上一点, 单位方向)], 同一直线上的孔合并为一条。"""
     key = name.lower()
+    # 42610 使用通用圆柱图元描述圆销孔，无法由孔图元名称自动识别。
+    if key == "42610.dat":
+        return [(np.zeros(3), np.array([0., 0., 1.]))]
     if key in _holes:
         return _holes[key]
     raw = []
@@ -163,6 +166,8 @@ def hole_segments(name):
     """零件的每一段孔: [(起点, 终点)], 零件局部坐标。和 holes() 不同, 不合并成无限长的直线,
     可以用来判断某一点是不是真的在孔里 (例如挡套、挡肩有没有伸进孔)。"""
     key = name.lower()
+    if key == "42610.dat":
+        return [(np.array([0., 0., -10.]), np.array([0., 0., 10.]))]
     if key in _segs:
         return _segs[key]
     out = []

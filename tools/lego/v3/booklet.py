@@ -159,7 +159,9 @@ def main(render=True):
                  "opts": {"w": 1400, "h": 1000, "yaw": 28, "pitch": 23, "margin": 0.07}})
     # 舵机曲柄滑块: 夹紧 / 松开
     for tag, s in (("closed", 0.0), ("open", model.OPEN_S)):
-        ps = [p for p in model.build({"L": (s, 0.0)}, with_cube=False) if p.arm == "L" and p.pos[0] < -250]
+        module_parts = model.build({"L": (s, 0.0)}, with_cube=False)
+        linkage_step = next(k for k, st in enumerate(model.STEPS, 1) if st["title"] == "十字块和舵机连杆")
+        ps = [p for p in module_parts if p.arm == "L" and (p.step == linkage_step or p.name in ("geekservo.dat", "3708.dat"))]
         path = write(os.path.join(WORK, f"servo_{tag}.ldr"), "0 servo\n" + "\n".join(p.ldraw() for p in ps) + "\n")
         jobs.append({"model": path, "out": os.path.join(IMG, f"servo_{tag}.png"),
                      "opts": {"w": 1000, "h": 620, "yaw": 20, "pitch": 30, "margin": 0.05}})
@@ -177,7 +179,10 @@ def main(render=True):
         jobs_path = write(os.path.join(WORK, "jobs.json"), json.dumps(jobs))
         env = dict(os.environ)
         env.setdefault("PLAYWRIGHT_MODULE", "/opt/node22/lib/node_modules/playwright")
-        subprocess.run(["node", "render.js", jobs_path], cwd=os.path.join(HERE, "..", "render"), check=True, env=env)
+        if os.environ.get("LDRAW_SOFTWARE_RENDER"):
+            subprocess.run([sys.executable, os.path.join(HERE, "..", "render", "software.py"), jobs_path], check=True)
+        else:
+            subprocess.run(["node", "render.js", jobs_path, os.environ.get("LDRAW_RENDER_PORT", "8765")], cwd=os.path.join(HERE, "..", "render"), check=True, env=env)
 
     write(os.path.join(OUT, "model.ldr"), model.to_ldr(parts, "quadcuber 四臂整机 v3"))
     write(os.path.join(OUT, "model.mpd"), pack_mpd(parts, len(steps)))
@@ -256,96 +261,97 @@ ul.plain{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:70ch}
 """
 
 def write_html(parts, step_new, keys, subs):
+    import csv
     steps = model.STEPS
     esc = html.escape
     byname = Counter(p.name for p in parts if p.name != "cube56.dat")
     one = Counter(p.name for p in model.module(steps=False))
-    stroke = model.OPEN_S * 0.4
-    servo_angle = math.degrees(model.servo_theta_for(0)[0] - model.servo_theta_for(model.OPEN_S)[0])
+    radius = model.TYRE_RADIUS
+    gap = 2 * (model.CUBE_HALF - model.TYRE_PRELOAD) * .4
+    stroke = model.OPEN_S * .4
 
     def img(src, alt, w=1200, h=860):
         return f'<img src="img/{src}" alt="{esc(alt)}" width="{w}" height="{h}" loading="lazy">'
 
     def figure(src, caption, w=1200, h=860):
-        return '<figure class="cover" style="margin:0"><div class="plate">' + img(src, caption, w, h) + f'</div><figcaption class="cap">{caption}</figcaption></figure>'
+        return '<figure class="cover"><div class="plate">' + img(src, caption, w, h) + f'</div><figcaption class="cap">{caption}</figcaption></figure>'
 
     out = ['<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
-           '<title>quadcuber · 平行夹块搭建图（7 孔粗梁版）</title>', f'<style>{CSS}</style>', '<div class="wrap">',
-           '<header class="cover"><div class="eyebrow">quadcuber · research/self-aligning-jaws · 2026-09-30</div>',
-           '<h1>四连杆平行夹块 · 7 孔粗梁版</h1>',
-           '<p class="lead">红色主臂向内收紧，蓝色从动臂约束橙色夹块，使接触面在开合过程中保持平行。前端有独立活动关节，夹口可小于魔方边长；薄弹性垫提供接触预压。</p>',
-           '<p>第 21 步改用 32526（3×5 L 形粗梁），使用长边末孔与短边中孔；横轴改为 4 号轴，主臂接点改为 3 号轴，轴套按新图重排。</p>',
-           '<p>第 19 步已修正：夹块使用 32056 L 形薄梁，原 2905 三角梁后端会撞主根轴及轴套。每只机械手需要 4 片 32056。</p>',
-           '<p>本图为研究分支的几何验证版。模型通过连接与离散运动检查；实际装入路径、夹紧力、摩擦和刚度需先搭单臂验证。</p>',
-           '<div class="plate">' + img('cover.png', '四臂整机装配总览', 1400, 900) + '</div>',
+           '<title>quadcuber · 上下相同的轮胎压头</title>', f'<style>{CSS}</style><div class="wrap">',
+           '<header class="cover"><div class="eyebrow">quadcuber · research/self-aligning-jaws</div>',
+           '<h1>上下相同的轮胎压头</h1>',
+           '<p class="lead">沿用转盘和 5 孔输入连杆；每个模块向外移 16mm，上下主臂都用 7 孔粗梁，底座四角改用 7×5 框架连接。每臂上下各一组 42610＋50945，四臂共需八组轮胎。</p>',
+           '<p>轮毂装在 32002 圆销上，可以转动。上下压头采用相同零件和孔位，轮胎圆弧与橡胶变形形成接触面。前端用 11478 两端十字孔薄梁，舵机用 32316 粗连杆，整机不需要 32017 圆孔薄梁。</p>',
+           '<p><b>当前验证未通过：后部曲柄轴与旋转推杆相碰，回转包络最大侵入约 0.52mm。</b>旧版“0 干涉”结论已被补充检查更正。先修正后部避让，再进行带动力测试和四臂复制。<a href="mechanical_audit.md">完整审查、刚度计算与测试指标</a> · <a href="load_test_template.csv">实测记录表</a></p>',
+           '<p><b>后续结构选型：改用双侧薄梁支承。</b>当前图和模型仍为单侧版本，双侧的轮轴、固定销和全行程避让尚待设计与验证。</p>',
+           '<div class="plate">' + img('cover.png', '整机装配总览', 1400, 900) + '</div>',
            '<div class="facts">'
            f'<div class="fact"><b>{len(steps)} 步</b><span>完整装配</span></div>'
-           '<div class="fact"><b>55.72 mm</b><span>含垫的自由夹口 · 魔方 56 mm</span></div>'
+           f'<div class="fact"><b>{gap:.2f} mm</b><span>估算自由夹口 · 魔方 56 mm</span></div>'
            f'<div class="fact"><b>{stroke:.2f} mm</b><span>推杆开合行程</span></div>'
-           '<div class="fact"><b>16.5°</b><span>主臂张开角</span></div></div>',
-           '<nav class="toc"><a href="#jaw">夹指详图</a><a href="#layers">轴与垫片</a><a href="#v3d-sec">可旋转模型</a><a href="#bom">零件清单</a>'
+           '<div class="fact"><b>25°</b><span>主臂松开角</span></div></div>',
+           '<nav class="toc"><a href="#jaw">压头详图</a><a href="#v3d-sec">可旋转模型</a><a href="#bom">零件清单</a>'
            + ''.join(f'<a href="#s{k}">{k}. {esc(st["title"])}</a>' for k, st in enumerate(steps, 1))
            + '<a href="#checks">验证与标定</a></nav></header>',
-           '<section id="jaw" class="cover"><h2>夹指详图</h2>',
-           figure('jaw_detail.png', '红：7 孔粗主摆臂 32524；蓝：从动臂 11478；橙：L 形夹块 32056；绿：含胶 0.4mm 接触垫。', 1400, 1000),
-           '<div class="two">' + figure('mech_closed.png', '夹紧：主臂内收 0.25°，L 形夹块底边保持平行。', 1000, 620)
-           + figure('mech_open.png', f'松开：主臂张开 16.5°，推杆后退 {stroke:.2f}mm。', 1000, 620) + '</div>',
-           '<ul class="plain"><li>主、从动臂的有效孔距均为四孔（32mm）。从动固定轴相对主轴向后两孔、向外一孔；前端两个活动轴保持同样的位置差。</li>'
-           '<li>主臂前端圆孔绕 2 号轴转动，2 号轴固定在L 梁底角的十字孔中。从动臂两端是十字孔，其前端 3 号轴在L 梁朝外一边的中间圆孔中转动。</li>'
-           '<li>塑料底边自由间距约 56.52mm；上下各一对垫片在夹紧方向总共占 0.8mm，含垫间距约 55.72mm。夹住 56mm 魔方时，每侧名义压缩约 0.14mm。</li>'
-           '<li>每片L 梁贴一条 12.8×3.2mm 垫片，含胶总厚度 0.4mm；每个夹块共两条，中间留出粗主臂位置。模型的压缩量不能直接换算成夹紧力。</li></ul></section>',
-           '<section id="layers" class="cover"><h2>轴向分层 · 输入关节按上下镜像安装</h2>',
-           figure('jaw_layers.svg', '沿轴看零件叠放顺序。数值为距夹指中面的位置，单位 mm。', 1500, 1524),
-           '<p>主轴用 7 号轴，端头与外侧横梁齐平。横梁端部十字孔固定轴，粗主臂居中，两侧各用一个整轴套定位；不要再在主轴外端加轴套，否则会占用相邻机械手的转动空间。</p>'
-           '<p>从动根轴用 10 号轴，两侧各有两个整轴套填满从动臂与后支架之间的空档。前端 2 号轴与L 形夹块外侧齐平，3 号轴与从动薄梁外侧齐平，由十字孔固定，不能任意加长。</p></section>',
+           '<section id="jaw" class="cover"><h2>压头与传力</h2>',
+           figure('jaw_detail.png', '上下均为 42610＋50945 轮胎；两根薄梁分别通过两个销与主臂固定。', 1400, 1000),
+           '<div class="two">' + figure('mech_closed.png', f'夹紧参考：主臂外张 3.84°，每侧名义压缩约 {(56-gap)/2:.2f}mm。', 1000, 620)
+           + figure('mech_open.png', f'松开参考：主臂外张 25°，推杆后退 {stroke:.2f}mm。', 1000, 620) + '</div>',
+           figure('jaw_layers.svg', '孔位与轴向叠放。上下轮毂均使用 32002 短销，轮胎与主臂中面对齐。', 1500, 1000),
+           '<ul class="plain"><li>每臂：42610 ×2、50945 ×2、32002 ×2、11478 ×2、3749 ×2、2780 ×2（仅计压头组件）。</li>'
+           '<li>上下均为 7 孔主臂：第 2 孔接连杆，第 4 孔作支点，第 6、7 孔接薄梁。</li>'
+           '<li>使用 11478 两端十字孔薄梁：第 1 十字孔用 3749 轴销接主臂，第 2 圆孔用黑销固定；第 4 圆孔装轮毂，第 5 十字孔留空。32002 短段插薄梁、长段插轮毂。</li>'
+           '<li>50945 按 14×6mm 外包络；42610 标称 11×8mm，CAD 网格外缘约 11.2mm。轮胎安装内槽保留原网格。</li>'
+           '<li>轮毂可以滚动；旋转魔方时需要轮胎沿轮轴方向的摩擦力。需要实测轴向滑移、拧层阻力和轮胎保持。</li></ul></section>',
+           '<section class="cover"><h2>舵机粗连杆</h2>',
+           '<div class="two">' + figure('servo_closed.png', '夹紧：5 孔粗连杆直接贴十字块，外侧半轴套定位。', 1000, 620)
+           + figure('servo_open.png', '松开：曲柄端只用 2 号轴，靠推杆一侧不加半轴套。', 1000, 620) + '</div>',
+           '<p>十字块端使用 3 号轴，两端各一个半轴套；粗连杆与十字块之间不加轴套。曲柄端的 2 号轴外端与曲柄外面齐平，内端露半孔。检查轴在曲柄十字孔中是否松脱，并手转推杆确认避让。</p></section>',
            '<script type="importmap">{"imports":{"three":"./three/three.module.min.js","three/addons/":"./three/addons/"}}</script>',
-           '<section id="v3d-sec" class="cover"><h2>可旋转模型</h2><p>拖动旋转、滚轮缩放、右键平移；拖动滑块按步骤查看。用本地 HTTP 服务打开此页面以加载模型。</p>'
+           '<section id="v3d-sec" class="cover"><h2>可旋转模型</h2><p>拖动旋转、滚轮缩放、右键平移；滑块按步骤查看。</p>'
            '<div id="v3d" class="plate"><div id="v3d-status">正在加载模型…</div></div>'
            '<div class="v3d-bar"><input id="v3d-step" type="range" min="1" max="1" value="1" disabled aria-label="步骤">'
            '<span id="v3d-label"></span><button id="v3d-fit" type="button">复位</button></div>'
            f'<script>window.V3D_STEPS = {json.dumps([st["title"] for st in steps], ensure_ascii=False)};'
            f'window.V3D_STEPMAP = {json.dumps(sorted({p.step for p in parts}))};</script>'
            '<script type="module" src="viewer.js"></script>'
-           '<p><a href="model.mpd" download>下载含零件库的 MPD</a> · <a href="model.ldr" download>下载 LDraw 模型</a> · <a href="bom.csv" download>下载零件清单 CSV</a></p></section>',
-           '<section id="bom" class="cover"><h2>零件清单</h2><p>按当前模型自动统计，不分颜色。单模块列不含整机公共底座；整机列包含底座、四个马达、四个舵机和八对非乐高接触垫（共 16 条）。</p>',
-           '<div class="tbl"><table><tr><th>零件</th><th>编号</th><th>单模块</th><th>整机</th><th>45680 已计数量</th><th>扣除后补充</th></tr>']
-    import csv
+           '<p><a href="model.mpd" download>下载含零件库的 MPD</a> · <a href="model.ldr" download>LDraw 模型</a> · <a href="bom.csv" download>零件清单 CSV</a> · <a href="README.md">设计与验证记录</a></p></section>',
+           '<section id="bom" class="cover"><h2>零件清单</h2><p>单模块不含公共底座；整机包含四个马达和四个舵机。轮胎按真实乐高编号列出，模型中使用用户给定尺寸的名义外包络。</p>',
+           '<div class="tbl"><table><tr><th>零件</th><th>编号</th><th>单模块</th><th>整机</th><th>已计库存</th><th>扣除后补充</th></tr>']
     with open(os.path.join(OUT, 'bom.csv'), 'w', encoding='utf-8-sig', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow(['零件', '编号', '单模块不含底座', '整机', '45680已计数量', '扣除后补充'])
+        writer = csv.writer(f, lineterminator="\n")
+        writer.writerow(['零件', '编号', '单模块不含底座', '整机', '已计库存', '扣除后补充'])
         for name, count in sorted(byname.items()):
-            available = 4 if name == "32056.dat" else SET_45680.get(name, 0)
-            row = [model.CATALOG[name][0], name[:-4], one[name], count, available, max(0, count - available)]
+            available = 4 if name in {"42610.dat", "50945_nominal.dat"} else (2 if name == "95658.dat" else SET_45680.get(name, 0))
+            number = '50945' if name == '50945_nominal.dat' else name[:-4]
+            needed = max(0, count - available)
+            if name == "11478.dat":
+                available, needed = "已有，数量待清点", "按实存扣除"
+            row = [model.CATALOG[name][0], number, one[name], count, available, needed]
             writer.writerow(row)
             out.append('<tr>' + ''.join(f'<td>{esc(str(v))}</td>' for v in row) + '</tr>')
-    out.append('</table></div><p class="cap">套装数量沿用仓库已有清单（大框按用户已有 4 块，32056 按已确认至少 4 片计）；未录入的零件按 0 计，采购前先清点实物。EV3 马达已有 2 个，因此实际还需 2 个。</p></section>')
+    out.append('</table></div><p class="cap">套装数量沿用仓库清单，大框按已有 4 块计。42610、50945 已有各 4 件，整机各需 8 件，按用户确认另补各 4 件。11478 已确认有货但未给数量，整机需 8 根，请按实存扣除。其他未录入的零件按 0 计；补充数量需先扣除散件库存。马达已有 2 个，整机还需 2 个。</p></section>')
     for k, st in enumerate(steps, 1):
         out.append(f'<section class="cover" id="s{k}"><h2>{k:02d} · {esc(st["title"])}</h2>')
         chips = []
-        for (name, color), count in Counter(part_key(p) for p in step_new[k - 1]).items():
+        for (name, color), count in Counter(part_key(p) for p in step_new[k-1]).items():
+            number = '50945' if name == '50945_nominal.dat' else name[:-4]
             chips.append('<div class="chip">' + img(f'part_{name[:-4]}_{color}.png', model.CATALOG[name][0], TW, TH)
-                         + f'<div class="x">{count}×</div><div class="n">{esc(model.CATALOG[name][0])} · {name[:-4]}</div></div>')
-        out.append('<div class="callout">' + ''.join(chips) + '</div>')
-        out.append('<div class="plate">' + img(f'step{k:02d}.png', st['title']) + '</div>')
+                         + f'<div class="x">{count}×</div><div class="n">{esc(model.CATALOG[name][0])} · {number}</div></div>')
+        out.append('<div class="callout">' + ''.join(chips) + '</div><div class="plate">' + img(f'step{k:02d}.png', st['title']) + '</div>')
         out.append(f'<p>{esc(st["text"])}</p></section>')
-    out += ['<section id="checks" class="cover"><h2>检查结果与实物标定</h2>',
-            '<div class="tbl"><table><tr><th>项目</th><th>范围 / 结果</th></tr>'
-            '<tr><td>连接、销孔类型、插深和装配顺序</td><td>单模块与整机检查：0 个问题</td></tr>'
-            '<tr><td>夹指中间行程</td><td>检查闭合、张开及中间位置，无报告干涉</td></tr>'
-            '<tr><td>四臂转动</td><td>0°～355°，每 5° 扫描，覆盖夹紧/松开与相邻臂状态；邻臂竖直时无报告干涉</td></tr>'
-            '<tr><td>拧层扫掠</td><td>按完整一层厚度 56/3mm，邻臂夹紧竖直：采样余量约 7.4mm</td></tr>'
-            '<tr><td>整块翻转扫掠</td><td>邻臂松开竖直：采样余量约 1.4mm</td></tr>'
-            '<tr><td>运动学与本臂转动回归</td><td>7 项测试通过，含实件孔位闭环、关节类型、预压、舵机行程、本臂齿轮轴和扫掠范围</td></tr></table></div>',
-            '<p>检查按 LDraw 几何采样，包含本臂固定件与相邻臂，不模拟孔隙、受力变形、摩擦或连续碰撞。相邻机械手不能同时转到水平；转动时相邻机械手保持竖直且静止，规划时使用 <code>--no-adjacent-horizontal</code>。</p>',
-            figure('flip.png', '整块翻转：L、R 夹持并同步转动；F、B 松开并保持竖直。', 1400, 900),
-            '<h3>先搭一只机械手验证</h3><ol><li>断电并脱开舵机曲柄与连杆，手推检查全行程。夹块应保持平行，连接轴不窜动。</li>'
-            '<li>按 <a href="../../single_arm.md#servo-calibration">单臂标定步骤</a>空载定位舵机，在行程中间断电连接，再以 10～20µs 小步标定。</li>'
-            '<li>闭合端以夹块贴平、垫片轻微压缩为准，再断电调整推杆十字块位置，使后端舵机曲柄与连杆接近拉直。前端弯梁不与推杆垂直。</li>'
-            f'<li>开端参考推杆 {stroke:.2f}mm、舵机曲柄约 {servo_angle:.1f}°。旧版脉宽不能直接沿用，不通过强推去追求理论角度。</li>'
-            '<li>先测试手动拧其他层不打滑，再低速转到水平停留 10 秒。观察主轴、从动轴、L 形夹块与后架有无晃动。最后逐步测试连续翻转。</li></ol>'
-            '<p>若需要更厚的垫片、更大张开角或更长轴，修改模型后重新检查四臂间隙。夹紧效果尚未经过这套新结构的实物测试。</p></section></div></html>']
+    out += ['<section id="checks" class="cover"><h2>验证与单臂验收</h2>',
+            '<p>当前存在后部干涉；以下装配与标定步骤须在修正后使用。检查范围和结果见 <a href="mechanical_audit.md">完整机械审查</a>。夹紧力、刚度和轮胎保持力均待实测。</p>',
+            figure('flip.png', '整块翻转：L、R 夹持，F、B 松开并保持竖直。', 1400, 900),
+            '<ol><li>先将 50945 套在 42610 上，用 32002 连接薄梁；检查轮毂轴向保持及轮胎配合。</li>'
+            '<li>确认薄梁后端十字孔装轴销、相邻圆孔装黑销；轮毂装第 4 圆孔。舵机用 5 孔粗连杆，曲柄端 2 号轴不加内侧半轴套，并检查轴是否松脱。</li>'
+            '<li>按 <a href="../../single_arm.md#servo-calibration">单臂标定步骤</a>先脱开曲柄、空载定位，再在行程中间断电连接。</li>'
+            '<li>夹紧端以接触和轻微压缩为准，小步推进；图示 3.84° 是参考值，旧版脉宽不能直接使用。检查推杆十字块两侧半轴套有没有沿轴滑移。</li>'
+            f'<li>开端参考推杆后退 {stroke:.2f}mm、主臂外张 25°。改变轮胎、轴长或开角后重新检查避让。</li>'
+            '<li>单臂夹紧后检查横向滑动、轴向滑动和拧层阻力，再低速测试翻转。记录实测外径、脉宽、夹紧保持情况，之后再复制四臂。</li></ol>'
+            '<p>相邻机械手保持竖直时才允许另一只转动；使用 <code>--no-adjacent-horizontal</code>。禁止把相邻机械手同时转到水平。</p></section></div></html>']
     write(os.path.join(OUT, 'index.html'), '\n'.join(out) + '\n')
 
 
 if __name__ == "__main__":
-    main(render="--no-render" not in sys.argv)
+    main("--no-render" not in sys.argv)

@@ -123,6 +123,14 @@ CONNECTOR_LEN = {"3705.dat": 80, "2780.dat": 40, "6558.dat": 60, "43093.dat": 40
                  "3713.dat": 20, "32123a.dat": 10}
 
 
+# 部分销、带凸点轴的 LDraw 原点不在几何中点。
+CONNECTOR_BOUNDS = {"32002.dat": (-20.0, 10.0), "6587.dat": (-29.5, 34.0)}
+
+
+def connector_bounds(name):
+    return CONNECTOR_BOUNDS.get(name, (-CONNECTOR_LEN[name] / 2, CONNECTOR_LEN[name] / 2))
+
+
 def connections(parts):
     """返回问题列表 (字符串)。"""
     problems = []
@@ -133,11 +141,11 @@ def connections(parts):
     for c in parts:
         if c.kind not in ("pin", "axle"):
             continue
-        L = CONNECTOR_LEN[c.name]
+        cmin, cmax = connector_bounds(c.name)
         axis = c.rot[:, 0]
         engaged = set()
         bad = []
-        for t in np.arange(-L / 2 + 2, L / 2 - 1, 5.0):
+        for t in np.arange(cmin + 2, cmax - 1, 5.0):
             pt = c.pos + t * axis
             for s in solids:
                 lo, hi = boxes[id(s)]
@@ -189,12 +197,12 @@ def _hole_segs(p):
 def _pin_layers(c, solids, hole_cache=None, boxes=None):
     """沿销轴线, 每个与销啮合的实体零件占据的 t 区间 (销局部 x)。按每段孔的实际长度判断, 不用无限长的孔线。"""
     axis = c.rot[:, 0]
-    L = CONNECTOR_LEN[c.name]
+    cmin, cmax = connector_bounds(c.name)
     spans = {}
     for s in solids:
         if boxes is not None:
             lo, hi = boxes[id(s)]
-            ends = np.array([c.pos - L / 2 * axis, c.pos + L / 2 * axis])
+            ends = np.array([c.pos + cmin * axis, c.pos + cmax * axis])
             if np.any(ends.max(0) < lo - 1) or np.any(ends.min(0) > hi + 1):
                 continue
         for a, d, n in _hole_segs(s):
@@ -204,7 +212,7 @@ def _pin_layers(c, solids, hole_cache=None, boxes=None):
             sign = d @ axis
             # 孔段 [0, n] 换成销的 t 坐标
             t1, t2 = sorted(((0 - u0) * sign, (n - u0) * sign))
-            lo, hi = max(t1, -L / 2), min(t2, L / 2)
+            lo, hi = max(t1, cmin), min(t2, cmax)
             if hi - lo > 1:
                 sp = spans.setdefault(id(s), [s, lo, hi])
                 sp[1], sp[2] = min(sp[1], lo), max(sp[2], hi)

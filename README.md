@@ -1,3 +1,8 @@
+> 本项工作统一使用主目录的 `research/self-aligning-jaws` 分支。当前模型为四臂上下 42610/50945 轮胎压头，整机共需 8 组；压头用两端十字孔薄梁，舵机用粗连杆。
+> [图文搭建说明](docs/lego/v3/index.html) · [设计与验证](docs/lego/v3/README.md) · [零件清单](docs/lego/v3/bom.csv)
+> 当前机械验证未通过：后部曲柄轴与推杆存在干涉，实物刚度和保持力待测。后续设计确定改用双侧薄梁支承，尚未落实到模型。详见[机械审查](docs/lego/v3/mechanical_audit.md)。
+> 代码与说明书分别以 `tools/lego/v3/`、`docs/lego/v3/` 为唯一入口；旧方案保存在 Git 历史中。
+
 # quadcuber
 
 四机械手乐高魔方机器人（参考 CubeStormer 3 的思路），目前包含**动作规划器**、**模拟器**，以及**单臂原型的 Pico 测试程序**。
