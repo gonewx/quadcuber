@@ -11,3 +11,7 @@ arm.log
 /artifacts/swivel-pressure-pads/*.bundle
 /artifacts/swivel-pressure-pads/*.zip
 /artifacts/swivel-pressure-pads/*.tmp
+
+# 本地导出的 PDF 与临时文件
+/output/
+/tmp/
