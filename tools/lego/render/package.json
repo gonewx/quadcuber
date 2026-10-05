@@ -1,0 +1,6 @@
+{
+  "name": "quadcuber-lego-render",
+  "private": true,
+  "description": "用 three.js 的 LDrawLoader 渲染搭建步骤图",
+  "dependencies": { "three": "0.170.0" }
+}

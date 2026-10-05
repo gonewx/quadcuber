@@ -1,0 +1,1130 @@
+{
+  "model_sha256": "b372af60f5d1b475fbef5e5a327deef39020cbeaaece51dbba740577158bebe8",
+  "cards": [
+    {
+      "step": 1,
+      "number": 1,
+      "title": "两根15孔底梁摆成直角 · 做4组",
+      "tip": "两根梁贴桌面，一横一竖。",
+      "file": "img/assembly/01-01.svg",
+      "repeat": 4,
+      "new_count": 8
+    },
+    {
+      "step": 1,
+      "number": 2,
+      "title": "底梁插黑销",
+      "tip": "本侧长梁4个，另一根梁2个。",
+      "file": "img/assembly/01-02.svg",
+      "repeat": 4,
+      "new_count": 24
+    },
+    {
+      "step": 1,
+      "number": 3,
+      "title": "插两根蓝色长销",
+      "tip": "1孔段朝下插梁，上面露出1孔，以后接马达底块。",
+      "file": "img/assembly/01-03.svg",
+      "repeat": 4,
+      "new_count": 8
+    },
+    {
+      "step": 1,
+      "number": 4,
+      "title": "压上15x11大框",
+      "tip": "大框长边压在本侧长梁的4个销上。",
+      "file": "img/assembly/01-04.svg",
+      "repeat": 4,
+      "new_count": 4
+    },
+    {
+      "step": 1,
+      "number": 5,
+      "title": "角上插4个黑销",
+      "tip": "两根梁各2个。",
+      "file": "img/assembly/01-05.svg",
+      "repeat": 4,
+      "new_count": 16
+    },
+    {
+      "step": 1,
+      "number": 6,
+      "title": "压上7x5角框",
+      "tip": "与大框同层，跨过两根底梁。",
+      "file": "img/assembly/01-06.svg",
+      "repeat": 4,
+      "new_count": 4
+    },
+    {
+      "step": 1,
+      "number": 7,
+      "title": "四组旋转合拢",
+      "tip": "每块大框压到相邻一组底梁的销上，四角闭合。",
+      "file": "img/assembly/01-07.svg",
+      "repeat": 1,
+      "new_count": 0
+    },
+    {
+      "step": 2,
+      "number": 1,
+      "title": "最下面一块7x5框",
+      "tip": "",
+      "file": "img/assembly/02-01.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 2,
+      "number": 2,
+      "title": "插三个黑销",
+      "tip": "",
+      "file": "img/assembly/02-02.svg",
+      "repeat": 1,
+      "new_count": 3
+    },
+    {
+      "step": 2,
+      "number": 3,
+      "title": "接中间框",
+      "tip": "",
+      "file": "img/assembly/02-03.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 2,
+      "number": 4,
+      "title": "再插三个黑销",
+      "tip": "",
+      "file": "img/assembly/02-04.svg",
+      "repeat": 1,
+      "new_count": 3
+    },
+    {
+      "step": 2,
+      "number": 5,
+      "title": "接最上面的框",
+      "tip": "三块框上下对齐，拼成7x15的墙。",
+      "file": "img/assembly/02-05.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 3,
+      "number": 1,
+      "title": "马达底面朝上",
+      "tip": "底面有一排3个销孔。",
+      "file": "img/assembly/03-01.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 3,
+      "number": 2,
+      "title": "底面插三个黑销",
+      "tip": "",
+      "file": "img/assembly/03-02.svg",
+      "repeat": 1,
+      "new_count": 3
+    },
+    {
+      "step": 3,
+      "number": 3,
+      "title": "第一层5孔垫梁",
+      "tip": "扣在梁的第2、3、4孔。",
+      "file": "img/assembly/03-03.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 3,
+      "number": 4,
+      "title": "两端各插一个黑销",
+      "tip": "",
+      "file": "img/assembly/03-04.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 3,
+      "number": 5,
+      "title": "第二层5孔垫梁",
+      "tip": "两层对齐。",
+      "file": "img/assembly/03-05.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 4,
+      "number": 1,
+      "title": "颈部插蓝色长销和黑销",
+      "tip": "蓝色长销在上孔，1孔段插进马达。",
+      "file": "img/assembly/04-01.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 4,
+      "number": 2,
+      "title": "压上3孔竖梁",
+      "tip": "",
+      "file": "img/assembly/04-02.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 4,
+      "number": 3,
+      "title": "中孔补一个黑销",
+      "tip": "",
+      "file": "img/assembly/04-03.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 4,
+      "number": 4,
+      "title": "接两根横梁",
+      "tip": "11孔在上、7孔在下，都朝竖墙伸出。",
+      "file": "img/assembly/04-04.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 5,
+      "number": 1,
+      "title": "7号轴插到底",
+      "tip": "另一头和马达背面输出盘基本齐平。",
+      "file": "img/assembly/05-01.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 5,
+      "number": 2,
+      "title": "第一个半轴套",
+      "tip": "",
+      "file": "img/assembly/05-02.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 5,
+      "number": 3,
+      "title": "第二个半轴套",
+      "tip": "",
+      "file": "img/assembly/05-03.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 5,
+      "number": 4,
+      "title": "一个整轴套",
+      "tip": "",
+      "file": "img/assembly/05-04.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 5,
+      "number": 5,
+      "title": "24齿齿轮",
+      "tip": "",
+      "file": "img/assembly/05-05.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 5,
+      "number": 6,
+      "title": "最外面半轴套",
+      "tip": "套到轴头。",
+      "file": "img/assembly/05-06.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 6,
+      "number": 1,
+      "title": "横梁插四个黑销",
+      "tip": "11孔梁3个，7孔梁1个。",
+      "file": "img/assembly/06-01.svg",
+      "repeat": 1,
+      "new_count": 4
+    },
+    {
+      "step": 6,
+      "number": 2,
+      "title": "马达整体平推到竖墙背面",
+      "tip": "四个销同时对孔；底块下表面与墙底平齐。",
+      "file": "img/assembly/06-02.svg",
+      "repeat": 1,
+      "new_count": 0
+    },
+    {
+      "step": 7,
+      "number": 1,
+      "title": "下半转盘凸台塞进最上面的框",
+      "tip": "没有齿的一半；圆盘边沿贴住框架正面。",
+      "file": "img/assembly/07-01.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 7,
+      "number": 2,
+      "title": "一侧从外面插3根蓝色长销",
+      "tip": "2孔段朝里，穿框架短边进凸耳；挡肩贴框外。",
+      "file": "img/assembly/07-02.svg",
+      "repeat": 1,
+      "new_count": 3
+    },
+    {
+      "step": 7,
+      "number": 3,
+      "title": "另一侧也插3根",
+      "tip": "上中下三个孔全部插满。",
+      "file": "img/assembly/07-03.svg",
+      "repeat": 1,
+      "new_count": 3
+    },
+    {
+      "step": 7,
+      "number": 4,
+      "title": "中框侧面插2个黑销和1根蓝色长销",
+      "tip": "最下面用蓝色长销，露出的1孔段以后接斜撑。",
+      "file": "img/assembly/07-04.svg",
+      "repeat": 1,
+      "new_count": 3
+    },
+    {
+      "step": 7,
+      "number": 5,
+      "title": "压上9孔侧梁",
+      "tip": "上3孔套蓝色长销露出的一段，下3孔套黑销。",
+      "file": "img/assembly/07-05.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 7,
+      "number": 6,
+      "title": "另一侧：中框插3个黑销",
+      "tip": "",
+      "file": "img/assembly/07-06.svg",
+      "repeat": 1,
+      "new_count": 3
+    },
+    {
+      "step": 7,
+      "number": 7,
+      "title": "另一侧压上9孔侧梁",
+      "tip": "上下两块框在两侧锁成一体。",
+      "file": "img/assembly/07-07.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 8,
+      "number": 1,
+      "title": "大框短边插两个黑销",
+      "tip": "长边上的蓝色长销第1步已插好。",
+      "file": "img/assembly/08-01.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 8,
+      "number": 2,
+      "title": "竖墙和马达一起往下压",
+      "tip": "墙底两个销、马达底块两个长销同时对孔。",
+      "file": "img/assembly/08-02.svg",
+      "repeat": 1,
+      "new_count": 0
+    },
+    {
+      "step": 9,
+      "number": 1,
+      "title": "两根15孔梁平行摆好",
+      "tip": "两梁相距4个孔。",
+      "file": "img/assembly/09-01.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 9,
+      "number": 2,
+      "title": "插六个黑销",
+      "tip": "另一根梁中间两个孔留给蓝色长销。",
+      "file": "img/assembly/09-02.svg",
+      "repeat": 1,
+      "new_count": 6
+    },
+    {
+      "step": 9,
+      "number": 3,
+      "title": "扣上7x5平台框",
+      "tip": "框前端与梁前端对齐。",
+      "file": "img/assembly/09-03.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 9,
+      "number": 4,
+      "title": "垫梁位置插三个黑销",
+      "tip": "",
+      "file": "img/assembly/09-04.svg",
+      "repeat": 1,
+      "new_count": 3
+    },
+    {
+      "step": 9,
+      "number": 5,
+      "title": "压上7孔垫梁",
+      "tip": "第3、7孔空着，留给舵机耳朵。",
+      "file": "img/assembly/09-05.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 9,
+      "number": 6,
+      "title": "后端插两个黑销",
+      "tip": "",
+      "file": "img/assembly/09-06.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 9,
+      "number": 7,
+      "title": "压上5孔后横梁",
+      "tip": "后段围成封闭长方形。",
+      "file": "img/assembly/09-07.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 9,
+      "number": 8,
+      "title": "插两根蓝色长销",
+      "tip": "2孔段朝下，穿平台框和梁。",
+      "file": "img/assembly/09-08.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 9,
+      "number": 9,
+      "title": "立起导向框",
+      "tip": "短边正中的孔是推杆轴承。",
+      "file": "img/assembly/09-09.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 9,
+      "number": 10,
+      "title": "翻过来：梁下挂两个55615",
+      "tip": "两个前后错开一孔，按图对位。",
+      "file": "img/assembly/09-10.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 10,
+      "number": 1,
+      "title": "舵机放到垫梁上",
+      "tip": "输出轴朝推杆一侧。",
+      "file": "img/assembly/10-01.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 10,
+      "number": 2,
+      "title": "耳朵插两根蓝色长销",
+      "tip": "1孔段朝下插进垫梁。",
+      "file": "img/assembly/10-02.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 11,
+      "number": 1,
+      "title": "底座后短边插55615",
+      "tip": "两个朝下的销插进短边。",
+      "file": "img/assembly/11-01.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 11,
+      "number": 2,
+      "title": "平台前端插两个黑销",
+      "tip": "沿推杆方向。",
+      "file": "img/assembly/11-02.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 11,
+      "number": 3,
+      "title": "平台整体向前推进竖墙",
+      "tip": "导向框轴承孔与转盘中心同轴。",
+      "file": "img/assembly/11-03.svg",
+      "repeat": 1,
+      "new_count": 0
+    },
+    {
+      "step": 11,
+      "number": 4,
+      "title": "马达侧：55615上插两个黑销",
+      "tip": "",
+      "file": "img/assembly/11-04.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 11,
+      "number": 5,
+      "title": "压上9孔竖梁",
+      "tip": "下端接底座上的55615。",
+      "file": "img/assembly/11-05.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 11,
+      "number": 6,
+      "title": "舵机侧：插三个黑销",
+      "tip": "上面两个进55615，下面一个进大框长边。",
+      "file": "img/assembly/11-06.svg",
+      "repeat": 1,
+      "new_count": 3
+    },
+    {
+      "step": 11,
+      "number": 7,
+      "title": "压上9孔竖梁",
+      "tip": "",
+      "file": "img/assembly/11-07.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 11,
+      "number": 8,
+      "title": "舵机侧斜撑：平台框侧孔插黑销",
+      "tip": "平台框侧边从前数第3个侧孔。",
+      "file": "img/assembly/11-08.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 11,
+      "number": 9,
+      "title": "压上7孔斜撑",
+      "tip": "第1孔套竖墙侧梁下部露出的蓝色长销，第6孔套黑销。",
+      "file": "img/assembly/11-09.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 12,
+      "number": 1,
+      "title": "十字块：圆孔在上",
+      "tip": "圆孔以后穿推杆；下面的十字孔接连杆轴。",
+      "file": "img/assembly/12-01.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 12,
+      "number": 2,
+      "title": "穿3号轴",
+      "tip": "",
+      "file": "img/assembly/12-02.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 12,
+      "number": 3,
+      "title": "背面半轴套",
+      "tip": "",
+      "file": "img/assembly/12-03.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 12,
+      "number": 4,
+      "title": "7孔粗连杆第1孔",
+      "tip": "粗梁直接贴十字块。",
+      "file": "img/assembly/12-04.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 12,
+      "number": 5,
+      "title": "外端半轴套",
+      "tip": "",
+      "file": "img/assembly/12-05.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 12,
+      "number": 6,
+      "title": "曲柄套2号轴",
+      "tip": "2号轴穿曲柄和连杆第7孔；首次装配先不连。",
+      "file": "img/assembly/12-06.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 12,
+      "number": 7,
+      "title": "2号轴内端半轴套",
+      "tip": "贴住连杆。",
+      "file": "img/assembly/12-07.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 12,
+      "number": 8,
+      "title": "准备两个半轴套",
+      "tip": "第19步穿推杆时套在十字块两侧，先不固定。",
+      "file": "img/assembly/12-08.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 13,
+      "number": 1,
+      "title": "第一侧：内侧一长一短两段梁",
+      "tip": "中间空出连杆通道；两侧长短段上下相反。",
+      "file": "img/assembly/13-01.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 13,
+      "number": 2,
+      "title": "插三根蓝色长销",
+      "tip": "1孔段插进内侧梁，挡肩贴梁面。",
+      "file": "img/assembly/13-02.svg",
+      "repeat": 1,
+      "new_count": 3
+    },
+    {
+      "step": 13,
+      "number": 3,
+      "title": "压上两根L形梁",
+      "tip": "短臂在靠魔方一头，一根朝上、一根朝下。",
+      "file": "img/assembly/13-03.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 13,
+      "number": 4,
+      "title": "补一个黑销",
+      "tip": "内侧没有梁的那个孔。",
+      "file": "img/assembly/13-04.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 13,
+      "number": 5,
+      "title": "压上外侧7孔梁",
+      "tip": "把上下两根L形梁连成一体。",
+      "file": "img/assembly/13-05.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 13,
+      "number": 6,
+      "title": "另一侧：内侧一长一短两段梁",
+      "tip": "中间空出连杆通道；两侧长短段上下相反。",
+      "file": "img/assembly/13-06.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 13,
+      "number": 7,
+      "title": "插三根蓝色长销",
+      "tip": "1孔段插进内侧梁，挡肩贴梁面。",
+      "file": "img/assembly/13-07.svg",
+      "repeat": 1,
+      "new_count": 3
+    },
+    {
+      "step": 13,
+      "number": 8,
+      "title": "压上两根L形梁",
+      "tip": "短臂在靠魔方一头，一根朝上、一根朝下。",
+      "file": "img/assembly/13-08.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 13,
+      "number": 9,
+      "title": "补一个黑销",
+      "tip": "内侧没有梁的那个孔。",
+      "file": "img/assembly/13-09.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 13,
+      "number": 10,
+      "title": "压上外侧7孔梁",
+      "tip": "把上下两根L形梁连成一体。",
+      "file": "img/assembly/13-10.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 14,
+      "number": 1,
+      "title": "取转盘上半",
+      "tip": "有齿的一面朝后；正面两侧各一个3孔凸耳。",
+      "file": "img/assembly/14-01.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 14,
+      "number": 2,
+      "title": "39793连接块放进两个凸耳之间",
+      "tip": "正面中心孔对准转盘中心，侧面孔对准凸耳上下孔。",
+      "file": "img/assembly/14-02.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 14,
+      "number": 3,
+      "title": "从外面插4根蓝色长销",
+      "tip": "2孔段朝里，穿过凸耳插进方块；挡肩贴凸耳外面。",
+      "file": "img/assembly/14-03.svg",
+      "repeat": 1,
+      "new_count": 4
+    },
+    {
+      "step": 14,
+      "number": 4,
+      "title": "两套侧板压到露出的销上",
+      "tip": "L形梁长臂后端的孔套住露出的1孔段。",
+      "file": "img/assembly/14-04.svg",
+      "repeat": 1,
+      "new_count": 0
+    },
+    {
+      "step": 15,
+      "number": 1,
+      "title": "下夹指：放到两侧梁之间",
+      "tip": "第4孔是根轴孔；夹指朝魔方。",
+      "file": "img/assembly/15-01.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 15,
+      "number": 2,
+      "title": "两侧各一个整轴套",
+      "tip": "扶住，准备穿根轴。",
+      "file": "img/assembly/15-02.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 15,
+      "number": 3,
+      "title": "穿8号根轴",
+      "tip": "穿内侧梁、整轴套、夹指，再穿另一侧。",
+      "file": "img/assembly/15-03.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 15,
+      "number": 4,
+      "title": "限位支架黑销",
+      "tip": "插在内侧梁的端孔。",
+      "file": "img/assembly/15-04.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 15,
+      "number": 5,
+      "title": "一侧两片L形薄梁",
+      "tip": "末端十字孔套根轴，中孔套黑销。",
+      "file": "img/assembly/15-05.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 15,
+      "number": 6,
+      "title": "另一侧两片L形薄梁",
+      "tip": "每侧叠两片。",
+      "file": "img/assembly/15-06.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 15,
+      "number": 7,
+      "title": "根轴两端半轴套",
+      "tip": "夹指仍能自由转动。",
+      "file": "img/assembly/15-07.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 15,
+      "number": 8,
+      "title": "穿8号开限位挡轴",
+      "tip": "",
+      "file": "img/assembly/15-08.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 15,
+      "number": 9,
+      "title": "挡轴两端半轴套",
+      "tip": "正常张开时碰不到挡轴。",
+      "file": "img/assembly/15-09.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 15,
+      "number": 10,
+      "title": "上夹指：放到两侧梁之间",
+      "tip": "第4孔是根轴孔；夹指朝魔方。",
+      "file": "img/assembly/15-10.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 15,
+      "number": 11,
+      "title": "两侧各一个整轴套",
+      "tip": "扶住，准备穿根轴。",
+      "file": "img/assembly/15-11.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 15,
+      "number": 12,
+      "title": "穿8号根轴",
+      "tip": "穿内侧梁、整轴套、夹指，再穿另一侧。",
+      "file": "img/assembly/15-12.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 15,
+      "number": 13,
+      "title": "限位支架黑销",
+      "tip": "插在内侧梁的端孔。",
+      "file": "img/assembly/15-13.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 15,
+      "number": 14,
+      "title": "一侧两片L形薄梁",
+      "tip": "末端十字孔套根轴，中孔套黑销。",
+      "file": "img/assembly/15-14.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 15,
+      "number": 15,
+      "title": "另一侧两片L形薄梁",
+      "tip": "每侧叠两片。",
+      "file": "img/assembly/15-15.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 15,
+      "number": 16,
+      "title": "根轴两端半轴套",
+      "tip": "夹指仍能自由转动。",
+      "file": "img/assembly/15-16.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 15,
+      "number": 17,
+      "title": "穿8号开限位挡轴",
+      "tip": "",
+      "file": "img/assembly/15-17.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 15,
+      "number": 18,
+      "title": "挡轴两端半轴套",
+      "tip": "正常张开时碰不到挡轴。",
+      "file": "img/assembly/15-18.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 16,
+      "number": 1,
+      "title": "下压头：轮胎套上轮毂",
+      "tip": "42610轮毂＋50945轮胎。",
+      "file": "img/assembly/16-01.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 16,
+      "number": 2,
+      "title": "穿2号轮轴",
+      "tip": "",
+      "file": "img/assembly/16-02.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 16,
+      "number": 3,
+      "title": "两片4孔薄梁夹住轮毂",
+      "tip": "第4孔（十字孔）套轮轴，两端齐平。",
+      "file": "img/assembly/16-03.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 16,
+      "number": 4,
+      "title": "压头对准主臂前端",
+      "tip": "薄梁第1、2孔对主臂第6、7孔。",
+      "file": "img/assembly/16-04.svg",
+      "repeat": 1,
+      "new_count": 0
+    },
+    {
+      "step": 16,
+      "number": 5,
+      "title": "第6孔穿3号轴",
+      "tip": "",
+      "file": "img/assembly/16-05.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 16,
+      "number": 6,
+      "title": "第7孔插红色挡套长销",
+      "tip": "",
+      "file": "img/assembly/16-06.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 16,
+      "number": 7,
+      "title": "3号轴两端半轴套",
+      "tip": "轮毂能转动。",
+      "file": "img/assembly/16-07.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 16,
+      "number": 8,
+      "title": "上压头：轮胎套上轮毂",
+      "tip": "42610轮毂＋50945轮胎。",
+      "file": "img/assembly/16-08.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 16,
+      "number": 9,
+      "title": "穿2号轮轴",
+      "tip": "",
+      "file": "img/assembly/16-09.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 16,
+      "number": 10,
+      "title": "两片4孔薄梁夹住轮毂",
+      "tip": "第4孔（十字孔）套轮轴，两端齐平。",
+      "file": "img/assembly/16-10.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 16,
+      "number": 11,
+      "title": "压头对准主臂前端",
+      "tip": "薄梁第1、2孔对主臂第6、7孔。",
+      "file": "img/assembly/16-11.svg",
+      "repeat": 1,
+      "new_count": 0
+    },
+    {
+      "step": 16,
+      "number": 12,
+      "title": "第6孔穿3号轴",
+      "tip": "",
+      "file": "img/assembly/16-12.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 16,
+      "number": 13,
+      "title": "第7孔插红色挡套长销",
+      "tip": "",
+      "file": "img/assembly/16-13.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 16,
+      "number": 14,
+      "title": "3号轴两端半轴套",
+      "tip": "轮毂能转动。",
+      "file": "img/assembly/16-14.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 17,
+      "number": 1,
+      "title": "主臂第2孔插灰色销",
+      "tip": "上下两个夹指各一个，从外侧插。",
+      "file": "img/assembly/17-01.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 17,
+      "number": 2,
+      "title": "套上两根5孔连杆",
+      "tip": "连杆另一端朝中间汇合。",
+      "file": "img/assembly/17-02.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 17,
+      "number": 3,
+      "title": "十字接头放进两根连杆之间",
+      "tip": "圆孔对准连杆端孔，十字孔朝后。",
+      "file": "img/assembly/17-03.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 17,
+      "number": 4,
+      "title": "穿4号轴",
+      "tip": "",
+      "file": "img/assembly/17-04.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 17,
+      "number": 5,
+      "title": "两端半轴套",
+      "tip": "连杆要能自由转动。",
+      "file": "img/assembly/17-05.svg",
+      "repeat": 1,
+      "new_count": 2
+    },
+    {
+      "step": 18,
+      "number": 1,
+      "title": "准备推杆：一根12号轴",
+      "tip": "下一步装好机械头后，从平台后面穿入。",
+      "file": "img/assembly/18-01.svg",
+      "repeat": 1,
+      "new_count": 1
+    },
+    {
+      "step": 19,
+      "number": 1,
+      "title": "机械头扣到转盘下半上",
+      "tip": "转盘两半直接卡合，不用销。",
+      "file": "img/assembly/19-01.svg",
+      "repeat": 1,
+      "new_count": 0
+    },
+    {
+      "step": 19,
+      "number": 2,
+      "title": "推杆从平台后面穿入",
+      "tip": "穿导向框后孔、半轴套、十字块、半轴套、前孔、转盘、导向，插进十字接头到底。",
+      "file": "img/assembly/19-02.svg",
+      "repeat": 1,
+      "new_count": 0
+    },
+    {
+      "step": 19,
+      "number": 3,
+      "title": "断电手推推杆检查",
+      "tip": "曲柄暂不连接；活动平顺后按单臂标定步骤连接舵机。",
+      "file": "img/assembly/19-03.svg",
+      "repeat": 1,
+      "new_count": 0
+    },
+    {
+      "step": 20,
+      "number": 1,
+      "title": "对面机械手：重复第2~19步",
+      "tip": "按第8、11步接底座，第19步装机械头。",
+      "file": "img/assembly/20-01.svg",
+      "repeat": 1,
+      "new_count": 177
+    },
+    {
+      "step": 20,
+      "number": 2,
+      "title": "前侧机械手：重复第2~19步",
+      "tip": "按第8、11步接底座，第19步装机械头。",
+      "file": "img/assembly/20-02.svg",
+      "repeat": 1,
+      "new_count": 177
+    },
+    {
+      "step": 20,
+      "number": 3,
+      "title": "后侧机械手：重复第2~19步",
+      "tip": "按第8、11步接底座，第19步装机械头。",
+      "file": "img/assembly/20-03.svg",
+      "repeat": 1,
+      "new_count": 177
+    }
+  ]
+}

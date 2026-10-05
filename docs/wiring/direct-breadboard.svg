@@ -1,0 +1,812 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1430" role="img" aria-label="Pico 单臂完整接线图，包含电源、DRV8833、EV3编码器分压与Geekservo">
+<style>text{font-family:"Noto Sans CJK SC","Microsoft YaHei",sans-serif}svg{background:#fffdf8} [data-group]{transition:opacity .15s}</style>
+<rect x="0" y="0" width="2200" height="1430" rx="0" fill="#fffdf8" stroke="none"/>
+<text x="40" y="52" font-size="34" fill="#243545" text-anchor="start" font-weight="700">Pico 单臂完整接线 · 马达、编码器与舵机</text>
+<text x="40" y="87" font-size="19" fill="#243545" text-anchor="start" font-weight="400">Pico 由 USB 供电 · 马达与舵机动力独立走线 · 编码器双路分压 · 全部接齐后分项测试</text>
+<rect x="20" y="105" width="1760" height="265" rx="8" fill="#f5f3ec" stroke="#ccd2d4"/>
+<text x="40" y="132" font-size="20" fill="#243545" text-anchor="start" font-weight="700">① 电源区</text>
+<rect x="45" y="167" width="210" height="146" rx="8" fill="#fff" stroke="#ccd2d4"/>
+<rect x="69" y="196" width="78" height="70" rx="8" fill="#26323b" stroke="#172028"/>
+<circle cx="108" cy="231" r="24" fill="#111" stroke="#a3a9ac" stroke-width="5"/>
+<circle cx="108" cy="231" r="5" fill="#c4c8cb"/>
+<text x="161" y="208" font-size="18" fill="#243545" text-anchor="start" font-weight="700">DC-005</text>
+<text x="161" y="234" font-size="18" fill="#cf421f" text-anchor="start" font-weight="400">+9V</text>
+<text x="161" y="274" font-size="18" fill="#243545" text-anchor="start" font-weight="400">GND</text>
+<text x="60" y="295" font-size="15" fill="#243545" text-anchor="start" font-weight="400">现有 9V 电源 / 开关后</text>
+<text x="350" y="244" font-size="21" fill="#243545" text-anchor="start" font-weight="700">DC-005 正极焊两根线</text>
+<text x="350" y="275" font-size="19" fill="#243545" text-anchor="start" font-weight="400">分别接 VM 与降压 IN+</text>
+<text x="350" y="305" font-size="17" fill="#243545" text-anchor="start" font-weight="400">焊点绝缘；模块端保持可拔</text>
+<rect x="680" y="161" width="260" height="155" rx="8" fill="#24678b" stroke="#19445b"/>
+<rect x="758" y="190" width="74" height="74" rx="8" fill="#333c45" stroke="#20272d"/>
+<text x="795" y="233" font-size="16" fill="white" text-anchor="middle" font-weight="400">电感</text>
+<rect x="847" y="182" width="43" height="36" rx="8" fill="#2683d0" stroke="#123f71"/>
+<text x="809" y="292" font-size="17" fill="white" text-anchor="middle" font-weight="400">降压模块 · 输出调为 5.0V</text>
+<circle cx="680" cy="190" r="7" fill="#dfc773" stroke="white" stroke-width="1.5"/>
+<text x="692" y="180" font-size="15" fill="white" text-anchor="start" font-weight="400">IN+</text>
+<circle cx="680" cy="290" r="7" fill="#dfc773" stroke="white" stroke-width="1.5"/>
+<text x="692" y="280" font-size="15" fill="white" text-anchor="start" font-weight="400">IN−</text>
+<circle cx="940" cy="190" r="7" fill="#dfc773" stroke="white" stroke-width="1.5"/>
+<text x="928" y="180" font-size="15" fill="white" text-anchor="end" font-weight="400">OUT+</text>
+<circle cx="940" cy="290" r="7" fill="#dfc773" stroke="white" stroke-width="1.5"/>
+<text x="928" y="280" font-size="15" fill="white" text-anchor="end" font-weight="400">OUT−</text>
+<text x="985" y="275" font-size="18" fill="#243545" text-anchor="start" font-weight="700">OUT− 直连舵机地</text>
+<text x="985" y="318" font-size="16" fill="#243545" text-anchor="start" font-weight="400">先确认与 IN− 内部共地</text>
+<text x="1260" y="200" font-size="21" fill="#243545" text-anchor="start" font-weight="700">9V 总电源必须开：降压模块才有 5V</text>
+<text x="1260" y="230" font-size="17" fill="#243545" text-anchor="start" font-weight="400">Pico 由 USB 供电；5V 轨不接 Pico 供电脚。</text>
+<text x="1260" y="260" font-size="17" fill="#243545" text-anchor="start" font-weight="400">DC-005 焊脚、降压焊盘均按实物标识确认。</text>
+<text x="1260" y="288" font-size="16" fill="#243545" text-anchor="start" font-weight="400">图示为功能位置，不是这两种元件的焊脚模板。</text>
+<text x="1260" y="316" font-size="17" fill="#243545" text-anchor="start" font-weight="700">马达、编码器、舵机一次接齐。</text>
+<text x="230" y="463" font-size="23" fill="#243545" text-anchor="start" font-weight="700">② DRV8833 · 正面朝上</text>
+<text x="230" y="493" font-size="17" fill="#243545" text-anchor="start" font-weight="400">放在绝缘面，母头线接模块排针</text>
+<text x="230" y="521" font-size="16" fill="#243545" text-anchor="start" font-weight="400">动力线端需满足马达启动电流</text>
+<rect x="230" y="586" width="260" height="420" rx="8" fill="#266d98" stroke="#154867"/>
+<rect x="322" y="716" width="76" height="128" rx="8" fill="#27303a" stroke="#17212c"/>
+<text x="361" y="787" font-size="20" fill="white" text-anchor="middle" font-weight="700">DRV</text>
+<text x="361" y="815" font-size="20" fill="white" text-anchor="middle" font-weight="700">8833</text>
+<text x="361" y="871" font-size="14" fill="#dbeef9" text-anchor="middle" font-weight="400">三个 GND</text>
+<text x="361" y="895" font-size="14" fill="#dbeef9" text-anchor="middle" font-weight="400">模块内部相通</text>
+<rect x="233" y="613" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="625" font-size="17" fill="white" text-anchor="start" font-weight="700">VM</text>
+<rect x="233" y="663" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="675" font-size="17" fill="white" text-anchor="start" font-weight="700">NC</text>
+<rect x="233" y="713" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="725" font-size="17" fill="white" text-anchor="start" font-weight="700">GND</text>
+<rect x="233" y="763" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="775" font-size="17" fill="white" text-anchor="start" font-weight="700">AO1</text>
+<rect x="233" y="813" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="825" font-size="17" fill="white" text-anchor="start" font-weight="700">AO2</text>
+<rect x="233" y="863" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="875" font-size="17" fill="white" text-anchor="start" font-weight="700">BO2</text>
+<rect x="233" y="913" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="925" font-size="17" fill="white" text-anchor="start" font-weight="700">BO1</text>
+<rect x="233" y="963" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="975" font-size="17" fill="white" text-anchor="start" font-weight="700">GND</text>
+<rect x="473" y="613" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="625" font-size="17" fill="white" text-anchor="end" font-weight="700">NC</text>
+<rect x="473" y="663" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="675" font-size="17" fill="white" text-anchor="end" font-weight="700">AIN2</text>
+<rect x="473" y="713" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="725" font-size="17" fill="white" text-anchor="end" font-weight="700">AIN1</text>
+<rect x="473" y="763" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="775" font-size="17" fill="white" text-anchor="end" font-weight="700">STBY</text>
+<rect x="473" y="813" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="825" font-size="17" fill="white" text-anchor="end" font-weight="700">BIN1</text>
+<rect x="473" y="863" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="875" font-size="17" fill="white" text-anchor="end" font-weight="700">BIN2</text>
+<rect x="473" y="913" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="925" font-size="17" fill="white" text-anchor="end" font-weight="700">NC</text>
+<rect x="473" y="963" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="975" font-size="17" fill="white" text-anchor="end" font-weight="700">GND</text>
+<text x="910" y="417" font-size="23" fill="#243545" text-anchor="start" font-weight="700">③ 面包板 · USB 朝左 · 仅放低电流线路</text>
+<rect x="650" y="435" width="1080" height="465" rx="8" fill="#eeeae1" stroke="#c4c0b8"/>
+<rect x="661" y="664" width="1058" height="31" rx="2" fill="#d1cbc0" stroke="#d1cbc0"/>
+<text x="675" y="490" font-size="13" fill="#243545" text-anchor="end" font-weight="400">+5V</text>
+<path d="M690,475 L1165,475" fill="none" stroke="#c74832" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1190,475 L1665,475" fill="none" stroke="#c74832" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="687" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="515" font-size="13" fill="#243545" text-anchor="end" font-weight="400">GND</text>
+<path d="M690,500 L1165,500" fill="none" stroke="#596974" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1190,500 L1665,500" fill="none" stroke="#596974" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="687" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="555" font-size="13" fill="#243545" text-anchor="end" font-weight="400">a</text>
+<rect x="687" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="580" font-size="13" fill="#243545" text-anchor="end" font-weight="400">b</text>
+<rect x="687" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="605" font-size="13" fill="#243545" text-anchor="end" font-weight="400">c</text>
+<rect x="687" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="630" font-size="13" fill="#243545" text-anchor="end" font-weight="400">d</text>
+<rect x="687" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="655" font-size="13" fill="#243545" text-anchor="end" font-weight="400">e</text>
+<rect x="687" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="715" font-size="13" fill="#243545" text-anchor="end" font-weight="400">f</text>
+<rect x="687" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="740" font-size="13" fill="#243545" text-anchor="end" font-weight="400">g</text>
+<rect x="687" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="765" font-size="13" fill="#243545" text-anchor="end" font-weight="400">h</text>
+<rect x="687" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="790" font-size="13" fill="#243545" text-anchor="end" font-weight="400">i</text>
+<rect x="687" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="815" font-size="13" fill="#243545" text-anchor="end" font-weight="400">j</text>
+<rect x="687" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="885" font-size="13" fill="#243545" text-anchor="end" font-weight="400">GND</text>
+<path d="M690,870 L1165,870" fill="none" stroke="#596974" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1190,870 L1665,870" fill="none" stroke="#596974" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="687" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="690" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">1</text>
+<text x="715" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">2</text>
+<text x="740" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">3</text>
+<text x="765" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">4</text>
+<text x="790" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">5</text>
+<text x="815" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">6</text>
+<text x="840" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">7</text>
+<text x="865" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">8</text>
+<text x="890" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">9</text>
+<text x="915" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">10</text>
+<text x="940" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">11</text>
+<text x="965" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">12</text>
+<text x="990" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">13</text>
+<text x="1015" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">14</text>
+<text x="1040" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">15</text>
+<text x="1065" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">16</text>
+<text x="1090" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">17</text>
+<text x="1115" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">18</text>
+<text x="1140" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">19</text>
+<text x="1165" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">20</text>
+<text x="1190" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">21</text>
+<text x="1215" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">22</text>
+<text x="1240" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">23</text>
+<text x="1265" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">24</text>
+<text x="1290" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">25</text>
+<text x="1315" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">26</text>
+<text x="1340" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">27</text>
+<text x="1365" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">28</text>
+<text x="1390" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">29</text>
+<text x="1415" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">30</text>
+<text x="1440" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">31</text>
+<text x="1465" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">32</text>
+<text x="1490" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">33</text>
+<text x="1515" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">34</text>
+<text x="1540" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">35</text>
+<text x="1565" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">36</text>
+<text x="1590" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">37</text>
+<text x="1615" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">38</text>
+<text x="1640" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">39</text>
+<text x="1665" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">40</text>
+<rect x="728" y="589" width="500" height="182" rx="8" fill="#26744f" stroke="#164d32"/>
+<rect x="700" y="650" width="42" height="58" rx="3" fill="#b5bdc5" stroke="#57636d"/>
+<rect x="908" y="639" width="72" height="72" rx="3" fill="#26303b" stroke="#17212b"/>
+<text x="1085" y="670" font-size="21" fill="white" text-anchor="middle" font-weight="700">Raspberry Pi Pico</text>
+<text x="1085" y="704" font-size="17" fill="white" text-anchor="middle" font-weight="400">USB 独立供电</text>
+<text x="721" y="735" font-size="13" fill="#142d36" text-anchor="end" font-weight="400">USB</text>
+<circle cx="740" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="740" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="765" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="765" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="790" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="790" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="815" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="815" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="840" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="840" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="865" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="865" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="890" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="890" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="915" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="915" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="940" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="940" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="965" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="965" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="990" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="990" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1015" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1015" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1040" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1040" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1065" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1065" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1090" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1090" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1115" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1115" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1140" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1140" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1165" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1165" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1190" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1190" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1215" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1215" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<text x="790" y="623" font-size="12" fill="white" text-anchor="middle" font-weight="700">GND</text>
+<text x="840" y="623" font-size="12" fill="white" text-anchor="middle" font-weight="700">3V3</text>
+<text x="815" y="744" font-size="12" fill="white" text-anchor="middle" font-weight="700">GP2</text>
+<text x="840" y="744" font-size="12" fill="white" text-anchor="middle" font-weight="700">GP3</text>
+<text x="865" y="744" font-size="12" fill="white" text-anchor="middle" font-weight="700">GP4</text>
+<text x="890" y="744" font-size="12" fill="white" text-anchor="middle" font-weight="700">GP5</text>
+<text x="990" y="744" font-size="12" fill="white" text-anchor="middle" font-weight="700">GP8</text>
+<text x="1020" y="856" font-size="15" fill="#243545" text-anchor="middle" font-weight="400">同一数字列：a–e 相通；f–j 相通；中槽两侧不通</text>
+<rect x="45" y="1090" width="405" height="130" rx="8" fill="#fff" stroke="#c7cdd0"/>
+<rect x="125" y="1235" width="242" height="119" rx="12" fill="#e0e2e5" stroke="#7e8994"/>
+<rect x="295" y="1260" width="100" height="70" rx="7" fill="#ba252f" stroke="#8b1d29"/>
+<circle cx="345" cy="1295" r="22" fill="#656971" stroke="#393f44" stroke-width="3"/>
+<text x="143" y="1280" font-size="23" fill="#243545" text-anchor="start" font-weight="700">④ EV3 马达</text>
+<text x="143" y="1313" font-size="16" fill="#243545" text-anchor="start" font-weight="400">原 EV3 插头插马达</text>
+<path d="M247,1235 L247,1212" fill="none" stroke="#303b46" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="134" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="150" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M150,1127 L150,1198 L247,1212" fill="none" stroke="#ececec" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="150" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">1</text>
+<text x="150" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">白 M1</text>
+<rect x="184" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="200" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M200,1127 L200,1198 L247,1212" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="200" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">2</text>
+<text x="200" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">黑 M2</text>
+<rect x="234" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="250" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M250,1127 L250,1198 L247,1212" fill="none" stroke="#c22" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="250" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">3</text>
+<text x="250" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">红 GND</text>
+<rect x="284" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="300" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M300,1127 L300,1198 L247,1212" fill="none" stroke="#2a944e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="300" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">4</text>
+<text x="300" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">绿 5V</text>
+<rect x="334" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="350" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M350,1127 L350,1198 L247,1212" fill="none" stroke="#dda814" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="350" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">5</text>
+<text x="350" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">黄 A</text>
+<rect x="384" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="400" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M400,1127 L400,1198 L247,1212" fill="none" stroke="#206bcc" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="400" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">6</text>
+<text x="400" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">蓝 B</text>
+<text x="490" y="1147" font-size="19" fill="#243545" text-anchor="start" font-weight="700">加工线 → 独立夹线端子 → 带插头的引出线</text>
+<text x="490" y="1180" font-size="17" fill="#243545" text-anchor="start" font-weight="400">六个端子互不相通；不能用同一组分线器接六根线。</text>
+<text x="50" y="1390" font-size="17" fill="#243545" text-anchor="start" font-weight="400">线色仅作已有线束参考；以已确认的 EV3 触点编号为准。</text>
+<text x="650" y="1228" font-size="23" fill="#243545" text-anchor="start" font-weight="700">两路分压：10kΩ 串联，20kΩ 从 GPIO 接点接地</text>
+<text x="650" y="1261" font-size="20" fill="#236ac2" text-anchor="start" font-weight="400">A：h33 → 10kΩ → 第26列分压点 → GP4</text>
+<text x="650" y="1295" font-size="20" fill="#236ac2" text-anchor="start" font-weight="400">B：h31 → 10kΩ → 第28列分压点 → GP5</text>
+<text x="650" y="1330" font-size="18" fill="#243545" text-anchor="start" font-weight="400">供电、信号都使用带插头的线；裸绞线先接夹线端子。</text>
+<text x="650" y="1363" font-size="18" fill="#243545" text-anchor="start" font-weight="400">粗线为板外动力连接；交叉无圆点不相连。</text>
+<text x="650" y="1395" font-size="17" fill="#243545" text-anchor="start" font-weight="400">图内只画面包板前40列；字母 / 数字以本图坐标为准。</text>
+<text x="1870" y="550" font-size="22" fill="#243545" text-anchor="start" font-weight="700">⑤ Geekservo · 灰色 270°</text>
+<rect x="1890" y="600" width="270" height="230" rx="8" fill="#d9dcdf" stroke="#73818c"/>
+<rect x="2105" y="670" width="70" height="80" rx="8" fill="#697784" stroke="#374653"/>
+<text x="1908" y="650" font-size="20" fill="#cf421f" text-anchor="start" font-weight="400">红 · +5V</text>
+<text x="1908" y="700" font-size="20" fill="#344454" text-anchor="start" font-weight="400">棕 · GND</text>
+<text x="1908" y="750" font-size="20" fill="#ad7418" text-anchor="start" font-weight="400">黄 · 信号</text>
+<text x="1870" y="880" font-size="18" fill="#243545" text-anchor="start" font-weight="400">S01：OUT+ → 舵机 +5V</text>
+<text x="1870" y="912" font-size="18" fill="#243545" text-anchor="start" font-weight="400">S02：OUT− → 舵机 GND</text>
+<text x="1870" y="944" font-size="18" fill="#243545" text-anchor="start" font-weight="400">S03：j13 / GP8 → 信号</text>
+<text x="1870" y="992" font-size="20" fill="#243545" text-anchor="start" font-weight="700">电源直接接降压模块</text>
+<text x="1870" y="1024" font-size="16" fill="#243545" text-anchor="start" font-weight="400">信号接面包板；线序按实物确认</text>
+<text x="1870" y="1056" font-size="17" fill="#243545" text-anchor="start" font-weight="400">三孔母插头配公针线端</text>
+<g data-group="power" data-wire="P03"><title>P03: DC 正极第一根线 → 降压 IN+</title><path d="M245,230 L300,230 L300,190 L680,190" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,230 L300,230 L300,190 L680,190" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="230" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="680" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="P04"><title>P04: DC 负极 → 降压 IN−（独立回流）</title><path d="M245,270 L285,270 L285,340 L650,340 L650,290 L680,290" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,270 L285,270 L285,340 L650,340 L650,290 L680,290" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="270" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="680" cy="290" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="P07"><title>P07: DC 正极第二根线 → 驱动 VM（直接线）</title><path d="M245,230 L270,230 L270,380 L120,380 L120,620 L240,620" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,230 L270,230 L270,380 L120,380 L120,620 L240,620" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="230" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="240" cy="620" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="P08"><title>P08: DC 负极 → 驱动左排第3脚 GND（直接线）</title><path d="M245,270 L260,270 L260,410 L180,410 L180,720 L240,720" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,270 L260,270 L260,410 L180,410 L180,720 L240,720" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="270" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="240" cy="720" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="P09"><title>P09: 降压 OUT+ 直接接面包板上 + 第38孔</title><path d="M940,190 L1040,190 L1040,147 L1735,147 L1735,450 L1615,450 L1615,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,190 L1040,190 L1040,147 L1735,147 L1735,450 L1615,450 L1615,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1615" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="P10"><title>P10: 驱动右排第8脚 GND → 面包板上 − 第38孔</title><path d="M480,970 L520,970 L520,360 L1770,360 L1770,510 L1615,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M480,970 L520,970 L520,360 L1770,360 L1770,510 L1615,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="480" cy="970" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1615" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G01"><title>G01: Pico GND：a5 → 上 − 第5孔</title><path d="M790,550 L790,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M790,550 L790,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="790" cy="550" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="790" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G02"><title>G02: 上下地轨相连</title><path d="M1665,510 L1745,510 L1745,880 L1665,880" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1665,510 L1745,510 L1745,880 L1665,880" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1665" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1665" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G03"><title>G03: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,510 L1165,493 L1190,493 L1190,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,510 L1165,493 L1190,493 L1190,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G04"><title>G04: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,880 L1165,863 L1190,863 L1190,880" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,880 L1165,863 L1190,863 L1190,880" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="P11"><title>P11: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,485 L1165,468 L1190,468 L1190,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,485 L1165,468 L1190,468 L1190,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="control" data-wire="C01"><title>C01: GP2 / 物理4脚：j6 → AIN1</title><path d="M815,810 L815,926 L580,926 L580,720 L480,720" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M815,810 L815,926 L580,926 L580,720 L480,720" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="815" cy="810" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="720" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
+<g data-group="control" data-wire="C02"><title>C02: GP3 / 物理5脚：j7 → AIN2</title><path d="M840,810 L840,951 L555,951 L555,670 L480,670" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M840,810 L840,951 L555,951 L555,670 L480,670" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="840" cy="810" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="670" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
+<g data-group="control" data-wire="C03"><title>C03: Pico 3V3 / 物理36脚：a7 → STBY</title><path d="M840,550 L840,390 L600,390 L600,770 L480,770" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M840,550 L840,390 L600,390 L600,770 L480,770" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="840" cy="550" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="770" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
+<g data-group="motor" data-wire="M01"><title>M01: AO1 → EV3 1脚（直接线）</title><path d="M240,770 L150,770 L150,1110" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,770 L150,770 L150,1110" fill="none" stroke="#8842ac" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="240" cy="770" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/><circle cx="150" cy="1110" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/></g>
+<g data-group="motor" data-wire="M02"><title>M02: AO2 → EV3 2脚（直接线）</title><path d="M240,820 L200,820 L200,1110" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,820 L200,820 L200,1110" fill="none" stroke="#8842ac" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="240" cy="820" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/><circle cx="200" cy="1110" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="E01"><title>E01: EV3 3脚 → 面包板 GND</title><path d="M250,1110 L250,1029 L1755,1029 L1755,510 L1590,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M250,1110 L250,1029 L1755,1029 L1755,510 L1590,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="250" cy="1110" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1590" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="E02"><title>E02: EV3 4脚 → 面包板 5V</title><path d="M300,1110 L300,1044 L1700,1044 L1700,485 L1665,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M300,1110 L300,1044 L1700,1044 L1700,485 L1665,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="300" cy="1110" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1665" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E03"><title>E03: EV3 5脚 → h33，进入 A组10kΩ</title><path d="M350,1110 L350,1059 L1490,1059 L1490,760" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M350,1110 L350,1059 L1490,1059 L1490,760" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="350" cy="1110" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1490" cy="760" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E04"><title>E04: EV3 6脚 → h31，进入 B组10kΩ</title><path d="M400,1110 L400,1085 L1440,1085 L1440,760" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M400,1110 L400,1085 L1440,1085 L1440,760" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="400" cy="1110" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1440" cy="760" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E05"><title>E05: A分压点 i26 → GP4 i8（物理6脚）</title><path d="M1315,785 L1285,785 L1285,981 L865,981 L865,785" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1315,785 L1285,785 L1285,981 L865,981 L865,785" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1315" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="865" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E06"><title>E06: B分压点 i28 → GP5 i9（物理7脚）</title><path d="M1365,785 L1395,785 L1395,1006 L890,1006 L890,785" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1365,785 L1395,785 L1395,1006 L890,1006 L890,785" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1365" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="890" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="S01"><title>S01: 降压 OUT+ → 舵机红线 +5V（独立动力线）</title><path d="M940,190 L1100,190 L1100,125 L1820,125 L1820,650 L1890,650" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,190 L1100,190 L1100,125 L1820,125 L1820,650 L1890,650" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="650" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="S02"><title>S02: 降压 OUT− → 舵机棕线 GND（独立回流）</title><path d="M940,290 L1170,290 L1170,340 L1840,340 L1840,700 L1890,700" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,290 L1170,290 L1170,340 L1840,340 L1840,700 L1890,700" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="290" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="700" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="servo" data-wire="S03"><title>S03: GP8 / 物理11脚：j13 → 舵机黄线信号</title><path d="M990,810 L990,915 L1800,915 L1800,750 L1890,750" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M990,810 L990,915 L1800,915 L1800,750 L1890,750" fill="none" stroke="#ad7418" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="990" cy="810" r="4" fill="#ad7418" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="750" r="4" fill="#ad7418" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>R1: BB.f33 → BB.f26, 10000 Ω</title><path d="M1490,710 L1315,710" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1375.5" y="702.0" width="54" height="16" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1402.5" y="693.0" font-size="14" fill="#725224" text-anchor="middle" font-weight="700">10kΩ</text><circle cx="1490" cy="710" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1315" cy="710" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>R2: BB.j26 → BB.G26, 20000 Ω</title><path d="M1315,810 L1315,880" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1307.0" y="822.0" width="16" height="46" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1298.0" y="848.0" font-size="14" fill="#725224" text-anchor="end" font-weight="700">20kΩ</text><circle cx="1315" cy="810" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1315" cy="880" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>R3: BB.g31 → BB.g28, 10000 Ω</title><path d="M1440,735 L1365,735" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1375.5" y="727.0" width="54" height="16" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1402.5" y="760.0" font-size="14" fill="#725224" text-anchor="middle" font-weight="700">10kΩ</text><circle cx="1440" cy="735" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1365" cy="735" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>R4: BB.j28 → BB.G28, 20000 Ω</title><path d="M1365,810 L1365,880" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1357.0" y="822.0" width="16" height="46" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1382.0" y="848.0" font-size="14" fill="#725224" text-anchor="start" font-weight="700">20kΩ</text><circle cx="1365" cy="810" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1365" cy="880" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<text x="120" y="602" font-size="15" fill="#cf421f" text-anchor="start" font-weight="700">P07 · 9V</text>
+<text x="195" y="746" font-size="15" fill="#344454" text-anchor="start" font-weight="700">P08 · GND</text>
+<text x="320" y="330" font-size="15" fill="#344454" text-anchor="start" font-weight="700">P04 · 独立回流</text>
+<text x="491" y="999" font-size="15" fill="#344454" text-anchor="start" font-weight="700">P10 → 地轨</text>
+<text x="593" y="715" font-size="15" fill="#167f74" text-anchor="start" font-weight="700">C01</text>
+<text x="540" y="651" font-size="15" fill="#167f74" text-anchor="start" font-weight="700">C02</text>
+<text x="611" y="757" font-size="15" fill="#167f74" text-anchor="start" font-weight="700">C03 · 3V3</text>
+<text x="1130" y="1120" font-size="15" fill="#236ac2" text-anchor="start" font-weight="700">E03 · A</text>
+<text x="1190" y="1110" font-size="15" fill="#236ac2" text-anchor="start" font-weight="700">E04 · B</text>
+</svg>

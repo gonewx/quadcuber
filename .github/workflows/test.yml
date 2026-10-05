@@ -14,3 +14,5 @@ jobs:
           python-version: "3.11"
       - name: Run unit tests
         run: python -m unittest -v
+      - name: Check wiring documents
+        run: python docs/wiring/build.py --check

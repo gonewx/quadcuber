@@ -1,0 +1,76 @@
+
+MPY: soft reboot
+MicroPython v1.17 on 2021-09-02; Raspberry Pi Pico with RP2040
+Type "help()" for more information.
+>>> import arm_test
+>>> arm_test.main()
+quadcuber 单臂测试。输入 help 查看命令。首次上电请先运行 check。
+arm> duty -0.5 150
+转了 -51.0 度
+arm> duty -0.5 150
+转了 -50.0 度
+arm> duty -0.5 150
+转了 -50.0 度
+arm> duty -0.5 150
+转了 -50.0 度
+arm> duty -0.5 150
+转了 -51.0 度
+arm> duty -0.5 150
+转了 -51.0 度
+arm> duty -0.5 150
+转了 -54.0 度
+arm> duty -0.5 150
+转了 -52.0 度
+arm> duty -0.5 150
+转了 -50.0 度
+arm> zero
+已清零
+arm> set kfs 0.11
+kfs = 0.11
+arm> set vmax 60
+vmax = 60
+arm> set amax 200
+amax = 200
+arm> set umax 0.60
+umax = 0.60
+arm> set max_err 15
+max_err = 15
+arm> goto 15
+RESULT {"loops": 583, "overshoot": 0.0, "t_reach": null, "type": "move", "t_settle": null, "target": 15.0, "state": "timeout", "q": null, "tag": "goto", "err": 3.0, "err_rest": 3.0, "ok": false, "max_dt_us": 10592, "t_profile": 0.5477, "start": 0.0, "max_track_err": 10.11}
+!! 动作失败: timeout (马达已断电)。检查接线/方向 (check), 或放宽参数。
+arm> /mnt/disk0/project/newx/m[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kset kfs 0.20
+kfs = 0.20
+arm> goto 15
+RESULT {"loops": 421, "overshoot": 0.0, "t_reach": null, "type": "move", "t_settle": null, "target": 15.0, "state": "timeout", "q": null, "tag": "goto", "err": 3.0, "err_rest": 3.0, "ok": false, "max_dt_us": 10624, "t_profile": 0.2449, "start": 12.0, "max_track_err": 3.0}
+!! 动作失败: timeout (马达已断电)。检查接线/方向 (check), 或放宽参数。
+arm> friction
+方向 +1: 起转占空比 0.430
+方向 -1: 起转占空比 0.420
+建议 kfs = 0.420 (取两个方向的较小值, 略偏小比偏大好)
+RESULT {"neg": 0.42, "pos": 0.43, "type": "friction"}
+arm> set kfs 0.42
+kfs = 0.42
+arm> zero
+已清零
+arm> goto 15
+RESULT {"loops": 322, "overshoot": 0.0, "t_reach": 0.3862, "type": "move", "t_settle": 0.4118, "target": 15.0, "state": "done", "q": null, "tag": "goto", "err": 1.0, "err_rest": 1.0, "ok": true, "max_dt_us": 10583, "t_profile": 0.5477, "start": 0.0, "max_track_err": 2.25}
+arm> goto 0
+RESULT {"loops": 311, "overshoot": 0.0, "t_reach": 0.3695, "type": "move", "t_settle": 0.4199, "target": 0.0, "state": "done", "q": null, "tag": "goto", "err": 0.0, "err_rest": 0.0, "ok": true, "max_dt_us": 10660, "t_profile": 0.5292, "start": 14.0, "max_track_err": 1.8}
+arm> ofo[Kf
+马达、舵机均已断开
+arm> zero
+已清零
+arm> goto 15
+RESULT {"loops": 176, "overshoot": 0.0, "t_reach": null, "type": "move", "t_settle": null, "target": 15.0, "state": "stall", "q": null, "tag": "goto", "err": 16.0, "err_rest": 16.0, "ok": false, "max_dt_us": 10480, "t_profile": 0.5745, "start": -1.5, "max_track_err": 9.8}
+!! 动作失败: stall (马达已断电)。检查接线/方向 (check), 或放宽参数。
+arm> off
+马达、舵机均已断开
+arm> zero
+已清零
+arm> set umax 0.75
+umax = 0.75
+arm> goto 15
+RESULT {"loops": 322, "overshoot": 0.0, "t_reach": 0.3706, "type": "move", "t_settle": 0.4455, "target": 15.0, "state": "done", "q": null, "tag": "goto", "err": 0.0, "err_rest": 0.0, "ok": true, "max_dt_us": 10643, "t_profile": 0.5477, "start": 0.0, "max_track_err": 1.63}
+arm> goto 15[K[K0
+RESULT {"loops": 321, "overshoot": 0.0, "t_reach": 0.4062, "type": "move", "t_settle": 0.4324, "target": 0.0, "state": "done", "q": null, "tag": "goto", "err": 0.0, "err_rest": 0.0, "ok": true, "max_dt_us": 10609, "t_profile": 0.5477, "start": 15.0, "max_track_err": 1.89}
+arm> 

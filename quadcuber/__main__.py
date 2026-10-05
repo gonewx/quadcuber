@@ -2,6 +2,7 @@
 
     python -m quadcuber plan "R U R' U'"          规划并在模拟器中验证一个转动序列
     python -m quadcuber bench --count 20          随机生成转动序列, 统计规划结果
+    python -m quadcuber armlog arm.log -o timing.json   汇总单臂测试日志, 生成耗时参数
 """
 
 from __future__ import annotations
@@ -12,7 +13,9 @@ import random
 import statistics
 import sys
 import time
+from dataclasses import asdict
 
+from . import armlog
 from .cube import format_moves, invert, parse_moves, random_scramble
 from .machine import Machine, Timing
 from .planner import PlannerOptions, plan
@@ -24,7 +27,7 @@ def _machine(args: argparse.Namespace) -> Machine:
     if args.timing:
         with open(args.timing, encoding="utf-8") as f:
             timing = Timing.from_dict(json.load(f))
-    return Machine(timing, args.angle_limit)
+    return Machine(timing, args.angle_limit, args.no_adjacent_horizontal)
 
 
 def _window(args: argparse.Namespace):
@@ -77,10 +80,35 @@ def cmd_bench(args: argparse.Namespace) -> int:
     return 0 if ok else 1
 
 
+def cmd_armlog(args: argparse.Namespace) -> int:
+    with open(args.log, encoding="utf-8", errors="replace") as f:
+        results = armlog.parse_results(f)
+    if not results:
+        print("日志里没有找到 RESULT 行")
+        return 1
+    print(armlog.report(results))
+    base = Timing()
+    if args.base:
+        with open(args.base, encoding="utf-8") as f:
+            base = Timing.from_dict(json.load(f))
+    timing, notes = armlog.suggest_timing(results, base)
+    print("\n建议的耗时参数:")
+    print(json.dumps(asdict(timing), ensure_ascii=False))
+    for n in notes:
+        print("注意: " + n)
+    if args.output:
+        with open(args.output, "w", encoding="utf-8") as f:
+            json.dump(asdict(timing), f, ensure_ascii=False, indent=2)
+        print(f"已写入 {args.output}, 可用 bench --timing {args.output} 重新评估")
+    return 0
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(prog="quadcuber", description="四机械手魔方机器人 动作规划器 / 模拟器")
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument("--angle-limit", type=int, default=None, help="机械手累计旋转限制 (90 度的个数), 默认不限")
+    common.add_argument("--no-adjacent-horizontal", action="store_true",
+                        help="相邻机械手不能同时经过水平 (v3 四臂结构需要, 见 tools/lego/v3)")
     common.add_argument("--timing", help="动作耗时参数 JSON 文件 (字段见 machine.Timing)")
     common.add_argument("--window", type=int, default=4, help="滚动窗口大小 (组数), 默认 4")
     common.add_argument("--full", action="store_true", help="对整个序列求最优 (慢)")
@@ -97,6 +125,12 @@ def main(argv=None) -> int:
     p_bench.add_argument("--seed", type=int, default=1)
     p_bench.add_argument("--compare", action="store_true", help="同时统计不做任何并行的基准方案")
     p_bench.set_defaults(func=cmd_bench)
+
+    p_log = sub.add_parser("armlog", help="汇总单臂测试日志 (RESULT 行), 生成 timing.json")
+    p_log.add_argument("log", help="串口日志文件")
+    p_log.add_argument("-o", "--output", help="写入 timing.json")
+    p_log.add_argument("--base", help="未测量的字段沿用这个 timing.json (默认用内置估算值)")
+    p_log.set_defaults(func=cmd_armlog)
 
     args = parser.parse_args(argv)
     return args.func(args)

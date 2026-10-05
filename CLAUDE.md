@@ -2,6 +2,8 @@
 
 用户用中文交流，代码注释和文档也用中文；代码标识符用英文。
 
+乐高库存以 [docs/lego/inventory.md](docs/lego/inventory.md) 中的用户确认记录为准。现有薄梁带十字端孔，没有32017这类全圆孔薄梁；旧版装配清单不代表用户已有库存。替换连杆必须检查关节是否仍能自由转动。
+
 ## 项目背景
 
 - 前身是 `gonewx/arducuber`：Arduino Mega + Bricktronics Megashield + EV3 马达，结构是 MindCub3r 式的“转盘 + 翻转臂”，一次还原约 1.5~2 分钟，主要时间耗在翻转上。那个项目在别的会话里单独维护，**不要在这里修改它**。
@@ -25,32 +27,41 @@
 - **旋转**：4 个带编码器的马达，需要准确转 90°。现有马达不够，还缺 1~2 个。驱动用 2 块 DRV8833，每块带 2 个马达。
 - **夹紧**：4 个 Geekservo（乐高兼容舵机），只有开、合两种状态，每个占 1 个引脚，不需要驱动板。
 - **引脚预算**：旋转马达 4×4 = 16 个，舵机 4 个，UART 2 个，共 22 个；Pico 有 26 个 GPIO。
-- **电平**：RP2040 的引脚**不耐 5V**。EV3 编码器由 5V 供电，信号必须经过电平转换才能接 Pico。
+- **编码器电平（最终方案，2026-09-27）**：RP2040 引脚**不耐 5V**。LEGO 官方电路（固件文档 bjr2016.neocities.org/LegoEv3TachoOutputDevice、DcmDriver）：EV3 马达两路编码器都是施密特缓冲器推挽输出 0/5V，各经串联电阻到插头（6 脚蓝 3.3kΩ；5 脚黄的 R1 兼作型号电阻，大马达 3.3kΩ、中马达 6.8kΩ）。**接法：每路 10kΩ 串联 + 20kΩ 下拉到地（高电平约 3.0V，中马达黄线约 2.7V），不用电平转换模块**；面包板上 A 相分压点第 26 列（10k 跨 f26~f33，黄线 h33，20k j26→下排 −，i8→i26 接 GP4），B 相第 28 列（10k 跨 g28~g31，蓝线 h31，20k j28→下排 −，i9→i28 接 GP5）。BSS138 模块不能用（与内部电阻分压，低电平约 1.65V，实测 1.60~1.64V）；TXS0108E 也不能用（要求信号源低阻）；SN74LVC2G17 可行但不需要。用户排查时发现黄线在线缆/转接处断开（两个马达现象相同，断开后量不通），换线或修好后先用万用表验收分压点再接 Pico。固件 `ENC_PULLUP=False`。依据见 `docs/ev3-interface-verification.md`。用户 Pico 上是 MicroPython v1.17（2021），建议升级。
 - **供电**：
   - 2 节 18650 经 LM2577 升压到 9V，或者用 PD 充电宝加 9V 诱骗线；
   - **DRV8833 的马达电压最高 10.8V，不能用 12V**；
-  - 舵机单独用一路 5V、3A 以上的降压电源，不要和 Pico 共用；
+  - 舵机单独用一路 5V、3A 以上的降压电源，不要和 Pico 共用；用户选用 DSN5000 模块（XL4005，5A 级，四臂也够），LM2596 备用。可调模块出厂电压随机，**必须先调到 5.0V 再接负载**；
   - 所有设备共地；Pico 的 VSYS 前面加一个肖特基二极管。
 
-## 当前代码（v0.1）
+## 当前代码
 
 - `quadcuber/cube.py`：54 贴纸魔方模型，世界坐标系为 x→R、y→U、z→F。
 - `quadcuber/machine.py`：机器状态、动作和约束，是机器模型的**唯一规格来源**。约束规则写在该模块的 docstring 和 `Machine.check` 中。
 - `quadcuber/planner.py`：A* 规划器，默认滚动窗口 4/2。角度受限时先按不限角度规划，再用 `fit_angle_limit` 做动态规划。
 - `quadcuber/simulate.py`：只按世界坐标中的物理动作转动贴纸，独立验证规划结果。**任何规划相关的改动，都必须用模拟器验证。**
-- 运行测试：`python -m unittest -v`（27 个测试）。命令行：`python -m quadcuber plan|bench`。
+- `quadcuber/armlog.py`：把单臂测试日志里的 `RESULT {json}` 行汇总成 `timing.json`。
+- `firmware/pico/`：单臂测试程序（MicroPython）。`control.py` 是与硬件无关的位置控制（梯形曲线 + 前馈 + PID + 到位/堵转/失控判定），CPython 也能跑；`encoder.py` 用 PIO 做 4 倍频计数（每个编码器 2 个状态机，读数时通过 SMx_INSTR 插入指令）；`arm_test.py` 是串口命令行。**已通过 2026-09-28 大马达空载闭环验证；v3 装机仍待测，见 `docs/single_arm-results.md`。** MicroPython 兼容性：不要用 dataclass、类型注解、`from __future__`。
+- `tests/pico_sim.py`：假的 `machine`/`rp2`/`time` 模块 + 小型 PIO 解释器 + 马达模型，让固件在 CPython 里端到端运行。改固件后必须跑 `tests/test_firmware.py`。
+- `docs/single_arm.md`：v3 单臂原型的接线（含四臂引脚总表）、测试步骤（第 0~9 步，开头约定正方向 = 从舵机那头朝魔方看顺时针、零位、夹紧/松开、RESULT 字段）、待验证假设。
+- `docs/wiring/`：电路入口为 `README.md`；当前使用 `direct-breadboard.html`（面包板＋动力直连），`perfboard.html` 是可选洞洞板。当前 v3 可一次接齐马达、编码器和舵机，再分项测试；P04 直接从 DC-005 负极接降压 IN−，图纸和逐线表一致。舵机后接只用于可选排障。共享引脚表和驱动脚序在 `spec.py`；`build.py` 统一生成 HTML/SVG/JSON、`docs/perfboard.md` 及 `docs/single_arm.md` 中标记的引脚表。改引脚时同时复核 `firmware/pico/config.py`、共享表、固定图形坐标和网络，并运行 `python docs/wiring/build.py`、`python docs/wiring/build.py --check`。检查不会自动迁移固定孔位图。PNG 从完整 SVG 导出，修改图纸后需同步导出；`--check` 不比较 PNG。
+- `docs/arm_concept.md`：乐高机械手的概念设计（给用户搭建参考，非零件清单）。夹条的实现方式是 **U 形叉 + 舵机推动沿轴向前进/后退**：叉齿卡住面中间一列的两个棱块外侧，靠形状传递扭矩和托住魔方。关键尺寸：叉齿宽 ≤16mm、退出行程 ≥13mm、魔方面前 14mm 内除叉齿外不能有宽零件（按 56mm 魔方计算）。模型里"叉子水平时也能支撑魔方"这一点待验证。
+- `tools/lego/`：单臂原型的乐高模型（`model.py`）、干涉/连接检查（`run_check.py`）、说明书生成（`booklet.py`，输出 `docs/lego/`）。用 LDraw 官方零件几何（GitHub 镜像 gkjohnson/ldraw-parts-library，ldraw.org 被网络策略拦截）和 three.js LDrawLoader + 无头 Chromium 渲染。**改模型后必须先跑 `run_check.py` 零问题，再生成说明书。** Geekservo 按用户图纸建模（`make_custom_parts.py`）：本体 24×28.8×16mm，耳朵销孔相距 32mm，输出十字轴偏心 4mm。用户有 4 个灰色（270° 舵机，夹爪用这个）和 4 个红色（很可能是 360° 连续旋转马达版，待确认）。说明书有大马达版（`docs/lego/`，artifact https://claude.ai/artifact/BWgtEpkX4PGRGnYzvNV2L4 ）和中马达版（`docs/lego/medium/`，artifact https://claude.ai/artifact/7VtzEUtxMbezHPJQYCDWPX ），`model.build(motor=...)` 切换。中马达更快（约 1.5 倍）但扭矩约为大马达的 40%，够不够要用单臂原型实测；用户还缺 1~2 个马达，实测结果决定买哪种。零件只用常见件，不按套装限制。
+- `tools/lego/v3/`（2026-09-29）：按 CubeStormer 3 思路重新设计的**四臂整机**（肘节死点夹爪、舵机固定不随转、24 齿直齿轮带 60 齿转盘（中心距 5 孔照官方 42100，齿轮按用户实测选 24 齿，减速 2.5 倍）、底座用 4 块 15x11 大框 39790（用户的 45680 套装里有，每模块一块；下面垫 15 孔梁伸到角上，角上用 L 形梁刚性连接）；框架只用在最需要刚度或三向交汇处（每模块竖墙 3、导向 1、平台前 1；平台前挂竖墙，后端用 55615 弯角销连接器 + 竖梁落到底座，两侧无支腿），其余用竖梁和 L 形梁，整机 7x5 框架 20 块；说明书采购表按 45680 套装扣减），`four_arm.py` 做四臂干涉扫描。结论：相邻两臂不能同时水平，规划器用 `Machine(no_adjacent_horizontal=True)` / `--no-adjacent-horizontal`（默认关）。说明书 `docs/lego/v3/`（artifact https://claude.ai/artifact/9ziZ9cN8ThqNkn2viijrQw ）。v1、v2 不动。**2026-09-30 实物反馈：推杆锁死后夹指仍有间隙、打滑**——死点时闭合开口由孔位固定为 56.8mm，比 56mm 魔方大 0.8mm，没有压紧力，与舵机力量无关；改法是每根夹指横向绕乐高 15mm 皮带（x37）2 圈（第 1~2 孔之间，自定义零件 `parts/rubberband.dat`），压进魔方约 1mm；代价是整体翻转余量按尖角只剩 0.4mm（棱边圆角算约 1.2mm），待实测。用户不接受改造零件或非乐高材料。
+- 运行测试：`python -m unittest -v`（57 个测试）。命令行：`python -m quadcuber plan|bench|armlog`。
 
 ## 已知问题和注意事项
 
 - **耗时参数全是估算值**（`machine.Timing`）。目前 20 步序列约 7.9 秒的结果只是按估算值算出来的，并行动作带来的提升约 23%。
 - **有角度限制时规划很慢**：在 PC 上，±180° 平均 11 秒，±270° 平均 18 秒；不限角度只要 0.8 秒。Zero W 大约还要慢一个数量级。因此**建议夹爪做成可以无限旋转**（舵机不跟着转，或者用滑环）。机械方案确定前，不必继续优化这一块。
 - 机器模型是按常见的四机械手结构抽象出来的，比如“夹条横跨面中间一行”“靠一对机械手支撑”等。**实物结构确定后需要按实物修正。**
+- **外部评审（2026-09）指出的机械风险，已核实**：① 水平叉子没有压紧力，整体翻转经过水平姿态时魔方可能滑落，是整机最大风险（`machine.py` 支撑约束依赖这一未验证假设）；② 曲柄停在死点不等于可靠锁定，应加限位/过中心；③ 转动部分约 150mm 悬臂，刚度待查；④ `run_check.py` 不扫开合中间位置、不含销轴线缆、无四臂检查；⑤ 8mm 叉齿 + 每侧 0.4mm 间隙约有 ±4.5° 空转（原文档写的 ±1° 是错的），验收要看魔方面而不只看编码器。弹性预紧叉齿可同时改善 ① 和 ⑤。
 - 动作类必须用 `frozen dataclass`，**不能用 NamedTuple**。NamedTuple 按元组比较，`Turn("F", 1) == Rotate("F", 1)`，曾经导致规划器的缓存出错。
 
 ## 下一步（按优先级）
 
-1. **单臂原型**：用户搭建 1 个机械手（夹紧 + 旋转），加上 Pico 测试程序，测 90° 旋转的耗时和到位精度，检验夹持是否可靠。这一步决定整个方案是否可行。
-2. 把实测耗时写进 `timing.json`，重新评估速度。
+1. **单臂原型**：用户搭建 1 个机械手（夹紧 + 旋转），测 90° 旋转的耗时和到位精度，检验夹持是否可靠。这一步决定整个方案是否可行。**Pico 测试程序、接线文档和乐高搭建说明书都已完成；用户已装好机械臂（2026-09），正在接线，等反馈 `arm.log`、录像和照片**；首次上电后很可能要根据实际情况修正固件和搭建图。
+2. 用 `python -m quadcuber armlog arm.log -o timing.json` 把实测耗时写进 `timing.json`，重新评估速度。
 3. 接入 Kociemba 求解器（在 Zero W 上用 Python 的 `kociemba` 库）。
 4. 定义 Pico 与 Zero 之间的串口协议（`Plan.to_dict()` 已能输出 JSON 动作序列）。
 5. 四臂框架搭好后：网页手动控制，并做随机拧动 1000 次的可靠性测试。

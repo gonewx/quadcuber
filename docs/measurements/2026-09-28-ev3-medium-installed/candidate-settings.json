@@ -1,0 +1,32 @@
+{
+  "supply_v_user_reported": 9,
+  "conditions": {
+    "motor": "EV3中马达",
+    "mechanism": "已装机械臂，无魔方，舵机不通电",
+    "zero": "用户确认线缆自然舒展的中位",
+    "counts_per_motor_rev": 720,
+    "gear_ratio": 1,
+    "angle_measurement": "编码器换算，非独立角度测量",
+    "end_state": "返回中位后motor.coast，servo.off；Pico保留arm对象，处于Python REPL"
+  },
+  "gains": {
+    "kfs": 0.46,
+    "umax": 0.9,
+    "vmax": 60,
+    "amax": 200,
+    "max_err": 15,
+    "tol": 2,
+    "stall_time": 0.15,
+    "vtol": 60,
+    "stall_vel": 20,
+    "tau": 0.05,
+    "ki": 0,
+    "timeout": 0.5,
+    "kd": 0.0008,
+    "settle": 0.02,
+    "v_full": 1000,
+    "kp": 0.03
+  },
+  "hold_ms": 50,
+  "status": "暂选参数：仍需现场平顺性与温升反馈；未证明最优，未测魔方负载"
+}

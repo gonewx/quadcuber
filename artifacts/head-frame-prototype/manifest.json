@@ -1,0 +1,17 @@
+{
+  "阶段": "真实零件候选，实物承载与摩擦待测",
+  "文件SHA256": {
+    "boxed_slider.py": "b35e56e0454b790eb130a89a5c0c33436005d14687d2d2c89926666d0c8684e1",
+    "validate_candidate.py": "bccb0aafc8b7f6274c0ea206f7e7c784f64ae5bfff2c08daec8bc69997ee3fea",
+    "check_structure.py": "1a931db6ae8b5a105042d8e5a502d7f87d490edb9bef9322a83bf072d1cb36f1",
+    "check_rotation.py": "c6e8ce987a27c7a4e9082519a884cdf68c798786f08ccee77a341c7f5d96691e",
+    "boxed-check.json": "793c07c2e73cfb57129b6add7fe90f8006d83366b02ef04f681cb56adc7a86a1",
+    "structure-rank.json": "bf4fcdff062bb0e03aadc6508507fcf7a89c2bb75555c91d6cb329a04721a91b",
+    "boxed-rotation.json": "a18577d264c0918dd9ae8045828bd63c07705f7342448065d21cf704eae3b3f4",
+    "cube-check.json": "f1fd27c98a9f94ec9966bc04b96b1f23187ac22ab624ca67a5209c269e2b40d8",
+    "boxed-load.json": "d784fe6b26a4fe21bd83f8d964154ac6a119f8d83132abcb6a8de73f4876f71c",
+    "bom-delta.json": "036d43922a02ce854245529c60480964153cb3b7c0a37a51b1c0fc7aace6aee8",
+    "module.ldr": "895a06c9122b25fffc23023ff6eadee1f8d3e9462ab0771a6730721b0f353313",
+    "assembly.ldr": "ee9b03c1d207f31b803d1aae12a21af158f32d9625a2c8ab503e2cdc55e9ecaf"
+  }
+}

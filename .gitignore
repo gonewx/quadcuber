@@ -3,3 +3,15 @@ __pycache__/
 *.egg-info/
 build/
 dist/
+tools/lego/.cache/
+tools/lego/render/node_modules
+arm.log
+
+# 本地交付压缩包由当前分支生成，避免把源码快照再次装入自身。
+/artifacts/swivel-pressure-pads/*.bundle
+/artifacts/swivel-pressure-pads/*.zip
+/artifacts/swivel-pressure-pads/*.tmp
+
+# 本地导出的 PDF 与临时文件
+/output/
+/tmp/

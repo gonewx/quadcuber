@@ -1,0 +1,412 @@
+{
+  "date": "2026-09-28",
+  "motor": "LEGO EV3 大马达",
+  "condition": "马达本体空载，未连接机械臂",
+  "source": "用户回传串口输出；moves_selected_fields保存每次动作的比较指标，不是完整原始串口文件。",
+  "power": {
+    "nominal_voltage_v": 9,
+    "diagnostic_vm_voltage_v": 7.9,
+    "voltage_during_bench_v": null
+  },
+  "angle_conversion": {
+    "counts_per_motor_rev": 720,
+    "gear_ratio": 1.0,
+    "manual_cal_count": -707,
+    "independent_angle_calibration": false
+  },
+  "config_snapshot": "config.py",
+  "gains": {
+    "vmax": 600.0,
+    "amax": 6000.0,
+    "v_full": 1180.0,
+    "tau": 0.091,
+    "kp": 0.03,
+    "kd": 0.0008,
+    "ki": 0.0,
+    "kfs": 0.11,
+    "tol": 2.0
+  },
+  "check": {
+    "duty": 0.5,
+    "duration_ms": 150,
+    "delta_count": 134,
+    "direction_correct": true
+  },
+  "friction": {
+    "pos": 0.11,
+    "neg": 0.115,
+    "selected_kfs": 0.11
+  },
+  "speed": {
+    "duty": 1.0,
+    "duration_ms": 400,
+    "v_ss_deg_s": 1050.3,
+    "tau_s": 0.09049999,
+    "selected_v_full": 1180,
+    "selected_tau_s": 0.091
+  },
+  "benchmarks": [
+    {
+      "command": "bench 1 20",
+      "summary": {
+        "successful_moves": 20,
+        "total_moves": 20,
+        "round_trips": 10,
+        "mean_t_settle_s": 0.349,
+        "max_t_settle_s": 0.371,
+        "p90_t_settle_s": 0.366,
+        "mean_abs_err_deg": 0.45,
+        "max_abs_err_deg": 1,
+        "max_abs_err_rest_deg": 1
+      },
+      "moves_selected_fields": [
+        {
+          "q": 1,
+          "t_settle_s": 0.3378,
+          "err_deg": 0,
+          "err_rest_deg": 0,
+          "overshoot_deg": 0,
+          "max_dt_us": 10624,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -1,
+          "t_settle_s": 0.3469,
+          "err_deg": 0.5,
+          "err_rest_deg": 0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10703,
+          "max_track_err_deg": 4,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 1,
+          "t_settle_s": 0.3324,
+          "err_deg": -1,
+          "err_rest_deg": -1,
+          "overshoot_deg": 1,
+          "max_dt_us": 10614,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -1,
+          "t_settle_s": 0.3368,
+          "err_deg": 0.5,
+          "err_rest_deg": 0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10671,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 1,
+          "t_settle_s": 0.338,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10626,
+          "max_track_err_deg": 5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -1,
+          "t_settle_s": 0.3517,
+          "err_deg": 0,
+          "err_rest_deg": 0,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10667,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 1,
+          "t_settle_s": 0.3713,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10686,
+          "max_track_err_deg": 5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -1,
+          "t_settle_s": 0.3563,
+          "err_deg": 0.5,
+          "err_rest_deg": 0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10647,
+          "max_track_err_deg": 4,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 1,
+          "t_settle_s": 0.3542,
+          "err_deg": 0.5,
+          "err_rest_deg": 0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10681,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -1,
+          "t_settle_s": 0.3416,
+          "err_deg": 0.5,
+          "err_rest_deg": 0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10682,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 1,
+          "t_settle_s": 0.354,
+          "err_deg": 0.5,
+          "err_rest_deg": 0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10678,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -1,
+          "t_settle_s": 0.3172,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0,
+          "max_dt_us": 10641,
+          "max_track_err_deg": 2.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 1,
+          "t_settle_s": 0.3374,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10664,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -1,
+          "t_settle_s": 0.3583,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10662,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 1,
+          "t_settle_s": 0.3358,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10739,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -1,
+          "t_settle_s": 0.3598,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10690,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 1,
+          "t_settle_s": 0.3576,
+          "err_deg": 0.5,
+          "err_rest_deg": 0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10687,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -1,
+          "t_settle_s": 0.3615,
+          "err_deg": 0.5,
+          "err_rest_deg": 0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10677,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 1,
+          "t_settle_s": 0.3659,
+          "err_deg": -0.5,
+          "err_rest_deg": 0,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10734,
+          "max_track_err_deg": 3.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -1,
+          "t_settle_s": 0.3579,
+          "err_deg": 0,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10719,
+          "max_track_err_deg": 4.5,
+          "ok": true,
+          "state": "done"
+        }
+      ]
+    },
+    {
+      "command": "bench 2 10",
+      "summary": {
+        "successful_moves": 10,
+        "total_moves": 10,
+        "round_trips": 5,
+        "mean_t_settle_s": 0.514,
+        "max_t_settle_s": 0.532,
+        "p90_t_settle_s": 0.532,
+        "mean_abs_err_deg": 0.4,
+        "max_abs_err_deg": 0.5,
+        "max_abs_err_rest_deg": 0.5
+      },
+      "moves_selected_fields": [
+        {
+          "q": 2,
+          "t_settle_s": 0.5253,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10624,
+          "max_track_err_deg": 6.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -2,
+          "t_settle_s": 0.5314,
+          "err_deg": 0,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10632,
+          "max_track_err_deg": 5.43,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 2,
+          "t_settle_s": 0.5256,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10692,
+          "max_track_err_deg": 6.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -2,
+          "t_settle_s": 0.5082,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10654,
+          "max_track_err_deg": 5.53,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 2,
+          "t_settle_s": 0.5187,
+          "err_deg": 0,
+          "err_rest_deg": 0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10641,
+          "max_track_err_deg": 5.5,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -2,
+          "t_settle_s": 0.4798,
+          "err_deg": 0.5,
+          "err_rest_deg": 0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10656,
+          "max_track_err_deg": 5.7,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 2,
+          "t_settle_s": 0.5321,
+          "err_deg": 0.5,
+          "err_rest_deg": 0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10639,
+          "max_track_err_deg": 5.79,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -2,
+          "t_settle_s": 0.515,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10690,
+          "max_track_err_deg": 5.41,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": 2,
+          "t_settle_s": 0.4991,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10679,
+          "max_track_err_deg": 5.9,
+          "ok": true,
+          "state": "done"
+        },
+        {
+          "q": -2,
+          "t_settle_s": 0.5064,
+          "err_deg": -0.5,
+          "err_rest_deg": -0.5,
+          "overshoot_deg": 0.5,
+          "max_dt_us": 10701,
+          "max_track_err_deg": 5.64,
+          "ok": true,
+          "state": "done"
+        }
+      ]
+    }
+  ]
+}
