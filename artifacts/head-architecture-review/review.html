@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>机械头结构评审 · 放开 L 梁限制</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f5f7;color:#213047;font:16px/1.65 system-ui,"Noto Sans CJK SC",sans-serif}main{max-width:1440px;margin:auto;padding:30px}h1{font-size:30px;margin:0 0 8px}h2{font-size:22px;margin:24px 0 12px}p{margin:8px 0}.muted{color:#536275}.tag{display:inline-block;background:#e4edf5;padding:3px 10px;border-radius:4px;font-size:14px}.warn{border-left:4px solid #b77c30;background:#fff7e8;padding:12px 16px;margin:18px 0}.tools{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:16px 0}button{border:1px solid #aebbc9;background:white;padding:9px 15px;border-radius:5px;font:inherit;cursor:pointer}button:hover,button.active{background:#213c58;color:white}label{margin-right:12px;cursor:pointer}.panel{background:white;border:1px solid #dbe1e7;border-radius:8px;padding:18px}canvas{width:100%;height:auto;display:block;touch-action:none;cursor:grab}.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}.dot{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid img{width:100%}table{border-collapse:collapse;width:100%;font-size:15px}td,th{padding:12px;text-align:left;border-bottom:1px solid #dbe1e7;vertical-align:top}th{background:#edf1f4}a{color:#145b91}small{font-size:14px}@media(max-width:750px){main{padding:15px}.grid{grid-template-columns:1fr}h1{font-size:24px}}
+</style>
+<main>
+<span class="tag">结构概念评审 · 尚非乐高逐件装配模型</span>
+<h1>先确定承重骨架，再选择梁的形状</h1>
+<p>常见 Technic 零件优先，允许少量补购；<b>所有全圆孔薄梁禁用</b>。保留马达与底座接口作为基准，重新安排框架、导向和推杆。</p>
+<div class="warn">下图用简化实体说明结构关系。蓝色框架、黄色滑座均为功能外形，不代表已确认的整块零件。孔位、连接件、轴孔摩擦、整圈避让和承重尚待详细设计验证。</div>
+<div class="panel" id="concept-panel">
+<h2 style="margin-top:0">优先评估：封闭框架＋双导轨滑座</h2>
+<p class="muted">左右侧框以横向连接形成箱形骨架；每根导轨前后支承，滑座在每根导轨上设两个接触位置。夹指根轴双侧支承。</p>
+<div class="tools">
+<button onclick="preset('iso')" class="active" id="v-iso">整体轴测</button><button onclick="preset('back')" id="v-back">另一侧</button><button onclick="preset('side')" id="v-side">侧视</button><button onclick="preset('front')" id="v-front">沿推杆看</button><button onclick="preset('top')" id="v-top">俯视</button>
+<label><input type="checkbox" id="shell" checked onchange="draw()">显示近侧框架</label><label><input type="checkbox" id="context" checked onchange="draw()">显示驱动参照</label><label><input type="checkbox" id="cube" onchange="draw()">显示魔方</label>
+<label>开合 <input aria-label="夹指开合比例" type="range" id="motion" min="0" max="100" value="0" oninput="draw()"></label>
+</div>
+<canvas id="scene" width="1500" height="880" aria-label="可拖动旋转的机械头结构概念"></canvas>
+<div class="legend"><span><i class="dot" style="background:#477698"></i>承重框架</span><span><i class="dot" style="background:#687b86"></i>双导轨</span><span><i class="dot" style="background:#dca83e"></i>滑座及轴向输入</span><span><i class="dot" style="background:#d9763c"></i>粗梁输入杆</span><span><i class="dot" style="background:#bf5260"></i>夹指</span></div>
+<small class="muted">拖动旋转，滚轮缩放。开合仅解理想平面连杆，未计摩擦、弹性及实体干涉。上／前／左右轴随视角显示；左右是机械头的横向。</small>
+</div>
+<h2>承重要分开检查</h2>
+<div class="grid"><div class="panel"><b>① 根轴及框架支承</b><p>轮胎 → 夹指 → 双侧根轴 → 前端立架 → 左右侧框／横向连接 → 转盘 → 固定支座 → 底座。</p><small>减小根轴悬伸，减少串联连接；转盘间隙、支座刚度和机械头自重仍需检查。</small></div><div class="panel"><b>② 活动接头支承</b><p>夹指输入杆 → 滑座 → 双导轨的前后接触 → 导轨端座 → 框架。</p><small>推杆输入轴向力；横向力和力矩应由滑座支承。两路载荷的分配必须联立求解，不能各自假设承担全部载荷。</small></div></div>
+<h2>三条路线，按证据选择</h2>
+<table><thead><tr><th>路线</th><th>为什么值得考虑</th><th>必须解决的问题</th><th>当前判断</th></tr></thead><tbody>
+<tr><td>封闭框架＋直线滑座</td><td>导向与框架承重分工清楚；有机会删去摆杆和短驱动连杆。</td><td>四个滑动接触点的摩擦、导轨挠曲、平行度和卡滞；滑座自身也需刚性。</td><td>优先做导向小样。尚不能保证更少件或更硬。</td></tr>
+<tr><td>封闭框架＋重排连杆导向</td><td>继续使用转动关节，避免长行程轴孔滑动。</td><td>关节间隙累积、层位和侧向支承；需要重新布置，不能直接套旧内芯。</td><td>滑动方案不达标时的主要对照。</td></tr>
+<tr><td>上一版 L 梁兼容改型</td><td>已有局部几何及刚体分析数据，保留接口最多。</td><td>239→238 件，复杂叠层仍在，最小活动间隙约0.81mm。</td><td>留作对照，不作为新的推荐结论。</td></tr>
+</tbody></table>
+<h2>上一版的完整单臂：补足两个观察角度</h2>
+<p class="muted">以下是上一版真实零件模型，包含后部马达、舵机和支座；与上面的新结构概念区分。</p>
+<div class="grid"><div class="panel"><b>整体轴测</b><img src="previous-full.png" alt="上一版完整单臂轴测图"></div><div class="panel"><b>另一侧轴测</b><img src="previous-reverse.png" alt="上一版完整单臂从另一侧观察"></div></div>
+<p><a href="../../docs/lego/v3/design/architecture-reset.md">结构选择、承重边界与验证计划</a></p>
+</main>
+<script>
+// 结构概念可视化；单位使用毫米作布局参考，不是孔位表或零件装配模型。
+const canvas=document.getElementById('scene'),ctx=canvas.getContext('2d');
+let yaw=.55,pitch=.42,zoom=1,faces=[],marks=[];
+const C={frame:'#477698',rail:'#687b86',slide:'#dca83e',link:'#d9763c',jaw:'#bf5260',dark:'#333d48',pale:'#cdd3da',motor:'#aeb9c4'};
+const add=(a,b)=>a.map((x,i)=>x+b[i]),sub=(a,b)=>a.map((x,i)=>x-b[i]),mul=(a,s)=>a.map(x=>x*s),dot=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0),cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]],norm=a=>mul(a,1/Math.hypot(...a));
+function shade(hex,k){return '#'+hex.slice(1).match(/../g).map(v=>Math.round(Math.min(255,parseInt(v,16)*k)).toString(16).padStart(2,'0')).join('')}
+function poly(v,color){const n=norm(cross(sub(v[1],v[0]),sub(v[2],v[0])));faces.push({v,color:shade(color,.68+.32*Math.abs(dot(n,norm([-.4,1,.5]))))})}
+function beam(a,b,w,h,color){const u=norm(sub(b,a)),v=norm(cross(u,Math.abs(u[1])<.9?[0,1,0]:[0,0,1])),t=cross(u,v);const vs=[];for(const p of [a,b])for(const [s,r]of[[-1,-1],[1,-1],[1,1],[-1,1]])vs.push(add(p,add(mul(v,s*w/2),mul(t,r*h/2))));for(const f of [[0,1,2,3],[4,7,6,5],[0,4,5,1],[1,5,6,2],[2,6,7,3],[3,7,4,0]])poly(f.map(i=>vs[i]),color)}
+function box(c,size,color){beam(add(c,[-size[0]/2,0,0]),add(c,[size[0]/2,0,0]),size[2],size[1],color)}
+function tube(a,b,r,color,inside=0){const u=norm(sub(b,a)),v=norm(cross(u,Math.abs(u[1])<.9?[0,1,0]:[0,0,1])),t=cross(u,v),N=28;function p(c,i,rad){return add(c,add(mul(v,rad*Math.cos(i/N*Math.PI*2)),mul(t,rad*Math.sin(i/N*Math.PI*2))))}for(let i=0;i<N;i++){poly([p(a,i,r),p(a,i+1,r),p(b,i+1,r),p(b,i,r)],color);if(inside){poly([p(a,i,inside),p(b,i,inside),p(b,i+1,inside),p(a,i+1,inside)],color);for(const c of[a,b])poly([p(c,i,inside),p(c,i,r),p(c,i+1,r),p(c,i+1,inside)],color)}else{poly([a,p(a,i,r),p(a,i+1,r)],color);poly([b,p(b,i+1,r),p(b,i,r)],color)}}}
+function label(p,text,offset=[0,0]){marks.push({p,text,offset})}
+function build(){faces=[];marks=[];let frac=+document.getElementById('motion').value/100,b0=Math.asin(6.7/100),beta=b0+(25*Math.PI/180-b0)*frac;const jx=-52-16*Math.cos(beta),jy=32-16*Math.sin(beta),cx=jx-Math.sqrt(32*32-jy*jy);
+const shell=document.getElementById('shell').checked,context=document.getElementById('context').checked;
+if(context){box([-164,-18,-39],[48,36,30],C.motor);box([-170,-47,-10],[72,7,85],C.pale);for(const z of[-28,28])beam([-138,-44,z],[-138,24,z],8,8,C.pale);beam([-138,24,-28],[-138,24,28],8,8,C.pale);tube([-141,0,-36],[-126,0,-36],2,C.dark);tube([-131,0,-36],[-125,0,-36],11,C.slide);tube([-133,0,0],[-128,0,0],25,C.dark,10);label([-165,-18,-39],'回转马达／齿轮（参照）',[-135,180]);label([-181,0,0],'开合输入',[-85,-50]);}
+tube([-128,0,0],[-120,0,0],25,C.pale,11);label([-124,24,0],'转盘接口',[-110,-110]);
+for(const z of [-28,28]){if(z===28&&!shell)continue;for(const y of[-16,16])beam([-112,y,z],[-64,y,z],8,8,C.frame);for(const x of[-112,-64])beam([x,-16,z],[x,16,z],8,8,C.frame);for(const y of[-8,8])beam([-120,y,Math.sign(z)*20],[-112,y,z],8,8,C.frame);for(const y of[-16,16])beam([-64,y,z],[-52,y,Math.sign(z)*16],8,8,C.frame);beam([-52,-40,Math.sign(z)*16],[-52,40,Math.sign(z)*16],8,8,C.frame)}
+for(const x of[-108,-64])for(const y of[-16,16])beam([x,y,-28],[x,y,28],8,8,C.frame);
+label([-89,20,-28],'左右侧框＋横向连接',[-80,-110]);label([-52,40,-16],'根轴双侧支承',[80,-125]);
+// 导轨端座固定在前后横向连接；具体零件及孔位待设计。
+for(const x of[-108,-60])for(const z of[-16,16]){beam([x,-16,z],[x,0,z],7,7,C.frame);box([x,0,z],[8,8,8],C.frame)}
+for(const z of[-16,16]){tube([-112,0,z],[-56,0,z],2,C.rail);for(const x of[cx-8,cx+8]){tube([x-3,0,z],[x+3,0,z],5,C.slide,2.1)}beam([cx-8,0,z/2],[cx+8,0,z/2],4,6,C.slide)}
+for(const x of[cx-8,cx+8])beam([x,0,-16],[x,0,16],5,6,C.slide);
+tube([cx,0,-10],[cx,0,10],2,C.slide);box([cx-3,0,0],[6,7,7],C.slide);
+tube([context?-190:-124,0,0],[cx-6,0,0],1.8,C.slide);
+label([cx,0,16],'滑座：每轨前后两处支承',[15,125]);label([-96,0,-16],'双导轨（随头部回转）',[-165,70]);
+for(const sy of[-1,1]){const piv=[-52,sy*32,0],joint=[jx,sy*jy,sy*4],tip=[-52+40*Math.cos(beta),sy*(32+40*Math.sin(beta)),0];tube([-52,sy*32,-22],[-52,sy*32,22],2.2,C.dark);beam([jx,sy*jy,0],tip,8,8,C.jaw);beam([cx,0,sy*4],joint,8,8,C.link);tube(add(tip,[0,0,-3]),add(tip,[0,0,3]),7,C.dark);tube(add(joint,[0,0,-5]),add(joint,[0,0,5]),2,C.dark)}
+label([-28,32+15*Math.sin(beta),0],'粗梁夹指／轮胎',[135,-45]);
+if(document.getElementById('cube').checked)box([0,0,0],[56,56,56],'#e3e6e9');
+return {cx,beta,frac};}
+function basis(){return {r:[Math.cos(yaw),0,-Math.sin(yaw)],u:[-Math.sin(yaw)*Math.sin(pitch),Math.cos(pitch),-Math.cos(yaw)*Math.sin(pitch)],d:[Math.sin(yaw)*Math.cos(pitch),Math.sin(pitch),Math.cos(yaw)*Math.cos(pitch)]}}
+function draw(){const st=build(),b=basis(),context=document.getElementById('context').checked,center=context?[-78,-2,0]:[-61,0,0],scale=(context?4.35:5.6)*zoom;
+const project=p=>{const a=sub(p,center);return [750+scale*dot(a,b.r),438-scale*dot(a,b.u),dot(a,b.d)]};ctx.clearRect(0,0,1500,880);ctx.fillStyle='#ffffff';ctx.fillRect(0,0,1500,880);
+const fs=faces.map(f=>({...f,q:f.v.map(project)}));fs.sort((a,b)=>a.q.reduce((s,p)=>s+p[2],0)/a.q.length-b.q.reduce((s,p)=>s+p[2],0)/b.q.length);
+for(const f of fs){ctx.beginPath();f.q.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath();ctx.fillStyle=f.color;ctx.fill();ctx.strokeStyle='#ffffff30';ctx.lineWidth=.6;ctx.stroke()}
+ctx.font='22px system-ui,"Noto Sans CJK SC",sans-serif';ctx.fillStyle='#243b52';ctx.fillText('整体结构概念 · 马达在后，轮胎朝向魔方',35,45);ctx.font='19px system-ui,"Noto Sans CJK SC",sans-serif';ctx.fillStyle='#596c7f';ctx.fillText('图中形体表示功能布局，尚未确定全部零件与连接孔位',35,76);
+for(const m of marks){const p=project(m.p),x=p[0]+m.offset[0],y=p[1]+m.offset[1];ctx.strokeStyle='#82909d';ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(p[0],p[1]);ctx.lineTo(x,y);ctx.stroke();ctx.fillStyle='#344a60';ctx.beginPath();ctx.arc(p[0],p[1],3,0,7);ctx.fill();const width=ctx.measureText(m.text).width;ctx.fillStyle='#fffffff0';ctx.fillRect(x-width/2-7,y-22,width+14,32);ctx.fillStyle='#243b52';ctx.textAlign='center';ctx.fillText(m.text,x,y+1);ctx.textAlign='left'}
+for(const [axis,text,color]of [[[1,0,0],'前','#ac414d'],[[0,1,0],'上','#398067'],[[0,0,1],'左右','#3f6f9b']]){const dx=dot(axis,b.r)*65,dy=-dot(axis,b.u)*65;ctx.strokeStyle=color;ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(112,755);ctx.lineTo(112+dx,755+dy);ctx.stroke();ctx.fillStyle=color;ctx.fillText(text,116+dx,755+dy)}
+ctx.fillStyle='#536275';ctx.font='18px system-ui,"Noto Sans CJK SC",sans-serif';ctx.fillText('输入与夹指：粗梁圆孔转动关节；禁用全圆孔薄梁',320,793);ctx.fillText('夹指角 '+(st.beta*180/Math.PI).toFixed(1)+'°   ·   开合 '+Math.round(st.frac*100)+'%   ·   滑座运动为理想几何演示',320,825);
+window.conceptState={...st,faces:faces.length,view:{yaw,pitch,zoom},schematic:true};}
+function preset(v){[yaw,pitch]=({iso:[.55,.42],back:[-.55,.42],side:[0,0],front:[Math.PI/2,.10],top:[.05,Math.PI/2-.02]})[v];zoom=1;document.querySelectorAll('.tools button').forEach(b=>b.classList.toggle('active',b.id==='v-'+v));draw()}
+let drag=null;canvas.addEventListener('pointerdown',e=>{drag=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId)});canvas.addEventListener('pointermove',e=>{if(!drag)return;yaw-=(e.clientX-drag[0])*.006;pitch=Math.max(-1.5,Math.min(1.5,pitch+(e.clientY-drag[1])*.006));drag=[e.clientX,e.clientY];draw()});canvas.addEventListener('pointerup',()=>drag=null);canvas.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.5,Math.min(1.8,zoom*Math.exp(-e.deltaY*.001)));draw()},{passive:false});draw();
+</script></html>

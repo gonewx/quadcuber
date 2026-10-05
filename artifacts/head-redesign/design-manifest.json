@@ -1,0 +1,19 @@
+{
+  "说明": "正式模型未替换；以下为设计候选源文件及证据的指纹。",
+  "源码": {
+    "tools/lego/v3/model.py": "693b654a75e89fc85ae9f13ed71a40e437e8a00bdcf71a68f456fd5b4737ee13",
+    "artifacts/rear-frame-experiments/coarse_rear.py": "bf2ed62b86a2901c50b1dcd4d8b0d363d2132c4377ae245f1d356ed36c7d8044",
+    "artifacts/rear-frame-experiments/coarse_inner.py": "12c41b06d04c32f841bd11c6ac4394ee36e3643685fd12f30863a23a23e740df",
+    "artifacts/rear-frame-experiments/vertical_forward.py": "f97f282e39b46a4206535dba622425f9b7d39077d7f3c6034c8e0e781bcb5489",
+    "artifacts/head-redesign/watt_candidate.py": "683717fc2328099b8c42ff831013fd0220a5c6a2f26ff991fc9b49bc68cd35c9"
+  },
+  "证据": {
+    "bom-delta.json": "b5567dde182d24866208a15341618fb71ee2761615ab13dc23eea1d3567d5050",
+    "interfaces.json": "5e8ae8a212e288fe89de80f72cae319d3589feaca7013b0ba66f2336325d6a53",
+    "linear-check.json": "51eb08848aeef865934a42cfb22cc4600430f0b14364cee750c9502f767f555b",
+    "local-gaps.json": "6c69f03e06703d8af22ecaaca575513018c719619a0a2297f6767bc02de1a0f7",
+    "watt-check.json": "4e4f39592a71a1b49da111f0e7fa080946b5dda51dfa5458448b9ada5b147354",
+    "watt-mechanics.json": "45e2b5cb1f7c40c16116d658dcc539206770fdba8b60fd1ac0e3e79cf8965ff4",
+    "watt-rotation.json": "b546a2121a59aae76e42fb5540caf5ddfd041f0347c6844c5e28a3fcbcb63ab7"
+  }
+}

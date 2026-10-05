@@ -2,6 +2,8 @@
 
 用户用中文交流，代码注释和文档也用中文；代码标识符用英文。
 
+乐高库存以 [docs/lego/inventory.md](docs/lego/inventory.md) 中的用户确认记录为准。现有薄梁带十字端孔，没有32017这类全圆孔薄梁；旧版装配清单不代表用户已有库存。替换连杆必须检查关节是否仍能自由转动。
+
 ## 项目背景
 
 - 前身是 `gonewx/arducuber`：Arduino Mega + Bricktronics Megashield + EV3 马达，结构是 MindCub3r 式的“转盘 + 翻转臂”，一次还原约 1.5~2 分钟，主要时间耗在翻转上。那个项目在别的会话里单独维护，**不要在这里修改它**。
