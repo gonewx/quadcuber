@@ -1,7 +1,7 @@
-> 本项工作统一使用主目录的 `research/self-aligning-jaws` 分支。当前模型为四臂上下 42610/50945 轮胎压头，整机共需 8 组；压头用两端十字孔薄梁，舵机用粗连杆。
-> [图文搭建说明](docs/lego/v3/index.html) · [设计与验证](docs/lego/v3/README.md) · [零件清单](docs/lego/v3/bom.csv)
-> 当前采用双侧轮胎支承、Watt 承重导向、铰接推杆和独立防翻折开限位。[承重结构报告](docs/lego/v3/load_path.md)说明公共接头支承与载荷路径。正常行程 CAD 检查通过；实物限位须手动验收并重新标定舵机开端。实物刚度、保持力及小间隙部位仍待验收。本轮两处间隙扩大到约2.0mm、2.577mm，其他小间隙仍待处理与实测。推杆已从120mm缩至104mm，前悬伸从63.823mm减至47.823mm，见[推杆支承修订](docs/lego/v3/rod_support_update.md)。详见[搭建说明](docs/lego/v3/index.html)、[间隙修订](docs/lego/v3/motion_clearance_update.md)和[机械审查](docs/lego/v3/mechanical_audit.md)。
-> 代码与说明书分别以 `tools/lego/v3/`、`docs/lego/v3/` 为唯一入口；旧方案保存在 Git 历史中。
+> 机械结构已基本定型为 **v4 四臂整机**（反向连杆拉紧、转盘内 39793 导向、竖墙与舵机侧加固，已合入主干 `main`）。
+> [图文搭建说明](docs/lego/v4/index.html) · [设计与改装说明](docs/lego/v4/README.md) · [零件清单](docs/lego/v4/bom.csv) · [库存记录](docs/lego/inventory.md)
+> 当前机械模型与说明书以 `tools/lego/v4/`、`docs/lego/v4/` 为准；历史单臂原型与中间探索版本已归档至 [`docs/lego/archive/`](docs/lego/archive/)。
+
 
 # quadcuber
 
@@ -11,7 +11,7 @@
 
 * 模拟器：在 54 个贴纸的魔方模型上按物理动作逐步重放，检查每一步是否满足机械约束，以及最后魔方是否还原。
 
-* 单臂测试程序（`firmware/pico/`，MicroPython）：测机械手转 90° 的耗时、到位精度和夹持可靠性，结果汇总后替换规划器的耗时估算值。接线和测试步骤见 [docs/single\_arm.md](docs/single_arm.md)，乐高机械手的结构思路和尺寸要求见 [docs/arm\_concept.md](docs/arm_concept.md)，**搭建说明书**见 [docs/lego/index.html](docs/lego/index.html)（由 `tools/lego/` 生成）。
+* 单臂测试程序（`firmware/pico/`，MicroPython）：测机械手转 90° 的耗时、到位精度和夹持可靠性，结果汇总后替换规划器的耗时估算值。接线和测试步骤见 [docs/single\_arm.md](docs/single_arm.md)，乐高机械手的结构思路和尺寸要求见 [docs/arm\_concept.md](docs/arm_concept.md)，**搭建说明书**见 [docs/lego/v4/index.html](docs/lego/v4/index.html)（四臂整机定型版，总入口 [docs/lego/index.html](docs/lego/index.html)）。
 
 规划器纯 Python 实现，不依赖第三方库，可以在 PC 或树莓派 Zero W 上运行。
 
@@ -107,7 +107,7 @@ python -m unittest -v
 | `docs/arm_concept.md` | 乐高机械手的概念设计：叉子 + 滑块结构、关键尺寸、单臂测试的魔方固定方法 |
 | `docs/wiring/` | 单臂原型的图解接线指南（`build.py` 生成 `index.html`，内嵌 SVG） |
 | `docs/perfboard.md` | 可拔插洞洞板设计：逐孔安装、镜像焊接图、模块排针座及上电验收 |
-| `docs/lego/` | 单臂原型的乐高搭建说明书：大马达版在根目录，中马达版在 `medium/`（网页 + 步骤图 + LDraw 模型文件） |
+| `docs/lego/` | 乐高搭建说明书与模型文档：当前四臂整机定型版见 `v4/`（[说明书](docs/lego/v4/index.html)），历史单臂原型与探索方案归档于 `archive/` |
 | `tools/lego/` | 搭建图工具：模型定义、干涉/连接检查、渲染（见其中的 README） |
 | `tests/` | 单元测试 |
 
