@@ -212,8 +212,6 @@ class Arm:
         previous = self.servo.us
         if previous is None and us != start:
             raise ValueError("首次脉冲必须为声明的 start_us；初次定位必须脱开连杆")
-        if previous is not None and abs(us - previous) > 20:
-            raise ValueError("手动标定每次最多改变 20 微秒，停下观察后再继续")
         self.servo.pulse(us)
 
     def grip(self, close):
@@ -513,7 +511,7 @@ HELP = """命令:
   open / close          已确认端点后单次开 / 合；时序未确认时只供观察测时
   grip [n]              开合 n 次 (须先用单次开合确认实测时序)
   servo_cal <min> <max> <start> detached|aligned  手动标定授权；入口不发脉冲
-  servo <us> | off      仅标定模式，首次须等于 start，随后每步≤20us / 停止并撤销授权
+  servo <us> | off      仅标定模式，首次须等于 start，随后可指定区间内任意脉宽 / 停止并撤销授权
   servo_cal end         停止并退出标定；配置只能经实测后人工写回
   set <参数> <值>       在线修改参数 (show 查看全部; hold = 到位后保持毫秒数)
   trace                 输出上一次动作的轨迹 CSV

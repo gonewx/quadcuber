@@ -121,19 +121,36 @@ class ServoSafetyTest(unittest.TestCase):
         self.run_cmd("open")
         self.assertEqual(self.arm.servo.us, 1400)
 
-    def test_calibration_entry_no_pulse_then_declared_start_and_small_steps(self):
+    def test_calibration_entry_no_pulse_then_declared_start(self):
         self.run_cmd("servo_cal 1450 1550 1500 detached")
         self.assertIsNone(self.arm.servo.us)
         self.assertNotIn(self.at.config.SERVO, world.servo_ns)
         with self.assertRaises(ValueError):
             self.run_cmd("servo 1490")
+        self.assertIsNone(self.arm.servo.us)
+        self.assertNotIn(self.at.config.SERVO, world.servo_ns)
         self.run_cmd("servo 1500")
-        self.run_cmd("servo 1520")
-        self.assertEqual(self.arm.servo.us, 1520)
-        for line in ("servo 1550", "servo 1449", "servo 2501"):
+        self.assertEqual(self.arm.servo.us, 1500)
+
+    def test_calibration_allows_large_in_bounds_jumps_in_both_directions(self):
+        for condition in ("detached", "aligned"):
+            with self.subTest(condition=condition):
+                self.run_cmd("servo_cal 1450 1550 1500 " + condition)
+                self.run_cmd("servo 1500")
+                for us in (1550, 1450, 1471, 1550):
+                    self.run_cmd("servo %d" % us)
+                    self.assertEqual(self.arm.servo.us, us)
+                    self.assertEqual(world.servo_ns[self.at.config.SERVO], us * 1000)
+                self.assertEqual(world.duty(), 0)
+
+    def test_calibration_still_rejects_out_of_bounds_pulses(self):
+        self.run_cmd("servo_cal 1450 1550 1500 detached")
+        self.run_cmd("servo 1500")
+        for line in ("servo 1449", "servo 1551", "servo 499", "servo 2501"):
             with self.subTest(line=line), self.assertRaises(ValueError):
                 self.run_cmd(line)
-            self.assertEqual(self.arm.servo.us, 1520)
+            self.assertEqual(self.arm.servo.us, 1500)
+            self.assertEqual(world.servo_ns[self.at.config.SERVO], 1500000)
 
     def test_calibration_requires_bounded_explicit_physical_confirmation(self):
         for line in ("servo_cal", "servo_cal 1450 1550 1500", "servo_cal 1450 1550 1500 yes",
