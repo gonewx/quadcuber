@@ -16,8 +16,8 @@
 约束 (详见 Machine.check):
 1. 支撑: 任何时刻 L、R 都夹紧, 或 F、B 都夹紧, 否则魔方会掉落。
    同时有松开和夹紧的步骤, 按 "先松开、后夹紧" 的中间状态检查。
-   注意: 这里假设夹条水平时这一对也能托住魔方。按现在的 U 形叉结构, 水平叉子
-   只能靠摩擦力, 几乎没有压紧力, 这个假设**尚未验证** (见 docs/arm_concept.md 第 7 节)。
+   注意: 这里假设夹条水平时这一对也能托住魔方。当前 v4 轮胎压头的实际保持力
+   及水平姿态支撑仍须实物验证，防邻臂碰撞约束不能证明不会掉落。
 2. 拧面: 转动机械手 P 所夹的面时, 与 P 垂直且夹紧的机械手的夹条必须竖直
    (水平夹条会压住被转动的那一层); 并且至少有一个这样的机械手夹紧,
    用来固定中间层, 否则中间层会被带着一起转。
@@ -25,9 +25,9 @@
 3. 整体翻转: 一对相对的机械手夹紧并同向旋转, 使整个魔方绕该轴转动;
    此时另一对必须松开。
 4. 松开的机械手可以自由旋转 (用于把夹条恢复到竖直), 可与其他动作同时进行。
-5. 若设置了角度限制 (夹爪上的舵机线缆不能无限缠绕), 每个机械手的累计角度
-   必须在 [-limit, +limit] 个 90 度之内。
-6. 若开启 no_adjacent_horizontal (v3 四臂结构, 见 tools/lego/v3/four_arm.py):
+5. 若设置了角度限制，每个机械手的累计角度必须在 [-limit, +limit] 个 90 度之内。
+   v4 舵机固定在平台，不因旧随动舵机缠线假设添加此限制，默认不限。
+6. v4 配置强制开启 no_adjacent_horizontal (见 tools/lego/v4/four_arm.py):
    相邻两个机械手的夹指同时处于水平附近 (约 80° 以上) 时会在魔方棱边外相撞。
    因此正在转动的机械手 (拧面、空转、整体翻转), 它两侧相邻的机械手必须竖直且不在同一步里转动。
    转 180° 也会经过水平, 同样适用。初始状态全部竖直, 按此规则永远不会出现相邻两个都水平。
@@ -193,7 +193,18 @@ class InvalidStep(Exception):
 class Machine:
     timing: Timing = field(default_factory=Timing)
     angle_limit: Optional[int] = None  # None 表示机械手可以无限旋转
-    no_adjacent_horizontal: bool = False  # 约束 6: 相邻机械手不能同时经过水平 (v3 结构需要)
+    no_adjacent_horizontal: Optional[bool] = None
+    profile: str = "v4"  # generic 显式保留旧抽象模型，不能用于当前 v4 实机
+
+    def __post_init__(self) -> None:
+        if self.profile not in ("v4", "generic"):
+            raise ValueError(f"未知机器配置: {self.profile}")
+        if self.no_adjacent_horizontal is not None and type(self.no_adjacent_horizontal) is not bool:
+            raise ValueError("no_adjacent_horizontal 必须为布尔值或 None")
+        if self.profile == "v4" and self.no_adjacent_horizontal is False:
+            raise ValueError("v4 必须启用相邻机械手防碰撞；旧抽象模型请显式选择 generic")
+        if self.no_adjacent_horizontal is None:
+            self.no_adjacent_horizontal = self.profile == "v4"
 
     # -- 基础工具 -----------------------------------------------------------
 

@@ -17,6 +17,7 @@ def simulated_log():
     """用模拟环境跑一遍测试程序, 返回串口输出。"""
     world.reset(motor=SimMotor())
     (at,) = pico_sim.load_firmware("arm_test")
+    pico_sim.set_synthetic_servo_calibration(at.config)
     arm = at.Arm()
     out = io.StringIO()
     with contextlib.redirect_stdout(out):

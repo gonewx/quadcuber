@@ -9,7 +9,7 @@
 把串口日志保存下来, 在 PC 上用 `python -m quadcuber armlog arm.log` 汇总成 timing.json。
 
 这个程序为了方便测量, 控制循环直接跑在主核上 (动作期间阻塞)。整机固件会把 PID 放到第二个核心。
-注意: 本程序尚未在实物上运行过, 首次上电请按文档里的步骤, 从 check 命令开始。
+注意: 只验证过大马达空载闭环；v4 装机待测。首次上电按文档显式进入空载测试/舵机标定模式。
 """
 
 import gc
@@ -45,6 +45,8 @@ class Arm:
         self.motor = Motor(config.MOTOR_IN1, config.MOTOR_IN2, config.MOTOR_INVERT, config.PWM_FREQ)
         self.enc = Encoder(config.ENC_A, config.ENC_B, config.ENC_SM, config.ENC_INVERT, pull_up=config.ENC_PULLUP)
         self.servo = Servo(config.SERVO)
+        self._motor_test = False
+        self._servo_cal = None
         self.gains = Gains(**config.GAINS)
         self.nominal = 0.0  # 名义角度 (90 的整数倍), 相对移动以它为基准, 误差不会累积
         self.hold_ms = 50  # 到位后继续保持控制的时间, 之后刹车
@@ -66,6 +68,7 @@ class Arm:
     # ---- 闭环旋转 ----------------------------------------------------------
 
     def move_to(self, target, tag="free", q=None, rest_ms=150):
+        self.require_motor(tag)
         g = self.gains
         gc.collect()
         start = self.angle()
@@ -97,7 +100,7 @@ class Arm:
                     self.trace_u[tn] = u
                     tn += 1
                 if mc.state in FAILED:
-                    self.motor.coast()
+                    self.off()
                     break
                 if mc.state == DONE:
                     if done_at is None:
@@ -112,7 +115,7 @@ class Arm:
                     pass
         finally:
             if mc.state != DONE and mc.state not in FAILED:  # 被 Ctrl+C 打断
-                self.motor.coast()
+                self.off()
         self.trace_n = tn
         err = target - self.angle()
         time.sleep_ms(rest_ms)
@@ -147,11 +150,78 @@ class Arm:
             self.nominal = target
         return r
 
-    # ---- 舵机 --------------------------------------------------------------
+    # ---- 显式校准 / 空载测试门禁 --------------------------------------------
+
+    def off(self):
+        self.motor.coast()
+        self.servo.off()
+        self._motor_test = False
+        self._servo_cal = None
+
+    def require_calibration(self, require_timing=True):
+        """配置失败时拒绝运动；不把缺失、字符串或 bool 当作测得的数字。"""
+        if getattr(config, "SERVO_CALIBRATED", False) is not True:
+            raise ValueError("v4 舵机尚未确认实测标定，见 docs/single_arm.md")
+        if (getattr(config, "MACHINE_PROFILE", None) != "v4"
+                or getattr(config, "ARM_ID", None) not in ("R", "L", "F", "B")
+                or getattr(config, "SERVO_CALIBRATION_PROFILE", None) != config.MACHINE_PROFILE
+                or getattr(config, "SERVO_CALIBRATION_ARM", None) != config.ARM_ID):
+            raise ValueError("舵机标定的机械版本或臂身份不匹配")
+        names = ("SERVO_MIN_US", "SERVO_MAX_US", "SERVO_OPEN_US", "SERVO_CLOSE_US")
+        values = [getattr(config, name, None) for name in names]
+        if any(type(value) is not int for value in values):
+            raise ValueError("标定边界和开合端点必须完整且为整数")
+        lo, hi, opened, closed = values
+        if not (500 <= lo < hi <= 2500 and lo <= opened <= hi and lo <= closed <= hi and opened != closed):
+            raise ValueError("标定端点必须互异且在实测安全边界内 (驱动包络 500..2500)")
+        ms = getattr(config, "SERVO_MOVE_MS", None)
+        if type(ms) is not int or not 1 <= ms <= 5000:
+            raise ValueError("SERVO_MOVE_MS 必须为 1..5000 毫秒整数；首次单次开合先设保守等待")
+        if require_timing and getattr(config, "SERVO_TIMING_CONFIRMED", False) is not True:
+            raise ValueError("先单次 open/close 录像测时并确认 SERVO_TIMING_CONFIRMED，再执行组合或马达动作")
+
+    def require_motor(self, tag="free"):
+        if self._servo_cal is not None:
+            raise ValueError("舵机标定模式中禁止马达运动")
+        if self._motor_test:
+            if tag not in ("free", "goto"):
+                raise ValueError("motor_test 仅允许空载运动，不能执行承载动作")
+        else:
+            self.require_calibration()
+
+    def require_grip(self, require_timing=False):
+        if self._servo_cal is not None or self._motor_test:
+            raise ValueError("先 off 退出手动测试模式，再使用已标定开合命令")
+        self.require_calibration(require_timing)
+
+    def begin_servo_calibration(self, lo, hi, start, condition):
+        if (condition not in ("detached", "aligned")
+                or any(type(value) is not int for value in (lo, hi, start))
+                or not 500 <= lo < hi <= 2500 or not lo <= start <= hi):
+            raise ValueError("servo_cal <min_us> <max_us> <start_us> detached|aligned；先核实机械自由行程")
+        self.off()
+        self._servo_cal = (lo, hi, start)
+        # 这里只记录操作者声明，不发脉冲；首个 pulse 仍可能大幅转动。
+
+    def manual_servo(self, us):
+        if self._servo_cal is None:
+            raise ValueError("先显式 servo_cal 声明安全区间和首脉冲条件")
+        lo, hi, start = self._servo_cal
+        if type(us) is not int or not lo <= us <= hi:
+            raise ValueError("脉宽超出本次声明的安全区间")
+        previous = self.servo.us
+        if previous is None and us != start:
+            raise ValueError("首次脉冲必须为声明的 start_us；初次定位必须脱开连杆")
+        if previous is not None and abs(us - previous) > 20:
+            raise ValueError("手动标定每次最多改变 20 微秒，停下观察后再继续")
+        self.servo.pulse(us)
 
     def grip(self, close):
+        self.require_grip()
         self.servo.pulse(config.SERVO_CLOSE_US if close else config.SERVO_OPEN_US)
         time.sleep_ms(config.SERVO_MOVE_MS)
+        if getattr(config, "SERVO_TIMING_CONFIRMED", False) is not True:
+            print("已发脉冲并等待配置时长，不代表实际到位；目视停稳并录像确认后再发下一条")
 
 
 # ---- 命令 ------------------------------------------------------------------
@@ -174,6 +244,7 @@ def cmd_zero(arm, args):
 
 def cmd_check(arm, args):
     """正占空比短暂驱动, 检查马达和编码器的方向是否一致。"""
+    arm.require_motor()
     duty = float(args[0]) if args else 0.3
     c0 = arm.enc.count()
     arm.motor.drive(duty)
@@ -192,6 +263,7 @@ def cmd_check(arm, args):
 
 
 def cmd_duty(arm, args):
+    arm.require_motor()
     duty = float(args[0])
     ms = int(args[1]) if len(args) > 1 else 300
     a0 = arm.angle()
@@ -214,9 +286,10 @@ def cmd_cal(arm, args):
 
 def cmd_speed(arm, args):
     """开环全速驱动, 测空载速度和时间常数。"""
+    arm.require_motor()
     duty = float(args[0]) if args else 1.0
     ms = int(args[1]) if len(args) > 1 else 400
-    print("机械手会连续转约 %d 度, 确认线缆不会缠住。3 秒后开始..." % int(ms * arm.gains.v_full / 1000 * duty))
+    print("机械手会连续转约 %d 度, 确认机构可自由回转且无人触碰。3 秒后开始..." % int(ms * arm.gains.v_full / 1000 * duty))
     time.sleep_ms(3000)
     n = min(ms, TRACE_LEN)
     ts, ps = arm.trace_t, arm.trace_pos
@@ -252,6 +325,7 @@ def cmd_speed(arm, args):
 
 def cmd_friction(arm, args):
     """占空比从 0 慢慢加大, 找到开始转动的值。"""
+    arm.require_motor()
     found = []
     for sign in (1, -1):
         c0 = arm.enc.count()
@@ -310,21 +384,22 @@ def cmd_bench(arm, args):
 
 def cmd_cycle(arm, args):
     """模拟实际工作: 夹紧 -> 转 q (拧面, load) -> 松开 -> 转回 (空转, free), 重复 n 次。"""
+    arm.require_grip(require_timing=True)
     n = int(args[0]) if args else 10
     q = int(args[1]) if len(args) > 1 else 1
     for i in range(n):
         t0 = ticks_us()
         arm.grip(True)
         if not arm.rot(q, "load")["ok"]:
-            break
+            return
         arm.grip(False)
         if not arm.rot(-q, "free")["ok"]:
-            break
+            return
         result("cycle", dict(q=q, i=i, t_total=_r(ticks_diff(ticks_us(), t0) / 1e6)))
-    arm.grip(False)
 
 
 def cmd_grip(arm, args):
+    arm.require_grip(require_timing=True)
     n = int(args[0]) if args else 5
     for _ in range(n):
         arm.grip(True)
@@ -344,11 +419,31 @@ def cmd_close(arm, args):
 
 
 def cmd_servo(arm, args):
-    if args and args[0] == "off":
-        arm.servo.off()
-    else:
-        arm.servo.pulse(int(args[0]))
+    if args == ["off"]:
+        arm.off()
+    elif len(args) == 1:
+        arm.manual_servo(int(args[0]))
         print("舵机脉宽 %d 微秒" % arm.servo.us)
+    else:
+        raise ValueError("servo <us> | off")
+
+
+def cmd_servo_cal(arm, args):
+    if args == ["end"]:
+        arm.off()
+        return
+    if len(args) != 4:
+        raise ValueError("servo_cal <min_us> <max_us> <start_us> detached|aligned")
+    arm.begin_servo_calibration(int(args[0]), int(args[1]), int(args[2]), args[3])
+    print("已进入手动标定，尚未发脉冲。首次可能大幅跳转；初次必须脱杆，aligned 须核实原轴位和自由行程。")
+
+
+def cmd_motor_test(arm, args):
+    if args != ["unloaded"]:
+        raise ValueError("motor_test unloaded：须移走魔方并确认机构全程自由")
+    arm.off()
+    arm._motor_test = True
+    print("已进入空载马达测试，尚未运动。只限无魔方且机构行程已检查；不解锁夹爪。")
 
 
 def cmd_set(arm, args):
@@ -374,9 +469,8 @@ def cmd_trace(arm, args):
 
 
 def cmd_off(arm, args):
-    arm.motor.coast()
-    arm.servo.off()
-    print("马达、舵机均已断开")
+    arm.off()
+    print("马达输出和舵机 PWM 已关闭，测试授权已清除；5V 并未切断")
 
 
 COMMANDS = {
@@ -396,6 +490,8 @@ COMMANDS = {
     "open": cmd_open,
     "close": cmd_close,
     "servo": cmd_servo,
+    "servo_cal": cmd_servo_cal,
+    "motor_test": cmd_motor_test,
     "set": cmd_set,
     "show": cmd_show,
     "trace": cmd_trace,
@@ -403,7 +499,8 @@ COMMANDS = {
 }
 
 HELP = """命令:
-  check [占空比]        短暂正转, 检查马达/编码器方向 (首次上电先做这个)
+  motor_test unloaded   显式空载测试授权；无魔方、先核实机构自由行程；入口不运动
+  check [占空比]        短暂正转, 检查马达/编码器方向 (须已标定或进入空载模式)
   enc / zero            读编码器 / 当前位置清零
   cal                   手转一圈, 测每圈计数
   duty <u> [ms]         开环驱动 (u: -1~1, 默认 300ms) 后刹车
@@ -413,17 +510,19 @@ HELP = """命令:
   goto <度>             转到绝对角度
   bench <q> [n] [tag]   来回转 n 次并统计; tag: free (空转) / load (夹着魔方拧一层)
   cycle [n] [q]         夹紧 -> 拧 -> 松开 -> 转回, 重复 n 次
-  open / close          夹爪开 / 合
-  grip [n]              开合 n 次 (观察舵机动作, 配合录像定 SERVO_MOVE_MS)
-  servo <us> | off      舵机输出指定脉宽 (找开/合位置) / 停止脉冲
+  open / close          已确认端点后单次开 / 合；时序未确认时只供观察测时
+  grip [n]              开合 n 次 (须先用单次开合确认实测时序)
+  servo_cal <min> <max> <start> detached|aligned  手动标定授权；入口不发脉冲
+  servo <us> | off      仅标定模式，首次须等于 start，随后每步≤20us / 停止并撤销授权
+  servo_cal end         停止并退出标定；配置只能经实测后人工写回
   set <参数> <值>       在线修改参数 (show 查看全部; hold = 到位后保持毫秒数)
   trace                 输出上一次动作的轨迹 CSV
-  off                   马达、舵机全部断开
+  off                   停马达/PWM并清除测试授权；不切断舵机5V
   quit                  退出"""
 
 def main():
     arm = Arm()
-    print("quadcuber 单臂测试。输入 help 查看命令。首次上电请先运行 check。")
+    print("quadcuber v4 单臂测试。启动不定位舵机；未标定时动力命令默认锁住。输入 help，按文档显式进入空载/标定模式。")
     while True:
         try:
             line = input("arm> ").strip()
@@ -442,13 +541,12 @@ def main():
         try:
             fn(arm, args)
         except KeyboardInterrupt:
-            arm.motor.coast()
-            print("已中断, 马达断电")
+            arm.off()
+            print("已中断，马达输出和舵机 PWM 关闭，测试授权已清除")
         except Exception as e:  # noqa: BLE001 - 命令行里任何错误都不应让程序退出
-            arm.motor.coast()
+            arm.off()
             print("错误:", e)
-    arm.motor.coast()
-    arm.servo.off()
+    arm.off()
     print("退出")
 
 

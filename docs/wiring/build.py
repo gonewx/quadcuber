@@ -764,14 +764,23 @@ def page():
                '<a href="direct-breadboard.html#complete-wiring">完整接线说明</a>连接 P04 与舵机；分项测试时无需反复插拔。</p><ol class="flow">'
                "<li>先<b>只插 USB</b>。用 Thonny 或 mpremote 进入 REPL, 运行 <code>import arm_test; arm_test.main()</code>, "
                "出现 <code>arm&gt;</code> 后输入 <code>off</code>，再用 <code>help</code> 查看命令列表。</li>"
-               "<li>接通 <b>9V</b>。马达此时不会转: 程序没发指令时 DRV8833 输入为低, 马达处于断开状态。"
-               "如果马达自己转或者发烫, 立刻断电, 检查 AIN1/AIN2 的接线。</li>"
+               "<li>接通 <b>9V</b>。初始化不主动发马达或舵机动作命令，但不能保证硬件上电不抖动。"
+               "首次舵机定位先脱开连杆；如果马达或舵机自己转、发烫，立刻断开动力电源（含舵机 5V）并检查接线。</li>"
                "<li>输入 <code>enc</code>, 用手把马达输出轴转一圈, 再输入 <code>enc</code>。计数应变化约 720 "
                "(方向取决于转向)。没有变化就检查 5V、分压电阻、黄/蓝线通断和 GP4/GP5。</li>"
-               "<li>输入 <code>check</code>, 马达应短暂正转并显示 <b>方向正确</b>。方向相反就按提示改 "
-               "<span class=\"mono\">config.py</span>。方向确认之前不要运行 <code>rot</code>。</li>"
+               "<li>确认无魔方、机械头和联动机构全程自由、供电接线已核验后，先输入 <code>motor_test unloaded</code>，"
+               "该命令仅授权空载测试，不会转动。再输入 <code>check</code>，马达应短暂正转并显示 <b>方向正确</b>。"
+               "方向相反就按提示改 <span class=\"mono\">config.py</span>，重新上传并 Ctrl+D 软重启，再核查并重开空载模式。"
+               "<code>off</code>、异常、Ctrl+C、退出或重启都会撤销模式；它不允许 load/cube 等带载测试或舵机开合。方向确认之前不要运行 <code>rot</code>。</li>"
                "<li>马达方向和齿轮比确认后，按 <span class=\"mono\">docs/single_arm.md</span> "
-               "第 5 节标定舵机，再做旋转及联合测试。首次定位必须脱开曲柄与连杆，空载定位后断电连接，再小步标定；标定前不运行旧的开合预设。</li></ol></section>")
+               "第 5 节标定舵机，再做旋转及联合测试。首次定位必须脱开曲柄与连杆，使用 <code>servo_cal ... detached</code> "
+               "声明会话后才发基准脉冲；断电连接并核实轴位后使用 aligned 会话，每步不超过 20µs。"
+               "进入舵机会话会停止马达并撤销空载模式。端点和安全工作区间默认未设置；实测并填写匹配的 v4/R 身份、开启端点标定标志后，"
+               "还需分开确认时序。默认 <code>SERVO_MOVE_MS=None</code>、<code>SERVO_TIMING_CONFIRMED=False</code>；"
+               "自行选择保守的临时等待时长（1～5000ms 整数，不能沿用旧 120ms），上传并 Ctrl+D 重载后，"
+               "只单次 open 或 close，观察完全停稳再发下一条，录像测完整开合时间。此时 grip、cycle 和普通旋转仍被锁住，显式空载模式是例外。"
+               "取开／合较慢实测值加余量回填等待时长、设置时序确认标志，再上传重载后才做连续和联合动作；机构或供电变化后重新确认。"
+               "详见 <a href=\"../single_arm.md#servo-calibration\">完整标定流程</a>。</li></ol></section>")
     out.append("</div>")
     out.append(f"<script>{JS}</script></body></html>")
     return "\n".join(out) + "\n"

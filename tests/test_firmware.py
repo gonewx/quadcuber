@@ -65,6 +65,11 @@ class ArmTestCommands(unittest.TestCase):
         world.reset(motor=SimMotor())
         (self.at,) = pico_sim.load_firmware("arm_test")
         self.arm = self.at.Arm()
+        self.run_cmd("motor_test unloaded")
+
+    def calibrate_fixture(self):
+        pico_sim.set_synthetic_servo_calibration(self.at.config)
+        self.run_cmd("off")
 
     def run_cmd(self, line):
         name, *args = line.split()
@@ -85,6 +90,7 @@ class ArmTestCommands(unittest.TestCase):
         self.assertIn("方向相反", self.run_cmd("check"))
 
     def test_rot_and_bench(self):
+        self.calibrate_fixture()
         out = self.run_cmd("rot 1")
         r = self.results(out, "move")[0]
         self.assertTrue(r["ok"], out)
@@ -98,6 +104,7 @@ class ArmTestCommands(unittest.TestCase):
         self.assertEqual(self.arm.nominal, 90)  # 来回偶数次, 回到起点
 
     def test_cycle(self):
+        self.calibrate_fixture()
         out = self.run_cmd("cycle 3")
         self.assertEqual(len(self.results(out, "cycle")), 3)
         tags = [r["tag"] for r in self.results(out, "move")]
@@ -136,7 +143,9 @@ class ArmTestCommands(unittest.TestCase):
         self.assertIn("机械手", self.run_cmd("enc"))
         self.run_cmd("zero")
         self.assertIn("转了", self.run_cmd("duty 0.3 100"))
+        self.calibrate_fixture()
         self.run_cmd("grip 1")
+        self.run_cmd("servo_cal 1450 1550 1500 detached")
         self.run_cmd("servo 1500")
         self.assertEqual(world.servo_ns[self.at.config.SERVO], 1_500_000)
         self.run_cmd("off")
@@ -158,7 +167,7 @@ class ArmTestCommands(unittest.TestCase):
             builtins.input = orig
 
     def test_main_loop(self):
-        lines = iter(["help", "bogus", "rot 1", "set nope 1", "quit"])
+        lines = iter(["help", "bogus", "motor_test unloaded", "rot 1", "set nope 1", "quit"])
         orig = builtins.input
         builtins.input = lambda prompt="": next(lines)
         out = io.StringIO()

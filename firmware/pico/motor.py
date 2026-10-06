@@ -55,17 +55,25 @@ class Servo:
     """Geekservo: 50Hz, 脉宽约 500~2500 微秒。"""
 
     def __init__(self, pin):
-        self._pwm = PWM(Pin(pin))
-        self._pwm.freq(50)
+        # 启动只把信号脚拉低；首个显式 pulse 才创建 PWM，避免重用旧 PWM 占空比。
+        self._pin = Pin(pin, Pin.OUT)
+        self._pwm = None
         self.us = None
         self.off()
 
     def pulse(self, us):
-        us = max(500, min(2500, int(us)))
+        if type(us) is not int or not 500 <= us <= 2500:
+            raise ValueError("舵机脉宽必须是 500..2500 内的整数，不能用截断代替校验")
+        if self._pwm is None:
+            self._pwm = PWM(self._pin)
+            self._pwm.duty_u16(0)
+            self._pwm.freq(50)
         self._pwm.duty_ns(us * 1000)
         self.us = us
 
     def off(self):
-        """停止输出脉冲, 舵机不再出力。"""
-        self._pwm.duty_u16(0)
+        """停止 PWM，不等于切断 5V，也不保证舵机释放保持力。"""
+        if self._pwm is not None:
+            self._pwm.duty_u16(0)
+        self._pin.value(0)
         self.us = None

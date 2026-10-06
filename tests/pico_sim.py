@@ -18,6 +18,19 @@ import types
 FIRMWARE = os.path.join(os.path.dirname(__file__), "..", "firmware", "pico")
 FULL = 65535
 
+def set_synthetic_servo_calibration(config):
+    """只供模拟器用的合成记录；这些数值不是实物标定建议。"""
+    config.SERVO_CALIBRATED = True
+    config.SERVO_CALIBRATION_PROFILE = "v4"
+    config.SERVO_CALIBRATION_ARM = "R"
+    config.SERVO_MIN_US = 1350
+    config.SERVO_MAX_US = 1650
+    config.SERVO_OPEN_US = 1400
+    config.SERVO_CLOSE_US = 1600
+    config.SERVO_MOVE_MS = 120
+    config.SERVO_TIMING_CONFIRMED = True
+
+
 # ---- PIO 解释器 ----------------------------------------------------------------
 
 

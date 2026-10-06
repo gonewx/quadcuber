@@ -27,7 +27,7 @@ def _machine(args: argparse.Namespace) -> Machine:
     if args.timing:
         with open(args.timing, encoding="utf-8") as f:
             timing = Timing.from_dict(json.load(f))
-    return Machine(timing, args.angle_limit, args.no_adjacent_horizontal)
+    return Machine(timing, args.angle_limit, args.no_adjacent_horizontal, args.profile)
 
 
 def _window(args: argparse.Namespace):
@@ -107,8 +107,10 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(prog="quadcuber", description="四机械手魔方机器人 动作规划器 / 模拟器")
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument("--angle-limit", type=int, default=None, help="机械手累计旋转限制 (90 度的个数), 默认不限")
-    common.add_argument("--no-adjacent-horizontal", action="store_true",
-                        help="相邻机械手不能同时经过水平 (v3 四臂结构需要, 见 tools/lego/v3)")
+    common.add_argument("--profile", choices=("v4", "generic"), default="v4",
+                        help="机器配置，默认 v4 强制防邻臂碰撞；generic 仅用于旧抽象模型")
+    common.add_argument("--no-adjacent-horizontal", action="store_true", default=None,
+                        help="禁止相邻机械手同时经过水平 (v4 强制开启；也可加严 generic)")
     common.add_argument("--timing", help="动作耗时参数 JSON 文件 (字段见 machine.Timing)")
     common.add_argument("--window", type=int, default=4, help="滚动窗口大小 (组数), 默认 4")
     common.add_argument("--full", action="store_true", help="对整个序列求最优 (慢)")
