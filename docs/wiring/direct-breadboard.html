@@ -1,8 +1,8 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pico 单臂 · 面包板直连接线图</title>
-<style>*{box-sizing:border-box}body{margin:0;color:#243545;background:#f1f3f3;font:16px/1.65 system-ui,"Noto Sans CJK SC",sans-serif}main{max-width:1600px;margin:auto;padding:24px}h1{font-size:30px;line-height:1.3;margin:0 0 10px}h2{margin-top:0;font-size:23px}h3{font-size:19px}p{margin:8px 0 15px}.intro,section{background:white;border:1px solid #dbe0e2;border-radius:12px;padding:24px;margin-bottom:20px}.lead{font-size:18px}.status{background:#fff4d6;border-left:5px solid #c7951c;padding:12px 16px}.controls{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.controls button{cursor:pointer;padding:9px 16px;border:1px solid var(--c);border-radius:7px;background:white;color:var(--c);font:inherit}.controls button.active{background:var(--c);color:white}.canvas{overflow:auto;background:#fffdf8;border:1px solid #ddd;border-radius:8px}.canvas svg{display:block;width:100%;min-width:1150px;height:auto}.links{display:flex;gap:20px;flex-wrap:wrap}a{color:#1467a4}table{border-collapse:collapse;width:100%;font-size:15px}th,td{text-align:left;padding:9px 12px;border-bottom:1px solid #e0e5e7}th{background:#edf2f4}.table-scroll{overflow:auto}code,pre{font-family:ui-monospace,monospace}pre{background:#f0f4f5;padding:16px;overflow:auto}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.small{font-size:14px;color:#586976}.servo{background:#faf8f0;border-left:5px solid #b7a477;padding:18px}.servo svg{width:100%;max-width:700px}.state{font-size:13px;letter-spacing:.05em;color:#14766b;font-weight:700}li{margin:7px 0}button:focus-visible,a:focus-visible{outline:3px solid #f2b94d;outline-offset:3px}@media(max-width:760px){main{padding:12px}.intro,section{padding:16px}.grid{grid-template-columns:1fr}h1{font-size:25px}}@media print{.controls{display:none}main{max-width:none;padding:0}.canvas svg{min-width:0}.intro,section{break-inside:avoid;border:0}.canvas{overflow:visible}body{background:white}}</style>
-<main><div class="intro"><div class="state">当前阶段：v4 完整接线与实物标定</div><h1>面包板接信号，动力线直接连接</h1><p class="lead">按图里的元件朝向和孔位接线。DRV8833 放在面包板旁边，使用母头线接模块排针；本图不使用洞洞板、分线端子或 Bricktronics。DC-005 正极分别接驱动 VM、降压 IN+；负极分别接驱动 GND、降压 IN−。马达、编码器和舵机可一次接齐，再按顺序发命令测试。</p><p class="status"><strong>9V 总电源关掉，编码器也会失去 5V。</strong> 手动计数时保持编码器供电，并先将 GP2、GP3 都置低。2026-09-28 更换驱动模块后，大马达空载闭环已通过；v4 机械头、舵机和整机供电仍待验证。</p><div class="links"><a href="direct-breadboard.svg" target="_blank">打开 SVG 大图</a><a href="direct-breadboard.png" target="_blank">打开 PNG 图片</a><a href="README.md">电路总览与验证状态</a><a href="perfboard.html">可选洞洞板方案</a></div></div>
-<section id="complete-wiring"><h2>完整接线</h2><p>断开 USB 和9V，按下图及逐线表一次接齐马达、编码器与舵机。P04 从 DC-005 负极直接接降压 IN−；舵机红／棕线分别通过 S01／S02 直连降压 OUT+／OUT−，黄线通过 S03 接 j13（GP8）。Pico 由 USB 供电。</p></section>
-<section><h2>完整接线图</h2><p>点按钮突出显示一组线；悬停导线可看编号。手机上横向拖动查看。交叉线没有圆点就不连接。</p><div class="controls"><button data-filter="all" style="--c:#183645">全部接线</button><button data-filter="power" style="--c:#cf421f">9V / 5V</button><button data-filter="ground" style="--c:#344454">公共地</button><button data-filter="control" style="--c:#167f74">驱动控制</button><button data-filter="encoder" style="--c:#236ac2">编码器</button><button data-filter="motor" style="--c:#8842ac">马达动力</button><button data-filter="servo" style="--c:#ad7418">舵机信号</button></div><div class="canvas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1430" role="img" aria-label="Pico 单臂完整接线图，包含电源、DRV8833、EV3编码器分压与Geekservo">
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pico 原 R / 新 R+L · 面包板直连接线图</title>
+<style>[hidden]{display:none!important}tr[data-added="true"]{background:#fff4d6}tr[data-added="true"] td:first-child{font-weight:700;color:#805000}.mode-note{border-left:5px solid #bf7900;padding:12px 16px;background:#fff7e6}*{box-sizing:border-box}body{margin:0;color:#243545;background:#f1f3f3;font:16px/1.65 system-ui,"Noto Sans CJK SC",sans-serif}main{max-width:1600px;margin:auto;padding:24px}h1{font-size:30px;line-height:1.3;margin:0 0 10px}h2{margin-top:0;font-size:23px}h3{font-size:19px}p{margin:8px 0 15px}.intro,section{background:white;border:1px solid #dbe0e2;border-radius:12px;padding:24px;margin-bottom:20px}.lead{font-size:18px}.status{background:#fff4d6;border-left:5px solid #c7951c;padding:12px 16px}.controls{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.controls button{cursor:pointer;padding:9px 16px;border:1px solid var(--c);border-radius:7px;background:white;color:var(--c);font:inherit}.controls button.active{background:var(--c);color:white}.canvas{overflow:auto;background:#fffdf8;border:1px solid #ddd;border-radius:8px}.canvas svg{display:block;width:100%;min-width:1150px;height:auto}.links{display:flex;gap:20px;flex-wrap:wrap}a{color:#1467a4}table{border-collapse:collapse;width:100%;font-size:15px}th,td{text-align:left;padding:9px 12px;border-bottom:1px solid #e0e5e7}th{background:#edf2f4}.table-scroll{overflow:auto}code,pre{font-family:ui-monospace,monospace}pre{background:#f0f4f5;padding:16px;overflow:auto}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.small{font-size:14px;color:#586976}.servo{background:#faf8f0;border-left:5px solid #b7a477;padding:18px}.servo svg{width:100%;max-width:700px}.state{font-size:13px;letter-spacing:.05em;color:#14766b;font-weight:700}li{margin:7px 0}button:focus-visible,a:focus-visible{outline:3px solid #f2b94d;outline-offset:3px}@media(max-width:760px){main{padding:12px}.intro,section{padding:16px}.grid{grid-template-columns:1fr}h1{font-size:25px}}@media print{.controls{display:none}main{max-width:none;padding:0}.canvas svg{min-width:0}.intro,section{break-inside:avoid;border:0}.canvas{overflow:visible}body{background:white}}</style>
+<main><div class="intro"><div class="state">v4 实物标定 · 保留 R 线路 · 条件式新增 L</div><h1>面包板接信号，动力线直接连接</h1><p class="lead">按图里的元件朝向和孔位接线。DRV8833 放在面包板旁边，使用母头线接模块排针；本图不使用洞洞板、分线端子或 Bricktronics。DC-005 正极分别接驱动 VM、降压 IN+；负极分别接驱动 GND、降压 IN−。下方切换接线视图，图、逐线表、电阻表和下载同步更新。</p><p class="status" data-mode-only="R"><strong>9V 总电源关掉，编码器也会失去 5V。</strong> 手动计数时保持编码器供电，并先将 GP2、GP3 都置低。2026-09-28 更换驱动模块后，大马达空载闭环已通过；v4 机械头、舵机和整机供电仍待验证。</p><div class="controls" role="group" aria-label="接线模式"><button type="button" data-mode="R" aria-pressed="true" class="active" style="--c:#183645">原 R 单臂</button><button type="button" data-mode="RL" aria-pressed="false" style="--c:#805000">新 R+L（条件式）</button></div><p class="small">切换仅改变说明，不改实物接线或固件；若已接新增 L，不能通过切回 R 视图套用单臂上电步骤。</p><p id="mode-status" aria-live="polite">原 R 单臂 · 25 根线 / 4 只电阻</p><div class="mode-note" data-mode-only="RL" hidden><strong>先确认：当前健康 DRV8833 的 B 路空闲。</strong> 用户尚未确认该硬件条件；若 B 路已占用或板子有故障，本方案不适用。电流、温升与实物尺寸未验收。现固件只有单臂控制，<code>ARM_ID</code> 不切换 GPIO；切换视图不意味双臂控制能力，不能据此让 R/L 同时运动。</div><div class="links"><a data-download="svg" href="direct-breadboard.svg" target="_blank">原 R · SVG 大图</a><a data-download="png" href="direct-breadboard.png" target="_blank">原 R · PNG 图片</a><a data-download="netlist.json" href="direct-breadboard-netlist.json" download>原 R · 网络表 JSON</a><a href="README.md">电路总览与验证状态</a><a href="perfboard.html">可选洞洞板方案</a></div></div>
+<section id="complete-wiring"><h2>完整接线</h2><p data-mode-only="R">断开 USB 和9V，按下图及逐线表一次接齐马达、编码器与舵机。P04 从 DC-005 负极直接接降压 IN−；舵机红／棕线分别通过 S01／S02 直连降压 OUT+／OUT−，黄线通过 S03 接 j13（GP8）。Pico 由 USB 供电。</p><div data-mode-only="RL" hidden><p>原 R 的 25 根线与 4 只电阻全部保留；新增 L 为 13 根线与 4 只电阻，使用 <code>L</code> 前缀和琥珀色高亮。仅在确认同板健康 B 路空闲后考虑此候选接法。</p><p>GP6 / GP7 → BIN1 / BIN2，BO1 / BO2 → L EV3 1 / 2脚；GP12 / GP13 分别读取 L 编码器独立分压点；GP9 接 L 舵机信号。LS01 / LS02 从降压 OUT+ / OUT− 独立接 L 舵机电源和地，不借道 R 舵机或面包板。P04 独立回流、Pico USB 供电和 STBY 接 3V3 都不变；STBY 不是 5V VCC。</p><p><strong>此视图只说明接线，不能照搬原 R 命令给 L 上电。</strong>现固件没有初始化 L 的 GPIO，<code>off</code> 不能保证 L 输入为低。硬件条件、独立 GPIO 初始化与控制方案验证之前，保持新增 L 动力断电。</p></div></section>
+<section><h2>完整接线图 · <span data-mode-label>原 R</span></h2><p>点按钮突出显示一组线及对应表行（下载始终为所选模式的完整接线）；悬停导线可看编号。手机上横向拖动查看。交叉线没有圆点就不连接。</p><div class="controls" role="group" aria-label="按用途突出导线"><button type="button" data-filter="all" style="--c:#183645">全部接线</button><button type="button" data-filter="power" style="--c:#cf421f">9V / 5V</button><button type="button" data-filter="ground" style="--c:#344454">公共地</button><button type="button" data-filter="control" style="--c:#167f74">驱动控制</button><button type="button" data-filter="encoder" style="--c:#236ac2">编码器</button><button type="button" data-filter="motor" style="--c:#8842ac">马达动力</button><button type="button" data-filter="servo" style="--c:#ad7418">舵机信号</button></div><div class="canvas"><div data-mode-only="R"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1430" role="img" aria-label="Pico 单臂完整接线图，包含电源、DRV8833、EV3编码器分压与Geekservo">
 <style>text{font-family:"Noto Sans CJK SC","Microsoft YaHei",sans-serif}svg{background:#fffdf8} [data-group]{transition:opacity .15s}</style>
 <rect x="0" y="0" width="2200" height="1430" rx="0" fill="#fffdf8" stroke="none"/>
 <text x="40" y="52" font-size="34" fill="#243545" text-anchor="start" font-weight="700">Pico 单臂完整接线 · 马达、编码器与舵机</text>
@@ -775,31 +775,31 @@
 <text x="1870" y="992" font-size="20" fill="#243545" text-anchor="start" font-weight="700">电源直接接降压模块</text>
 <text x="1870" y="1024" font-size="16" fill="#243545" text-anchor="start" font-weight="400">信号接面包板；线序按实物确认</text>
 <text x="1870" y="1056" font-size="17" fill="#243545" text-anchor="start" font-weight="400">三孔母插头配公针线端</text>
-<g data-group="power" data-wire="P03"><title>P03: DC 正极第一根线 → 降压 IN+</title><path d="M245,230 L300,230 L300,190 L680,190" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,230 L300,230 L300,190 L680,190" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="230" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="680" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
-<g data-group="ground" data-wire="P04"><title>P04: DC 负极 → 降压 IN−（独立回流）</title><path d="M245,270 L285,270 L285,340 L650,340 L650,290 L680,290" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,270 L285,270 L285,340 L650,340 L650,290 L680,290" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="270" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="680" cy="290" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
-<g data-group="power" data-wire="P07"><title>P07: DC 正极第二根线 → 驱动 VM（直接线）</title><path d="M245,230 L270,230 L270,380 L120,380 L120,620 L240,620" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,230 L270,230 L270,380 L120,380 L120,620 L240,620" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="230" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="240" cy="620" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
-<g data-group="ground" data-wire="P08"><title>P08: DC 负极 → 驱动左排第3脚 GND（直接线）</title><path d="M245,270 L260,270 L260,410 L180,410 L180,720 L240,720" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,270 L260,270 L260,410 L180,410 L180,720 L240,720" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="270" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="240" cy="720" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
-<g data-group="power" data-wire="P09"><title>P09: 降压 OUT+ 直接接面包板上 + 第38孔</title><path d="M940,190 L1040,190 L1040,147 L1735,147 L1735,450 L1615,450 L1615,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,190 L1040,190 L1040,147 L1735,147 L1735,450 L1615,450 L1615,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1615" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
-<g data-group="ground" data-wire="P10"><title>P10: 驱动右排第8脚 GND → 面包板上 − 第38孔</title><path d="M480,970 L520,970 L520,360 L1770,360 L1770,510 L1615,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M480,970 L520,970 L520,360 L1770,360 L1770,510 L1615,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="480" cy="970" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1615" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
-<g data-group="ground" data-wire="G01"><title>G01: Pico GND：a5 → 上 − 第5孔</title><path d="M790,550 L790,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M790,550 L790,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="790" cy="550" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="790" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
-<g data-group="ground" data-wire="G02"><title>G02: 上下地轨相连</title><path d="M1665,510 L1745,510 L1745,880 L1665,880" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1665,510 L1745,510 L1745,880 L1665,880" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1665" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1665" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
-<g data-group="ground" data-wire="G03"><title>G03: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,510 L1165,493 L1190,493 L1190,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,510 L1165,493 L1190,493 L1190,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
-<g data-group="ground" data-wire="G04"><title>G04: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,880 L1165,863 L1190,863 L1190,880" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,880 L1165,863 L1190,863 L1190,880" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
-<g data-group="power" data-wire="P11"><title>P11: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,485 L1165,468 L1190,468 L1190,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,485 L1165,468 L1190,468 L1190,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
-<g data-group="control" data-wire="C01"><title>C01: GP2 / 物理4脚：j6 → AIN1</title><path d="M815,810 L815,926 L580,926 L580,720 L480,720" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M815,810 L815,926 L580,926 L580,720 L480,720" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="815" cy="810" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="720" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
-<g data-group="control" data-wire="C02"><title>C02: GP3 / 物理5脚：j7 → AIN2</title><path d="M840,810 L840,951 L555,951 L555,670 L480,670" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M840,810 L840,951 L555,951 L555,670 L480,670" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="840" cy="810" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="670" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
-<g data-group="control" data-wire="C03"><title>C03: Pico 3V3 / 物理36脚：a7 → STBY</title><path d="M840,550 L840,390 L600,390 L600,770 L480,770" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M840,550 L840,390 L600,390 L600,770 L480,770" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="840" cy="550" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="770" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
-<g data-group="motor" data-wire="M01"><title>M01: AO1 → EV3 1脚（直接线）</title><path d="M240,770 L150,770 L150,1110" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,770 L150,770 L150,1110" fill="none" stroke="#8842ac" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="240" cy="770" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/><circle cx="150" cy="1110" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/></g>
-<g data-group="motor" data-wire="M02"><title>M02: AO2 → EV3 2脚（直接线）</title><path d="M240,820 L200,820 L200,1110" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,820 L200,820 L200,1110" fill="none" stroke="#8842ac" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="240" cy="820" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/><circle cx="200" cy="1110" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/></g>
-<g data-group="ground" data-wire="E01"><title>E01: EV3 3脚 → 面包板 GND</title><path d="M250,1110 L250,1029 L1755,1029 L1755,510 L1590,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M250,1110 L250,1029 L1755,1029 L1755,510 L1590,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="250" cy="1110" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1590" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
-<g data-group="power" data-wire="E02"><title>E02: EV3 4脚 → 面包板 5V</title><path d="M300,1110 L300,1044 L1700,1044 L1700,485 L1665,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M300,1110 L300,1044 L1700,1044 L1700,485 L1665,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="300" cy="1110" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1665" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
-<g data-group="encoder" data-wire="E03"><title>E03: EV3 5脚 → h33，进入 A组10kΩ</title><path d="M350,1110 L350,1059 L1490,1059 L1490,760" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M350,1110 L350,1059 L1490,1059 L1490,760" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="350" cy="1110" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1490" cy="760" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
-<g data-group="encoder" data-wire="E04"><title>E04: EV3 6脚 → h31，进入 B组10kΩ</title><path d="M400,1110 L400,1085 L1440,1085 L1440,760" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M400,1110 L400,1085 L1440,1085 L1440,760" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="400" cy="1110" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1440" cy="760" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
-<g data-group="encoder" data-wire="E05"><title>E05: A分压点 i26 → GP4 i8（物理6脚）</title><path d="M1315,785 L1285,785 L1285,981 L865,981 L865,785" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1315,785 L1285,785 L1285,981 L865,981 L865,785" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1315" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="865" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
-<g data-group="encoder" data-wire="E06"><title>E06: B分压点 i28 → GP5 i9（物理7脚）</title><path d="M1365,785 L1395,785 L1395,1006 L890,1006 L890,785" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1365,785 L1395,785 L1395,1006 L890,1006 L890,785" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1365" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="890" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
-<g data-group="power" data-wire="S01"><title>S01: 降压 OUT+ → 舵机红线 +5V（独立动力线）</title><path d="M940,190 L1100,190 L1100,125 L1820,125 L1820,650 L1890,650" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,190 L1100,190 L1100,125 L1820,125 L1820,650 L1890,650" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="650" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
-<g data-group="ground" data-wire="S02"><title>S02: 降压 OUT− → 舵机棕线 GND（独立回流）</title><path d="M940,290 L1170,290 L1170,340 L1840,340 L1840,700 L1890,700" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,290 L1170,290 L1170,340 L1840,340 L1840,700 L1890,700" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="290" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="700" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
-<g data-group="servo" data-wire="S03"><title>S03: GP8 / 物理11脚：j13 → 舵机黄线信号</title><path d="M990,810 L990,915 L1800,915 L1800,750 L1890,750" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M990,810 L990,915 L1800,915 L1800,750 L1890,750" fill="none" stroke="#ad7418" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="990" cy="810" r="4" fill="#ad7418" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="750" r="4" fill="#ad7418" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="P03" data-added="false"><title>P03: DC 正极第一根线 → 降压 IN+</title><path d="M245,230 L300,230 L300,190 L680,190" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,230 L300,230 L300,190 L680,190" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="230" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="680" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="P04" data-added="false"><title>P04: DC 负极 → 降压 IN−（独立回流）</title><path d="M245,270 L285,270 L285,340 L650,340 L650,290 L680,290" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,270 L285,270 L285,340 L650,340 L650,290 L680,290" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="270" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="680" cy="290" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="P07" data-added="false"><title>P07: DC 正极第二根线 → 驱动 VM（直接线）</title><path d="M245,230 L270,230 L270,380 L120,380 L120,620 L240,620" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,230 L270,230 L270,380 L120,380 L120,620 L240,620" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="230" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="240" cy="620" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="P08" data-added="false"><title>P08: DC 负极 → 驱动左排第3脚 GND（直接线）</title><path d="M245,270 L260,270 L260,410 L180,410 L180,720 L240,720" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,270 L260,270 L260,410 L180,410 L180,720 L240,720" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="270" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="240" cy="720" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="P09" data-added="false"><title>P09: 降压 OUT+ 直接接面包板上 + 第38孔</title><path d="M940,190 L1040,190 L1040,147 L1735,147 L1735,450 L1615,450 L1615,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,190 L1040,190 L1040,147 L1735,147 L1735,450 L1615,450 L1615,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1615" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="P10" data-added="false"><title>P10: 驱动右排第8脚 GND → 面包板上 − 第38孔</title><path d="M480,970 L520,970 L520,360 L1770,360 L1770,510 L1615,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M480,970 L520,970 L520,360 L1770,360 L1770,510 L1615,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="480" cy="970" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1615" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G01" data-added="false"><title>G01: Pico GND：a5 → 上 − 第5孔</title><path d="M790,550 L790,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M790,550 L790,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="790" cy="550" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="790" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G02" data-added="false"><title>G02: 上下地轨相连</title><path d="M1665,510 L1745,510 L1745,880 L1665,880" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1665,510 L1745,510 L1745,880 L1665,880" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1665" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1665" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G03" data-added="false"><title>G03: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,510 L1165,493 L1190,493 L1190,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,510 L1165,493 L1190,493 L1190,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G04" data-added="false"><title>G04: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,880 L1165,863 L1190,863 L1190,880" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,880 L1165,863 L1190,863 L1190,880" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="P11" data-added="false"><title>P11: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,485 L1165,468 L1190,468 L1190,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,485 L1165,468 L1190,468 L1190,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="control" data-wire="C01" data-added="false"><title>C01: GP2 / 物理4脚：j6 → AIN1</title><path d="M815,810 L815,926 L580,926 L580,720 L480,720" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M815,810 L815,926 L580,926 L580,720 L480,720" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="815" cy="810" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="720" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
+<g data-group="control" data-wire="C02" data-added="false"><title>C02: GP3 / 物理5脚：j7 → AIN2</title><path d="M840,810 L840,951 L555,951 L555,670 L480,670" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M840,810 L840,951 L555,951 L555,670 L480,670" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="840" cy="810" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="670" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
+<g data-group="control" data-wire="C03" data-added="false"><title>C03: Pico 3V3 / 物理36脚：a7 → STBY</title><path d="M840,550 L840,390 L600,390 L600,770 L480,770" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M840,550 L840,390 L600,390 L600,770 L480,770" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="840" cy="550" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="770" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
+<g data-group="motor" data-wire="M01" data-added="false"><title>M01: AO1 → EV3 1脚（直接线）</title><path d="M240,770 L150,770 L150,1110" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,770 L150,770 L150,1110" fill="none" stroke="#8842ac" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="240" cy="770" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/><circle cx="150" cy="1110" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/></g>
+<g data-group="motor" data-wire="M02" data-added="false"><title>M02: AO2 → EV3 2脚（直接线）</title><path d="M240,820 L200,820 L200,1110" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,820 L200,820 L200,1110" fill="none" stroke="#8842ac" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="240" cy="820" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/><circle cx="200" cy="1110" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="E01" data-added="false"><title>E01: EV3 3脚 → 面包板 GND</title><path d="M250,1110 L250,1029 L1755,1029 L1755,510 L1590,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M250,1110 L250,1029 L1755,1029 L1755,510 L1590,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="250" cy="1110" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1590" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="E02" data-added="false"><title>E02: EV3 4脚 → 面包板 5V</title><path d="M300,1110 L300,1044 L1700,1044 L1700,485 L1665,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M300,1110 L300,1044 L1700,1044 L1700,485 L1665,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="300" cy="1110" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1665" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E03" data-added="false"><title>E03: EV3 5脚 → h33，进入 A组10kΩ</title><path d="M350,1110 L350,1059 L1490,1059 L1490,760" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M350,1110 L350,1059 L1490,1059 L1490,760" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="350" cy="1110" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1490" cy="760" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E04" data-added="false"><title>E04: EV3 6脚 → h31，进入 B组10kΩ</title><path d="M400,1110 L400,1085 L1440,1085 L1440,760" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M400,1110 L400,1085 L1440,1085 L1440,760" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="400" cy="1110" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1440" cy="760" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E05" data-added="false"><title>E05: A分压点 i26 → GP4 i8（物理6脚）</title><path d="M1315,785 L1285,785 L1285,981 L865,981 L865,785" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1315,785 L1285,785 L1285,981 L865,981 L865,785" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1315" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="865" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E06" data-added="false"><title>E06: B分压点 i28 → GP5 i9（物理7脚）</title><path d="M1365,785 L1395,785 L1395,1006 L890,1006 L890,785" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1365,785 L1395,785 L1395,1006 L890,1006 L890,785" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1365" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="890" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="S01" data-added="false"><title>S01: 降压 OUT+ → 舵机红线 +5V（独立动力线）</title><path d="M940,190 L1100,190 L1100,125 L1820,125 L1820,650 L1890,650" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,190 L1100,190 L1100,125 L1820,125 L1820,650 L1890,650" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="650" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="S02" data-added="false"><title>S02: 降压 OUT− → 舵机棕线 GND（独立回流）</title><path d="M940,290 L1170,290 L1170,340 L1840,340 L1840,700 L1890,700" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,290 L1170,290 L1170,340 L1840,340 L1840,700 L1890,700" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="290" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="700" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="servo" data-wire="S03" data-added="false"><title>S03: GP8 / 物理11脚：j13 → 舵机黄线信号</title><path d="M990,810 L990,915 L1800,915 L1800,750 L1890,750" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M990,810 L990,915 L1800,915 L1800,750 L1890,750" fill="none" stroke="#ad7418" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="990" cy="810" r="4" fill="#ad7418" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="750" r="4" fill="#ad7418" stroke="white" stroke-width="1.5"/></g>
 <g data-group="encoder"><title>R1: BB.f33 → BB.f26, 10000 Ω</title><path d="M1490,710 L1315,710" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1375.5" y="702.0" width="54" height="16" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1402.5" y="693.0" font-size="14" fill="#725224" text-anchor="middle" font-weight="700">10kΩ</text><circle cx="1490" cy="710" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1315" cy="710" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
 <g data-group="encoder"><title>R2: BB.j26 → BB.G26, 20000 Ω</title><path d="M1315,810 L1315,880" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1307.0" y="822.0" width="16" height="46" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1298.0" y="848.0" font-size="14" fill="#725224" text-anchor="end" font-weight="700">20kΩ</text><circle cx="1315" cy="810" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1315" cy="880" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
 <g data-group="encoder"><title>R3: BB.g31 → BB.g28, 10000 Ω</title><path d="M1440,735 L1365,735" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1375.5" y="727.0" width="54" height="16" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1402.5" y="760.0" font-size="14" fill="#725224" text-anchor="middle" font-weight="700">10kΩ</text><circle cx="1440" cy="735" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1365" cy="735" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
@@ -813,11 +813,934 @@
 <text x="611" y="757" font-size="15" fill="#167f74" text-anchor="start" font-weight="700">C03 · 3V3</text>
 <text x="1130" y="1120" font-size="15" fill="#236ac2" text-anchor="start" font-weight="700">E03 · A</text>
 <text x="1190" y="1110" font-size="15" fill="#236ac2" text-anchor="start" font-weight="700">E04 · B</text>
-</svg></div><p class="small">面包板坐标：Pico 两排插在 c3～c22、h3～h22，USB 朝左。面包板实际通常超过40列，此处仅画使用区域；两半电源轨用图中的短跳线接通。未用的另一条正电源轨省略。</p></section>
-<section><h2>先看清这些实物连接</h2><div class="grid"><div><h3>不用让动力电流经过面包板</h3><ul><li>9V → VM、驱动 GND → 电源负极，以及 AO1 / AO2 → 马达，全部用独立导线直接连接模块；马达加工线用现有普通接线端子转接。</li><li>模块公排针接母头线端，端子夹持对应线材；动力线和线端额定电流需满足马达启动电流，普通细杜邦跳线只用于信号。</li><li>DRV8833 放在绝缘面并固定，底部引脚不要碰金属或彼此短接。模块不需要焊死。</li><li>DC-005 正极焊脚引出两根线，分别接 VM 与降压 IN+，焊点用热缩管等绝缘；负极直接接 DRV8833 左排第3脚 GND。模块端仍用母头插接。</li></ul></div><div><h3>使用现有配件</h3><ul><li>9V 电源、DC-005、已有降压模块，输出调到 5.0V。此接法要求降压 IN− 与 OUT− 内部共地，完整接线时 OUT− 直接接舵机地。</li><li>Pico、DRV8833、面包板、两只10kΩ与两只20kΩ。</li><li>已修复/重新制作的 EV3 线；散铜丝先接端子，再转成面包板公头线。</li><li>本图不额外加电容；保留模块自带电容。降压模块不要求螺钉或支柱，避免裸露焊盘接触导体即可。</li></ul></div></div><p><strong>朝向说明：</strong>DRV8833 元件面朝上，左排从上到下为 VM、NC、GND、AO1、AO2、BO2、BO1、GND；右排为 NC、AIN2、AIN1、STBY、BIN1、BIN2、NC、GND。与你提供的丝印一致。DC-005 的三个焊脚形状和降压模块尺寸未确认，图中只标功能，不猜焊脚顺序；DC-005 切换脚留空绝缘。</p></section>
-<section><h2>全部导线与分压孔位</h2><p><code>BB.+</code> 是上方5V轨，<code>BB.-</code> 是上方地轨，<code>BB.G</code> 是下方地轨。每个数字列的 a～e 相通、f～j 相通，中槽两侧不通。DRV.GND-L1 是左排第3脚，DRV.GND-L2 是左排第8脚，DRV.GND-R 是右排第8脚；这三个脚通过模块内部连接共地。导线编号与图中提示、网络表一致。DRV.GND-L2 留空。</p><div class="table-scroll"><table><thead><tr><th>编号</th><th>怎么接</th><th>图内端点</th></tr></thead><tbody><tr data-group="power"><td>P03</td><td>DC 正极第一根线 → 降压 IN+</td><td>DC.+9V → BUCK.IN+</td></tr><tr data-group="ground"><td>P04</td><td>DC 负极 → 降压 IN−（独立回流）</td><td>DC.GND → BUCK.IN−</td></tr><tr data-group="power"><td>P07</td><td>DC 正极第二根线 → 驱动 VM（直接线）</td><td>DC.+9V → DRV.VM</td></tr><tr data-group="ground"><td>P08</td><td>DC 负极 → 驱动左排第3脚 GND（直接线）</td><td>DC.GND → DRV.GND-L1</td></tr><tr data-group="power"><td>P09</td><td>降压 OUT+ 直接接面包板上 + 第38孔</td><td>BUCK.OUT+ → BB.+38</td></tr><tr data-group="ground"><td>P10</td><td>驱动右排第8脚 GND → 面包板上 − 第38孔</td><td>DRV.GND-R → BB.-38</td></tr><tr data-group="ground"><td>G01</td><td>Pico GND：a5 → 上 − 第5孔</td><td>BB.a5 → BB.-5</td></tr><tr data-group="ground"><td>G02</td><td>上下地轨相连</td><td>BB.-40 → BB.G40</td></tr><tr data-group="ground"><td>G03</td><td>跨接该电源轨中间断口（有断口时）</td><td>BB.-20 → BB.-21</td></tr><tr data-group="ground"><td>G04</td><td>跨接该电源轨中间断口（有断口时）</td><td>BB.G20 → BB.G21</td></tr><tr data-group="power"><td>P11</td><td>跨接该电源轨中间断口（有断口时）</td><td>BB.+20 → BB.+21</td></tr><tr data-group="control"><td>C01</td><td>GP2 / 物理4脚：j6 → AIN1</td><td>BB.j6 → DRV.AIN1</td></tr><tr data-group="control"><td>C02</td><td>GP3 / 物理5脚：j7 → AIN2</td><td>BB.j7 → DRV.AIN2</td></tr><tr data-group="control"><td>C03</td><td>Pico 3V3 / 物理36脚：a7 → STBY</td><td>BB.a7 → DRV.STBY</td></tr><tr data-group="motor"><td>M01</td><td>AO1 → EV3 1脚（直接线）</td><td>DRV.AO1 → EV3.1</td></tr><tr data-group="motor"><td>M02</td><td>AO2 → EV3 2脚（直接线）</td><td>DRV.AO2 → EV3.2</td></tr><tr data-group="ground"><td>E01</td><td>EV3 3脚 → 面包板 GND</td><td>EV3.3 → BB.-37</td></tr><tr data-group="power"><td>E02</td><td>EV3 4脚 → 面包板 5V</td><td>EV3.4 → BB.+40</td></tr><tr data-group="encoder"><td>E03</td><td>EV3 5脚 → h33，进入 A组10kΩ</td><td>EV3.5 → BB.h33</td></tr><tr data-group="encoder"><td>E04</td><td>EV3 6脚 → h31，进入 B组10kΩ</td><td>EV3.6 → BB.h31</td></tr><tr data-group="encoder"><td>E05</td><td>A分压点 i26 → GP4 i8（物理6脚）</td><td>BB.i26 → BB.i8</td></tr><tr data-group="encoder"><td>E06</td><td>B分压点 i28 → GP5 i9（物理7脚）</td><td>BB.i28 → BB.i9</td></tr><tr data-group="power"><td>S01</td><td>降压 OUT+ → 舵机红线 +5V（独立动力线）</td><td>BUCK.OUT+ → SERVO.V+</td></tr><tr data-group="ground"><td>S02</td><td>降压 OUT− → 舵机棕线 GND（独立回流）</td><td>BUCK.OUT− → SERVO.GND</td></tr><tr data-group="servo"><td>S03</td><td>GP8 / 物理11脚：j13 → 舵机黄线信号</td><td>BB.j13 → SERVO.SIG</td></tr></tbody></table></div><h3>四只电阻</h3><table><thead><tr><th>编号</th><th>阻值</th><th>两端插孔（无正反）</th></tr></thead><tbody><tr><td>R1</td><td>10kΩ</td><td>f33 ↔ f26</td></tr><tr><td>R2</td><td>20kΩ</td><td>j26 ↔ G26</td></tr><tr><td>R3</td><td>10kΩ</td><td>g31 ↔ g28</td></tr><tr><td>R4</td><td>20kΩ</td><td>j28 ↔ G28</td></tr></tbody></table><p>GP4 接第26列分压点，GP5 接第28列分压点；黄 / 蓝线接10kΩ另一端。两只20kΩ都接下方地轨。程序保持 <code>pull_up=False</code>。</p></section>
+</svg></div><div data-mode-only="RL" hidden><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 2020" role="img" aria-label="R+L 条件式接线图；同板健康 B 路须空闲，尚未确认；当前仅单臂固件">
+<style>text{font-family:"Noto Sans CJK SC","Microsoft YaHei",sans-serif}svg{background:#fffdf8} [data-group]{transition:opacity .15s}</style>
+<rect x="0" y="0" width="2200" height="2020" rx="0" fill="#fffdf8" stroke="none"/>
+<text x="40" y="52" font-size="31" fill="#243545" text-anchor="start" font-weight="700">R+L 接线候选 · 原 R 保留，琥珀色光晕 / L 编号为新增</text>
+<text x="40" y="87" font-size="20" fill="#805000" text-anchor="start" font-weight="400">同板健康 B 路须空闲（尚未确认）· ARM_ID 不切换 GPIO · 切换视图不意味双臂控制能力</text>
+<rect x="20" y="105" width="1760" height="265" rx="8" fill="#f5f3ec" stroke="#ccd2d4"/>
+<text x="40" y="132" font-size="20" fill="#243545" text-anchor="start" font-weight="700">① 电源区</text>
+<rect x="45" y="167" width="210" height="146" rx="8" fill="#fff" stroke="#ccd2d4"/>
+<rect x="69" y="196" width="78" height="70" rx="8" fill="#26323b" stroke="#172028"/>
+<circle cx="108" cy="231" r="24" fill="#111" stroke="#a3a9ac" stroke-width="5"/>
+<circle cx="108" cy="231" r="5" fill="#c4c8cb"/>
+<text x="161" y="208" font-size="18" fill="#243545" text-anchor="start" font-weight="700">DC-005</text>
+<text x="161" y="234" font-size="18" fill="#cf421f" text-anchor="start" font-weight="400">+9V</text>
+<text x="161" y="274" font-size="18" fill="#243545" text-anchor="start" font-weight="400">GND</text>
+<text x="60" y="295" font-size="15" fill="#243545" text-anchor="start" font-weight="400">现有 9V 电源 / 开关后</text>
+<text x="350" y="244" font-size="21" fill="#243545" text-anchor="start" font-weight="700">DC-005 正极焊两根线</text>
+<text x="350" y="275" font-size="19" fill="#243545" text-anchor="start" font-weight="400">分别接 VM 与降压 IN+</text>
+<text x="350" y="305" font-size="17" fill="#243545" text-anchor="start" font-weight="400">焊点绝缘；模块端保持可拔</text>
+<rect x="680" y="161" width="260" height="155" rx="8" fill="#24678b" stroke="#19445b"/>
+<rect x="758" y="190" width="74" height="74" rx="8" fill="#333c45" stroke="#20272d"/>
+<text x="795" y="233" font-size="16" fill="white" text-anchor="middle" font-weight="400">电感</text>
+<rect x="847" y="182" width="43" height="36" rx="8" fill="#2683d0" stroke="#123f71"/>
+<text x="809" y="292" font-size="17" fill="white" text-anchor="middle" font-weight="400">降压模块 · 输出调为 5.0V</text>
+<circle cx="680" cy="190" r="7" fill="#dfc773" stroke="white" stroke-width="1.5"/>
+<text x="692" y="180" font-size="15" fill="white" text-anchor="start" font-weight="400">IN+</text>
+<circle cx="680" cy="290" r="7" fill="#dfc773" stroke="white" stroke-width="1.5"/>
+<text x="692" y="280" font-size="15" fill="white" text-anchor="start" font-weight="400">IN−</text>
+<circle cx="940" cy="190" r="7" fill="#dfc773" stroke="white" stroke-width="1.5"/>
+<text x="928" y="180" font-size="15" fill="white" text-anchor="end" font-weight="400">OUT+</text>
+<circle cx="940" cy="290" r="7" fill="#dfc773" stroke="white" stroke-width="1.5"/>
+<text x="928" y="280" font-size="15" fill="white" text-anchor="end" font-weight="400">OUT−</text>
+<text x="985" y="275" font-size="18" fill="#243545" text-anchor="start" font-weight="700">OUT− 直连舵机地</text>
+<text x="985" y="318" font-size="16" fill="#243545" text-anchor="start" font-weight="400">先确认与 IN− 内部共地</text>
+<text x="1260" y="200" font-size="21" fill="#243545" text-anchor="start" font-weight="700">9V 总电源必须开：降压模块才有 5V</text>
+<text x="1260" y="230" font-size="17" fill="#243545" text-anchor="start" font-weight="400">Pico 由 USB 供电；5V 轨不接 Pico 供电脚。</text>
+<text x="1260" y="260" font-size="17" fill="#243545" text-anchor="start" font-weight="400">DC-005 焊脚、降压焊盘均按实物标识确认。</text>
+<text x="1260" y="288" font-size="16" fill="#243545" text-anchor="start" font-weight="400">图示为功能位置，不是这两种元件的焊脚模板。</text>
+<text x="1260" y="316" font-size="17" fill="#243545" text-anchor="start" font-weight="700">R 原接线保留；新增 L 动力先断电。</text>
+<text x="230" y="463" font-size="23" fill="#243545" text-anchor="start" font-weight="700">② DRV8833 · 正面朝上</text>
+<text x="230" y="493" font-size="17" fill="#243545" text-anchor="start" font-weight="400">放在绝缘面，母头线接模块排针</text>
+<text x="230" y="521" font-size="16" fill="#243545" text-anchor="start" font-weight="400">动力线端需满足马达启动电流</text>
+<rect x="230" y="586" width="260" height="420" rx="8" fill="#266d98" stroke="#154867"/>
+<rect x="322" y="716" width="76" height="128" rx="8" fill="#27303a" stroke="#17212c"/>
+<text x="361" y="787" font-size="20" fill="white" text-anchor="middle" font-weight="700">DRV</text>
+<text x="361" y="815" font-size="20" fill="white" text-anchor="middle" font-weight="700">8833</text>
+<text x="361" y="871" font-size="14" fill="#dbeef9" text-anchor="middle" font-weight="400">三个 GND</text>
+<text x="361" y="895" font-size="14" fill="#dbeef9" text-anchor="middle" font-weight="400">模块内部相通</text>
+<rect x="233" y="613" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="625" font-size="17" fill="white" text-anchor="start" font-weight="700">VM</text>
+<rect x="233" y="663" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="675" font-size="17" fill="white" text-anchor="start" font-weight="700">NC</text>
+<rect x="233" y="713" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="725" font-size="17" fill="white" text-anchor="start" font-weight="700">GND</text>
+<rect x="233" y="763" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="775" font-size="17" fill="white" text-anchor="start" font-weight="700">AO1</text>
+<rect x="233" y="813" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="825" font-size="17" fill="white" text-anchor="start" font-weight="700">AO2</text>
+<rect x="233" y="863" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="875" font-size="17" fill="white" text-anchor="start" font-weight="700">BO2</text>
+<rect x="233" y="913" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="925" font-size="17" fill="white" text-anchor="start" font-weight="700">BO1</text>
+<rect x="233" y="963" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="257" y="975" font-size="17" fill="white" text-anchor="start" font-weight="700">GND</text>
+<rect x="473" y="613" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="625" font-size="17" fill="white" text-anchor="end" font-weight="700">NC</text>
+<rect x="473" y="663" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="675" font-size="17" fill="white" text-anchor="end" font-weight="700">AIN2</text>
+<rect x="473" y="713" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="725" font-size="17" fill="white" text-anchor="end" font-weight="700">AIN1</text>
+<rect x="473" y="763" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="775" font-size="17" fill="white" text-anchor="end" font-weight="700">STBY</text>
+<rect x="473" y="813" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="825" font-size="17" fill="white" text-anchor="end" font-weight="700">BIN1</text>
+<rect x="473" y="863" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="875" font-size="17" fill="white" text-anchor="end" font-weight="700">BIN2</text>
+<rect x="473" y="913" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="925" font-size="17" fill="white" text-anchor="end" font-weight="700">NC</text>
+<rect x="473" y="963" width="14" height="14" rx="1" fill="#dac267" stroke="#af9133"/>
+<text x="463" y="975" font-size="17" fill="white" text-anchor="end" font-weight="700">GND</text>
+<text x="910" y="417" font-size="23" fill="#243545" text-anchor="start" font-weight="700">③ 面包板 · USB 朝左 · 仅放低电流线路</text>
+<rect x="650" y="435" width="1080" height="465" rx="8" fill="#eeeae1" stroke="#c4c0b8"/>
+<rect x="661" y="664" width="1058" height="31" rx="2" fill="#d1cbc0" stroke="#d1cbc0"/>
+<text x="675" y="490" font-size="13" fill="#243545" text-anchor="end" font-weight="400">+5V</text>
+<path d="M690,475 L1165,475" fill="none" stroke="#c74832" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1190,475 L1665,475" fill="none" stroke="#c74832" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="687" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="482" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="515" font-size="13" fill="#243545" text-anchor="end" font-weight="400">GND</text>
+<path d="M690,500 L1165,500" fill="none" stroke="#596974" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1190,500 L1665,500" fill="none" stroke="#596974" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="687" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="507" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="555" font-size="13" fill="#243545" text-anchor="end" font-weight="400">a</text>
+<rect x="687" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="547" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="580" font-size="13" fill="#243545" text-anchor="end" font-weight="400">b</text>
+<rect x="687" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="572" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="605" font-size="13" fill="#243545" text-anchor="end" font-weight="400">c</text>
+<rect x="687" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="597" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="630" font-size="13" fill="#243545" text-anchor="end" font-weight="400">d</text>
+<rect x="687" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="622" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="655" font-size="13" fill="#243545" text-anchor="end" font-weight="400">e</text>
+<rect x="687" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="647" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="715" font-size="13" fill="#243545" text-anchor="end" font-weight="400">f</text>
+<rect x="687" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="707" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="740" font-size="13" fill="#243545" text-anchor="end" font-weight="400">g</text>
+<rect x="687" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="732" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="765" font-size="13" fill="#243545" text-anchor="end" font-weight="400">h</text>
+<rect x="687" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="757" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="790" font-size="13" fill="#243545" text-anchor="end" font-weight="400">i</text>
+<rect x="687" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="782" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="815" font-size="13" fill="#243545" text-anchor="end" font-weight="400">j</text>
+<rect x="687" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="807" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="675" y="885" font-size="13" fill="#243545" text-anchor="end" font-weight="400">GND</text>
+<path d="M690,870 L1165,870" fill="none" stroke="#596974" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1190,870 L1665,870" fill="none" stroke="#596974" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="687" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="712" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="737" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="762" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="787" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="812" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="837" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="862" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="887" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="912" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="937" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="962" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="987" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1012" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1037" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1062" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1087" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1112" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1137" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1162" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1187" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1212" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1237" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1262" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1287" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1312" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1337" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1362" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1387" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1412" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1437" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1462" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1487" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1512" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1537" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1562" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1587" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1612" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1637" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<rect x="1662" y="877" width="6" height="6" rx="1" fill="#77766f" stroke="none"/>
+<text x="690" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">1</text>
+<text x="715" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">2</text>
+<text x="740" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">3</text>
+<text x="765" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">4</text>
+<text x="790" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">5</text>
+<text x="815" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">6</text>
+<text x="840" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">7</text>
+<text x="865" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">8</text>
+<text x="890" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">9</text>
+<text x="915" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">10</text>
+<text x="940" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">11</text>
+<text x="965" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">12</text>
+<text x="990" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">13</text>
+<text x="1015" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">14</text>
+<text x="1040" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">15</text>
+<text x="1065" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">16</text>
+<text x="1090" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">17</text>
+<text x="1115" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">18</text>
+<text x="1140" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">19</text>
+<text x="1165" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">20</text>
+<text x="1190" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">21</text>
+<text x="1215" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">22</text>
+<text x="1240" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">23</text>
+<text x="1265" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">24</text>
+<text x="1290" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">25</text>
+<text x="1315" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">26</text>
+<text x="1340" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">27</text>
+<text x="1365" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">28</text>
+<text x="1390" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">29</text>
+<text x="1415" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">30</text>
+<text x="1440" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">31</text>
+<text x="1465" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">32</text>
+<text x="1490" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">33</text>
+<text x="1515" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">34</text>
+<text x="1540" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">35</text>
+<text x="1565" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">36</text>
+<text x="1590" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">37</text>
+<text x="1615" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">38</text>
+<text x="1640" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">39</text>
+<text x="1665" y="458" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">40</text>
+<rect x="728" y="589" width="500" height="182" rx="8" fill="#26744f" stroke="#164d32"/>
+<rect x="700" y="650" width="42" height="58" rx="3" fill="#b5bdc5" stroke="#57636d"/>
+<rect x="908" y="639" width="72" height="72" rx="3" fill="#26303b" stroke="#17212b"/>
+<text x="1085" y="670" font-size="21" fill="white" text-anchor="middle" font-weight="700">Raspberry Pi Pico</text>
+<text x="1085" y="704" font-size="17" fill="white" text-anchor="middle" font-weight="400">USB 独立供电</text>
+<text x="721" y="735" font-size="13" fill="#142d36" text-anchor="end" font-weight="400">USB</text>
+<circle cx="740" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="740" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="765" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="765" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="790" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="790" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="815" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="815" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="840" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="840" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="865" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="865" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="890" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="890" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="915" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="915" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="940" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="940" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="965" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="965" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="990" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="990" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1015" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1015" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1040" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1040" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1065" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1065" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1090" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1090" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1115" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1115" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1140" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1140" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1165" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1165" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1190" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1190" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1215" cy="600" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<circle cx="1215" cy="760" r="5" fill="#d8c074" stroke="white" stroke-width="1.5"/>
+<text x="790" y="623" font-size="12" fill="white" text-anchor="middle" font-weight="700">GND</text>
+<text x="840" y="623" font-size="12" fill="white" text-anchor="middle" font-weight="700">3V3</text>
+<text x="815" y="744" font-size="12" fill="white" text-anchor="middle" font-weight="700">GP2</text>
+<text x="840" y="744" font-size="12" fill="white" text-anchor="middle" font-weight="700">GP3</text>
+<text x="865" y="744" font-size="12" fill="white" text-anchor="middle" font-weight="700">GP4</text>
+<text x="890" y="744" font-size="12" fill="white" text-anchor="middle" font-weight="700">GP5</text>
+<text x="990" y="744" font-size="12" fill="white" text-anchor="middle" font-weight="700">GP8</text>
+<text x="1020" y="856" font-size="15" fill="#243545" text-anchor="middle" font-weight="400">同一数字列：a–e 相通；f–j 相通；中槽两侧不通</text>
+<rect x="45" y="1090" width="405" height="130" rx="8" fill="#fff" stroke="#c7cdd0"/>
+<rect x="125" y="1235" width="242" height="119" rx="12" fill="#e0e2e5" stroke="#7e8994"/>
+<rect x="295" y="1260" width="100" height="70" rx="7" fill="#ba252f" stroke="#8b1d29"/>
+<circle cx="345" cy="1295" r="22" fill="#656971" stroke="#393f44" stroke-width="3"/>
+<text x="143" y="1280" font-size="23" fill="#243545" text-anchor="start" font-weight="700">④ R · EV3 马达</text>
+<text x="143" y="1313" font-size="16" fill="#243545" text-anchor="start" font-weight="400">原 EV3 插头插马达</text>
+<path d="M247,1235 L247,1212" fill="none" stroke="#303b46" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="134" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="150" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M150,1127 L150,1198 L247,1212" fill="none" stroke="#ececec" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="150" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">1</text>
+<text x="150" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">白 M1</text>
+<rect x="184" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="200" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M200,1127 L200,1198 L247,1212" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="200" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">2</text>
+<text x="200" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">黑 M2</text>
+<rect x="234" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="250" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M250,1127 L250,1198 L247,1212" fill="none" stroke="#c22" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="250" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">3</text>
+<text x="250" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">红 GND</text>
+<rect x="284" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="300" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M300,1127 L300,1198 L247,1212" fill="none" stroke="#2a944e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="300" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">4</text>
+<text x="300" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">绿 5V</text>
+<rect x="334" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="350" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M350,1127 L350,1198 L247,1212" fill="none" stroke="#dda814" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="350" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">5</text>
+<text x="350" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">黄 A</text>
+<rect x="384" y="1094" width="32" height="31" rx="2" fill="#555d65" stroke="#313a43"/>
+<circle cx="400" cy="1110" r="7" fill="#cfd4d5" stroke="white" stroke-width="1.5"/>
+<path d="M400,1127 L400,1198 L247,1212" fill="none" stroke="#206bcc" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="400" y="1148" font-size="14" fill="#243545" text-anchor="middle" font-weight="700">6</text>
+<text x="400" y="1171" font-size="12" fill="#243545" text-anchor="middle" font-weight="400">蓝 B</text>
+<text x="490" y="1147" font-size="19" fill="#243545" text-anchor="start" font-weight="700">加工线 → 独立夹线端子 → 带插头的引出线</text>
+<text x="490" y="1180" font-size="17" fill="#243545" text-anchor="start" font-weight="400">六个端子互不相通；不能用同一组分线器接六根线。</text>
+<text x="50" y="1390" font-size="17" fill="#243545" text-anchor="start" font-weight="400">线色仅作已有线束参考；以已确认的 EV3 触点编号为准。</text>
+<text x="650" y="1228" font-size="23" fill="#243545" text-anchor="start" font-weight="700">两路分压：10kΩ 串联，20kΩ 从 GPIO 接点接地</text>
+<text x="650" y="1261" font-size="20" fill="#236ac2" text-anchor="start" font-weight="400">A：h33 → 10kΩ → 第26列分压点 → GP4</text>
+<text x="650" y="1295" font-size="20" fill="#236ac2" text-anchor="start" font-weight="400">B：h31 → 10kΩ → 第28列分压点 → GP5</text>
+<text x="650" y="1330" font-size="18" fill="#243545" text-anchor="start" font-weight="400">供电、信号都使用带插头的线；裸绞线先接夹线端子。</text>
+<text x="650" y="1363" font-size="18" fill="#243545" text-anchor="start" font-weight="400">粗线为板外动力连接；交叉无圆点不相连。</text>
+<text x="650" y="1395" font-size="17" fill="#243545" text-anchor="start" font-weight="400">图内只画面包板前40列；字母 / 数字以本图坐标为准。</text>
+<text x="1870" y="550" font-size="22" fill="#243545" text-anchor="start" font-weight="700">⑤ R · Geekservo 270°</text>
+<rect x="1890" y="600" width="270" height="230" rx="8" fill="#d9dcdf" stroke="#73818c"/>
+<rect x="2105" y="670" width="70" height="80" rx="8" fill="#697784" stroke="#374653"/>
+<text x="1908" y="650" font-size="20" fill="#cf421f" text-anchor="start" font-weight="400">红 · +5V</text>
+<text x="1908" y="700" font-size="20" fill="#344454" text-anchor="start" font-weight="400">棕 · GND</text>
+<text x="1908" y="750" font-size="20" fill="#ad7418" text-anchor="start" font-weight="400">黄 · 信号</text>
+<text x="1870" y="880" font-size="18" fill="#243545" text-anchor="start" font-weight="400">S01：OUT+ → 舵机 +5V</text>
+<text x="1870" y="912" font-size="18" fill="#243545" text-anchor="start" font-weight="400">S02：OUT− → 舵机 GND</text>
+<text x="1870" y="944" font-size="18" fill="#243545" text-anchor="start" font-weight="400">S03：j13 / GP8 → 信号</text>
+<text x="1870" y="992" font-size="20" fill="#243545" text-anchor="start" font-weight="700">电源直接接降压模块</text>
+<text x="1870" y="1024" font-size="16" fill="#243545" text-anchor="start" font-weight="400">信号接面包板；线序按实物确认</text>
+<text x="1870" y="1056" font-size="17" fill="#243545" text-anchor="start" font-weight="400">三孔母插头配公针线端</text>
+<rect x="20" y="1480" width="2160" height="515" rx="8" fill="#fff7e6" stroke="#bf7900"/>
+<text x="135" y="1517" font-size="26" fill="#805000" text-anchor="start" font-weight="700">＋ 新增 L · 使用同一块健康 DRV8833 的空闲 B 路（用户尚未确认）</text>
+<text x="135" y="1551" font-size="20" fill="#805000" text-anchor="start" font-weight="400">当前仅单臂固件 · ARM_ID 不切换 GPIO · 电流 / 温升未验收 · 不是双臂运行说明</text>
+<rect x="70" y="1740" width="415" height="145" rx="8" fill="#fff" stroke="#bf7900"/>
+<text x="90" y="1780" font-size="22" fill="#243545" text-anchor="start" font-weight="700">L · EV3 马达 / 六个独立端子</text>
+<text x="90" y="1815" font-size="18" fill="#243545" text-anchor="start" font-weight="400">按 EV3 触点编号核对，不只看线色</text>
+<text x="90" y="1850" font-size="18" fill="#243545" text-anchor="start" font-weight="400">1 / 2 动力直连 BO1 / BO2</text>
+<text x="560" y="1780" font-size="24" fill="#243545" text-anchor="start" font-weight="700">L 编码器：两组独立 10kΩ / 20kΩ</text>
+<text x="560" y="1820" font-size="20" fill="#243545" text-anchor="start" font-weight="400">脚5 → h37 → LR1 → 第34列 → GP12（i18）</text>
+<text x="560" y="1860" font-size="20" fill="#243545" text-anchor="start" font-weight="400">脚6 → h40 → LR3 → 第36列 → GP13（i19）</text>
+<text x="560" y="1900" font-size="19" fill="#243545" text-anchor="start" font-weight="400">LR2 / LR4 分别从第34 / 36列接下方地轨</text>
+<text x="45" y="1955" font-size="20" fill="#243545" text-anchor="start" font-weight="400">孔位为候选布局：断电核对孔距、引脚与电阻体间隙；电阻腿绝缘，跨线无圆点不连接。</text>
+<text x="45" y="1984" font-size="18" fill="#243545" text-anchor="start" font-weight="400">STBY 保持 3V3（不是 5V VCC）· ENC_PULLUP=False · Pico USB 供电 · P04 独立回流保持不变</text>
+<rect x="1890" y="1720" width="260" height="180" rx="8" fill="#fff" stroke="#bf7900"/>
+<text x="1910" y="1750" font-size="23" fill="#243545" text-anchor="start" font-weight="700">L · Geekservo</text>
+<text x="1910" y="1800" font-size="19" fill="#cf421f" text-anchor="start" font-weight="400">V+ · 5V</text>
+<text x="1910" y="1840" font-size="19" fill="#243545" text-anchor="start" font-weight="400">GND</text>
+<text x="1910" y="1880" font-size="19" fill="#243545" text-anchor="start" font-weight="400">GP9 / j14</text>
+<circle cx="155" cy="1740" r="6" fill="#805000" stroke="white" stroke-width="1.5"/>
+<text x="155" y="1730" font-size="16" fill="#243545" text-anchor="middle" font-weight="700">1</text>
+<circle cx="210" cy="1740" r="6" fill="#805000" stroke="white" stroke-width="1.5"/>
+<text x="210" y="1730" font-size="16" fill="#243545" text-anchor="middle" font-weight="700">2</text>
+<circle cx="265" cy="1740" r="6" fill="#805000" stroke="white" stroke-width="1.5"/>
+<text x="265" y="1730" font-size="16" fill="#243545" text-anchor="middle" font-weight="700">3</text>
+<circle cx="320" cy="1740" r="6" fill="#805000" stroke="white" stroke-width="1.5"/>
+<text x="320" y="1730" font-size="16" fill="#243545" text-anchor="middle" font-weight="700">4</text>
+<circle cx="375" cy="1740" r="6" fill="#805000" stroke="white" stroke-width="1.5"/>
+<text x="375" y="1730" font-size="16" fill="#243545" text-anchor="middle" font-weight="700">5</text>
+<circle cx="430" cy="1740" r="6" fill="#805000" stroke="white" stroke-width="1.5"/>
+<text x="430" y="1730" font-size="16" fill="#243545" text-anchor="middle" font-weight="700">6</text>
+<text x="940" y="744" font-size="12" fill="#ffe6a3" text-anchor="middle" font-weight="700">GP6</text>
+<text x="965" y="744" font-size="12" fill="#ffe6a3" text-anchor="middle" font-weight="700">GP7</text>
+<text x="1015" y="744" font-size="12" fill="#ffe6a3" text-anchor="middle" font-weight="700">GP9</text>
+<text x="1115" y="730" font-size="12" fill="#ffe6a3" text-anchor="middle" font-weight="700">GP12</text>
+<text x="1140" y="744" font-size="12" fill="#ffe6a3" text-anchor="middle" font-weight="700">GP13</text>
+<g data-group="power" data-wire="P03" data-added="false"><title>P03: DC 正极第一根线 → 降压 IN+</title><path d="M245,230 L300,230 L300,190 L680,190" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,230 L300,230 L300,190 L680,190" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="230" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="680" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="P04" data-added="false"><title>P04: DC 负极 → 降压 IN−（独立回流）</title><path d="M245,270 L285,270 L285,340 L650,340 L650,290 L680,290" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,270 L285,270 L285,340 L650,340 L650,290 L680,290" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="270" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="680" cy="290" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="P07" data-added="false"><title>P07: DC 正极第二根线 → 驱动 VM（直接线）</title><path d="M245,230 L270,230 L270,380 L120,380 L120,620 L240,620" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,230 L270,230 L270,380 L120,380 L120,620 L240,620" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="230" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="240" cy="620" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="P08" data-added="false"><title>P08: DC 负极 → 驱动左排第3脚 GND（直接线）</title><path d="M245,270 L260,270 L260,410 L180,410 L180,720 L240,720" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M245,270 L260,270 L260,410 L180,410 L180,720 L240,720" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="245" cy="270" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="240" cy="720" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="P09" data-added="false"><title>P09: 降压 OUT+ 直接接面包板上 + 第38孔</title><path d="M940,190 L1040,190 L1040,147 L1735,147 L1735,450 L1615,450 L1615,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,190 L1040,190 L1040,147 L1735,147 L1735,450 L1615,450 L1615,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1615" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="P10" data-added="false"><title>P10: 驱动右排第8脚 GND → 面包板上 − 第38孔</title><path d="M480,970 L520,970 L520,360 L1770,360 L1770,510 L1615,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M480,970 L520,970 L520,360 L1770,360 L1770,510 L1615,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="480" cy="970" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1615" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G01" data-added="false"><title>G01: Pico GND：a5 → 上 − 第5孔</title><path d="M790,550 L790,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M790,550 L790,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="790" cy="550" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="790" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G02" data-added="false"><title>G02: 上下地轨相连</title><path d="M1665,510 L1745,510 L1745,880 L1665,880" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1665,510 L1745,510 L1745,880 L1665,880" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1665" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1665" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G03" data-added="false"><title>G03: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,510 L1165,493 L1190,493 L1190,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,510 L1165,493 L1190,493 L1190,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="G04" data-added="false"><title>G04: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,880 L1165,863 L1190,863 L1190,880" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,880 L1165,863 L1190,863 L1190,880" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="880" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="P11" data-added="false"><title>P11: 跨接该电源轨中间断口（有断口时）</title><path d="M1165,485 L1165,468 L1190,468 L1190,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1165,485 L1165,468 L1190,468 L1190,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1165" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1190" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="control" data-wire="C01" data-added="false"><title>C01: GP2 / 物理4脚：j6 → AIN1</title><path d="M815,810 L815,926 L580,926 L580,720 L480,720" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M815,810 L815,926 L580,926 L580,720 L480,720" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="815" cy="810" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="720" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
+<g data-group="control" data-wire="C02" data-added="false"><title>C02: GP3 / 物理5脚：j7 → AIN2</title><path d="M840,810 L840,951 L555,951 L555,670 L480,670" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M840,810 L840,951 L555,951 L555,670 L480,670" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="840" cy="810" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="670" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
+<g data-group="control" data-wire="C03" data-added="false"><title>C03: Pico 3V3 / 物理36脚：a7 → STBY</title><path d="M840,550 L840,390 L600,390 L600,770 L480,770" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M840,550 L840,390 L600,390 L600,770 L480,770" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="840" cy="550" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="770" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
+<g data-group="motor" data-wire="M01" data-added="false"><title>M01: AO1 → EV3 1脚（直接线）</title><path d="M240,770 L150,770 L150,1110" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,770 L150,770 L150,1110" fill="none" stroke="#8842ac" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="240" cy="770" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/><circle cx="150" cy="1110" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/></g>
+<g data-group="motor" data-wire="M02" data-added="false"><title>M02: AO2 → EV3 2脚（直接线）</title><path d="M240,820 L200,820 L200,1110" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,820 L200,820 L200,1110" fill="none" stroke="#8842ac" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="240" cy="820" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/><circle cx="200" cy="1110" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="E01" data-added="false"><title>E01: EV3 3脚 → 面包板 GND</title><path d="M250,1110 L250,1029 L1755,1029 L1755,510 L1590,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M250,1110 L250,1029 L1755,1029 L1755,510 L1590,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="250" cy="1110" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1590" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="E02" data-added="false"><title>E02: EV3 4脚 → 面包板 5V</title><path d="M300,1110 L300,1044 L1700,1044 L1700,485 L1665,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M300,1110 L300,1044 L1700,1044 L1700,485 L1665,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="300" cy="1110" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1665" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E03" data-added="false"><title>E03: EV3 5脚 → h33，进入 A组10kΩ</title><path d="M350,1110 L350,1059 L1490,1059 L1490,760" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M350,1110 L350,1059 L1490,1059 L1490,760" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="350" cy="1110" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1490" cy="760" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E04" data-added="false"><title>E04: EV3 6脚 → h31，进入 B组10kΩ</title><path d="M400,1110 L400,1085 L1440,1085 L1440,760" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M400,1110 L400,1085 L1440,1085 L1440,760" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="400" cy="1110" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1440" cy="760" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E05" data-added="false"><title>E05: A分压点 i26 → GP4 i8（物理6脚）</title><path d="M1315,785 L1285,785 L1285,981 L865,981 L865,785" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1315,785 L1285,785 L1285,981 L865,981 L865,785" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1315" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="865" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="E06" data-added="false"><title>E06: B分压点 i28 → GP5 i9（物理7脚）</title><path d="M1365,785 L1395,785 L1395,1006 L890,1006 L890,785" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1365,785 L1395,785 L1395,1006 L890,1006 L890,785" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1365" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="890" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="S01" data-added="false"><title>S01: 降压 OUT+ → 舵机红线 +5V（独立动力线）</title><path d="M940,190 L1100,190 L1100,125 L1820,125 L1820,650 L1890,650" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,190 L1100,190 L1100,125 L1820,125 L1820,650 L1890,650" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="650" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="S02" data-added="false"><title>S02: 降压 OUT− → 舵机棕线 GND（独立回流）</title><path d="M940,290 L1170,290 L1170,340 L1840,340 L1840,700 L1890,700" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,290 L1170,290 L1170,340 L1840,340 L1840,700 L1890,700" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="290" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="700" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="servo" data-wire="S03" data-added="false"><title>S03: GP8 / 物理11脚：j13 → 舵机黄线信号</title><path d="M990,810 L990,915 L1800,915 L1800,750 L1890,750" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M990,810 L990,915 L1800,915 L1800,750 L1890,750" fill="none" stroke="#ad7418" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="990" cy="810" r="4" fill="#ad7418" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="750" r="4" fill="#ad7418" stroke="white" stroke-width="1.5"/></g>
+<g data-group="control" data-wire="LC01" data-added="true"><title>LC01: 新增 L：GP6 / 物理9脚，j11 → BIN1</title><path d="M940,810 L940,936 L610,936 L610,820 L480,820" fill="none" stroke="#f7d58a" stroke-width="10.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,810 L940,936 L610,936 L610,820 L480,820" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,810 L940,936 L610,936 L610,820 L480,820" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="810" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="820" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
+<g data-group="control" data-wire="LC02" data-added="true"><title>LC02: 新增 L：GP7 / 物理10脚，j12 → BIN2</title><path d="M965,810 L965,961 L630,961 L630,870 L480,870" fill="none" stroke="#f7d58a" stroke-width="10.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M965,810 L965,961 L630,961 L630,870 L480,870" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M965,810 L965,961 L630,961 L630,870 L480,870" fill="none" stroke="#167f74" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="965" cy="810" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/><circle cx="480" cy="870" r="4" fill="#167f74" stroke="white" stroke-width="1.5"/></g>
+<g data-group="motor" data-wire="LM01" data-added="true"><title>LM01: 新增 L：BO1 → L EV3 1脚（独立动力线）</title><path d="M240,920 L70,920 L70,1620 L155,1620 L155,1740" fill="none" stroke="#f7d58a" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,920 L70,920 L70,1620 L155,1620 L155,1740" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,920 L70,920 L70,1620 L155,1620 L155,1740" fill="none" stroke="#8842ac" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="240" cy="920" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/><circle cx="155" cy="1740" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/></g>
+<g data-group="motor" data-wire="LM02" data-added="true"><title>LM02: 新增 L：BO2 → L EV3 2脚（独立动力线）</title><path d="M240,870 L90,870 L90,1600 L210,1600 L210,1740" fill="none" stroke="#f7d58a" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,870 L90,870 L90,1600 L210,1600 L210,1740" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,870 L90,870 L90,1600 L210,1600 L210,1740" fill="none" stroke="#8842ac" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="240" cy="870" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/><circle cx="210" cy="1740" r="4" fill="#8842ac" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="LE01" data-added="true"><title>LE01: 新增 L：EV3 3脚 → 上地轨 −39</title><path d="M265,1740 L265,1680 L1790,1680 L1790,530 L1640,530 L1640,510" fill="none" stroke="#f7d58a" stroke-width="10.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M265,1740 L265,1680 L1790,1680 L1790,530 L1640,530 L1640,510" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M265,1740 L265,1680 L1790,1680 L1790,530 L1640,530 L1640,510" fill="none" stroke="#344454" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="265" cy="1740" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1640" cy="510" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="LE02" data-added="true"><title>LE02: 新增 L：EV3 4脚 → 上5V轨 +39</title><path d="M320,1740 L320,1660 L1810,1660 L1810,465 L1640,465 L1640,485" fill="none" stroke="#f7d58a" stroke-width="10.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M320,1740 L320,1660 L1810,1660 L1810,465 L1640,465 L1640,485" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M320,1740 L320,1660 L1810,1660 L1810,465 L1640,465 L1640,485" fill="none" stroke="#cf421f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="320" cy="1740" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1640" cy="485" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="LE03" data-added="true"><title>LE03: 新增 L：EV3 5脚 → h37，进入 LR1 10kΩ</title><path d="M375,1740 L375,1640 L1715,1640 L1715,795 L1590,795 L1590,760" fill="none" stroke="#f7d58a" stroke-width="10.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M375,1740 L375,1640 L1715,1640 L1715,795 L1590,795 L1590,760" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M375,1740 L375,1640 L1715,1640 L1715,795 L1590,795 L1590,760" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="375" cy="1740" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1590" cy="760" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="LE04" data-added="true"><title>LE04: 新增 L：EV3 6脚 → h40，进入 LR3 10kΩ</title><path d="M430,1740 L430,1620 L1725,1620 L1725,775 L1665,775 L1665,760" fill="none" stroke="#f7d58a" stroke-width="10.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M430,1740 L430,1620 L1725,1620 L1725,775 L1665,775 L1665,760" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M430,1740 L430,1620 L1725,1620 L1725,775 L1665,775 L1665,760" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="430" cy="1740" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1665" cy="760" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="LE05" data-added="true"><title>LE05: 新增 L：A分压点 i34 → GP12 i18（物理16脚）</title><path d="M1515,785 L1515,1195 L1115,1195 L1115,785" fill="none" stroke="#f7d58a" stroke-width="10.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1515,785 L1515,1195 L1115,1195 L1115,785" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1515,785 L1515,1195 L1115,1195 L1115,785" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1515" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1115" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder" data-wire="LE06" data-added="true"><title>LE06: 新增 L：B分压点 i36 → GP13 i19（物理17脚）</title><path d="M1565,785 L1565,1210 L1140,1210 L1140,785" fill="none" stroke="#f7d58a" stroke-width="10.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1565,785 L1565,1210 L1140,1210 L1140,785" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1565,785 L1565,1210 L1140,1210 L1140,785" fill="none" stroke="#236ac2" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1565" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/><circle cx="1140" cy="785" r="4" fill="#236ac2" stroke="white" stroke-width="1.5"/></g>
+<g data-group="power" data-wire="LS01" data-added="true"><title>LS01: 新增 L：降压 OUT+ → L舵机 +5V（独立动力线）</title><path d="M940,190 L1110,190 L1110,110 L2190,110 L2190,1700 L1830,1700 L1830,1795 L1890,1795" fill="none" stroke="#f7d58a" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,190 L1110,190 L1110,110 L2190,110 L2190,1700 L1830,1700 L1830,1795 L1890,1795" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,190 L1110,190 L1110,110 L2190,110 L2190,1700 L1830,1700 L1830,1795 L1890,1795" fill="none" stroke="#cf421f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="190" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="1795" r="4" fill="#cf421f" stroke="white" stroke-width="1.5"/></g>
+<g data-group="ground" data-wire="LS02" data-added="true"><title>LS02: 新增 L：降压 OUT− → L舵机 GND（独立回流）</title><path d="M940,290 L1180,290 L1180,350 L2170,350 L2170,1680 L1850,1680 L1850,1835 L1890,1835" fill="none" stroke="#f7d58a" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,290 L1180,290 L1180,350 L2170,350 L2170,1680 L1850,1680 L1850,1835 L1890,1835" fill="none" stroke="#fffdf8" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M940,290 L1180,290 L1180,350 L2170,350 L2170,1680 L1850,1680 L1850,1835 L1890,1835" fill="none" stroke="#344454" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="940" cy="290" r="4" fill="#344454" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="1835" r="4" fill="#344454" stroke="white" stroke-width="1.5"/></g>
+<g data-group="servo" data-wire="LS03" data-added="true"><title>LS03: 新增 L：GP9 / 物理12脚，j14 → L舵机信号</title><path d="M1015,810 L1015,990 L1860,990 L1860,1875 L1890,1875" fill="none" stroke="#f7d58a" stroke-width="10.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1015,810 L1015,990 L1860,990 L1860,1875 L1890,1875" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M1015,810 L1015,990 L1860,990 L1860,1875 L1890,1875" fill="none" stroke="#ad7418" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1015" cy="810" r="4" fill="#ad7418" stroke="white" stroke-width="1.5"/><circle cx="1890" cy="1875" r="4" fill="#ad7418" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>R1: BB.f33 → BB.f26, 10000 Ω</title><path d="M1490,710 L1315,710" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1375.5" y="702.0" width="54" height="16" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1402.5" y="693.0" font-size="14" fill="#725224" text-anchor="middle" font-weight="700">10kΩ</text><circle cx="1490" cy="710" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1315" cy="710" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>R2: BB.j26 → BB.G26, 20000 Ω</title><path d="M1315,810 L1315,880" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1307.0" y="822.0" width="16" height="46" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1298.0" y="848.0" font-size="14" fill="#725224" text-anchor="end" font-weight="700">20kΩ</text><circle cx="1315" cy="810" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1315" cy="880" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>R3: BB.g31 → BB.g28, 10000 Ω</title><path d="M1440,735 L1365,735" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1375.5" y="727.0" width="54" height="16" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1402.5" y="760.0" font-size="14" fill="#725224" text-anchor="middle" font-weight="700">10kΩ</text><circle cx="1440" cy="735" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1365" cy="735" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>R4: BB.j28 → BB.G28, 20000 Ω</title><path d="M1365,810 L1365,880" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1357.0" y="822.0" width="16" height="46" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1382.0" y="848.0" font-size="14" fill="#725224" text-anchor="start" font-weight="700">20kΩ</text><circle cx="1365" cy="810" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1365" cy="880" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>LR1: BB.f37 → BB.f34, 10000 Ω</title><path d="M1590,710 L1515,710" fill="none" stroke="#f7d58a" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M1590,710 L1515,710" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1525.5" y="702.0" width="54" height="16" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1552.5" y="688.0" font-size="12" fill="#805000" text-anchor="middle" font-weight="700">LR1</text><text x="1552.5" y="734.0" font-size="13" fill="#725224" text-anchor="middle" font-weight="700">10kΩ</text><circle cx="1590" cy="710" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1515" cy="710" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>LR2: BB.j34 → BB.G34, 20000 Ω</title><path d="M1515,810 L1515,880" fill="none" stroke="#f7d58a" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M1515,810 L1515,880" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1507.0" y="822.0" width="16" height="46" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1515.0" y="891.0" font-size="12" fill="#805000" text-anchor="middle" font-weight="700">LR2</text><text x="1515.0" y="849.0" font-size="10" fill="#725224" text-anchor="middle" font-weight="700">20k</text><circle cx="1515" cy="810" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1515" cy="880" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>LR3: BB.g40 → BB.g36, 10000 Ω</title><path d="M1665,735 L1565,735" fill="none" stroke="#f7d58a" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M1665,735 L1565,735" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1588.0" y="727.0" width="54" height="16" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1615.0" y="713.0" font-size="12" fill="#805000" text-anchor="middle" font-weight="700">LR3</text><text x="1615.0" y="759.0" font-size="13" fill="#725224" text-anchor="middle" font-weight="700">10kΩ</text><circle cx="1665" cy="735" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1565" cy="735" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<g data-group="encoder"><title>LR4: BB.j36 → BB.G36, 20000 Ω</title><path d="M1565,810 L1565,880" fill="none" stroke="#f7d58a" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M1565,810 L1565,880" fill="none" stroke="#817664" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="1557.0" y="822.0" width="16" height="46" rx="4" fill="#ead5ab" stroke="#967c4e"/><text x="1565.0" y="891.0" font-size="12" fill="#805000" text-anchor="middle" font-weight="700">LR4</text><text x="1565.0" y="849.0" font-size="10" fill="#725224" text-anchor="middle" font-weight="700">20k</text><circle cx="1565" cy="810" r="3" fill="#725224" stroke="white" stroke-width="1.5"/><circle cx="1565" cy="880" r="3" fill="#725224" stroke="white" stroke-width="1.5"/></g>
+<text x="120" y="602" font-size="15" fill="#cf421f" text-anchor="start" font-weight="700">P07 · 9V</text>
+<text x="195" y="746" font-size="15" fill="#344454" text-anchor="start" font-weight="700">P08 · GND</text>
+<text x="320" y="330" font-size="15" fill="#344454" text-anchor="start" font-weight="700">P04 · 独立回流</text>
+<text x="491" y="999" font-size="15" fill="#344454" text-anchor="start" font-weight="700">P10 → 地轨</text>
+<text x="593" y="715" font-size="15" fill="#167f74" text-anchor="start" font-weight="700">C01</text>
+<text x="540" y="651" font-size="15" fill="#167f74" text-anchor="start" font-weight="700">C02</text>
+<text x="611" y="757" font-size="15" fill="#167f74" text-anchor="start" font-weight="700">C03 · 3V3</text>
+<text x="1130" y="1120" font-size="15" fill="#236ac2" text-anchor="start" font-weight="700">E03 · A</text>
+<text x="1190" y="1110" font-size="15" fill="#236ac2" text-anchor="start" font-weight="700">E04 · B</text>
+<text x="155" y="1761" font-size="14" fill="#805000" text-anchor="middle" font-weight="700">1</text>
+<text x="210" y="1761" font-size="14" fill="#805000" text-anchor="middle" font-weight="700">2</text>
+<text x="265" y="1761" font-size="14" fill="#805000" text-anchor="middle" font-weight="700">3</text>
+<text x="320" y="1761" font-size="14" fill="#805000" text-anchor="middle" font-weight="700">4</text>
+<text x="375" y="1761" font-size="14" fill="#805000" text-anchor="middle" font-weight="700">5</text>
+<text x="430" y="1761" font-size="14" fill="#805000" text-anchor="middle" font-weight="700">6</text>
+<rect x="503" y="796" width="48" height="19" rx="2" fill="#fff7e6" stroke="none"/>
+<text x="505" y="810" font-size="14" fill="#805000" text-anchor="start" font-weight="700">LC01</text>
+<rect x="503" y="846" width="48" height="19" rx="2" fill="#fff7e6" stroke="none"/>
+<text x="505" y="860" font-size="14" fill="#805000" text-anchor="start" font-weight="700">LC02</text>
+<rect x="1133" y="1136" width="48" height="19" rx="2" fill="#fff7e6" stroke="none"/>
+<text x="1135" y="1150" font-size="14" fill="#805000" text-anchor="start" font-weight="700">LE05</text>
+<rect x="1158" y="1161" width="48" height="19" rx="2" fill="#fff7e6" stroke="none"/>
+<text x="1160" y="1175" font-size="14" fill="#805000" text-anchor="start" font-weight="700">LE06</text>
+<rect x="133" y="1708" width="48" height="19" rx="2" fill="#fff7e6" stroke="none"/>
+<text x="135" y="1722" font-size="14" fill="#805000" text-anchor="start" font-weight="700">LM01</text>
+<rect x="188" y="1708" width="48" height="19" rx="2" fill="#fff7e6" stroke="none"/>
+<text x="190" y="1722" font-size="14" fill="#805000" text-anchor="start" font-weight="700">LM02</text>
+<rect x="243" y="1708" width="48" height="19" rx="2" fill="#fff7e6" stroke="none"/>
+<text x="245" y="1722" font-size="14" fill="#805000" text-anchor="start" font-weight="700">LE01</text>
+<rect x="298" y="1708" width="48" height="19" rx="2" fill="#fff7e6" stroke="none"/>
+<text x="300" y="1722" font-size="14" fill="#805000" text-anchor="start" font-weight="700">LE02</text>
+<rect x="353" y="1708" width="48" height="19" rx="2" fill="#fff7e6" stroke="none"/>
+<text x="355" y="1722" font-size="14" fill="#805000" text-anchor="start" font-weight="700">LE03</text>
+<rect x="408" y="1708" width="48" height="19" rx="2" fill="#fff7e6" stroke="none"/>
+<text x="410" y="1722" font-size="14" fill="#805000" text-anchor="start" font-weight="700">LE04</text>
+<text x="2088" y="1798" font-size="13" fill="#805000" text-anchor="start" font-weight="700">LS01</text>
+<text x="2088" y="1838" font-size="13" fill="#805000" text-anchor="start" font-weight="700">LS02</text>
+<text x="2088" y="1878" font-size="13" fill="#805000" text-anchor="start" font-weight="700">LS03</text>
+</svg></div></div><p class="small">面包板坐标：Pico 两排插在 c3～c22、h3～h22，USB 朝左。面包板实际通常超过40列，此处仅画使用区域；两半电源轨用图中的短跳线接通。未用的另一条正电源轨省略。</p></section>
+<section><h2>先看清这些实物连接</h2><div class="grid"><div><h3>不用让动力电流经过面包板</h3><ul><li>9V → VM、驱动 GND → 电源负极，以及驱动输出 → 马达，全部用独立导线直接连接模块；马达加工线用现有普通接线端子转接。</li><li>模块公排针接母头线端，端子夹持对应线材；动力线和线端额定电流需满足马达启动电流，普通细杜邦跳线只用于信号。</li><li>DRV8833 放在绝缘面并固定，底部引脚不要碰金属或彼此短接。模块不需要焊死。</li><li>DC-005 正极焊脚引出两根线，分别接 VM 与降压 IN+，焊点用热缩管等绝缘；负极直接接 DRV8833 左排第3脚 GND。模块端仍用母头插接。</li></ul></div><div><h3>使用现有配件</h3><ul><li>9V 电源、DC-005、已有降压模块，输出调到 5.0V。此接法要求降压 IN− 与 OUT− 内部共地，完整接线时 OUT− 直接接舵机地。</li><li>Pico、DRV8833、面包板、<span data-mode-only="R">两只10kΩ与两只20kΩ。</span><span data-mode-only="RL" hidden>共四只10kΩ与四只20kΩ；L 另需一套马达、舵机和独立线束。</span></li><li>已修复/重新制作的 EV3 线；散铜丝先接端子，再转成面包板公头线。</li><li>本图不额外加电容；保留模块自带电容。降压模块不要求螺钉或支柱，避免裸露焊盘接触导体即可。</li></ul></div></div><p><strong>朝向说明：</strong>DRV8833 元件面朝上，左排从上到下为 VM、NC、GND、AO1、AO2、BO2、BO1、GND；右排为 NC、AIN2、AIN1、STBY、BIN1、BIN2、NC、GND。与你提供的丝印一致。DC-005 的三个焊脚形状和降压模块尺寸未确认，图中只标功能，不猜焊脚顺序；DC-005 切换脚留空绝缘。</p></section>
+<section><h2>全部导线与分压孔位 · <span data-mode-label>原 R</span></h2><p><code>BB.+</code> 是上方5V轨，<code>BB.-</code> 是上方地轨，<code>BB.G</code> 是下方地轨。每个数字列的 a～e 相通、f～j 相通，中槽两侧不通。DRV.GND-L1 是左排第3脚，DRV.GND-L2 是左排第8脚，DRV.GND-R 是右排第8脚；这三个脚通过模块内部连接共地。导线编号与图中提示、网络表一致。DRV.GND-L2 留空。</p><div class="table-scroll"><div data-mode-only="R"><table><thead><tr><th>编号</th><th>怎么接</th><th>图内端点</th></tr></thead><tbody><tr data-group="power" data-added="false"><td>P03</td><td>DC 正极第一根线 → 降压 IN+</td><td>DC.+9V → BUCK.IN+</td></tr><tr data-group="ground" data-added="false"><td>P04</td><td>DC 负极 → 降压 IN−（独立回流）</td><td>DC.GND → BUCK.IN−</td></tr><tr data-group="power" data-added="false"><td>P07</td><td>DC 正极第二根线 → 驱动 VM（直接线）</td><td>DC.+9V → DRV.VM</td></tr><tr data-group="ground" data-added="false"><td>P08</td><td>DC 负极 → 驱动左排第3脚 GND（直接线）</td><td>DC.GND → DRV.GND-L1</td></tr><tr data-group="power" data-added="false"><td>P09</td><td>降压 OUT+ 直接接面包板上 + 第38孔</td><td>BUCK.OUT+ → BB.+38</td></tr><tr data-group="ground" data-added="false"><td>P10</td><td>驱动右排第8脚 GND → 面包板上 − 第38孔</td><td>DRV.GND-R → BB.-38</td></tr><tr data-group="ground" data-added="false"><td>G01</td><td>Pico GND：a5 → 上 − 第5孔</td><td>BB.a5 → BB.-5</td></tr><tr data-group="ground" data-added="false"><td>G02</td><td>上下地轨相连</td><td>BB.-40 → BB.G40</td></tr><tr data-group="ground" data-added="false"><td>G03</td><td>跨接该电源轨中间断口（有断口时）</td><td>BB.-20 → BB.-21</td></tr><tr data-group="ground" data-added="false"><td>G04</td><td>跨接该电源轨中间断口（有断口时）</td><td>BB.G20 → BB.G21</td></tr><tr data-group="power" data-added="false"><td>P11</td><td>跨接该电源轨中间断口（有断口时）</td><td>BB.+20 → BB.+21</td></tr><tr data-group="control" data-added="false"><td>C01</td><td>GP2 / 物理4脚：j6 → AIN1</td><td>BB.j6 → DRV.AIN1</td></tr><tr data-group="control" data-added="false"><td>C02</td><td>GP3 / 物理5脚：j7 → AIN2</td><td>BB.j7 → DRV.AIN2</td></tr><tr data-group="control" data-added="false"><td>C03</td><td>Pico 3V3 / 物理36脚：a7 → STBY</td><td>BB.a7 → DRV.STBY</td></tr><tr data-group="motor" data-added="false"><td>M01</td><td>AO1 → EV3 1脚（直接线）</td><td>DRV.AO1 → EV3.1</td></tr><tr data-group="motor" data-added="false"><td>M02</td><td>AO2 → EV3 2脚（直接线）</td><td>DRV.AO2 → EV3.2</td></tr><tr data-group="ground" data-added="false"><td>E01</td><td>EV3 3脚 → 面包板 GND</td><td>EV3.3 → BB.-37</td></tr><tr data-group="power" data-added="false"><td>E02</td><td>EV3 4脚 → 面包板 5V</td><td>EV3.4 → BB.+40</td></tr><tr data-group="encoder" data-added="false"><td>E03</td><td>EV3 5脚 → h33，进入 A组10kΩ</td><td>EV3.5 → BB.h33</td></tr><tr data-group="encoder" data-added="false"><td>E04</td><td>EV3 6脚 → h31，进入 B组10kΩ</td><td>EV3.6 → BB.h31</td></tr><tr data-group="encoder" data-added="false"><td>E05</td><td>A分压点 i26 → GP4 i8（物理6脚）</td><td>BB.i26 → BB.i8</td></tr><tr data-group="encoder" data-added="false"><td>E06</td><td>B分压点 i28 → GP5 i9（物理7脚）</td><td>BB.i28 → BB.i9</td></tr><tr data-group="power" data-added="false"><td>S01</td><td>降压 OUT+ → 舵机红线 +5V（独立动力线）</td><td>BUCK.OUT+ → SERVO.V+</td></tr><tr data-group="ground" data-added="false"><td>S02</td><td>降压 OUT− → 舵机棕线 GND（独立回流）</td><td>BUCK.OUT− → SERVO.GND</td></tr><tr data-group="servo" data-added="false"><td>S03</td><td>GP8 / 物理11脚：j13 → 舵机黄线信号</td><td>BB.j13 → SERVO.SIG</td></tr></tbody></table></div><div data-mode-only="RL" hidden><table><thead><tr><th>编号</th><th>怎么接</th><th>图内端点</th></tr></thead><tbody><tr data-group="power" data-added="false"><td>P03</td><td>DC 正极第一根线 → 降压 IN+</td><td>DC.+9V → BUCK.IN+</td></tr><tr data-group="ground" data-added="false"><td>P04</td><td>DC 负极 → 降压 IN−（独立回流）</td><td>DC.GND → BUCK.IN−</td></tr><tr data-group="power" data-added="false"><td>P07</td><td>DC 正极第二根线 → 驱动 VM（直接线）</td><td>DC.+9V → DRV.VM</td></tr><tr data-group="ground" data-added="false"><td>P08</td><td>DC 负极 → 驱动左排第3脚 GND（直接线）</td><td>DC.GND → DRV.GND-L1</td></tr><tr data-group="power" data-added="false"><td>P09</td><td>降压 OUT+ 直接接面包板上 + 第38孔</td><td>BUCK.OUT+ → BB.+38</td></tr><tr data-group="ground" data-added="false"><td>P10</td><td>驱动右排第8脚 GND → 面包板上 − 第38孔</td><td>DRV.GND-R → BB.-38</td></tr><tr data-group="ground" data-added="false"><td>G01</td><td>Pico GND：a5 → 上 − 第5孔</td><td>BB.a5 → BB.-5</td></tr><tr data-group="ground" data-added="false"><td>G02</td><td>上下地轨相连</td><td>BB.-40 → BB.G40</td></tr><tr data-group="ground" data-added="false"><td>G03</td><td>跨接该电源轨中间断口（有断口时）</td><td>BB.-20 → BB.-21</td></tr><tr data-group="ground" data-added="false"><td>G04</td><td>跨接该电源轨中间断口（有断口时）</td><td>BB.G20 → BB.G21</td></tr><tr data-group="power" data-added="false"><td>P11</td><td>跨接该电源轨中间断口（有断口时）</td><td>BB.+20 → BB.+21</td></tr><tr data-group="control" data-added="false"><td>C01</td><td>GP2 / 物理4脚：j6 → AIN1</td><td>BB.j6 → DRV.AIN1</td></tr><tr data-group="control" data-added="false"><td>C02</td><td>GP3 / 物理5脚：j7 → AIN2</td><td>BB.j7 → DRV.AIN2</td></tr><tr data-group="control" data-added="false"><td>C03</td><td>Pico 3V3 / 物理36脚：a7 → STBY</td><td>BB.a7 → DRV.STBY</td></tr><tr data-group="motor" data-added="false"><td>M01</td><td>AO1 → EV3 1脚（直接线）</td><td>DRV.AO1 → EV3.1</td></tr><tr data-group="motor" data-added="false"><td>M02</td><td>AO2 → EV3 2脚（直接线）</td><td>DRV.AO2 → EV3.2</td></tr><tr data-group="ground" data-added="false"><td>E01</td><td>EV3 3脚 → 面包板 GND</td><td>EV3.3 → BB.-37</td></tr><tr data-group="power" data-added="false"><td>E02</td><td>EV3 4脚 → 面包板 5V</td><td>EV3.4 → BB.+40</td></tr><tr data-group="encoder" data-added="false"><td>E03</td><td>EV3 5脚 → h33，进入 A组10kΩ</td><td>EV3.5 → BB.h33</td></tr><tr data-group="encoder" data-added="false"><td>E04</td><td>EV3 6脚 → h31，进入 B组10kΩ</td><td>EV3.6 → BB.h31</td></tr><tr data-group="encoder" data-added="false"><td>E05</td><td>A分压点 i26 → GP4 i8（物理6脚）</td><td>BB.i26 → BB.i8</td></tr><tr data-group="encoder" data-added="false"><td>E06</td><td>B分压点 i28 → GP5 i9（物理7脚）</td><td>BB.i28 → BB.i9</td></tr><tr data-group="power" data-added="false"><td>S01</td><td>降压 OUT+ → 舵机红线 +5V（独立动力线）</td><td>BUCK.OUT+ → SERVO.V+</td></tr><tr data-group="ground" data-added="false"><td>S02</td><td>降压 OUT− → 舵机棕线 GND（独立回流）</td><td>BUCK.OUT− → SERVO.GND</td></tr><tr data-group="servo" data-added="false"><td>S03</td><td>GP8 / 物理11脚：j13 → 舵机黄线信号</td><td>BB.j13 → SERVO.SIG</td></tr><tr data-group="control" data-added="true"><td>LC01</td><td>新增 L：GP6 / 物理9脚，j11 → BIN1</td><td>BB.j11 → DRV.BIN1</td></tr><tr data-group="control" data-added="true"><td>LC02</td><td>新增 L：GP7 / 物理10脚，j12 → BIN2</td><td>BB.j12 → DRV.BIN2</td></tr><tr data-group="motor" data-added="true"><td>LM01</td><td>新增 L：BO1 → L EV3 1脚（独立动力线）</td><td>DRV.BO1 → L.EV3.1</td></tr><tr data-group="motor" data-added="true"><td>LM02</td><td>新增 L：BO2 → L EV3 2脚（独立动力线）</td><td>DRV.BO2 → L.EV3.2</td></tr><tr data-group="ground" data-added="true"><td>LE01</td><td>新增 L：EV3 3脚 → 上地轨 −39</td><td>L.EV3.3 → BB.-39</td></tr><tr data-group="power" data-added="true"><td>LE02</td><td>新增 L：EV3 4脚 → 上5V轨 +39</td><td>L.EV3.4 → BB.+39</td></tr><tr data-group="encoder" data-added="true"><td>LE03</td><td>新增 L：EV3 5脚 → h37，进入 LR1 10kΩ</td><td>L.EV3.5 → BB.h37</td></tr><tr data-group="encoder" data-added="true"><td>LE04</td><td>新增 L：EV3 6脚 → h40，进入 LR3 10kΩ</td><td>L.EV3.6 → BB.h40</td></tr><tr data-group="encoder" data-added="true"><td>LE05</td><td>新增 L：A分压点 i34 → GP12 i18（物理16脚）</td><td>BB.i34 → BB.i18</td></tr><tr data-group="encoder" data-added="true"><td>LE06</td><td>新增 L：B分压点 i36 → GP13 i19（物理17脚）</td><td>BB.i36 → BB.i19</td></tr><tr data-group="power" data-added="true"><td>LS01</td><td>新增 L：降压 OUT+ → L舵机 +5V（独立动力线）</td><td>BUCK.OUT+ → L.SERVO.V+</td></tr><tr data-group="ground" data-added="true"><td>LS02</td><td>新增 L：降压 OUT− → L舵机 GND（独立回流）</td><td>BUCK.OUT− → L.SERVO.GND</td></tr><tr data-group="servo" data-added="true"><td>LS03</td><td>新增 L：GP9 / 物理12脚，j14 → L舵机信号</td><td>BB.j14 → L.SERVO.SIG</td></tr></tbody></table></div></div><h3>分压电阻 · <span id="resistor-count">4 只</span></h3><div data-mode-only="R"><table><thead><tr><th>编号</th><th>阻值</th><th>两端插孔（无正反）</th></tr></thead><tbody><tr data-group="encoder" data-added="false"><td>R1</td><td>10kΩ</td><td>f33 ↔ f26</td></tr><tr data-group="encoder" data-added="false"><td>R2</td><td>20kΩ</td><td>j26 ↔ G26</td></tr><tr data-group="encoder" data-added="false"><td>R3</td><td>10kΩ</td><td>g31 ↔ g28</td></tr><tr data-group="encoder" data-added="false"><td>R4</td><td>20kΩ</td><td>j28 ↔ G28</td></tr></tbody></table></div><div data-mode-only="RL" hidden><table><thead><tr><th>编号</th><th>阻值</th><th>两端插孔（无正反）</th></tr></thead><tbody><tr data-group="encoder" data-added="false"><td>R1</td><td>10kΩ</td><td>f33 ↔ f26</td></tr><tr data-group="encoder" data-added="false"><td>R2</td><td>20kΩ</td><td>j26 ↔ G26</td></tr><tr data-group="encoder" data-added="false"><td>R3</td><td>10kΩ</td><td>g31 ↔ g28</td></tr><tr data-group="encoder" data-added="false"><td>R4</td><td>20kΩ</td><td>j28 ↔ G28</td></tr><tr data-group="encoder" data-added="true"><td>LR1</td><td>10kΩ</td><td>f37 ↔ f34</td></tr><tr data-group="encoder" data-added="true"><td>LR2</td><td>20kΩ</td><td>j34 ↔ G34</td></tr><tr data-group="encoder" data-added="true"><td>LR3</td><td>10kΩ</td><td>g40 ↔ g36</td></tr><tr data-group="encoder" data-added="true"><td>LR4</td><td>20kΩ</td><td>j36 ↔ G36</td></tr></tbody></table></div><p>GP4 接第26列分压点，GP5 接第28列分压点；黄 / 蓝线接10kΩ另一端。R 的两只20kΩ都接下方地轨。程序保持 <code>ENC_PULLUP=False</code>（编码器构造参数 <code>pull_up=False</code>）。</p><div data-mode-only="RL" hidden><p>L：EV3 5脚 → h37 → LR1（10kΩ，f37–f34）→ 第34列 → i18 / GP12，LR2（20kΩ，j34–G34）接地；EV3 6脚 → h40 → LR3（10kΩ，g40–g36）→ 第36列 → i19 / GP13，LR4（20kΩ，j36–G36）接地。R / L 四个编码器输入与分压节点各自独立，不能并联，也不能直连 5V。</p><p>几何核对采用 2.54mm 孔距：LR1 横跨 3 格（7.62mm），LR3 横跨 4 格（10.16mm）；它们位于 Pico 末端第22列之外。20kΩ 接下地轨的跨度依实际面包板而定；尚未收到电阻体尺寸，须断电确认引脚可达、无挤压且裸腿不相碰。图中的轨断口仅为模型，需核对实物通断。</p></div></section>
 
-<section><h2>接齐后，按命令分项测试</h2><ol><li><strong>断电检查：</strong>降压输出已空载调到5.0V；核对 P04 直接回电源负极，舵机红／棕线直连降压输出，全部设备共地。不放魔方，确认机械头及联动机构全程自由；首次舵机定位先脱开连杆，曲柄本身也要自由活动。</li><li><strong>Pico先接USB：</strong>运行 <code>import arm_test; arm_test.main()</code>，出现 <code>arm&gt;</code> 后输入 <code>off</code>。初始化时马达滑行、舵机 PWM 关闭；这只是软件不发命令，不能保证硬件上电不抖动。</li><li><strong>再打开9V：</strong>观察异常；马达或舵机自己转、发烫就切断动力电源（含舵机5V）。输入 <code>enc</code>，轻转机械头确认计数变化。确认无魔方、机构全程自由且供电接线已核验后，输入 <code>motor_test unloaded</code>；它只授权空载测试，不会自动转动。再按单臂说明执行 check、确认方向与齿轮比。off、异常、Ctrl+C、退出或重启都会撤销模式，继续前重新检查并声明；空载模式拒绝 load/cube 等带载测试及所有舵机开合预设。</li><li><strong>标定舵机：</strong>首次必须断电脱开连杆，使用 <code>servo_cal ... detached</code> 声明后才发基准脉冲；声明会话会停止马达与 PWM，并撤销空载马达模式。断电装接且核实轴标记、基准姿态和行程后，才用 aligned 会话小步标定；500～2500µs 只是驱动包络，不是机械安全区间，首次定位不受小步保护。端点与安全工作区间默认未设置，<code>SERVO_CALIBRATED=False</code>；手动会话或未完成标定时 open、close、grip、cycle 均拒绝，详见 <a href="../single_arm.md#servo-calibration">完整舵机标定流程</a>。</li><li><strong>先测完整开合时序：</strong>默认 <code>SERVO_MOVE_MS=None</code>、<code>SERVO_TIMING_CONFIRMED=False</code>。实测端点、安全工作区间并确认 v4/R 身份后，设置端点标定标志，自行选择保守的临时等待时间（1～5000ms整数，不能沿用旧120ms），上传并 Ctrl+D 重载。只单次 open 或 close，观察完全停稳才发下条，录像测完整行程；此时 grip、cycle 和普通旋转仍被锁住，显式空载马达模式是例外。</li><li><strong>旋转与联合测试：</strong>取开／合中较慢的实测时长加余量回填 <code>SERVO_MOVE_MS</code>，设置 <code>SERVO_TIMING_CONFIRMED=True</code>，重新上传并 Ctrl+D 重载后，再按 <a href="../single_arm.md#5-测试步骤">单臂测试第0～9步</a>继续。每步通过后再做下一步，无需反复插拔舵机；机构或供电改变后重新确认时序。</li></ol><p>大马达空载闭环已通过，见<a href="../single_arm-results.md">实测记录</a>；这不代表 v4 机械头、舵机标定或整机供电已经实测通过。</p></section>
-<section><h2>可选排障：暂时隔离舵机</h2><p>只有排查复位、供电跌落或驱动异常时，才需要断开 USB 和9V后暂时拔下舵机，单独检查马达和编码器。P04 保持直接接电源负极。排障后断电接回舵机。</p></section>
-<section><h2>依据</h2><ul><li><a href="https://www.lego.com/cdn/cs/set/assets/blt86e79bb287a0d0b1/Appendix_LEGO_MINDSTORMS_EV3_programmable_brick_main_hardware_schematics.pdf">LEGO 官方 EV3 原理图</a>：Output 1/2为动力端、3为地、4为5V、5/6为反馈。</li><li><a href="https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf">Raspberry Pi Pico 官方数据手册</a>：物理脚位与GPIO对应。</li><li><a href="https://www.ti.com/lit/ds/symlink/drv8833.pdf">TI DRV8833 数据手册</a>：输入控制逻辑；模块丝印排列使用用户实物确认结果。</li></ul></section></main>
-<script>document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});document.querySelectorAll('.canvas [data-group]').forEach(x=>x.style.opacity=(k==='all'||x.dataset.group===k)?'1':'.1')}));document.querySelector('[data-filter="all"]').click();</script></html>
+<section data-mode-only="R"><h2>R 单臂接齐后，按命令分项测试</h2><ol><li><strong>断电检查：</strong>降压输出已空载调到5.0V；核对 P04 直接回电源负极，舵机红／棕线直连降压输出，全部设备共地。不放魔方，确认机械头及联动机构全程自由；首次舵机定位先脱开连杆，曲柄本身也要自由活动。</li><li><strong>Pico先接USB：</strong>运行 <code>import arm_test; arm_test.main()</code>，出现 <code>arm&gt;</code> 后输入 <code>off</code>。初始化时马达滑行、舵机 PWM 关闭；这只是软件不发命令，不能保证硬件上电不抖动。</li><li><strong>再打开9V：</strong>观察异常；马达或舵机自己转、发烫就切断动力电源（含舵机5V）。输入 <code>enc</code>，轻转机械头确认计数变化。确认无魔方、机构全程自由且供电接线已核验后，输入 <code>motor_test unloaded</code>；它只授权空载测试，不会自动转动。再按单臂说明执行 check、确认方向与齿轮比。off、异常、Ctrl+C、退出或重启都会撤销模式，继续前重新检查并声明；空载模式拒绝 load/cube 等带载测试及所有舵机开合预设。</li><li><strong>标定舵机：</strong>首次必须断电脱开连杆，使用 <code>servo_cal ... detached</code> 声明后才发基准脉冲；声明会话会停止马达与 PWM，并撤销空载马达模式。断电装接且核实轴标记、基准姿态和行程后，才用 aligned 会话小步标定；500～2500µs 只是驱动包络，不是机械安全区间，首次定位仍可能大幅跳转；后续允许在声明区间内指定绝对脉宽，仍须核对机械行程。端点与安全工作区间默认未设置，<code>SERVO_CALIBRATED=False</code>；手动会话或未完成标定时 open、close、grip、cycle 均拒绝，详见 <a href="../single_arm.md#servo-calibration">完整舵机标定流程</a>。</li><li><strong>先测完整开合时序：</strong>默认 <code>SERVO_MOVE_MS=None</code>、<code>SERVO_TIMING_CONFIRMED=False</code>。实测端点、安全工作区间并确认 v4/R 身份后，设置端点标定标志，自行选择保守的临时等待时间（1～5000ms整数，不能沿用旧120ms），上传并 Ctrl+D 重载。只单次 open 或 close，观察完全停稳才发下条，录像测完整行程；此时 grip、cycle 和普通旋转仍被锁住，显式空载马达模式是例外。</li><li><strong>旋转与联合测试：</strong>取开／合中较慢的实测时长加余量回填 <code>SERVO_MOVE_MS</code>，设置 <code>SERVO_TIMING_CONFIRMED=True</code>，重新上传并 Ctrl+D 重载后，再按 <a href="../single_arm.md#5-测试步骤">单臂测试第0～9步</a>继续。每步通过后再做下一步，无需反复插拔舵机；机构或供电改变后重新确认时序。</li></ol><p>大马达空载闭环已通过，见<a href="../single_arm-results.md">实测记录</a>；这不代表 v4 机械头、舵机标定或整机供电已经实测通过。</p></section>
+<section data-mode-only="R"><h2>可选排障：暂时隔离舵机</h2><p>只有排查复位、供电跌落或驱动异常时，才需要断开 USB 和9V后暂时拔下舵机，单独检查马达和编码器。P04 保持直接接电源负极。排障后断电接回舵机。</p></section>
+<section data-mode-only="RL" hidden><h2>R+L 的验收边界</h2><p>先断开 USB 与9V，确认健康 B 路确实空闲、每个孔只占一个端点、四组分压独立且每路为10kΩ串联＋20kΩ对地。确认各设备共地，舵机正负线独立直达降压输出，保留 P04 直接回 DC-005 负极。</p><p>后续受控电气验收需先将分压点与 Pico 断开，分别测量四路输出高低电平，再断电接回；分压点不可超过3.3V。电源启动瞬态、两路电机电流、驱动温升和线端承载仍待实际验收。本页没有双臂上电或运动测试步骤；原 R 的空载验证不覆盖新增 L。</p></section><section><h2>依据</h2><ul><li><a href="https://www.lego.com/cdn/cs/set/assets/blt86e79bb287a0d0b1/Appendix_LEGO_MINDSTORMS_EV3_programmable_brick_main_hardware_schematics.pdf">LEGO 官方 EV3 原理图</a>：Output 1/2为动力端、3为地、4为5V、5/6为反馈。</li><li><a href="https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf">Raspberry Pi Pico 官方数据手册</a>：物理脚位与GPIO对应。</li><li><a href="https://www.ti.com/lit/ds/symlink/drv8833.pdf">TI DRV8833 数据手册</a>：输入控制逻辑；模块丝印排列使用用户实物确认结果。</li></ul></section></main>
+<script>
+let mode='R', filter='all';
+function applyFilter(){
+  document.querySelectorAll('[data-filter]').forEach(b=>{
+    const active=b.dataset.filter===filter;
+    b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));
+  });
+  document.querySelectorAll('.canvas [data-group]').forEach(x=>x.style.opacity=(filter==='all'||x.dataset.group===filter)?'1':'.1');
+  document.querySelectorAll('tr[data-group]').forEach(x=>x.style.opacity=(filter==='all'||x.dataset.group===filter)?'1':'.3');
+}
+function setMode(next){
+  mode=next;
+  document.querySelectorAll('[data-mode-only]').forEach(x=>x.hidden=x.dataset.modeOnly!==mode);
+  document.querySelectorAll('[data-mode]').forEach(b=>{
+    const active=b.dataset.mode===mode;
+    b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));
+  });
+  const label=mode==='R'?'原 R':'新 R+L（条件式）';
+  document.querySelectorAll('[data-mode-label]').forEach(x=>x.textContent=label);
+  document.getElementById('mode-status').textContent=label+(mode==='R'?' 单臂 · 25 根线 / 4 只电阻':' · 38 根线 / 8 只电阻 · 新增 L 高亮，硬件条件尚未确认');
+  document.getElementById('resistor-count').textContent=mode==='R'?'4 只':'8 只（新增 L 4 只）';
+  document.querySelectorAll('[data-download]').forEach(a=>{
+    const ext=a.dataset.download, stem='direct-breadboard'+(mode==='RL'?'-rl':'');
+    a.href=stem+(ext==='netlist.json'?'-':'.')+ext;
+    a.textContent=label+' · '+({'svg':'SVG 大图','png':'PNG 图片','netlist.json':'网络表 JSON'}[ext]);
+  });
+  applyFilter();
+}
+document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;applyFilter()}));
+setMode('R');
+</script></html>
