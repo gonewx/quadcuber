@@ -15,7 +15,7 @@ from __future__ import annotations
 import dataclasses
 import heapq
 import itertools
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from typing import Dict, Iterator, List, Optional, Sequence, Tuple
 
 from .cube import Move, axis_sign, format_moves, normalize_k
@@ -421,7 +421,7 @@ def plan(
     groups = group_moves(moves)
     limited = machine.angle_limit is not None
     exact = _Searcher(machine, options, weight)
-    free = _Searcher(Machine(machine.timing, None, machine.no_adjacent_horizontal), options, weight) if limited else exact
+    free = _Searcher(replace(machine, angle_limit=None), options, weight) if limited else exact
 
     steps: List[Step] = []
     states: List[State] = [state]

@@ -15,7 +15,7 @@ from quadcuber.machine import (
 
 class MachineRulesTest(unittest.TestCase):
     def setUp(self):
-        self.m = Machine()
+        self.m = Machine(profile="generic")
         self.s0 = initial_state()
 
     def assertInvalid(self, state, step):
@@ -49,7 +49,7 @@ class MachineRulesTest(unittest.TestCase):
         m = Machine(no_adjacent_horizontal=True)
         s = m.apply(self.s0, (Turn("R", 1),))  # R 水平夹紧
         s = m.apply(s, (Open("R"),))
-        # 默认规则允许松开的 R 水平时拧 F; v3 结构下 F 的夹指会撞上 R 的夹指
+        # generic 旧抽象规则允许松开的 R 水平时拧 F; v3 结构下 F 的夹指会撞上 R 的夹指
         self.m.check(s, (Turn("F", 1),))
         with self.assertRaises(InvalidStep):
             m.check(s, (Turn("F", 1),))

@@ -17,7 +17,13 @@
 
 ## 电路与硬件验证
 
-从[电路总览](docs/wiring/README.md)进入：当前使用面包板＋动力直连，洞洞板是可选装配方案。大马达空载闭环已通过；v3 机械头、舵机和四臂供电仍待验证。
+从[电路总览](docs/wiring/README.md)进入：当前使用面包板＋动力直连，洞洞板是可选装配方案。EV3 大马达＋DRV8833 的空载闭环已通过，范围见[实测记录](docs/single_arm-results.md)；这不等于 v4 机械头、舵机、带魔方动作或四臂供电已验收。接下来需要实物标定和分级测试。
+
+当前硬件：EV3 大马达、DRV8833（名义 9V，实测不得超过 10.8V）、每路 10kΩ/20kΩ 编码器分压（`ENC_PULLUP = False`）、灰色 270° Geekservo。调试时 Pico 由 USB 供电，舵机由独立 5V 降压供电，所有模块共地。接线以 `docs/wiring/spec.py` 及其生成图表为准。
+
+固件的开／合端点及安全工作区间（`SERVO_OPEN_US`、`SERVO_CLOSE_US`、`SERVO_MIN_US`、`SERVO_MAX_US`）默认均为 `None`，`SERVO_CALIBRATED = False`。未完成实物标定时，普通动力命令会拒绝执行；仅在确认无魔方、机构全行程自由且供电接线已核验后，可显式进入 `motor_test unloaded` 做空载马达验证，该模式不允许舵机开合或带载测试。按[单臂标定步骤](docs/single_arm.md#servo-calibration)先脱开连杆、声明手动会话，再逐步测量舵机端点及安全区间，最后人工记录 `v4`／`R` 标定身份并启用标志。启动不发送舵机脉冲，但不能保证上电硬件不抖动；旧脉宽和 CAD 角度不能充当实测值。
+
+舵机时序另行确认：默认 `SERVO_MOVE_MS = None`、`SERVO_TIMING_CONFIRMED = False`。端点、安全区间和身份确认后，人工选定保守的临时等待时长（1～5000ms 整数，不沿用旧 120ms），仅用单次 `open` / `close` 录像测量，确认完全停稳才发下一条。此时 `grip`、`cycle` 和普通旋转仍被锁定，显式空载马达模式是例外。实测完整开／合的较慢值加余量后回填等待时间、设置 `SERVO_TIMING_CONFIRMED = True`，上传并 Ctrl+D 重载，才进入连续及联合测试；机构或供电变化后重新确认。
 
 ```bash
 python docs/wiring/build.py          # 生成全部电路文档及图纸
@@ -41,9 +47,10 @@ python docs/wiring/build.py --check  # 检查配置、网络和生成文件是�
   2. **拧面**：拧某个面时，与它垂直且夹紧的机械手，夹条必须竖直，否则会挡住转动；并且至少有一个这样的机械手夹紧，用来固定中间层。相对的两个面可以在同一步同时拧。
   3. **整体翻转**：一对机械手夹紧并同向旋转，把 U/D 面换到有机械手的位置；此时另一对必须松开。
   4. **空转**：松开的机械手可以旋转来调整夹条方向，并且可以和其他动作同时进行。
-  5. **角度限制（可选）**：如果夹爪上的舵机随机械手一起旋转，线缆不能无限缠绕，可以用 `--angle-limit` 限制累计角度。
+  5. **相邻臂避碰（v4 必须）**：相邻两臂不能同时水平；任一臂旋转时，相邻两臂必须保持竖直且不在同一步旋转。拧面、空转、整体翻转以及经过水平位置的 180° 动作都适用，松开夹爪不能解除这条约束。
+  6. **角度限制（可选）**：`angle_limit` 默认仍为 `None`。v4 舵机固定在平台上，不随机械头转动，不因舵机缠线强加角度上限。其他需要累计角度边界的结构可显式使用 `--angle-limit`。
 
-这个模型是按常见四机械手结构抽象出来的。**实际的乐高结构确定后，需要按实物修改约束和耗时参数。**
+`Machine()` 和 CLI 的 `plan` / `bench` 默认使用 `profile="v4"`，强制启用 `no_adjacent_horizontal=True`，不能在 v4 profile 下显式关闭。`Machine(profile="generic")` / `--profile generic` 保留旧抽象模型，仅供明确的非 v4 用途；generic 仍可用 `--no-adjacent-horizontal` 增加约束。规划器的检查不代替实物避让、刚度、保持力与耗时标定。
 
 ## 使用
 
@@ -59,6 +66,11 @@ python -m quadcuber bench --count 20 --compare
 
 # 使用实测的动作耗时
 python -m quadcuber bench --timing timing.json
+
+# 仅用于非 v4 结构的旧抽象模型；不要用它驱动当前 v4
+python -m quadcuber plan "R U R' U'" --profile generic
+# generic 也可显式启用更严格的相邻臂约束
+python -m quadcuber bench --profile generic --no-adjacent-horizontal
 ```
 
 `timing.json` 的字段见 `quadcuber/machine.py` 中的 `Timing`，单位为秒。**默认值是估算值**，搭好单臂原型后应替换成实测值（可以用 `python -m quadcuber armlog arm.log -o timing.json` 从单臂测试日志生成）：
@@ -75,7 +87,7 @@ python -m quadcuber bench --timing timing.json
 * 默认使用**滚动窗口**：每次对接下来的 4 组转动求最优，只采用前 2 组的动作。实测比全局最优（`--full`）只慢 1~2%，但速度快得多。
 * 有角度限制时，先按不限角度规划，再用动态规划选择旋转方向（必要时顺带退绕）；只有无法满足限制的窗口才做完整的受限搜索。
 
-在开发机上的实测（30 个随机 20 步序列，默认耗时参数）：
+历史旧抽象模型在开发机上的测量（30 个随机 20 步序列、估算耗时参数，未包含当前默认的 v4 相邻臂约束；不是 v4 实物数据）：
 
 | 情况 | 动作总耗时（平均） | 规划 CPU 时间（平均） |
 | --- | --- | --- |
