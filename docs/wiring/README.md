@@ -22,7 +22,7 @@
 
 | 任务 | 入口 | 适用边界 |
 | --- | --- | --- |
-| 当前接线、核对孔位 | [面包板＋动力直连](direct-breadboard.html) | 包含电源、马达、编码器、舵机及全部导线 |
+| 当前接线、核对孔位（原 R / 条件式 R+L） | [面包板＋动力直连](direct-breadboard.html) | 原 R 保留；R+L 需同板健康 B 路空闲（用户尚未确认），现固件仍只控制单臂 |
 | 理解电源与信号关系、查引脚 | [图解总览](index.html) | 完整单臂功能；其中 J6/J7 孔位属于可选洞洞板 |
 | 固定焊接与可拔插装配 | [洞洞板页面](perfboard.html)、[逐孔表](../perfboard.md) | 当前未采用；模块排距和焊孔仍需实物核对 |
 | v3 刷机、方向检查、装机测试 | [单臂测试](../single_arm.md) | 当前固件参数与验收步骤 |
@@ -73,6 +73,26 @@ python -m unittest -v
 | `perfboard_layout.py` | 可选洞洞板孔位与裸板网络；生成五张 `perfboard-*.svg`、章节 HTML、`../perfboard.md` |
 | `build.py` | 统一入口；生成总览、洞洞板页面，并更新 `../single_arm.md` 中标记的引脚表 |
 
-生成文件应随源文件一起更新；`single_arm.md` 只有 `wiring:pin-table` 标记之间的表格自动生成，其余章节手动维护。`direct-breadboard.png` 是完整 SVG 的浏览器导出图，修改图纸后需同步导出；`--check` 比较 HTML、SVG、JSON 和 Markdown，不比较 PNG。
+生成文件应随源文件一起更新；`single_arm.md` 只有 `wiring:pin-table` 标记之间的表格自动生成，其余章节手动维护。`direct-breadboard.png` 与 `direct-breadboard-rl.png` 分别是两种模式的完整 SVG 浏览器导出图，修改图纸后需同步导出；`--check` 比较 HTML、SVG、JSON 和 Markdown，不比较 PNG。
 
 图纸包含固定孔位和绘图坐标。修改固件引脚后，检查会要求同步复核图纸，**不会自动重布线**。网络检查覆盖连通、网络隔离、电阻未被短接、孔位占用及洞洞板镜像；不覆盖真实接触电阻、温升、电源瞬态和实物接线。
+
+### 原 R / 新 R+L 切换的维护
+
+仍使用 `direct-breadboard.html#complete-wiring`，默认原 R。R+L 资产为
+`direct-breadboard-rl.svg`、`direct-breadboard-rl.png`、`direct-breadboard-rl-netlist.json`；
+模式切换同步图、表、标题和下载，用途筛选保持。`direct_wiring.py` 同时验证和生成两套网络，
+原 R 的线号、端点、折线与孔位由 `tests/fixtures/direct-breadboard-r.json` 和几何快照保护。
+该基线来自 `6dcc91f`，修改布局时不能随意更新基线以绕过回归。
+
+新增 L 孔位仍需断电核对实物尺寸，驱动 B 路空闲、供电电流与温升均未得到用户确认。
+当前单臂固件不会随视图或 `ARM_ID` 改变 GPIO；新增 L 的动力保持断电，不能照搬 R 上电步骤。
+
+本机浏览器回归与两张 PNG 导出（另需安装 `playwright` 并有 Chromium；标准库构建和 CI 不依赖它）：
+
+```bash
+python docs/wiring/check_browser.py --export-png --screenshots /tmp/wiring-review
+```
+
+覆盖桌面/手机往返切换、所有用途筛选、图表编号与 JSON 对齐、下载可访问、横向滚动、
+打印与禁用 JS 时的原 R 回退。只验收页面和图纸，不代表硬件可运行。
