@@ -58,20 +58,34 @@ class Encoder:
         b = Pin(pin_b, Pin.IN, pull)
         self._sms = []
         self._instr = []
-        for sm_id, (base, other) in zip(sm_ids, ((a, b), (b, a))):
-            sm = rp2.StateMachine(sm_id, _edge_counter, freq=freq, in_base=base, jmp_pin=other)
-            self._instr.append(_PIO_BASE[sm_id // 4] + 0xD8 + 0x18 * (sm_id % 4))
-            self._sms.append(sm)
-        for sm, addr in zip(self._sms, self._instr):
-            mem32[addr] = _SET_X0
-            mem32[addr] = _SET_Y0
-            while sm.rx_fifo():
-                sm.get()
-            sm.active(1)
-        self._sign = -1 if invert else 1
-        self._offset = 0
-        # 状态机刚启动时, 如果本相已经是高电平, 会多数一个 "上升沿"; 清零把它吸收掉
-        self.zero()
+        try:
+            for sm_id, (base, other) in zip(sm_ids, ((a, b), (b, a))):
+                sm = rp2.StateMachine(sm_id, _edge_counter, freq=freq, in_base=base, jmp_pin=other)
+                self._instr.append(_PIO_BASE[sm_id // 4] + 0xD8 + 0x18 * (sm_id % 4))
+                self._sms.append(sm)
+            for sm, addr in zip(self._sms, self._instr):
+                mem32[addr] = _SET_X0
+                mem32[addr] = _SET_Y0
+                while sm.rx_fifo():
+                    sm.get()
+                sm.active(1)
+            self._sign = -1 if invert else 1
+            self._offset = 0
+            # 状态机刚启动时, 如果本相已经是高电平, 会多数一个 "上升沿"; 清零把它吸收掉
+            self.zero()
+        except BaseException:
+            self.deinit()
+            raise
+
+    def deinit(self):
+        error = None
+        for sm in self._sms:
+            try:
+                sm.active(0)
+            except BaseException as exc:
+                error = exc
+        if error is not None:
+            raise error
 
     def _raw_one(self, sm, addr):
         mem32[addr] = _MOV_ISR_X

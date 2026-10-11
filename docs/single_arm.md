@@ -1,4 +1,4 @@
-# 历史 v4 单臂：接线与实物标定步骤
+# 历史 v4 机械说明与 R／L 独立调试
 
 **本文机械尺寸与装配步骤针对历史 v4 单臂模块**：反向连杆往后拉夹紧，转盘内 39793 导向，竖墙与舵机侧加固。历史模型见[固定版本源码](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/tools/lego/v4/model.py)，当时的搭建与修改见 [历史 v4 设计说明](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md)。名义 CAD 检查不能代替实物验收；下一步是实物标定和分级测试，尚未完成 v4 夹紧力、保持力、旋转及四臂联合验证。
 
@@ -128,26 +128,66 @@ EV3 黄 ──[10kΩ]──●── GP4        EV3 蓝 ──[10kΩ]──●�
 
 以后要固定接线时再看 [洞洞板设计](perfboard.md) 和 [可选单臂图解布局及端子表](../generated/wiring/index.html#perfboard)。当前调试用[当前接线：原 R／新 R+L（条件式）](../generated/wiring/direct-breadboard.html)，引脚不变。
 
-## 4. 刷程序
+## 4. 升级为 R／L 独立调试（保留设备 R 配置）
 
-在 PC 上安装 `mpremote`（`pip install mpremote`），Pico 刷好 MicroPython 后：
+程序一次只调试一臂，不执行双臂协同。在动作结束返回提示符后选臂；控制循环执行期间会阻塞，排队的选臂命令不能代替 Ctrl+C 或切断动力的停止操作。默认 R；在 `arm>` 输入 `arm L` 或 `arm R` 选臂，输入 `arm` 查看当前臂、引脚及配置文件。`ARM_ID` 本身仍不改 GPIO；选臂命令会校验固定接线并加载该臂完整配置。
 
-```bash
-cd firmware/pico
-mpremote cp config.py control.py encoder.py motor.py arm_test.py :
-mpremote repl --capture arm.log      # 串口输出同时保存到 arm.log
+| 配置 | R（保留设备现值） | L（独立新配置） |
+| --- | --- | --- |
+| 配置文件 | `firmware/pico/config.py` | `firmware/pico/config_l.py` |
+| 马达 IN1 / IN2 | GP2 / GP3 | GP6 / GP7 |
+| 编码器 A / B | GP4 / GP5 | GP12 / GP13 |
+| 舵机 | GP8 | GP9 |
+| PIO 状态机 | 0 / 1 | 2 / 3 |
+
+每次选臂（包括重复选择当前臂）先停止输出、释放旧 PWM、停用旧 PIO，再初始化新臂；临时 `servo_cal` / `motor_test` 授权、编码器零位、轨迹与在线 `set` 参数重置。配置文件中的记录不被选臂改写。无效选择或初始化失败会保持停止，需重新 `arm R` / `arm L`；不自动回退并恢复运动。未选中臂的两个驱动输入和舵机信号明确保持低电平。退出程序也释放资源并保持这些输出为低；**上电到程序启动之间、硬件故障或复位期间不由这个程序保证，升级和重启必须关闭动力。**
+
+### 已运行原 R 固件的升级
+
+R 空载旋转已通过，无需为了升级重做。先保存 R 测量记录；候选松开 1700、接触 1500、夹紧 1450 只属于 R，不能当作 L 端点或 L 已标定状态。不要用仓库的 `config.py` 覆盖设备文件。
+
+1. 关闭动力电源（包括舵机 5V），只留 USB；在原 `arm>` 输入 `off`、`quit`。退出其他占用串口的终端。
+2. 在**仓库根目录**的电脑终端先备份设备配置；下面备份名若已存在，请换一个新名称，勿覆盖旧备份：
+
+   ```bash
+   mpremote fs cp :config.py ../quadcuber-R-config-before-L.py
+   ```
+
+   确认备份文件存在且包含当前 R 参数。该文件是回退与保留校准值的依据；无需重新推测或重测已有 R 数值。
+3. 首次升级只上传以下六个文件，**命令中没有 `config.py`**：
+
+   ```bash
+   mpremote fs cp firmware/pico/config_l.py firmware/pico/arm_profiles.py firmware/pico/control.py firmware/pico/encoder.py firmware/pico/motor.py firmware/pico/arm_test.py :
+   mpremote repl --capture arm-L.log
+   ```
+
+   如果设备已经有自己的 `config_l.py`，也先备份它；后续程序升级不要覆盖已经测得的 L 配置。新设备初装才另外上传仓库 `config.py`。
+4. 保持动力关闭，在 `>>>` 按 **Ctrl+D**，再运行：
+
+   ```python
+   import arm_test; arm_test.main()
+   ```
+
+   在 `arm>` 输入 `arm L`、`arm`、`help`。应显示 L、`config_l.py`、GP6/7、GP12/13、GP9、PIO(2, 3)。这些命令不发定位脉冲；`help`、`arm`（无参数）、`show`、`enc`、`trace` 是查询命令。`set` 不改选臂或 GPIO，不持久化到文件。
+
+配置必须仍符合固定 R/L 接线。旧 R `config.py` 的用户数值保留；缺失或未确认的安全字段仍不能解锁运动。只重复 `import` 不会重新读取缓存配置，修改任一配置后都须关闭动力、重新上传对应文件并 Ctrl+D 重启。
+
+### L 的首次标定与切回 R
+
+先关闭动力和 USB，脱开 L 舵机连杆，确认曲柄自由行程；不放魔方。再按下文 B 的条件启动、选 `arm L` 并 `off`，才给已检查的硬件供电。L 的方向、机械传动比和控制初值尚未实测，R 的空载结果不等于 L 已验收。
+
+`config_l.py` 默认 `SERVO_CALIBRATED=False`、`SERVO_TIMING_CONFIRMED=False`；开合端点、安全区间、标定身份和等待时间均为 `None`。首次命令形式为：
+
+```text
+servo_cal <min_us> <max_us> <start_us> detached
+servo <start_us>
 ```
 
-在 REPL 里输入：
+尖括号是待人工确认后替换的整数，不是可直接粘贴的命令。第一行仅授权、不运动，第二行才发首脉冲，且必须等于声明的 start。保留原有规则：首次脱杆；装接后只有核实轴位才能使用 `aligned`；500～2500 只是电气包络；后续脉宽可在声明区间内作绝对跳转，程序不限制相邻差值，不代表机构可安全大步运动。未知区间继续小步、停稳观察，不自动扫角。
 
-```python
-import arm_test; arm_test.main()
-```
+L 实测完毕后只在 `config_l.py` 记录 L 的端点、安全区间、`SERVO_CALIBRATION_ARM="L"` 与匹配的机械身份，再按下文分阶段确认等待时长和时序；不得复制 R 的确认标志。`open` / `close` / `grip` / `cycle` 等继续受原门禁限制。原 R 的标定记录留在 `config.py`，R/L 的 `GAINS`、方向、传动比和时序各自独立。
 
-用 Thonny 也可以：把 5 个文件上传到 Pico，运行 `arm_test.py`，最后把 Shell 窗口的输出全选复制到 `arm.log`。
-
-- **每次改完 `config.py` 都要重新上传**（`mpremote cp config.py :`），关闭 9V 并 `quit` 退出到 REPL，按 **Ctrl+D 软重启**后再 `import arm_test; arm_test.main()`，确保重新载入配置。只改电脑文件或仅重复 `import` 不会可靠地重载已缓存的配置。
-- 用 `set` 在线改的参数（比如 `set vmax 300`）**断电就没了**，试出来的好值要抄进 `config.py`。`show` 可以看当前全部参数。
+结束时 `servo off`，关闭动力，再 `arm R`；切回不会定位，也不会恢复旧临时授权，重新建立必要的零位和本次测试会话即可。R 已通过的空载旋转无需重做。两臂分开保存日志，不将 L 数据直接覆盖 R 的测试记录。本节新增的是选臂和配置隔离；下文机械尺寸、连杆朝向与 CAD 角度仍只描述历史 v4，实际装配须单独核验。
 
 ## 5. 测试步骤
 

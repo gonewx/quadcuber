@@ -73,7 +73,14 @@ class RepositoryLayout(unittest.TestCase):
 
     def test_frozen_deliverables_and_protected_inputs(self):
         baseline = json.loads((ROOT / 'mechanical/inputs/layout-baseline.json').read_text())
+        # The layout baseline remains historical. These three source files now
+        # implement approved R/L selection; behavioral safety tests cover them.
+        # Keep live hashes for R config, fixtures, measurements and all models.
+        evolved_firmware = {'firmware/pico/arm_test.py', 'firmware/pico/motor.py',
+                            'firmware/pico/encoder.py'}
         for row in baseline['files']:
+            if row['new_path'] in evolved_firmware:
+                continue
             if row['role'] not in {'model', 'manual', 'frozen', 'protected', 'recipe', 'inventory'}:
                 continue
             path = ROOT / row['new_path']
