@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,re,unittest
-R=Path(__file__).resolve().parent;D=R/'dist';C=R.parent/'lift-feasibility/integrated-revision'
+R=Path(__file__).resolve().parent;C=R.parent/'generated/mechanical';D=R.parent/'dist/site'
 class Integration(unittest.TestCase):
  def test_all_primary_views_share_manifest(self):
   m=json.loads((D/'integrated/manifest.json').read_text()); g=json.loads((D/'integrated/operation-guide.json').read_text())

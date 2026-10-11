@@ -3,25 +3,25 @@
   "files": [
     {
       "old_path": "docs/lego/archive/v3-baseline/three/LICENSE",
-      "new_path": "docs/lego/archive/v3-baseline/three/LICENSE",
+      "new_path": "web/vendor/THREE-LICENSE",
       "role": "protected",
       "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
     },
     {
       "old_path": "docs/lego/archive/v3/three/LICENSE",
-      "new_path": "docs/lego/archive/v3/three/LICENSE",
+      "new_path": "web/vendor/THREE-LICENSE",
       "role": "protected",
       "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
     },
     {
       "old_path": "docs/lego/archive/v5/three/LICENSE",
-      "new_path": "docs/lego/archive/v5/three/LICENSE",
+      "new_path": "web/vendor/THREE-LICENSE",
       "role": "protected",
       "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
     },
     {
       "old_path": "docs/lego/v4/three/LICENSE",
-      "new_path": "docs/lego/v4/three/LICENSE",
+      "new_path": "web/vendor/THREE-LICENSE",
       "role": "protected",
       "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
     },

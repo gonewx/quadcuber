@@ -10,7 +10,7 @@ class Check(HTMLParser):
  def handle_endtag(self,tag):
   if self.stack:self.stack.pop()
 for page in ['index.html','integrated-assembly.html']:
- c=Check();c.feed(Path('dist',page).read_text())
+ c=Check();c.feed(Path(__file__).resolve().parents[1].joinpath('generated/site',page).read_text())
  if 'assembly' in page:
   for n in ['step-next','step-progress-bottom','view-step-title','expanded-check','expanded-instructions']:assert n in c.fullscreen,n
  print(page,'unique IDs:',len(c.ids),'fullscreen children verified')

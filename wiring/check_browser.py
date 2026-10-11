@@ -42,7 +42,7 @@ def check(page, mode, group):
     for link in page.locator('[data-download]').all():
         href = link.get_attribute('href')
         assert href.startswith(prefix + '.') or href == prefix + '-netlist.json'
-        result = page.request.get('http://' + page.url.split('/')[2] + '/generated/generated/wiring/' + href)
+        result = page.request.get('http://' + page.url.split('/')[2] + '/generated/wiring/' + href)
         assert result.ok, href
         assert ('R+L' in link.inner_text()) == (mode == 'RL')
     assert page.locator('#complete-wiring').count() == 1

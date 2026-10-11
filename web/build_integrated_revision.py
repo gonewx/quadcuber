@@ -1,7 +1,12 @@
 """Build every current route from the single frozen integrated candidate."""
 from pathlib import Path
-import json,re,shutil,hashlib,html,csv
-R=Path(__file__).resolve().parent;C=R.parent if (R.parent/'candidate.py').exists() else R.parent/'lift-feasibility/integrated-revision';D=R/'dist';D.mkdir(exist_ok=True);I=D/'integrated';I.mkdir(exist_ok=True)
+import json,re,shutil,hashlib,html,csv,tempfile
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'mechanical'))
+from paths import OUTPUT, ASSEMBLY
+from resource_paths import canonicalize
+_stage=tempfile.TemporaryDirectory(prefix='quadcuber-web-')
+R=Path(__file__).resolve().parent;C=OUTPUT;D=Path(_stage.name);I=D/'integrated';I.mkdir(exist_ok=True)
 manifest=json.loads((C/'candidate-manifest.json').read_text()); guide=json.loads((C/'manual/guide.json').read_text())
 revision=guide['revision']
 for step in guide['steps']:
@@ -58,7 +63,7 @@ for s in guide['steps']:
 content+='</main><footer>'+nav+'<p>版本 '+html.escape(revision)+'。插入方向、静态接合及运动检查的适用范围见PDF；不代表实体装配路径、强度和防脱验收。</p></footer>'
 (D/'integrated-assembly.html').write_text(page('Quadcuber整合版 · 完整装配说明',content))
 # Preserve the detailed interactive support reader with regenerated mappings/images.
-book=json.loads((C/'manual/support-steps.json').read_text());book['parts']=json.loads((C/'assembly-integrated132.json').read_text())
+book=json.loads((ASSEMBLY/'support-steps.json').read_text());book['parts']=json.loads((C/'assembly-integrated132.json').read_text())
 states={}
 for k,n in {'core_up':'support-raised','core_down':'support-only-down40_8','whole_up':'loading-all50','whole_down':'support-down40_8'}.items():
  row=manifest[n];states[k]={'count':row['parts'],'source_file':row['file'],'source_sha256':row['sha256'],'model_text':(C/row['file']).read_text()}
@@ -80,8 +85,10 @@ print(json.dumps({'revision':revision,'models':len(manifest),'steps':len(guide['
 # UI-only workbench, using exact frozen guide and geometry assets.
 from build_viewer_workbench import build as build_workbench
 build_workbench(R,C,D,library)
-# Build the actual download from this repository, never from an external stale ZIP.
-import sys
-sys.path.insert(0,str(C))
-from build_source_archive import build as build_source_archive
-build_source_archive(C)
+# Standard pages reference the one canonical mechanical output tree.
+canonical=R.parent/'generated/site';canonical.mkdir(parents=True,exist_ok=True)
+for name in ['index.html','integrated-assembly.html','integrated-operation.html','integrated-support.html']:
+ (canonical/name).write_text(canonicalize((D/name).read_text()))
+(canonical/'operation-guide.json').write_text(canonicalize((I/'operation-guide.json').read_text()))
+shutil.move(R/'CURRENT_VIEWER.json',canonical/'CURRENT_VIEWER.json')
+_stage.cleanup()
