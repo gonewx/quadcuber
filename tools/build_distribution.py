@@ -29,6 +29,7 @@ def build(output):
     for name in PAGES:
         (site / name).write_text(publicize((ROOT / 'generated/site' / name).read_text()))
     (resources / 'operation-guide.json').write_text(publicize((ROOT / 'generated/site/operation-guide.json').read_text()))
+    archive_sources(ROOT, output / 'downloads/quadcuber-source-complete.zip', complete=True)
     archive = archive_sources(ROOT, output / 'downloads/full-revision.zip')
     shutil.copyfile(archive, resources / 'full-revision.zip')
     offline = output / 'offline'
@@ -41,7 +42,7 @@ def build(output):
         (offline / dst).write_text(text)
         if src != dst:
             (offline / src).unlink(missing_ok=True)
-    print('Built four public pages, four offline pages and independently buildable source archive.')
+    print('Built four public pages, four offline pages and compact/complete source archives.')
     return output
 
 if __name__ == '__main__':

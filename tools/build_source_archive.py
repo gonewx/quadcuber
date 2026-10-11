@@ -6,7 +6,7 @@ DIRECTORIES = ('mechanical/inputs', 'mechanical/assembly', 'mechanical/parts', '
 FILES = ('tools/build_source_archive.py', 'tools/build_distribution.py',
          'tools/check_rebuild.py', 'README.md', 'LICENSE', 'docs/history.md')
 
-def build(root=ROOT, output=None):
+def build(root=ROOT, output=None, *, complete=False):
     root = Path(root)
     output = Path(output) if output else root / 'dist/downloads/full-revision.zip'
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -16,6 +16,8 @@ def build(root=ROOT, output=None):
     paths += [root / name for name in FILES if (root / name).is_file()]
     with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
         for path in sorted(paths):
+            if not complete and path.suffix.lower() in {'.png', '.pdf'}:
+                continue
             info = zipfile.ZipInfo('quadcuber/' + path.relative_to(root).as_posix(), (2026, 10, 11, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16

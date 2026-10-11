@@ -401,7 +401,8 @@
       "old_path": "mechanical/final/candidate.py",
       "new_path": "mechanical/candidate.py",
       "role": "source",
-      "sha256": "32ee75a022cf626f978f7d2aaeb23225f89b948c0e503a9080a8067a8b90c658"
+      "sha256": "32ee75a022cf626f978f7d2aaeb23225f89b948c0e503a9080a8067a8b90c658",
+      "migrated_sha256": "baf5e297204ca7de2b6621e18612da60790d041573e4c79bf4d5e8a8117115d0"
     },
     {
       "old_path": "mechanical/final/check_rebuild.py",

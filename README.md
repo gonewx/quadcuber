@@ -133,4 +133,4 @@ python -m unittest -v
 
 `mechanical/`、`wiring/`、`web/` 分别维护机械、接线和网页源码；`generated/` 保存唯一标准输出；`dist/` 为不入 Git 的网站／离线／源码包。`docs/` 保存人工说明及原始实测证据，`tests/` 保存回归与独立基准；运行库 `quadcuber/` 和固件 `firmware/` 原位保留，不新增 `src/`。
 
-运行 `python tools/build_distribution.py` 后可打开离线包，或从仓库根启动 `python -m http.server 8000` 浏览 `generated/site/index.html`。源码包包含重建所需代码、模型、图解和 PDF；构建不发布。历史方案见 [历史索引](docs/history.md)。
+运行 `python tools/build_distribution.py` 后可打开离线包，或从仓库根启动 `python -m http.server 8000` 浏览 `generated/site/index.html`。网站下载提供紧凑源码／模型包；图解与 PDF 另下。`dist/downloads/quadcuber-source-complete.zip` 是含完整图解的独立重建包；构建不发布。历史方案见 [历史索引](docs/history.md)。

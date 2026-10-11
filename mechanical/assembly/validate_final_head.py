@@ -20,7 +20,9 @@ check('added165_once',len(added)==165 and len(set(added))==165)
 check('deferred81_84',defer=={81,84})
 check('disjoint_exact_final167',not(core&set(added) or core&defer or set(added)&defer) and core|set(added)|defer==set(range(1,168)))
 check('four_arms668',4*len(p)==668)
-check('source_sha_matches',hashlib.sha256((MECHANICAL/'candidate.py').read_bytes()).hexdigest()==b['source']['model_sha256'])
+migration=json.loads((MECHANICAL/'inputs/layout-baseline.json').read_text())
+source_record=next(r for r in migration['files'] if r['new_path']=='mechanical/candidate.py')
+check('source_sha_matches',source_record['sha256']==b['source']['model_sha256'] and hashlib.sha256((MECHANICAL/'candidate.py').read_bytes()).hexdigest()==source_record['migrated_sha256'])
 check('rows_exact167',len(b['rows'])==167)
 for r,q in zip(b['rows'],p):
  check(f'row_{r["index1"]}_matches_frozen_geometry',r['name']==q.name and r['color']==q.color and np.allclose(r['position_ldu'],q.pos,rtol=0,atol=1e-12) and np.allclose(r['rotation'],q.rot,rtol=0,atol=1e-12))
@@ -47,7 +49,12 @@ for step in b['steps']:
  a=render_audit[step['id']]
  check(step['id']+'_rendered_ids_match',a['rendered_instance_indices1']==step['visible_part_ids'])
  check(step['id']+'_image_hash_match',a['sha256']==hashlib.sha256((H/step['image']).read_bytes()).hexdigest())
-check('complete_alias_equals_staged165',(H/'final-head-diagrams/complete.png').read_bytes()==(H/'final-head-diagrams/30.png').read_bytes())
+complete_image=H/b['steps'][-1]['image']
+image_record=next(r for r in migration['files'] if r['new_path']=='generated/mechanical/manual/final-head-diagrams/30.png')
+check('complete_image_equals_frozen_staged165',complete_image==H/'final-head-diagrams/30.png' and hashlib.sha256(complete_image.read_bytes()).hexdigest()==image_record['sha256'])
+# Older rerenders may emit this redundant alias; the frozen delivery does not contain it.
+if (H/'final-head-diagrams/complete.png').exists():
+ check('complete_alias_equals_staged165',(H/'final-head-diagrams/complete.png').read_bytes()==complete_image.read_bytes())
 opening=json.loads((H/'final-head-opening-audit.json').read_text())
 check('opening_image_hash_matches',opening['sha256']==hashlib.sha256((H/opening['image']).read_bytes()).hexdigest())
 report=dict(result='PASS',assertion_count=len(checks),mechanical_geometry_changed=False,prebuilt0_added165_deferred2=True,local_steps=len(b['steps']),missing_images=missing,physical_validation=False,continuous_insertion_validation=False,checks=checks)

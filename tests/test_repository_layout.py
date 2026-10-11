@@ -6,17 +6,54 @@ import unittest
 import subprocess
 import sys
 import tempfile
+import os
+import re
+import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class RepositoryLayout(unittest.TestCase):
     def test_compatibility_entries_preserve_query_and_step(self):
-        for name in ['docs/lego/index.html', 'docs/wiring/index.html', 'docs/wiring/direct-breadboard.html']:
+        names = ['docs/lego/index.html', 'docs/wiring/index.html', 'docs/wiring/direct-breadboard.html']
+        names += ['mechanical/final/site-source/dist/' + page for page in
+                  ['index.html', 'integrated-assembly.html', 'integrated-operation.html', 'integrated-support.html']]
+        for name in names:
             text = (ROOT / name).read_text() if (ROOT / name).exists() else ''
             self.assertIn('location.search', text, name)
             self.assertIn('location.hash', text, name)
             self.assertIn('generated/', text, name)
+
+    def test_deployable_archives_fit_existing_host_limit(self):
+        for path in (ROOT / 'dist/site').rglob('*.zip'):
+            self.assertLessEqual(path.stat().st_size, 25 * 1024 * 1024, str(path))
+        self.assertTrue((ROOT / 'dist/site/integrated/full-revision.zip').is_file())
+
+    def test_wiring_generated_links_resolve(self):
+        for page in (ROOT / 'generated/wiring').glob('*.html'):
+            text = re.sub(r'<script[\s\S]*?</script>', '', page.read_text())
+            for url in re.findall(r'(?:href|src)="([^"]+)"', text):
+                if ':' not in url and not url.startswith('#'):
+                    self.assertTrue((page.parent / url.split('#')[0]).is_file(), (page.name, url))
+
+    def test_head_validator_retains_frozen_source_provenance(self):
+        with tempfile.TemporaryDirectory() as folder:
+            shutil.copytree(ROOT / 'generated/mechanical/manual', Path(folder) / 'manual')
+            result = subprocess.run([sys.executable, str(ROOT / 'mechanical/assembly/validate_final_head.py')],
+                                    cwd=folder, env={**os.environ, 'QUADCUBER_MECHANICAL_OUTPUT': folder},
+                                    capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_standalone_perfboard_uses_output_directories(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            shutil.copytree(ROOT / 'wiring', root / 'wiring', ignore=shutil.ignore_patterns('__pycache__'))
+            subprocess.run([sys.executable, str(root / 'wiring/perfboard_layout.py')], cwd=folder,
+                           check=True, stdout=subprocess.DEVNULL)
+            self.assertTrue((root / 'generated/wiring/perfboard-front.svg').is_file())
+            self.assertTrue((root / 'docs/perfboard.md').is_file())
+            self.assertFalse((root / 'wiring/perfboard-front.svg').exists())
+            self.assertFalse((root / 'perfboard.md').exists())
 
     def test_canonical_dynamic_step_images_resolve(self):
         page = ROOT / 'generated/site/integrated-assembly.html'
@@ -37,7 +74,7 @@ class RepositoryLayout(unittest.TestCase):
     def test_frozen_deliverables_and_protected_inputs(self):
         baseline = json.loads((ROOT / 'mechanical/inputs/layout-baseline.json').read_text())
         for row in baseline['files']:
-            if row['role'] not in {'model', 'manual', 'frozen', 'protected', 'recipe'}:
+            if row['role'] not in {'model', 'manual', 'frozen', 'protected', 'recipe', 'inventory'}:
                 continue
             path = ROOT / row['new_path']
             self.assertTrue(path.is_file(), row['new_path'])

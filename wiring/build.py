@@ -673,10 +673,10 @@ def page():
                '引脚按 <span class="mono">firmware/pico/config.py</span> 的 R 臂分配, 接完按 '
                '<span class="mono">docs/single_arm.md</span> 第 4、5 节刷程序和测试。</p>'
                '<p><a href="direct-breadboard.html">当前调试：面包板＋动力直连（无洞洞板）</a> · '
-               '<a href="README.md">电路总览与验证状态</a> · <a href="#perfboard">可选洞洞板</a> · <a href="#breadboard">洞洞板配套面包板</a></p></header>')
+               '<a href="../../docs/wiring/README.md">电路总览与验证状态</a> · <a href="#perfboard">可选洞洞板</a> · <a href="#breadboard">洞洞板配套面包板</a></p></header>')
     out.append('<div class="warn"><b>2026-09-27 更新：编码器改用电阻分压, 不再用电平转换模块。</b>'
                'BSS138 模块与 EV3 马达内部的串联电阻不匹配, 低电平降不下来。'
-               '原因和测量依据见 <a href="../ev3-interface-verification.md">接口复核报告</a>。</div>')
+               '原因和测量依据见 <a href="../../docs/ev3-interface-verification.md">接口复核报告</a>。</div>')
     out.append('<section><h2>三条不能违反的规则</h2><div class="rules">'
                '<div class="rule"><b>马达电压不超过 10.8V</b>DRV8833 的上限。9V 可以, 12V 会烧。</div>'
                '<div class="rule"><b>编码器信号必须经过分压</b>Pico 的引脚不耐 5V, EV3 编码器输出 5V 信号; 每路 10kΩ 串联 + 20kΩ 接地, 降到约 3V。</div>'
@@ -745,7 +745,7 @@ def page():
                '低电平约 0V；已有大马达空载计数和闭环记录，装机后仍需验收。</p>'
                '<p>BSS138 电平转换模块的上拉会和马达内部电阻分压, 低电平只能降到约 1.65V (实测 1.60~1.64V), 不能用; '
                'TXS0108E 要求信号源内阻很低, 也不能用。'
-               '<a href="../ev3-interface-verification.md">详细依据</a>。</p></section>')
+               '<a href="../../docs/ev3-interface-verification.md">详细依据</a>。</p></section>')
 
     checks = [("9V 电源 (空载)", "直流电压档, 红表笔接正极", "8.5~9.5V, 绝不能超过 10.8V"),
               ("5V 降压输出", "直流电压档, 接任何负载之前", "4.9~5.2V"),
