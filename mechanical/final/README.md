@@ -20,7 +20,9 @@
 
 Sites 原提交为 `da37e173c56301fad68e6ce4dff24ff8ebd19126`，独立根为 `f91fd649afedc1136062b8a8f32772cefe1a0043`。与 GitHub 基线 `723bdd9283d53b3dcf01d64fb80fcea4695bbe7a` 无共同祖先，使用 `git read-tree --prefix` 原样导入 664 个 Git 文件，未合并两个根。Library ZIP v18 为 72,175,636 字节，PDF v6 为 501 页；ZIP 内 34 个页面源文件与该 Git 提交完全一致。
 
-ZIP 漏带的 `baseline-machine-899.mpd` 与 `github-current-model.py` 从同一 Sites Git 树中的 `dist/compact60483/candidate-with-manual.zip` 找回，均严格匹配原 `frozen-source-sha256.json`。`source/asset-order.json` 固定 v27 子文件顺序，使生成结果不依赖文件系统遍历顺序。机械坐标、零件和模型哈希不变。当前薄梁 11478、32449、41677 均含十字端孔；不允许全圆孔薄梁。
+ZIP 漏带的 `baseline-machine-899.mpd` 与 `github-current-model.py` 从同一 Sites Git 树中的 `dist/compact60483/candidate-with-manual.zip` 找回，均严格匹配原 `frozen-source-sha256.json`。`source/asset-order.json` 固定 v27 子文件顺序，使生成结果不依赖文件系统遍历顺序。机械坐标、零件和模型哈希不变。当前页面的紧凑源码下载由 `build_source_archive.py` 确定性生成，包含模型、生成器、冻结依赖与步骤数据；省略 PNG/PDF 派生物及离线成品，完整图解/PDF可从仓库取得或依 `manual/REBUILD.md` 重渲染。
+
+当前薄梁 11478、32449、41677 均含十字端孔；不允许全圆孔薄梁。
 
 ## 本地阅读与重建
 

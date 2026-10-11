@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import re
 import unittest
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[1] / 'mechanical/final'
 
@@ -98,6 +99,22 @@ class FinalMechanics(unittest.TestCase):
                     if ':' in url or url.startswith('#'):
                         continue
                     self.assertTrue((page.parent / url.split('#')[0]).is_file(), (name, url))
+
+    def test_compact_download_contains_current_rebuild_inputs(self):
+        with zipfile.ZipFile(ROOT / 'site-source/dist/integrated/full-revision.zip') as archive:
+            for name in ['candidate.py', 'build_candidate.py', 'build_source_archive.py',
+                         'source/baseline-machine-899.mpd', 'source/github-current-model.py',
+                         'source/asset-order.json', 'site-source/build_integrated_revision.py',
+                         'site-source/build_viewer_workbench.py']:
+                self.assertEqual(archive.read('quadcuber-final/' + name), (ROOT / name).read_bytes(), name)
+
+    def test_current_scope_has_no_prebuilt_arm_claim(self):
+        for folder, pages in [('site-source/dist', ['index.html', 'integrated-assembly.html', 'integrated-operation.html']),
+                              ('offline-viewer', ['index.html', 'assembly.html', 'operation.html'])]:
+            for name in pages:
+                html = re.sub(r'<script[\s\S]*?</script>', '', (ROOT / folder / name).read_text())
+                self.assertNotIn('本册不含这些', html)
+                self.assertIn('882', html)
 
 
 if __name__ == '__main__':

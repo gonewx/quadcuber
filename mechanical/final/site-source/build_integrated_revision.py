@@ -13,9 +13,6 @@ for folder in ['models','manual/diagrams']:
  shutil.copytree(C/folder,I/('diagrams' if folder.endswith('diagrams') else folder),dirs_exist_ok=True)
 for src,dst in [('candidate-manifest.json','manifest.json'),('manual/guide.json','guide.json'),('manual/manual.pdf','manual.pdf'),('integrated-BOM.csv','integrated-BOM.csv'),('assembly-integrated132.json','assembly.json'),('baseline-diff.json','baseline-diff.json'),('subsystem-BOM.csv','subsystem-BOM.csv'),('instance-inventory.csv','instance-inventory.csv')]:
  shutil.copyfile(C/src,I/dst)
-package=C.parent/'quadcuber-integrated-site-source.zip'
-if not package.exists():package=C.parent/'quadcuber-integrated-source.zip'
-if package.exists():shutil.copyfile(package,I/'full-revision.zip')
 for row in manifest.values():assert hashlib.sha256((I/row['file']).read_bytes()).hexdigest()==row['sha256']
 nav='<nav aria-label="整合版导航"><a href="index.html">整合版整机／动作关系</a><a href="integrated-assembly.html">完整装配说明</a><a href="integrated-support.html">支承逐步3D</a><a href="index.html#bom">整机零件表</a></nav>'
 css='''*{box-sizing:border-box}body{margin:0;font:17px/1.75 system-ui,sans-serif;color:#183046;background:#eef3f7}header,main,footer,.integrated-shell{max-width:1300px;margin:auto;padding:20px}nav{display:flex;gap:12px;flex-wrap:wrap;padding:8px 0}nav a{padding:8px 12px;background:#fff;border:1px solid #c1d3df;border-radius:7px;text-decoration:none}a{color:#075ba3}h1{font-size:30px;line-height:1.3}h2{font-size:24px}.warning{padding:16px;background:#fff1d2;border-left:5px solid #cc8400;border-radius:7px}.step,.panel{background:white;padding:24px;margin:22px 0;border-radius:12px;scroll-margin-top:16px}.step img{display:block;width:100%;height:auto}.num{display:inline-block;background:#123d62;color:white;border-radius:7px;padding:3px 12px;margin-right:12px}.parts{font-weight:700;color:#006d70}.check{padding:14px;background:#eaf5f4;border-radius:7px}ol{padding-left:1.5em}li{padding:4px 0}details{padding:16px;background:white}summary{cursor:pointer;font-weight:700}.toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px}.downloads{display:flex;gap:16px;flex-wrap:wrap;padding:12px 0}.caption,small{font-size:14px;color:#526777}.bom{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}.bom th,.bom td{padding:8px;border-bottom:1px solid #dde6ec;text-align:left}.bom tr.change{background:#eaf5f4}code{overflow-wrap:anywhere}@media(max-width:650px){header,main,footer,.integrated-shell{padding:14px}.step,.panel{padding:16px}.toc{grid-template-columns:1fr}h1{font-size:26px}nav{gap:6px}nav a{font-size:14px;padding:6px}}'''
@@ -83,3 +80,8 @@ print(json.dumps({'revision':revision,'models':len(manifest),'steps':len(guide['
 # UI-only workbench, using exact frozen guide and geometry assets.
 from build_viewer_workbench import build as build_workbench
 build_workbench(R,C,D,library)
+# Build the actual download from this repository, never from an external stale ZIP.
+import sys
+sys.path.insert(0,str(C))
+from build_source_archive import build as build_source_archive
+build_source_archive(C)

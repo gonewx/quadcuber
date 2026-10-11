@@ -5,6 +5,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import zipfile
 
 ROOT = Path(__file__).resolve().parent
 
@@ -26,4 +27,13 @@ with tempfile.TemporaryDirectory(prefix='quadcuber-rebuild-') as directory:
         changed = [p for p in expected.keys() | actual.keys() if expected.get(p) != actual.get(p)]
         if changed:
             raise SystemExit(f'{label} rebuild differs: {changed}')
+    download = Path(directory) / 'download'
+    with zipfile.ZipFile(target / 'site-source/dist/integrated/full-revision.zip') as archive:
+        archive.extractall(download)
+    extracted = download / 'quadcuber-final'
+    for script in ['build_candidate.py', 'generate_inventory.py']:
+        subprocess.run([sys.executable, str(extracted / script)], cwd=extracted, check=True, stdout=subprocess.DEVNULL)
+    if hashes(extracted / 'models') != model_before:
+        raise SystemExit('Downloaded source does not reproduce frozen models')
     print(f'Reproducible: {len(model_before)} models; {len(before)} Site files byte-identical.')
+    print('Downloaded compact source independently regenerates all frozen models.')
