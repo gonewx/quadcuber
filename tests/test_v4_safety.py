@@ -78,28 +78,28 @@ class ServoSafetyTest(unittest.TestCase):
             self.at.COMMANDS[name](self.arm, args)
 
     def calibrated(self):
-        pico_sim.set_synthetic_servo_calibration(self.at.config)
+        pico_sim.set_synthetic_servo_calibration(self.at.get_profile("R"))
 
     def test_boot_and_default_config_do_not_position_servo(self):
-        self.assertIs(self.at.config.SERVO_CALIBRATED, False)
+        self.assertIs(self.at.get_profile("R").SERVO_CALIBRATED, False)
         self.assertIsNone(self.arm.servo.us)
-        self.assertNotIn(self.at.config.SERVO, world.servo_ns)
-        self.assertEqual(world.pwm.get(self.at.config.SERVO, 0), 0)
+        self.assertNotIn(self.at.get_profile("R").SERVO, world.servo_ns)
+        self.assertEqual(world.pwm.get(self.at.get_profile("R").SERVO, 0), 0)
 
     def test_recorded_endpoints_without_calibration_stay_locked(self):
         # 即使其余字段完整，开合端点也不能代替显式标定确认。
         self.calibrated()
-        self.at.config.SERVO_OPEN_US = 1700
-        self.at.config.SERVO_CLOSE_US = 1450
-        self.at.config.SERVO_MAX_US = 1750
-        self.at.config.SERVO_CALIBRATED = False
+        self.at.get_profile("R").SERVO_OPEN_US = 1700
+        self.at.get_profile("R").SERVO_CLOSE_US = 1450
+        self.at.get_profile("R").SERVO_MAX_US = 1750
+        self.at.get_profile("R").SERVO_CALIBRATED = False
         self.arm = self.at.Arm()
         for line in ("open", "close", "grip 2", "cycle 1", "rot 1", "servo 1700"):
             with self.subTest(line=line), self.assertRaises(ValueError):
                 self.run_cmd(line)
             self.assertIsNone(self.arm.servo.us)
-            self.assertNotIn(self.at.config.SERVO, world.servo_ns)
-            self.assertEqual(world.pwm.get(self.at.config.SERVO, 0), 0)
+            self.assertNotIn(self.at.get_profile("R").SERVO, world.servo_ns)
+            self.assertEqual(world.pwm.get(self.at.get_profile("R").SERVO, 0), 0)
             self.assertEqual(world.duty(), 0)
 
     def test_unvalidated_commands_and_arm_entry_fail_before_motion(self):
@@ -116,15 +116,15 @@ class ServoSafetyTest(unittest.TestCase):
         self.calibrated()
         invalid = (None, True, False, "1500", 499, 2501, float("nan"), float("inf"), 1500.5)
         for value in invalid:
-            self.at.config.SERVO_OPEN_US = value
+            self.at.get_profile("R").SERVO_OPEN_US = value
             with self.subTest(value=value), self.assertRaises(ValueError):
                 self.run_cmd("close")
             self.assertIsNone(self.arm.servo.us)
-        self.at.config.SERVO_OPEN_US = self.at.config.SERVO_CLOSE_US
+        self.at.get_profile("R").SERVO_OPEN_US = self.at.get_profile("R").SERVO_CLOSE_US
         with self.assertRaises(ValueError):
             self.run_cmd("open")
         self.calibrated()
-        del self.at.config.SERVO_CALIBRATED
+        del self.at.get_profile("R").SERVO_CALIBRATED
         with self.assertRaises(ValueError):
             self.run_cmd("close")
 
@@ -138,11 +138,11 @@ class ServoSafetyTest(unittest.TestCase):
     def test_calibration_entry_no_pulse_then_declared_start(self):
         self.run_cmd("servo_cal 1450 1550 1500 detached")
         self.assertIsNone(self.arm.servo.us)
-        self.assertNotIn(self.at.config.SERVO, world.servo_ns)
+        self.assertNotIn(self.at.get_profile("R").SERVO, world.servo_ns)
         with self.assertRaises(ValueError):
             self.run_cmd("servo 1490")
         self.assertIsNone(self.arm.servo.us)
-        self.assertNotIn(self.at.config.SERVO, world.servo_ns)
+        self.assertNotIn(self.at.get_profile("R").SERVO, world.servo_ns)
         self.run_cmd("servo 1500")
         self.assertEqual(self.arm.servo.us, 1500)
 
@@ -154,7 +154,7 @@ class ServoSafetyTest(unittest.TestCase):
                 for us in (1550, 1450, 1471, 1550):
                     self.run_cmd("servo %d" % us)
                     self.assertEqual(self.arm.servo.us, us)
-                    self.assertEqual(world.servo_ns[self.at.config.SERVO], us * 1000)
+                    self.assertEqual(world.servo_ns[self.at.get_profile("R").SERVO], us * 1000)
                 self.assertEqual(world.duty(), 0)
 
     def test_calibration_still_rejects_out_of_bounds_pulses(self):
@@ -164,7 +164,7 @@ class ServoSafetyTest(unittest.TestCase):
             with self.subTest(line=line), self.assertRaises(ValueError):
                 self.run_cmd(line)
             self.assertEqual(self.arm.servo.us, 1500)
-            self.assertEqual(world.servo_ns[self.at.config.SERVO], 1500000)
+            self.assertEqual(world.servo_ns[self.at.get_profile("R").SERVO], 1500000)
 
     def test_calibration_requires_bounded_explicit_physical_confirmation(self):
         for line in ("servo_cal", "servo_cal 1450 1550 1500", "servo_cal 1450 1550 1500 yes",
@@ -201,7 +201,7 @@ class ServoSafetyTest(unittest.TestCase):
         world.motor.locked = True
         self.run_cmd("cycle 1")
         self.assertIsNone(self.arm.servo.us)
-        self.assertEqual(world.servo_ns[self.at.config.SERVO], 1600000)
+        self.assertEqual(world.servo_ns[self.at.get_profile("R").SERVO], 1600000)
         self.assertEqual(world.duty(), 0)
 
     def test_uncalibrated_motor_commands_and_move_method_are_locked(self):
@@ -245,8 +245,8 @@ class ServoSafetyTest(unittest.TestCase):
         ):
             for value in values:
                 self.calibrated()
-                self.at.config.SERVO_MOVE_MS = 120
-                setattr(self.at.config, field, value)
+                self.at.get_profile("R").SERVO_MOVE_MS = 120
+                setattr(self.at.get_profile("R"), field, value)
                 with self.subTest(field=field, value=value), self.assertRaises(ValueError):
                     self.run_cmd("close")
                 self.assertIsNone(self.arm.servo.us)
@@ -255,7 +255,7 @@ class ServoSafetyTest(unittest.TestCase):
 
     def test_unconfirmed_timing_only_allows_single_open_or_close(self):
         self.calibrated()
-        self.at.config.SERVO_TIMING_CONFIRMED = False
+        self.at.get_profile("R").SERVO_TIMING_CONFIRMED = False
         self.run_cmd("close")
         self.assertEqual(self.arm.servo.us, 1600)
         self.run_cmd("open")
@@ -269,18 +269,18 @@ class ServoSafetyTest(unittest.TestCase):
     def test_timing_confirmation_must_be_explicit(self):
         for value in (None, False, 1, "yes"):
             self.calibrated()
-            self.at.config.SERVO_TIMING_CONFIRMED = value
+            self.at.get_profile("R").SERVO_TIMING_CONFIRMED = value
             with self.subTest(value=value), self.assertRaises(ValueError):
                 self.run_cmd("cycle 1")
             self.assertIsNone(self.arm.servo.us)
         self.calibrated()
-        del self.at.config.SERVO_TIMING_CONFIRMED
+        del self.at.get_profile("R").SERVO_TIMING_CONFIRMED
         with self.assertRaises(ValueError):
             self.run_cmd("rot 1")
 
     def test_shipped_timing_is_not_a_measurement(self):
-        self.assertIsNone(self.at.config.SERVO_MOVE_MS)
-        self.assertIs(self.at.config.SERVO_TIMING_CONFIRMED, False)
+        self.assertIsNone(self.at.get_profile("R").SERVO_MOVE_MS)
+        self.assertIs(self.at.get_profile("R").SERVO_TIMING_CONFIRMED, False)
 
     def run_main(self, lines, after_command=None):
         lines = iter(lines)
@@ -300,7 +300,7 @@ class ServoSafetyTest(unittest.TestCase):
                 self.assertIsNone(self.arm.servo.us)
                 self.assertIsNone(self.arm._servo_cal)
                 self.assertFalse(self.arm._motor_test)
-                self.assertEqual(world.pwm[self.at.config.SERVO], 0)
+                self.assertEqual(world.pwm[self.at.get_profile("R").SERVO], 0)
         self.run_main(["servo_cal 1450 1550 1500 detached", "servo 1500", "servo 2000", "quit"], check)
 
     def test_main_interrupt_revokes_motor_session_and_coasts(self):
@@ -328,17 +328,17 @@ class ServoSafetyTest(unittest.TestCase):
             self.assertIsNone(self.arm._servo_cal)
             self.assertFalse(self.arm._motor_test)
             self.assertIsNone(self.arm.servo.us)
-            self.assertEqual(world.pwm[self.at.config.SERVO], 0)
+            self.assertEqual(world.pwm[self.at.get_profile("R").SERVO], 0)
 
     def test_valid_calibration_does_not_arm_or_position_on_start(self):
         self.calibrated()
         self.arm = self.at.Arm()
         self.assertIsNone(self.arm.servo.us)
-        self.assertNotIn(self.at.config.SERVO, world.servo_ns)
+        self.assertNotIn(self.at.get_profile("R").SERVO, world.servo_ns)
         self.assertFalse(self.arm._motor_test)
         self.assertIsNone(self.arm._servo_cal)
         self.run_main(["help", "show", "off", "quit"])
-        self.assertNotIn(self.at.config.SERVO, world.servo_ns)
+        self.assertNotIn(self.at.get_profile("R").SERVO, world.servo_ns)
 
     def test_low_level_pulse_rejects_out_of_range_instead_of_clamping(self):
         for value in (499, 2501, True, "1500", float("nan")):

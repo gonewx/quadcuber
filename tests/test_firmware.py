@@ -68,7 +68,7 @@ class ArmTestCommands(unittest.TestCase):
         self.run_cmd("motor_test unloaded")
 
     def calibrate_fixture(self):
-        pico_sim.set_synthetic_servo_calibration(self.at.config)
+        pico_sim.set_synthetic_servo_calibration(self.at.get_profile("R"))
         self.run_cmd("off")
 
     def run_cmd(self, line):
@@ -109,16 +109,16 @@ class ArmTestCommands(unittest.TestCase):
         self.assertEqual(len(self.results(out, "cycle")), 3)
         tags = [r["tag"] for r in self.results(out, "move")]
         self.assertEqual(tags, ["load", "free"] * 3)
-        close_ns = self.at.config.SERVO_CLOSE_US * 1000
-        open_ns = self.at.config.SERVO_OPEN_US * 1000
-        self.assertEqual(world.servo_ns[self.at.config.SERVO], open_ns)
+        close_ns = self.at.get_profile("R").SERVO_CLOSE_US * 1000
+        open_ns = self.at.get_profile("R").SERVO_OPEN_US * 1000
+        self.assertEqual(world.servo_ns[self.at.get_profile("R").SERVO], open_ns)
         self.assertNotEqual(close_ns, open_ns)
 
     def test_speed_and_friction(self):
         out = self.run_cmd("speed")
         r = self.results(out, "speed")[0]
         # 模型马达: 1000 * (1 - 0.08) 度/秒; 结果按机械手换算, 要除以齿轮比
-        self.assertAlmostEqual(r["v_ss"], 920 / self.at.config.GEAR_RATIO, delta=30 / self.at.config.GEAR_RATIO)
+        self.assertAlmostEqual(r["v_ss"], 920 / self.at.get_profile("R").GEAR_RATIO, delta=30 / self.at.get_profile("R").GEAR_RATIO)
         self.assertAlmostEqual(r["tau"], 0.05, delta=0.015)
         out = self.run_cmd("friction")
         r = self.results(out, "friction")[0]
@@ -147,14 +147,14 @@ class ArmTestCommands(unittest.TestCase):
         self.run_cmd("grip 1")
         self.run_cmd("servo_cal 1450 1550 1500 detached")
         self.run_cmd("servo 1500")
-        self.assertEqual(world.servo_ns[self.at.config.SERVO], 1_500_000)
+        self.assertEqual(world.servo_ns[self.at.get_profile("R").SERVO], 1_500_000)
         self.run_cmd("off")
-        self.assertEqual(world.pwm[self.at.config.SERVO], 0)
+        self.assertEqual(world.pwm[self.at.get_profile("R").SERVO], 0)
 
     def test_cal(self):
         # 手转方向可正可负；显示保留编码器符号，标定圈数使用绝对值。
         orig = builtins.input
-        encoder_sign = -1 if self.at.config.ENC_INVERT else 1
+        encoder_sign = -1 if self.at.get_profile("R").ENC_INVERT else 1
         try:
             for delta in (720, -720):
                 with self.subTest(delta=delta):
@@ -162,7 +162,7 @@ class ArmTestCommands(unittest.TestCase):
                     out = self.run_cmd("cal")
                     self.assertIn("机械手一圈 = %d 计数" % (delta * encoder_sign), out)
                     self.assertIn("COUNTS_PER_MOTOR_REV 应为 %.1f" %
-                                  (abs(delta) / self.at.config.GEAR_RATIO), out)
+                                  (abs(delta) / self.at.get_profile("R").GEAR_RATIO), out)
         finally:
             builtins.input = orig
 

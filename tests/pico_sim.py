@@ -158,9 +158,11 @@ class Pin:
     OUT = 1
     PULL_UP = 1
 
-    def __init__(self, pid, mode=None, pull=None):
+    def __init__(self, pid, mode=None, pull=None, *, value=None):
         self.id = pid
         world.pins.setdefault(pid, 1 if pull == Pin.PULL_UP else 0)
+        if value is not None:
+            world.pins[pid] = value
 
     def value(self, v=None):
         if v is not None:
@@ -169,9 +171,14 @@ class Pin:
 
 
 class PWM:
-    def __init__(self, pin):
+    def __init__(self, pin, *, freq=None, duty_u16=0):
         self.pin = pin.id
-        self.f = None
+        self.f = freq
+        self.closed = False
+        world.pwm[self.pin] = duty_u16
+
+    def deinit(self):
+        self.closed = True
         world.pwm[self.pin] = 0
 
     def freq(self, f=None):
@@ -284,7 +291,7 @@ def load_firmware(*names):
             sleep_ms=world.sleep_ms,
         ),
     }
-    fw_names = ("config", "control", "encoder", "motor", "arm_test")
+    fw_names = ("config", "arm_profiles", "control", "encoder", "motor", "arm_test")
     saved = {k: sys.modules.get(k) for k in list(fake) + list(fw_names)}
     sys.path.insert(0, FIRMWARE)
     try:
