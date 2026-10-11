@@ -1,11 +1,15 @@
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from paths import MECHANICAL, ASSEMBLY, MANUAL_OUTPUT
 """Normalize presentation text only; preserve all frozen instances and assembly data.
 
 Run after source preparation and before regenerating base/support illustrations.
 """
 from pathlib import Path
 import json,copy,hashlib
-H=Path(__file__).resolve().parent
-b=json.loads((H/'base-steps.json').read_text())
+H=MANUAL_OUTPUT
+b=json.loads((ASSEMBLY/'base-steps.json').read_text())
 b['title']='64件四角闭合共同底盘'
 b['assembly_notes']=['先完成前33步的59件底盘中间状态，B02及B07均使用15L厚梁。','继续按顺序安装B60至B64，形成64件四角闭合底盘；不得把中间开口状态误认成完成底盘。','A=R +X，B=F +Z，C=L -X，D=B -Z；按图中的翼名和世界方向装配。']
 rep={
@@ -31,8 +35,8 @@ for st in b['steps']:
    for old,new in rep.items():t=t.replace(old,new)
    values[i]=t
   st[k]=values if isinstance(st[k],list)else values[0]
-(H/'base-steps.json').write_text(json.dumps(b,ensure_ascii=False,indent=2))
-s=json.loads((H/'support-steps.json').read_text());by={x['id']:x for x in s['steps']}
+(ASSEMBLY/'base-steps.json').write_text(json.dumps(b,ensure_ascii=False,indent=2))
+s=json.loads((ASSEMBLY/'support-steps.json').read_text());by={x['id']:x for x in s['steps']}
 s['title_zh']='150件重力回落支承装配图解'
 s['global_cautions_zh']=['仅设计审阅；未通过实体装配、载荷、保持与带电验收。','8枚墙脚销按名义中心Y100毫米装配，实体未验收。','上位必须持续按住把手或由独立夹具托稳；无自动保持。']
 # Write direct assembly instructions while retaining all part and placement records.
@@ -68,5 +72,5 @@ for st in s['steps']:
    for old,new in rep.items():t=t.replace(old,new)
    values[i]=t
   st[k]=values if isinstance(st[k],list) else values[0]
-(H/'support-steps.json').write_text(json.dumps(s,ensure_ascii=False,indent=2))
+(ASSEMBLY/'support-steps.json').write_text(json.dumps(s,ensure_ascii=False,indent=2))
 print('Cleaned user-visible text in 36 base and 93 support source steps; geometry records untouched.')

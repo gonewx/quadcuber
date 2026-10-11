@@ -1,8 +1,12 @@
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from paths import MECHANICAL, ASSEMBLY, MANUAL_OUTPUT
 """Add the authorized native-geometry R-B closure instruction pages to base source."""
 from pathlib import Path
 import copy,json,collections
-H=Path(__file__).resolve().parent
-b=json.loads((H/'base-steps.json').read_text());rows=b['rows'];b['steps']=b['steps'][:33]
+H=MANUAL_OUTPUT
+b=json.loads((ASSEMBLY/'base-steps.json').read_text());rows=b['rows'];b['steps']=b['steps'][:33]
 
 def add(id,title,new,visible,instructions,technical,insertion,ports,view=None):
  seq=len(b['steps'])+1
@@ -43,4 +47,4 @@ add('BAS-RB-03','四个39790框闭合：64件底盘核对',[],list(range(1,65)),
 b['validation'].update(step_count=len(b['steps']),introduced_exactly_once=True,final_visible_exact64=True,maximum_new_parts_per_step=max(len(s['added_part_ids'])for s in b['steps']),new_corner_step_ids=[s['id']for s in b['steps'][33:]])
 assert collections.Counter(i for s in b['steps']for i in s['added_part_ids'])==collections.Counter(range(1,65))
 assert b['steps'][-1]['visible_part_ids']==list(range(1,65))
-(H/'base-steps.json').write_text(json.dumps(b,ensure_ascii=False,indent=2));print('Base source:36 steps,64 parts; pins then L before arm installation')
+(ASSEMBLY/'base-steps.json').write_text(json.dumps(b,ensure_ascii=False,indent=2));print('Base source:36 steps,64 parts; pins then L before arm installation')

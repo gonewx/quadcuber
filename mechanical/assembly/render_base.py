@@ -1,11 +1,15 @@
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from paths import MECHANICAL, ASSEMBLY, MANUAL_OUTPUT
 """Render final-design base assembly pages from the audited native meshes."""
 from pathlib import Path
 import sys,json,hashlib,importlib.util
-H=Path(__file__).resolve().parent;sys.path.insert(0,str(H.parent));import candidate as C
-source=H.parent/'source/manual-inputs/native_base_renderer.py'
+H=MANUAL_OUTPUT;sys.path.insert(0,str(MECHANICAL));import candidate as C
+source=MECHANICAL/'inputs/manual-inputs/native_base_renderer.py'
 spec=importlib.util.spec_from_file_location('r4_native_base_renderer',source);r=importlib.util.module_from_spec(spec);exec(compile(source.read_text().replace('fig.text(.758,.302', 'fig.text(.758,.276').replace("'合并已完成组件'", "'四角闭合核对'").replace("'本步不增加核心零件'","'本步不增加零件'").replace("'金色组件沿箭头合拢'","'金色：本步核对的转角'"),str(source),'exec'),r.__dict__)
 r.OUT=H;r.P={i:p for i,p in enumerate(C.retained_base(),1)};r.W={};r.M={}
-book=json.loads((H/'base-steps.json').read_text());selected=set(sys.argv[1:]);report=[]
+book=json.loads((ASSEMBLY/'base-steps.json').read_text());selected=set(sys.argv[1:]);report=[]
 for st in book['steps']:
  if selected and st['id']not in selected:continue
  # Keep legacy file names for references while replacing only affected image content.

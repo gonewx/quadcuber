@@ -1,10 +1,14 @@
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from paths import MECHANICAL, ASSEMBLY, MANUAL_OUTPUT
 """Read-only final-head coverage/geometry validation; writes one audit report."""
 from pathlib import Path
 import collections, hashlib, json, sys
 import numpy as np
-H=Path(__file__).resolve().parent
-sys.path.insert(0,str(H.parent));import candidate as C
-b=json.loads((H/'final-head-steps.json').read_text());p=C.module(0,0,False,True)
+H=MANUAL_OUTPUT
+sys.path.insert(0,str(MECHANICAL));import candidate as C
+b=json.loads((ASSEMBLY/'final-head-steps.json').read_text());p=C.module(0,0,False,True)
 core=set(b['prerequisites']['prebuilt_core_part_ids']);defer=set(b['prerequisites']['deferred_interface_part_ids'])
 added=[i for s in b['steps'] for i in s['added_part_ids']]
 checks={}
@@ -16,7 +20,7 @@ check('added165_once',len(added)==165 and len(set(added))==165)
 check('deferred81_84',defer=={81,84})
 check('disjoint_exact_final167',not(core&set(added) or core&defer or set(added)&defer) and core|set(added)|defer==set(range(1,168)))
 check('four_arms668',4*len(p)==668)
-check('source_sha_matches',hashlib.sha256((H.parent/'candidate.py').read_bytes()).hexdigest()==b['source']['model_sha256'])
+check('source_sha_matches',hashlib.sha256((MECHANICAL/'candidate.py').read_bytes()).hexdigest()==b['source']['model_sha256'])
 check('rows_exact167',len(b['rows'])==167)
 for r,q in zip(b['rows'],p):
  check(f'row_{r["index1"]}_matches_frozen_geometry',r['name']==q.name and r['color']==q.color and np.allclose(r['position_ldu'],q.pos,rtol=0,atol=1e-12) and np.allclose(r['rotation'],q.rot,rtol=0,atol=1e-12))

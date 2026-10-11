@@ -1,7 +1,9 @@
 from pathlib import Path
 import collections,csv,json
 import candidate as c
-H=Path(__file__).resolve().parent
+from paths import OUTPUT
+H=OUTPUT
+H.mkdir(parents=True,exist_ok=True)
 state={a:(c.m.OPEN_S,50)for a in c.m.ARMS};groups={'support':c.core_parts(),'base':c.retained_base()}
 for a in c.m.ARMS:groups['arm_'+a]=[p for p in c.state_parts(state)if p.arm==a]
 with(H/'subsystem-BOM.csv').open('w')as f:

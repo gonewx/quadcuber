@@ -2,9 +2,9 @@
 from pathlib import Path
 import importlib.util,functools,numpy as np,math
 HERE=Path(__file__).resolve().parent
-spec=importlib.util.spec_from_file_location('baseline60483',HERE/'source/baseline_model.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+spec=importlib.util.spec_from_file_location('baseline60483',HERE/'inputs/baseline_model.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 files={};n=None
-for line in (HERE/'source/baseline-machine-899.mpd').read_text().splitlines():
+for line in (HERE/'inputs/baseline-machine-899.mpd').read_text().splitlines():
  if line.startswith('0 FILE '):n=line[7:].replace('\\','/').lower();files[n]=[]
  elif n:files[n].append(line)
 for p in (HERE/'parts').glob('*.dat'):
@@ -69,8 +69,8 @@ def natural_stroke():
 
 # Full integrated review: preserve original inputs, expose one source of truth.
 import json,copy
-original_rows=json.loads((HERE/'source/assembly132.json').read_text())
-r1_rows=json.loads((HERE/'source/assembly-integrated-R1.json').read_text())
+original_rows=json.loads((HERE/'inputs/assembly132.json').read_text())
+r1_rows=json.loads((HERE/'inputs/assembly-integrated-R1.json').read_text())
 removed_ids=[r['id'] for r in r1_rows if r['role']=='key']
 rows=[copy.deepcopy(r) for r in r1_rows if r['role']!='key']
 REVISION='INTEGRATED-GRAVITY-R4-2026-10-08'

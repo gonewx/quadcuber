@@ -1,4 +1,8 @@
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from paths import MECHANICAL, ASSEMBLY, MANUAL_OUTPUT
+from pathlib import Path
 import json,copy,shutil,hashlib,sys,io
 from xml.sax.saxutils import escape
 from reportlab import rl_config
@@ -10,8 +14,8 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import Paragraph
 from PIL import Image
 from reportlab.lib.utils import ImageReader
-H=Path(__file__).resolve().parent;ROOT=H.parent
-base=json.loads((H/'base-steps.json').read_text());support=json.loads((H/'support-steps.json').read_text())
+H=MANUAL_OUTPUT;ROOT=H.parent
+base=json.loads((ASSEMBLY/'base-steps.json').read_text());support=json.loads((ASSEMBLY/'support-steps.json').read_text())
 (H/'head-diagrams').mkdir(exist_ok=True)
 steps=[]
 def add(title,parts,image,instructions,check,phase,**kw):
@@ -22,7 +26,7 @@ add('最终组件与零件盘点','底盘64件；四臂668件；支承150件','d
 for s in base['steps']:
  add(s['title'],'；'.join(str(p['count'])+'×'+p['part_number']for p in s['parts']),s['image_relative'],s['instructions']+s.get('technical_instructions',[]),s['check'],'底盘64件',source_step_id=s['id'],layout='source-page',added_part_ids=s['added_part_ids'],visible_part_ids=s['visible_part_ids'],r4_changed=s.get('r4_changed',False),geometry_records=s.get('geometry_records'))
 add('墙脚连接销与底盘接口定位参照','共8×2780；每臂2枚','diagrams/wallfoot-detail.png',['局部图为L臂实际墙64179、底盘39790和两枚2780。其余三臂绕竖直Y轴变换，向下均为+Y；图中省略不相关零件。','销中心位于Y100毫米。墙孔占Y92至100毫米，底盘孔占Y100至108毫米，销两侧各配合8毫米，挡环位于Y100接缝。','此页为接口定位参照。后续逐件搭墙时将半插这两枚墙脚销；在后续臂接入底盘时核对接缝。最终孔位已做名义核对，实际接近空间、插入力及保持力仍待验证。'],'R、L、F、B各两枚，共8枚；够不到或需要强推挡环过孔即停。','四臂接口')
-final_head=json.loads((H/'final-head-steps.json').read_text())
+final_head=json.loads((ASSEMBLY/'final-head-steps.json').read_text())
 for arm,label in [('R','右臂'),('L','左臂'),('F','前臂'),('B','后臂')]:
  for original in final_head['steps']:
   s=copy.deepcopy(original)

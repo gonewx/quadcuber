@@ -1,3 +1,7 @@
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from paths import MECHANICAL, ASSEMBLY, MANUAL_OUTPUT
 """Explicit assembly of frozen motor/wall/platform instances; no mechanical edits."""
 def build_core(step,arrow):
  seq=0;groups={}

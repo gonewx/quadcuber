@@ -1,12 +1,16 @@
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from paths import MECHANICAL, ASSEMBLY, MANUAL_OUTPUT
+from pathlib import Path
 import json,collections,unittest
-H=Path(__file__).resolve().parent
+H=MANUAL_OUTPUT
 class TurntableFix(unittest.TestCase):
  def test_separate_prerequisites_and_exact_final_partition(self):
-  b=json.loads((H/'final-head-steps.json').read_text());p=b['prerequisites'];added=[i for s in b['steps']for i in s['added_part_ids']]
+  b=json.loads((ASSEMBLY/'final-head-steps.json').read_text());p=b['prerequisites'];added=[i for s in b['steps']for i in s['added_part_ids']]
   self.assertEqual(p['prebuilt_core_count'],0);self.assertEqual(len(added),165);self.assertEqual(len(set(added)),165);self.assertEqual(set(added)|set(p['deferred_interface_part_ids']),set(range(1,168)))
  def test_fixation_precedes_core_head_merge_without_closed_entry(self):
-  b=json.loads((H/'final-head-steps.json').read_text());ss=b['steps'];new=[s for s in ss if s['id'].startswith('HEAD-TT-')]
+  b=json.loads((ASSEMBLY/'final-head-steps.json').read_text());ss=b['steps'];new=[s for s in ss if s['id'].startswith('HEAD-TT-')]
   self.assertEqual(len(new),9);self.assertEqual({i for s in new for i in s['added_part_ids']},set(range(34,49))|{86})
   at={i:s['number']for s in ss for i in s['added_part_ids']}
   self.assertLess(at[34],at[35]);self.assertLess(at[34],at[38]);self.assertLess(at[35],at[41]);self.assertLess(at[38],at[45]);self.assertLess(at[42],at[41]);self.assertLess(at[46],at[45]);self.assertLess(at[41],at[44]);self.assertLess(at[44],at[86])

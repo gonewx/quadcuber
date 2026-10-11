@@ -1,3 +1,7 @@
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from paths import MECHANICAL, ASSEMBLY, MANUAL_OUTPUT
 """Render actual frozen LDraw triangle meshes, never schematic substitute parts."""
 from pathlib import Path
 import json,sys,math,textwrap,os,hashlib
@@ -10,9 +14,9 @@ import matplotlib.pyplot as plt
 from matplotlib import colors,font_manager
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 from mpl_toolkits.mplot3d import proj3d
-HERE=Path(__file__).resolve().parent
-sys.path.insert(0,str(HERE.parent));import candidate as C
-book=json.loads((HERE/'support-steps.json').read_text());rows=C.rows
+HERE=MANUAL_OUTPUT
+sys.path.insert(0,str(MECHANICAL));import candidate as C
+book=json.loads((ASSEMBLY/'support-steps.json').read_text());rows=C.rows
 context_parts=[C.module()[2].moved(C.m.ARM_ROT['R']),C.retained_base()[0]]
 context_mesh=[]
 for p in context_parts:

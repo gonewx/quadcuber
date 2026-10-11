@@ -8,11 +8,13 @@ import re
 import unittest
 import zipfile
 
-ROOT = Path(__file__).resolve().parents[1] / 'mechanical/final'
+REPO = Path(__file__).resolve().parents[1]
+ROOT = REPO / 'generated/mechanical'
+INPUTS = REPO / 'mechanical/inputs'
 
 
 def read_json(path):
-    return json.loads((ROOT / path).read_text())
+    return json.loads(((INPUTS if path in {'frozen-source-sha256.json', 'PROVENANCE.json'} else ROOT) / path).read_text())
 
 
 def subfiles(text):
@@ -23,14 +25,14 @@ def subfiles(text):
 class FinalMechanics(unittest.TestCase):
     def test_frozen_inputs_models_and_published_copies(self):
         for name, digest in read_json('frozen-source-sha256.json').items():
-            self.assertEqual(hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), digest, name)
+            self.assertEqual(hashlib.sha256((INPUTS / name.removeprefix('source/').replace('github-current-model.py', 'baseline_model.py')).read_bytes()).hexdigest(), digest, name)
         frozen = read_json('PROVENANCE.json')['frozen_models']
         self.assertEqual(read_json('candidate-manifest.json'), frozen)
-        self.assertEqual(read_json('site-source/dist/integrated/manifest.json'), frozen)
+        self.assertEqual(json.loads((REPO / 'dist/site/integrated/manifest.json').read_text()), frozen)
         for row in frozen.values():
             data = (ROOT / row['file']).read_bytes()
             self.assertEqual(hashlib.sha256(data).hexdigest(), row['sha256'])
-            self.assertEqual(data, (ROOT / 'site-source/dist/integrated' / row['file']).read_bytes())
+            self.assertEqual(data, (REPO / 'dist/site/integrated' / row['file']).read_bytes())
 
     def test_all_native_model_dependencies_are_embedded(self):
         for row in read_json('candidate-manifest.json').values():
@@ -73,24 +75,24 @@ class FinalMechanics(unittest.TestCase):
         self.assertEqual((c['seat_guide_parts'], c['lever_parts']), (130, 20))
         self.assertEqual(c['prebuilt_core_total_parts'], 0)
         self.assertEqual(c['head_steps_per_arm'], 88)
-        self.assertEqual(guide, read_json('site-source/dist/integrated/guide.json'))
+        self.assertEqual(guide, json.loads((REPO / 'dist/site/integrated/guide.json').read_text()))
         for step in guide['steps']:
             image = ROOT / 'manual' / step['image']
             self.assertTrue(image.is_file(), str(image))
-            self.assertEqual(image.read_bytes(), (ROOT / 'site-source/dist/integrated' / step['image']).read_bytes())
+            self.assertEqual(image.read_bytes(), (REPO / 'dist/site/integrated' / step['image']).read_bytes())
 
     def test_pdf_matches_verified_library_delivery(self):
         ref = read_json('PROVENANCE.json')['library']['pdf']
-        for name in ['manual/manual.pdf', 'site-source/dist/integrated/manual.pdf']:
-            data = (ROOT / name).read_bytes()
+        for name in ['generated/mechanical/manual/manual.pdf', 'dist/site/integrated/manual.pdf']:
+            data = (REPO / name).read_bytes()
             self.assertEqual(len(data), ref['bytes'])
             self.assertEqual(hashlib.sha256(data).hexdigest(), ref['sha256'])
 
     def test_current_routes_have_no_broken_local_links(self):
-        for folder, pages in [('site-source/dist', ['index.html', 'integrated-assembly.html', 'integrated-operation.html', 'integrated-support.html']),
-                              ('offline-viewer', ['index.html', 'assembly.html', 'operation.html', 'support.html'])]:
+        for folder, pages in [('dist/site', ['index.html', 'integrated-assembly.html', 'integrated-operation.html', 'integrated-support.html']),
+                              ('dist/offline', ['index.html', 'assembly.html', 'operation.html', 'support.html'])]:
             for name in pages:
-                page = ROOT / folder / name
+                page = REPO / folder / name
                 if not page.exists():
                     self.fail(str(page))
                 # Script payloads contain historical templates; inspect rendered HTML only.
@@ -101,18 +103,18 @@ class FinalMechanics(unittest.TestCase):
                     self.assertTrue((page.parent / url.split('#')[0]).is_file(), (name, url))
 
     def test_compact_download_contains_current_rebuild_inputs(self):
-        with zipfile.ZipFile(ROOT / 'site-source/dist/integrated/full-revision.zip') as archive:
-            for name in ['candidate.py', 'build_candidate.py', 'build_source_archive.py',
-                         'source/baseline-machine-899.mpd', 'source/github-current-model.py',
-                         'source/asset-order.json', 'site-source/build_integrated_revision.py',
-                         'site-source/build_viewer_workbench.py']:
-                self.assertEqual(archive.read('quadcuber-final/' + name), (ROOT / name).read_bytes(), name)
+        with zipfile.ZipFile(REPO / 'dist/downloads/full-revision.zip') as archive:
+            for name in ['mechanical/candidate.py', 'mechanical/build_candidate.py',
+                         'tools/build_source_archive.py', 'mechanical/inputs/baseline-machine-899.mpd',
+                         'mechanical/inputs/baseline_model.py', 'mechanical/inputs/asset-order.json',
+                         'web/build_integrated_revision.py', 'web/build_viewer_workbench.py']:
+                self.assertEqual(archive.read('quadcuber/' + name), (REPO / name).read_bytes(), name)
 
     def test_current_scope_has_no_prebuilt_arm_claim(self):
-        for folder, pages in [('site-source/dist', ['index.html', 'integrated-assembly.html', 'integrated-operation.html']),
-                              ('offline-viewer', ['index.html', 'assembly.html', 'operation.html'])]:
+        for folder, pages in [('dist/site', ['index.html', 'integrated-assembly.html', 'integrated-operation.html']),
+                              ('dist/offline', ['index.html', 'assembly.html', 'operation.html'])]:
             for name in pages:
-                html = re.sub(r'<script[\s\S]*?</script>', '', (ROOT / folder / name).read_text())
+                html = re.sub(r'<script[\s\S]*?</script>', '', (REPO / folder / name).read_text())
                 self.assertNotIn('本册不含这些', html)
                 self.assertIn('882', html)
 

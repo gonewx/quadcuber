@@ -1,3 +1,7 @@
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from paths import MECHANICAL, ASSEMBLY, MANUAL_OUTPUT
 """Generate final-only native head assembly records and diagrams.
 Usage: python manual/build_final_head.py [--data-only | --render-only] [--select 1 2 ...]
 No model is changed. Instance numbers are 1-based candidate.module(0,0,False,True).
@@ -5,8 +9,8 @@ No model is changed. Instance numbers are 1-based candidate.module(0,0,False,Tru
 from pathlib import Path
 import argparse, collections, hashlib, json, sys, copy, os
 import numpy as np
-H=Path(__file__).resolve().parent
-sys.path.insert(0,str(H.parent))
+H=MANUAL_OUTPUT
+sys.path.insert(0,str(MECHANICAL))
 import candidate as C
 P=C.module(0,0,False,True)
 assert len(P)==167
@@ -231,7 +235,7 @@ assert all(s['visible_part_ids']==[r['index1'] for r in s['geometry_records']] f
 assert introduced==set(range(1,168))-set(DEFER)
 assert collections.Counter(i for s in steps for i in s['added_part_ids'])==collections.Counter(ADDED)
 assert set(steps[-1]['visible_part_ids'])==introduced
-BOOK=dict(title='60483机械头最终版直接装配',revision='FINAL-ASSEMBLY-2026-10-09-FULL-PARTS',review_only=True,units='LDraw: 1 LDU = 0.4 mm',local_frame='L module frame; A=+Y, B=-Y; each arm uses its corresponding ARM_ROT without mirroring',prerequisites=dict(prebuilt_core_count=0,prebuilt_core_part_ids=CORE,prebuilt_core_bom=bom(CORE),prebuilt_core_geometry_records=record(CORE),prebuilt_input_groups=[],turntable_mount_loose_part_ids=TURNTABLE_MOUNT,explicitly_loose_head_and_transmission_count=165,explicitly_loose_head_and_transmission_part_ids=ADDED,explicitly_loose_head_and_transmission_bom=bom(ADDED),deferred_interface_count=2,deferred_interface_part_ids=DEFER,deferred_interface_bom=bom(DEFER),deferred_interface_geometry_records=record(DEFER),total_parts_per_arm=167,arms=['R','L','F','B'],four_arms_total=668,independent_offline_assembly=True,original_core_from_scratch_covered=True,initial_crank_and_servo_link_connected=False,core_input_condition_zh='无预装输入：按步骤从清单单件搭建。成品电机和舵机作为采购件，内部不拆解。曲柄定位、真实舵机接口与实体装配须另行验证。'),rows=ROWS,steps=steps,validation=dict(step_count=len(steps),core_count=0,introduced_count=165,deferred_count=2,staged_count=165,final_arm_count=167,four_arms_count=668,added_instances_exactly_once=True,final_staged_set_exact=True,mechanical_geometry_changed=False,physical_verification=False,continuous_insertion_verification=False),reference_images={'opening':'final-head-diagrams/opening.png'},source=dict(model_file='candidate.py',model_sha256=hashlib.sha256((H.parent/'candidate.py').read_bytes()).hexdigest(),native_source_file='source/baseline_model.py',native_source_sha256=hashlib.sha256((H.parent/'source/baseline_model.py').read_bytes()).hexdigest(),native_source_steps_used=list(range(1,19)),pose=dict(open_s=0,whole_head_angle_deg=0),source_instance_numbering='candidate.module(0,0,False,True), indices 1..167',generator='manual/build_final_head.py'))
+BOOK=dict(title='60483机械头最终版直接装配',revision='FINAL-ASSEMBLY-2026-10-09-FULL-PARTS',review_only=True,units='LDraw: 1 LDU = 0.4 mm',local_frame='L module frame; A=+Y, B=-Y; each arm uses its corresponding ARM_ROT without mirroring',prerequisites=dict(prebuilt_core_count=0,prebuilt_core_part_ids=CORE,prebuilt_core_bom=bom(CORE),prebuilt_core_geometry_records=record(CORE),prebuilt_input_groups=[],turntable_mount_loose_part_ids=TURNTABLE_MOUNT,explicitly_loose_head_and_transmission_count=165,explicitly_loose_head_and_transmission_part_ids=ADDED,explicitly_loose_head_and_transmission_bom=bom(ADDED),deferred_interface_count=2,deferred_interface_part_ids=DEFER,deferred_interface_bom=bom(DEFER),deferred_interface_geometry_records=record(DEFER),total_parts_per_arm=167,arms=['R','L','F','B'],four_arms_total=668,independent_offline_assembly=True,original_core_from_scratch_covered=True,initial_crank_and_servo_link_connected=False,core_input_condition_zh='无预装输入：按步骤从清单单件搭建。成品电机和舵机作为采购件，内部不拆解。曲柄定位、真实舵机接口与实体装配须另行验证。'),rows=ROWS,steps=steps,validation=dict(step_count=len(steps),core_count=0,introduced_count=165,deferred_count=2,staged_count=165,final_arm_count=167,four_arms_count=668,added_instances_exactly_once=True,final_staged_set_exact=True,mechanical_geometry_changed=False,physical_verification=False,continuous_insertion_verification=False),reference_images={'opening':'final-head-diagrams/opening.png'},source=dict(model_file='candidate.py',model_sha256=hashlib.sha256((MECHANICAL/'candidate.py').read_bytes()).hexdigest(),native_source_file='source/baseline_model.py',native_source_sha256=hashlib.sha256((MECHANICAL/'inputs/baseline_model.py').read_bytes()).hexdigest(),native_source_steps_used=list(range(1,19)),pose=dict(open_s=0,whole_head_angle_deg=0),source_instance_numbering='candidate.module(0,0,False,True), indices 1..167',generator='manual/build_final_head.py'))
 
 
 def render(book,select=None):
@@ -336,7 +340,7 @@ def render_references():
 if __name__=='__main__':
  ap=argparse.ArgumentParser();ap.add_argument('--data-only',action='store_true');ap.add_argument('--render-only',action='store_true');ap.add_argument('--select',type=int,nargs='*');ap.add_argument('--references-only',action='store_true');args=ap.parse_args()
  if not args.render_only:
-  (H/'final-head-steps.json').write_text(json.dumps(BOOK,ensure_ascii=False,indent=2))
+  (ASSEMBLY/'final-head-steps.json').write_text(json.dumps(BOOK,ensure_ascii=False,indent=2))
   print(f'Final head: {len(steps)} steps; prebuilt0 +165 =165, deferred2 =>167',flush=True)
  if not args.data_only and not args.references_only:render(BOOK,set(args.select) if args.select else None)
  if not args.data_only and (args.references_only or not args.select):render_references()

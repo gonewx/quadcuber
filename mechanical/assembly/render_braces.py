@@ -1,8 +1,12 @@
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from paths import MECHANICAL, ASSEMBLY, MANUAL_OUTPUT
 """Native-mesh detail of final arm side-brace assembly; geometry unchanged."""
 from pathlib import Path
 import sys,json,hashlib
 import numpy as np
-H=Path(__file__).resolve().parent;sys.path.insert(0,str(H.parent));import candidate as C
+H=MANUAL_OUTPUT;sys.path.insert(0,str(MECHANICAL));import candidate as C
 import matplotlib;matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib import font_manager,colors

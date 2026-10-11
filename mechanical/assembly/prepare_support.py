@@ -1,8 +1,12 @@
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from paths import MECHANICAL, ASSEMBLY, MANUAL_OUTPUT
 """Rebuild the continuous 130-part support and approved 20-part lever sequence."""
 from pathlib import Path
 import sys,json,copy,re,hashlib
-H=Path(__file__).resolve().parent;sys.path.insert(0,str(H.parent));import candidate as C
-S=H.parent/'source/manual-inputs'
+H=MANUAL_OUTPUT;sys.path.insert(0,str(MECHANICAL));import candidate as C
+S=MECHANICAL/'inputs/manual-inputs'
 g=json.loads((S/'support-source-steps.json').read_text());old={r['index1']:r for r in C.original_rows};new={r['id']:r for r in C.rows};mapping={i:new[r['id']]['index1'] for i,r in old.items() if r['id']in new}
 for i in [67,72,69,74]:mapping[i]=new['center_double_web'+str(-8 if i in [67,72]else 8)]['index1']
 def mid(ids):return list(dict.fromkeys(mapping[i]for i in ids if i in mapping))
@@ -165,5 +169,5 @@ canonical=json.dumps(C.rows,ensure_ascii=False,indent=2).encode()
 g['external_host_requirement']['retained_foundation_count']=64
 g.update(steps=steps,title_zh='整合重力回落版150件支承装配图解',revision=C.REVISION,source_assembly='../assembly-integrated132.json',source_geometry_sha256=hashlib.sha256(canonical).hexdigest(),global_cautions_zh=['仅设计审阅；未通过实体装配、载荷、保持与带电验收。','8墙脚销名义纠正已批准，实体未验收。','无工作锁销、无水平P/Q补强、无自动保持。'],coverage={'expected_count':150,'support_count':130,'lever_count':20,'introduced_count':150,'unique_count':150,'all_instances_once':True,'step_count':len(steps),'support_steps':79,'lever_steps':len(steps)-79})
 g.pop('source_assembly_sha256',None);g.pop('verification',None);g.pop('part_catalog',None)
-(H/'support-steps.json').write_text(json.dumps(g,ensure_ascii=False,indent=2));(H/'support-instance-map.json').write_text(json.dumps(mapping,indent=2))
+(ASSEMBLY/'support-steps.json').write_text(json.dumps(g,ensure_ascii=False,indent=2));(H/'support-instance-map.json').write_text(json.dumps(mapping,indent=2))
 print('Support mapped',len(steps),'steps;150 unique instances')
