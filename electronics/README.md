@@ -65,7 +65,8 @@ export XDG_DATA_HOME=/tmp/quadcuber-kicad/data
 # 正常编辑：直接用KiCad编辑原理图/PCB，再导出验证。
 /usr/bin/python3 electronics/build.py
 /usr/bin/python3 electronics/check.py
-python -m unittest tests.test_wiring tests.test_arm_selection tests.test_firmware -q
+python tools/build_distribution.py
+python -m unittest tests.test_wiring tests.test_arm_selection tests.test_firmware tests.test_repository_layout -q
 
 # 仅明确从电路数据重新开始布局时执行；会覆盖原理图和已布线PCB。
 /usr/bin/python3 electronics/generate.py
@@ -88,7 +89,7 @@ java -Xmx4g -Djava.awt.headless=true -jar /path/to/freerouting-2.1.0.jar \
 
 ## 实际验证记录
 
-KiCad 9.0.2导出：ERC 0错误/0警告、DRC 0违规、0未连接；原理图与PCB引脚契约校验0错误。独立审查已复核电源铜路、热孔和双面输入电容，记录在`generated/electronics/independent-review.md`，绑定PCB哈希。既有接线/R-L选择/固件51项测试通过。额外运行仓库布局8项，7项通过；1项因当前工作区缺少既有`dist/site/integrated/full-revision.zip`分发产物失败，与PCB源文件无关，未修改该测试或伪称全仓通过；这不等同四臂软件或PCB实物通过。
+KiCad 9.0.2导出：ERC 0错误/0警告、DRC 0违规、0未连接；原理图与PCB引脚契约校验0错误。独立审查已复核电源铜路、热孔和双面输入电容，记录在`generated/electronics/independent-review.md`，绑定PCB哈希。既有接线/R-L选择/固件51项测试通过。按仓库命令`python tools/build_distribution.py`补建分发产物后，相关51项与仓库布局8项合计**59项全部通过**，没有修改测试断言；这不等同四臂软件或PCB实物通过。
 
 ## 放行清单
 
@@ -101,3 +102,5 @@ KiCad 9.0.2导出：ERC 0错误/0警告、DRC 0违规、0未连接；原理图�
 ## 资料与许可证
 
 详细依据见 `sources.md`。本地拷贝KiCad标准封装来自本环境KiCad9库，遵守[KiCad Libraries License](https://www.kicad.org/libraries/license/)的CC-BY-SA4.0及PCB设计例外；Pico/EV3自建封装分别标注已核尺寸与未核部分。不把公开资料的缺失字段编造成制造商规格。
+
+工程评审附件由`python electronics/package_review.py`生成到被忽略的`output/electronics/`，含原生工程、BOM、说明、报告与明确标注不可制造的Gerber预览；同时输出两张独立PNG及SHA-256清单。包内manifest绑定当前完整Git提交。

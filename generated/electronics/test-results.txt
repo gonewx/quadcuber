@@ -1,10 +1,10 @@
-2026-10-11
-python -m unittest tests.test_wiring tests.test_arm_selection tests.test_firmware -q
-51 tests: PASS
+2026-10-11 final verification
+Prerequisite: python tools/build_distribution.py
+Result: built missing distribution ZIP using existing repository command, no test assertions changed.
 
-Additional combined run with tests.test_repository_layout:
-59 tests: 58 PASS, 1 FAIL
-Failure: test_deployable_archives_fit_existing_host_limit
-Cause: existing dist/site/integrated/full-revision.zip artifact absent in workspace.
-No firmware, mechanical models or existing tests changed by PCB task.
+python -m unittest tests.test_wiring tests.test_arm_selection tests.test_firmware tests.test_repository_layout -q
+Ran 59 tests in 6.938s
+OK (59/59 PASS)
+
+Earlier missing-dist-artifact failure is resolved.
 No PCB hardware test performed.
