@@ -11,6 +11,13 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class RepositoryLayout(unittest.TestCase):
+    def test_compatibility_entries_preserve_query_and_step(self):
+        for name in ['docs/lego/index.html', 'docs/wiring/index.html', 'docs/wiring/direct-breadboard.html']:
+            text = (ROOT / name).read_text() if (ROOT / name).exists() else ''
+            self.assertIn('location.search', text, name)
+            self.assertIn('location.hash', text, name)
+            self.assertIn('generated/', text, name)
+
     def test_canonical_dynamic_step_images_resolve(self):
         page = ROOT / 'generated/site/integrated-assembly.html'
         data = json.JSONDecoder().raw_decode(page.read_text().split('window.WORKBENCH_DATA=', 1)[1])[0]

@@ -4,7 +4,7 @@
 
 文中的角度、脉宽、压入量都是模型名义值，**实物都还没测过**，测试时以你看到的为准。
 
-> **如果已经按 [v4](lego/v4/README.md) 改装**：开合方向相反，往后拉是夹紧，“死点”指曲柄朝后、与连杆折叠成一线的位置。下文的步骤照做，只是 T1 里“朝合拢方向”对应推杆往后拉。v4 的预期接触到死点差值没有重新估算。
+> **如果已经按 [v4](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md) 改装**：开合方向相反，往后拉是夹紧，“死点”指曲柄朝后、与连杆折叠成一线的位置。下文的步骤照做，只是 T1 里“朝合拢方向”对应推杆往后拉。v4 的预期接触到死点差值没有重新估算。
 
 ## 这次要回答的问题
 
@@ -20,8 +20,8 @@
 
 用“双侧薄梁轮胎压头 + 防翻折开限位”这一版，也就是加 Watt 导向之前的最后一版。它的说明书已归档：
 
-- **[搭建说明书（21 步，含可旋转模型）](lego/archive/v3-baseline/index.html)**
-- [零件清单](lego/archive/v3-baseline/bom.csv) · [防翻折限位的改装清单](lego/archive/v3-baseline/open_stops.md)
+- **[搭建说明书（21 步，含可旋转模型）](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/archive/v3-baseline/index.html)**
+- [零件清单](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/archive/v3-baseline/bom.csv) · [防翻折限位的改装清单](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/archive/v3-baseline/open_stops.md)
 
 单臂只需要第 1~19 步。第 20 步（另外三个机械手）和第 21 步不做。
 

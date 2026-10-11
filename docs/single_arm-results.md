@@ -94,7 +94,7 @@ arm_test.main()
 
 ## 机械结构修复前冻结
 
-用户提供两张实物照片并报告马达固定端下垂。暂停动力调参，当前完整参数另存为[修复前快照](measurements/2026-09-28-ev3-medium-installed/pre-support-fix-settings.json)，照片保存在同目录photos。中马达固定支架新增承重框架和横梁，见[补装说明](lego/medium/support-fix.md)。补强效果需实物确认，修复后再复核驱动参数；大马达归档保持不变。
+用户提供两张实物照片并报告马达固定端下垂。暂停动力调参，当前完整参数另存为[修复前快照](measurements/2026-09-28-ev3-medium-installed/pre-support-fix-settings.json)，照片保存在同目录photos。中马达固定支架新增承重框架和横梁，见[补装说明](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/archive/medium/support-fix.md)。补强效果需实物确认，修复后再复核驱动参数；大马达归档保持不变。
 
 ### 支撑装配修正
 

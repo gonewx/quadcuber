@@ -454,13 +454,13 @@
     {
       "old_path": "mechanical/final/manual/FINAL-HEAD-BUILD.md",
       "new_path": "mechanical/assembly/FINAL-HEAD-BUILD.md",
-      "role": "recipe",
+      "role": "documentation",
       "sha256": "167577103e06f9d2c9685a7baaee13531de128e51379a600dba789dea610c543"
     },
     {
       "old_path": "mechanical/final/manual/REBUILD.md",
       "new_path": "mechanical/assembly/REBUILD.md",
-      "role": "recipe",
+      "role": "documentation",
       "sha256": "60124ba811652236d2ade595c784dacf12b33a49b3cf9081ceb32748b2a4743f"
     },
     {

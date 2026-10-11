@@ -27,16 +27,16 @@ Mate the head to the core and insert the 12L pushrod while the crank connection 
 
 Run from the project root or any directory:
 
-    python manual/build_final_head.py
+    python mechanical/assembly/build_final_head.py
 
 Useful variants:
 
-    python manual/build_final_head.py --data-only
-    python manual/build_final_head.py --render-only
-    python manual/build_final_head.py --render-only --select 8 11 24
-    python manual/build_final_head.py --render-only --references-only
+    python mechanical/assembly/build_final_head.py --data-only
+    python mechanical/assembly/build_final_head.py --render-only
+    python mechanical/assembly/build_final_head.py --render-only --select 8 11 24
+    python mechanical/assembly/build_final_head.py --render-only --references-only
 
-Paths above assume the working directory is `lift-feasibility/integrated-revision`. The script itself uses absolute paths derived from its file location.
+Paths above assume the repository root; elsewhere pass the absolute script path. Sources and recipes live in `mechanical/assembly/`, generated diagrams and audits in `generated/mechanical/manual/`. Set `QUADCUBER_MECHANICAL_OUTPUT` to isolate rendering output. Use a separate checkout before regenerating authored recipe files.
 
 ## Files and schema
 
@@ -65,3 +65,5 @@ All diagrams render actual final native LDraw triangle meshes. No simplified rep
 The 8L root axle carries a 64 mm stack: 4 + 8 + 8 + 8 + 8 + 8 + 8 + 8 + 4 mm. Nominal axial reserve is zero. Free jaw motion, half-bush retention, insertion forces, structural loads, deformation, control interlocks, and physical assembly have not been verified. None of the generated checks is physical or powered-operation approval.
 
 The supplied geekservo mesh is approximate and marked NOCERTIFY. Its ear holes, output interface and insertion forces need physical confirmation. The crosshead axle stack is 24 mm on a 3L axle, with zero nominal axial reserve. Mechanical instructions do not supply a powered servo calibration procedure.
+
+Repository layout note: preserve verified illustrations and PDF for ordinary builds. Full rerendering is an explicit maintenance operation in a separate checkout; it is not expected to reproduce PDF metadata byte-for-byte. The currently delivered PDF and image hashes remain frozen.

@@ -1,6 +1,6 @@
 > 最终机械版：**501 步、882 件**（64 件底盘＋668 件四臂＋150 件支承与重力复位杠杆）。
-> [整机 3D](mechanical/final/site-source/dist/index.html) · [501 步组装](mechanical/final/site-source/dist/integrated-assembly.html) · [完整 PDF](mechanical/final/manual/manual.pdf) · [最终 BOM](mechanical/final/final-BOM.csv) · [生成源码与重建](mechanical/final/README.md)
-> **GitHub 仓库为主源码，Sites 仅用于发布。** 当前机械设计见 `mechanical/final/`；早期 v4 改装资料保留用于历史追溯。实体装配、承载、重力回落与带电联锁仍待验收。
+> [整机 3D](generated/site/index.html) · [501 步组装](generated/site/integrated-assembly.html) · [完整 PDF](generated/mechanical/manual/manual.pdf) · [最终 BOM](generated/mechanical/final-BOM.csv) · [生成源码与重建](mechanical/README.md)
+> **GitHub 仓库为主源码，Sites 仅用于发布。** 当前机械设计见 `mechanical/`；早期 v4 改装资料保留用于历史追溯。实体装配、承载、重力回落与带电联锁仍待验收。
 
 # quadcuber
 
@@ -10,7 +10,7 @@
 
 * 模拟器：在 54 个贴纸的魔方模型上按物理动作逐步重放，检查每一步是否满足机械约束，以及最后魔方是否还原。
 
-* 单臂测试程序（`firmware/pico/`，MicroPython）：测机械手转 90° 的耗时、到位精度和夹持可靠性，结果汇总后替换规划器的耗时估算值。接线和测试步骤见 [docs/single\_arm.md](docs/single_arm.md)，乐高机械手的结构思路和尺寸要求见 [docs/arm\_concept.md](docs/arm_concept.md)，**搭建说明书**见 [mechanical/final/site-source/dist/integrated-assembly.html](mechanical/final/site-source/dist/integrated-assembly.html)（501 步最终整机版，总入口 [docs/lego/index.html](docs/lego/index.html)）。
+* 单臂测试程序（`firmware/pico/`，MicroPython）：测机械手转 90° 的耗时、到位精度和夹持可靠性，结果汇总后替换规划器的耗时估算值。接线和测试步骤见 [docs/single\_arm.md](docs/single_arm.md)，乐高机械手的结构思路和尺寸要求见 [docs/arm\_concept.md](docs/arm_concept.md)，**搭建说明书**见 [generated/site/integrated-assembly.html](generated/site/integrated-assembly.html)（501 步最终整机版，总入口 [docs/lego/index.html](docs/lego/index.html)）。
 
 规划器纯 Python 实现，不依赖第三方库，可以在 PC 或树莓派 Zero W 上运行。
 
@@ -18,15 +18,15 @@
 
 从[电路总览](docs/wiring/README.md)进入：当前使用面包板＋动力直连，洞洞板是可选装配方案。EV3 大马达＋DRV8833 的空载闭环已通过，范围见[实测记录](docs/single_arm-results.md)；这不等于 v4 机械头、舵机、带魔方动作或四臂供电已验收。接下来需要实物标定和分级测试。
 
-当前硬件：EV3 大马达、DRV8833（名义 9V，实测不得超过 10.8V）、每路 10kΩ/20kΩ 编码器分压（`ENC_PULLUP = False`）、灰色 270° Geekservo。调试时 Pico 由 USB 供电，舵机由独立 5V 降压供电，所有模块共地。接线以 `docs/wiring/spec.py` 及其生成图表为准。
+当前硬件：EV3 大马达、DRV8833（名义 9V，实测不得超过 10.8V）、每路 10kΩ/20kΩ 编码器分压（`ENC_PULLUP = False`）、灰色 270° Geekservo。调试时 Pico 由 USB 供电，舵机由独立 5V 降压供电，所有模块共地。接线以 `wiring/spec.py` 及其生成图表为准。
 
 固件的开／合端点及安全工作区间（`SERVO_OPEN_US`、`SERVO_CLOSE_US`、`SERVO_MIN_US`、`SERVO_MAX_US`）默认均为 `None`，`SERVO_CALIBRATED = False`。未完成实物标定时，普通动力命令会拒绝执行；仅在确认无魔方、机构全行程自由且供电接线已核验后，可显式进入 `motor_test unloaded` 做空载马达验证，该模式不允许舵机开合或带载测试。按[单臂标定步骤](docs/single_arm.md#servo-calibration)先脱开连杆、声明手动会话，再逐步测量舵机端点及安全区间，最后人工记录 `v4`／`R` 标定身份并启用标志。启动不发送舵机脉冲，但不能保证上电硬件不抖动；旧脉宽和 CAD 角度不能充当实测值。
 
 舵机时序另行确认：默认 `SERVO_MOVE_MS = None`、`SERVO_TIMING_CONFIRMED = False`。端点、安全区间和身份确认后，人工选定保守的临时等待时长（1～5000ms 整数，不沿用旧 120ms），仅用单次 `open` / `close` 录像测量，确认完全停稳才发下一条。此时 `grip`、`cycle` 和普通旋转仍被锁定，显式空载马达模式是例外。实测完整开／合的较慢值加余量后回填等待时间、设置 `SERVO_TIMING_CONFIRMED = True`，上传并 Ctrl+D 重载，才进入连续及联合测试；机构或供电变化后重新确认。
 
 ```bash
-python docs/wiring/build.py          # 生成全部电路文档及图纸
-python docs/wiring/build.py --check  # 检查配置、网络和生成文件是否同步
+python wiring/build.py          # 生成全部电路文档及图纸
+python wiring/build.py --check  # 检查配置、网络和生成文件是否同步
 ```
 
 ## 机器模型
@@ -116,11 +116,11 @@ python -m unittest -v
 | `firmware/pico/` | 单臂测试程序（MicroPython）：配置、PIO 编码器、马达/舵机驱动、位置控制、串口命令行 |
 | `docs/single_arm.md` | 单臂原型的接线、测试步骤和待验证假设 |
 | `docs/arm_concept.md` | 乐高机械手的概念设计：叉子 + 滑块结构、关键尺寸、单臂测试的魔方固定方法 |
-| `docs/wiring/` | 单臂原型的图解接线指南（`build.py` 生成 `index.html`，内嵌 SVG） |
+| `wiring/`、`generated/wiring/` | 接线规范和生成程序；对应标准图纸输出 |
 | `docs/perfboard.md` | 可拔插洞洞板设计：逐孔安装、镜像焊接图、模块排针座及上电验收 |
-| `docs/lego/` | 乐高搭建说明书与模型文档：最终版见 `mechanical/final/`；`v4/` 与 `archive/` 保留历史资料 |
-| `tools/lego/` | 搭建图工具：模型定义、干涉/连接检查、渲染（见其中的 README） |
-| `mechanical/final/` | 最终机械模型、501 步图解与 PDF、生成器、离线阅读器和 Sites 页面源码 |
+| `docs/lego/` | 库存和兼容导航；历史原件通过固定 Git 提交查阅 |
+| `mechanical/`、`web/`、`tools/` | 机械／网页源码及少量打包、重建入口 |
+| `mechanical/` | 最终机械模型、501 步图解与 PDF、生成器、离线阅读器和 Sites 页面源码 |
 | `tests/` | 控制及最终机械一致性测试 |
 
 ## Prompts
@@ -128,3 +128,9 @@ python -m unittest -v
 * gpt-6-astra high
 
 现在的设计还是不理想, 设计结构复杂,但实际效果看着也不行. 我有思路需要你评估和验证: 需要在上一版本整体结构上主要优化方向是推杆到夹指的传力,要能将舵机的力量传递到夹指前端, 而不是像现在这样中间的连接是无摩擦销,导致力量无法传递, 所有现在的夹指整体的平行的设计理念 ,也导致总是间隙, 因为乐高结构和尺寸决定了现在这样的设计必然无法夹紧. 所以夹紧状态应该是现在的夹指部分不用完全 平行于魔方, 但夹指前端必须有新的结构件能自然贴合魔方, 达到夹紧的效果.
+
+## 源码与输出
+
+`mechanical/`、`wiring/`、`web/` 分别维护机械、接线和网页源码；`generated/` 保存唯一标准输出；`dist/` 为不入 Git 的网站／离线／源码包。`docs/` 保存人工说明及原始实测证据，`tests/` 保存回归与独立基准；运行库 `quadcuber/` 和固件 `firmware/` 原位保留，不新增 `src/`。
+
+运行 `python tools/build_distribution.py` 后可打开离线包，或从仓库根启动 `python -m http.server 8000` 浏览 `generated/site/index.html`。源码包包含重建所需代码、模型、图解和 PDF；构建不发布。历史方案见 [历史索引](docs/history.md)。
