@@ -51,11 +51,16 @@ def validate(config=None):
     if config is None:
         config = runpy.run_path(str(ROOT / 'firmware/pico/config.py'))
     # 图中还包含固定物理脚位/导线坐标；改表不能自动迁移接线图。
-    expected = dict(MOTOR_IN1=2, MOTOR_IN2=3, ENC_A=4, ENC_B=5,
-                    SERVO=8, ENC_SM=(0, 1), ENC_PULLUP=False)
-    for key, value in expected.items():
-        if config.get(key) != value:
-            raise ValueError(f'{key} 与固定接线图不符：固件={config.get(key)!r}，图纸={value!r}；请复核孔位和导线')
+    groups = config['ARMS'] if 'ARMS' in config else {'R': config}
+    for name, cfg in groups.items():
+        if name not in ('R', 'L'):
+            raise ValueError('固件仅支持 R/L 分组')
+        motor, enc, servo, sm = ARMS[name]
+        expected = dict(MOTOR_IN1=motor[0], MOTOR_IN2=motor[1], ENC_A=enc[0],
+                        ENC_B=enc[1], SERVO=servo[0], ENC_SM=sm, ENC_PULLUP=False)
+        for key, value in expected.items():
+            if cfg.get(key) != value:
+                raise ValueError(f'{name} {key} 与固定接线图不符；请复核孔位和导线')
     if ARMS['R'] != ((2, 3), (4, 5), (8,), (0, 1)):
         raise ValueError('R 臂分配与固定孔位图不符')
     gpio = [0, 1]  # 预留 UART

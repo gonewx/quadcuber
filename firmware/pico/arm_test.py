@@ -1,8 +1,8 @@
 """单臂原型测试程序 (MicroPython, 树莓派 Pico)。
 
 用法 (详见 docs/single_arm.md):
-    mpremote cp config_l.py arm_profiles.py control.py encoder.py motor.py arm_test.py :
-    # 升级保留设备 config.py（R），先按文档备份；初装才另传 config.py。
+    mpremote cp arm_profiles.py control.py encoder.py motor.py arm_test.py :
+    # 升级先按文档备份、迁移并验证设备 config.py，禁止覆盖真实 R 参数。
     mpremote repl --capture arm.log
     >>> import arm_test; arm_test.main()
 
@@ -299,7 +299,7 @@ def cmd_arm(arm, args):
         return
     cfg = arm.config
     print('当前臂 %s · 配置 %s · 电机 GP%d/%d · 编码器 GP%d/%d · 舵机 GP%d · PIO %s' %
-          (arm.arm_id, 'config.py' if arm.arm_id == 'R' else 'config_l.py',
+          (arm.arm_id, 'config.py ARMS[%s]' % arm.arm_id if hasattr(config, 'ARMS') else 'config.py (legacy R)',
            cfg.MOTOR_IN1, cfg.MOTOR_IN2, cfg.ENC_A, cfg.ENC_B, cfg.SERVO, cfg.ENC_SM))
     print('标定=%s 时序=%s；状态查询不发运动命令' %
           (getattr(cfg, 'SERVO_CALIBRATED', False), getattr(cfg, 'SERVO_TIMING_CONFIRMED', False)))

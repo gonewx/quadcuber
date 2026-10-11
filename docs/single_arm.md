@@ -118,7 +118,7 @@ EV3 黄 ──[10kΩ]──●── GP4        EV3 蓝 ──[10kΩ]──●�
 3. 舵机红线接降压 OUT+、棕线接 OUT−，均为独立动力引线；黄线接面包板 j13（GP8）。核对实际线序，电源不从面包板或 Pico 取。
 4. 马达、编码器和其余控制线按[当前接线：原 R／新 R+L（条件式）](../generated/wiring/direct-breadboard.html#complete-wiring)连接。图中已包含舵机及全部动力、信号接线。
 
-**分项测试是命令顺序，不是接线顺序：**马达方向 → 齿轮比 → 舵机开合标定 → 旋转及联合测试。当前配置已填写 `SERVO_OPEN_US = 1700`、`SERVO_CLOSE_US = 1450`，但仍为 `SERVO_CALIBRATED = False`；仅填写脉宽不代表完成标定；未标定时 `open`、`close`、`grip`、`cycle` 会拒绝执行且不启动马达。手动标定会话期间也拒绝这四条命令，不能绕过第 3 步。
+**分项测试是命令顺序，不是接线顺序：**马达方向 → 齿轮比 → 舵机开合标定 → 旋转及联合测试。仓库 R 分组已填写 `SERVO_OPEN_US = 1700`、`SERVO_CLOSE_US = 1450`，但仍为 `SERVO_CALIBRATED = False`；仅填写脉宽不代表完成标定；未标定时 `open`、`close`、`grip`、`cycle` 会拒绝执行且不启动马达。手动标定会话期间也拒绝这四条命令，不能绕过第 3 步。
 
 未标定时普通马达动力命令也拒绝执行。第 0～2 步需显式使用 `motor_test unloaded`；它只是空载测试授权，不把舵机标记为已标定，也不允许带魔方试运行。实际安全工作区间 `SERVO_MIN_US` / `SERVO_MAX_US` 也默认为 `None`，实测、身份绑定与写回见第 3 步。
 
@@ -134,13 +134,13 @@ EV3 黄 ──[10kΩ]──●── GP4        EV3 蓝 ──[10kΩ]──●�
 
 | 配置 | R（保留设备现值） | L（独立新配置） |
 | --- | --- | --- |
-| 配置文件 | `firmware/pico/config.py` | `firmware/pico/config_l.py` |
+| 同一 `firmware/pico/config.py` 内的分组 | `ARMS["R"]` | `ARMS["L"]` |
 | 马达 IN1 / IN2 | GP2 / GP3 | GP6 / GP7 |
 | 编码器 A / B | GP4 / GP5 | GP12 / GP13 |
 | 舵机 | GP8 | GP9 |
 | PIO 状态机 | 0 / 1 | 2 / 3 |
 
-每次选臂（包括重复选择当前臂）先停止输出、释放旧 PWM、停用旧 PIO，再初始化新臂；临时 `servo_cal` / `motor_test` 授权、编码器零位、轨迹与在线 `set` 参数重置。配置文件中的记录不被选臂改写。无效选择或初始化失败会保持停止，需重新 `arm R` / `arm L`；不自动回退并恢复运动。未选中臂的两个驱动输入和舵机信号明确保持低电平。退出程序也释放资源并保持这些输出为低；**上电到程序启动之间、硬件故障或复位期间不由这个程序保证，升级和重启必须关闭动力。**
+每次选臂（包括重复选择当前臂）先停止输出、释放旧 PWM、停用旧 PIO，再初始化新臂；临时 `servo_cal` / `motor_test` 授权、编码器零位、轨迹与在线 `set` 参数重置。配置文件中的记录不被选臂改写。**每次 Ctrl+D、断开 USB 或重启程序后默认重新选择 R，不记住上次的 L。动力保持关闭，先重新选臂（L 用 `arm L`，R 用 `arm R`），再输入 `arm` 核对臂名、引脚与配置，之后才建立会话或通电。**无效选择或初始化失败会保持停止，需重新 `arm R` / `arm L`；不自动回退并恢复运动。未选中臂的两个驱动输入和舵机信号明确保持低电平。退出程序也释放资源并保持这些输出为低；**上电到程序启动之间、硬件故障或复位期间不由这个程序保证，升级和重启必须关闭动力。**
 
 ### 已运行原 R 固件的升级
 
@@ -154,29 +154,50 @@ R 空载旋转已通过，无需为了升级重做。先保存 R 测量记录；
    ```
 
    确认备份文件存在且包含当前 R 参数。该文件是回退与保留校准值的依据；无需重新推测或重测已有 R 数值。
-3. 首次升级只上传以下六个文件，**命令中没有 `config.py`**：
+3. 在电脑上从**刚下载的设备备份**生成新配置，再独立校验。以下工具不连接设备，不执行备份中的 Python，也不覆盖输入或已有输出：
 
    ```bash
-   mpremote fs cp firmware/pico/config_l.py firmware/pico/arm_profiles.py firmware/pico/control.py firmware/pico/encoder.py firmware/pico/motor.py firmware/pico/arm_test.py :
+   python tools/migrate_arm_config.py migrate ../quadcuber-R-config-before-L.py ../quadcuber-config-RL.py
+   python tools/migrate_arm_config.py verify ../quadcuber-R-config-before-L.py ../quadcuber-config-RL.py
+   ```
+
+   R 的全部字面值（包括用户额外字段、控制增益、方向和实测标定）原样放入 `ARMS["R"]`。L 使用独立未标定模板，绝不从设备 R 复制标定。备份含计算、导入、重复赋值、缺失必需字段或接线不匹配时工具停止，不生成可上传文件、不用默认值补齐。此时保留旧配置即可继续 R；先核对备份，人工把计算结果明确写成字面值后另存再试，不要运行来源不明的配置。已经采用 ARMS 的配置拒绝重复迁移，以免重置已有 L 记录。
+
+   唯一人工维护入口的结构如下（省略号仅示意，勿直接上传）：
+
+   ```python
+   ARMS = {
+       "R": {"ARM_ID": "R", "SERVO_OPEN_US": 1700, ...},
+       "L": {"ARM_ID": "L", "SERVO_OPEN_US": None, ...},
+   }
+   ```
+
+   示例 R 值不是设备替代值；上传文件必须来自实际备份的迁移结果。后续每次改参数只编辑对应分组，例如 `ARMS["L"]` 内的 `GAINS` 和端点，两臂不得共用同一个字典。
+4. 动力继续关闭，先更新程序文件；此时旧平铺 `config.py` 仍支持原 R。`arm L` 会停止输出并提示先迁移，不会借用 R 配置。
+
+   ```bash
+   mpremote fs cp firmware/pico/arm_profiles.py firmware/pico/control.py firmware/pico/encoder.py firmware/pico/motor.py firmware/pico/arm_test.py :
+   mpremote fs cp ../quadcuber-config-RL.py :config.py
+   mpremote fs cp :config.py ../quadcuber-config-RL-readback.py
+   python tools/migrate_arm_config.py verify ../quadcuber-R-config-before-L.py ../quadcuber-config-RL-readback.py
+   ```
+
+   下载回读也请使用尚不存在的本地文件名。任一传输或校验失败，不接通动力、不运行测试；从电脑上的原始备份恢复 `mpremote fs cp ../quadcuber-R-config-before-L.py :config.py`，重新下载核对与备份逐字节一致，再 Ctrl+D 重启。新程序兼容原平铺 R，无需把默认配置写回设备。如果升级前还使用了自定义程序版本，也应先另行备份所有程序文件供整套恢复。上传中断可能留下不完整文件，必须恢复并核对后再启动。
+5. 校验通过后打开 REPL，动力仍保持关闭：
+
+   ```bash
    mpremote repl --capture arm-L.log
    ```
 
-   如果设备已经有自己的 `config_l.py`，也先备份它；后续程序升级不要覆盖已经测得的 L 配置。新设备初装才另外上传仓库 `config.py`。
-4. 保持动力关闭，在 `>>>` 按 **Ctrl+D**，再运行：
+   在 `>>>` 按 **Ctrl+D**，再运行 `import arm_test; arm_test.main()`。默认 R；在 `arm>` 输入 `arm L`、`arm`、`help`，应显示 L、`config.py ARMS[L]`、GP6/7、GP12/13、GP9、PIO(2, 3)。这些命令不发定位脉冲；`help`、`arm`（无参数）、`show`、`enc`、`trace` 是查询命令。`set` 不改选臂或 GPIO，不持久化到文件。
 
-   ```python
-   import arm_test; arm_test.main()
-   ```
-
-   在 `arm>` 输入 `arm L`、`arm`、`help`。应显示 L、`config_l.py`、GP6/7、GP12/13、GP9、PIO(2, 3)。这些命令不发定位脉冲；`help`、`arm`（无参数）、`show`、`enc`、`trace` 是查询命令。`set` 不改选臂或 GPIO，不持久化到文件。
-
-配置必须仍符合固定 R/L 接线。旧 R `config.py` 的用户数值保留；缺失或未确认的安全字段仍不能解锁运动。只重复 `import` 不会重新读取缓存配置，修改任一配置后都须关闭动力、重新上传对应文件并 Ctrl+D 重启。
+配置必须仍符合固定 R/L 接线。`arm_profiles.py` 仅是读取分组的程序，不是第二个人工配置文件；不再使用 `config_l.py`。后续升级先备份当前**整个** `config.py`，勿重新迁移或覆盖已标定的 L。新设备才可用仓库模板初装。只重复 `import` 不会重新读取缓存配置，改参数后须关闭动力、上传同一个 `config.py` 并 Ctrl+D 重启。
 
 ### L 的首次标定与切回 R
 
 先关闭动力和 USB，脱开 L 舵机连杆，确认曲柄自由行程；不放魔方。再按下文 B 的条件启动、选 `arm L` 并 `off`，才给已检查的硬件供电。L 的方向、机械传动比和控制初值尚未实测，R 的空载结果不等于 L 已验收。
 
-`config_l.py` 默认 `SERVO_CALIBRATED=False`、`SERVO_TIMING_CONFIRMED=False`；开合端点、安全区间、标定身份和等待时间均为 `None`。首次命令形式为：
+`config.py` 的 `ARMS["L"]` 默认 `SERVO_CALIBRATED=False`、`SERVO_TIMING_CONFIRMED=False`；开合端点、安全区间、标定身份和等待时间均为 `None`。首次命令形式为：
 
 ```text
 servo_cal <min_us> <max_us> <start_us> detached
@@ -185,11 +206,13 @@ servo <start_us>
 
 尖括号是待人工确认后替换的整数，不是可直接粘贴的命令。第一行仅授权、不运动，第二行才发首脉冲，且必须等于声明的 start。保留原有规则：首次脱杆；装接后只有核实轴位才能使用 `aligned`；500～2500 只是电气包络；后续脉宽可在声明区间内作绝对跳转，程序不限制相邻差值，不代表机构可安全大步运动。未知区间继续小步、停稳观察，不自动扫角。
 
-L 实测完毕后只在 `config_l.py` 记录 L 的端点、安全区间、`SERVO_CALIBRATION_ARM="L"` 与匹配的机械身份，再按下文分阶段确认等待时长和时序；不得复制 R 的确认标志。`open` / `close` / `grip` / `cycle` 等继续受原门禁限制。原 R 的标定记录留在 `config.py`，R/L 的 `GAINS`、方向、传动比和时序各自独立。
+L 实测完毕后只在 `config.py` 的 `ARMS["L"]` 记录 L 的端点、安全区间、`SERVO_CALIBRATION_ARM="L"` 与匹配的机械身份，再按下文分阶段确认等待时长和时序；不得复制 R 的确认标志。`open` / `close` / `grip` / `cycle` 等继续受原门禁限制。原 R 的标定记录留在同一文件的 `ARMS["R"]`，R/L 的 `GAINS`、方向、传动比和时序各自独立。
 
 结束时 `servo off`，关闭动力，再 `arm R`；切回不会定位，也不会恢复旧临时授权，重新建立必要的零位和本次测试会话即可。R 已通过的空载旋转无需重做。两臂分开保存日志，不将 L 数据直接覆盖 R 的测试记录。本节新增的是选臂和配置隔离；下文机械尺寸、连杆朝向与 CAD 角度仍只描述历史 v4，实际装配须单独核验。
 
 ## 5. 测试步骤
+
+下文提到的配置字段均编辑在所选臂的 `ARMS["R"]` 或 `ARMS["L"]` 字典内，以 `"字段": 值,` 的语法填写，不在文件顶层新增同名赋值。L 的标定身份必须为 `"L"`。
 
 所有命令都在 `arm>` 提示符下输入，`help` 可以查看全部命令。马达、编码器和舵机可提前全部接好。先看下面的约定，再按第 0~9 步依次测试，**每一步通过了再做下一步**；测试过程中无需反复插拔舵机。
 
@@ -299,7 +322,7 @@ L 实测完毕后只在 `config_l.py` 记录 L 的端点、安全区间、`SERVO
 
 1. 手动将夹爪和推杆放在行程中间，远离端部、挡轴及曲柄折叠死点；不要靠强扭舵机轴来移动机构。
 2. 调整曲柄在输出轴上的安装方向，使连杆自然对孔，装好连接轴和半轴套。不能对孔时先检查朝向和孔位，不硬拉或靠通电拉到位。
-3. 核实舵机轴标记未变、记录的基准脉宽仍对应当前装接姿态，且计划的小步行程无障碍。只有这些条件成立，才重新上电并声明 **`servo_cal <min_us> <max_us> <start_us> aligned`**；`start_us` 用刚才已建立且核实过的基准。`aligned` 不是绕过首次脱杆定位的选项。
+3. 核实舵机轴标记未变、记录的基准脉宽仍对应当前装接姿态，且计划的小步行程无障碍。只有这些条件成立，才先只接 USB、启动程序；保持动力关闭，重新选臂（L 用 `arm L`，R 用 `arm R`），输入 `arm` 核对目标和引脚后，再接通已检查的动力并声明 **`servo_cal <min_us> <max_us> <start_us> aligned`**；`start_us` 用刚才已建立且核实过的基准。`aligned` 不是绕过首次脱杆定位的选项。
 4. 声明本身仍不移动；输入相同的 **`servo <start_us>`** 后观察底座和连杆。轴标记不确定、装配时轴转过或无法核实对应关系，就重新脱杆执行 B，不尝试带机构找零。
 
 #### D. 手动寻找端点与安全工作区间
@@ -311,10 +334,10 @@ L 实测完毕后只在 `config_l.py` 记录 L 的端点、安全区间、`SERVO
 1. 不放魔方，小步确认脉宽哪个方向让推杆往后拉、哪个方向往前推。夹紧是**往后拉**；名义夹紧在**曲柄折叠死点前 25°**，曲柄和舵机连杆不是伸直到死点。不要以碰到导向或折叠死点为目标，不尝试越过死点。
 2. 从已确认位置小步寻找张开端：夹指张开足够，推杆、十字块、连杆及挡轴均不顶住。约 110° 只是 CAD 的名义曲柄张开行程，不能据此推算安全脉宽。
 3. 无负载行程确认后，夹紧端还需用有支承的魔方轻载确认：先断电放置魔方、检查轮胎与轴套，再按 C 核实轴位并重新声明 `aligned` 会话。只用小步让上下轮胎均接触并有适当预压，观察轴套是否滑移、底座是否抬起。记录开／合端点及覆盖两端的**实测安全工作区间**；不要求任何连杆到达死点，不以加大行程补偿松旷。
-4. **只有上述实物确认完成后**，人工写入 `SERVO_OPEN_US`、`SERVO_CLOSE_US`、`SERVO_MIN_US`、`SERVO_MAX_US`。四个值须为严格整数，端点互异且在实测工作区间内；工作区间仍须处于 500～2500µs 驱动包络内，不能把包络本身当成实测区间。当前机器身份是 `MACHINE_PROFILE = "v4"`、`ARM_ID = "R"`；同时填写 `SERVO_CALIBRATION_PROFILE = "v4"`、`SERVO_CALIBRATION_ARM = "R"`，最后才设置 `SERVO_CALIBRATED = True`。固件检查全部字段与身份匹配。换臂、重装或调整机构后不能沿用未经重新确认的标定。
-5. **先进入单次开合测时阶段**：端点、安全区间和身份已确认后，人工为 `SERVO_MOVE_MS` 设置一个明确、保守的临时等待时长，必须是 **1～5000ms 的整数**；保持 `SERVO_TIMING_CONFIRMED = False`。这不是本机实测时长，不能简单沿用旧的 120ms。结束会话、关闭动力电源，上传 `config.py`，在 REPL 按 **Ctrl+D 软重启**后启动程序并检查配置。确认整个行程无障碍后再通电，**每次只单独执行一条 `open` 或 `close`，观察完全停稳才发下一条**；出现提示符不代表实物已经到位。用手机慢动作录像测量完整开、合行程的实际停稳时间。
+4. **只有上述实物确认完成后**，人工写入 `SERVO_OPEN_US`、`SERVO_CLOSE_US`、`SERVO_MIN_US`、`SERVO_MAX_US`。四个值须为严格整数，端点互异且在实测工作区间内；工作区间仍须处于 500～2500µs 驱动包络内，不能把包络本身当成实测区间。当前机械身份是 `MACHINE_PROFILE` 为 `"v4"`，`ARM_ID` 为所选臂 `"R"` 或 `"L"`；同时填写 `SERVO_CALIBRATION_PROFILE` 为 `"v4"`、`SERVO_CALIBRATION_ARM` 为该臂身份，最后才设置 `SERVO_CALIBRATED = True`。固件检查全部字段与身份匹配。换臂、重装或调整机构后不能沿用未经重新确认的标定。
+5. **先进入单次开合测时阶段**：端点、安全区间和身份已确认后，人工为 `SERVO_MOVE_MS` 设置一个明确、保守的临时等待时长，必须是 **1～5000ms 的整数**；保持 `SERVO_TIMING_CONFIRMED = False`。这不是本机实测时长，不能简单沿用旧的 120ms。结束会话、关闭动力电源，上传 `config.py`，在 REPL 按 **Ctrl+D 软重启**后启动程序后重新选臂（L 用 `arm L`，R 用 `arm R`），输入 `arm` 核对目标、引脚和配置。确认整个行程无障碍后再通电，**每次只单独执行一条 `open` 或 `close`，观察完全停稳才发下一条**；出现提示符不代表实物已经到位。用手机慢动作录像测量完整开、合行程的实际停稳时间。
 6. 测时阶段的 `grip`、`cycle`、普通 `rot` / `goto` / `bench` 等旋转路径仍被时序门禁锁住；不能靠调短等待时间或提前设置标志解锁。`motor_test unloaded` 仍是经过明确声明的空载例外，不能用来做承载或联合动作。
-7. **实测时序后再解锁连续动作**：取开／合中较慢的实测停稳时间并加足余量（例如至少再留约 20ms，按实际抖动调整），写入 `SERVO_MOVE_MS`（仍须为 1～5000ms 整数），设置 `SERVO_TIMING_CONFIRMED = True`。重新关闭动力电源、上传并 Ctrl+D 重载，确认配置后再执行 `grip 5`，通过后才进入后续旋转与联合测试。机构、负载条件或供电变化后要重新确认时序，不能沿用未经核实的 True 标志。
+7. **实测时序后再解锁连续动作**：取开／合中较慢的实测停稳时间并加足余量（例如至少再留约 20ms，按实际抖动调整），写入 `SERVO_MOVE_MS`（仍须为 1～5000ms 整数），设置 `SERVO_TIMING_CONFIRMED = True`。重新关闭动力电源、上传并 Ctrl+D 重载，重新选臂（L 用 `arm L`，R 用 `arm R`），输入 `arm` 核对目标、引脚和配置后才接通动力，再执行 `grip 5`，通过后才进入后续旋转与联合测试。机构、负载条件或供电变化后要重新确认时序，不能沿用未经核实的 True 标志。
 
 **会话边界**：`servo off`、`off`、`servo_cal end`、退出、异常或 Ctrl+C 会停止马达输出和舵机 PWM，并撤销两种会话；重启、重新创建控制对象也不会恢复会话。手动会话中 `open`、`close`、`grip`、`cycle` 及所有马达驱动命令都被拒绝。要继续标定必须重新声明，并重新满足机械检查前提。
 
@@ -325,7 +348,7 @@ L 实测完毕后只在 `config_l.py` 记录 L 的端点、安全区间、`SERVO
 1. **`friction`**：占空比从 0 慢慢加大，两个方向各测一次，记下建议的 `kfs`。
 2. **`speed`**：全速转 0.4 秒，机械头会**连续转大约半圈**，先确认没有东西挡着。记下建议的 `v_full`、`tau`。
    - `speed` 算建议值时要扣掉当前的 `kfs`，所以跑 `speed` 之前先用 `set kfs <第 1 步的建议值>` 把它改过来。
-3. 把三个值填进 `config.py` 的 `GAINS`，上传，重新启动，`off` → 手转回零位 → `zero`。
+3. 把三个值填进 `config.py` 所选臂分组内的 `GAINS`，上传，动力保持关闭、重新启动后先重新选臂（L 用 `arm L`，R 用 `arm R`），`arm` 核对后再按需通电，`off` → 手转回零位 → `zero`。
 
 ### 第 5 步：空转 90° / 180°（不放魔方）
 

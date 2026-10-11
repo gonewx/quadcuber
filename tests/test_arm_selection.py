@@ -80,8 +80,8 @@ class ArmSelectionTest(unittest.TestCase):
         self.assertEqual(arm.config.ARM_ID, 'L')
 
     def test_r_values_and_gains_are_not_replaced_by_l(self):
-        self.at.config.SERVO_OPEN_US = 1711
-        self.at.config.GAINS['vmax'] = 123
+        self.at.get_profile("R").SERVO_OPEN_US = 1711
+        self.at.get_profile("R").GAINS['vmax'] = 123
         arm = self.at.Arm()
         arm.select('L')
         self.assertIsNone(arm.config.SERVO_OPEN_US)
@@ -180,7 +180,7 @@ class ArmSelectionTest(unittest.TestCase):
         before = dict(world.servo_ns)
         out = io.StringIO()
         with contextlib.redirect_stdout(out): self.at.cmd_arm(arm, [])
-        self.assertIn('config_l.py', out.getvalue())
+        self.assertIn('config.py ARMS[L]', out.getvalue())
         self.assertIn('GP6/7', out.getvalue())
         self.assertEqual(world.servo_ns, before)
         self.assertIsNotNone(arm._servo_cal)

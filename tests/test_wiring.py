@@ -141,7 +141,7 @@ class WiringTest(unittest.TestCase):
                 direct_wiring.validate('RL')
 
     def test_reject_firmware_drift(self):
-        config = runpy.run_path(str(spec.ROOT / 'firmware/pico/config.py'))
+        config = runpy.run_path(str(spec.ROOT / 'firmware/pico/config.py'))['ARMS']['R']
         for key, value in [('ENC_A', 12), ('ENC_PULLUP', True), ('ENC_SM', (2, 3))]:
             with self.subTest(key=key), self.assertRaisesRegex(ValueError, key):
                 spec.validate(dict(config, **{key: value}))
