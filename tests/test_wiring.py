@@ -10,7 +10,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-WIRING = Path(__file__).resolve().parents[1] / 'docs/wiring'
+WIRING = Path(__file__).resolve().parents[1] / 'wiring'
 sys.path.insert(0, str(WIRING))
 try:
     import build as wiring_build
@@ -194,12 +194,12 @@ class WiringTest(unittest.TestCase):
 
     def test_build_is_repeatable_and_check_is_read_only(self):
         with tempfile.TemporaryDirectory() as tmp, redirect_stdout(StringIO()):
-            directory = Path(tmp) / 'docs/wiring'
-            wiring_build.build(directory)
+            directory = Path(tmp) / 'wiring'
+            wiring_build.build(directory, directory.parent)
             snapshot = {p: p.read_bytes() for p in directory.parent.rglob('*') if p.is_file()}
-            wiring_build.build(directory)
+            wiring_build.build(directory, directory.parent)
             self.assertEqual(snapshot, {p: p.read_bytes() for p in snapshot})
-            with patch.object(wiring_build, 'HERE', directory):
+            with patch.object(wiring_build, 'HERE', directory), patch.object(wiring_build, 'DOCS', directory.parent):
                 self.assertEqual(wiring_build.check(), 0)
                 page = directory / 'index.html'
                 page.write_text('过期页面', encoding='utf-8')

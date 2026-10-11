@@ -59,8 +59,8 @@
 从仓库根目录运行（仅使用 Python 标准库）：
 
 ```bash
-python docs/wiring/build.py
-python docs/wiring/build.py --check
+python wiring/build.py
+python wiring/build.py --check
 python -m unittest -v
 ```
 
@@ -68,7 +68,7 @@ python -m unittest -v
 
 | 源文件 | 职责 / 产物 |
 | --- | --- |
-| `spec.py` | 共享四臂引脚表、驱动脚序，核对固件与 GPIO/PWM/PIO 分配 |
+| `wiring/spec.py` | 共享四臂引脚表、驱动脚序，核对固件与 GPIO/PWM/PIO 分配 |
 | `direct_wiring.py` | 当前直连孔位、导线、电阻；生成 `direct-breadboard.html`、`.svg`、`-netlist.json` |
 | `perfboard_layout.py` | 可选洞洞板孔位与裸板网络；生成五张 `perfboard-*.svg`、章节 HTML、`../perfboard.md` |
 | `build.py` | 统一入口；生成总览、洞洞板页面，并更新 `../single_arm.md` 中标记的引脚表 |
@@ -91,7 +91,7 @@ python -m unittest -v
 本机浏览器回归与两张 PNG 导出（另需安装 `playwright` 并有 Chromium；标准库构建和 CI 不依赖它）：
 
 ```bash
-python docs/wiring/check_browser.py --export-png --screenshots /tmp/wiring-review
+python wiring/check_browser.py --export-png --screenshots /tmp/wiring-review
 ```
 
 覆盖桌面/手机往返切换、所有用途筛选、图表编号与 JSON 对齐、下载可访问、横向滚动、
