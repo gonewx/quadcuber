@@ -16,7 +16,7 @@
 
 ## 电路与硬件验证
 
-新增[四臂集成 PCB 原生 KiCad 工程](electronics/README.md)，采用板载驱动、双降压、编码器整形和插装 Pico。当前为 A0 工程设计，EV3 插座焊孔/额定仍待核实，**未制造放行、未PCB实测**。源文件统一在 `electronics/`，检查和制造预览统一在 `generated/electronics/`。
+新增[四臂集成 PCB 原生 KiCad 工程](electronics/README.md)，采用**集成驱动/电源主板＋Pico H插装，实体两块PCB**；RP2040、Flash、时钟和USB仍位于Pico H，并非全单板方案。当前为 A0 工程设计，EV3 插座焊孔/额定仍待核实，**未制造放行、未PCB实测**。源文件统一在 `electronics/`，检查和制造预览统一在 `generated/electronics/`。
 
 打开[当前接线：原 R／新 R+L（条件式）](generated/wiring/direct-breadboard.html)，在同一页面切换图、表和下载，默认显示原 R。适用条件见[电路总览](docs/wiring/README.md)；[历史单臂总览](generated/wiring/index.html)和[可选单臂洞洞板](generated/wiring/perfboard.html)保留作参考。EV3 大马达＋DRV8833 的空载闭环已通过，范围见[实测记录](docs/single_arm-results.md)；这不等于 v4 机械头、舵机、带魔方动作或四臂供电已验收。接下来需要实物标定和分级测试。
 

@@ -9,6 +9,8 @@ files=[p for folder in [R/'electronics',R/'generated/electronics'] for p in fold
 files.append(R/'wiring/spec.py')
 warning='''工程评审版 / ENGINEERING REVIEW ONLY / DO NOT FABRICATE
 
+架构：集成驱动/电源主板＋Pico H插装，实体两块PCB；RP2040/Flash/时钟/USB仍在Pico H，不是全单板。
+
 EV3 Adafruit 4434 偏置卡扣插座的焊脚几何、针号和载流额定尚未确认。
 EV3_4434_PROVISIONAL 是明确占位封装；普通RJ12不能替代。
 包含的Gerber、钻孔文件仅用于工程审查，不是制造发布，禁止据此下单。
