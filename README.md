@@ -16,6 +16,8 @@
 
 ## 电路与硬件验证
 
+新增[四臂集成 PCB 原生 KiCad 工程](electronics/README.md)，采用**集成驱动/电源主板＋Pico H插装，实体两块PCB**；RP2040、Flash、时钟和USB仍位于Pico H，并非全单板方案。当前为 A0 工程设计，EV3 插座焊孔/额定仍待核实，**未制造放行、未PCB实测**。源文件统一在 `electronics/`，检查和制造预览统一在 `generated/electronics/`。
+
 打开[当前接线：原 R／新 R+L（条件式）](generated/wiring/direct-breadboard.html)，在同一页面切换图、表和下载，默认显示原 R。适用条件见[电路总览](docs/wiring/README.md)；[历史单臂总览](generated/wiring/index.html)和[可选单臂洞洞板](generated/wiring/perfboard.html)保留作参考。EV3 大马达＋DRV8833 的空载闭环已通过，范围见[实测记录](docs/single_arm-results.md)；这不等于 v4 机械头、舵机、带魔方动作或四臂供电已验收。接下来需要实物标定和分级测试。
 
 当前硬件：EV3 大马达、DRV8833（名义 9V，实测不得超过 10.8V）、每路 10kΩ/20kΩ 编码器分压（`ENC_PULLUP = False`）、灰色 270° Geekservo。调试时 Pico 由 USB 供电，舵机由独立 5V 降压供电，所有模块共地。接线以 `wiring/spec.py` 及其生成图表为准。
@@ -116,6 +118,7 @@ python -m unittest -v
 | `firmware/pico/` | 单臂测试程序（MicroPython）：配置、PIO 编码器、马达/舵机驱动、位置控制、串口命令行 |
 | `docs/single_arm.md` | 单臂原型的接线、测试步骤和待验证假设 |
 | `docs/arm_concept.md` | 乐高机械手的概念设计：叉子 + 滑块结构、关键尺寸、单臂测试的魔方固定方法 |
+| `electronics/`、`generated/electronics/` | 四臂集成 PCB 的 KiCad 源码、BOM、检查与制造预览 |
 | `wiring/`、`generated/wiring/` | 接线规范和生成程序；对应标准图纸输出 |
 | `docs/perfboard.md` | 可拔插洞洞板设计：逐孔安装、镜像焊接图、模块排针座及上电验收 |
 | `docs/lego/` | 库存和兼容导航；历史原件通过固定 Git 提交查阅 |
@@ -131,6 +134,6 @@ python -m unittest -v
 
 ## 源码与输出
 
-`mechanical/`、`wiring/`、`web/` 分别维护机械、接线和网页源码；`generated/` 保存唯一标准输出；`dist/` 为不入 Git 的网站／离线／源码包。`docs/` 保存人工说明及原始实测证据，`tests/` 保存回归与独立基准；运行库 `quadcuber/` 和固件 `firmware/` 原位保留，不新增 `src/`。
+`mechanical/`、`wiring/`、`electronics/`、`web/` 分别维护机械、接线、集成PCB和网页源码；`generated/` 保存唯一标准输出；`dist/` 为不入 Git 的网站／离线／源码包。`docs/` 保存人工说明及原始实测证据，`tests/` 保存回归与独立基准；运行库 `quadcuber/` 和固件 `firmware/` 原位保留，不新增 `src/`。
 
 运行 `python tools/build_distribution.py` 后可打开离线包，或从仓库根启动 `python -m http.server 8000` 浏览 `generated/site/index.html`。网站下载提供紧凑源码／模型包；图解与 PDF 另下。`dist/downloads/quadcuber-source-complete.zip` 是含完整图解的独立重建包；构建不发布。历史方案见 [历史索引](docs/history.md)。

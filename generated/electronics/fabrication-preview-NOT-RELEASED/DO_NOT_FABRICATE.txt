@@ -1,0 +1,30 @@
+ENGINEERING PREVIEW ONLY - NOT RELEASED
+EV3 4434 footprint is PROVISIONAL. Read electronics/README.md.
+{
+  "revision": "A0",
+  "manufacturing_release": false,
+  "hardware_tested": false,
+  "erc_errors": 0,
+  "erc_warnings": 0,
+  "drc_violations": 0,
+  "unconnected_pads": 0,
+  "release_blockers": [
+    "Adafruit4434 PCB-tail coordinates, numbering and contact-current rating not confirmed; provisional footprint must be replaced",
+    "New mounting bracket/feet and cable-motion clearance not finalized",
+    "Prototype concurrent-load, regenerative transient, thermal and power-combination tests outstanding"
+  ],
+  "source_sha256": {
+    "arm_B.kicad_sch": "ed939edae08ab40c8976127506e525a50e808cd8a7d86a2fef1c63582ce24c59",
+    "arm_F.kicad_sch": "e19a0cbf9d0f69129b19e36680d61212a967f0700db21517b7fd1f955cf657ee",
+    "arm_L.kicad_sch": "b506711cbd9a3c451f0083f67c417dd2b53895ab9c4e3d1cdd66e1c2645546a4",
+    "arm_R.kicad_sch": "6bb70dee4b3027394f4a01f90715085fb445316fcdb73e445d867811260da7e2",
+    "buck1.kicad_sch": "5e770532a7bb393e73d81df366bf0de09af87298aade7194bb8ac6a39e6f9c93",
+    "buck2.kicad_sch": "925993f8a4321986a26804219f25dae878550588059e0a2322165e4b1201e0f0",
+    "controller.kicad_sch": "cf1130b3b784cf3caad311e7a4923eec4ae66930d481be93ff4958d2966ab688",
+    "power.kicad_sch": "1a93da195e09aebfe5d59d2da54c29c8f4ac2b24eb9dd277a6eef3644922fdc5",
+    "quadcuber.kicad_pcb": "6e55c552e96ef753099a58cf31b53271ccdbdc6d3761fdee337b0af05f2c8baa",
+    "quadcuber.kicad_pro": "fc60c8c0820530ce3f36724058d4e1845c8c6725594ddb483d9072eec5e86427",
+    "quadcuber.kicad_sch": "d650e6d7fa260ef9f4cfa407578ca123e210f7be214a508edd0c302aa18ddde1"
+  },
+  "tool_version": "9.0.2"
+}

@@ -1,0 +1,77 @@
+{
+  "widened_short_fanouts": 111,
+  "power_pin_fanouts": [
+    {
+      "ref": "U13",
+      "pin": "5",
+      "parallel_vias_added": 1,
+      "neck_mm": 0.6
+    },
+    {
+      "ref": "U13",
+      "pin": "7",
+      "parallel_vias_added": 1,
+      "neck_mm": 0.6
+    },
+    {
+      "ref": "U12",
+      "pin": "5",
+      "parallel_vias_added": 2,
+      "neck_mm": 0.6
+    },
+    {
+      "ref": "U12",
+      "pin": "7",
+      "parallel_vias_added": 1,
+      "neck_mm": 0.6
+    },
+    {
+      "ref": "U11",
+      "pin": "5",
+      "parallel_vias_added": 2,
+      "neck_mm": 0.6
+    },
+    {
+      "ref": "U11",
+      "pin": "7",
+      "parallel_vias_added": 1,
+      "neck_mm": 0.6
+    },
+    {
+      "ref": "U10",
+      "pin": "5",
+      "parallel_vias_added": 2,
+      "neck_mm": 0.6
+    },
+    {
+      "ref": "U10",
+      "pin": "7",
+      "parallel_vias_added": 1,
+      "neck_mm": 0.6
+    },
+    {
+      "ref": "U2",
+      "pin": "1",
+      "parallel_vias_added": 2,
+      "neck_mm": 0.45
+    },
+    {
+      "ref": "U2",
+      "pin": "3",
+      "parallel_vias_added": 2,
+      "neck_mm": 0.45
+    },
+    {
+      "ref": "U3",
+      "pin": "1",
+      "parallel_vias_added": 2,
+      "neck_mm": 0.45
+    },
+    {
+      "ref": "U3",
+      "pin": "3",
+      "parallel_vias_added": 1,
+      "neck_mm": 0.45
+    }
+  ]
+}
