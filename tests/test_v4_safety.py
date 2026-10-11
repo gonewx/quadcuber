@@ -81,12 +81,26 @@ class ServoSafetyTest(unittest.TestCase):
         pico_sim.set_synthetic_servo_calibration(self.at.config)
 
     def test_boot_and_default_config_do_not_position_servo(self):
-        self.assertIsNone(self.at.config.SERVO_OPEN_US)
-        self.assertIsNone(self.at.config.SERVO_CLOSE_US)
         self.assertIs(self.at.config.SERVO_CALIBRATED, False)
         self.assertIsNone(self.arm.servo.us)
         self.assertNotIn(self.at.config.SERVO, world.servo_ns)
         self.assertEqual(world.pwm.get(self.at.config.SERVO, 0), 0)
+
+    def test_recorded_endpoints_without_calibration_stay_locked(self):
+        # 即使其余字段完整，开合端点也不能代替显式标定确认。
+        self.calibrated()
+        self.at.config.SERVO_OPEN_US = 1700
+        self.at.config.SERVO_CLOSE_US = 1450
+        self.at.config.SERVO_MAX_US = 1750
+        self.at.config.SERVO_CALIBRATED = False
+        self.arm = self.at.Arm()
+        for line in ("open", "close", "grip 2", "cycle 1", "rot 1", "servo 1700"):
+            with self.subTest(line=line), self.assertRaises(ValueError):
+                self.run_cmd(line)
+            self.assertIsNone(self.arm.servo.us)
+            self.assertNotIn(self.at.config.SERVO, world.servo_ns)
+            self.assertEqual(world.pwm.get(self.at.config.SERVO, 0), 0)
+            self.assertEqual(world.duty(), 0)
 
     def test_unvalidated_commands_and_arm_entry_fail_before_motion(self):
         for line in ("open", "close", "grip 2", "cycle 1", "servo 1500"):

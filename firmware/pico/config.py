@@ -46,6 +46,7 @@ SERVO_CALIBRATION_PROFILE = None
 SERVO_CALIBRATION_ARM = None
 SERVO_MIN_US = None  # 实测安全工作区间下界
 SERVO_MAX_US = None  # 实测安全工作区间上界
+# 已填开合脉宽；安全区间、身份和时序尚未确认，不能据此解锁动作。
 SERVO_OPEN_US = 1700
 SERVO_CLOSE_US = 1450
 # 端点确认后先填人为选择的保守等待，仅用于单次 open/close 录像测时。

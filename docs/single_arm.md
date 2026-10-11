@@ -116,7 +116,7 @@ EV3 黄 ──[10kΩ]──●── GP4        EV3 蓝 ──[10kΩ]──●�
 3. 舵机红线接降压 OUT+、棕线接 OUT−，均为独立动力引线；黄线接面包板 j13（GP8）。核对实际线序，电源不从面包板或 Pico 取。
 4. 马达、编码器和其余控制线按[直连页](wiring/direct-breadboard.html#complete-wiring)连接。图中已包含舵机及全部动力、信号接线。
 
-**分项测试是命令顺序，不是接线顺序：**马达方向 → 齿轮比 → 舵机开合标定 → 旋转及联合测试。固件默认 `SERVO_OPEN_US = None`、`SERVO_CLOSE_US = None`、`SERVO_CALIBRATED = False`；未标定时 `open`、`close`、`grip`、`cycle` 会拒绝执行且不启动马达。手动标定会话期间也拒绝这四条命令，不能绕过第 3 步。
+**分项测试是命令顺序，不是接线顺序：**马达方向 → 齿轮比 → 舵机开合标定 → 旋转及联合测试。当前配置已填写 `SERVO_OPEN_US = 1700`、`SERVO_CLOSE_US = 1450`，但仍为 `SERVO_CALIBRATED = False`；仅填写脉宽不代表完成标定；未标定时 `open`、`close`、`grip`、`cycle` 会拒绝执行且不启动马达。手动标定会话期间也拒绝这四条命令，不能绕过第 3 步。
 
 未标定时普通马达动力命令也拒绝执行。第 0～2 步需显式使用 `motor_test unloaded`；它只是空载测试授权，不把舵机标记为已标定，也不允许带魔方试运行。实际安全工作区间 `SERVO_MIN_US` / `SERVO_MAX_US` 也默认为 `None`，实测、身份绑定与写回见第 3 步。
 
@@ -233,7 +233,7 @@ import arm_test; arm_test.main()
 
 **首次定位必须脱开曲柄与连杆，并确认曲柄本身能自由转动。** 舵机接收绝对脉宽，实际轴位未知时，首次定位可能大幅跳转；声明的脉宽区间不能证明实际轴位或机械行程安全。这里“脱开”指机械连接，三根电线可保持接好，装拆一律先切断动力电源和 USB。
 
-默认配置没有可用端点或安全工作区间：`SERVO_OPEN_US = None`、`SERVO_CLOSE_US = None`、`SERVO_MIN_US = None`、`SERVO_MAX_US = None`；标定身份 `SERVO_CALIBRATION_PROFILE` 和 `SERVO_CALIBRATION_ARM` 也均为 `None`，且 `SERVO_CALIBRATED = False`。时序默认 `SERVO_MOVE_MS = None`、`SERVO_TIMING_CONFIRMED = False`。端点与时序分两阶段确认；下面的手动会话不会自动扫角、自动测端点或自动写回配置。
+当前配置已记录开合脉宽 `SERVO_OPEN_US = 1700`、`SERVO_CLOSE_US = 1450`，尚无已确认的安全工作区间：`SERVO_MIN_US = None`、`SERVO_MAX_US = None`；这两个脉宽不能直接视为适用于其他臂或装配的安全端点；标定身份 `SERVO_CALIBRATION_PROFILE` 和 `SERVO_CALIBRATION_ARM` 也均为 `None`，且 `SERVO_CALIBRATED = False`。时序默认 `SERVO_MOVE_MS = None`、`SERVO_TIMING_CONFIRMED = False`。端点与时序分两阶段确认；下面的手动会话不会自动扫角、自动测端点或自动写回配置。
 
 #### A. 断电检查固定点
 
