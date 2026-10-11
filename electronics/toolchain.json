@@ -1,0 +1,11 @@
+{
+  "kicad": "9.0.2",
+  "python_pcbnew": "system Python 3.13.5",
+  "java": "OpenJDK 21.0.12.1",
+  "freerouting": {
+    "version": "2.1.0",
+    "url": "https://github.com/freerouting/freerouting/releases/download/v2.1.0/freerouting-2.1.0.jar",
+    "sha256": "2c07d58f75dac03782664081e7a58b41c25400d871a9fcf166a2ea6fe60d5def"
+  },
+  "png_renderer": "Inkscape (optional; SVG is native KiCad export)"
+}

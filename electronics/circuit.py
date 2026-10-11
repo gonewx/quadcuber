@@ -1,0 +1,102 @@
+"""Quadcuber integrated four-arm PCB A0. Pin contract imported, never duplicated."""
+from pathlib import Path
+import runpy
+ARMS=runpy.run_path(str(Path(__file__).resolve().parents[1]/'wiring/spec.py'))['ARMS']
+C=[]
+def add(ref,value,fp,pins,xy,mpn,mfr,section,names=None,types=None,note='',rot=0):
+    C.append(dict(ref=ref,value=value,fp=fp,pins={str(k):v for k,v in pins.items()},xy=xy,mpn=mpn,mfr=mfr,section=section,names=names or {},types=types or {},note=note,rot=rot))
+RFP='Resistor_SMD:R_0603_1608Metric'
+CFP='Capacitor_SMD:C_0805_2012Metric'
+def r(ref,v,a,b,xy,sec,mpn=None):
+    codes={'100k':'100K','10k':'10K','100':'100R','220':'220R','43.2k':'43K2','100k 0.1%':'100K','13.3k':'13K3','511k':'511K','105k':'105K','49.9':'49R9','1k':'1K'}
+    add(ref,v,RFP,{1:a,2:b},xy,mpn or 'RC0603FR-07'+codes[v]+'L','Yageo',sec)
+def c(ref,v,a,b,xy,sec):
+    spec={'100n':('GRM21BR71H104KA01L',CFP),'10u/25V':('GRM32ER71E106KA12L','Capacitor_SMD:C_1210_3225Metric'),'22u/25V':('GRM32ER71E226KE15L','Capacitor_SMD:C_1210_3225Metric'),'75p':('GRM1885C1H750JA01D','Capacitor_SMD:C_0603_1608Metric'),'470u/25V':('EEU-FR1E471','Capacitor_THT:CP_Radial_D10.0mm_P5.00mm'),'470u/10V':('EEU-FR1A471','Capacitor_THT:CP_Radial_D8.0mm_P3.50mm')}
+    mpn,fp=spec[v];add(ref,v,fp,{1:a,2:b},xy,mpn,'Panasonic' if v.startswith('470') else 'Murata',sec,names={'1':'+' if v.startswith('470') else '1','2':'-' if v.startswith('470') else '2'})
+def header(ref,nets,xy,sec,desc):
+    n=len(nets);add(ref,desc,f'Connector_PinHeader_2.54mm:PinHeader_1x{n:02d}_P2.54mm_Vertical',dict(enumerate(nets,1)),xy,f'6130{n:02d}11121','Wurth Elektronik',sec)
+# GPIO physical Pico pins. 3V3_EN, VBUS and unused GPIO are deliberately NC.
+gp={0:1,1:2,2:4,3:5,4:6,5:7,6:9,7:10,8:11,9:12,10:14,11:15,12:16,13:17,14:19,15:20,16:21,17:22,18:24,19:25,20:26,21:27,22:29,26:31,27:32,28:34}
+pins={i:None for i in range(1,41)}
+for g,p in gp.items(): pins[p]=f'GP{g}' if g in [0,1]+[x for a in ARMS.values() for group in a[:3] for x in group] else None
+for p in (3,8,13,18,23,28,33,38):pins[p]='GND'
+pins.update({30:'RUN',36:'3V3',39:'VSYS'})
+names={str(p):f'GP{g}' for g,p in gp.items()}; names.update({'30':'RUN','36':'3V3_OUT','39':'VSYS','40':'VBUS_USB_NC','37':'3V3_EN_NC','35':'ADC_VREF_NC'})
+add('U1','Pico H socketed','Quadcuber:Pico_H_Sockets',pins,(12,8),'SC0917','Raspberry Pi','controller',names=names,types={**{str(p):'bidirectional' for g,p in gp.items()},'36':'power_out','39':'power_in'},note='Pico H on two 20-way sockets; USB faces top edge. Socket BOM separate.')
+header('J2',['GND','GP0','GP1'],(7,57),'controller','UART GND TX RX')
+header('J3',['RUN','GND'],(25,61),'controller','RESET')
+add('D2','SS14 VSYS isolation','Diode_SMD:D_SMA',{1:'VSYS',2:'5V_A'},(37,14),'SS14-E3/61T','Vishay','controller',names={'1':'K','2':'A'})
+c('C1','10u/25V','VSYS','GND',(37,20),'controller')
+# Main 9V path: fuse + ideal diode; external physical disconnect is still required.
+add('J1','9V regulated input','TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal',{1:'VIN',2:'GND'},(45,8),'1715721','Phoenix Contact','power',names={'1':'+9V','2':'GND'})
+add('F1','8A 32V fuse','Fuse:Fuse_1206_3216Metric',{1:'VIN',2:'VIN_FUSED'},(57,9),'0467008.NR','Littelfuse','power')
+add('U4','LM74700QDBVRQ1','Package_TO_SOT_SMD:SOT-23-6',{1:'IDEAL_VCAP',2:'GND',3:'VIN_FUSED',4:'VM',5:'IDEAL_GATE',6:'VIN_FUSED'},(67,22),'LM74700QDBVRQ1','Texas Instruments','power',names={'1':'VCAP','2':'GND','3':'EN','4':'CATHODE','5':'GATE','6':'ANODE'},types={'1':'passive','2':'power_in','3':'input','4':'input','5':'output','6':'power_in'},note='Ideal diode / reverse polarity. EN is NOT a power disconnect.')
+add('Q1','CSD18540Q5B','Package_TO_SOT_SMD:TDSON-8-1',{1:'VIN_FUSED',2:'VIN_FUSED',3:'VIN_FUSED',4:'IDEAL_GATE',5:'VM'},(67,13),'CSD18540Q5B','Texas Instruments','power',names={'1':'S','2':'S','3':'S','4':'G','5':'D_EP'})
+c('C4','100n','IDEAL_VCAP','VIN_FUSED',(62,25),'power')
+c('C5','100n','VIN_FUSED','GND',(72,22),'power')
+add('D4','SMBJ12CA input transient','Diode_SMD:D_SMB',{1:'VIN_FUSED',2:'GND'},(56,19),'SMBJ12CA','Littelfuse','power',names={'1':'BI','2':'BI'})
+add('D3','SMBJ12A transient clamp','Diode_SMD:D_SMB',{1:'VM',2:'GND'},(84,13),'SMBJ12A','Littelfuse','power',names={'1':'K','2':'A'},note='12V stand-off, 19.9V rated pulse clamp. Pulse-only; never sustained 12V input.')
+c('C2','470u/25V','VM','GND',(91,10),'power')
+c('C3','470u/25V','VM','GND',(107,10),'power')
+# Independent TPS54302 converters: each feeds two servos; A also powers encoder/logic.
+for idx,(x,y) in enumerate([(49,38),(98,38)]):
+    n=idx+1; sec=f'buck{n}'; rail='5V_'+('A' if idx==0 else 'B'); pre=f'B{n}_'; u=2+idx
+    add(f'U{u}','TPS54302DDCR','Package_TO_SOT_SMD:SOT-23-6',{1:'GND',2:pre+'SW',3:'VM',4:pre+'FB',5:pre+'EN',6:pre+'BOOT'},(x,y),'TPS54302DDCR','Texas Instruments',sec,names={'1':'GND','2':'SW','3':'VIN','4':'FB','5':'EN','6':'BOOT'},types={'1':'power_in','2':'output','3':'power_in','4':'input','5':'input','6':'passive'})
+    c(f'C{10+n*10}','10u/25V','VM','GND',(x-5,y-2),sec)
+    c(f'C{11+n*10}','100n','VM','GND',(x-5,y+2),sec)
+    r(f'R{10+n*10}','49.9',pre+'BOOT',pre+'BOOT_CAP',(x-3,y-7),sec)
+    c(f'C{12+n*10}','100n',pre+'BOOT_CAP',pre+'SW',(x+1,y-4),sec)
+    add(f'L{n}','10uH 9A Isat16A','Inductor_SMD:L_Bourns_SRP1245A',{1:pre+'SW',2:rail},(x+12,y),'SRP1245A-100M','Bourns',sec)
+    c(f'C{13+n*10}','22u/25V',rail,'GND',(x+22,y-3),sec)
+    c(f'C{14+n*10}','22u/25V',rail,'GND',(x+22,y+2),sec)
+    r(f'R{11+n*10}','100k',rail,pre+'FB',(x+8,y+10),sec)
+    r(f'R{12+n*10}','13.3k',pre+'FB','GND',(x+3,y+10),sec)
+    c(f'C{15+n*10}','75p',rail,pre+'FB',(x+8,y+14),sec)
+    r(f'R{13+n*10}','511k','VM',pre+'EN',(x-7,y+10),sec)
+    r(f'R{14+n*10}','105k',pre+'EN','GND',(x-2,y+14),sec)
+    c(f'C{16+n*10}','470u/10V',rail,'GND',(x+25,y+12),sec)
+add('F2','0.5A encoder PTC','Fuse:Fuse_1812_4532Metric',{1:'5V_A',2:'5V_ENC'},(36,58),'MF-MSMF050-2','Bourns','controller')
+# 4 identical arm cells 34mm pitch. Motor jack footprint remains explicit provisional.
+for idx,(arm,(motor,enc,servo,sm)) in enumerate(ARMS.items()):
+    x=15+34*idx; sec='arm_'+arm; base=100+idx*20; rail='5V_A' if idx<2 else '5V_B'; en=f'{arm}_'; drv=10+idx; buf=20+idx
+    add(f'U{drv}','DRV8871DDAR','Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias',{1:'GND',2:f'GP{motor[1]}',3:f'GP{motor[0]}',4:en+'ILIM',5:'VM',6:en+'M1',7:'GND',8:en+'M2',9:'GND'},(x,77),'DRV8871DDAR','Texas Instruments',sec,names={'1':'GND','2':'IN2','3':'IN1','4':'ILIM','5':'VM','6':'OUT1','7':'PGND','8':'OUT2','9':'EP_GND'},types={'1':'power_in','2':'input','3':'input','4':'input','5':'power_in','6':'output','7':'power_in','8':'output','9':'power_in'})
+    r(f'R{base}','43.2k',en+'ILIM','GND',(x-3,83),sec)
+    r(f'R{base+1}','100k',f'GP{motor[0]}','GND',(x-7,74),sec)
+    r(f'R{base+2}','100k',f'GP{motor[1]}','GND',(x-7,78),sec)
+    c(f'C{base}','100n','VM','GND',(x+7,76),sec)
+    c(f'C{base+1}','10u/25V','VM','GND',(x+8,81),sec)
+    c(f'C{base+2}','470u/25V','VM','GND',(x+14,70),sec)
+    add(f'J{10+idx}',f'EV3 {arm} 4434 HOLD','Quadcuber:EV3_4434_PROVISIONAL',{1:en+'M1',2:en+'M2',3:'GND',4:'5V_ENC',5:en+'ENC_A_RAW',6:en+'ENC_B_RAW'},(x,102),'4434','Adafruit (supplier brand)',sec,names={'1':'M1','2':'M2','3':'GND','4':'+5V','5':'TACHO0','6':'TACHO1'},note='HOLD: PCB tail numbering, hole layout and contact current not manufacturer-confirmed. Do not fabricate.')
+    add(f'U{buf}','SN74LVC2G17DBVR','Package_TO_SOT_SMD:SOT-23-6',{1:en+'ENC_A_F',2:'GND',3:en+'ENC_B_F',4:f'GP{enc[1]}',5:'3V3',6:f'GP{enc[0]}'},(x-6,91),'SN74LVC2G17DBVR','Texas Instruments',sec,names={'1':'1A','2':'GND','3':'2A','4':'2Y','5':'VCC','6':'1Y'},types={'1':'input','2':'power_in','3':'input','4':'output','5':'power_in','6':'output'})
+    for j,ab in enumerate(('A','B')):
+        r(f'R{base+3+j}','1k',en+f'ENC_{ab}_RAW',en+f'ENC_{ab}_F',(x-12,88+j*4),sec)
+        r(f'R{base+5+j}','100k',en+f'ENC_{ab}_F','GND',(x-1,88+j*4),sec)
+    c(f'C{base+3}','100n','3V3','GND',(x-6,86),sec)
+    c(f'C{base+4}','100n','5V_ENC','GND',(x+5,89),sec)
+    add(f'F{10+idx}','1.1A servo PTC','Fuse:Fuse_1812_4532Metric',{1:rail,2:en+'SERVO_5V'},(x+14,87),'MF-MSMF110-2','Bourns',sec)
+    header(f'J{20+idx}',['GND',en+'SERVO_5V',en+'SERVO_PWM'],(x+13,97),sec,f'{arm} SERVO G + S')
+    add(f'U{30+idx}','SN74AHCT1G125DBVR','Package_TO_SOT_SMD:SOT-23-5',{1:'GND',2:f'GP{servo[0]}',3:'GND',4:en+'SERVO_BUF',5:en+'SERVO_5V'},(x+20,97),'SN74AHCT1G125DBVR','Texas Instruments',sec,names={'1':'OE_N','2':'A','3':'GND','4':'Y','5':'VCC'},types={'1':'input','2':'input','3':'power_in','4':'output','5':'power_in'},note='Input leakage specified at VCC=0; prevents USB-only GPIO phantom servo supply.')
+    c(f'C{base+5}','100n',en+'SERVO_5V','GND',(x+24,97),sec)
+    r(f'R{base+9}','100k',f'GP{servo[0]}','GND',(x+20,84),sec)
+    r(f'R{base+7}','220',en+'SERVO_BUF',en+'SERVO_PWM',(x+18,103),sec)
+    r(f'R{base+8}','100k',en+'SERVO_PWM','GND',(x+17,93),sec)
+# Accessible scope pads, including motor outputs and encoders.
+for i,net in enumerate(['GND','VM','5V_A','5V_B','5V_ENC','3V3','VSYS']):
+    add(f'TP{i+1}',net,'TestPoint:TestPoint_Pad_D2.0mm',{1:net},(84+i*7,61),'N/A PCB copper','PCB','controller')
+for idx,(arm,a) in enumerate(ARMS.items()):
+    for j,net in enumerate([f'{arm}_M1',f'{arm}_M2',f'GP{a[1][0]}',f'GP{a[1][1]}']):
+        add(f'TP{10+idx*4+j}',net,'TestPoint:TestPoint_Pad_D1.5mm',{1:net},(6+idx*34+j*5,67),'N/A PCB copper','PCB','arm_'+arm)
+for i,xy in enumerate([(4,4),(140,4),(4,108),(140,108)],1):
+    add(f'H{i}','M3 insulated standoff','MountingHole:MountingHole_3.2mm_M3',{},xy,'N/A NPTH','PCB','mechanical')
+
+# Optional bulk pads: default DNP preserves the TI 44uF/75pF compensated reference.
+for comp in C:
+    if comp['ref'] in ('C26','C36'):
+        comp['dnp']=True
+        comp['note']='DNP by default. Populate only after loop/step-response verification with added 470uF.'
+# Buck placement follows the switching loop, with SW facing the inductor.
+for i,x in [(1,49),(2,98)]:
+    loc={f'U{i+1}':(x,38,180),f'C{10+i*10}':(x+3,46.5,270),f'C{11+i*10}':(x+3.5,41.5,270),f'R{10+i*10}':(x-6.5,34,0),f'C{12+i*10}':(x-2,34,0),f'R{11+i*10}':(x-5,45,0),f'R{12+i*10}':(x-5,41,0),f'C{15+i*10}':(x-9,45,0),f'R{13+i*10}':(x-8,29,0),f'R{14+i*10}':(x-10,35,0)}
+    for comp in C:
+        if comp['ref'] in loc:
+            xx,yy,rr=loc[comp['ref']];comp['xy']=(xx,yy);comp['rot']=rr

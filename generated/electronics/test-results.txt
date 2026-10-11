@@ -1,0 +1,10 @@
+2026-10-11
+python -m unittest tests.test_wiring tests.test_arm_selection tests.test_firmware -q
+51 tests: PASS
+
+Additional combined run with tests.test_repository_layout:
+59 tests: 58 PASS, 1 FAIL
+Failure: test_deployable_archives_fit_existing_host_limit
+Cause: existing dist/site/integrated/full-revision.zip artifact absent in workspace.
+No firmware, mechanical models or existing tests changed by PCB task.
+No PCB hardware test performed.

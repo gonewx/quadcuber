@@ -1,0 +1,888 @@
+{
+  "method": "sampled transformed LDraw triangle envelopes; 1 LDU = 0.4 mm; positive Y downward",
+  "source_sha256": {
+    "mechanical/candidate.py": "baf5e297204ca7de2b6621e18612da60790d041573e4c79bf4d5e8a8117115d0",
+    "mechanical/inputs/baseline_model.py": "ed1b9d8d71aed8f34e93dce32fcb35a33a16203360bfdbd1064282600c72d7fc",
+    "mechanical/inputs/baseline-machine-899.mpd": "5cca7bad1c805721a38065e0834d7741e020ada15a6ab960021b82d7b8fb6d56",
+    "mechanical/parts/23948.dat": "7c8833a4a283f1eeab15ccb16c1f03f33f98bfc5578240a66aac3850329dee28",
+    "mechanical/parts/60483.dat": "e9642b7d24f816f62a37ef798e2a7a21377febec2e857ce0ecc4eceb907ca47c",
+    "mechanical/parts/60483s01.dat": "19502854a4f0a692bdf46cf90f901fbdf443aa96221fe8436965c6bd97d0b803",
+    "mechanical/parts/6538s01.dat": "30b6df05538ec96ff07697f1b32ad6063bcce63a9d9a4d6a3ac16559f6378101",
+    "mechanical/inputs/assembly132.json": "bba23990c0c5e4387262ddafd3ca4d908625f7291cd4e6e14fbb1fa552acd561",
+    "mechanical/inputs/assembly-integrated-R1.json": "85e0c7326d37d602ca37c2a5a175bf0fe74f9b414c353ba326e6fac4d2370cb2"
+  },
+  "angle_step_deg": 5,
+  "arm_rotation_y_invariance_verified": true,
+  "arm_rotations": {
+    "L": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "R": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "F": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "B": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "arm_samples": [
+    {
+      "angle_deg": 0,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 0,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 5,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 5,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 10,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 10,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 15,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 15,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 20,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 20,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 25,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 25,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 30,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 30,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 35,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 35,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 40,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 40,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 45,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 45,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 50,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 50,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 55,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 55,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 60,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 60,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 65,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 65,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 70,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 70,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 75,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 75,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 80,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 80,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 85,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 85,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 90,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 90,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 95,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 95,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 100,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 100,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 105,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 105,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 110,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 110,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 115,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 115,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 120,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 120,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 125,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 125,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 130,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 130,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 135,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 135,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 140,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 140,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 145,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 145,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 150,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 150,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 155,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 155,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 160,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 160,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 165,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 165,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 170,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 170,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 175,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 175,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 180,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 180,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 185,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 185,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 190,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 190,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 195,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 195,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 200,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 200,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 205,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 205,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 210,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 210,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 215,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 215,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 220,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 220,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 225,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 225,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 230,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 230,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 235,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 235,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 240,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 240,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 245,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 245,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 250,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 250,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 255,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 255,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 260,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 260,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 265,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 265,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 270,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 270,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 275,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 275,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 280,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 280,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 285,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 285,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 290,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 290,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 295,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 295,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 300,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 300,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 305,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 305,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 310,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 310,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 315,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 315,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 320,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 320,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 325,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 325,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 330,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 330,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 335,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 335,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 340,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 340,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 345,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 345,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 350,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 350,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 355,
+      "opening_stroke_mm": 0.0,
+      "max_y_mm": 108.0
+    },
+    {
+      "angle_deg": 355,
+      "opening_stroke_mm": 12.923070602083328,
+      "max_y_mm": 108.0
+    }
+  ],
+  "support_samples": [
+    {
+      "drop_mm": 0.0,
+      "bounds": {
+        "min_mm": [
+          -116.0,
+          20.400000000000002,
+          -52.0
+        ],
+        "max_mm": [
+          192.07618556735397,
+          116.0,
+          51.6
+        ]
+      }
+    },
+    {
+      "drop_mm": 20.4,
+      "bounds": {
+        "min_mm": [
+          -116.0,
+          40.800000000000004,
+          -52.0
+        ],
+        "max_mm": [
+          195.21041623130938,
+          116.0,
+          51.6
+        ]
+      }
+    },
+    {
+      "drop_mm": 40.8,
+      "bounds": {
+        "min_mm": [
+          -116.0,
+          44.400000000000006,
+          -52.0
+        ],
+        "max_mm": [
+          195.29233181257146,
+          116.0,
+          51.6
+        ]
+      }
+    }
+  ],
+  "base_bounds": {
+    "min_mm": [
+      -228.0,
+      92.0,
+      -228.0
+    ],
+    "max_mm": [
+      228.0,
+      116.0,
+      228.0
+    ]
+  },
+  "sampled_max_y_mm": 116.0,
+  "proposed_pcb_solder_face_y_mm": 124.0,
+  "sampled_mesh_clearance_mm": 8.0,
+  "pcb_dimensions_mm": [
+    144,
+    112
+  ],
+  "pcb_hole_spacing_mm": [
+    136,
+    104
+  ],
+  "pcb_orientation": "solder face up; components downward; X/Z centered on robot",
+  "physical_validation": false,
+  "manufacturing_release": false,
+  "limitations": [
+    "Finite angle and support-position samples, not continuous sweep proof.",
+    "Jaw opening sampled only at closed/open endpoints.",
+    "Bracket, legs, screws, cable sweep, manufacturing tolerances and board height are not modeled.",
+    "8 mm is bare-model separation; protruding solder leads reduce that space.",
+    "Existing Technic holes are not certified mating PCB mounting points."
+  ]
+}
