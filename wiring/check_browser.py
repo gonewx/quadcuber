@@ -1,6 +1,6 @@
 """浏览器验收与 PNG 导出（可选依赖 playwright + Chromium，不影响标准库构建）。
 
-python docs/wiring/check_browser.py --export-png --screenshots /tmp/wiring-review
+python wiring/check_browser.py --export-png --screenshots /tmp/wiring-review
 """
 import argparse
 from functools import partial
@@ -11,8 +11,8 @@ import shutil
 import struct
 from threading import Thread
 
-ROOT = Path(__file__).resolve().parents[2]
-HERE = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
+HERE = Path(__file__).resolve().parents[1] / 'generated/wiring'
 
 
 class QuietHandler(SimpleHTTPRequestHandler):
@@ -42,7 +42,7 @@ def check(page, mode, group):
     for link in page.locator('[data-download]').all():
         href = link.get_attribute('href')
         assert href.startswith(prefix + '.') or href == prefix + '-netlist.json'
-        result = page.request.get('http://' + page.url.split('/')[2] + '/docs/wiring/' + href)
+        result = page.request.get('http://' + page.url.split('/')[2] + '/generated/generated/wiring/' + href)
         assert result.ok, href
         assert ('R+L' in link.inner_text()) == (mode == 'RL')
     assert page.locator('#complete-wiring').count() == 1
@@ -67,7 +67,7 @@ def main():
     server = ThreadingHTTPServer(('127.0.0.1', 0), partial(QuietHandler, directory=str(ROOT)))
     worker = Thread(target=server.serve_forever, daemon=True)
     worker.start()
-    url = f'http://127.0.0.1:{server.server_port}/docs/wiring/'
+    url = f'http://127.0.0.1:{server.server_port}/generated/wiring/'
     try:
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch(executable_path=shutil.which('chromium'), args=['--no-sandbox'])

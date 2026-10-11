@@ -2,9 +2,9 @@
 
 > **2026-09-27 更新：编码器改用电阻分压**（每路 10kΩ 串联 + 20kΩ 接地，分压点在面包板第 26、28 列），不用电平转换模块。原因见 [接口复核报告](ev3-interface-verification.md)。
 
-打开 [实物装配页面](wiring/perfboard.html)：可以切换**元件面、镜像焊接面、电源与拔插结构、面包板连接、舵机与马达**，点击 W01～W14 单独查看一根线，还可下载五张 SVG 矢量图。
+打开 [实物装配页面](../generated/wiring/perfboard.html)：可以切换**元件面、镜像焊接面、电源与拔插结构、面包板连接、舵机与马达**，点击 W01～W14 单独查看一根线，还可下载五张 SVG 矢量图。
 
-本文件和图纸由 `docs/wiring/perfboard_layout.py` 的同一份孔位数据生成，运行 `python3 docs/wiring/build.py` 更新。
+本文件和图纸由 `wiring/perfboard_layout.py` 的同一份孔位数据生成，运行 `python3 wiring/build.py` 更新。
 
 ## 1. 本版确定的结构
 
@@ -64,7 +64,7 @@ W01～W04 是电源入口分支；W05～W08 是降压输出分支；W09～W10 �
 
 ## 5. 面包板与洞洞板连接
 
-见 [两板实际连线图](wiring/perfboard-bridge.svg)，或在装配页面选择“④ 面包板连接”。六根线均为公对公跳线，板上接口 J6/J7 是排母。
+见 [两板实际连线图](../generated/wiring/perfboard-bridge.svg)，或在装配页面选择“④ 面包板连接”。六根线均为公对公跳线，板上接口 J6/J7 是排母。
 
 | 线号 | 洞洞板接口／孔位 | 面包板孔位 | 用途 |
 | --- | --- | --- | --- |
@@ -75,11 +75,11 @@ W01～W04 是电源入口分支；W05～W08 是降压输出分支；W09～W10 �
 | B05 | J7.3 / V11 | j13 | Pico GP8 → 舵机信号 |
 | B06 | J7.4 / V12 | a7 | Pico 3V3 → STBY |
 
-a7、b7、c7 是同一列上半侧的连通组，c7 是 Pico 3V3，STBY 的 3.3V 线插 a7。编码器分压电阻和跳线按[接线指南](wiring/index.html#breadboard)插；上下地轨与电源轨中间断口按原图连接。
+a7、b7、c7 是同一列上半侧的连通组，c7 是 Pico 3V3，STBY 的 3.3V 线插 a7。编码器分压电阻和跳线按[接线指南](../generated/wiring/index.html#breadboard)插；上下地轨与电源轨中间断口按原图连接。
 
 ### 舵机与马达完整接线
 
-见 [完整实物连线图](wiring/perfboard-loads.svg)，或选择“⑤ 舵机与马达”。图中保留两块板之间的六根线，同时补上 EV3 六芯线与舵机三芯线。
+见 [完整实物连线图](../generated/wiring/perfboard-loads.svg)，或选择“⑤ 舵机与马达”。图中保留两块板之间的六根线，同时补上 EV3 六芯线与舵机三芯线。
 
 | 线号 | 设备线端 | 常见颜色／功能 | 接入点／孔位 | 去向 |
 | --- | --- | --- | --- | --- |

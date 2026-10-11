@@ -550,8 +550,8 @@ def section():
 {table(['行','左排（第 9 列）','右排（第 13 列）'],pinrows)}
 <p>脚序按你提供的实物丝印：VM 接 9V，AO1/AO2 接马达；AIN1/AIN2 接 GP2/GP3；STBY 经 J7.4 接 Pico 3V3。NC 留空，未用 B 路输出留空；不另装电容，模块自带电容保留。机械排距仍是绘图假设，焊排母前用实物对齐。</p>
 <h3>焊接顺序与检查</h3>
-<ol><li>先只焊 J1/J4 端子底座、J5 排针、J6/J7 排母、U1 两排排母和 U2 四角排母；DRV8833 先不插。核对 A1、各接口正负和两排间距。</li><li>按 W01～W14 焊接绝缘导线。断电测各线首尾导通；DRV8833 和降压都拔下时，9V、5V、地和各信号网络之间不能短路。</li><li>先只插 U2 降压模块，按“电源与拔插结构”接 9V，空载调到 5.0V。确认 J5.2、J6.1 对各自 GND 约 5V，再断电放电。</li><li>插入 DRV8833，接 J6、J7 和编码器，Pico 仍用 USB。先按<a href="../single_arm.md#5-测试步骤">单臂步骤</a>测马达，再断电接舵机测试。</li><li>大电流导线和接点按实际启动电流选型；带载检查压降、温升与 VM 瞬态，DRV8833 工作电压不超过 10.8V。用绝缘底板保护焊接面，线束留松弛并固定，插拔时扶住底座。</li></ol>
-<p>接面包板：J6.1 → 上排 +，J6.2 → 上排 −；J7.1 → j6（GP2），J7.2 → j7（GP3），J7.3 → j13（GP8），J7.4 → a7（3V3）。编码器分压电阻和跳线见④。完整说明见<a href="../perfboard.md">洞洞板设计文档</a>。</p>
+<ol><li>先只焊 J1/J4 端子底座、J5 排针、J6/J7 排母、U1 两排排母和 U2 四角排母；DRV8833 先不插。核对 A1、各接口正负和两排间距。</li><li>按 W01～W14 焊接绝缘导线。断电测各线首尾导通；DRV8833 和降压都拔下时，9V、5V、地和各信号网络之间不能短路。</li><li>先只插 U2 降压模块，按“电源与拔插结构”接 9V，空载调到 5.0V。确认 J5.2、J6.1 对各自 GND 约 5V，再断电放电。</li><li>插入 DRV8833，接 J6、J7 和编码器，Pico 仍用 USB。先按<a href="../../docs/single_arm.md#5-测试步骤">单臂步骤</a>测马达，再断电接舵机测试。</li><li>大电流导线和接点按实际启动电流选型；带载检查压降、温升与 VM 瞬态，DRV8833 工作电压不超过 10.8V。用绝缘底板保护焊接面，线束留松弛并固定，插拔时扶住底座。</li></ol>
+<p>接面包板：J6.1 → 上排 +，J6.2 → 上排 −；J7.1 → j6（GP2），J7.2 → j7（GP3），J7.3 → j13（GP8），J7.4 → a7（3V3）。编码器分压电阻和跳线见④。完整说明见<a href="../../docs/perfboard.md">洞洞板设计文档</a>。</p>
 <script>{JS}</script>
 </section>'''
 
@@ -564,9 +564,9 @@ def document():
 
 > **2026-09-27 更新：编码器改用电阻分压**（每路 10kΩ 串联 + 20kΩ 接地，分压点在面包板第 26、28 列），不用电平转换模块。原因见 [接口复核报告](ev3-interface-verification.md)。
 
-打开 [实物装配页面](wiring/perfboard.html)：可以切换**元件面、镜像焊接面、电源与拔插结构、面包板连接、舵机与马达**，点击 W01～W14 单独查看一根线，还可下载五张 SVG 矢量图。
+打开 [实物装配页面](../generated/wiring/perfboard.html)：可以切换**元件面、镜像焊接面、电源与拔插结构、面包板连接、舵机与马达**，点击 W01～W14 单独查看一根线，还可下载五张 SVG 矢量图。
 
-本文件和图纸由 `docs/wiring/perfboard_layout.py` 的同一份孔位数据生成，运行 `python3 docs/wiring/build.py` 更新。
+本文件和图纸由 `wiring/perfboard_layout.py` 的同一份孔位数据生成，运行 `python3 wiring/build.py` 更新。
 
 ## 1. 本版确定的结构
 
@@ -602,15 +602,15 @@ W01～W04 是电源入口分支；W05～W08 是降压输出分支；W09～W10 �
 
 ## 5. 面包板与洞洞板连接
 
-见 [两板实际连线图](wiring/perfboard-bridge.svg)，或在装配页面选择“④ 面包板连接”。六根线均为公对公跳线，板上接口 J6/J7 是排母。
+见 [两板实际连线图](../generated/wiring/perfboard-bridge.svg)，或在装配页面选择“④ 面包板连接”。六根线均为公对公跳线，板上接口 J6/J7 是排母。
 
 ''' + mdtable(['线号', '洞洞板接口／孔位', '面包板孔位', '用途'], bridge_rows()) + '''
 
-a7、b7、c7 是同一列上半侧的连通组，c7 是 Pico 3V3，STBY 的 3.3V 线插 a7。编码器分压电阻和跳线按[接线指南](wiring/index.html#breadboard)插；上下地轨与电源轨中间断口按原图连接。
+a7、b7、c7 是同一列上半侧的连通组，c7 是 Pico 3V3，STBY 的 3.3V 线插 a7。编码器分压电阻和跳线按[接线指南](../generated/wiring/index.html#breadboard)插；上下地轨与电源轨中间断口按原图连接。
 
 ### 舵机与马达完整接线
 
-见 [完整实物连线图](wiring/perfboard-loads.svg)，或选择“⑤ 舵机与马达”。图中保留两块板之间的六根线，同时补上 EV3 六芯线与舵机三芯线。
+见 [完整实物连线图](../generated/wiring/perfboard-loads.svg)，或选择“⑤ 舵机与马达”。图中保留两块板之间的六根线，同时补上 EV3 六芯线与舵机三芯线。
 
 ''' + mdtable(['线号', '设备线端', '常见颜色／功能', '接入点／孔位', '去向'], load_rows()) + '''
 
@@ -683,12 +683,12 @@ def validate():
     return f'{len(PINS)} 个独立针脚、{len(WIRES)} 根导线：孔位、镜像、裸板网络检查通过'
 
 
-def write_assets(directory):
+def write_assets(directory, documents=None):
     validate()
     for name,svg in [('front',board_svg()),('back',board_svg(True)),('external',harness_svg()),('bridge',bridge_svg()),('loads',loads_svg())]:
         (Path(directory)/f'perfboard-{name}.svg').write_text(svg,encoding='utf-8')
     (Path(directory)/'perfboard-section.html').write_text(section(),encoding='utf-8')
-    (Path(directory).parent/'perfboard.md').write_text(document(),encoding='utf-8')
+    ((Path(documents) if documents is not None else Path(directory).parent)/'perfboard.md').write_text(document(),encoding='utf-8')
 
 
 if __name__=='__main__':

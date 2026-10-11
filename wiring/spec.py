@@ -3,7 +3,7 @@ from html import escape
 from pathlib import Path
 import runpy
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 # 顺序：马达 IN1/IN2、编码器 A/B、舵机、PIO 状态机。
 ARMS = {
     "R": ((2, 3), (4, 5), (8,), (0, 1)),
