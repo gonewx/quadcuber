@@ -1,0 +1,10 @@
+{
+  "candidateDefault": 132,
+  "historical219ModelUnchanged": true,
+  "historical145InstructionsUnchanged": true,
+  "riskWarningsPresent": true,
+  "historyPhysicalFailureExplicit": true,
+  "linksAndIDs": "pass",
+  "inlineJavaScriptSyntax": "pass",
+  "browserVisualVerification": "not performed"
+}

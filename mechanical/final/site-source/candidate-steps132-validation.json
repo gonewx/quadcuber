@@ -1,0 +1,495 @@
+{
+  "steps": 80,
+  "sourceDiagrams": 80,
+  "uniqueIntroductions": 132,
+  "maxNewParts": 4,
+  "sourceAssemblySha256": "bba23990c0c5e4387262ddafd3ca4d908625f7291cd4e6e14fbb1fa552acd561",
+  "embeddedStepSourceExact": true,
+  "allMasksAppliedToRealLDrawMesh": true,
+  "geometryTransformsUnchanged": true,
+  "restoreOriginalMaterials": true,
+  "triangles": 203528,
+  "checks": [
+    {
+      "id": "D132-001",
+      "visible": 0,
+      "added": 0,
+      "highlight": 0
+    },
+    {
+      "id": "D132-002",
+      "visible": 3,
+      "added": 3,
+      "highlight": 3
+    },
+    {
+      "id": "D132-003",
+      "visible": 4,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-004",
+      "visible": 5,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-005",
+      "visible": 3,
+      "added": 3,
+      "highlight": 3
+    },
+    {
+      "id": "D132-006",
+      "visible": 4,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-007",
+      "visible": 5,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-008",
+      "visible": 5,
+      "added": 0,
+      "highlight": 5
+    },
+    {
+      "id": "D132-009",
+      "visible": 6,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-010",
+      "visible": 7,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-011",
+      "visible": 8,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-012",
+      "visible": 5,
+      "added": 0,
+      "highlight": 5
+    },
+    {
+      "id": "D132-013",
+      "visible": 6,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-014",
+      "visible": 7,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-015",
+      "visible": 8,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-016",
+      "visible": 4,
+      "added": 4,
+      "highlight": 4
+    },
+    {
+      "id": "D132-017",
+      "visible": 6,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-018",
+      "visible": 7,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-019",
+      "visible": 8,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-020",
+      "visible": 10,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-021",
+      "visible": 11,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-022",
+      "visible": 4,
+      "added": 4,
+      "highlight": 4
+    },
+    {
+      "id": "D132-023",
+      "visible": 6,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-024",
+      "visible": 7,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-025",
+      "visible": 8,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-026",
+      "visible": 10,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-027",
+      "visible": 11,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-028",
+      "visible": 13,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-029",
+      "visible": 15,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-030",
+      "visible": 16,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-031",
+      "visible": 18,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-032",
+      "visible": 22,
+      "added": 4,
+      "highlight": 4
+    },
+    {
+      "id": "D132-033",
+      "visible": 26,
+      "added": 4,
+      "highlight": 4
+    },
+    {
+      "id": "D132-034",
+      "visible": 37,
+      "added": 0,
+      "highlight": 11
+    },
+    {
+      "id": "D132-035",
+      "visible": 12,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-036",
+      "visible": 14,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-037",
+      "visible": 16,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-038",
+      "visible": 18,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-039",
+      "visible": 20,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-040",
+      "visible": 12,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-041",
+      "visible": 14,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-042",
+      "visible": 16,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-043",
+      "visible": 18,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-044",
+      "visible": 20,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-045",
+      "visible": 22,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-046",
+      "visible": 23,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-047",
+      "visible": 25,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-048",
+      "visible": 26,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-049",
+      "visible": 22,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-050",
+      "visible": 23,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-051",
+      "visible": 25,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-052",
+      "visible": 26,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-053",
+      "visible": 1,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-054",
+      "visible": 5,
+      "added": 4,
+      "highlight": 4
+    },
+    {
+      "id": "D132-055",
+      "visible": 9,
+      "added": 4,
+      "highlight": 4
+    },
+    {
+      "id": "D132-056",
+      "visible": 11,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-057",
+      "visible": 12,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-058",
+      "visible": 13,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-059",
+      "visible": 14,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-060",
+      "visible": 41,
+      "added": 4,
+      "highlight": 4
+    },
+    {
+      "id": "D132-061",
+      "visible": 43,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-062",
+      "visible": 44,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-063",
+      "visible": 58,
+      "added": 0,
+      "highlight": 14
+    },
+    {
+      "id": "D132-064",
+      "visible": 59,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-065",
+      "visible": 60,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-066",
+      "visible": 61,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-067",
+      "visible": 62,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-068",
+      "visible": 64,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-069",
+      "visible": 65,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-070",
+      "visible": 67,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-071",
+      "visible": 4,
+      "added": 4,
+      "highlight": 4
+    },
+    {
+      "id": "D132-072",
+      "visible": 8,
+      "added": 4,
+      "highlight": 4
+    },
+    {
+      "id": "D132-073",
+      "visible": 4,
+      "added": 4,
+      "highlight": 4
+    },
+    {
+      "id": "D132-074",
+      "visible": 12,
+      "added": 0,
+      "highlight": 8
+    },
+    {
+      "id": "D132-075",
+      "visible": 14,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-076",
+      "visible": 15,
+      "added": 1,
+      "highlight": 1
+    },
+    {
+      "id": "D132-077",
+      "visible": 82,
+      "added": 0,
+      "highlight": 15
+    },
+    {
+      "id": "D132-078",
+      "visible": 130,
+      "added": 0,
+      "highlight": 0
+    },
+    {
+      "id": "D132-079",
+      "visible": 132,
+      "added": 2,
+      "highlight": 2
+    },
+    {
+      "id": "D132-080",
+      "visible": 132,
+      "added": 0,
+      "highlight": 0
+    }
+  ],
+  "browserVisualQA": "Blocked: cloud preview returned502 connection refused; escalated local readiness failed with sandbox mount error. DOM tests are simulated, not browser checks."
+}

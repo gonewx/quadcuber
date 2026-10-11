@@ -1,0 +1,24 @@
+<h1>整机关系与放入／退出</h1>
+<p class="operation-intro">132件小样怎样接在原四臂之间，以及魔方放入、夹持交接、托座下移与退出的设计关系</p>
+<div class="operation-alert" role="alert"><strong>仅供设计审阅 · 不可照此操作实机</strong><p>承重、销尖滑动、半轴套保持与整机动作尚未实物验证。所有电机动作均为设计目标，页面不发送控制指令。</p></div>
+<section class="operation-selector" aria-label="阶段导航"><div><label for="operation-select">选择阶段</label><select id="operation-select"></select></div><div class="operation-nav"><button id="operation-prev" type="button">上一阶段</button><span id="operation-progress" class="operation-progress"></span><button id="operation-next" type="button">下一阶段</button></div></section>
+<main class="operation-workbench">
+ <section class="operation-canvas-column" aria-label="整机阶段3D">
+  <div id="operation-v3d" role="img" aria-label="整机阶段模型，可拖动旋转" tabindex="0"><span id="operation-v3d-status" role="status">正在载入此阶段整机…</span><div id="operation-world-labels" aria-hidden="true"></div></div>
+  <div class="operation-viewbar"><button id="operation-fit" type="button">复位视角</button><span class="operation-hint">拖动旋转 · 滚轮／双指缩放<br>A/D、W/S旋转 · +/-缩放 · R复位</span></div>
+  <p class="operation-hint"><b>固定世界方向：</b>R=+X，L=−X，F=+Z，B=−Z，向上=−Y；画面左右会随视角改变，臂名不会互换。</p>
+  <p class="operation-hint operation-cube-legend">黄色透明盒为56mm魔方位置参考，不计入LEGO件数；不是实体零件或碰撞结论。说明中的黄色X边、绿色Z边指3D原零件颜色；下方静态图按功能分组着色，两条定位边可能同为金色。</p>
+  <dl class="operation-state"><dt>魔方由谁托住</dt><dd id="operation-cube-support"></dd><dt>参考中心</dt><dd id="operation-cube-position"></dd><dt>四臂状态</dt><dd id="operation-arms"></dd><dt>托座／桥</dt><dd id="operation-tray"></dd><dt>两枚锁件</dt><dd id="operation-keys"></dd></dl>
+ </section>
+ <section class="operation-stage-panel" aria-labelledby="operation-title">
+  <span id="operation-action-type" class="operation-action-type"></span><h2 id="operation-title"></h2>
+  <p id="operation-hands-out" class="operation-hands-out" hidden>先让手、工具完全离开四臂与托座的运动区域，再讨论电机动作。不得一边伸手托扶，一边驱动电机。</p>
+  <h3>此阶段的设计说明</h3><ol id="operation-instructions"></ol>
+  <div id="operation-cautions-box" class="operation-cautions"><h3>停下核对</h3><ul id="operation-cautions"></ul></div>
+  <p id="operation-result" role="status" aria-live="polite"></p><button id="operation-retry" type="button" hidden>重新载入此阶段</button>
+  <figure id="operation-diagram" hidden><img id="operation-image" alt="" loading="lazy"><figcaption id="operation-image-caption"></figcaption><a id="operation-image-open" target="_blank" rel="noopener">在新窗口查看清晰原图</a></figure><p id="operation-diagram-note"></p>
+ </section>
+</main>
+<section class="operation-relationships" aria-labelledby="relationship-title"><h2 id="relationship-title">新支承与原四臂的关系</h2>RELATIONSHIP_CONTENT</section>
+<details class="operation-limitations"><summary>审阅范围与尚未验证的风险</summary>WARNING_CONTENT</details>
+<p class="operation-footer">零件怎样装配：<a href="index.html">回到132件／80步逐步审阅</a> · <a href="history-219.html">219版实物失败记录</a></p>

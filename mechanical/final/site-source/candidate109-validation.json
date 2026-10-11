@@ -1,0 +1,45 @@
+{
+  "source_assembly_sha256": "309787c672e9b86f0001eaa6cc0a345e456d1728689ad9cc681fce6e88334b62",
+  "roles": {
+    "fixed": 30,
+    "moving": 77,
+    "keys": 2
+  },
+  "support": 83,
+  "seat": 26,
+  "states": [
+    {
+      "key": "core_up",
+      "parts": 109,
+      "meshes": 111,
+      "triangles": 180088,
+      "missingMaterials": 0
+    },
+    {
+      "key": "core_down",
+      "parts": 107,
+      "meshes": 109,
+      "triangles": 176056,
+      "missingMaterials": 0
+    },
+    {
+      "key": "whole_up",
+      "parts": 876,
+      "meshes": 906,
+      "triangles": 1672412,
+      "missingMaterials": 0
+    },
+    {
+      "key": "whole_down",
+      "parts": 874,
+      "meshes": 904,
+      "triangles": 1668380,
+      "missingMaterials": 0
+    }
+  ],
+  "coreParkedTransformsExact": true,
+  "separateAuthoredWholeHeadPoses": true,
+  "externalGeometryRequests": 0,
+  "status": "viewer source validation only; not mechanical or load approval",
+  "browserVisualTest": "unverified"
+}

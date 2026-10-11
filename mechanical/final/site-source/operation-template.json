@@ -1,0 +1,688 @@
+{
+  "schema_version": 1,
+  "review_only": true,
+  "title_zh": "整机关系与魔方放入／撤座／取出",
+  "source_assembly_sha256": "bba23990c0c5e4387262ddafd3ca4d908625f7291cd4e6e14fbb1fa552acd561",
+  "source_model_sha256": "ed1b9d8d71aed8f34e93dce32fcb35a33a16203360bfdbd1064282600c72d7fc",
+  "world_axes": {
+    "R": [
+      550,
+      0,
+      0
+    ],
+    "L": [
+      -550,
+      0,
+      0
+    ],
+    "F": [
+      0,
+      0,
+      550
+    ],
+    "B": [
+      0,
+      0,
+      -550
+    ]
+  },
+  "world_axis_directions": {
+    "R": [
+      1,
+      0,
+      0
+    ],
+    "L": [
+      -1,
+      0,
+      0
+    ],
+    "F": [
+      0,
+      0,
+      1
+    ],
+    "B": [
+      0,
+      0,
+      -1
+    ],
+    "up": [
+      0,
+      -1,
+      0
+    ]
+  },
+  "view_note_zh": "R/L/F/B是原模型固定臂名：R=+X、L=−X、F=+Z、B=−Z；上方=−Y。旋转视角不交换臂名，屏幕左右不一定等于R/L。角度0°表示原头夹指一上一下的基准，90°表示空头四分之一转。",
+  "warnings_zh": [
+    "设计操作流程，名义几何已补核；不是直接动力试机指令。",
+    "实体承重、夹持力、销尖滑动、半轴套保持和完整安装环境尚未验证；原8墙脚销仍HOLD。",
+    "任何头部旋转／开合之前，手必须完全退出运动区；手在机构内时禁止触发动作。",
+    "控制程序已有单臂浮点角度定位入口，但没有在本任务中完成四臂50°装卸、锁销和持方联锁状态机。"
+  ],
+  "relationship_zh": [
+    "新132件位于魔方下方，左右短支承在L/R原竖墙面向魔方的一侧。它们通过原墙连接件和脚部连接到保留的59件共同底盘。",
+    "横向双梁桥连接左右滑架，桥上的四柱、H座、三条托面与X/Z定位边一起升降。固定竖轨和落地脚不随托座移动。",
+    "上位两枚工作锁销把移动夹架锁在固定轨孔上；移走两销后，100件移动组件整体向下走40mm。魔方应由夹头保持在原中心，不能跟着托座下降。",
+    "132＋59＋原四臂708＝899；锁销取出后画面中897件。展示用56mm魔方不计入乐高件数。原四臂的零件、位置和运动机构均没有修改。"
+  ],
+  "states": {
+    "load_empty": {
+      "mechanical_key": "up-all50-899",
+      "file": "up-all50-899.mpd",
+      "sha256": "4fd9833b4d1b90d5d2611e5f9731f012d2a6529b87c49c2bd5c316f3743a4ebe",
+      "count": 899,
+      "seat_drop_mm": 0,
+      "keys_present": true,
+      "heads": {
+        "R": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "L": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "F": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "B": {
+          "angle_deg": 50,
+          "jaw": "open"
+        }
+      },
+      "id": "load_empty",
+      "cube_position_mm": null,
+      "cube_size_mm": 56,
+      "cube_orientation": "axis_aligned",
+      "cube_support_zh": "尚未放魔方；托座上位并锁定",
+      "tray_zh": "上位承托面Y28mm",
+      "keys_zh": "两枚工作锁销已插入",
+      "arms_zh": "R：50°张开／空头；L：50°张开／空头；F：50°张开／空头；B：50°张开／空头",
+      "diagram_file": "diagrams/load_empty.png"
+    },
+    "cube_above": {
+      "mechanical_key": "up-all50-899",
+      "file": "up-all50-899.mpd",
+      "sha256": "4fd9833b4d1b90d5d2611e5f9731f012d2a6529b87c49c2bd5c316f3743a4ebe",
+      "count": 899,
+      "seat_drop_mm": 0,
+      "keys_present": true,
+      "heads": {
+        "R": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "L": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "F": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "B": {
+          "angle_deg": 50,
+          "jaw": "open"
+        }
+      },
+      "id": "cube_above",
+      "cube_position_mm": [
+        0,
+        -110,
+        0
+      ],
+      "cube_size_mm": 56,
+      "cube_orientation": "axis_aligned",
+      "cube_support_zh": "魔方在上方的竖直装入／取出示意；不是手部空间证明",
+      "tray_zh": "上位承托面Y28mm",
+      "keys_zh": "两枚工作锁销已插入",
+      "arms_zh": "R：50°张开／空头；L：50°张开／空头；F：50°张开／空头；B：50°张开／空头",
+      "diagram_file": "diagrams/cube_above.png"
+    },
+    "seated": {
+      "mechanical_key": "up-all50-899",
+      "file": "up-all50-899.mpd",
+      "sha256": "4fd9833b4d1b90d5d2611e5f9731f012d2a6529b87c49c2bd5c316f3743a4ebe",
+      "count": 899,
+      "seat_drop_mm": 0,
+      "keys_present": true,
+      "heads": {
+        "R": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "L": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "F": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "B": {
+          "angle_deg": 50,
+          "jaw": "open"
+        }
+      },
+      "id": "seated",
+      "cube_position_mm": [
+        0,
+        0,
+        0
+      ],
+      "cube_size_mm": 56,
+      "cube_orientation": "axis_aligned",
+      "cube_support_zh": "三条托面承托魔方；手动靠X＋Z两定位边；四头均张开",
+      "tray_zh": "上位承托面Y28mm",
+      "keys_zh": "两枚工作锁销已插入",
+      "arms_zh": "R：50°张开／空头；L：50°张开／空头；F：50°张开／空头；B：50°张开／空头",
+      "diagram_file": "diagrams/seated.png"
+    },
+    "fb_ready": {
+      "mechanical_key": "up-FB0-open-LR50-899",
+      "file": "up-FB0-open-LR50-899.mpd",
+      "sha256": "cbd8456c80d976f3f2ca60ca7e9e30d837b5d5e5f4b436a06780c6741494cf43",
+      "count": 899,
+      "seat_drop_mm": 0,
+      "keys_present": true,
+      "heads": {
+        "R": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "L": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "F": {
+          "angle_deg": 0,
+          "jaw": "open"
+        },
+        "B": {
+          "angle_deg": 0,
+          "jaw": "open"
+        }
+      },
+      "id": "fb_ready",
+      "cube_position_mm": [
+        0,
+        0,
+        0
+      ],
+      "cube_size_mm": 56,
+      "cube_orientation": "axis_aligned",
+      "cube_support_zh": "魔方由上位锁定托座承托；四头仍张开",
+      "tray_zh": "上位承托面Y28mm",
+      "keys_zh": "两枚工作锁销已插入",
+      "arms_zh": "R：50°张开／空头；L：50°张开／空头；F：0°张开／空头；B：0°张开／空头",
+      "diagram_file": "diagrams/fb_ready.png"
+    },
+    "fb_holds": {
+      "mechanical_key": "up-FB0-held-LR50-899",
+      "file": "up-FB0-held-LR50-899.mpd",
+      "sha256": "27c99923aaaaadfcb7791509c50f3adf1286b892e443e86f81d4a1443204058d",
+      "count": 899,
+      "seat_drop_mm": 0,
+      "keys_present": true,
+      "heads": {
+        "R": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "L": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "F": {
+          "angle_deg": 0,
+          "jaw": "closed"
+        },
+        "B": {
+          "angle_deg": 0,
+          "jaw": "closed"
+        }
+      },
+      "id": "fb_holds",
+      "cube_position_mm": [
+        0,
+        0,
+        0
+      ],
+      "cube_size_mm": 56,
+      "cube_orientation": "axis_aligned",
+      "cube_support_zh": "FB在0°夹持，锁定托座仍在魔方下方；LR50°张开",
+      "tray_zh": "上位承托面Y28mm",
+      "keys_zh": "两枚工作锁销已插入",
+      "arms_zh": "R：50°张开／空头；L：50°张开／空头；F：0°夹持；B：0°夹持",
+      "diagram_file": "diagrams/fb_holds.png"
+    },
+    "unlocked_up": {
+      "mechanical_key": "up-FB0-held-LR50-unlocked-897",
+      "file": "up-FB0-held-LR50-unlocked-897.mpd",
+      "sha256": "a5ec3b25d1ab531681d7a6189a1e4d095426a48e1103dddca96f4f26ac39c0e0",
+      "count": 897,
+      "seat_drop_mm": 0,
+      "keys_present": false,
+      "heads": {
+        "R": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "L": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "F": {
+          "angle_deg": 0,
+          "jaw": "closed"
+        },
+        "B": {
+          "angle_deg": 0,
+          "jaw": "closed"
+        }
+      },
+      "id": "unlocked_up",
+      "cube_position_mm": [
+        0,
+        0,
+        0
+      ],
+      "cube_size_mm": 56,
+      "cube_orientation": "axis_aligned",
+      "cube_support_zh": "FB在0°夹持；操作者单独托稳已解锁的托座",
+      "tray_zh": "上位承托面Y28mm",
+      "keys_zh": "两枚工作锁销完整抽出，放在画面外",
+      "arms_zh": "R：50°张开／空头；L：50°张开／空头；F：0°夹持；B：0°夹持",
+      "diagram_file": "diagrams/unlocked_up.png"
+    },
+    "parked_fb": {
+      "mechanical_key": "down-FB0-held-LR50-897",
+      "file": "down-FB0-held-LR50-897.mpd",
+      "sha256": "4c2f2d846df6d26a2b14bee2cd242b47492a2c4a1d07c63315f856e16b1d98e1",
+      "count": 897,
+      "seat_drop_mm": 40,
+      "keys_present": false,
+      "heads": {
+        "R": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "L": {
+          "angle_deg": 50,
+          "jaw": "open"
+        },
+        "F": {
+          "angle_deg": 0,
+          "jaw": "closed"
+        },
+        "B": {
+          "angle_deg": 0,
+          "jaw": "closed"
+        }
+      },
+      "id": "parked_fb",
+      "cube_position_mm": [
+        0,
+        0,
+        0
+      ],
+      "cube_size_mm": 56,
+      "cube_orientation": "axis_aligned",
+      "cube_support_zh": "魔方保持原中心，由FB在0°夹持；托座下移40mm，LR50°张开",
+      "tray_zh": "下位40mm，托座已离开魔方",
+      "keys_zh": "两枚工作锁销完整抽出，放在画面外",
+      "arms_zh": "R：50°张开／空头；L：50°张开／空头；F：0°夹持；B：0°夹持",
+      "diagram_file": "diagrams/parked_fb.png"
+    },
+    "lr_ready": {
+      "mechanical_key": "down-FB0-held-LR90-open-897",
+      "file": "down-FB0-held-LR90-open-897.mpd",
+      "sha256": "0f8824e80e549890e8f522f910d913e4adef8ad6d0c68c37a77a33c4d3305ed2",
+      "count": 897,
+      "seat_drop_mm": 40,
+      "keys_present": false,
+      "heads": {
+        "R": {
+          "angle_deg": 90,
+          "jaw": "open"
+        },
+        "L": {
+          "angle_deg": 90,
+          "jaw": "open"
+        },
+        "F": {
+          "angle_deg": 0,
+          "jaw": "closed"
+        },
+        "B": {
+          "angle_deg": 0,
+          "jaw": "closed"
+        }
+      },
+      "id": "lr_ready",
+      "cube_position_mm": [
+        0,
+        0,
+        0
+      ],
+      "cube_size_mm": 56,
+      "cube_orientation": "axis_aligned",
+      "cube_support_zh": "FB仍0°夹持；LR空头已到90°，尚未夹紧",
+      "tray_zh": "下位40mm，托座已离开魔方",
+      "keys_zh": "两枚工作锁销完整抽出，放在画面外",
+      "arms_zh": "R：90°张开／空头；L：90°张开／空头；F：0°夹持；B：0°夹持",
+      "diagram_file": "diagrams/lr_ready.png"
+    },
+    "both_hold": {
+      "mechanical_key": "down-FB0-held-LR90-held-897",
+      "file": "down-FB0-held-LR90-held-897.mpd",
+      "sha256": "0224fc4132599272d518ee6eadeb4fee8924b004d2516ed940edc3224f10b356",
+      "count": 897,
+      "seat_drop_mm": 40,
+      "keys_present": false,
+      "heads": {
+        "R": {
+          "angle_deg": 90,
+          "jaw": "closed"
+        },
+        "L": {
+          "angle_deg": 90,
+          "jaw": "closed"
+        },
+        "F": {
+          "angle_deg": 0,
+          "jaw": "closed"
+        },
+        "B": {
+          "angle_deg": 0,
+          "jaw": "closed"
+        }
+      },
+      "id": "both_hold",
+      "cube_position_mm": [
+        0,
+        0,
+        0
+      ],
+      "cube_size_mm": 56,
+      "cube_orientation": "axis_aligned",
+      "cube_support_zh": "FB0°与LR90°均夹持；魔方居中方正；托座在下位",
+      "tray_zh": "下位40mm，托座已离开魔方",
+      "keys_zh": "两枚工作锁销完整抽出，放在画面外",
+      "arms_zh": "R：90°夹持；L：90°夹持；F：0°夹持；B：0°夹持",
+      "diagram_file": "diagrams/both_hold.png"
+    }
+  },
+  "stages": [
+    {
+      "id": "R00",
+      "title_zh": "先看整机关系",
+      "state_id": "load_empty",
+      "action_type": "check",
+      "flow": "relationship",
+      "instructions_zh": [
+        "新132件位于魔方下方，左右短支承在L/R原竖墙面向魔方的一侧。它们通过原墙连接件和脚部连接到保留的59件共同底盘。",
+        "横向双梁桥连接左右滑架，桥上的四柱、H座、三条托面与X/Z定位边一起升降。固定竖轨和落地脚不随托座移动。",
+        "上位两枚工作锁销把移动夹架锁在固定轨孔上；移走两销后，100件移动组件整体向下走40mm。魔方应由夹头保持在原中心，不能跟着托座下降。",
+        "132＋59＋原四臂708＝899；锁销取出后画面中897件。展示用56mm魔方不计入乐高件数。原四臂的零件、位置和运动机构均没有修改。"
+      ],
+      "cautions_zh": [
+        "这不是脱离原墙和共同底盘也已全约束的独立小台架。"
+      ],
+      "diagram_file": "diagrams/load_empty.png"
+    },
+    {
+      "id": "L00",
+      "title_zh": "装料前：四头50°张开，托座锁在上位",
+      "state_id": "load_empty",
+      "action_type": "check",
+      "flow": "load",
+      "instructions_zh": [
+        "设计装料起点是R/L/F/B四头全部张开且各为50°，托座上位，两枚工作锁销插到位。",
+        "先确认完整托面、定位边和固定约束，且没有魔方。禁止从未知夹持角度直接宣称已处在装料起点。",
+        "本页是设计流程说明。现阶段承载、销尖滑动、半套保持和原8墙脚销HOLD尚未完成实体放行。"
+      ],
+      "cautions_zh": [
+        "不要按本页直接执行带动力试机。"
+      ],
+      "diagram_file": "diagrams/load_empty.png"
+    },
+    {
+      "id": "L01",
+      "title_zh": "手动：魔方竖直放到三条托面",
+      "state_id": "seated",
+      "action_type": "manual",
+      "flow": "load",
+      "instructions_zh": [
+        "保持头部与开合机构停止运动，将56mm魔方保持方正，沿竖直方向从上方降到托面，中心到图示原点。",
+        "轻靠黄色X边和绿色Z边完成手动定位；三条托面齐全后才能承托，不能把魔方放在裸桥上。",
+        "放稳后将手完全撤离机械头、夹指与升降路径，再允许下一项头部设计动作。"
+      ],
+      "cautions_zh": [
+        "名义装入空间已核；没有人体、手指或夹持工具包络，不能据此保证手部安全间隙。"
+      ],
+      "diagram_file": "diagrams/seated.png"
+    },
+    {
+      "id": "L02",
+      "title_zh": "设计马达动作：只有空FB头50°→0°",
+      "state_id": "fb_ready",
+      "action_type": "motor_design",
+      "flow": "load",
+      "instructions_zh": [
+        "LR保持50°并张开，魔方仍由锁定托座承托。",
+        "FB保持张开，只有空FB头从50°转到0°；此时FB尚未夹住魔方，不是在夹持魔方时强行转头。",
+        "角度表示原机械头的姿态，不是舵机夹紧角度，也不是本页提供的硬件命令。"
+      ],
+      "cautions_zh": [
+        "手须已离开运动区，且实际控制必须有状态确认和联锁。"
+      ],
+      "diagram_file": "diagrams/fb_ready.png"
+    },
+    {
+      "id": "L03",
+      "title_zh": "设计夹持动作：FB在0°夹紧",
+      "state_id": "fb_holds",
+      "action_type": "motor_design",
+      "flow": "load",
+      "instructions_zh": [
+        "FB保持0°，执行夹紧动作；LR仍50°张开。",
+        "只有FB实际建立可靠夹持、魔方位置未变，才能让托座撤离。模型的轮胎名义预压不等于已验证夹持力。"
+      ],
+      "cautions_zh": [
+        "不能只因软件画面显示“夹紧”就假定实物已抓牢。"
+      ],
+      "diagram_file": "diagrams/fb_holds.png"
+    },
+    {
+      "id": "L04",
+      "title_zh": "手动：托稳托座，完整抽出两锁",
+      "state_id": "unlocked_up",
+      "action_type": "manual",
+      "flow": "load",
+      "instructions_zh": [
+        "所有机械动作停止并保持FB静态夹持；操作者单独托稳托座，避免解锁后滑架自行坠落。",
+        "两枚工作锁销各自完整拔出并放到一旁。半拔留在移动架内的状态没有通过空间检查。",
+        "这时魔方由FB保持在原中心；手动操作的是托座及锁销。"
+      ],
+      "cautions_zh": [
+        "手在机构内时禁止触发任何头部旋转或开合。插拔力与手部可达性仍待实体检查。"
+      ],
+      "diagram_file": "diagrams/unlocked_up.png"
+    },
+    {
+      "id": "L05",
+      "title_zh": "手动：托座向下撤40mm，魔方不动",
+      "state_id": "parked_fb",
+      "action_type": "manual",
+      "flow": "load",
+      "instructions_zh": [
+        "在FB0°夹持、LR50°张开的姿态下，托座沿双侧固定导轨完整下降40mm。",
+        "下降的是100件桥／托面／定位边移动组件；魔方不跟随，仍保持原中心与方正姿态。",
+        "到下位后检查托座、轴套和锁销存放，手完全退出运动区，才进入下一项头部设计动作。"
+      ],
+      "cautions_zh": [
+        "尤其约8／32mm行程处可能有销尖挂孔缘；遇阻立即停止，不硬压、磨销或改孔。"
+      ],
+      "diagram_file": "diagrams/parked_fb.png"
+    },
+    {
+      "id": "L06",
+      "title_zh": "设计马达动作：空LR头50°→90°",
+      "state_id": "lr_ready",
+      "action_type": "motor_design",
+      "flow": "load",
+      "instructions_zh": [
+        "托座已在下位，FB始终0°夹持魔方。",
+        "LR保持张开，只让空LR头从50°转到90°；不要先夹LR再带着魔方强转这一过渡。",
+        "这一步已补做当前真实几何的连续原头互撞与魔方路径检查，仍不代表实体或控制系统已验收。"
+      ],
+      "cautions_zh": [
+        "如果托座仍在上位，不使用这个LR90°过渡。"
+      ],
+      "diagram_file": "diagrams/lr_ready.png"
+    },
+    {
+      "id": "L07",
+      "title_zh": "设计夹持交接：LR90°夹紧，FB继续保持",
+      "state_id": "both_hold",
+      "action_type": "motor_design",
+      "flow": "load",
+      "instructions_zh": [
+        "LR在90°完成夹紧，FB仍在0°保持；这是图示已知交接姿态。",
+        "下一步进入原机的协同控制流程时，必须先确认接管的一组可靠夹持，才允许另一组按既有动作安排松开。",
+        "本页不把“四头一起松开”当作交接，也不提供任意四头同时旋转的动作。"
+      ],
+      "cautions_zh": [
+        "四臂50°装卸、锁销和持方状态机未作为已完成固件交付；本页不是马达控制界面。"
+      ],
+      "diagram_file": "diagrams/both_hold.png"
+    },
+    {
+      "id": "U00",
+      "title_zh": "取出前置：先恢复这个已知姿态",
+      "state_id": "both_hold",
+      "action_type": "check",
+      "flow": "unload",
+      "instructions_zh": [
+        "取出起点限定为：魔方居中方正；托座下位40mm；FB0°与LR90°均可靠夹持；两工作锁销仍在旁边。",
+        "任意还原终态不能直接跳到“升座开夹”。须由已有协调动作或另行验证的控制规划恢复这个状态。",
+        "不要把“恢复角度”理解成夹着魔方强转各头到数字；必须保持正确的持方与空头关系。"
+      ],
+      "cautions_zh": [
+        "从任意solver终态自动到达这个卸载起点的规划器尚未在本任务中实现或验证。"
+      ],
+      "diagram_file": "diagrams/both_hold.png"
+    },
+    {
+      "id": "U01",
+      "title_zh": "设计夹持动作：先开LR，FB继续夹持",
+      "state_id": "lr_ready",
+      "action_type": "motor_design",
+      "flow": "unload",
+      "instructions_zh": [
+        "FB保持0°夹持，LR保持90°只张开。",
+        "此时仍有FB支撑魔方，托座保持下位，不同时放开全部夹头。"
+      ],
+      "cautions_zh": [],
+      "diagram_file": "diagrams/lr_ready.png"
+    },
+    {
+      "id": "U02",
+      "title_zh": "设计马达动作：空LR头90°→50°",
+      "state_id": "parked_fb",
+      "action_type": "motor_design",
+      "flow": "unload",
+      "instructions_zh": [
+        "LR已张开，空头从90°转回50°；FB仍在0°夹持，魔方居中方正不变。",
+        "先回这个LR50°姿态，再让托座上升；不能在LR90°时直接升座。"
+      ],
+      "cautions_zh": [],
+      "diagram_file": "diagrams/parked_fb.png"
+    },
+    {
+      "id": "U03",
+      "title_zh": "手动：托座回升40mm到魔方下方",
+      "state_id": "unlocked_up",
+      "action_type": "manual",
+      "flow": "unload",
+      "instructions_zh": [
+        "停止全部机械运动并保持FB夹持，托稳托座沿原路径升回上位40mm。",
+        "完整三条托面重新承接魔方底面；不得靠上升托座去顶歪或强行矫正偏斜魔方。"
+      ],
+      "cautions_zh": [
+        "销尖滑动、手部可达性及与真实魔方接触仍待实体检查；遇卡滞即停。"
+      ],
+      "diagram_file": "diagrams/unlocked_up.png"
+    },
+    {
+      "id": "U04",
+      "title_zh": "手动：两枚工作锁销重新插好",
+      "state_id": "fb_holds",
+      "action_type": "manual",
+      "flow": "unload",
+      "instructions_zh": [
+        "托住已到上位的托座，对齐两侧工作孔，把两锁销完整插入，止挡留在孔外。",
+        "确认上位锁定并承托魔方后，手退出运动区；此时才能允许FB松开。"
+      ],
+      "cautions_zh": [],
+      "diagram_file": "diagrams/fb_holds.png"
+    },
+    {
+      "id": "U05",
+      "title_zh": "设计夹持动作：FB在0°张开",
+      "state_id": "fb_ready",
+      "action_type": "motor_design",
+      "flow": "unload",
+      "instructions_zh": [
+        "魔方已由锁定的上位托座承托，LR仍50°张开。",
+        "FB保持0°张开，把载荷交回托座；不能在托座下位时先把FB放掉。"
+      ],
+      "cautions_zh": [],
+      "diagram_file": "diagrams/fb_ready.png"
+    },
+    {
+      "id": "U06",
+      "title_zh": "设计马达动作：空FB头0°→50°",
+      "state_id": "seated",
+      "action_type": "motor_design",
+      "flow": "unload",
+      "instructions_zh": [
+        "FB已经张开，空头从0°回到50°。LR仍保持50°张开。",
+        "回到与装料时相同的四头全开50°通道，等待机械动作完全停止。"
+      ],
+      "cautions_zh": [],
+      "diagram_file": "diagrams/seated.png"
+    },
+    {
+      "id": "U07",
+      "title_zh": "手动：保持方正，竖直取出魔方",
+      "state_id": "cube_above",
+      "action_type": "manual",
+      "flow": "unload",
+      "instructions_zh": [
+        "确认所有机构停止运动后，保持魔方方正，沿上方竖直路径取出。",
+        "取出过程不是带着倾斜魔方扫过夹头；四头保持全开50°，托座保持上位锁定。"
+      ],
+      "cautions_zh": [
+        "名义几何通道不等于已验证的手指或工具空间。"
+      ],
+      "diagram_file": "diagrams/cube_above.png"
+    }
+  ],
+  "physical_validation": {
+    "load_passed": false,
+    "slide_passed": false,
+    "retention_passed": false,
+    "grip_force_passed": false,
+    "integrated_controller_ready": false,
+    "human_hand_envelope_checked": false
+  },
+  "evidence_files": [
+    "evidence/cube-audit132.json",
+    "evidence/interarm-gate132.json"
+  ],
+  "exact_reverse_zh": "卸载从both_hold已知状态开始，按LR开→LR空转90到50→回升40→锁定→FB开→FB空转0到50→竖直取出的同一路径逆序；不推断任意solver终态可直接进入。"
+}

@@ -1,0 +1,15 @@
+<section id="step-builder" class="step-reader" aria-labelledby="step-reader-title">
+ <div class="step-heading"><h2 id="step-reader-title">132件 · 逐步审阅</h2><span id="step-progress" class="step-counter"></span></div>
+ <p class="step-review-notice">候选装配顺序，尚未实物试装。每步显示本地子组件，蓝色为新增或合并重点，灰色为已有件。</p>
+ <label for="step-select">选择步骤</label><select id="step-select" aria-describedby="step-stage"></select>
+ <div class="step-nav"><button id="step-prev" type="button">上一步</button><button id="step-next" type="button">下一步</button></div>
+ <p id="step-stage" class="step-stage"></p><h3 id="step-title"></h3>
+ <p id="step-counts" class="step-counts"></p>
+ <div id="step-parts-section"><h4>本步新取零件</h4><ul id="step-parts" class="step-parts"></ul></div>
+ <h4>怎么做</h4><ol id="step-instructions"></ol>
+ <div id="step-cautions-box" class="step-cautions"><h4>停下核对</h4><ul id="step-cautions"></ul></div>
+ <div class="step-action"><button id="step-show" type="button">显示本步3D</button><button id="step-full" type="button">完整模型</button></div>
+ <p id="step-result" role="status" aria-live="polite"></p>
+ <figure id="step-diagram"><div id="step-image-frame" hidden><img id="step-image" alt="" loading="lazy"></div><figcaption id="step-image-note"></figcaption></figure>
+ <details id="step-detail"><summary>前置步骤、零件编号与插入坐标</summary><h4>先完成</h4><div id="step-prerequisites" class="step-prerequisites"></div><h4>本步可见实例</h4><ul id="step-context-parts"></ul><h4>插入方向（世界坐标，毫米）</h4><p class="step-coordinate-note">Y向下；仅表示名义方向。未给行程时为示意，不代表安装环境扫掠已验证。</p><ul id="step-vectors"></ul></details>
+</section>

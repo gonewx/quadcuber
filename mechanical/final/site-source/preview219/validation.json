@@ -1,0 +1,37 @@
+{
+  "stepGroupsChecked": 145,
+  "syntax": "pass",
+  "embeddedModel": "exact219source",
+  "parts": 927,
+  "core": 219,
+  "moving": 69,
+  "fixed": 144,
+  "keys": 6,
+  "visibleCounts": [
+    927,
+    921,
+    213,
+    219,
+    927
+  ],
+  "strokeMM": 40,
+  "parkedSourceMatches": true,
+  "original708Exact": true,
+  "original8WallpinFixIncluded": false,
+  "inventory39790": 4,
+  "inventory71709": 0,
+  "fetches": 0,
+  "meshes": 963,
+  "triangles": 1758298,
+  "materialColors": {
+    "Dark_Bluish_Grey": "646464",
+    "Black": "1b2a34",
+    "Blue": "1e5aa8",
+    "Yellow": "fac80a",
+    "Light_Bluish_Grey": "969696",
+    "Red": "b40000",
+    "White": "f4f4f4",
+    "Chrome_Gold": "dfc176"
+  },
+  "browserRendering": "unverified"
+}

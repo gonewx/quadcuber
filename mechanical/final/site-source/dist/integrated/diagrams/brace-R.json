@@ -1,0 +1,26 @@
+{
+  "revision": "INTEGRATED-GRAVITY-R4-2026-10-08",
+  "arm": "R",
+  "original_arm_indices1": [
+    81,
+    84
+  ],
+  "remaining_pin_indices1": [
+    82,
+    83
+  ],
+  "base_frame_id": "B01",
+  "direction_zh": "从世界-Z外侧沿+Z装入",
+  "part_records": [
+    {
+      "index1": 81,
+      "ldraw": "1 0 540 180 -100 1 0 0 0 0 1 0 -1 0 40490.dat"
+    },
+    {
+      "index1": 84,
+      "ldraw": "1 0 540 260 -90 0 0 1 0 1 0 -1 0 0 2780.dat"
+    }
+  ],
+  "native_mesh": true,
+  "image_sha256": "52c2a4ba7226e3355c09a3d445320801331a991ee9b83145ada6bf4263ab8143"
+}

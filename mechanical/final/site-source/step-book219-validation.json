@@ -1,0 +1,16 @@
+{
+  "status": "core_complete_original_interface_hold",
+  "core": 219,
+  "steps": 145,
+  "modules": 9,
+  "partsCovered": 219,
+  "missing": [],
+  "singleInstallPerPart": true,
+  "maxNewParts": 4,
+  "canonicalPartListsVerified": 145,
+  "explicitUnprovidedPrerequisites": {},
+  "imagesVerified": 145,
+  "imageBytes": 30343347,
+  "sourceSHA256": "8c4fa4a0893859e1a7e9f6de79ec6c0bf9629fc872ea7ee72fddf8970eda8bd6",
+  "browserVisualValidation": "unverified"
+}
