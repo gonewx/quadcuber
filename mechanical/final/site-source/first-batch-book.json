@@ -1,0 +1,2163 @@
+{
+  "data_status": "partial",
+  "source_sha256": "fdcccd631fe80c941057685337a6c9d220b650f8c6d607cfd768832a47745063",
+  "subassembly_titles": {
+    "foundation": "已装好的基础底盘"
+  },
+  "steps": [
+    {
+      "id": "COR-01",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 1,
+      "title": "摆正右上 L 形梁",
+      "instructions": [
+        "将一根 3×5 L 形厚梁按图摆放，认清长臂和短臂的朝向",
+        "四个标记圆孔留给下一步插销；暂时不要盖上长梁"
+      ],
+      "added_part_ids": [
+        60
+      ],
+      "visible_part_ids": [
+        60
+      ],
+      "parts": [
+        {
+          "name": "32526 · 3×5 L 形厚梁",
+          "count": 1,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [
+        {
+          "center_mm": [
+            192.0,
+            112.0,
+            -32.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            60
+          ],
+          "label": "#60 的 Y 向圆孔；接 #69",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 3,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -32.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            60
+          ],
+          "label": "#60 的 Y 向圆孔；接 #70",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 5,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -56.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            60
+          ],
+          "label": "#60 的 Y 向圆孔；接 #71",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -64.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            60
+          ],
+          "label": "#60 的 Y 向圆孔；接 #72",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "取 32526（3×5 L 形厚梁）#60，放成图示朝向；长臂沿 −Z，短臂朝 −X",
+        "本模块在支撑台上组装，Y112 是下层，Y104 是上层；先不要盖上层梁"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-01.png"
+    },
+    {
+      "id": "COR-02",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 2,
+      "title": "给右上角预插 4 枚 2L 销",
+      "instructions": [
+        "把四枚 2780（2L）销按绿色箭头插入 L 形梁的四个标记圆孔",
+        "压到销的中环贴住梁面，另一半销身露在外面，留给后续合梁"
+      ],
+      "added_part_ids": [
+        69,
+        70,
+        71,
+        72
+      ],
+      "visible_part_ids": [
+        60,
+        69,
+        70,
+        71,
+        72
+      ],
+      "parts": [
+        {
+          "name": "2780 · 2L 摩擦销",
+          "count": 4,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [
+        {
+          "part_ids": [
+            69,
+            70,
+            71,
+            72
+          ],
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "start_offset_mm": [
+            0.0,
+            -24.0,
+            0.0
+          ],
+          "label": "沿圆孔轴 +Y 预插，保留上端 8 mm"
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            192.0,
+            112.0,
+            -32.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            60
+          ],
+          "label": "#60 的 Y 向圆孔；接 #69",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 3,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -32.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            60
+          ],
+          "label": "#60 的 Y 向圆孔；接 #70",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 5,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -56.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            60
+          ],
+          "label": "#60 的 Y 向圆孔；接 #71",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -64.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            60
+          ],
+          "label": "#60 的 Y 向圆孔；接 #72",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "将 4 枚 2780 #69–72 从上方沿 +Y 插入 #60 的四个标记圆孔",
+        "销的中环停在下层上表面 Y108；每枚销仍有 8 mm 向上露出，留给框架或长梁"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-02.png"
+    },
+    {
+      "id": "COR-03",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 3,
+      "title": "摆正右下 L 形梁",
+      "instructions": [
+        "将另一根 3×5 L 形厚梁按图摆放，注意它与第一根的长短臂朝向不同",
+        "先单独放好，下一步预插四枚销"
+      ],
+      "added_part_ids": [
+        62
+      ],
+      "visible_part_ids": [
+        62
+      ],
+      "parts": [
+        {
+          "name": "32526 · 3×5 L 形厚梁",
+          "count": 1,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -160.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            62
+          ],
+          "label": "#62 的 Y 向圆孔；接 #73",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -168.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            62
+          ],
+          "label": "#62 的 Y 向圆孔；接 #74",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            192.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            62
+          ],
+          "label": "#62 的 Y 向圆孔；接 #75",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 3,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            200.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            62
+          ],
+          "label": "#62 的 Y 向圆孔；接 #76",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 6,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "另取 32526 #62，长臂朝 +Z，短臂朝 −X",
+        "暂时单独放置；下一步先插销，再与右侧长梁合拢"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-03.png"
+    },
+    {
+      "id": "COR-04",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 4,
+      "title": "给右下角预插 4 枚 2L 销",
+      "instructions": [
+        "把四枚 2780（2L）销按绿色箭头插入标记圆孔，压到中环贴住梁面",
+        "长臂上的两枚销留给 15L 长梁，短臂上的两枚留给 7L 梁"
+      ],
+      "added_part_ids": [
+        73,
+        74,
+        75,
+        76
+      ],
+      "visible_part_ids": [
+        62,
+        73,
+        74,
+        75,
+        76
+      ],
+      "parts": [
+        {
+          "name": "2780 · 2L 摩擦销",
+          "count": 4,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [
+        {
+          "part_ids": [
+            73,
+            74,
+            75,
+            76
+          ],
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "start_offset_mm": [
+            0.0,
+            -24.0,
+            0.0
+          ],
+          "label": "沿 +Y 预插 4 枚销"
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -160.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            62
+          ],
+          "label": "#62 的 Y 向圆孔；接 #73",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -168.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            62
+          ],
+          "label": "#62 的 Y 向圆孔；接 #74",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            192.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            62
+          ],
+          "label": "#62 的 Y 向圆孔；接 #75",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 3,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            200.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            62
+          ],
+          "label": "#62 的 Y 向圆孔；接 #76",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 6,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "将 2780 #73–76 沿 +Y 压入 #62 的四个标记圆孔，均只插入下半段",
+        "#73/#74 留给 15L 右梁；#75/#76 留给最后的 7L 底梁"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-04.png"
+    },
+    {
+      "id": "COR-05",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 5,
+      "title": "摆正右侧轴孔连接块",
+      "instructions": [
+        "按图摆放轴孔／销孔连接块，让两个圆孔朝向插销的一面",
+        "侧面的十字轴孔朝向框架内侧，保持空置"
+      ],
+      "added_part_ids": [
+        67
+      ],
+      "visible_part_ids": [
+        67
+      ],
+      "parts": [
+        {
+          "name": "42003 · 3L 轴孔/销孔连接块",
+          "count": 1,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -80.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            67
+          ],
+          "label": "#67 的 Y 向圆孔；接 #85",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -72.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            67
+          ],
+          "label": "#67 的 Y 向圆孔；接 #86",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 2,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -88.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "part_ids": [
+            67
+          ],
+          "label": "保留的 X 向十字轴孔",
+          "port_kind": "cross_bore",
+          "source_port": 0,
+          "display_label": "预留十字轴孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "取 42003 #67，把两只 Y 向圆孔朝上",
+        "保留向内的 X 向十字轴孔，轴孔中心为 (208,112,−88) mm；不要把圆孔当作轴孔"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-05.png"
+    },
+    {
+      "id": "COR-06",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 6,
+      "title": "给右侧连接块预插两销",
+      "instructions": [
+        "把两枚 2780（2L）销按绿色箭头插入连接块的两个圆孔，压到中环贴住块面",
+        "侧面的十字轴孔保持空置"
+      ],
+      "added_part_ids": [
+        85,
+        86
+      ],
+      "visible_part_ids": [
+        67,
+        85,
+        86
+      ],
+      "parts": [
+        {
+          "name": "2780 · 2L 摩擦销",
+          "count": 2,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [
+        {
+          "part_ids": [
+            85,
+            86
+          ],
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "start_offset_mm": [
+            0.0,
+            -24.0,
+            0.0
+          ],
+          "label": "预插两枚 2L 销"
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -80.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            67
+          ],
+          "label": "#67 的 Y 向圆孔；接 #85",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            112.0,
+            -72.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            67
+          ],
+          "label": "#67 的 Y 向圆孔；接 #86",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 2,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "将两枚 2780 #85/#86 沿 +Y 插入 #67 的圆孔",
+        "销中环停在块的上表面；内向十字轴孔继续保持空置"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-06.png"
+    },
+    {
+      "id": "COR-07",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 7,
+      "title": "盖上 15L 右侧长梁",
+      "instructions": [
+        "按图排好两个 L 形梁组件和轴孔连接块，让六个露出的销端对齐 15L 长梁的标记孔",
+        "托住三个小组件，按绿色箭头均匀压合长梁；两个 L 形梁短臂上的销继续露出"
+      ],
+      "added_part_ids": [
+        61
+      ],
+      "visible_part_ids": [
+        60,
+        61,
+        62,
+        67,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        85,
+        86
+      ],
+      "parts": [
+        {
+          "name": "32278 · 15L 厚梁",
+          "count": 1,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "COR-02",
+        "COR-04",
+        "COR-06"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            61
+          ],
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "start_offset_mm": [
+            0.0,
+            -24.0,
+            0.0
+          ],
+          "label": "15L 梁沿 +Y 盖到 6 个销端"
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            208.0,
+            104.0,
+            -56.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            61
+          ],
+          "label": "#61 的 Y 向圆孔；接 #71",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            104.0,
+            -64.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            61
+          ],
+          "label": "#61 的 Y 向圆孔；接 #72",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            104.0,
+            -160.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            61
+          ],
+          "label": "#61 的 Y 向圆孔；接 #73",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 13,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            104.0,
+            -168.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            61
+          ],
+          "label": "#61 的 Y 向圆孔；接 #74",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 14,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            104.0,
+            -80.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            61
+          ],
+          "label": "#61 的 Y 向圆孔；接 #85",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 3,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            104.0,
+            -72.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            61
+          ],
+          "label": "#61 的 Y 向圆孔；接 #86",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 2,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "将前三组小组件按图摆好，同时对齐 #71/#72、#73/#74、#85/#86 共 6 个露出的销端",
+        "取 32278（15L）#61，沿 +Y 均匀下压到六销上；#69/#70 与 #75/#76 仍露出，留待后续连接"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-07.png"
+    },
+    {
+      "id": "COR-08",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 8,
+      "title": "摆正左下 L 形梁",
+      "instructions": [
+        "按图摆放第三根 3×5 L 形厚梁，认清长臂和短臂的朝向",
+        "先做成独立小组件，稍后连接底盘框架和 11L 长梁"
+      ],
+      "added_part_ids": [
+        63
+      ],
+      "visible_part_ids": [
+        63
+      ],
+      "parts": [
+        {
+          "name": "32526 · 3×5 L 形厚梁",
+          "count": 1,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [
+        {
+          "center_mm": [
+            48.0,
+            112.0,
+            -176.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            63
+          ],
+          "label": "#63 的 Y 向圆孔；接 #77",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 3,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            48.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            63
+          ],
+          "label": "#63 的 Y 向圆孔；接 #78",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 5,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            64.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            63
+          ],
+          "label": "#63 的 Y 向圆孔；接 #79",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 2,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            80.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            63
+          ],
+          "label": "#63 的 Y 向圆孔；接 #80",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "取 32526 #63，长臂朝 +X，短臂朝 +Z",
+        "该件连接现有底盘框架与新的 11L 底梁；先做成独立小组件"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-08.png"
+    },
+    {
+      "id": "COR-09",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 9,
+      "title": "给左下角预插 4 枚 2L 销",
+      "instructions": [
+        "把四枚 2780（2L）销按绿色箭头插入 L 形梁的四个标记圆孔，压到中环贴住梁面",
+        "短臂上的两枚销留给底盘框架，长臂上的两枚留给 11L 长梁"
+      ],
+      "added_part_ids": [
+        77,
+        78,
+        79,
+        80
+      ],
+      "visible_part_ids": [
+        63,
+        77,
+        78,
+        79,
+        80
+      ],
+      "parts": [
+        {
+          "name": "2780 · 2L 摩擦销",
+          "count": 4,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [
+        {
+          "part_ids": [
+            77,
+            78,
+            79,
+            80
+          ],
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "start_offset_mm": [
+            0.0,
+            -24.0,
+            0.0
+          ],
+          "label": "沿 +Y 预插 4 枚销"
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            48.0,
+            112.0,
+            -176.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            63
+          ],
+          "label": "#63 的 Y 向圆孔；接 #77",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 3,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            48.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            63
+          ],
+          "label": "#63 的 Y 向圆孔；接 #78",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 5,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            64.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            63
+          ],
+          "label": "#63 的 Y 向圆孔；接 #79",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 2,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            80.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            63
+          ],
+          "label": "#63 的 Y 向圆孔；接 #80",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "将 2780 #77–80 沿 +Y 插入 #63 的四个标记圆孔",
+        "#77/#78 留给原框架 #44；#79/#80 留给 11L 底梁"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-09.png"
+    },
+    {
+      "id": "COR-10",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 10,
+      "title": "摆正 5L 下层搭接梁",
+      "instructions": [
+        "按图摆放 5L 短梁，它将垫在两根长梁的接缝下面",
+        "认准四个标记孔，唯一未标记的孔保持空置"
+      ],
+      "added_part_ids": [
+        66
+      ],
+      "visible_part_ids": [
+        66
+      ],
+      "parts": [
+        {
+          "name": "32316 · 5L 厚梁",
+          "count": 1,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [
+        {
+          "center_mm": [
+            136.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            66
+          ],
+          "label": "#66 的 Y 向圆孔；接 #81",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            144.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            66
+          ],
+          "label": "#66 的 Y 向圆孔；接 #82",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            152.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            66
+          ],
+          "label": "#66 的 Y 向圆孔；接 #83",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 2,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            168.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            66
+          ],
+          "label": "#66 的 Y 向圆孔；接 #84",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 4,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "取 32316（5L）#66，沿 X 方向放在底边中部，保持 Y112 下层位置",
+        "确认四个标记孔；中间未标记的孔保持空置"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-10.png"
+    },
+    {
+      "id": "COR-11",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 11,
+      "title": "给搭接梁预插 4 枚 2L 销",
+      "instructions": [
+        "把四枚 2780（2L）销按绿色箭头插入 5L 短梁的四个标记孔，压到中环贴住梁面",
+        "只插标记孔；露出的销端稍后分别连接 11L 梁和 7L 梁"
+      ],
+      "added_part_ids": [
+        81,
+        82,
+        83,
+        84
+      ],
+      "visible_part_ids": [
+        66,
+        81,
+        82,
+        83,
+        84
+      ],
+      "parts": [
+        {
+          "name": "2780 · 2L 摩擦销",
+          "count": 4,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [
+        {
+          "part_ids": [
+            81,
+            82,
+            83,
+            84
+          ],
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "start_offset_mm": [
+            0.0,
+            -24.0,
+            0.0
+          ],
+          "label": "只给标记的四孔预插销"
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            136.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            66
+          ],
+          "label": "#66 的 Y 向圆孔；接 #81",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            144.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            66
+          ],
+          "label": "#66 的 Y 向圆孔；接 #82",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            152.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            66
+          ],
+          "label": "#66 的 Y 向圆孔；接 #83",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 2,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            168.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            66
+          ],
+          "label": "#66 的 Y 向圆孔；接 #84",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 4,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "将 2780 #81–84 沿 +Y 插入 #66：孔的 X 坐标依次为 136、144、152、168 mm",
+        "#81/#82 承接 11L 梁；#83/#84 承接 7L 梁；不要填满所有孔"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-11.png"
+    },
+    {
+      "id": "COR-12",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 12,
+      "title": "摆正底侧轴孔连接块",
+      "instructions": [
+        "按图摆放另一只轴孔／销孔连接块，让两个圆孔朝向插销的一面",
+        "侧面的十字轴孔朝向框架内侧，保持空置"
+      ],
+      "added_part_ids": [
+        68
+      ],
+      "visible_part_ids": [
+        68
+      ],
+      "parts": [
+        {
+          "name": "42003 · 3L 轴孔/销孔连接块",
+          "count": 1,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [
+        {
+          "center_mm": [
+            112.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            68
+          ],
+          "label": "#68 的 Y 向圆孔；接 #87",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            104.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            68
+          ],
+          "label": "#68 的 Y 向圆孔；接 #88",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 2,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            120.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "part_ids": [
+            68
+          ],
+          "label": "保留的 Z 向十字轴孔",
+          "port_kind": "cross_bore",
+          "source_port": 0,
+          "display_label": "预留十字轴孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "取 42003 #68，把两只 Y 向圆孔朝上",
+        "保留向内的 Z 向十字轴孔，轴孔中心为 (120,112,−192) mm"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-12.png"
+    },
+    {
+      "id": "COR-13",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 13,
+      "title": "给底侧连接块预插两销",
+      "instructions": [
+        "把两枚 2780（2L）销按绿色箭头插入连接块的两个圆孔，压到中环贴住块面",
+        "侧面十字轴孔留给后续的 5L 拉结轴，不要塞入销"
+      ],
+      "added_part_ids": [
+        87,
+        88
+      ],
+      "visible_part_ids": [
+        68,
+        87,
+        88
+      ],
+      "parts": [
+        {
+          "name": "2780 · 2L 摩擦销",
+          "count": 2,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [
+        {
+          "part_ids": [
+            87,
+            88
+          ],
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "start_offset_mm": [
+            0.0,
+            -24.0,
+            0.0
+          ],
+          "label": "预插两枚 2L 销"
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            112.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            68
+          ],
+          "label": "#68 的 Y 向圆孔；接 #87",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            104.0,
+            112.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            68
+          ],
+          "label": "#68 的 Y 向圆孔；接 #88",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 2,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "将 2780 #87/#88 沿 +Y 插入 #68 的圆孔",
+        "不要插入侧面的十字轴孔；此孔稍后连接 5L 拉结轴"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-13.png"
+    },
+    {
+      "id": "COR-14",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 14,
+      "title": "盖上 11L 底侧左梁",
+      "instructions": [
+        "按图排好 L 形梁、5L 搭接梁和轴孔连接块，对齐 11L 长梁的六个标记孔",
+        "托住三个小组件，按绿色箭头均匀压合长梁；图中未被覆盖的四个销端继续露出"
+      ],
+      "added_part_ids": [
+        64
+      ],
+      "visible_part_ids": [
+        63,
+        64,
+        66,
+        68,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        87,
+        88
+      ],
+      "parts": [
+        {
+          "name": "32525 · 11L 厚梁",
+          "count": 1,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "COR-09",
+        "COR-11",
+        "COR-13"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            64
+          ],
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "start_offset_mm": [
+            0.0,
+            -24.0,
+            0.0
+          ],
+          "label": "11L 梁沿 +Y 合拢六销"
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            64.0,
+            104.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            64
+          ],
+          "label": "#64 的 Y 向圆孔；接 #79",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 10,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            80.0,
+            104.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            64
+          ],
+          "label": "#64 的 Y 向圆孔；接 #80",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 8,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            136.0,
+            104.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            64
+          ],
+          "label": "#64 的 Y 向圆孔；接 #81",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            144.0,
+            104.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            64
+          ],
+          "label": "#64 的 Y 向圆孔；接 #82",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            112.0,
+            104.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            64
+          ],
+          "label": "#64 的 Y 向圆孔；接 #87",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 4,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            104.0,
+            104.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            64
+          ],
+          "label": "#64 的 Y 向圆孔；接 #88",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 5,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "对齐左下 L 形梁、搭接梁与底侧连接块的小组件",
+        "取 32525（11L）#64，沿 +Y 同时套住 #79/#80、#81/#82、#87/#88 六个销端；#77/#78 与 #83/#84 保持露出"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-14.png"
+    },
+    {
+      "id": "COR-15",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 15,
+      "title": "用 7L 梁连接两边",
+      "instructions": [
+        "将两组已完成的边框按图对齐，把 7L 梁两端的标记孔套在四个露出的销端上",
+        "按绿色箭头均匀压合；通往原底盘框架的另外四个销端保持露出"
+      ],
+      "added_part_ids": [
+        65
+      ],
+      "visible_part_ids": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ],
+      "parts": [
+        {
+          "name": "32524 · 7L 厚梁",
+          "count": 1,
+          "color": "深灰色"
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "COR-07",
+        "COR-14"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            65
+          ],
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "start_offset_mm": [
+            0.0,
+            -24.0,
+            0.0
+          ],
+          "label": "7L 梁沿 +Y 同时闭合左右两端"
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            192.0,
+            104.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            65
+          ],
+          "label": "#65 的 Y 向圆孔；接 #75",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 1,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            200.0,
+            104.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            65
+          ],
+          "label": "#65 的 Y 向圆孔；接 #76",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            152.0,
+            104.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            65
+          ],
+          "label": "#65 的 Y 向圆孔；接 #83",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 6,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            168.0,
+            104.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            65
+          ],
+          "label": "#65 的 Y 向圆孔；接 #84",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 4,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "technical_instructions": [
+        "将已完成的右侧组件与底侧组件按图对齐",
+        "取 32524（7L）#65，沿 +Y 套住 #75/#76 与 #83/#84 四销，形成完整转角框；四枚通往原底盘的销仍露出"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-15.png"
+    },
+    {
+      "id": "COR-16",
+      "module_id": "corner",
+      "module_title": "转角底盘：先插销，再合梁",
+      "module_step_number": 16,
+      "title": "将转角组件接到已完成的共用底盘",
+      "instructions": [
+        "先完成共用底盘，并把它稳稳支撑好；按图将转角组件的四个销端对准底盘上的四个标记孔",
+        "托住转角组件，按绿色箭头将四点一起压合，让销中环夹在两层之间；不要向已合拢的两层梁硬塞销"
+      ],
+      "added_part_ids": [],
+      "visible_part_ids": [
+        1,
+        44,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ],
+      "parts": [],
+      "assembly_action": "merge_subassemblies",
+      "requires_subassemblies": [
+        "BAS-36",
+        "COR-15"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88
+          ],
+          "direction": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "start_offset_mm": [
+            0.0,
+            32.0,
+            0.0
+          ],
+          "label": "整个转角组件沿 −Y 抬起合拢"
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            192.0,
+            104.0,
+            -32.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            1
+          ],
+          "label": "#1 的 Y 向圆孔；接 #69",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 0,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            208.0,
+            104.0,
+            -32.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            1
+          ],
+          "label": "#1 的 Y 向圆孔；接 #70",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 2,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            48.0,
+            104.0,
+            -176.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            44
+          ],
+          "label": "#44 的 Y 向圆孔；接 #77",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 34,
+          "display_label": "标记圆孔"
+        },
+        {
+          "center_mm": [
+            48.0,
+            104.0,
+            -192.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "part_ids": [
+            44
+          ],
+          "label": "#44 的 Y 向圆孔；接 #78",
+          "port_kind": "round_bore_full_depth",
+          "source_port": 24,
+          "display_label": "标记圆孔"
+        }
+      ],
+      "view": {
+        "azim": -57,
+        "elev": 32
+      },
+      "highlight_part_ids": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ],
+      "technical_instructions": [
+        "前置条件：共用底盘 #1–59 已完成；图中仅显示原框架 #1/#44 作为接合界面，它们不是本步新增零件",
+        "支撑或翻转底盘，将转角组件从下方沿 −Y 抬起，使 #69/#70 进入 #1、#77/#78 进入 #44 的 Y 向圆孔",
+        "四点一起压合到位，再检查所有销中环都在两层之间；不要把销穿过已经闭合的两层"
+      ],
+      "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-192/images/COR-16.png"
+    }
+  ]
+}

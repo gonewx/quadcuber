@@ -1,0 +1,8 @@
+{
+  "revision": "INTEGRATED-GRAVITY-R3-2026-10-08",
+  "visual_browser_pass": false,
+  "status": "NOT_RERUN_CURRENT_REVISION",
+  "prior_environment_evidence": "Previous cloud Chromium launch was blocked by sandbox singleton socket and synthetic mount restrictions; no alternate route was used to bypass that denial.",
+  "current_alternative_checks": "11 actual native LDraw models parsed without external geometry, current step traversal and pose transforms checked, primary-route source/hash/link checks, separate full PDF render and pixel QA.",
+  "limits": "These checks are not browser visual QA. User computer/browser was not operated."
+}

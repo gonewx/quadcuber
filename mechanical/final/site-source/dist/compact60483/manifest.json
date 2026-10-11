@@ -1,0 +1,250 @@
+{
+  "loading-all50": {
+    "file": "models/loading-all50.mpd",
+    "parts": 859,
+    "sha256": "af41278e3843d9c2bf3b20a890bc9442db1f572af7cd0736c15dbc8f965a21b3",
+    "drop_mm": 0,
+    "locks": true,
+    "heads": {
+      "R": [
+        32.30767650520832,
+        50
+      ],
+      "L": [
+        32.30767650520832,
+        50
+      ],
+      "F": [
+        32.30767650520832,
+        50
+      ],
+      "B": [
+        32.30767650520832,
+        50
+      ]
+    },
+    "unchanged_retained_parts": 652,
+    "removed": {
+      "32123a.dat": 16,
+      "3707.dat": 8,
+      "32056.dat": 32
+    },
+    "added": {
+      "60483.dat": 16
+    }
+  },
+  "FB0-open": {
+    "file": "models/FB0-open.mpd",
+    "parts": 859,
+    "sha256": "27fa351c801f45e3059ed50db9b63de46cb5cf86560aeda18ff0d3aad980cfeb",
+    "drop_mm": 0,
+    "locks": true,
+    "heads": {
+      "R": [
+        32.30767650520832,
+        50
+      ],
+      "L": [
+        32.30767650520832,
+        50
+      ],
+      "F": [
+        32.30767650520832,
+        0
+      ],
+      "B": [
+        32.30767650520832,
+        0
+      ]
+    },
+    "unchanged_retained_parts": 652,
+    "removed": {
+      "32123a.dat": 16,
+      "3707.dat": 8,
+      "32056.dat": 32
+    },
+    "added": {
+      "60483.dat": 16
+    }
+  },
+  "FB0-held": {
+    "file": "models/FB0-held.mpd",
+    "parts": 859,
+    "sha256": "e35e7becd45b2835d8664b55aaa7a78636c9c8a48d34b5f6ef6b9cd3738ea8ed",
+    "drop_mm": 0,
+    "locks": true,
+    "heads": {
+      "R": [
+        32.30767650520832,
+        50
+      ],
+      "L": [
+        32.30767650520832,
+        50
+      ],
+      "F": [
+        0.0,
+        0
+      ],
+      "B": [
+        0.0,
+        0
+      ]
+    },
+    "unchanged_retained_parts": 652,
+    "removed": {
+      "32123a.dat": 16,
+      "3707.dat": 8,
+      "32056.dat": 32
+    },
+    "added": {
+      "60483.dat": 16
+    }
+  },
+  "support-unlocked": {
+    "file": "models/support-unlocked.mpd",
+    "parts": 857,
+    "sha256": "bf252e932485fc290683306adb59526ac20fe4836596cdd870d6c3ebff6d9f64",
+    "drop_mm": 0,
+    "locks": false,
+    "heads": {
+      "R": [
+        32.30767650520832,
+        50
+      ],
+      "L": [
+        32.30767650520832,
+        50
+      ],
+      "F": [
+        0.0,
+        0
+      ],
+      "B": [
+        0.0,
+        0
+      ]
+    },
+    "unchanged_retained_parts": 652,
+    "removed": {
+      "32123a.dat": 16,
+      "3707.dat": 8,
+      "32056.dat": 32
+    },
+    "added": {
+      "60483.dat": 16
+    }
+  },
+  "support-down40": {
+    "file": "models/support-down40.mpd",
+    "parts": 857,
+    "sha256": "78363f5a013fc63727d9bd7aee73ebae5313c8ff45cf29f534f12c05789cba02",
+    "drop_mm": 40,
+    "locks": false,
+    "heads": {
+      "R": [
+        32.30767650520832,
+        50
+      ],
+      "L": [
+        32.30767650520832,
+        50
+      ],
+      "F": [
+        0.0,
+        0
+      ],
+      "B": [
+        0.0,
+        0
+      ]
+    },
+    "unchanged_retained_parts": 652,
+    "removed": {
+      "32123a.dat": 16,
+      "3707.dat": 8,
+      "32056.dat": 32
+    },
+    "added": {
+      "60483.dat": 16
+    }
+  },
+  "LR90-open": {
+    "file": "models/LR90-open.mpd",
+    "parts": 857,
+    "sha256": "385205cc9067224041706f1a3f163bf924e4ffd584328020e28bd522bf60fe06",
+    "drop_mm": 40,
+    "locks": false,
+    "heads": {
+      "R": [
+        32.30767650520832,
+        90
+      ],
+      "L": [
+        32.30767650520832,
+        90
+      ],
+      "F": [
+        0.0,
+        0
+      ],
+      "B": [
+        0.0,
+        0
+      ]
+    },
+    "unchanged_retained_parts": 652,
+    "removed": {
+      "32123a.dat": 16,
+      "3707.dat": 8,
+      "32056.dat": 32
+    },
+    "added": {
+      "60483.dat": 16
+    }
+  },
+  "both-held": {
+    "file": "models/both-held.mpd",
+    "parts": 857,
+    "sha256": "524ebd9dbf901031f1a5d45faa2f211b7f976626ae6834c05b7c4d575810f4d3",
+    "drop_mm": 40,
+    "locks": false,
+    "heads": {
+      "R": [
+        0.0,
+        90
+      ],
+      "L": [
+        0.0,
+        90
+      ],
+      "F": [
+        0.0,
+        0
+      ],
+      "B": [
+        0.0,
+        0
+      ]
+    },
+    "unchanged_retained_parts": 652,
+    "removed": {
+      "32123a.dat": 16,
+      "3707.dat": 8,
+      "32056.dat": 32
+    },
+    "added": {
+      "60483.dat": 16
+    }
+  },
+  "head-open25": {
+    "file": "models/head-open25.mpd",
+    "parts": 167,
+    "sha256": "388d6e3587d205415ff0fa23765ea3d0b0176e07318bbcc9efb65d2ad7e7bc18"
+  },
+  "head-closed": {
+    "file": "models/head-closed.mpd",
+    "parts": 167,
+    "sha256": "51639c088a2592b9b12670c4c4eb76fc6c20b923baa71e9d15cdb4664984453d"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "candidate.py": "32ee75a022cf626f978f7d2aaeb23225f89b948c0e503a9080a8067a8b90c658",
+  "assembly-integrated132.json": "2512d0f6e79c826c0c683e7c9b75882c4acc988cc5ac59d7670514da9d173f56",
+  "candidate-manifest.json": "1627fc32076ac3e715be42d1b6b3a81555e3635d8163cd8ab250abcb5de71e83",
+  "integrated-BOM.csv": "844b01a0e1201326f1f755621787376d4f29d1a1d0e631826b058f02aa015fb7",
+  "subsystem-BOM.csv": "a5f7032481ab23e77be8e04bb5a015441d16612dad879c2efdae86c1e0346fcc",
+  "instance-inventory.csv": "4f53539f542fb65ff92f7cd6e6cd3f9dbfefdf7568df66ff1ecb9e302800c50c",
+  "source/assembly-integrated-R1.json": "85e0c7326d37d602ca37c2a5a175bf0fe74f9b414c353ba326e6fac4d2370cb2",
+  "source/approved-gravity-20part-scene.json": "881191efd25520d976d3d198f1d677eded8137d65cf75c10bd4483fb6b757003"
+}

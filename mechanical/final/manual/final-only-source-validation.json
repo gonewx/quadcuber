@@ -1,0 +1,675 @@
+{
+  "status": "PASS_SOURCE_TEXT_AND_NATIVE_RENDERING",
+  "scope": "Base/support final-only source validation retained; complete arm additions validated in final-assembly-validation.json and full-arm-assembly-review.json",
+  "source_checks": {
+    "base-steps.json": {
+      "steps": 36,
+      "introduced_once": 64,
+      "unchanged_geometry_records": 368,
+      "all_non_text_step_fields_exact": true,
+      "all_step_and_image_sidecars_match": true,
+      "human_facing_history_scan": "PASS",
+      "changed_text_fields": [
+        [
+          "BAS-01",
+          "technical_instructions"
+        ],
+        [
+          "BAS-01",
+          "module_title"
+        ],
+        [
+          "BAS-01",
+          "instructions"
+        ],
+        [
+          "BAS-02",
+          "module_title"
+        ],
+        [
+          "BAS-03",
+          "technical_instructions"
+        ],
+        [
+          "BAS-03",
+          "module_title"
+        ],
+        [
+          "BAS-03",
+          "instructions"
+        ],
+        [
+          "BAS-04",
+          "module_title"
+        ],
+        [
+          "BAS-05",
+          "module_title"
+        ],
+        [
+          "BAS-06",
+          "module_title"
+        ],
+        [
+          "BAS-07",
+          "technical_instructions"
+        ],
+        [
+          "BAS-07",
+          "module_title"
+        ],
+        [
+          "BAS-08",
+          "module_title"
+        ],
+        [
+          "BAS-09",
+          "module_title"
+        ],
+        [
+          "BAS-10",
+          "module_title"
+        ],
+        [
+          "BAS-11",
+          "technical_instructions"
+        ],
+        [
+          "BAS-11",
+          "module_title"
+        ],
+        [
+          "BAS-11",
+          "instructions"
+        ],
+        [
+          "BAS-12",
+          "module_title"
+        ],
+        [
+          "BAS-13",
+          "module_title"
+        ],
+        [
+          "BAS-14",
+          "module_title"
+        ],
+        [
+          "BAS-15",
+          "technical_instructions"
+        ],
+        [
+          "BAS-15",
+          "module_title"
+        ],
+        [
+          "BAS-16",
+          "module_title"
+        ],
+        [
+          "BAS-17",
+          "module_title"
+        ],
+        [
+          "BAS-18",
+          "module_title"
+        ],
+        [
+          "BAS-19",
+          "technical_instructions"
+        ],
+        [
+          "BAS-19",
+          "module_title"
+        ],
+        [
+          "BAS-19",
+          "instructions"
+        ],
+        [
+          "BAS-20",
+          "module_title"
+        ],
+        [
+          "BAS-21",
+          "module_title"
+        ],
+        [
+          "BAS-22",
+          "module_title"
+        ],
+        [
+          "BAS-23",
+          "technical_instructions"
+        ],
+        [
+          "BAS-23",
+          "module_title"
+        ],
+        [
+          "BAS-24",
+          "module_title"
+        ],
+        [
+          "BAS-25",
+          "module_title"
+        ],
+        [
+          "BAS-26",
+          "module_title"
+        ],
+        [
+          "BAS-27",
+          "technical_instructions"
+        ],
+        [
+          "BAS-27",
+          "module_title"
+        ],
+        [
+          "BAS-27",
+          "instructions"
+        ],
+        [
+          "BAS-28",
+          "module_title"
+        ],
+        [
+          "BAS-29",
+          "module_title"
+        ],
+        [
+          "BAS-30",
+          "technical_instructions"
+        ],
+        [
+          "BAS-30",
+          "module_title"
+        ],
+        [
+          "BAS-32",
+          "module_title"
+        ],
+        [
+          "BAS-34",
+          "module_title"
+        ],
+        [
+          "BAS-36",
+          "module_title"
+        ],
+        [
+          "BAS-36",
+          "instructions"
+        ],
+        [
+          "BAS-RB-01",
+          "technical_instructions"
+        ],
+        [
+          "BAS-RB-01",
+          "module_title"
+        ],
+        [
+          "BAS-RB-02",
+          "module_title"
+        ],
+        [
+          "BAS-RB-02",
+          "instructions"
+        ],
+        [
+          "BAS-RB-03",
+          "technical_instructions"
+        ],
+        [
+          "BAS-RB-03",
+          "module_title"
+        ],
+        [
+          "BAS-RB-03",
+          "instructions"
+        ]
+      ],
+      "sha256": "926cf7809b49635c988ff324302c962c10c4f50b8fcfd60e51479b77660f4e02"
+    },
+    "support-steps.json": {
+      "steps": 93,
+      "introduced_once": 150,
+      "unchanged_geometry_records": 2154,
+      "all_non_text_step_fields_exact": true,
+      "all_step_and_image_sidecars_match": true,
+      "human_facing_history_scan": "PASS",
+      "changed_text_fields": [
+        [
+          "GRAVITY-01",
+          "instructions_zh"
+        ],
+        [
+          "GRAVITY-08",
+          "title_zh"
+        ],
+        [
+          "GRAVITY-08",
+          "instructions_zh"
+        ],
+        [
+          "GRAVITY-08",
+          "cautions_zh"
+        ],
+        [
+          "GRAVITY-09",
+          "instructions_zh"
+        ],
+        [
+          "GRAVITY-10",
+          "instructions_zh"
+        ],
+        [
+          "GRAVITY-12",
+          "instructions_zh"
+        ],
+        [
+          "GRAVITY-13",
+          "instructions_zh"
+        ],
+        [
+          "D132-001",
+          "module_title_zh"
+        ],
+        [
+          "D132-001",
+          "instructions_zh"
+        ],
+        [
+          "D132-004",
+          "instructions_zh"
+        ],
+        [
+          "D132-007",
+          "instructions_zh"
+        ],
+        [
+          "D132-008",
+          "module_title_zh"
+        ],
+        [
+          "D132-008",
+          "cautions_zh"
+        ],
+        [
+          "D132-009",
+          "module_title_zh"
+        ],
+        [
+          "D132-009",
+          "instructions_zh"
+        ],
+        [
+          "D132-009",
+          "cautions_zh"
+        ],
+        [
+          "D132-010",
+          "module_title_zh"
+        ],
+        [
+          "D132-012",
+          "module_title_zh"
+        ],
+        [
+          "D132-012",
+          "cautions_zh"
+        ],
+        [
+          "D132-013",
+          "module_title_zh"
+        ],
+        [
+          "D132-013",
+          "instructions_zh"
+        ],
+        [
+          "D132-013",
+          "cautions_zh"
+        ],
+        [
+          "D132-014",
+          "module_title_zh"
+        ],
+        [
+          "D132-016",
+          "instructions_zh"
+        ],
+        [
+          "D132-017",
+          "instructions_zh"
+        ],
+        [
+          "D132-018",
+          "instructions_zh"
+        ],
+        [
+          "D132-019",
+          "instructions_zh"
+        ],
+        [
+          "D132-020",
+          "instructions_zh"
+        ],
+        [
+          "D132-021",
+          "instructions_zh"
+        ],
+        [
+          "D132-022",
+          "instructions_zh"
+        ],
+        [
+          "D132-023",
+          "instructions_zh"
+        ],
+        [
+          "D132-024",
+          "instructions_zh"
+        ],
+        [
+          "D132-025",
+          "instructions_zh"
+        ],
+        [
+          "D132-026",
+          "instructions_zh"
+        ],
+        [
+          "D132-027",
+          "instructions_zh"
+        ],
+        [
+          "D132-028",
+          "instructions_zh"
+        ],
+        [
+          "D132-029",
+          "instructions_zh"
+        ],
+        [
+          "D132-030",
+          "instructions_zh"
+        ],
+        [
+          "D132-031",
+          "instructions_zh"
+        ],
+        [
+          "D132-032",
+          "title_zh"
+        ],
+        [
+          "D132-032",
+          "instructions_zh"
+        ],
+        [
+          "D132-033",
+          "title_zh"
+        ],
+        [
+          "D132-033",
+          "instructions_zh"
+        ],
+        [
+          "D132-060",
+          "instructions_zh"
+        ],
+        [
+          "D132-061",
+          "instructions_zh"
+        ],
+        [
+          "D132-062",
+          "instructions_zh"
+        ],
+        [
+          "D132-034",
+          "cautions_zh"
+        ],
+        [
+          "D132-035",
+          "cautions_zh"
+        ],
+        [
+          "D132-039",
+          "instructions_zh"
+        ],
+        [
+          "D132-040",
+          "cautions_zh"
+        ],
+        [
+          "D132-044",
+          "instructions_zh"
+        ],
+        [
+          "D132-044",
+          "cautions_zh"
+        ],
+        [
+          "D132-067",
+          "cautions_zh"
+        ],
+        [
+          "D132-076",
+          "instructions_zh"
+        ],
+        [
+          "D132-077",
+          "instructions_zh"
+        ],
+        [
+          "D132-077",
+          "cautions_zh"
+        ],
+        [
+          "D132-078",
+          "instructions_zh"
+        ],
+        [
+          "D132-080",
+          "module_title_zh"
+        ],
+        [
+          "D132-080",
+          "instructions_zh"
+        ],
+        [
+          "GRAVITY-14",
+          "instructions_zh"
+        ],
+        [
+          "GRAVITY-14",
+          "cautions_zh"
+        ]
+      ],
+      "sha256": "d66941f894141787aea01b4501f558f34d2150caabb97f3c6dd1ab884d686306"
+    }
+  },
+  "protected_files": {
+    "assembly-integrated132.json": "2512d0f6e79c826c0c683e7c9b75882c4acc988cc5ac59d7670514da9d173f56",
+    "candidate-manifest.json": "1627fc32076ac3e715be42d1b6b3a81555e3635d8163cd8ab250abcb5de71e83",
+    "candidate.py": "32ee75a022cf626f978f7d2aaeb23225f89b948c0e503a9080a8067a8b90c658",
+    "integrated-BOM.csv": "844b01a0e1201326f1f755621787376d4f29d1a1d0e631826b058f02aa015fb7",
+    "manual/assembly-route-audit.json": "efb9ec80c75b095ee47cd6b003c6e0b853225757f452014bb6bfe6e23829cc2a",
+    "source/assembly-integrated-R1.json": "85e0c7326d37d602ca37c2a5a175bf0fe74f9b414c353ba326e6fac4d2370cb2",
+    "source/assembly132.json": "bba23990c0c5e4387262ddafd3ca4d908625f7291cd4e6e14fbb1fa552acd561",
+    "subsystem-BOM.csv": "a5f7032481ab23e77be8e04bb5a015441d16612dad879c2efdae86c1e0346fcc"
+  },
+  "native_rendered_images": {
+    "images/BASE-BAS-01.png": "40bef6e12d9975cf19eb25f6ada211cf3c3daae752ad60f17d5d0616d96ffb3b",
+    "images/BASE-BAS-02.png": "4df0accec161384047c15a49c97f68ef548c84ae586436be06a79cd4632a23ba",
+    "images/BASE-BAS-03.png": "302de47c09101498449cee99f0b1e4977ab6360662a543be471e9b0701170a80",
+    "images/BASE-BAS-04.png": "1b0f93bc7cde8b46e88193983d8691ce26f29c84592190a2db039af656298975",
+    "images/BASE-BAS-05.png": "90827a3efd67afc6a273d9aa182b8087f465bfe9cff8398a9da94640b737f6db",
+    "images/BASE-BAS-06.png": "cb51c468f000b380d34cba54a68abd33aa3a196ebc065a2afeeaf29978a6f7e8",
+    "images/BASE-BAS-07.png": "54bda082916956e05acd4bac6fda6c46fe199c76d1df3c93cd4860b909a73e3a",
+    "images/BASE-BAS-08.png": "df5cdf2f1221b2912a23e3b0104f5110263c40ec8c7be5490f4c676b715045ba",
+    "images/BASE-BAS-09.png": "24591819cc571211aa80301c26488cd6354f4603dc2a18e47248877963fd6fcf",
+    "images/BASE-BAS-10.png": "4bc177033b25851dde2918cf2e1b4c89c4119ffb4ad1e27964a9a61b0700c4b7",
+    "images/BASE-BAS-11.png": "801c27e4527722e1ad420d71705dc06116b5f563d62c5123d6e8fc85a045bc78",
+    "images/BASE-BAS-12.png": "80ea236913af757f65b7a56bcf857094b23c0c520c0463bef306d61f697e40fa",
+    "images/BASE-BAS-13.png": "ee7807da565a7504ada439e12b5162d77b1a8569d68830c434f437013cb73c73",
+    "images/BASE-BAS-14.png": "985a1453696450a0a17adb26686ea4f7ae128853c745dc0836bccfa4dce8a1b5",
+    "images/BASE-BAS-15.png": "9e044c510ff06babef6066ec318821c33dcb2d368c8bb714177613392ab99874",
+    "images/BASE-BAS-16.png": "9e0ac94d85aab8ab62804ebc5532e7f6e6cc14d3a32768f4029be1e50e5ec5a4",
+    "images/BASE-BAS-17.png": "2f8aad23c5e3386717d7214ad0e9b42f1dd1b9853eb3b9855a7ccf9d77d93989",
+    "images/BASE-BAS-18.png": "c87fa6fea1bb9dfea6c3767a01b8ded281ce2905feb2288cc68e23751c4527d3",
+    "images/BASE-BAS-19.png": "581d2ebdaa84bf67886b7e6f1adafe2112add0fc6f51b25dbc72249171518fdf",
+    "images/BASE-BAS-20.png": "0ac32d68ba531aa09aed8b303b918bb74a4b6e1c4d5ae145a8e548829e4081be",
+    "images/BASE-BAS-21.png": "e8b68c593d4430017633ca1ae537b5e3a5501cecf9ea12aa1d828bfa486fe156",
+    "images/BASE-BAS-22.png": "119cb9e4c190a6bf42798f38285bbc0fc992107bb97ef419074503487bbfffc0",
+    "images/BASE-BAS-23.png": "36a5283d796b7d5e0da8f585540d074858734f721fdf474965a2c1db7bc9c229",
+    "images/BASE-BAS-24.png": "311914bbe179294f71ee07116dc16b67a7676cf58ba67df327560980149b2635",
+    "images/BASE-BAS-25.png": "6ff8387dc80d6ee2b200bb2c2a229b11746361e4cb2ef054fa8ff7d8fe68e34a",
+    "images/BASE-BAS-26.png": "c77cff9d00d1b71c89308f6452123dd9042fff903f63d1665ea47e66e477d94b",
+    "images/BASE-BAS-27.png": "f6b3db1b62f0a218927af045f3b50d309043013d17a892e53528e42f0d0a9a98",
+    "images/BASE-BAS-28.png": "e0dacd5796c95ba8c8a528cd82521ea957c79f90c91039fa261dc68c8f6b1a93",
+    "images/BASE-BAS-29.png": "b2f8843bceb0510f58c378a4aa43ea74a827ca41b611925413f8d790feadc878",
+    "images/BASE-BAS-30.png": "cd8c11e37c9807c09bafed7975dbbfb0664a33c2f5b2f3b45662aadf36d62433",
+    "images/BASE-BAS-32.png": "c2ba815f2645a7ce2b66a55ddc63a3b30e865542a57490a596dde21d4cf0142b",
+    "images/BASE-BAS-34.png": "89e84c780182fae65aef9405344822e89228aef72d1d553b38828da7500a264d",
+    "images/BASE-BAS-36.png": "21e5a3527d4341f73af4b5ea4287d4e4d0abdf01d13c88dae403ec5a2925ce62",
+    "images/BASE-BAS-RB-01.png": "4964c4b7a72e2924a0ae91a0508f11a5c2325e86f767bb972c282b37c01c25b2",
+    "images/BASE-BAS-RB-02.png": "e747d37faad104cda1f2dac1714f8fb9267a3ac6a2c513599e07b9e6ef6da176",
+    "images/BASE-BAS-RB-03.png": "89c0050a4908d8287b2c77b9dd679016bda2baf39e7fe3d408b99177471cea54",
+    "support-diagrams/001.png": "12a53d555ad677dfe1cd99b7a0756251963fc37751ba6d7d21838f1158e29fde",
+    "support-diagrams/002.png": "1e866ad29f09ec7735aed88abbf0d78f93b272314464be8017b9eb2569c3c676",
+    "support-diagrams/003.png": "28dfab62bbd91127d522360f304c2ce1ce148207106b3dfbcff04c81dd6d21e6",
+    "support-diagrams/004.png": "fa951703d681ce004c0ce66b864d2e3d72be7daea99998d4aad8e2b512c344b0",
+    "support-diagrams/005.png": "f2b3e5c7cb93b36c7735d7a89d91d3706720fc262f6c9616e8c48ce6e6e2e5e6",
+    "support-diagrams/006.png": "e90d2cb7add661fb2540594a1773e26c02220a58d090849b50374b4962a003b8",
+    "support-diagrams/007.png": "f5fe7339da497cd0030922f2ae44155949fe25a2a5943b367f30a3b7d8e57400",
+    "support-diagrams/008.png": "3d325cbb783cbcfec4b992702bdaf800f175ec238eb0d680fe67160a0c7cdfb0",
+    "support-diagrams/009.png": "6d686197c97f5ad89800ddbd932a24ce6c968514177a83fec57fa3a88aa8596e",
+    "support-diagrams/010.png": "237c18519168d321dd2da79c2dc2db1b907f2f98befc112963a3fc46dc9d18d3",
+    "support-diagrams/011.png": "401c0bc9153019441ca01a816e087f811a90c9ed6565d350372a63379a69db1f",
+    "support-diagrams/012.png": "573c0ad920e477fa81cefdb3c6a83c4862bf1670c9c0d481e09a1264fb066e76",
+    "support-diagrams/013.png": "a018634737b89fc427ab887000b02fa9c34ee0a6826c0167d736e688f29d520e",
+    "support-diagrams/014.png": "df34f791c6a6b92859c77c4fe57345245c44b9a80fc2278489638b25c55379ed",
+    "support-diagrams/015.png": "85c47103e84723c2d754af631e32351c980c100d1aacb94ecd6a3eea792c886f",
+    "support-diagrams/016.png": "7049162530ad266965e83821b4b5c1d94c9eb2aada248471d2336b4e308b7a0c",
+    "support-diagrams/017.png": "52463253277dee3e21336fcfa5e0cd3773230bed5d631e3db47abb1793eec640",
+    "support-diagrams/018.png": "d68f1ce758cb259eb4196c93207a0a4e6fd6287af4503c7bcccfe58fe7a99986",
+    "support-diagrams/019.png": "e2f1a8cab77c226f295e5f37d72dcbf84882cb4bb46e71e20fbbadde684ae440",
+    "support-diagrams/020.png": "62a5145fb87bcbe5790a2ca82aa19880223b6336d09cba123cc50213ef182bbb",
+    "support-diagrams/021.png": "b7bc8c9fe10e1993d1279d0d7f884484ebff8877753caff239508acf011b807f",
+    "support-diagrams/022.png": "7de2bd5e5d6885766d16cb184b63cbc3386b0fbb2f7d2d4703da10abcbe3cd2a",
+    "support-diagrams/023.png": "5534d70873fe22662e2ad63c2f92056c96bc5458e0c4880fa29d60bf758a1ec3",
+    "support-diagrams/024.png": "19d644ec803b8f80c208b98d745d3e91636ba3732a996b6f54f3ae993cc3a46e",
+    "support-diagrams/025.png": "1e86b19fd74a00ddde291d2bdc374d4f181ee00801e1cba429b9f1ecdbdb5a3f",
+    "support-diagrams/026.png": "24cd23dabdcc7eeb84c506d130468e58ca1c4ca06760f519b8a5d15f6bf17217",
+    "support-diagrams/027.png": "a6f03aa7789a417bc7060a57a41bf1699f7ca8940bf28dff52aaa4199c1ed48e",
+    "support-diagrams/028.png": "3246ea0b08dc7bfd9e4f965b98a951cc3304b8109fd42ca0f75af4b65e55b8c1",
+    "support-diagrams/029.png": "e6a5c2ebaf3c24f2817256fa18af5ddf4f116560c53708419c8af447489073f6",
+    "support-diagrams/030.png": "9dca4bff49e78ab6589240c8d1d2c8903482f2035ebdb4ae8fc767ee16ec650e",
+    "support-diagrams/031.png": "f7d331954366fac58a800a3e0d3bd8499785d8b50377301ed80e4a32f20d60fe",
+    "support-diagrams/032.png": "3a000c22899a699111ebab8ed2400e515069d8bac4ccf061369c325af09808a9",
+    "support-diagrams/033.png": "99e09997814ae069db967b8711f8144d736edb894a34e86a856ed0ccf2ecd386",
+    "support-diagrams/034.png": "e2992b73c213904054d110afab96c9297f0484d87f937593dec447f142a893f7",
+    "support-diagrams/035.png": "b6e0e5c9ead9a431413755921aeb2c9f8c21421d45c5e29d8b4f3082dc3c716c",
+    "support-diagrams/036.png": "2a15e885d1e1519fe9a0f6b10d7b5a6b7b9812b60c8b52c24a44ef4645f28dc8",
+    "support-diagrams/037.png": "6f1dad8fb36eeaa3914f18a40c6bdfacd077d2a6e9d877a52883b9e31a2b0772",
+    "support-diagrams/038.png": "4eb322b140e85907ba302b6675ad6db1f4f9845d5e3fa7ec7d6868d3844dedea",
+    "support-diagrams/039.png": "acd714ee1d627c5f38a465afe4b446040adb106a747f05dfc0419e18d80fa01f",
+    "support-diagrams/040.png": "2ec12cd3235ef17625813015e20ca9ffafc066414f03ab9e6be0acef674dea30",
+    "support-diagrams/041.png": "a3226ca855356254fbac7b01ab135d96554c8821c3f07c566497cc52bdac37e9",
+    "support-diagrams/042.png": "32ba12dd14a33f7c38df802779c260d150f725dd974ba43ace0dd9f91e9889c6",
+    "support-diagrams/043.png": "83dbcc7a9f8e21125dba119aafc3afc28d65f9d50194f837760ad9432c6657fd",
+    "support-diagrams/044.png": "fd70c02ff277162d57f961a3dc435050d8d35fdcfd2b23c1462fe4916c6abd39",
+    "support-diagrams/045.png": "1683f71a1cc23883c2402e1026c54be1ac998ff528ce8b45fb66b17b427e5605",
+    "support-diagrams/046.png": "168aedb338de33f828c1b07d533d481155382315f7ad9bad70b9a8c16586b832",
+    "support-diagrams/047.png": "551f687094567b22607ceb7f503a75bb112fb0f84762511f8c828d42b531ab7e",
+    "support-diagrams/048.png": "71bf4e9b410a05e0a14ba009449b2fe0a53988880e316ae7b171ee86a5196eea",
+    "support-diagrams/049.png": "d539c25edef13f25b94e378f3f235b5e0383bd49ad2c49012e2cff3eeabd1d6d",
+    "support-diagrams/050.png": "15efc5cb330e375033c55e9c89917812e52b10efe2729e85448151c93d0227cb",
+    "support-diagrams/051.png": "12362c6c3b4e87a3da7e35366f188a21f2eea9e3fd98a624b24c849d5a3b1477",
+    "support-diagrams/052.png": "ef709f0cd29b132f22e8c9543866f792463d5ef599b8399b8206df0aa7e03ede",
+    "support-diagrams/053.png": "3789d4d91ecb07316303a2db6a472b4cae67e4001bea7f374834922ba7bee0f5",
+    "support-diagrams/054.png": "31fff28a8c6e435faa888713ebf3a804daf8918624f81f933fa052b6d69799d1",
+    "support-diagrams/055.png": "a80bbcc8d92de8b67c56ab4a802afab060c58c4f9c4f41ae5abaa54893388b22",
+    "support-diagrams/056.png": "f910db65e191f38e1bb183aecabfde52adb4003978365eedd100cb192fba248c",
+    "support-diagrams/057.png": "b7f9aa37dd940a5f56cd324cd3f4d54cf2f3792414c380f9cb772010575c22c2",
+    "support-diagrams/058.png": "5c8e4a3595febcef84db9c1dc7b7e64e924f9a810bc39377659545f6a91ccf0f",
+    "support-diagrams/059.png": "fcf3c4bc9019e626da235b8fe329147b40875b70efa1cac0eba4be4e21d97f5d",
+    "support-diagrams/060.png": "7e717e5e3180f2c483f4ce680882bf8b9142d29acaf83a6b0951aef104197405",
+    "support-diagrams/061.png": "32f43b45acefb38027b40332db29cdde86fa67f6ff98f20ab57c08e977d6a0c5",
+    "support-diagrams/062.png": "b2a572c6a157c608c81c0c93273bfb73618a315d53d259a984b3274228d40351",
+    "support-diagrams/063.png": "06a321d4e26937d9c2a76fb04f0310ddb933b4092f4ad955883fd17f9973a956",
+    "support-diagrams/064.png": "053af71d4233acd45a10620c06f0ecc96445541da8156786f5726a7187df7aec",
+    "support-diagrams/065.png": "8cabc792e4a7054154b61689e13eb2c45f5c53e6236e18613cdc76e4328a843c",
+    "support-diagrams/066.png": "38a2979be145dba53d91f998b3086b7b02bb2d1d685d08fa356093b9f0a03b8c",
+    "support-diagrams/067.png": "a04c5f4ce1aa841bb74271c8284c028a752ea5aba80ccc69d5d2da6fa334e050",
+    "support-diagrams/068.png": "7ca878ab00409247d7de6aa1674b872e9abd18ff42804d9aa569de698585a439",
+    "support-diagrams/069.png": "c85e387b61715e98d05ce0ad6c540896971534a315a771e0e40cf4727332de5a",
+    "support-diagrams/070.png": "b32a5a3db4e81a562289e7e1101068da578677940f2bb1ab86b14cb2315757dd",
+    "support-diagrams/071.png": "ff3c533b69dcd7010541017502455c811b71ef3e84d6076bcbbba95ec70e83b4",
+    "support-diagrams/072.png": "f68c57b6259ee72d8cc4383fad4b9dfab472d8f42f639015bf64738c457d3d92",
+    "support-diagrams/073.png": "2fe78670955b595424735351c74166640d829ab386b9d8e272e2b5bc987eaf96",
+    "support-diagrams/074.png": "438364ddfb78cdaf9338857a922272b65811577204c870c36b245ffccb3d331d",
+    "support-diagrams/075.png": "05fbce7c5e39b4966d6f7b517d7978ebe316f0e705b4698f21cde0e0abfa16fc",
+    "support-diagrams/076.png": "6f155a246982ace4ce5abdba37180461590932e0ac8e6a1557c0b0824680845a",
+    "support-diagrams/077.png": "1d4d7211a89b6a7c6886e40c40b06856b13e2f88ecf364769a5b2767e54e5749",
+    "support-diagrams/078.png": "209d5bb08faab45fb2786cdd1f8fd58472b5ae78f1b0b4b8f613540bf25f8f33",
+    "support-diagrams/079.png": "27f321d9f291b4be2acf3c0fcd42e000ee6e8bdd52805fb3bf60d93e3c1bbf70",
+    "support-diagrams/080.png": "266fa2f2645acff47339f4f908add45eccc71a8207ce7bea7847cc57eebe2076",
+    "support-diagrams/081.png": "983741cca138ad9ae894881da7a5c15d0ca7f22c33079744ed625d2421108b16",
+    "support-diagrams/082.png": "2d285b6d0a0f3413aa4aedffbc952cbfd003b10a2ed83d67a7acd08382d141cb",
+    "support-diagrams/083.png": "e10d58a9abf52ca82a213c7afaaade29d4d50ae6f28bf3f97ff9c69d888408c8",
+    "support-diagrams/084.png": "e2d6efbb52db603e388107025680a0e92aa2f3864bc4ff99a19c4f50148480c1",
+    "support-diagrams/085.png": "59b4c8b6cca0c35ae83a1ca9ee7efb696596efe0311a4b3cca935175e3a7a36d",
+    "support-diagrams/086.png": "04c7c4c97308adcde14dfaa6de819b8ec8278dbcf4964b759daf5d7edfa11b3a",
+    "support-diagrams/087.png": "13230937ee618a5e4eb5233a576c9f63e683d3a12485f8816ea487cd5fe99dd1",
+    "support-diagrams/088.png": "ddf8318bde3ac8d81c92f6db07114b285cd34a2a80c7d75982c4cf158c34a90e",
+    "support-diagrams/089.png": "f0ba3e175d21cd495572a203175c5d67dbe2b353eef81b6222444f2b0e3d4058",
+    "support-diagrams/090.png": "f042daf723f7815cc12383102b9e1b5b73dc55c9ce8f1e5f89cefe3c7d83c71a",
+    "support-diagrams/091.png": "ce2382e4be868c2d0fded53102381926ddd61a6534c76a68babb7bfbc049ab43",
+    "support-diagrams/092.png": "249b3db37378e6fa10236663c055b97ce54543101648cb9cde6d7a60ac16b842",
+    "support-diagrams/093.png": "62ba2594fde9d65ff24c94f960ffda8d976440a7895877c770c680887bd186e7",
+    "diagrams/integrated-whole.png": "aaade09d9658dd0cfc472013795b3dd79e9f1c582a7f57e272533f48b140bb39",
+    "diagrams/interface-R.png": "506024c5d3683e1a495033567d3cfa91466ff50a9793d756f5a75c3a9b5d99bb",
+    "diagrams/interface-L.png": "59473993bc6fbc9ea3f8811d51913ee1518705f159446de676b755629b31348a",
+    "diagrams/interface-F.png": "be70ea8dfcfb04f1a2a250a4f6440d8c0cb1ce2f05506729a1a237d9ae28b643",
+    "diagrams/interface-B.png": "5445b0b422f4dd21f870f94e0fc937311248929ff4049c9bf276ad1173d3f85f",
+    "diagrams/support-complete.png": "6516e21264c49cf9af792efc9c90e1c5470af1bf285fb17ed3a824239bb8cc76",
+    "diagrams/support-lowered.png": "2d8d973cf5617f9d9f23428d5ccc2873cba72a7620c78776816d781d2d3c72e5",
+    "diagrams/lever-upper.png": "2225913685c5904d9df44f015e7532a52bb1c3a5fc43bcace50de7f88de098ca",
+    "diagrams/lever-lowered.png": "6a9b29c86405f50de03b9a6bcb4423f4a5f83ebcedcfafe622349f31dbd05c85",
+    "diagrams/brace-R.png": "52c2a4ba7226e3355c09a3d445320801331a991ee9b83145ada6bf4263ab8143",
+    "diagrams/brace-L.png": "87d69e1c1bf9c20042b7d8ad034520c5a4396d872afe48d8f264caa225d990da",
+    "diagrams/brace-F.png": "9f79d6d8611980824b6433f4b7765f1261fe63aa6ef35092bf9a4f702af8fabf",
+    "diagrams/brace-B.png": "b5abc5ed7700b4bdaf67aea0cb83d03d241512247d51ce3394ac4234fecaa82a",
+    "diagrams/wallfoot-detail.png": "cdab665c8d6056dc4d6959dabdef10f0af2cf1a2ebeaf02383ea35198fe692c8"
+  },
+  "visually_reviewed_samples": [
+    "images/BASE-BAS-03.png",
+    "images/BASE-BAS-RB-03.png",
+    "support-diagrams/008.png",
+    "support-diagrams/014.png",
+    "support-diagrams/045.png",
+    "support-diagrams/092.png",
+    "diagrams/brace-R.png",
+    "diagrams/wallfoot-detail.png",
+    "diagrams/interface-R.png"
+  ],
+  "limits": [
+    "The final PDF and site require their own rebuild and visual review.",
+    "Existing physical-fit, load, retention, continuous-path and safety limitations remain in force."
+  ],
+  "script_hashes": {
+    "render_base.py": "c2621c653bcc0101e842770f24463ae21fb96b8d2abfbc9b17e4677b4260a6b8",
+    "render_support.py": "a5e6b06e5d374e1818e34b3a6da0d57d62f4181b0db49555043d207f45002776",
+    "render_interfaces.py": "16baa6485b1736ec6f59fe9677a1d690b882748bcbed93579907d642128691c1",
+    "render_braces.py": "5603209256089f7a08c46899238bf63b8b576731b3bf73dd8efc533daa0ce90f",
+    "render_wallfoot_detail.py": "f838d288bd18930fa1859544c4c3a4b1193830b6233611b105d650e086597274",
+    "finalize_source_wording.py": "852b0bc23cc9ea752ee5ebb1f004aba4b7cc0ae9140979bdf10ab4c0db7e44c9"
+  },
+  "render_count": 143
+}

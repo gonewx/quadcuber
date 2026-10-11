@@ -1,0 +1,1890 @@
+[
+  {
+    "index1": 1,
+    "id": "R001",
+    "role": "fixed",
+    "name": "39790.dat",
+    "color": 72,
+    "position_ldu": [
+      420.0,
+      260.0,
+      20.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 72 420 260 20 0 0 1 0 1 0 -1 0 0 39790.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 2,
+    "id": "R002",
+    "role": "fixed",
+    "name": "32524.dat",
+    "color": 72,
+    "position_ldu": [
+      340.0,
+      280.0,
+      -80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "note": "shortened +X foundation; original15L reused as rightouterrail",
+    "ldraw": "1 72 340 280 -80 0 0 1 0 1 0 -1 0 0 32524.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 3,
+    "id": "R003",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      400.0,
+      270.0,
+      -80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 400 270 -80 0 1 0 1 0 0 0 0 -1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 4,
+    "id": "R004",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      360.0,
+      270.0,
+      -80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 360 270 -80 0 1 0 1 0 0 0 0 -1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 5,
+    "id": "R005",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      320.0,
+      270.0,
+      -80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 320 270 -80 0 1 0 1 0 0 0 0 -1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 6,
+    "id": "R006",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      280.0,
+      270.0,
+      -80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 280 270 -80 0 1 0 1 0 0 0 0 -1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 7,
+    "id": "R007",
+    "role": "fixed",
+    "name": "32524.dat",
+    "color": 72,
+    "position_ldu": [
+      120.0,
+      280.0,
+      -340.0
+    ],
+    "rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "shortened -Z foundation; original15L becomes spare",
+    "ldraw": "1 72 120 280 -340 1 0 0 0 1 0 0 0 1 32524.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 8,
+    "id": "R008",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      120.0,
+      270.0,
+      -280.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 120 270 -280 0 1 0 1 0 0 0 0 -1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 9,
+    "id": "R009",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      120.0,
+      270.0,
+      -400.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 120 270 -400 0 1 0 1 0 0 0 0 -1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 10,
+    "id": "R010",
+    "role": "fixed",
+    "name": "6558.dat",
+    "color": 1,
+    "position_ldu": [
+      120.0,
+      260.0,
+      -320.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 1 120 260 -320 0 -1 0 -1 0 0 0 0 -1 6558.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 11,
+    "id": "R011",
+    "role": "fixed",
+    "name": "6558.dat",
+    "color": 1,
+    "position_ldu": [
+      120.0,
+      260.0,
+      -360.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 1 120 260 -360 0 -1 0 -1 0 0 0 0 -1 6558.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 12,
+    "id": "R012",
+    "role": "fixed",
+    "name": "39790.dat",
+    "color": 72,
+    "position_ldu": [
+      -420.0,
+      260.0,
+      -20.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 72 -420 260 -20 0 0 -1 0 1 0 1 0 0 39790.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 13,
+    "id": "R013",
+    "role": "fixed",
+    "name": "32278.dat",
+    "color": 72,
+    "position_ldu": [
+      -260.0,
+      280.0,
+      80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 72 -260 280 80 0 0 1 0 1 0 -1 0 0 32278.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 14,
+    "id": "R014",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -400.0,
+      270.0,
+      80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -400 270 80 0 -1 0 1 0 0 0 0 1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 15,
+    "id": "R015",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -360.0,
+      270.0,
+      80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -360 270 80 0 -1 0 1 0 0 0 0 1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 16,
+    "id": "R016",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -320.0,
+      270.0,
+      80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -320 270 80 0 -1 0 1 0 0 0 0 1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 17,
+    "id": "R017",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -280.0,
+      270.0,
+      80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -280 270 80 0 -1 0 1 0 0 0 0 1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 18,
+    "id": "R018",
+    "role": "fixed",
+    "name": "32278.dat",
+    "color": 72,
+    "position_ldu": [
+      -120.0,
+      280.0,
+      260.0
+    ],
+    "rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "Motor-side15L shifted inward8mm; all original39790 and motor-pin ports retained",
+    "ldraw": "1 72 -120 280 260 1 0 0 0 1 0 0 0 1 32278.dat",
+    "changed_module": "base"
+  },
+  {
+    "index1": 19,
+    "id": "R019",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -120.0,
+      270.0,
+      280.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -120 270 280 0 -1 0 1 0 0 0 0 1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 20,
+    "id": "R020",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -120.0,
+      270.0,
+      400.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -120 270 400 0 -1 0 1 0 0 0 0 1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 21,
+    "id": "R021",
+    "role": "fixed",
+    "name": "6558.dat",
+    "color": 1,
+    "position_ldu": [
+      -120.0,
+      260.0,
+      320.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 1 -120 260 320 0 1 0 -1 0 0 0 0 1 6558.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 22,
+    "id": "R022",
+    "role": "fixed",
+    "name": "6558.dat",
+    "color": 1,
+    "position_ldu": [
+      -120.0,
+      260.0,
+      360.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 1 -120 260 360 0 1 0 -1 0 0 0 0 1 6558.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 23,
+    "id": "R023",
+    "role": "fixed",
+    "name": "32526.dat",
+    "color": 14,
+    "position_ldu": [
+      -120.0,
+      260.0,
+      160.0
+    ],
+    "rotation": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "note": "Single3x5L joins two original15L rails; two pins per leg16mm apart",
+    "ldraw": "1 14 -120 260 160 -1 0 0 0 1 0 0 0 -1 32526.dat",
+    "changed_module": "base"
+  },
+  {
+    "index1": 24,
+    "id": "R024",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -120.0,
+      270.0,
+      80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -120 270 80 0 -1 0 1 0 0 0 0 1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 25,
+    "id": "R025",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -160.0,
+      270.0,
+      80.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "Reused original2L pin; collar atY108 interface betweenL and15L",
+    "ldraw": "1 0 -160 270 80 0 -1 0 1 0 0 0 0 1 2780.dat",
+    "changed_module": "base"
+  },
+  {
+    "index1": 26,
+    "id": "R026",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -120.0,
+      270.0,
+      160.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -120 270 160 0 -1 0 1 0 0 0 0 1 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 27,
+    "id": "R027",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -120.0,
+      270.0,
+      120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "Reused original2L pin; collar atY108 interface betweenL and15L",
+    "ldraw": "1 0 -120 270 120 0 -1 0 1 0 0 0 0 1 2780.dat",
+    "changed_module": "base"
+  },
+  {
+    "index1": 28,
+    "id": "R028",
+    "role": "fixed",
+    "name": "39790.dat",
+    "color": 72,
+    "position_ldu": [
+      -20.0,
+      260.0,
+      420.0
+    ],
+    "rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 72 -20 260 420 1 0 0 0 1 0 0 0 1 39790.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 29,
+    "id": "R029",
+    "role": "fixed",
+    "name": "32278.dat",
+    "color": 72,
+    "position_ldu": [
+      80.0,
+      280.0,
+      260.0
+    ],
+    "rotation": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 72 80 280 260 -1 0 0 0 1 0 0 0 -1 32278.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 30,
+    "id": "R030",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      80.0,
+      270.0,
+      400.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 80 270 400 0 0 1 1 0 0 0 1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 31,
+    "id": "R031",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      80.0,
+      270.0,
+      360.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 80 270 360 0 0 1 1 0 0 0 1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 32,
+    "id": "R032",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      80.0,
+      270.0,
+      320.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 80 270 320 0 0 1 1 0 0 0 1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 33,
+    "id": "R033",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      80.0,
+      270.0,
+      280.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 80 270 280 0 0 1 1 0 0 0 1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 34,
+    "id": "R034",
+    "role": "fixed",
+    "name": "32278.dat",
+    "color": 72,
+    "position_ldu": [
+      260.0,
+      280.0,
+      120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "note": "Motor-side15L shifted inward8mm; all original39790 and motor-pin ports retained",
+    "ldraw": "1 72 260 280 120 0 0 1 0 1 0 -1 0 0 32278.dat",
+    "changed_module": "base"
+  },
+  {
+    "index1": 35,
+    "id": "R035",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      280.0,
+      270.0,
+      120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 280 270 120 0 0 1 1 0 0 0 1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 36,
+    "id": "R036",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      400.0,
+      270.0,
+      120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 400 270 120 0 0 1 1 0 0 0 1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 37,
+    "id": "R037",
+    "role": "fixed",
+    "name": "6558.dat",
+    "color": 1,
+    "position_ldu": [
+      320.0,
+      260.0,
+      120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 1 320 260 120 0 0 1 -1 0 0 0 -1 0 6558.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 38,
+    "id": "R038",
+    "role": "fixed",
+    "name": "6558.dat",
+    "color": 1,
+    "position_ldu": [
+      360.0,
+      260.0,
+      120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 1 360 260 120 0 0 1 -1 0 0 0 -1 0 6558.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 39,
+    "id": "R039",
+    "role": "fixed",
+    "name": "32526.dat",
+    "color": 14,
+    "position_ldu": [
+      160.0,
+      260.0,
+      120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "note": "Single3x5L joins two original15L rails; two pins per leg16mm apart",
+    "ldraw": "1 14 160 260 120 0 0 -1 0 1 0 1 0 0 32526.dat",
+    "changed_module": "base"
+  },
+  {
+    "index1": 40,
+    "id": "R040",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      80.0,
+      270.0,
+      120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 80 270 120 0 0 1 1 0 0 0 1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 41,
+    "id": "R041",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      80.0,
+      270.0,
+      160.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "Reused original2L pin; collar atY108 interface betweenL and15L",
+    "ldraw": "1 0 80 270 160 0 0 1 1 0 0 0 1 0 2780.dat",
+    "changed_module": "base"
+  },
+  {
+    "index1": 42,
+    "id": "R042",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      160.0,
+      270.0,
+      120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 160 270 120 0 0 1 1 0 0 0 1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 43,
+    "id": "R043",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      120.0,
+      270.0,
+      120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "Reused original2L pin; collar atY108 interface betweenL and15L",
+    "ldraw": "1 0 120 270 120 0 0 1 1 0 0 0 1 0 2780.dat",
+    "changed_module": "base"
+  },
+  {
+    "index1": 44,
+    "id": "R044",
+    "role": "fixed",
+    "name": "39790.dat",
+    "color": 72,
+    "position_ldu": [
+      20.0,
+      260.0,
+      -420.0
+    ],
+    "rotation": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 72 20 260 -420 -1 0 0 0 1 0 0 0 -1 39790.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 45,
+    "id": "R045",
+    "role": "fixed",
+    "name": "32278.dat",
+    "color": 72,
+    "position_ldu": [
+      -80.0,
+      280.0,
+      -260.0
+    ],
+    "rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 72 -80 280 -260 1 0 0 0 1 0 0 0 1 32278.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 46,
+    "id": "R046",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -80.0,
+      270.0,
+      -400.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -80 270 -400 0 0 -1 1 0 0 0 -1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 47,
+    "id": "R047",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -80.0,
+      270.0,
+      -360.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -80 270 -360 0 0 -1 1 0 0 0 -1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 48,
+    "id": "R048",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -80.0,
+      270.0,
+      -320.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -80 270 -320 0 0 -1 1 0 0 0 -1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 49,
+    "id": "R049",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -80.0,
+      270.0,
+      -280.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -80 270 -280 0 0 -1 1 0 0 0 -1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 50,
+    "id": "R050",
+    "role": "fixed",
+    "name": "32278.dat",
+    "color": 72,
+    "position_ldu": [
+      -260.0,
+      280.0,
+      -120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "note": "Motor-side15L shifted inward8mm; all original39790 and motor-pin ports retained",
+    "ldraw": "1 72 -260 280 -120 0 0 -1 0 1 0 1 0 0 32278.dat",
+    "changed_module": "base"
+  },
+  {
+    "index1": 51,
+    "id": "R051",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -280.0,
+      270.0,
+      -120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -280 270 -120 0 0 -1 1 0 0 0 -1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 52,
+    "id": "R052",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -400.0,
+      270.0,
+      -120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -400 270 -120 0 0 -1 1 0 0 0 -1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 53,
+    "id": "R053",
+    "role": "fixed",
+    "name": "6558.dat",
+    "color": 1,
+    "position_ldu": [
+      -320.0,
+      260.0,
+      -120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 1 -320 260 -120 0 0 -1 -1 0 0 0 1 0 6558.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 54,
+    "id": "R054",
+    "role": "fixed",
+    "name": "6558.dat",
+    "color": 1,
+    "position_ldu": [
+      -360.0,
+      260.0,
+      -120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 1 -360 260 -120 0 0 -1 -1 0 0 0 1 0 6558.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 55,
+    "id": "R055",
+    "role": "fixed",
+    "name": "32526.dat",
+    "color": 14,
+    "position_ldu": [
+      -160.0,
+      260.0,
+      -120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "note": "Single3x5L joins two original15L rails; two pins per leg16mm apart",
+    "ldraw": "1 14 -160 260 -120 0 0 1 0 1 0 -1 0 0 32526.dat",
+    "changed_module": "base"
+  },
+  {
+    "index1": 56,
+    "id": "R056",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -80.0,
+      270.0,
+      -120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -80 270 -120 0 0 -1 1 0 0 0 -1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 57,
+    "id": "R057",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -80.0,
+      270.0,
+      -160.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "Reused original2L pin; collar atY108 interface betweenL and15L",
+    "ldraw": "1 0 -80 270 -160 0 0 -1 1 0 0 0 -1 0 2780.dat",
+    "changed_module": "base"
+  },
+  {
+    "index1": 58,
+    "id": "R058",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -160.0,
+      270.0,
+      -120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "",
+    "ldraw": "1 0 -160 270 -120 0 0 -1 1 0 0 0 -1 0 2780.dat",
+    "changed_module": null
+  },
+  {
+    "index1": 59,
+    "id": "R059",
+    "role": "fixed",
+    "name": "2780.dat",
+    "color": 0,
+    "position_ldu": [
+      -120.0,
+      270.0,
+      -120.0
+    ],
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "note": "Reused original2L pin; collar atY108 interface betweenL and15L",
+    "ldraw": "1 0 -120 270 -120 0 0 -1 1 0 0 0 -1 0 2780.dat",
+    "changed_module": "base"
+  }
+]

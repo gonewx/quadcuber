@@ -1,0 +1,1206 @@
+{
+  "instances": [
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "inner_arm_z-32",
+      "name": "32278.dat",
+      "position_mm": [
+        58.45525235842454,
+        63.6,
+        -32.0
+      ],
+      "rotation": [
+        [
+          0.2928571428571428,
+          0.0,
+          -0.956156207885276
+        ],
+        [
+          -0.956156207885276,
+          0.0,
+          -0.2928571428571428
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_inner_arm_z-32"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "inner_arm_z32",
+      "name": "32278.dat",
+      "position_mm": [
+        58.45525235842454,
+        63.6,
+        32.0
+      ],
+      "rotation": [
+        [
+          0.2928571428571428,
+          0.0,
+          -0.956156207885276
+        ],
+        [
+          -0.956156207885276,
+          0.0,
+          -0.2928571428571428
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_inner_arm_z32"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "outer_handle",
+      "name": "32278.dat",
+      "position_mm": [
+        134.94774898924663,
+        87.02857142857142,
+        -40.0
+      ],
+      "rotation": [
+        [
+          0.2928571428571428,
+          0.0,
+          -0.956156207885276
+        ],
+        [
+          -0.956156207885276,
+          0.0,
+          -0.2928571428571428
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_outer_handle"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "root_overlap_pin_16",
+      "name": "2780.dat",
+      "position_mm": [
+        96.70150067383558,
+        75.31428571428572,
+        -36.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_root_overlap_pin_16"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "root_overlap_pin_32",
+      "name": "2780.dat",
+      "position_mm": [
+        81.40300134767116,
+        70.62857142857143,
+        -36.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_root_overlap_pin_32"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "root_12L_axle",
+      "name": "3708.dat",
+      "position_mm": [
+        112.0,
+        80.0,
+        -4.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_root_12L_axle"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "root_retainer_-46",
+      "name": "32123a.dat",
+      "position_mm": [
+        112.0,
+        80.0,
+        -46.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose0_root_retainer_-46"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "root_retainer_38",
+      "name": "32123a.dat",
+      "position_mm": [
+        112.0,
+        80.0,
+        38.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose0_root_retainer_38"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "end_11L_axle",
+      "name": "23948.dat",
+      "position_mm": [
+        4.91050471684909,
+        47.2,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_end_11L_axle"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "end_retainer_-38",
+      "name": "32123a.dat",
+      "position_mm": [
+        4.91050471684909,
+        47.2,
+        -38.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose0_end_retainer_-38"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "end_retainer_38",
+      "name": "32123a.dat",
+      "position_mm": [
+        4.91050471684909,
+        47.2,
+        38.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose0_end_retainer_38"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "end_spacer2L_-20",
+      "name": "62462.dat",
+      "position_mm": [
+        4.91050471684909,
+        47.2,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_end_spacer2L_-20"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "end_spacer2L_20",
+      "name": "62462.dat",
+      "position_mm": [
+        4.91050471684909,
+        47.2,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_end_spacer2L_20"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "end_spacer1L_-8",
+      "name": "18654.dat",
+      "position_mm": [
+        4.91050471684909,
+        47.2,
+        -8.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_end_spacer1L_-8"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "end_spacer1L_8",
+      "name": "18654.dat",
+      "position_mm": [
+        4.91050471684909,
+        47.2,
+        8.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_end_spacer1L_8"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "center_roller_bush",
+      "name": "3713.dat",
+      "position_mm": [
+        4.91050471684909,
+        47.2,
+        0.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose0_center_roller_bush"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "stop_4L_axle",
+      "name": "3705.dat",
+      "position_mm": [
+        165.54474764157544,
+        96.4,
+        -36.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose0_stop_4L_axle"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "stop_bush",
+      "name": "3713.dat",
+      "position_mm": [
+        165.54474764157544,
+        96.4,
+        -32.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose0_stop_bush"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "stop_outer_retainer",
+      "name": "32123a.dat",
+      "position_mm": [
+        165.54474764157544,
+        96.4,
+        -46.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose0_stop_outer_retainer"
+    },
+    {
+      "pose": 0,
+      "tray_drop_mm": 0,
+      "lever_parameter_mm": 0,
+      "id": "stop_inner_retainer",
+      "name": "32123a.dat",
+      "position_mm": [
+        165.54474764157544,
+        96.4,
+        -26.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose0_stop_inner_retainer"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "inner_arm_z-32",
+      "name": "32278.dat",
+      "position_mm": [
+        56.206093522679375,
+        84.8,
+        -32.0
+      ],
+      "rotation": [
+        [
+          -0.08571428571428566,
+          0.0,
+          -0.9963197585235825
+        ],
+        [
+          -0.9963197585235825,
+          0.0,
+          0.08571428571428566
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_inner_arm_z-32"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "inner_arm_z32",
+      "name": "32278.dat",
+      "position_mm": [
+        56.206093522679375,
+        84.8,
+        32.0
+      ],
+      "rotation": [
+        [
+          -0.08571428571428566,
+          0.0,
+          -0.9963197585235825
+        ],
+        [
+          -0.9963197585235825,
+          0.0,
+          0.08571428571428566
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_inner_arm_z32"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "outer_handle",
+      "name": "32278.dat",
+      "position_mm": [
+        135.91167420456597,
+        77.94285714285715,
+        -40.0
+      ],
+      "rotation": [
+        [
+          -0.08571428571428566,
+          0.0,
+          -0.9963197585235825
+        ],
+        [
+          -0.9963197585235825,
+          0.0,
+          0.08571428571428566
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_outer_handle"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "root_overlap_pin_16",
+      "name": "2780.dat",
+      "position_mm": [
+        96.05888386362268,
+        81.37142857142857,
+        -36.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_root_overlap_pin_16"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "root_overlap_pin_32",
+      "name": "2780.dat",
+      "position_mm": [
+        80.11776772724536,
+        82.74285714285715,
+        -36.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_root_overlap_pin_32"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "root_12L_axle",
+      "name": "3708.dat",
+      "position_mm": [
+        112.0,
+        80.0,
+        -4.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_root_12L_axle"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "root_retainer_-46",
+      "name": "32123a.dat",
+      "position_mm": [
+        112.0,
+        80.0,
+        -46.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose1_root_retainer_-46"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "root_retainer_38",
+      "name": "32123a.dat",
+      "position_mm": [
+        112.0,
+        80.0,
+        38.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose1_root_retainer_38"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "end_11L_axle",
+      "name": "23948.dat",
+      "position_mm": [
+        0.41218704535876327,
+        89.6,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_end_11L_axle"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "end_retainer_-38",
+      "name": "32123a.dat",
+      "position_mm": [
+        0.41218704535876327,
+        89.6,
+        -38.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose1_end_retainer_-38"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "end_retainer_38",
+      "name": "32123a.dat",
+      "position_mm": [
+        0.41218704535876327,
+        89.6,
+        38.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose1_end_retainer_38"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "end_spacer2L_-20",
+      "name": "62462.dat",
+      "position_mm": [
+        0.41218704535876327,
+        89.6,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_end_spacer2L_-20"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "end_spacer2L_20",
+      "name": "62462.dat",
+      "position_mm": [
+        0.41218704535876327,
+        89.6,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_end_spacer2L_20"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "end_spacer1L_-8",
+      "name": "18654.dat",
+      "position_mm": [
+        0.41218704535876327,
+        89.6,
+        -8.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_end_spacer1L_-8"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "end_spacer1L_8",
+      "name": "18654.dat",
+      "position_mm": [
+        0.41218704535876327,
+        89.6,
+        8.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_end_spacer1L_8"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "center_roller_bush",
+      "name": "3713.dat",
+      "position_mm": [
+        0.41218704535876327,
+        89.6,
+        0.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose1_center_roller_bush"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "stop_4L_axle",
+      "name": "3705.dat",
+      "position_mm": [
+        167.7939064773206,
+        75.2,
+        -36.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "triangles_key": "pose1_stop_4L_axle"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "stop_bush",
+      "name": "3713.dat",
+      "position_mm": [
+        167.7939064773206,
+        75.2,
+        -32.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose1_stop_bush"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "stop_outer_retainer",
+      "name": "32123a.dat",
+      "position_mm": [
+        167.7939064773206,
+        75.2,
+        -46.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose1_stop_outer_retainer"
+    },
+    {
+      "pose": 1,
+      "tray_drop_mm": 40.8,
+      "lever_parameter_mm": 42.4,
+      "id": "stop_inner_retainer",
+      "name": "32123a.dat",
+      "position_mm": [
+        167.7939064773206,
+        75.2,
+        -26.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangles_key": "pose1_stop_inner_retainer"
+    }
+  ],
+  "source": "Frozen16-part core plus separately reviewed4-part upper stop; original R1 moving tray unchanged",
+  "down_pose_note": "Original tray rests at40.8mm; lever shown after1.6mm take-up at parameter42.4mm"
+}

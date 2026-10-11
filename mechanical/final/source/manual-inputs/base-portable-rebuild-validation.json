@@ -1,0 +1,179 @@
+{
+  "status": "PASS",
+  "isolated_project_path": "/tmp/r4-portable-base-zm3o465a/quadcuber-integrated",
+  "no_sibling_legacy_checkout_present": true,
+  "base_rows": 64,
+  "base_steps": 36,
+  "all_step_instructions_and_geometry_exact_after_normalizing_absolute_image_path": true,
+  "all36_base_images_byte_exact": true,
+  "regenerated_changed_images": 13,
+  "reused_unchanged_images": 23,
+  "canonical_pdf_and_all_image_hashes_unchanged": true,
+  "canonical_pdf_sha256": "abb5e11f1bbe3acf610b8a269dea44d7104f70e8058de3742ec9faa4f0f2aaeb",
+  "runs": [
+    {
+      "script": "recover_base.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"rows\": 64,\n  \"initial_steps\": 33,\n  \"changed_steps\": [\n    \"BAS-01\",\n    \"BAS-02\",\n    \"BAS-07\",\n    \"BAS-27\",\n    \"BAS-28\",\n    \"BAS-29\",\n    \"BAS-30\",\n    \"BAS-32\",\n    \"BAS-34\",\n    \"BAS-36\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "prepare_closed_corner.py",
+      "exit_code": 0,
+      "stdout": "Base source:36 steps,64 parts; pins then L before arm installation\n",
+      "stderr": ""
+    },
+    {
+      "script": "render_base.py",
+      "exit_code": 0,
+      "stdout": "BAS-01\nBAS-02\nBAS-07\nBAS-27\nBAS-28\nBAS-29\nBAS-30\nBAS-32\nBAS-34\nBAS-36\nBAS-RB-01\nBAS-RB-02\nBAS-RB-03\n",
+      "stderr": ""
+    }
+  ],
+  "image_hashes": {
+    "images/BASE-BAS-01.png": {
+      "canonical_sha256": "c32281e6f22e6122eb05e7947d82d5b94fd37060f9a1d95e398f43fdc2772afd",
+      "rebuilt_sha256": "c32281e6f22e6122eb05e7947d82d5b94fd37060f9a1d95e398f43fdc2772afd"
+    },
+    "images/BASE-BAS-02.png": {
+      "canonical_sha256": "2e2145c2457bc0ebf40a7ba391151e3a2bd4d9868306b96e1a6582291ccb82ea",
+      "rebuilt_sha256": "2e2145c2457bc0ebf40a7ba391151e3a2bd4d9868306b96e1a6582291ccb82ea"
+    },
+    "images/BASE-BAS-03.png": {
+      "canonical_sha256": "39d8cf046e840e37f8c867ab3e80e04346475095ea698f535097453cf70265fe",
+      "rebuilt_sha256": "39d8cf046e840e37f8c867ab3e80e04346475095ea698f535097453cf70265fe"
+    },
+    "images/BASE-BAS-04.png": {
+      "canonical_sha256": "186cf21b0064b4f0ad2c30868e9e7773a7e9d31fae3b6a28d2cba1c5af3c8e6c",
+      "rebuilt_sha256": "186cf21b0064b4f0ad2c30868e9e7773a7e9d31fae3b6a28d2cba1c5af3c8e6c"
+    },
+    "images/BASE-BAS-05.png": {
+      "canonical_sha256": "bbb8d99272326b53e1957da600041b8ae92bed9b8e33c35b90c8f2a9f284cb39",
+      "rebuilt_sha256": "bbb8d99272326b53e1957da600041b8ae92bed9b8e33c35b90c8f2a9f284cb39"
+    },
+    "images/BASE-BAS-06.png": {
+      "canonical_sha256": "d48f7e9903cecd31f34b261067b0150b6677c8d07575e62cb8350465b7e93e72",
+      "rebuilt_sha256": "d48f7e9903cecd31f34b261067b0150b6677c8d07575e62cb8350465b7e93e72"
+    },
+    "images/BASE-BAS-07.png": {
+      "canonical_sha256": "5051478bf340c76b9ffdcf90cce9551ed915986e1b984cebed7778f6aecb739d",
+      "rebuilt_sha256": "5051478bf340c76b9ffdcf90cce9551ed915986e1b984cebed7778f6aecb739d"
+    },
+    "images/BASE-BAS-08.png": {
+      "canonical_sha256": "245e0bcb83c35cfdc50cbd4dcef09d3debe62ee8cc02b20c7a1f7492dfcd21cc",
+      "rebuilt_sha256": "245e0bcb83c35cfdc50cbd4dcef09d3debe62ee8cc02b20c7a1f7492dfcd21cc"
+    },
+    "images/BASE-BAS-09.png": {
+      "canonical_sha256": "da9d63ac98c6db030d40c9297d7746a486894913a7c4ac2b43df506f2c2577e0",
+      "rebuilt_sha256": "da9d63ac98c6db030d40c9297d7746a486894913a7c4ac2b43df506f2c2577e0"
+    },
+    "images/BASE-BAS-10.png": {
+      "canonical_sha256": "d5724bd53763976363e200da1550a448563463d23d01b09dabbdd550b144bee1",
+      "rebuilt_sha256": "d5724bd53763976363e200da1550a448563463d23d01b09dabbdd550b144bee1"
+    },
+    "images/BASE-BAS-11.png": {
+      "canonical_sha256": "2c0c3e14ad5cbf8a23eb0f1fdc3bc15c07c776255041ec519bb1a44430662ffe",
+      "rebuilt_sha256": "2c0c3e14ad5cbf8a23eb0f1fdc3bc15c07c776255041ec519bb1a44430662ffe"
+    },
+    "images/BASE-BAS-12.png": {
+      "canonical_sha256": "5aec2bbbcab0a94bd1255229965ec877e68f241a61c99a352467a95a415374a7",
+      "rebuilt_sha256": "5aec2bbbcab0a94bd1255229965ec877e68f241a61c99a352467a95a415374a7"
+    },
+    "images/BASE-BAS-13.png": {
+      "canonical_sha256": "68830cb1766289d7953b5f84a934964dbefae47653aec251b6050f1e7d7948f1",
+      "rebuilt_sha256": "68830cb1766289d7953b5f84a934964dbefae47653aec251b6050f1e7d7948f1"
+    },
+    "images/BASE-BAS-14.png": {
+      "canonical_sha256": "afcc72e333501ab6770f0ad631f14c0fcda8b5a94a138533bddd9892b6e28117",
+      "rebuilt_sha256": "afcc72e333501ab6770f0ad631f14c0fcda8b5a94a138533bddd9892b6e28117"
+    },
+    "images/BASE-BAS-15.png": {
+      "canonical_sha256": "f9cb11d17dabe9e862a752664737b931cae783ec96497bd9621f6aeb5deda1a2",
+      "rebuilt_sha256": "f9cb11d17dabe9e862a752664737b931cae783ec96497bd9621f6aeb5deda1a2"
+    },
+    "images/BASE-BAS-16.png": {
+      "canonical_sha256": "edc0d09c3c4e1c1a65753548ca7cae927f51c1f01ccdf348aa1dc77d4f3eeb6d",
+      "rebuilt_sha256": "edc0d09c3c4e1c1a65753548ca7cae927f51c1f01ccdf348aa1dc77d4f3eeb6d"
+    },
+    "images/BASE-BAS-17.png": {
+      "canonical_sha256": "46d554efc18839b539eb1ad689bd6d51733a02b1182cd04f806ae4884f17e087",
+      "rebuilt_sha256": "46d554efc18839b539eb1ad689bd6d51733a02b1182cd04f806ae4884f17e087"
+    },
+    "images/BASE-BAS-18.png": {
+      "canonical_sha256": "c1058772cadff2e76011a45c4b50751038386e85a6e7539ed7265e87512baf2c",
+      "rebuilt_sha256": "c1058772cadff2e76011a45c4b50751038386e85a6e7539ed7265e87512baf2c"
+    },
+    "images/BASE-BAS-19.png": {
+      "canonical_sha256": "8289b5b7747d924e0883b9421e7238927832e1de90d0a71b66dcb31fb5ee9ef8",
+      "rebuilt_sha256": "8289b5b7747d924e0883b9421e7238927832e1de90d0a71b66dcb31fb5ee9ef8"
+    },
+    "images/BASE-BAS-20.png": {
+      "canonical_sha256": "5fb158f17417d5269ec7ae5aa1a68887242074f89f57a75b585de4f1883ba346",
+      "rebuilt_sha256": "5fb158f17417d5269ec7ae5aa1a68887242074f89f57a75b585de4f1883ba346"
+    },
+    "images/BASE-BAS-21.png": {
+      "canonical_sha256": "bb28f446be856fc68cfecac706391d81a9e72f6f0b0ab63a52c2fd2ecf0b4004",
+      "rebuilt_sha256": "bb28f446be856fc68cfecac706391d81a9e72f6f0b0ab63a52c2fd2ecf0b4004"
+    },
+    "images/BASE-BAS-22.png": {
+      "canonical_sha256": "76fdc60a9a976ddca1f6bc8e5122df27a9ddbfcdbdac57d7a0ef5622a706b3b9",
+      "rebuilt_sha256": "76fdc60a9a976ddca1f6bc8e5122df27a9ddbfcdbdac57d7a0ef5622a706b3b9"
+    },
+    "images/BASE-BAS-23.png": {
+      "canonical_sha256": "eaa9a0a74ca9dbad004702af9ae7082891f55b4e35f73a782d3fc4dd5e1a7637",
+      "rebuilt_sha256": "eaa9a0a74ca9dbad004702af9ae7082891f55b4e35f73a782d3fc4dd5e1a7637"
+    },
+    "images/BASE-BAS-24.png": {
+      "canonical_sha256": "31e0ffca6acb8071e7b4cd415981d9604252bdc315615ff25e58d2339db9aa58",
+      "rebuilt_sha256": "31e0ffca6acb8071e7b4cd415981d9604252bdc315615ff25e58d2339db9aa58"
+    },
+    "images/BASE-BAS-25.png": {
+      "canonical_sha256": "c976f3e278f7977ef069f6f4ee68c69da857c84c6f14346bc5786e4b792bde52",
+      "rebuilt_sha256": "c976f3e278f7977ef069f6f4ee68c69da857c84c6f14346bc5786e4b792bde52"
+    },
+    "images/BASE-BAS-26.png": {
+      "canonical_sha256": "8e109fb9357d669e8770fece7aef3cc497719cf7e5a3a3bad2e7033522166da6",
+      "rebuilt_sha256": "8e109fb9357d669e8770fece7aef3cc497719cf7e5a3a3bad2e7033522166da6"
+    },
+    "images/BASE-BAS-27.png": {
+      "canonical_sha256": "921ddf8ecc0a12275c45efaab48dabc7c9b9c9ac06c9875445c6e3594c9244e1",
+      "rebuilt_sha256": "921ddf8ecc0a12275c45efaab48dabc7c9b9c9ac06c9875445c6e3594c9244e1"
+    },
+    "images/BASE-BAS-28.png": {
+      "canonical_sha256": "299a5674d18d0dcec0ed4b53d213f799ec02b392c1502f2b7ca9094a1421a57a",
+      "rebuilt_sha256": "299a5674d18d0dcec0ed4b53d213f799ec02b392c1502f2b7ca9094a1421a57a"
+    },
+    "images/BASE-BAS-29.png": {
+      "canonical_sha256": "dcacaa4f88f1d35d3c31704d6e05908c36a86fd1349d9d17fbec9f7dbe88308f",
+      "rebuilt_sha256": "dcacaa4f88f1d35d3c31704d6e05908c36a86fd1349d9d17fbec9f7dbe88308f"
+    },
+    "images/BASE-BAS-30.png": {
+      "canonical_sha256": "810b5cd2f5db291a8ec8d28938bf3b2c8f5e51a70674b1fdda56ee36cfc02089",
+      "rebuilt_sha256": "810b5cd2f5db291a8ec8d28938bf3b2c8f5e51a70674b1fdda56ee36cfc02089"
+    },
+    "images/BASE-BAS-32.png": {
+      "canonical_sha256": "2286a19b918d128bfd6d2969cb84a6df96f6ca7276e4b34bde26e8c6dbeacfa7",
+      "rebuilt_sha256": "2286a19b918d128bfd6d2969cb84a6df96f6ca7276e4b34bde26e8c6dbeacfa7"
+    },
+    "images/BASE-BAS-34.png": {
+      "canonical_sha256": "075b519a25ad1e1dc4db081dbc845e63dcda7c9f9e4395fbbe94bb6aa182014c",
+      "rebuilt_sha256": "075b519a25ad1e1dc4db081dbc845e63dcda7c9f9e4395fbbe94bb6aa182014c"
+    },
+    "images/BASE-BAS-36.png": {
+      "canonical_sha256": "e5785d125d135a73fb6dc25377ed5e3ed6dace4ee985a25772f0fa42dbc7b4e0",
+      "rebuilt_sha256": "e5785d125d135a73fb6dc25377ed5e3ed6dace4ee985a25772f0fa42dbc7b4e0"
+    },
+    "images/BASE-BAS-RB-01.png": {
+      "canonical_sha256": "523455f542db18ee7ab8547c1e0354e0c5163142668c7f22ea606766d159a468",
+      "rebuilt_sha256": "523455f542db18ee7ab8547c1e0354e0c5163142668c7f22ea606766d159a468"
+    },
+    "images/BASE-BAS-RB-02.png": {
+      "canonical_sha256": "5e6d1b781e4cbb88454c3e0c29e36f26c2b81ba5e0dda4791871c6692e2d9c94",
+      "rebuilt_sha256": "5e6d1b781e4cbb88454c3e0c29e36f26c2b81ba5e0dda4791871c6692e2d9c94"
+    },
+    "images/BASE-BAS-RB-03.png": {
+      "canonical_sha256": "a3118940160b9ed06581796e74926d78637119af3831e62f1ef2f8acc931f7ba",
+      "rebuilt_sha256": "a3118940160b9ed06581796e74926d78637119af3831e62f1ef2f8acc931f7ba"
+    }
+  }
+}

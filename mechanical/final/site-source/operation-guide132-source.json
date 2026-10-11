@@ -1,0 +1,67 @@
+{
+  "source_sha256": "022be47f1478a32e9122f7d76fc7c0e61040ec7c56a5ca3db943048395f3dc18",
+  "route": "operation-guide.html",
+  "stage_count": 17,
+  "states": {
+    "load_empty": {
+      "count": 899,
+      "sha256": "4fd9833b4d1b90d5d2611e5f9731f012d2a6529b87c49c2bd5c316f3743a4ebe",
+      "file": "up-all50-899.mpd"
+    },
+    "cube_above": {
+      "count": 899,
+      "sha256": "4fd9833b4d1b90d5d2611e5f9731f012d2a6529b87c49c2bd5c316f3743a4ebe",
+      "file": "up-all50-899.mpd"
+    },
+    "seated": {
+      "count": 899,
+      "sha256": "4fd9833b4d1b90d5d2611e5f9731f012d2a6529b87c49c2bd5c316f3743a4ebe",
+      "file": "up-all50-899.mpd"
+    },
+    "fb_ready": {
+      "count": 899,
+      "sha256": "cbd8456c80d976f3f2ca60ca7e9e30d837b5d5e5f4b436a06780c6741494cf43",
+      "file": "up-FB0-open-LR50-899.mpd"
+    },
+    "fb_holds": {
+      "count": 899,
+      "sha256": "27c99923aaaaadfcb7791509c50f3adf1286b892e443e86f81d4a1443204058d",
+      "file": "up-FB0-held-LR50-899.mpd"
+    },
+    "unlocked_up": {
+      "count": 897,
+      "sha256": "a5ec3b25d1ab531681d7a6189a1e4d095426a48e1103dddca96f4f26ac39c0e0",
+      "file": "up-FB0-held-LR50-unlocked-897.mpd"
+    },
+    "parked_fb": {
+      "count": 897,
+      "sha256": "4c2f2d846df6d26a2b14bee2cd242b47492a2c4a1d07c63315f856e16b1d98e1",
+      "file": "down-FB0-held-LR50-897.mpd"
+    },
+    "lr_ready": {
+      "count": 897,
+      "sha256": "0f8824e80e549890e8f522f910d913e4adef8ad6d0c68c37a77a33c4d3305ed2",
+      "file": "down-FB0-held-LR90-open-897.mpd"
+    },
+    "both_hold": {
+      "count": 897,
+      "sha256": "0224fc4132599272d518ee6eadeb4fee8924b004d2516ed940edc3224f10b356",
+      "file": "down-FB0-held-LR90-held-897.mpd"
+    }
+  },
+  "diagrams": {
+    "operation132/diagrams/load_empty.png": "eafc47c4679b3164eb38ef5721f2421b7c33841a0a94008203d2c12181b534ee",
+    "operation132/diagrams/cube_above.png": "c35e1cbf86d5d8b3f0328a203aa4ec64a7b05ff0108aeff8d05f8780caf57b55",
+    "operation132/diagrams/seated.png": "0852f76ed8a90b8b1ed9250671462a61b3ba762ad24ecc67bc79f1cdf2c50099",
+    "operation132/diagrams/fb_ready.png": "347bb6863456551bd8fbfdeff27e15aeb75bc1e68ee44c3294c6d7d799533023",
+    "operation132/diagrams/fb_holds.png": "a15ac7fbadab0173ad0637cc76d182cb2665e994891e830eea84ed3e133f60aa",
+    "operation132/diagrams/unlocked_up.png": "ebeb55206aa00f3120d57fa5b3dfe3608b6fc170df8638fe4dd4d04f18eeeae5",
+    "operation132/diagrams/parked_fb.png": "9cf51fa2321867c0ea33d17188811fa135092e49da51f1a05b1b8b2ad5e6a3b1",
+    "operation132/diagrams/lr_ready.png": "3018d744c3dad659e3611f3219e33fe3cac802ed912eb16446f29df955ba7fb8",
+    "operation132/diagrams/both_hold.png": "74b623769b632700e0b611cb00dc40f93715347f8ff00aa61df0caa7efa7cddb",
+    "operation132/diagrams/angle-reference.png": "e23bf13cc712a78d87af86fc80cf36560b019dd7d513589e3f3a131c7c2daedf"
+  },
+  "review_only": true,
+  "reference_cube_mm": 56,
+  "reference_cube_in_lego_count": false
+}
