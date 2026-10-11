@@ -1,0 +1,4980 @@
+{
+  "changed_ids": [
+    "inner_arm_z-32",
+    "inner_arm_z32",
+    "outer_handle",
+    "root_overlap_pin_16",
+    "root_overlap_pin_32",
+    "root_12L_axle",
+    "root_retainer_-46",
+    "root_retainer_38",
+    "end_11L_axle",
+    "end_retainer_-38",
+    "end_retainer_38",
+    "end_spacer2L_-20",
+    "end_spacer2L_20",
+    "end_spacer1L_-8",
+    "end_spacer1L_8",
+    "center_roller_bush",
+    "stop_4L_axle",
+    "stop_bush",
+    "stop_outer_retainer",
+    "stop_inner_retainer"
+  ],
+  "removed_ids": [
+    "R_working_key",
+    "L_working_key"
+  ],
+  "rows": [
+    {
+      "index1": 1,
+      "id": "R_outer9L",
+      "name": "40490.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        220.0,
+        200.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 1,
+      "functional_group": "support",
+      "baseline_index1": 1
+    },
+    {
+      "index1": 2,
+      "id": "R_wall55615",
+      "name": "55615.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        260.0,
+        160.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 2,
+      "functional_group": "support",
+      "baseline_index1": 2
+    },
+    {
+      "index1": 3,
+      "id": "R_foot55615",
+      "name": "55615.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        220.0,
+        260.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 3,
+      "functional_group": "support",
+      "baseline_index1": 3
+    },
+    {
+      "index1": 4,
+      "id": "R_foot5L",
+      "name": "32316.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        220.0,
+        280.0,
+        60.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 4,
+      "functional_group": "support",
+      "baseline_index1": 4
+    },
+    {
+      "index1": 5,
+      "id": "R_inner9L",
+      "name": "40490.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        180.0,
+        200.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 5,
+      "functional_group": "support",
+      "baseline_index1": 5
+    },
+    {
+      "index1": 6,
+      "id": "R_end48",
+      "name": "32523.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        200.0,
+        120.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 6,
+      "functional_group": "support",
+      "baseline_index1": 6
+    },
+    {
+      "index1": 7,
+      "id": "R_endpin72_48",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        180.0,
+        120.0,
+        10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 7,
+      "functional_group": "support",
+      "baseline_index1": 7
+    },
+    {
+      "index1": 8,
+      "id": "R_endpin88_48",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        220.0,
+        120.0,
+        10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 8,
+      "functional_group": "support",
+      "baseline_index1": 8
+    },
+    {
+      "index1": 9,
+      "id": "R_end112",
+      "name": "32523.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        200.0,
+        280.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 9,
+      "functional_group": "support",
+      "baseline_index1": 9
+    },
+    {
+      "index1": 10,
+      "id": "R_endpin72_112",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        180.0,
+        280.0,
+        -10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 10,
+      "functional_group": "support",
+      "baseline_index1": 10
+    },
+    {
+      "index1": 11,
+      "id": "R_endpin88_112",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        220.0,
+        280.0,
+        -10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 11,
+      "functional_group": "support",
+      "baseline_index1": 11
+    },
+    {
+      "index1": 12,
+      "id": "R_moving_web",
+      "name": "43857.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        200.0,
+        150.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 12,
+      "functional_group": "support",
+      "baseline_index1": 12
+    },
+    {
+      "index1": 13,
+      "id": "R_front_nativeL",
+      "name": "32140.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        260.0,
+        140.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 14,
+      "functional_group": "support",
+      "baseline_index1": 14
+    },
+    {
+      "index1": 14,
+      "id": "R_rear_nativeL",
+      "name": "32140.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        140.0,
+        140.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 15,
+      "functional_group": "support",
+      "baseline_index1": 15
+    },
+    {
+      "index1": 15,
+      "id": "R_axle56",
+      "name": "32073.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        200.0,
+        140.0,
+        -10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 16,
+      "functional_group": "support",
+      "baseline_index1": 16
+    },
+    {
+      "index1": 16,
+      "id": "R_bush56_-18",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        200.0,
+        140.0,
+        -55.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 17,
+      "functional_group": "support",
+      "baseline_index1": 17
+    },
+    {
+      "index1": 17,
+      "id": "R_bush56_14",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        200.0,
+        140.0,
+        35.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 18,
+      "functional_group": "support",
+      "baseline_index1": 18
+    },
+    {
+      "index1": 18,
+      "id": "R_axle64",
+      "name": "32073.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        200.0,
+        160.0,
+        -10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 19,
+      "functional_group": "support",
+      "baseline_index1": 19
+    },
+    {
+      "index1": 19,
+      "id": "R_bush64_-22",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        200.0,
+        160.0,
+        -55.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 20,
+      "functional_group": "support",
+      "baseline_index1": 20
+    },
+    {
+      "index1": 20,
+      "id": "R_bush64_14",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        200.0,
+        160.0,
+        35.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 21,
+      "functional_group": "support",
+      "baseline_index1": 21
+    },
+    {
+      "index1": 21,
+      "id": "L_outer9L",
+      "name": "40490.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -220.0,
+        200.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 22,
+      "functional_group": "support",
+      "baseline_index1": 22
+    },
+    {
+      "index1": 22,
+      "id": "L_wall55615",
+      "name": "55615.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -260.0,
+        160.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "old109_index1": 23,
+      "functional_group": "support",
+      "baseline_index1": 23
+    },
+    {
+      "index1": 23,
+      "id": "L_foot55615",
+      "name": "55615.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -220.0,
+        260.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "old109_index1": 24,
+      "functional_group": "support",
+      "baseline_index1": 24
+    },
+    {
+      "index1": 24,
+      "id": "L_foot5L",
+      "name": "32316.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -220.0,
+        280.0,
+        -60.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "old109_index1": 25,
+      "functional_group": "support",
+      "baseline_index1": 25
+    },
+    {
+      "index1": 25,
+      "id": "L_inner9L",
+      "name": "40490.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -180.0,
+        200.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 26,
+      "functional_group": "support",
+      "baseline_index1": 26
+    },
+    {
+      "index1": 26,
+      "id": "L_end48",
+      "name": "32523.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -200.0,
+        120.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 27,
+      "functional_group": "support",
+      "baseline_index1": 27
+    },
+    {
+      "index1": 27,
+      "id": "L_endpin72_48",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -180.0,
+        120.0,
+        -10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 28,
+      "functional_group": "support",
+      "baseline_index1": 28
+    },
+    {
+      "index1": 28,
+      "id": "L_endpin88_48",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -220.0,
+        120.0,
+        -10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 29,
+      "functional_group": "support",
+      "baseline_index1": 29
+    },
+    {
+      "index1": 29,
+      "id": "L_end112",
+      "name": "32523.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -200.0,
+        280.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 30,
+      "functional_group": "support",
+      "baseline_index1": 30
+    },
+    {
+      "index1": 30,
+      "id": "L_endpin72_112",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -180.0,
+        280.0,
+        10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 31,
+      "functional_group": "support",
+      "baseline_index1": 31
+    },
+    {
+      "index1": 31,
+      "id": "L_endpin88_112",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -220.0,
+        280.0,
+        10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 32,
+      "functional_group": "support",
+      "baseline_index1": 32
+    },
+    {
+      "index1": 32,
+      "id": "L_moving_web",
+      "name": "43857.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -200.0,
+        150.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 33,
+      "functional_group": "support",
+      "baseline_index1": 33
+    },
+    {
+      "index1": 33,
+      "id": "L_front_nativeL",
+      "name": "32140.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -260.0,
+        140.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 35,
+      "functional_group": "support",
+      "baseline_index1": 35
+    },
+    {
+      "index1": 34,
+      "id": "L_rear_nativeL",
+      "name": "32140.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -140.0,
+        140.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 36,
+      "functional_group": "support",
+      "baseline_index1": 36
+    },
+    {
+      "index1": 35,
+      "id": "L_axle56",
+      "name": "32073.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -200.0,
+        140.0,
+        10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 37,
+      "functional_group": "support",
+      "baseline_index1": 37
+    },
+    {
+      "index1": 36,
+      "id": "L_bush56_-18",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -200.0,
+        140.0,
+        55.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "old109_index1": 38,
+      "functional_group": "support",
+      "baseline_index1": 38
+    },
+    {
+      "index1": 37,
+      "id": "L_bush56_14",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -200.0,
+        140.0,
+        -35.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "old109_index1": 39,
+      "functional_group": "support",
+      "baseline_index1": 39
+    },
+    {
+      "index1": 38,
+      "id": "L_axle64",
+      "name": "32073.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -200.0,
+        160.0,
+        10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 40,
+      "functional_group": "support",
+      "baseline_index1": 40
+    },
+    {
+      "index1": 39,
+      "id": "L_bush64_-22",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -200.0,
+        160.0,
+        55.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "old109_index1": 41,
+      "functional_group": "support",
+      "baseline_index1": 41
+    },
+    {
+      "index1": 40,
+      "id": "L_bush64_14",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -200.0,
+        160.0,
+        -35.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "old109_index1": 42,
+      "functional_group": "support",
+      "baseline_index1": 42
+    },
+    {
+      "index1": 41,
+      "id": "R_bridge_chord56",
+      "name": "32525.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        60.0,
+        140.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 43,
+      "functional_group": "support",
+      "baseline_index1": 43
+    },
+    {
+      "index1": 42,
+      "id": "R_bridge_upper_adapter",
+      "name": "11478.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        180.0,
+        140.0,
+        -35.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 44,
+      "functional_group": "support",
+      "baseline_index1": 44
+    },
+    {
+      "index1": 43,
+      "id": "R_bridge_upper_adapter_pin",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        160.0,
+        140.0,
+        -30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 45,
+      "functional_group": "support",
+      "baseline_index1": 45
+    },
+    {
+      "index1": 44,
+      "id": "R_bridge_chord64",
+      "name": "32525.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        60.0,
+        160.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 46,
+      "functional_group": "support",
+      "baseline_index1": 46
+    },
+    {
+      "index1": 45,
+      "id": "R_bridge_lower_adapter",
+      "name": "32316.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        180.0,
+        160.0,
+        -40.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 47,
+      "functional_group": "support",
+      "baseline_index1": 47
+    },
+    {
+      "index1": 46,
+      "id": "R_bridge_lower_adapter_pin56",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        140.0,
+        160.0,
+        -30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 48,
+      "functional_group": "support",
+      "baseline_index1": 48
+    },
+    {
+      "index1": 47,
+      "id": "R_bridge_lower_adapter_pin64",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        160.0,
+        160.0,
+        -30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 49,
+      "functional_group": "support",
+      "baseline_index1": 49
+    },
+    {
+      "index1": 48,
+      "id": "R_bridge_native_web",
+      "name": "32140.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        60.0,
+        140.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 50,
+      "functional_group": "support",
+      "baseline_index1": 50
+    },
+    {
+      "index1": 49,
+      "id": "R_bridge_extra_upper_web_pin",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        100.0,
+        140.0,
+        -10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 51,
+      "functional_group": "support",
+      "baseline_index1": 51
+    },
+    {
+      "index1": 50,
+      "id": "R_bridge_web_pin56",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        120.0,
+        140.0,
+        -10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 52,
+      "functional_group": "support",
+      "baseline_index1": 52
+    },
+    {
+      "index1": 51,
+      "id": "R_bridge_web_pin64",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        120.0,
+        160.0,
+        -10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 53,
+      "functional_group": "support",
+      "baseline_index1": 53
+    },
+    {
+      "index1": 52,
+      "id": "L_bridge_chord56",
+      "name": "32525.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -60.0,
+        140.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 54,
+      "functional_group": "support",
+      "baseline_index1": 54
+    },
+    {
+      "index1": 53,
+      "id": "L_bridge_upper_adapter",
+      "name": "11478.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -180.0,
+        140.0,
+        35.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 55,
+      "functional_group": "support",
+      "baseline_index1": 55
+    },
+    {
+      "index1": 54,
+      "id": "L_bridge_upper_adapter_pin",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -160.0,
+        140.0,
+        30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 56,
+      "functional_group": "support",
+      "baseline_index1": 56
+    },
+    {
+      "index1": 55,
+      "id": "L_bridge_chord64",
+      "name": "32525.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -60.0,
+        160.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 57,
+      "functional_group": "support",
+      "baseline_index1": 57
+    },
+    {
+      "index1": 56,
+      "id": "L_bridge_lower_adapter",
+      "name": "32316.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -180.0,
+        160.0,
+        40.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 58,
+      "functional_group": "support",
+      "baseline_index1": 58
+    },
+    {
+      "index1": 57,
+      "id": "L_bridge_lower_adapter_pin56",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -140.0,
+        160.0,
+        30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 59,
+      "functional_group": "support",
+      "baseline_index1": 59
+    },
+    {
+      "index1": 58,
+      "id": "L_bridge_lower_adapter_pin64",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -160.0,
+        160.0,
+        30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 60,
+      "functional_group": "support",
+      "baseline_index1": 60
+    },
+    {
+      "index1": 59,
+      "id": "L_bridge_native_web",
+      "name": "32140.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -60.0,
+        140.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 61,
+      "functional_group": "support",
+      "baseline_index1": 61
+    },
+    {
+      "index1": 60,
+      "id": "L_bridge_extra_upper_web_pin",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -100.0,
+        140.0,
+        10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 62,
+      "functional_group": "support",
+      "baseline_index1": 62
+    },
+    {
+      "index1": 61,
+      "id": "L_bridge_web_pin56",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -120.0,
+        140.0,
+        10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 63,
+      "functional_group": "support",
+      "baseline_index1": 63
+    },
+    {
+      "index1": 62,
+      "id": "L_bridge_web_pin64",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -120.0,
+        160.0,
+        10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 64,
+      "functional_group": "support",
+      "baseline_index1": 64
+    },
+    {
+      "index1": 63,
+      "id": "center_web",
+      "name": "43857.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        0.0,
+        150.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 65,
+      "functional_group": "support",
+      "baseline_index1": 65
+    },
+    {
+      "index1": 64,
+      "id": "center_pin56",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        0.0,
+        140.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 66,
+      "functional_group": "support",
+      "baseline_index1": 66
+    },
+    {
+      "index1": 65,
+      "id": "center_cross_pin-8_56",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -20.0,
+        140.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 68,
+      "functional_group": "support",
+      "baseline_index1": 68
+    },
+    {
+      "index1": 66,
+      "id": "center_cross_pin8_56",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        20.0,
+        140.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 70,
+      "functional_group": "support",
+      "baseline_index1": 70
+    },
+    {
+      "index1": 67,
+      "id": "center_pin64",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        0.0,
+        160.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 71,
+      "functional_group": "support",
+      "baseline_index1": 71
+    },
+    {
+      "index1": 68,
+      "id": "center_cross_pin-8_64",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        -20.0,
+        160.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 73,
+      "functional_group": "support",
+      "baseline_index1": 73
+    },
+    {
+      "index1": 69,
+      "id": "center_cross_pin8_64",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "",
+      "position_ldu": [
+        20.0,
+        160.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 75,
+      "functional_group": "support",
+      "baseline_index1": 75
+    },
+    {
+      "index1": 70,
+      "id": "R_base_link",
+      "name": "32523.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        220.0,
+        260.0,
+        100.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 76,
+      "functional_group": "support",
+      "baseline_index1": 76
+    },
+    {
+      "index1": 71,
+      "id": "R_base_pin32",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        220.0,
+        270.0,
+        80.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 77,
+      "functional_group": "support",
+      "baseline_index1": 77
+    },
+    {
+      "index1": 72,
+      "id": "R_base_pin40",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        220.0,
+        270.0,
+        100.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 78,
+      "functional_group": "support",
+      "baseline_index1": 78
+    },
+    {
+      "index1": 73,
+      "id": "R_base_pin48",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        220.0,
+        270.0,
+        120.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 79,
+      "functional_group": "support",
+      "baseline_index1": 79
+    },
+    {
+      "index1": 74,
+      "id": "L_base_link",
+      "name": "32523.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -220.0,
+        260.0,
+        -100.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "old109_index1": 80,
+      "functional_group": "support",
+      "baseline_index1": 80
+    },
+    {
+      "index1": 75,
+      "id": "L_base_pin32",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -220.0,
+        270.0,
+        -80.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "old109_index1": 81,
+      "functional_group": "support",
+      "baseline_index1": 81
+    },
+    {
+      "index1": 76,
+      "id": "L_base_pin40",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -220.0,
+        270.0,
+        -100.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "old109_index1": 82,
+      "functional_group": "support",
+      "baseline_index1": 82
+    },
+    {
+      "index1": 77,
+      "id": "L_base_pin48",
+      "name": "2780.dat",
+      "color": 71,
+      "role": "fixed",
+      "note": "",
+      "position_ldu": [
+        -220.0,
+        270.0,
+        -120.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "old109_index1": 83,
+      "functional_group": "support",
+      "baseline_index1": 83
+    },
+    {
+      "index1": 78,
+      "id": "seat_column_-16_-16",
+      "name": "32523.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Thick3L upright, Z-axis ports Y48/56/64",
+      "position_ldu": [
+        -40.0,
+        140.0,
+        -40.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 84,
+      "functional_group": "seat",
+      "baseline_index1": 84
+    },
+    {
+      "index1": 79,
+      "id": "seat_support15100_-16_-16",
+      "name": "15100.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Body round boreY; native pin outward to upright",
+      "position_ldu": [
+        -40.0,
+        120.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 85,
+      "functional_group": "seat",
+      "baseline_index1": 85
+    },
+    {
+      "index1": 80,
+      "id": "seat_column_pin_-16_-16_56",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "8+8mm upright-to-bridge pin",
+      "position_ldu": [
+        -40.0,
+        140.0,
+        -30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 86,
+      "functional_group": "seat",
+      "baseline_index1": 86
+    },
+    {
+      "index1": 81,
+      "id": "seat_column_pin_-16_-16_64",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "8+8mm upright-to-bridge pin",
+      "position_ldu": [
+        -40.0,
+        160.0,
+        -30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 87,
+      "functional_group": "seat",
+      "baseline_index1": 87
+    },
+    {
+      "index1": 82,
+      "id": "seat_column_-16_16",
+      "name": "32523.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Thick3L upright, Z-axis ports Y48/56/64",
+      "position_ldu": [
+        -40.0,
+        140.0,
+        40.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 88,
+      "functional_group": "seat",
+      "baseline_index1": 88
+    },
+    {
+      "index1": 83,
+      "id": "seat_support15100_-16_16",
+      "name": "15100.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Body round boreY; native pin outward to upright",
+      "position_ldu": [
+        -40.0,
+        120.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 89,
+      "functional_group": "seat",
+      "baseline_index1": 89
+    },
+    {
+      "index1": 84,
+      "id": "seat_column_pin_-16_16_64",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "8+8mm upright-to-bridge pin",
+      "position_ldu": [
+        -40.0,
+        160.0,
+        30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 91,
+      "functional_group": "seat",
+      "baseline_index1": 90
+    },
+    {
+      "index1": 85,
+      "id": "seat_column_16_-16",
+      "name": "32523.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Thick3L upright, Z-axis ports Y48/56/64",
+      "position_ldu": [
+        40.0,
+        140.0,
+        -40.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 92,
+      "functional_group": "seat",
+      "baseline_index1": 91
+    },
+    {
+      "index1": 86,
+      "id": "seat_support15100_16_-16",
+      "name": "15100.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Body round boreY; native pin outward to upright",
+      "position_ldu": [
+        40.0,
+        120.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 93,
+      "functional_group": "seat",
+      "baseline_index1": 92
+    },
+    {
+      "index1": 87,
+      "id": "seat_column_pin_16_-16_56",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "8+8mm upright-to-bridge pin",
+      "position_ldu": [
+        40.0,
+        140.0,
+        -30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 94,
+      "functional_group": "seat",
+      "baseline_index1": 93
+    },
+    {
+      "index1": 88,
+      "id": "seat_column_pin_16_-16_64",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "8+8mm upright-to-bridge pin",
+      "position_ldu": [
+        40.0,
+        160.0,
+        -30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 95,
+      "functional_group": "seat",
+      "baseline_index1": 94
+    },
+    {
+      "index1": 89,
+      "id": "seat_column_16_16",
+      "name": "32523.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Thick3L upright, Z-axis ports Y48/56/64",
+      "position_ldu": [
+        40.0,
+        140.0,
+        40.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 96,
+      "functional_group": "seat",
+      "baseline_index1": 95
+    },
+    {
+      "index1": 90,
+      "id": "seat_support15100_16_16",
+      "name": "15100.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Body round boreY; native pin outward to upright",
+      "position_ldu": [
+        40.0,
+        120.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 97,
+      "functional_group": "seat",
+      "baseline_index1": 96
+    },
+    {
+      "index1": 91,
+      "id": "seat_column_pin_16_16_56",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "8+8mm upright-to-bridge pin",
+      "position_ldu": [
+        40.0,
+        140.0,
+        30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 98,
+      "functional_group": "seat",
+      "baseline_index1": 97
+    },
+    {
+      "index1": 92,
+      "id": "seat_column_pin_16_16_64",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "8+8mm upright-to-bridge pin",
+      "position_ldu": [
+        40.0,
+        160.0,
+        30.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 99,
+      "functional_group": "seat",
+      "baseline_index1": 98
+    },
+    {
+      "index1": 93,
+      "id": "seat_H",
+      "name": "14720.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Native flatH; localX to-Z, localY toY, localZ toX",
+      "position_ldu": [
+        0.0,
+        100.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 100,
+      "functional_group": "seat",
+      "baseline_index1": 99
+    },
+    {
+      "index1": 94,
+      "id": "seat_deck_-8",
+      "name": "32524.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Flat7L deck; lengthX, boreY",
+      "position_ldu": [
+        0.0,
+        80.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 101,
+      "functional_group": "seat",
+      "baseline_index1": 100
+    },
+    {
+      "index1": 95,
+      "id": "seat_deck_0",
+      "name": "32524.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Flat7L deck; lengthX, boreY",
+      "position_ldu": [
+        0.0,
+        80.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 102,
+      "functional_group": "seat",
+      "baseline_index1": 101
+    },
+    {
+      "index1": 96,
+      "id": "seat_deck_8",
+      "name": "32524.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Flat7L deck; lengthX, boreY",
+      "position_ldu": [
+        0.0,
+        80.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "old109_index1": 103,
+      "functional_group": "seat",
+      "baseline_index1": 102
+    },
+    {
+      "index1": 97,
+      "id": "seat_corner_longpin_-16_-8",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Three layers Y28..52; shoulderY36",
+      "position_ldu": [
+        -40.0,
+        100.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 104,
+      "functional_group": "seat",
+      "baseline_index1": 103
+    },
+    {
+      "index1": 98,
+      "id": "seat_corner_longpin_-16_8",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Three layers Y28..52; shoulderY36",
+      "position_ldu": [
+        -40.0,
+        100.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 105,
+      "functional_group": "seat",
+      "baseline_index1": 104
+    },
+    {
+      "index1": 99,
+      "id": "seat_middle_deck_pin_-16",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Two-layer deck/H pin at middleZ0; separate from four corner pins",
+      "position_ldu": [
+        -40.0,
+        90.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 106,
+      "functional_group": "seat",
+      "baseline_index1": 105
+    },
+    {
+      "index1": 100,
+      "id": "seat_corner_longpin_16_-8",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Three layers Y28..52; shoulderY36",
+      "position_ldu": [
+        40.0,
+        100.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 107,
+      "functional_group": "seat",
+      "baseline_index1": 106
+    },
+    {
+      "index1": 101,
+      "id": "seat_corner_longpin_16_8",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Three layers Y28..52; shoulderY36",
+      "position_ldu": [
+        40.0,
+        100.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 108,
+      "functional_group": "seat",
+      "baseline_index1": 107
+    },
+    {
+      "index1": 102,
+      "id": "seat_middle_deck_pin_16",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Two-layer deck/H pin at middleZ0; separate from four corner pins",
+      "position_ldu": [
+        40.0,
+        90.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "old109_index1": 109,
+      "functional_group": "seat",
+      "baseline_index1": 108
+    },
+    {
+      "id": "z_locator_positiveZ_L",
+      "name": "32526.dat",
+      "color": 2,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        -40.0,
+        60.0,
+        80.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "functional_group": "z_locator",
+      "old109_index1": null,
+      "index1": 103,
+      "baseline_index1": 109
+    },
+    {
+      "id": "z_locator_root5L",
+      "name": "32073.dat",
+      "color": 2,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        -40.0,
+        140.0,
+        50.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "functional_group": "z_locator",
+      "old109_index1": null,
+      "index1": 104,
+      "baseline_index1": 110
+    },
+    {
+      "id": "z_locator_root6L",
+      "name": "3706.dat",
+      "color": 2,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        -80.0,
+        140.0,
+        40.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "functional_group": "z_locator",
+      "old109_index1": null,
+      "index1": 105,
+      "baseline_index1": 111
+    },
+    {
+      "id": "z_locator_retainer-16_2",
+      "name": "32123a.dat",
+      "color": 2,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        -40.0,
+        140.0,
+        5.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "z_locator",
+      "old109_index1": null,
+      "index1": 106,
+      "baseline_index1": 112
+    },
+    {
+      "id": "z_locator_retainer-16_38",
+      "name": "32123a.dat",
+      "color": 2,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        -40.0,
+        140.0,
+        95.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "z_locator",
+      "old109_index1": null,
+      "index1": 107,
+      "baseline_index1": 113
+    },
+    {
+      "id": "z_locator_retainer-32_-6",
+      "name": "32123a.dat",
+      "color": 2,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        -80.0,
+        140.0,
+        -15.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "z_locator",
+      "old109_index1": null,
+      "index1": 108,
+      "baseline_index1": 114
+    },
+    {
+      "id": "z_locator_retainer-32_38",
+      "name": "32123a.dat",
+      "color": 2,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        -80.0,
+        140.0,
+        95.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "z_locator",
+      "old109_index1": null,
+      "index1": 109,
+      "baseline_index1": 115
+    },
+    {
+      "id": "z_locator_one_layer_root_spacer",
+      "name": "18654.dat",
+      "color": 2,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        -40.0,
+        140.0,
+        60.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "functional_group": "z_locator",
+      "old109_index1": null,
+      "index1": 110,
+      "baseline_index1": 116
+    },
+    {
+      "id": "z_locator_two_layer_root_spacer",
+      "name": "62462.dat",
+      "color": 2,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        -80.0,
+        140.0,
+        50.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "functional_group": "z_locator",
+      "old109_index1": null,
+      "index1": 111,
+      "baseline_index1": 117
+    },
+    {
+      "id": "x_locator_post_-8",
+      "name": "32523.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        100.0,
+        80.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 112,
+      "baseline_index1": 118
+    },
+    {
+      "id": "x_locator_deck_root_-8",
+      "name": "15100.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        60.0,
+        100.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 113,
+      "baseline_index1": 119
+    },
+    {
+      "id": "x_locator_root_pin_-8",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        80.0,
+        100.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 114,
+      "baseline_index1": 120
+    },
+    {
+      "id": "x_locator_post_8",
+      "name": "32523.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        100.0,
+        80.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 115,
+      "baseline_index1": 121
+    },
+    {
+      "id": "x_locator_deck_root_8",
+      "name": "15100.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        60.0,
+        100.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 116,
+      "baseline_index1": 122
+    },
+    {
+      "id": "x_locator_root_pin_8",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        80.0,
+        100.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 117,
+      "baseline_index1": 123
+    },
+    {
+      "id": "x_locator_upper_bar",
+      "name": "32316.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        80.0,
+        60.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 118,
+      "baseline_index1": 124
+    },
+    {
+      "id": "x_locator_middle_spacer",
+      "name": "18654.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        100.0,
+        60.0,
+        40.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 119,
+      "baseline_index1": 125
+    },
+    {
+      "id": "x_locator_left_lower_longpin",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        110.0,
+        80.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 120,
+      "baseline_index1": 126
+    },
+    {
+      "id": "x_locator_right_upper_pin",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        90.0,
+        60.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 121,
+      "baseline_index1": 127
+    },
+    {
+      "id": "x_locator_left_upper_pin",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        90.0,
+        60.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 122,
+      "baseline_index1": 128
+    },
+    {
+      "id": "x_locator_bar_to_thinLs_pin",
+      "name": "6558.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        100.0,
+        60.0,
+        40.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 123,
+      "baseline_index1": 129
+    },
+    {
+      "id": "x_locator_root_spacer_-8",
+      "name": "18654.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        80.0,
+        100.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 124,
+      "baseline_index1": 130
+    },
+    {
+      "id": "x_locator_root_spacer_8",
+      "name": "18654.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        80.0,
+        100.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 125,
+      "baseline_index1": 131
+    },
+    {
+      "id": "x_locator_native32140",
+      "name": "32140.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Review locator source; physical untested",
+      "position_ldu": [
+        120.0,
+        80.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "functional_group": "x_locator",
+      "old109_index1": null,
+      "index1": 126,
+      "baseline_index1": 132
+    },
+    {
+      "index1": 127,
+      "id": "R_bridge_outer_thin",
+      "name": "11478.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Outward second 11478; nominal review only",
+      "position_ldu": [
+        180.0,
+        140.0,
+        -45.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": null,
+      "functional_group": "support",
+      "baseline_index1": null
+    },
+    {
+      "index1": 128,
+      "id": "L_bridge_outer_thin",
+      "name": "11478.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "Outward second 11478; nominal review only",
+      "position_ldu": [
+        -180.0,
+        140.0,
+        45.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": null,
+      "functional_group": "support",
+      "baseline_index1": null
+    },
+    {
+      "index1": 129,
+      "id": "center_double_web-8",
+      "name": "43857.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "43857 replaces two 18654 spacers; native holes Y56/64",
+      "position_ldu": [
+        -20.0,
+        150.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": null,
+      "functional_group": "support",
+      "baseline_index1": null
+    },
+    {
+      "index1": 130,
+      "id": "center_double_web8",
+      "name": "43857.dat",
+      "color": 14,
+      "role": "moving",
+      "note": "43857 replaces two 18654 spacers; native holes Y56/64",
+      "position_ldu": [
+        20.0,
+        150.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "old109_index1": null,
+      "functional_group": "support",
+      "baseline_index1": null
+    },
+    {
+      "id": "inner_arm_z-32",
+      "name": "32278.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "inner_arm_z-32",
+      "position_ldu": [
+        146.13813089606134,
+        159.0,
+        -80.0
+      ],
+      "rotation": [
+        [
+          0.2928571428571428,
+          0.0,
+          -0.956156207885276
+        ],
+        [
+          -0.956156207885276,
+          0.0,
+          -0.2928571428571428
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 131
+    },
+    {
+      "id": "inner_arm_z32",
+      "name": "32278.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "inner_arm_z32",
+      "position_ldu": [
+        146.13813089606134,
+        159.0,
+        80.0
+      ],
+      "rotation": [
+        [
+          0.2928571428571428,
+          0.0,
+          -0.956156207885276
+        ],
+        [
+          -0.956156207885276,
+          0.0,
+          -0.2928571428571428
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 132
+    },
+    {
+      "id": "outer_handle",
+      "name": "32278.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "outer_handle",
+      "position_ldu": [
+        337.3693724731166,
+        217.57142857142856,
+        -100.0
+      ],
+      "rotation": [
+        [
+          0.2928571428571428,
+          0.0,
+          -0.956156207885276
+        ],
+        [
+          -0.956156207885276,
+          0.0,
+          -0.2928571428571428
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 133
+    },
+    {
+      "id": "root_overlap_pin_16",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "root_overlap_pin_16",
+      "position_ldu": [
+        241.75375168458893,
+        188.28571428571428,
+        -90.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 134
+    },
+    {
+      "id": "root_overlap_pin_32",
+      "name": "2780.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "root_overlap_pin_32",
+      "position_ldu": [
+        203.5075033691779,
+        176.57142857142858,
+        -90.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 135
+    },
+    {
+      "id": "root_12L_axle",
+      "name": "3708.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "root_12L_axle",
+      "position_ldu": [
+        280.0,
+        200.0,
+        -10.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 136
+    },
+    {
+      "id": "root_retainer_-46",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "root_retainer_-46",
+      "position_ldu": [
+        280.0,
+        200.0,
+        -115.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 137
+    },
+    {
+      "id": "root_retainer_38",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "root_retainer_38",
+      "position_ldu": [
+        280.0,
+        200.0,
+        95.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 138
+    },
+    {
+      "id": "end_11L_axle",
+      "name": "23948.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "end_11L_axle",
+      "position_ldu": [
+        12.276261792122725,
+        118.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 139
+    },
+    {
+      "id": "end_retainer_-38",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "end_retainer_-38",
+      "position_ldu": [
+        12.276261792122725,
+        118.0,
+        -95.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 140
+    },
+    {
+      "id": "end_retainer_38",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "end_retainer_38",
+      "position_ldu": [
+        12.276261792122725,
+        118.0,
+        95.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 141
+    },
+    {
+      "id": "end_spacer2L_-20",
+      "name": "62462.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "end_spacer2L_-20",
+      "position_ldu": [
+        12.276261792122725,
+        118.0,
+        -50.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 142
+    },
+    {
+      "id": "end_spacer2L_20",
+      "name": "62462.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "end_spacer2L_20",
+      "position_ldu": [
+        12.276261792122725,
+        118.0,
+        50.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 143
+    },
+    {
+      "id": "end_spacer1L_-8",
+      "name": "18654.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "end_spacer1L_-8",
+      "position_ldu": [
+        12.276261792122725,
+        118.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 144
+    },
+    {
+      "id": "end_spacer1L_8",
+      "name": "18654.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "end_spacer1L_8",
+      "position_ldu": [
+        12.276261792122725,
+        118.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 145
+    },
+    {
+      "id": "center_roller_bush",
+      "name": "3713.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "center_roller_bush",
+      "position_ldu": [
+        12.276261792122725,
+        118.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 146
+    },
+    {
+      "id": "stop_4L_axle",
+      "name": "3705.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "stop_4L_axle",
+      "position_ldu": [
+        413.8618691039386,
+        241.0,
+        -90.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 147
+    },
+    {
+      "id": "stop_bush",
+      "name": "3713.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "stop_bush",
+      "position_ldu": [
+        413.8618691039386,
+        241.0,
+        -80.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 148
+    },
+    {
+      "id": "stop_outer_retainer",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "stop_outer_retainer",
+      "position_ldu": [
+        413.8618691039386,
+        241.0,
+        -115.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 149
+    },
+    {
+      "id": "stop_inner_retainer",
+      "name": "32123a.dat",
+      "color": 14,
+      "role": "lever",
+      "functional_group": "gravity_lever",
+      "note": "stop_inner_retainer",
+      "position_ldu": [
+        413.8618691039386,
+        241.0,
+        -65.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baseline_index1": null,
+      "old109_index1": null,
+      "index1": 150
+    }
+  ]
+}

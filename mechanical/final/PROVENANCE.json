@@ -1,0 +1,631 @@
+{
+  "sites": {
+    "project_id": "appgprj_6ac5b2d6b340819191470ee0a9ed4f34",
+    "version": 27,
+    "commit": "da37e173c56301fad68e6ce4dff24ff8ebd19126",
+    "root_commit": "f91fd649afedc1136062b8a8f32772cefe1a0043",
+    "git_tracked_files": 664,
+    "import_method": "git read-tree --prefix=mechanical/final/site-source/ -u sites-v27/main; independent roots retained separately",
+    "github_base": "723bdd9283d53b3dcf01d64fb80fcea4695bbe7a",
+    "merge_base_exit_code": 1
+  },
+  "library": {
+    "zip": {
+      "id": "libfile_baed9f5653988191baba326045a72455",
+      "version": 18,
+      "bytes": 72175636,
+      "sha256": "6cfffb33585e37ae5eceef4e5d38a5275534cbc1a2a6a1810ffd792fa0e4e41f"
+    },
+    "pdf": {
+      "id": "libfile_4ab37b00f14c81918b1d14573d3bd9d0",
+      "version": 6,
+      "bytes": 25013922,
+      "pages": 501,
+      "sha256": "39bcef11c358ee797d2f606880a1b1bc37db8c4589c87290bc6748168605af52"
+    }
+  },
+  "original_delivery_files": {
+    "candidate-manifest.json": "1627fc32076ac3e715be42d1b6b3a81555e3635d8163cd8ab250abcb5de71e83",
+    "REBUILD.txt": "bd8bd6dcc0d479cf1c0256de2a1711c4099ffc91f18c98f795c3009ac7ab8680",
+    "requirements.txt": "a2364d90480c9fbb874adfbca5c873ec2c7558162e84c7755cbf96ea81a68b7b",
+    "generate_inventory.py": "9ec3a353d7ac5b5701e22d51c09ec77e8466fa38c6418a08fc010dcf7c678327",
+    "geometry-sha256.json": "b248448955f04707ba2663bc358169a668323e9e29a7a715e585099607c260fe",
+    "frozen-source-sha256.json": "2e6a8dfb884402c9213fa0d70d1fb03d199c70b0d6988ae61316f8ae9889e401",
+    "GEOMETRY-VALIDATION.json": "9ca9b7d25ea1f433832f15ca5452af38f8345715b07170a8d2d0912838d78e6c",
+    "subsystem-BOM.csv": "a5f7032481ab23e77be8e04bb5a015441d16612dad879c2efdae86c1e0346fcc",
+    "README-zh.txt": "1b37aad19fe149828fb6b56a829a0fc6fc41d8038cc6f14e086f20d9400c3594",
+    "assembly-integrated132.json": "2512d0f6e79c826c0c683e7c9b75882c4acc988cc5ac59d7670514da9d173f56",
+    "instance-inventory.csv": "4f53539f542fb65ff92f7cd6e6cd3f9dbfefdf7568df66ff1ecb9e302800c50c",
+    "candidate.py": "32ee75a022cf626f978f7d2aaeb23225f89b948c0e503a9080a8067a8b90c658",
+    "build_candidate.py": "5e6fd41ee056d63620a27a41ca9228ace0404b183bc9444d317b0135b4153ba7",
+    "README.txt": "1b37aad19fe149828fb6b56a829a0fc6fc41d8038cc6f14e086f20d9400c3594",
+    "final-BOM.csv": "05a4662a9dd4ea2ffc24f0026013b1d919ae74db572e6ca09282b4669fc4f8bb",
+    "source/assembly132.json": "bba23990c0c5e4387262ddafd3ca4d908625f7291cd4e6e14fbb1fa552acd561",
+    "source/approved-gravity-20part-meshes.npz": "fe3bdff016d2ad742a5af57095d42cdc72fc58b6c85e6cd12168365ff7bd85e7",
+    "source/assembly-integrated-R1.json": "85e0c7326d37d602ca37c2a5a175bf0fe74f9b414c353ba326e6fac4d2370cb2",
+    "source/approved-gravity-20part-scene.json": "881191efd25520d976d3d198f1d677eded8137d65cf75c10bd4483fb6b757003",
+    "source/baseline_model.py": "ed1b9d8d71aed8f34e93dce32fcb35a33a16203360bfdbd1064282600c72d7fc",
+    "manual/test_full_arm_coverage.py": "e3ebeb1d3297ba8d0aa8e9b78f62bf48ab0a380fc50ca24951993eea6200e5b9",
+    "manual/REBUILD.md": "60124ba811652236d2ade595c784dacf12b33a49b3cf9081ceb32748b2a4743f",
+    "manual/build_final_head.py": "e260703fd786fcff1925e69c6ca96f1fd245437f924af14737377f53ce137fd2",
+    "manual/final-assembly-validation.json": "959392cd6965281ad0fd6ed92c26cdc80789c5f9a47281e6e98002ccd81f9b0a",
+    "manual/pdf-compression-validation.json": "4fa300a7bde3fbecdc54af08e24e8d777f0f88be7b5618de20478cb21412c75e",
+    "manual/full-arm-assembly-review.json": "a5c5036bc47d1d5823d1c719a67ec21d6e8fb76875787469fa28d7a6f4879e89",
+    "manual/final-head-steps.json": "2e0cc002c541f801df65053ae82c1642dda8a6276709061755f57f57f33f01ac",
+    "manual/render_wallfoot_detail.py": "f838d288bd18930fa1859544c4c3a4b1193830b6233611b105d650e086597274",
+    "manual/render_support.py": "a5e6b06e5d374e1818e34b3a6da0d57d62f4181b0db49555043d207f45002776",
+    "manual/final-head-opening-audit.json": "aee69c6782d09c560a0ccbb19d798ab792fe6ea0145de3d3a9a6a652aa64763e",
+    "manual/manual.pdf": "39bcef11c358ee797d2f606880a1b1bc37db8c4589c87290bc6748168605af52",
+    "manual/pdf-layout-check.json": "c5769bc3ee3e071865ca5a9d8a53ebef4cd91ee9a4665582f37ab9796a8569e6",
+    "manual/prepare_closed_corner.py": "92a20432a14e4a7f8a6fb6b47b1f504b10a92056611b8ff4817f5b4785f435d4",
+    "manual/manual.md": "566168ecb9013e8f55e5930e0cd0e9ec94c0f4e34d12e92543a687c796b39ba2",
+    "manual/recover_base.py": "9e5ec35025913b6458d75b6c4a769cc19e5cc0a5fb51ffae9580c4fbf530be28",
+    "manual/render_braces.py": "5603209256089f7a08c46899238bf63b8b576731b3bf73dd8efc533daa0ce90f",
+    "manual/final-only-source-validation.json": "acf8e395bf0e8bedc55f8994d23e89796b63b33d099979834a6bcf7a8ebe0795",
+    "manual/render_base.py": "c2621c653bcc0101e842770f24463ae21fb96b8d2abfbc9b17e4677b4260a6b8",
+    "manual/base-steps.json": "926cf7809b49635c988ff324302c962c10c4f50b8fcfd60e51479b77660f4e02",
+    "manual/finalize_source_wording.py": "852b0bc23cc9ea752ee5ebb1f004aba4b7cc0ae9140979bdf10ab4c0db7e44c9",
+    "manual/test_turntable_fix.py": "0b20a3998c7e8143112a4eebdf0745a07fb7f284999341e38547288964d1ed3a",
+    "manual/support-instance-map.json": "595c39c86bc8e2cc0c1c374995d3000638ab095eb8a9156334437b94f4aed356",
+    "manual/final-head-validation.json": "3c2c05ff6e267aea79dc4dc349d35f15393eaf436581763817933bdcf7549470",
+    "manual/build_manual.py": "bbff52a1ebbd5b321b802f19dd83144c3e92e4c358e18299218eb3ebdc98c1e4",
+    "manual/turntable-mount-geometry-audit.json": "69237f4d33bc58e1fc5a6fe26c475f183a5f5bd2141e9af7b706f67207d1c2d5",
+    "manual/validate_final_head.py": "88aed741c5441c9a84e6b405251c3be98173c77e8d78d284ffbeeb654e9e8530",
+    "manual/prepare_support.py": "1193ac4ace55237152ab226a186eabaa009ce9f9dd17b7ff09f88ca3977bcd28",
+    "manual/core_assembly_steps.py": "1a492f7405eb6a7034e4752c0ef0dc9e9956d4a30051cd2562583874e4354b6b",
+    "manual/visual-qa-final.json": "8d1cb79615ba9bd71d90713c8ec79fcb35ff66fce658e943d874fc233baf5ee2",
+    "manual/support-steps.json": "d66941f894141787aea01b4501f558f34d2150caabb97f3c6dd1ab884d686306",
+    "manual/guide.json": "b338d9f612acc1a63cf7f335ab8d953715d7d3e2b15e34d72bd7c8cb00a821d1",
+    "manual/render_interfaces.py": "16baa6485b1736ec6f59fe9677a1d690b882748bcbed93579907d642128691c1",
+    "manual/FINAL-HEAD-BUILD.md": "167577103e06f9d2c9685a7baaee13531de128e51379a600dba789dea610c543",
+    "manual/final-head-render-audit.json": "ecdbb3000ac3b60fb1df1d26cb275f0e0adfa3cc376eb2cee804f9f65e27fb6d",
+    "models/head-closed.mpd": "48a12976b3532747b6a7d6e705bf13feb4b1fb7207d0c518bbe57491d4149ba7",
+    "models/LR90-open.mpd": "de0e327c9bfeeb8b598bfe8d87116160ed1f3fea74a4baf7579cd2448e8b642b",
+    "models/FB0-open.mpd": "c441578ef62a750e743402c7c01fce5d4a303c680e52770efa5a2e1c32ab0ff2",
+    "models/support-only-down40_8.mpd": "6590b47e01e851c557631619f7608818b71eb23c650f7d9082dd43d7287e9f38",
+    "models/both-held.mpd": "f1a85439604487ebbb2890af89065b129a9ece9ea4aea59f0aff32bfed41e6a0",
+    "models/head-open25.mpd": "871f53a27e704b261afb4ae9c494267e8f67ae6267973f8b87db60b1a2a33fb9",
+    "models/FB0-held.mpd": "ab3e86fbcc83fba6a4389795fb5d851b249f7ffec6d83e22e119ba564451e81e",
+    "models/loading-all50.mpd": "1bc59b1c4ec3be91c53e812a01e853c11e939887d3223d1de4ffd0cb9d215046",
+    "models/support-down40_8.mpd": "4c65d5c3084f0e5b745bf686d397fc469ef9a95646ebe036cf4c90a67eaf6c6a",
+    "models/support-raised.mpd": "4b33aedabad790a9c929600d30ef1b74761721d0c1d8d6568db6ca5c8f94b8c1",
+    "models/support-held.mpd": "2e596e5aad61854cda8897936725df568ec2c1cc6fb5594448127ac9fa442cdf",
+    "offline-viewer/operation.html": "cae10332eef8ddbf25833655d891edcf805c49b4947efc947953b5ce144c330f",
+    "offline-viewer/assembly.html": "144b8b3368041bb9392ecd921fab665100da67fd269965eebb8b6426446144c1",
+    "offline-viewer/support.html": "60c10328da86987c968a628b145202250c86541b2c94750911cee61cb49a371f",
+    "offline-viewer/index.html": "d67009e56d73f63b62ec1ca97429074f0bba9c6f4f7cf2e9cb6f36eb6bff5461",
+    "parts/23948.dat": "7c8833a4a283f1eeab15ccb16c1f03f33f98bfc5578240a66aac3850329dee28",
+    "parts/6538s01.dat": "30b6df05538ec96ff07697f1b32ad6063bcce63a9d9a4d6a3ac16559f6378101",
+    "parts/60483s01.dat": "19502854a4f0a692bdf46cf90f901fbdf443aa96221fe8436965c6bd97d0b803",
+    "parts/60483.dat": "e9642b7d24f816f62a37ef798e2a7a21377febec2e857ce0ecc4eceb907ca47c",
+    "source/manual-inputs/base-legacy219-first59.json": "c6525e50d005aced826ebce7b75cdb87e4f5174c9f81f3dfedeebfe1ffa5dba0",
+    "source/manual-inputs/base-portable-source-provenance.json": "c2b263482ac9464a8c6812e1476ce9574abf51478c3cbc7c766c6e94d6951038",
+    "source/manual-inputs/native_base_renderer.py": "7a524a05d3be2e7287f3cc286901a2b39539c1cd26133d6e60f8405349c96227",
+    "source/manual-inputs/base-portable-rebuild-validation.json": "b6621fd4c47271dd1fb1be9246d3c3ac85f05fd0e619e532dd09ed32d8335ee9",
+    "source/manual-inputs/support-source-steps.json": "34c6d72333b6f8dff1dd05c1aa4a5dc3fd3f13967c538b74c3709b97c0a564a1",
+    "source/manual-inputs/base-legacy219-render.json": "90a930f50d4d2c61d2230698a105babc1d4e41b9271cd68a02aaeb84a88e58b0",
+    "source/manual-inputs/base-legacy219-foundation.json": "95f016a8e12c3b5f7daf725a6cb215b90f63cdb4a5fab2333f7ac197fcf0ad0b",
+    "manual/final-head-diagrams/06.png": "4e28846f5f8845625fccda09234bcd0468776522292126a88a3be6ea86c7a583",
+    "manual/final-head-diagrams/25.png": "3a83a8b183cfbbe6473491998a244699d96c66d1cca5f3f6ce874e806b306e02",
+    "manual/final-head-diagrams/12.png": "252e11033a58a1f45c89f0c0dc22518d647e2879d110956393cdf238ef6a2428",
+    "manual/final-head-diagrams/TT02.png": "0f3966c785d5a08f001e1b83e3c524f003c93e222d625e87e6df28e429389311",
+    "manual/final-head-diagrams/CORE10.png": "0d8bf51a94c8a5843548801035eb77747a23ce36af71df63d1f34575ddc93965",
+    "manual/final-head-diagrams/CORE06.png": "5642efcfc8f1ca47e668a57d81d3edd40bda146178332c54bde576246348b750",
+    "manual/final-head-diagrams/CORE38.png": "0784f789b15034a3393eda370b8055e3f63b5c18f09dc30a39258f081334afee",
+    "manual/final-head-diagrams/23.png": "2b71ae15ded4a93d4dbcccaac1e7b9610793031155778b88615effe76afa06ba",
+    "manual/final-head-diagrams/TT07.png": "d9f790816cbf24b042366c4ebcc8f935bb4b8cfdeab40acfff1b9f21cde4be7e",
+    "manual/final-head-diagrams/01.png": "f9ebbf32fd2e37eaeff1698fe120f4ce0dc724472ed458071d6062046f6be901",
+    "manual/final-head-diagrams/CORE34.png": "8ed4927304bba964c31a240a98484c1929d8adf0b20da054d15d5db3a0c01d35",
+    "manual/final-head-diagrams/17.png": "997f2572bd454f53a624fa9eb998b34cdd6e72cf3e25a5adf9513255020d216a",
+    "manual/final-head-diagrams/CORE28.png": "50af8e4f53486e7ed1764b69e8a48021b7a09ee41ba6f764ca24ed2db26fa38b",
+    "manual/final-head-diagrams/CORE39.png": "25f0ecb85492bea7b9df5f53698904fdc2df8979150be581dc3c986c1b7704b4",
+    "manual/final-head-diagrams/CORE13.png": "b270ae383f78b54b6702884e8dd51407b3c9e18e3999a0e9073830afaae17ba1",
+    "manual/final-head-diagrams/CORE32.png": "535bcbd6fb48ea8a4450226470adc5923b39476c7a0ed0b4d578ed493afbb1b4",
+    "manual/final-head-diagrams/CORE40.png": "d7f77cb1e1ce67532ebe659e1df5e8eaf4cd42ceb28251ade285ad64bedd97e4",
+    "manual/final-head-diagrams/19.png": "fa904a703645e512ff2ae9559966aa556726dcdbaf1dea2387e6a78487c95bb2",
+    "manual/final-head-diagrams/22.png": "72cff72a05c820e95f068fb69b1aaecf5c27bd53a22814a820e01dbb12f025a4",
+    "manual/final-head-diagrams/13.png": "ebcb2cf059d53bd34750dfe597e05ae278250ee6b6be82242f413de2a15b397f",
+    "manual/final-head-diagrams/CORE29.png": "516b88f88bd55ba18f70df3a477fb5b961f5c1e6573a412043e385f13e72ceb7",
+    "manual/final-head-diagrams/CORE42.png": "f6703ac7ef805dd77a8470d471d5bc0944cdc2b033846bad1b19c53618b2307d",
+    "manual/final-head-diagrams/08.png": "80dd19af85a3f3b89020f2acce7a241ef457803bd83ecfcd782733636a5aaef9",
+    "manual/final-head-diagrams/CORE17.png": "ab2b07c456088b221c60abac198111f6c045552aa08eb5e4d2899ecd386d9bca",
+    "manual/final-head-diagrams/02.png": "8b32b1b5cca6b731ad7e382aced8e91a5c07e520d4f55d9c9b07255a8c2a2b67",
+    "manual/final-head-diagrams/CORE03.png": "71cc9663e5cae5667c40b8e271d65856401546af470124998b901b5aabef9bc6",
+    "manual/final-head-diagrams/15.png": "d3be77cf2b1001d5bbd6915513313c76e64904d924e19cbfc1aad80bcd127269",
+    "manual/final-head-diagrams/CORE22.png": "0484a9d81ff29dc6381bce472c6976642220301da950fd2dcb069863fcb1a9c8",
+    "manual/final-head-diagrams/CORE14.png": "b530992cd1ce7603cb8bb6711ad6b51ef5452ae19847cf1b5fe42e8ed34d9f84",
+    "manual/final-head-diagrams/29.png": "338f4e45a6c69ca0aa744d85bfc1c08adfd2567a0445e5cf2e4a365a3d0be7c0",
+    "manual/final-head-diagrams/TT08.png": "e8951b224c1c28ef8711c99b8a81f500fa09493f4bef308321d039f8d429ded6",
+    "manual/final-head-diagrams/TT05.png": "3897426590a785d7711e352c82362cad68e38846d3f5101eec7420a6b2d31a3b",
+    "manual/final-head-diagrams/TT06.png": "0e5042a025628d828ea39dce04b495d55420d60f982e19bbe2e934a775047307",
+    "manual/final-head-diagrams/26.png": "4783ddeb55d2a4ef480065a2b2dead9a7eec3b2dfca553131999cc22af295ba3",
+    "manual/final-head-diagrams/CORE12.png": "cf2a94e14abf7201da2b9910c6f36332af88216798140d90d8a17c8364adb92e",
+    "manual/final-head-diagrams/CORE21.png": "2e24d52384c9fe3e003305dfd9668db1a7fcd8ed0a312f80d513857d1f818924",
+    "manual/final-head-diagrams/CORE33.png": "31543c11503ad1ffd849866e7aac6f7e3ede158b93695b62f45ba591864aa7ea",
+    "manual/final-head-diagrams/27.png": "5898ea0d6f66902782d46e657eff28375e4fff48dbed3a069408ddc764af59f8",
+    "manual/final-head-diagrams/TT01.png": "1b4393984727fe44c6fdccc65d1c2c3ccb9764f69270ae0f55bdd620462c0c95",
+    "manual/final-head-diagrams/CORE46.png": "490c8475b83166466972dd6807ea8d4e00fd28f49fd8abeb957f7970f94e334d",
+    "manual/final-head-diagrams/16.png": "718e520345f8f211d4c21a492c31d7d419d21e7d8d36dc440dbb82b9a78e8422",
+    "manual/final-head-diagrams/CORE25.png": "259ed388f0222217efd60529bb34f3ef0ea569a6134c9612772cbbf41d08bebc",
+    "manual/final-head-diagrams/CORE36.png": "983d2e78d4de83fee70e072109614b991a40367b2bb9e8d0c45b686ef87d0e32",
+    "manual/final-head-diagrams/CORE49.png": "e41d5348dabae382bcb6293f9e08d882a17324acabb4137bb5d8da66d8634134",
+    "manual/final-head-diagrams/03.png": "a7dc4c0790accc09ece42c7d22c695999c8e3d665f8d30b9b3d5c56210ed20bf",
+    "manual/final-head-diagrams/CORE08.png": "d86d8ceefde9084884ef76b7d12c640f7e1141d5c81e09fab8ce19f8e6d0cffc",
+    "manual/final-head-diagrams/CORE44.png": "948fdfd65cec7560f3ca1107ae6b94d3c967e6b5130086f50322818e136b30ca",
+    "manual/final-head-diagrams/CORE05.png": "76d93c7a775f043da52c87012ad242032d3b646c703b82cc8c42d354f2b0db3f",
+    "manual/final-head-diagrams/CORE26.png": "0c71036d62c14c4eb1000e75e1232a89d1ed29597b7794f8bc05f5ceaa80dfb4",
+    "manual/final-head-diagrams/CORE35.png": "883468b86d723d189f726c21a21dcbef0255a2c5fa4277b00fafcd2970e4d074",
+    "manual/final-head-diagrams/CORE23.png": "3f58e1e9a9a7251b85632a61d57ef57385a0ac1480d89821e4e61c6865fae95d",
+    "manual/final-head-diagrams/CORE37.png": "528ff3468252ac80f45ea83432950e8dc3d1981447302d67b268fa94ecce0586",
+    "manual/final-head-diagrams/TT04.png": "afc4b74aa59300b6b5231c1d6d10dbb3aa4242cc98036d254267966c52d038e3",
+    "manual/final-head-diagrams/30.png": "fd50ae0ad589ea7634c4738b6065545e1cdb8e305d2d691c9b4450daae7ea962",
+    "manual/final-head-diagrams/14.png": "b152d37bfbc3e3e30b464aefe8331b3c64f9ae4a4265df1badba55cbf029fafd",
+    "manual/final-head-diagrams/TT03.png": "1acc54b64f4c5a058359a9d548566ee4ce89001112fa920b1385cc9f0bae787e",
+    "manual/final-head-diagrams/04.png": "acc166ca400d8fec356eae4f14d2ee395a06d57670888d8465a697ff19a14ff1",
+    "manual/final-head-diagrams/CORE31.png": "89504074b3b9f57e8418de189290bf2186bb19bb3e157d50b1582f4cdbb02dd4",
+    "manual/final-head-diagrams/28.png": "47aead87652b3e1aa73ca9cb611ebcaa630b2ac37966f71c85d6349269f46c4a",
+    "manual/final-head-diagrams/CORE45.png": "42dc433327f20ca81582b641bf362c85e91028c49ce06860c730618b9d74c8f4",
+    "manual/final-head-diagrams/CORE02.png": "7ae422cf78fcb944dd85862d8836bd2a1702bb67ea0f8368baaa770161a41281",
+    "manual/final-head-diagrams/CORE43.png": "f7d66090304a8bc1a17cd7ccfd2367ac2631b2783aa9f12e879f7f9456734e30",
+    "manual/final-head-diagrams/CORE15.png": "ae585911c98a3e30efcc877b46c9ec318be02911901b578ab1fca9fe1a8818ba",
+    "manual/final-head-diagrams/CORE09.png": "6220dd97f963649f3fcc0bfa55e41e582c40157e23a4334916863393b418c09e",
+    "manual/final-head-diagrams/opening.png": "698383045d35df46da90567c0faf7d8b28430db31067a588c6916fddc79bb4c1",
+    "manual/final-head-diagrams/11.png": "1aafac0ea2779620481ede2eb968c80e97236b4a138525c9049e6f134430401f",
+    "manual/final-head-diagrams/21.png": "1c39f02de7f5ea8801a68dd709cbb8c1bcd48de9375e0bb454a14940b22d2b8e",
+    "manual/final-head-diagrams/CORE24.png": "f518aadb6050df2baaa51939631fb60f575b3cb4c25744c2b3cea2bc047c9f8b",
+    "manual/final-head-diagrams/CORE19.png": "07f40762f2a2da1faa6dc26d8fccd385182853395ecf1a16f719a7d293cce38a",
+    "manual/final-head-diagrams/10.png": "17314991d6ceaed9481230a48df45fdb5c6f43234467cddb5ce62dd49dabf2d1",
+    "manual/final-head-diagrams/CORE04.png": "b97b22cb704eedadbc8446cf462abd8e75e10c7fa53b49f6261a3d1e0dba69b3",
+    "manual/final-head-diagrams/CORE01.png": "73d6f764dadd60a0f03b3f9505b9e7e041ef1c6eb35809e5d94a4ec446532075",
+    "manual/final-head-diagrams/CORE16.png": "c321b4c3194ad003bbef197638224c1676e571596565d63a09256dfc6ff9d64b",
+    "manual/final-head-diagrams/CORE18.png": "e80a3fc414d242c9cd80c87e74b8f0fa5ab49f54f428af1d55480bd0ae4fb18b",
+    "manual/final-head-diagrams/CORE47.png": "8a5d424852a6e7d849b574c93a09df65f0240a5ebf96903aaadd91c25018d345",
+    "manual/final-head-diagrams/CORE07.png": "cf35b804ae05c7640313f89adb4cd0e6b1dc79f5513f24417eabaa1102f0b7ba",
+    "manual/final-head-diagrams/CORE41.png": "8c402aa5f6de783ef307e7e76e6ff446df03a21126825f5f7c466eddaf7ccb68",
+    "manual/final-head-diagrams/CORE20.png": "0f9093e2ce8ab3515c08631cd8df6f05c396060b007aa2023352eb8307f8528d",
+    "manual/final-head-diagrams/09.png": "45e8d4e65fb4c67de22501ef70d2dc11da1ce27857ed41502bce64c77cc61c34",
+    "manual/final-head-diagrams/05.png": "4d9b0be01a21987e97feab7cc827316ce9312d44b2a3e9ce8f2fc10126f037b2",
+    "manual/final-head-diagrams/18.png": "02aa8b65d0da748b5e475fc2901c4c072950ff0b51776fae5ceb70bf4f750c04",
+    "manual/final-head-diagrams/07.png": "b74d143275bbfc72c0b94008b4f0722c04881178aec55c1b642179cc95e63699",
+    "manual/final-head-diagrams/TT09.png": "f592027425ad9c422af80b8fbdb182d8bcfad76ae32084e15ebe63ea8520d9ac",
+    "manual/final-head-diagrams/24.png": "a25fcaa5b4064f1f10abb8b99467c7a1d58398413f16ed1f2cf8416ecfec981e",
+    "manual/final-head-diagrams/CORE48.png": "22602b74e5ac74c10f41fcb8faa89a3768d989d172b2227bf71ae7d70acdd451",
+    "manual/final-head-diagrams/CORE30.png": "71c6a521c5f0142723df3e6adf085c33061b04cf7fda97cf71dce360010f8b41",
+    "manual/final-head-diagrams/CORE11.png": "1d2ae30c031caec25952b1966dbf6d888736c3e9a5068dd1c3b3820167a06ff8",
+    "manual/final-head-diagrams/CORE27.png": "390a2ec1ded3a8ebe83e9cb92e6e94f42bf68a6caaed242a9256bf601e1bfdff",
+    "manual/final-head-diagrams/20.png": "193f224961df3adc180a9feeb8a24513d0668ee8e5160fe1e2e90305ddb25ceb",
+    "manual/support-diagrams/036.png": "2a15e885d1e1519fe9a0f6b10d7b5a6b7b9812b60c8b52c24a44ef4645f28dc8",
+    "manual/support-diagrams/004.png": "fa951703d681ce004c0ce66b864d2e3d72be7daea99998d4aad8e2b512c344b0",
+    "manual/support-diagrams/082.png": "2d285b6d0a0f3413aa4aedffbc952cbfd003b10a2ed83d67a7acd08382d141cb",
+    "manual/support-diagrams/093.png": "62ba2594fde9d65ff24c94f960ffda8d976440a7895877c770c680887bd186e7",
+    "manual/support-diagrams/010.png": "237c18519168d321dd2da79c2dc2db1b907f2f98befc112963a3fc46dc9d18d3",
+    "manual/support-diagrams/008.png": "3d325cbb783cbcfec4b992702bdaf800f175ec238eb0d680fe67160a0c7cdfb0",
+    "manual/support-diagrams/069.png": "c85e387b61715e98d05ce0ad6c540896971534a315a771e0e40cf4727332de5a",
+    "manual/support-diagrams/053.png": "3789d4d91ecb07316303a2db6a472b4cae67e4001bea7f374834922ba7bee0f5",
+    "manual/support-diagrams/071.png": "ff3c533b69dcd7010541017502455c811b71ef3e84d6076bcbbba95ec70e83b4",
+    "manual/support-diagrams/044.png": "fd70c02ff277162d57f961a3dc435050d8d35fdcfd2b23c1462fe4916c6abd39",
+    "manual/support-diagrams/062.png": "b2a572c6a157c608c81c0c93273bfb73618a315d53d259a984b3274228d40351",
+    "manual/support-diagrams/050.png": "15efc5cb330e375033c55e9c89917812e52b10efe2729e85448151c93d0227cb",
+    "manual/support-diagrams/002.png": "1e866ad29f09ec7735aed88abbf0d78f93b272314464be8017b9eb2569c3c676",
+    "manual/support-diagrams/078.png": "209d5bb08faab45fb2786cdd1f8fd58472b5ae78f1b0b4b8f613540bf25f8f33",
+    "manual/support-diagrams/046.png": "168aedb338de33f828c1b07d533d481155382315f7ad9bad70b9a8c16586b832",
+    "manual/support-diagrams/012.png": "573c0ad920e477fa81cefdb3c6a83c4862bf1670c9c0d481e09a1264fb066e76",
+    "manual/support-diagrams/023.png": "5534d70873fe22662e2ad63c2f92056c96bc5458e0c4880fa29d60bf758a1ec3",
+    "manual/support-diagrams/009.png": "6d686197c97f5ad89800ddbd932a24ce6c968514177a83fec57fa3a88aa8596e",
+    "manual/support-diagrams/022.png": "7de2bd5e5d6885766d16cb184b63cbc3386b0fbb2f7d2d4703da10abcbe3cd2a",
+    "manual/support-diagrams/077.png": "1d4d7211a89b6a7c6886e40c40b06856b13e2f88ecf364769a5b2767e54e5749",
+    "manual/support-diagrams/006.png": "e90d2cb7add661fb2540594a1773e26c02220a58d090849b50374b4962a003b8",
+    "manual/support-diagrams/092.png": "249b3db37378e6fa10236663c055b97ce54543101648cb9cde6d7a60ac16b842",
+    "manual/support-diagrams/039.png": "acd714ee1d627c5f38a465afe4b446040adb106a747f05dfc0419e18d80fa01f",
+    "manual/support-diagrams/067.png": "a04c5f4ce1aa841bb74271c8284c028a752ea5aba80ccc69d5d2da6fa334e050",
+    "manual/support-diagrams/054.png": "31fff28a8c6e435faa888713ebf3a804daf8918624f81f933fa052b6d69799d1",
+    "manual/support-diagrams/074.png": "438364ddfb78cdaf9338857a922272b65811577204c870c36b245ffccb3d331d",
+    "manual/support-diagrams/011.png": "401c0bc9153019441ca01a816e087f811a90c9ed6565d350372a63379a69db1f",
+    "manual/support-diagrams/087.png": "13230937ee618a5e4eb5233a576c9f63e683d3a12485f8816ea487cd5fe99dd1",
+    "manual/support-diagrams/066.png": "38a2979be145dba53d91f998b3086b7b02bb2d1d685d08fa356093b9f0a03b8c",
+    "manual/support-diagrams/049.png": "d539c25edef13f25b94e378f3f235b5e0383bd49ad2c49012e2cff3eeabd1d6d",
+    "manual/support-diagrams/045.png": "1683f71a1cc23883c2402e1026c54be1ac998ff528ce8b45fb66b17b427e5605",
+    "manual/support-diagrams/086.png": "04c7c4c97308adcde14dfaa6de819b8ec8278dbcf4964b759daf5d7edfa11b3a",
+    "manual/support-diagrams/079.png": "27f321d9f291b4be2acf3c0fcd42e000ee6e8bdd52805fb3bf60d93e3c1bbf70",
+    "manual/support-diagrams/056.png": "f910db65e191f38e1bb183aecabfde52adb4003978365eedd100cb192fba248c",
+    "manual/support-diagrams/040.png": "2ec12cd3235ef17625813015e20ca9ffafc066414f03ab9e6be0acef674dea30",
+    "manual/support-diagrams/016.png": "7049162530ad266965e83821b4b5c1d94c9eb2aada248471d2336b4e308b7a0c",
+    "manual/support-diagrams/030.png": "9dca4bff49e78ab6589240c8d1d2c8903482f2035ebdb4ae8fc767ee16ec650e",
+    "manual/support-diagrams/060.png": "7e717e5e3180f2c483f4ce680882bf8b9142d29acaf83a6b0951aef104197405",
+    "manual/support-diagrams/017.png": "52463253277dee3e21336fcfa5e0cd3773230bed5d631e3db47abb1793eec640",
+    "manual/support-diagrams/038.png": "4eb322b140e85907ba302b6675ad6db1f4f9845d5e3fa7ec7d6868d3844dedea",
+    "manual/support-diagrams/048.png": "71bf4e9b410a05e0a14ba009449b2fe0a53988880e316ae7b171ee86a5196eea",
+    "manual/support-diagrams/028.png": "3246ea0b08dc7bfd9e4f965b98a951cc3304b8109fd42ca0f75af4b65e55b8c1",
+    "manual/support-diagrams/059.png": "fcf3c4bc9019e626da235b8fe329147b40875b70efa1cac0eba4be4e21d97f5d",
+    "manual/support-diagrams/032.png": "3a000c22899a699111ebab8ed2400e515069d8bac4ccf061369c325af09808a9",
+    "manual/support-diagrams/058.png": "5c8e4a3595febcef84db9c1dc7b7e64e924f9a810bc39377659545f6a91ccf0f",
+    "manual/support-diagrams/025.png": "1e86b19fd74a00ddde291d2bdc374d4f181ee00801e1cba429b9f1ecdbdb5a3f",
+    "manual/support-diagrams/042.png": "32ba12dd14a33f7c38df802779c260d150f725dd974ba43ace0dd9f91e9889c6",
+    "manual/support-diagrams/024.png": "19d644ec803b8f80c208b98d745d3e91636ba3732a996b6f54f3ae993cc3a46e",
+    "manual/support-diagrams/055.png": "a80bbcc8d92de8b67c56ab4a802afab060c58c4f9c4f41ae5abaa54893388b22",
+    "manual/support-diagrams/031.png": "f7d331954366fac58a800a3e0d3bd8499785d8b50377301ed80e4a32f20d60fe",
+    "manual/support-diagrams/090.png": "f042daf723f7815cc12383102b9e1b5b73dc55c9ce8f1e5f89cefe3c7d83c71a",
+    "manual/support-diagrams/075.png": "05fbce7c5e39b4966d6f7b517d7978ebe316f0e705b4698f21cde0e0abfa16fc",
+    "manual/support-diagrams/013.png": "a018634737b89fc427ab887000b02fa9c34ee0a6826c0167d736e688f29d520e",
+    "manual/support-diagrams/026.png": "24cd23dabdcc7eeb84c506d130468e58ca1c4ca06760f519b8a5d15f6bf17217",
+    "manual/support-diagrams/072.png": "f68c57b6259ee72d8cc4383fad4b9dfab472d8f42f639015bf64738c457d3d92",
+    "manual/support-diagrams/080.png": "266fa2f2645acff47339f4f908add45eccc71a8207ce7bea7847cc57eebe2076",
+    "manual/support-diagrams/020.png": "62a5145fb87bcbe5790a2ca82aa19880223b6336d09cba123cc50213ef182bbb",
+    "manual/support-diagrams/070.png": "b32a5a3db4e81a562289e7e1101068da578677940f2bb1ab86b14cb2315757dd",
+    "manual/support-diagrams/057.png": "b7f9aa37dd940a5f56cd324cd3f4d54cf2f3792414c380f9cb772010575c22c2",
+    "manual/support-diagrams/088.png": "ddf8318bde3ac8d81c92f6db07114b285cd34a2a80c7d75982c4cf158c34a90e",
+    "manual/support-diagrams/021.png": "b7bc8c9fe10e1993d1279d0d7f884484ebff8877753caff239508acf011b807f",
+    "manual/support-diagrams/051.png": "12362c6c3b4e87a3da7e35366f188a21f2eea9e3fd98a624b24c849d5a3b1477",
+    "manual/support-diagrams/005.png": "f2b3e5c7cb93b36c7735d7a89d91d3706720fc262f6c9616e8c48ce6e6e2e5e6",
+    "manual/support-diagrams/091.png": "ce2382e4be868c2d0fded53102381926ddd61a6534c76a68babb7bfbc049ab43",
+    "manual/support-diagrams/003.png": "28dfab62bbd91127d522360f304c2ce1ce148207106b3dfbcff04c81dd6d21e6",
+    "manual/support-diagrams/033.png": "99e09997814ae069db967b8711f8144d736edb894a34e86a856ed0ccf2ecd386",
+    "manual/support-diagrams/052.png": "ef709f0cd29b132f22e8c9543866f792463d5ef599b8399b8206df0aa7e03ede",
+    "manual/support-diagrams/018.png": "d68f1ce758cb259eb4196c93207a0a4e6fd6287af4503c7bcccfe58fe7a99986",
+    "manual/support-diagrams/034.png": "e2992b73c213904054d110afab96c9297f0484d87f937593dec447f142a893f7",
+    "manual/support-diagrams/065.png": "8cabc792e4a7054154b61689e13eb2c45f5c53e6236e18613cdc76e4328a843c",
+    "manual/support-diagrams/061.png": "32f43b45acefb38027b40332db29cdde86fa67f6ff98f20ab57c08e977d6a0c5",
+    "manual/support-diagrams/029.png": "e6a5c2ebaf3c24f2817256fa18af5ddf4f116560c53708419c8af447489073f6",
+    "manual/support-diagrams/076.png": "6f155a246982ace4ce5abdba37180461590932e0ac8e6a1557c0b0824680845a",
+    "manual/support-diagrams/083.png": "e10d58a9abf52ca82a213c7afaaade29d4d50ae6f28bf3f97ff9c69d888408c8",
+    "manual/support-diagrams/084.png": "e2d6efbb52db603e388107025680a0e92aa2f3864bc4ff99a19c4f50148480c1",
+    "manual/support-diagrams/047.png": "551f687094567b22607ceb7f503a75bb112fb0f84762511f8c828d42b531ab7e",
+    "manual/support-diagrams/027.png": "a6f03aa7789a417bc7060a57a41bf1699f7ca8940bf28dff52aaa4199c1ed48e",
+    "manual/support-diagrams/035.png": "b6e0e5c9ead9a431413755921aeb2c9f8c21421d45c5e29d8b4f3082dc3c716c",
+    "manual/support-diagrams/014.png": "df34f791c6a6b92859c77c4fe57345245c44b9a80fc2278489638b25c55379ed",
+    "manual/support-diagrams/068.png": "7ca878ab00409247d7de6aa1674b872e9abd18ff42804d9aa569de698585a439",
+    "manual/support-diagrams/037.png": "6f1dad8fb36eeaa3914f18a40c6bdfacd077d2a6e9d877a52883b9e31a2b0772",
+    "manual/support-diagrams/085.png": "59b4c8b6cca0c35ae83a1ca9ee7efb696596efe0311a4b3cca935175e3a7a36d",
+    "manual/support-diagrams/089.png": "f0ba3e175d21cd495572a203175c5d67dbe2b353eef81b6222444f2b0e3d4058",
+    "manual/support-diagrams/064.png": "053af71d4233acd45a10620c06f0ecc96445541da8156786f5726a7187df7aec",
+    "manual/support-diagrams/015.png": "85c47103e84723c2d754af631e32351c980c100d1aacb94ecd6a3eea792c886f",
+    "manual/support-diagrams/073.png": "2fe78670955b595424735351c74166640d829ab386b9d8e272e2b5bc987eaf96",
+    "manual/support-diagrams/081.png": "983741cca138ad9ae894881da7a5c15d0ca7f22c33079744ed625d2421108b16",
+    "manual/support-diagrams/043.png": "83dbcc7a9f8e21125dba119aafc3afc28d65f9d50194f837760ad9432c6657fd",
+    "manual/support-diagrams/041.png": "a3226ca855356254fbac7b01ab135d96554c8821c3f07c566497cc52bdac37e9",
+    "manual/support-diagrams/019.png": "e2f1a8cab77c226f295e5f37d72dcbf84882cb4bb46e71e20fbbadde684ae440",
+    "manual/support-diagrams/063.png": "06a321d4e26937d9c2a76fb04f0310ddb933b4092f4ad955883fd17f9973a956",
+    "manual/support-diagrams/007.png": "f5fe7339da497cd0030922f2ae44155949fe25a2a5943b367f30a3b7d8e57400",
+    "manual/support-diagrams/001.png": "12a53d555ad677dfe1cd99b7a0756251963fc37751ba6d7d21838f1158e29fde",
+    "manual/diagrams/wallfoot-detail.png": "cdab665c8d6056dc4d6959dabdef10f0af2cf1a2ebeaf02383ea35198fe692c8",
+    "manual/diagrams/interface-B.png": "5445b0b422f4dd21f870f94e0fc937311248929ff4049c9bf276ad1173d3f85f",
+    "manual/diagrams/brace-F.png": "9f79d6d8611980824b6433f4b7765f1261fe63aa6ef35092bf9a4f702af8fabf",
+    "manual/diagrams/lever-upper.png": "2225913685c5904d9df44f015e7532a52bb1c3a5fc43bcace50de7f88de098ca",
+    "manual/diagrams/brace-B.png": "b5abc5ed7700b4bdaf67aea0cb83d03d241512247d51ce3394ac4234fecaa82a",
+    "manual/diagrams/integrated-whole.png": "aaade09d9658dd0cfc472013795b3dd79e9f1c582a7f57e272533f48b140bb39",
+    "manual/diagrams/interface-L.png": "59473993bc6fbc9ea3f8811d51913ee1518705f159446de676b755629b31348a",
+    "manual/diagrams/support-lowered.png": "2d8d973cf5617f9d9f23428d5ccc2873cba72a7620c78776816d781d2d3c72e5",
+    "manual/diagrams/interface-F.png": "be70ea8dfcfb04f1a2a250a4f6440d8c0cb1ce2f05506729a1a237d9ae28b643",
+    "manual/diagrams/brace-L.png": "87d69e1c1bf9c20042b7d8ad034520c5a4396d872afe48d8f264caa225d990da",
+    "manual/diagrams/brace-R.png": "52c2a4ba7226e3355c09a3d445320801331a991ee9b83145ada6bf4263ab8143",
+    "manual/diagrams/interface-R.png": "506024c5d3683e1a495033567d3cfa91466ff50a9793d756f5a75c3a9b5d99bb",
+    "manual/images/BASE-BAS-21.png": "e8b68c593d4430017633ca1ae537b5e3a5501cecf9ea12aa1d828bfa486fe156",
+    "manual/images/BASE-BAS-27.png": "f6b3db1b62f0a218927af045f3b50d309043013d17a892e53528e42f0d0a9a98",
+    "manual/images/BASE-BAS-16.png": "9e0ac94d85aab8ab62804ebc5532e7f6e6cc14d3a32768f4029be1e50e5ec5a4",
+    "manual/images/BASE-BAS-13.png": "ee7807da565a7504ada439e12b5162d77b1a8569d68830c434f437013cb73c73",
+    "manual/images/BASE-BAS-30.png": "cd8c11e37c9807c09bafed7975dbbfb0664a33c2f5b2f3b45662aadf36d62433",
+    "manual/images/BASE-BAS-23.png": "36a5283d796b7d5e0da8f585540d074858734f721fdf474965a2c1db7bc9c229",
+    "manual/images/BASE-BAS-RB-01.png": "4964c4b7a72e2924a0ae91a0508f11a5c2325e86f767bb972c282b37c01c25b2",
+    "manual/images/BASE-BAS-29.png": "b2f8843bceb0510f58c378a4aa43ea74a827ca41b611925413f8d790feadc878",
+    "manual/images/BASE-BAS-RB-02.png": "e747d37faad104cda1f2dac1714f8fb9267a3ac6a2c513599e07b9e6ef6da176",
+    "manual/images/BASE-BAS-14.png": "985a1453696450a0a17adb26686ea4f7ae128853c745dc0836bccfa4dce8a1b5",
+    "manual/images/BASE-BAS-15.png": "9e044c510ff06babef6066ec318821c33dcb2d368c8bb714177613392ab99874",
+    "manual/images/BASE-BAS-25.png": "6ff8387dc80d6ee2b200bb2c2a229b11746361e4cb2ef054fa8ff7d8fe68e34a",
+    "manual/images/BASE-BAS-01.png": "40bef6e12d9975cf19eb25f6ada211cf3c3daae752ad60f17d5d0616d96ffb3b",
+    "manual/images/BASE-BAS-RB-03.png": "89c0050a4908d8287b2c77b9dd679016bda2baf39e7fe3d408b99177471cea54",
+    "manual/images/BASE-BAS-34.png": "89e84c780182fae65aef9405344822e89228aef72d1d553b38828da7500a264d",
+    "manual/images/BASE-BAS-04.png": "1b0f93bc7cde8b46e88193983d8691ce26f29c84592190a2db039af656298975",
+    "manual/images/BASE-BAS-06.png": "cb51c468f000b380d34cba54a68abd33aa3a196ebc065a2afeeaf29978a6f7e8",
+    "manual/images/BASE-BAS-36.png": "21e5a3527d4341f73af4b5ea4287d4e4d0abdf01d13c88dae403ec5a2925ce62",
+    "manual/images/BASE-BAS-08.png": "df5cdf2f1221b2912a23e3b0104f5110263c40ec8c7be5490f4c676b715045ba",
+    "manual/images/BASE-BAS-02.png": "4df0accec161384047c15a49c97f68ef548c84ae586436be06a79cd4632a23ba",
+    "manual/images/BASE-BAS-12.png": "80ea236913af757f65b7a56bcf857094b23c0c520c0463bef306d61f697e40fa",
+    "manual/images/BASE-BAS-26.png": "c77cff9d00d1b71c89308f6452123dd9042fff903f63d1665ea47e66e477d94b",
+    "manual/images/BASE-BAS-07.png": "54bda082916956e05acd4bac6fda6c46fe199c76d1df3c93cd4860b909a73e3a",
+    "manual/images/BASE-BAS-20.png": "0ac32d68ba531aa09aed8b303b918bb74a4b6e1c4d5ae145a8e548829e4081be",
+    "manual/images/BASE-BAS-03.png": "302de47c09101498449cee99f0b1e4977ab6360662a543be471e9b0701170a80",
+    "manual/images/BASE-BAS-18.png": "c87fa6fea1bb9dfea6c3767a01b8ded281ce2905feb2288cc68e23751c4527d3",
+    "manual/images/BASE-BAS-17.png": "2f8aad23c5e3386717d7214ad0e9b42f1dd1b9853eb3b9855a7ccf9d77d93989",
+    "manual/images/BASE-BAS-10.png": "4bc177033b25851dde2918cf2e1b4c89c4119ffb4ad1e27964a9a61b0700c4b7",
+    "manual/images/BASE-BAS-09.png": "24591819cc571211aa80301c26488cd6354f4603dc2a18e47248877963fd6fcf",
+    "manual/images/BASE-BAS-19.png": "581d2ebdaa84bf67886b7e6f1adafe2112add0fc6f51b25dbc72249171518fdf",
+    "manual/images/BASE-BAS-05.png": "90827a3efd67afc6a273d9aa182b8087f465bfe9cff8398a9da94640b737f6db",
+    "manual/images/BASE-BAS-24.png": "311914bbe179294f71ee07116dc16b67a7676cf58ba67df327560980149b2635",
+    "manual/images/BASE-BAS-28.png": "e0dacd5796c95ba8c8a528cd82521ea957c79f90c91039fa261dc68c8f6b1a93",
+    "manual/images/BASE-BAS-22.png": "119cb9e4c190a6bf42798f38285bbc0fc992107bb97ef419074503487bbfffc0",
+    "manual/images/BASE-BAS-11.png": "801c27e4527722e1ad420d71705dc06116b5f563d62c5123d6e8fc85a045bc78",
+    "manual/images/BASE-BAS-32.png": "c2ba815f2645a7ce2b66a55ddc63a3b30e865542a57490a596dde21d4cf0142b"
+  },
+  "frozen_models": {
+    "loading-all50": {
+      "file": "models/loading-all50.mpd",
+      "parts": 882,
+      "sha256": "1bc59b1c4ec3be91c53e812a01e853c11e939887d3223d1de4ffd0cb9d215046",
+      "drop_mm": 0,
+      "locks": false,
+      "lever_parameter_mm": 0,
+      "heads": {
+        "R": [
+          32.30767650520832,
+          50
+        ],
+        "L": [
+          32.30767650520832,
+          50
+        ],
+        "F": [
+          32.30767650520832,
+          50
+        ],
+        "B": [
+          32.30767650520832,
+          50
+        ]
+      },
+      "unchanged_retained_parts": 644,
+      "retained_parts_including_corrected_wallpins": 652,
+      "corrected_retained_wallpins": 8,
+      "removed": {
+        "32123a.dat": 16,
+        "3707.dat": 8,
+        "32056.dat": 32
+      },
+      "added": {
+        "60483.dat": 16
+      }
+    },
+    "FB0-open": {
+      "file": "models/FB0-open.mpd",
+      "parts": 882,
+      "sha256": "c441578ef62a750e743402c7c01fce5d4a303c680e52770efa5a2e1c32ab0ff2",
+      "drop_mm": 0,
+      "locks": false,
+      "lever_parameter_mm": 0,
+      "heads": {
+        "R": [
+          32.30767650520832,
+          50
+        ],
+        "L": [
+          32.30767650520832,
+          50
+        ],
+        "F": [
+          32.30767650520832,
+          0
+        ],
+        "B": [
+          32.30767650520832,
+          0
+        ]
+      },
+      "unchanged_retained_parts": 644,
+      "retained_parts_including_corrected_wallpins": 652,
+      "corrected_retained_wallpins": 8,
+      "removed": {
+        "32123a.dat": 16,
+        "3707.dat": 8,
+        "32056.dat": 32
+      },
+      "added": {
+        "60483.dat": 16
+      }
+    },
+    "FB0-held": {
+      "file": "models/FB0-held.mpd",
+      "parts": 882,
+      "sha256": "ab3e86fbcc83fba6a4389795fb5d851b249f7ffec6d83e22e119ba564451e81e",
+      "drop_mm": 0,
+      "locks": false,
+      "lever_parameter_mm": 0,
+      "heads": {
+        "R": [
+          32.30767650520832,
+          50
+        ],
+        "L": [
+          32.30767650520832,
+          50
+        ],
+        "F": [
+          0.0,
+          0
+        ],
+        "B": [
+          0.0,
+          0
+        ]
+      },
+      "unchanged_retained_parts": 644,
+      "retained_parts_including_corrected_wallpins": 652,
+      "corrected_retained_wallpins": 8,
+      "removed": {
+        "32123a.dat": 16,
+        "3707.dat": 8,
+        "32056.dat": 32
+      },
+      "added": {
+        "60483.dat": 16
+      }
+    },
+    "support-held": {
+      "file": "models/support-held.mpd",
+      "parts": 882,
+      "sha256": "2e596e5aad61854cda8897936725df568ec2c1cc6fb5594448127ac9fa442cdf",
+      "drop_mm": 0,
+      "locks": false,
+      "lever_parameter_mm": 0,
+      "heads": {
+        "R": [
+          32.30767650520832,
+          50
+        ],
+        "L": [
+          32.30767650520832,
+          50
+        ],
+        "F": [
+          0.0,
+          0
+        ],
+        "B": [
+          0.0,
+          0
+        ]
+      },
+      "unchanged_retained_parts": 644,
+      "retained_parts_including_corrected_wallpins": 652,
+      "corrected_retained_wallpins": 8,
+      "removed": {
+        "32123a.dat": 16,
+        "3707.dat": 8,
+        "32056.dat": 32
+      },
+      "added": {
+        "60483.dat": 16
+      }
+    },
+    "support-down40_8": {
+      "file": "models/support-down40_8.mpd",
+      "parts": 882,
+      "sha256": "4c65d5c3084f0e5b745bf686d397fc469ef9a95646ebe036cf4c90a67eaf6c6a",
+      "drop_mm": 40.8,
+      "locks": false,
+      "lever_parameter_mm": 42.4,
+      "heads": {
+        "R": [
+          32.30767650520832,
+          50
+        ],
+        "L": [
+          32.30767650520832,
+          50
+        ],
+        "F": [
+          0.0,
+          0
+        ],
+        "B": [
+          0.0,
+          0
+        ]
+      },
+      "unchanged_retained_parts": 644,
+      "retained_parts_including_corrected_wallpins": 652,
+      "corrected_retained_wallpins": 8,
+      "removed": {
+        "32123a.dat": 16,
+        "3707.dat": 8,
+        "32056.dat": 32
+      },
+      "added": {
+        "60483.dat": 16
+      }
+    },
+    "LR90-open": {
+      "file": "models/LR90-open.mpd",
+      "parts": 882,
+      "sha256": "de0e327c9bfeeb8b598bfe8d87116160ed1f3fea74a4baf7579cd2448e8b642b",
+      "drop_mm": 40.8,
+      "locks": false,
+      "lever_parameter_mm": 42.4,
+      "heads": {
+        "R": [
+          32.30767650520832,
+          90
+        ],
+        "L": [
+          32.30767650520832,
+          90
+        ],
+        "F": [
+          0.0,
+          0
+        ],
+        "B": [
+          0.0,
+          0
+        ]
+      },
+      "unchanged_retained_parts": 644,
+      "retained_parts_including_corrected_wallpins": 652,
+      "corrected_retained_wallpins": 8,
+      "removed": {
+        "32123a.dat": 16,
+        "3707.dat": 8,
+        "32056.dat": 32
+      },
+      "added": {
+        "60483.dat": 16
+      }
+    },
+    "both-held": {
+      "file": "models/both-held.mpd",
+      "parts": 882,
+      "sha256": "f1a85439604487ebbb2890af89065b129a9ece9ea4aea59f0aff32bfed41e6a0",
+      "drop_mm": 40.8,
+      "locks": false,
+      "lever_parameter_mm": 42.4,
+      "heads": {
+        "R": [
+          0.0,
+          90
+        ],
+        "L": [
+          0.0,
+          90
+        ],
+        "F": [
+          0.0,
+          0
+        ],
+        "B": [
+          0.0,
+          0
+        ]
+      },
+      "unchanged_retained_parts": 644,
+      "retained_parts_including_corrected_wallpins": 652,
+      "corrected_retained_wallpins": 8,
+      "removed": {
+        "32123a.dat": 16,
+        "3707.dat": 8,
+        "32056.dat": 32
+      },
+      "added": {
+        "60483.dat": 16
+      }
+    },
+    "head-open25": {
+      "file": "models/head-open25.mpd",
+      "parts": 167,
+      "sha256": "871f53a27e704b261afb4ae9c494267e8f67ae6267973f8b87db60b1a2a33fb9"
+    },
+    "head-closed": {
+      "file": "models/head-closed.mpd",
+      "parts": 167,
+      "sha256": "48a12976b3532747b6a7d6e705bf13feb4b1fb7207d0c518bbe57491d4149ba7"
+    },
+    "support-raised": {
+      "file": "models/support-raised.mpd",
+      "parts": 150,
+      "sha256": "4b33aedabad790a9c929600d30ef1b74761721d0c1d8d6568db6ca5c8f94b8c1"
+    },
+    "support-only-down40_8": {
+      "file": "models/support-only-down40_8.mpd",
+      "parts": 150,
+      "sha256": "6590b47e01e851c557631619f7608818b71eb23c650f7d9082dd43d7287e9f38"
+    }
+  },
+  "restored_inputs": {
+    "baseline-machine-899.mpd": {
+      "sha256": "5cca7bad1c805721a38065e0834d7741e020ada15a6ab960021b82d7b8fb6d56",
+      "source": "Sites v27 dist/compact60483/candidate-with-manual.zip"
+    },
+    "github-current-model.py": {
+      "sha256": "ed1b9d8d71aed8f34e93dce32fcb35a33a16203360bfdbd1064282600c72d7fc",
+      "source": "Sites v27 dist/compact60483/candidate-with-manual.zip"
+    }
+  },
+  "asset_order_source": "Sites v27 dist/integrated/models/loading-all50.mpd: ordered 0 FILE subfiles"
+}

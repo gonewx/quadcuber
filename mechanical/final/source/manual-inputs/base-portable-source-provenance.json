@@ -1,0 +1,23 @@
+{
+  "purpose": "Portable immutable inputs for approved R4 base rebuild; legacy source rendered images are already included under manual/images.",
+  "original_foundation_module": {
+    "path": "detailed-instructions-219/modules/foundation.json",
+    "sha256": "95f016a8e12c3b5f7daf725a6cb215b90f63cdb4a5fab2333f7ac197fcf0ad0b"
+  },
+  "original_full219_rows": {
+    "path": "detailed-instructions-192/inventory-compatible-candidate/assembly-candidate219.json",
+    "sha256": "8c4fa4a0893859e1a7e9f6de79ec6c0bf9629fc872ea7ee72fddf8970eda8bd6",
+    "snapshot_scope": "first59rows"
+  },
+  "original_renderer": {
+    "path": "detailed-instructions-219/render_steps.py",
+    "sha256": "1cec0825dfa4ca07ab97bb37e5879330ed40bec2035a8fe7666319544ca78802"
+  },
+  "adaptation": "Renderer drawing functions preserved; candidate_load legacy dependency replaced by packaged candidate world/mesh/files and retained_base. R4 display-only adjustments stay in manual/render_base.py.",
+  "snapshot_sha256": {
+    "base-legacy219-foundation.json": "95f016a8e12c3b5f7daf725a6cb215b90f63cdb4a5fab2333f7ac197fcf0ad0b",
+    "base-legacy219-render.json": "90a930f50d4d2c61d2230698a105babc1d4e41b9271cd68a02aaeb84a88e58b0",
+    "base-legacy219-first59.json": "c6525e50d005aced826ebce7b75cdb87e4f5174c9f81f3dfedeebfe1ffa5dba0",
+    "native_base_renderer.py": "7a524a05d3be2e7287f3cc286901a2b39539c1cd26133d6e60f8405349c96227"
+  }
+}

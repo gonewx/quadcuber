@@ -1,0 +1,715 @@
+[
+  {
+    "id": "BAS-01",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-01.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      2
+    ],
+    "added_part_ids": [
+      2
+    ],
+    "sha256": "99aa9d0a865b60a57e22785b2951e60f87977d8fc0ecc073411398187afed4f1"
+  },
+  {
+    "id": "BAS-02",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-02.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "added_part_ids": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "sha256": "b8b080d8ec375dc219b4582e736dc19c6d3f0f345ff6396ee8900ceb5c18e0d6"
+  },
+  {
+    "id": "BAS-03",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-03.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      34
+    ],
+    "added_part_ids": [
+      34
+    ],
+    "sha256": "39d8cf046e840e37f8c867ab3e80e04346475095ea698f535097453cf70265fe"
+  },
+  {
+    "id": "BAS-04",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-04.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      34,
+      35,
+      36
+    ],
+    "added_part_ids": [
+      35,
+      36
+    ],
+    "sha256": "186cf21b0064b4f0ad2c30868e9e7773a7e9d31fae3b6a28d2cba1c5af3c8e6c"
+  },
+  {
+    "id": "BAS-05",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-05.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "added_part_ids": [
+      37,
+      38
+    ],
+    "sha256": "bbb8d99272326b53e1957da600041b8ae92bed9b8e33c35b90c8f2a9f284cb39"
+  },
+  {
+    "id": "BAS-06",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-06.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      42,
+      43
+    ],
+    "added_part_ids": [
+      42,
+      43
+    ],
+    "sha256": "d48f7e9903cecd31f34b261067b0150b6677c8d07575e62cb8350465b7e93e72"
+  },
+  {
+    "id": "BAS-07",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-07.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      34,
+      35,
+      36,
+      37,
+      38,
+      42,
+      43
+    ],
+    "added_part_ids": [
+      1
+    ],
+    "sha256": "ee6b9b3570cb652280e40a764f22f28b6042bf9a3ae7318895b20bac980fba19"
+  },
+  {
+    "id": "BAS-08",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-08.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      29
+    ],
+    "added_part_ids": [
+      29
+    ],
+    "sha256": "245e0bcb83c35cfdc50cbd4dcef09d3debe62ee8cc02b20c7a1f7492dfcd21cc"
+  },
+  {
+    "id": "BAS-09",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-09.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "added_part_ids": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "sha256": "da9d63ac98c6db030d40c9297d7746a486894913a7c4ac2b43df506f2c2577e0"
+  },
+  {
+    "id": "BAS-10",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-10.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      40,
+      41
+    ],
+    "added_part_ids": [
+      40,
+      41
+    ],
+    "sha256": "d5724bd53763976363e200da1550a448563463d23d01b09dabbdd550b144bee1"
+  },
+  {
+    "id": "BAS-11",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-11.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18
+    ],
+    "added_part_ids": [
+      18
+    ],
+    "sha256": "2c0c3e14ad5cbf8a23eb0f1fdc3bc15c07c776255041ec519bb1a44430662ffe"
+  },
+  {
+    "id": "BAS-12",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-12.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18,
+      19,
+      20
+    ],
+    "added_part_ids": [
+      19,
+      20
+    ],
+    "sha256": "5aec2bbbcab0a94bd1255229965ec877e68f241a61c99a352467a95a415374a7"
+  },
+  {
+    "id": "BAS-13",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-13.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "added_part_ids": [
+      21,
+      22
+    ],
+    "sha256": "68830cb1766289d7953b5f84a934964dbefae47653aec251b6050f1e7d7948f1"
+  },
+  {
+    "id": "BAS-14",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-14.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      26,
+      27
+    ],
+    "added_part_ids": [
+      26,
+      27
+    ],
+    "sha256": "afcc72e333501ab6770f0ad631f14c0fcda8b5a94a138533bddd9892b6e28117"
+  },
+  {
+    "id": "BAS-15",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-15.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      40,
+      41
+    ],
+    "added_part_ids": [
+      28
+    ],
+    "sha256": "f9cb11d17dabe9e862a752664737b931cae783ec96497bd9621f6aeb5deda1a2"
+  },
+  {
+    "id": "BAS-16",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-16.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      13
+    ],
+    "added_part_ids": [
+      13
+    ],
+    "sha256": "edc0d09c3c4e1c1a65753548ca7cae927f51c1f01ccdf348aa1dc77d4f3eeb6d"
+  },
+  {
+    "id": "BAS-17",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-17.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "added_part_ids": [
+      14,
+      15,
+      16,
+      17
+    ],
+    "sha256": "46d554efc18839b539eb1ad689bd6d51733a02b1182cd04f806ae4884f17e087"
+  },
+  {
+    "id": "BAS-18",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-18.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      24,
+      25
+    ],
+    "added_part_ids": [
+      24,
+      25
+    ],
+    "sha256": "c1058772cadff2e76011a45c4b50751038386e85a6e7539ed7265e87512baf2c"
+  },
+  {
+    "id": "BAS-19",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-19.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      50
+    ],
+    "added_part_ids": [
+      50
+    ],
+    "sha256": "8289b5b7747d924e0883b9421e7238927832e1de90d0a71b66dcb31fb5ee9ef8"
+  },
+  {
+    "id": "BAS-20",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-20.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      50,
+      51,
+      52
+    ],
+    "added_part_ids": [
+      51,
+      52
+    ],
+    "sha256": "5fb158f17417d5269ec7ae5aa1a68887242074f89f57a75b585de4f1883ba346"
+  },
+  {
+    "id": "BAS-21",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-21.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      50,
+      51,
+      52,
+      53,
+      54
+    ],
+    "added_part_ids": [
+      53,
+      54
+    ],
+    "sha256": "bb28f446be856fc68cfecac706391d81a9e72f6f0b0ab63a52c2fd2ecf0b4004"
+  },
+  {
+    "id": "BAS-22",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-22.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      50,
+      51,
+      52,
+      53,
+      54,
+      58,
+      59
+    ],
+    "added_part_ids": [
+      58,
+      59
+    ],
+    "sha256": "76fdc60a9a976ddca1f6bc8e5122df27a9ddbfcdbdac57d7a0ef5622a706b3b9"
+  },
+  {
+    "id": "BAS-23",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-23.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      24,
+      25,
+      50,
+      51,
+      52,
+      53,
+      54,
+      58,
+      59
+    ],
+    "added_part_ids": [
+      12
+    ],
+    "sha256": "eaa9a0a74ca9dbad004702af9ae7082891f55b4e35f73a782d3fc4dd5e1a7637"
+  },
+  {
+    "id": "BAS-24",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-24.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      45
+    ],
+    "added_part_ids": [
+      45
+    ],
+    "sha256": "31e0ffca6acb8071e7b4cd415981d9604252bdc315615ff25e58d2339db9aa58"
+  },
+  {
+    "id": "BAS-25",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-25.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "added_part_ids": [
+      46,
+      47,
+      48,
+      49
+    ],
+    "sha256": "c976f3e278f7977ef069f6f4ee68c69da857c84c6f14346bc5786e4b792bde52"
+  },
+  {
+    "id": "BAS-26",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-26.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      45,
+      46,
+      47,
+      48,
+      49,
+      56,
+      57
+    ],
+    "added_part_ids": [
+      56,
+      57
+    ],
+    "sha256": "8e109fb9357d669e8770fece7aef3cc497719cf7e5a3a3bad2e7033522166da6"
+  },
+  {
+    "id": "BAS-27",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-27.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      7
+    ],
+    "added_part_ids": [
+      7
+    ],
+    "sha256": "348d8ed01a1bdf26f14b000583806f66c5eb5f3dea5ab6f88649265c8058dc1d"
+  },
+  {
+    "id": "BAS-28",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-28.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      7,
+      8,
+      9
+    ],
+    "added_part_ids": [
+      8,
+      9
+    ],
+    "sha256": "467dcbd9a023de8f5389178cc0aa1fa71c5a0a4788bd37f23b9da14031c4664f"
+  },
+  {
+    "id": "BAS-29",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-29.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "added_part_ids": [
+      10,
+      11
+    ],
+    "sha256": "3d3ad92e847bc1f02cba85a1c6b7b9e6d38c82566d86010cb109bace91eca542"
+  },
+  {
+    "id": "BAS-30",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-30.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      56,
+      57
+    ],
+    "added_part_ids": [
+      44
+    ],
+    "sha256": "2e411e51c47a53f6ad101b0a311e0b3337f648cd21b320c15c7ae46ab949301a"
+  },
+  {
+    "id": "BAS-32",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-32.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      18,
+      19,
+      20,
+      21,
+      22,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "added_part_ids": [
+      39
+    ],
+    "sha256": "218b6ec05f7e663794e468707772b3c28f82d479ed4b458967cdc1089767bfad"
+  },
+  {
+    "id": "BAS-34",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-34.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      50,
+      51,
+      52,
+      53,
+      54,
+      58,
+      59
+    ],
+    "added_part_ids": [
+      23
+    ],
+    "sha256": "849c52bde0cdaff6b18dd94a16aa42aa370337cedfa7eefbf668530231206ffe"
+  },
+  {
+    "id": "BAS-36",
+    "image_path": "/workspace/scratch/330c3bce1460/lift-feasibility/detailed-instructions-219/images/BAS-36.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "added_part_ids": [
+      55
+    ],
+    "sha256": "32de83af68650a0e205e2de3ee767352e88158be5b4dec56a842dffb220742a7"
+  }
+]

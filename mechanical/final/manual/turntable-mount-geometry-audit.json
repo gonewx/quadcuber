@@ -1,0 +1,1615 @@
+{
+  "read_only_model_review": true,
+  "physical_verification": false,
+  "continuous_insertion_path_certified": false,
+  "pose_source": "candidate.module(0,0,False,True), 1-based; includes MODULE_DX=-30 LDU",
+  "units": "All host coordinates LDU (0.4 mm/LDU); mesh bounds and ray witnesses mm",
+  "source_paths": [
+    "/workspace/scratch/330c3bce1460/lift-feasibility/integrated-revision/candidate.py",
+    "/workspace/scratch/330c3bce1460/lift-feasibility/integrated-revision/source/baseline_model.py",
+    "/workspace/scratch/330c3bce1460/lift-feasibility/integrated-revision/source/baseline-machine-899.mpd"
+  ],
+  "lower_mount_instance_ids": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "remaining_core_inventory_count": 75,
+  "must_be_staged_not_mounted_in_residual_core": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    86
+  ],
+  "mounted_core_if_these_are_staged_count": 68,
+  "parts": {
+    "24": {
+      "name": "44294.dat",
+      "pos_ldu": [
+        -305.0,
+        0.0,
+        -100.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -150.0,
+          -2.4000000000000004,
+          -42.400000000000006
+        ],
+        "max": [
+          -94.0,
+          2.4000000000000004,
+          -37.6
+        ]
+      }
+    },
+    "25": {
+      "name": "32123a.dat",
+      "pos_ldu": [
+        -305.0,
+        0.0,
+        -100.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -124.0,
+          -3.6,
+          -43.6
+        ],
+        "max": [
+          -120.0,
+          3.6,
+          -36.4
+        ]
+      }
+    },
+    "26": {
+      "name": "32123a.dat",
+      "pos_ldu": [
+        -295.0,
+        0.0,
+        -100.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -120.0,
+          -3.6,
+          -43.6
+        ],
+        "max": [
+          -116.0,
+          3.6,
+          -36.4
+        ]
+      }
+    },
+    "27": {
+      "name": "3713.dat",
+      "pos_ldu": [
+        -280.0,
+        0.0,
+        -100.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -116.0,
+          -3.6,
+          -43.6
+        ],
+        "max": [
+          -108.0,
+          3.6,
+          -36.4
+        ]
+      }
+    },
+    "28": {
+      "name": "3648b.dat",
+      "pos_ldu": [
+        -260.0,
+        0.0,
+        -100.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -107.85000000000001,
+          -12.956000000000001,
+          -52.955999999999996
+        ],
+        "max": [
+          -100.15,
+          12.956000000000001,
+          -27.044
+        ]
+      }
+    },
+    "29": {
+      "name": "32123a.dat",
+      "pos_ldu": [
+        -245.0,
+        0.0,
+        -100.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -100.0,
+          -3.6,
+          -43.6
+        ],
+        "max": [
+          -96.0,
+          3.6,
+          -36.4
+        ]
+      }
+    },
+    "30": {
+      "name": "2780.dat",
+      "pos_ldu": [
+        -290.0,
+        40.0,
+        -60.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -124.0,
+          12.8796,
+          -27.200212320000006
+        ],
+        "max": [
+          -108.0,
+          19.1204,
+          -20.79978768
+        ]
+      }
+    },
+    "31": {
+      "name": "2780.dat",
+      "pos_ldu": [
+        -290.0,
+        40.0,
+        -20.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -124.0,
+          12.8796,
+          -11.20021232
+        ],
+        "max": [
+          -108.0,
+          19.1204,
+          -4.799787680000001
+        ]
+      }
+    },
+    "32": {
+      "name": "2780.dat",
+      "pos_ldu": [
+        -290.0,
+        40.0,
+        20.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -124.0,
+          12.8796,
+          4.799787680000001
+        ],
+        "max": [
+          -108.0,
+          19.1204,
+          11.20021232
+        ]
+      }
+    },
+    "33": {
+      "name": "2780.dat",
+      "pos_ldu": [
+        -290.0,
+        60.0,
+        -60.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -124.0,
+          20.8796,
+          -27.200212320000006
+        ],
+        "max": [
+          -108.0,
+          27.120400000000004,
+          -20.79978768
+        ]
+      }
+    },
+    "34": {
+      "name": "18939.dat",
+      "pos_ldu": [
+        -260.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -116.0,
+          -26.800032,
+          -26.800032
+        ],
+        "max": [
+          -102.0,
+          26.800032,
+          26.800032
+        ]
+      }
+    },
+    "35": {
+      "name": "6558.dat",
+      "pos_ldu": [
+        -280.0,
+        -20.0,
+        60.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          -11.120400000000002,
+          12.0
+        ],
+        "max": [
+          -108.79978768000001,
+          -4.8796,
+          36.0
+        ]
+      }
+    },
+    "36": {
+      "name": "6558.dat",
+      "pos_ldu": [
+        -280.0,
+        0.0,
+        60.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          -3.1204,
+          12.0
+        ],
+        "max": [
+          -108.79978768000001,
+          3.1204,
+          36.0
+        ]
+      }
+    },
+    "37": {
+      "name": "6558.dat",
+      "pos_ldu": [
+        -280.0,
+        20.0,
+        60.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          4.8796,
+          12.0
+        ],
+        "max": [
+          -108.79978768000001,
+          11.120400000000002,
+          36.0
+        ]
+      }
+    },
+    "38": {
+      "name": "6558.dat",
+      "pos_ldu": [
+        -280.0,
+        -20.0,
+        -60.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          -11.120400000000002,
+          -36.0
+        ],
+        "max": [
+          -108.79978768000001,
+          -4.8796,
+          -12.0
+        ]
+      }
+    },
+    "39": {
+      "name": "6558.dat",
+      "pos_ldu": [
+        -280.0,
+        0.0,
+        -60.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          -3.1204,
+          -36.0
+        ],
+        "max": [
+          -108.79978768000001,
+          3.1204,
+          -12.0
+        ]
+      }
+    },
+    "40": {
+      "name": "6558.dat",
+      "pos_ldu": [
+        -280.0,
+        20.0,
+        -60.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          4.8796,
+          -36.0
+        ],
+        "max": [
+          -108.79978768000001,
+          11.120400000000002,
+          -12.0
+        ]
+      }
+    },
+    "41": {
+      "name": "40490.dat",
+      "pos_ldu": [
+        -280.0,
+        60.0,
+        80.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.60000000000001,
+          -11.600000000000001,
+          28.0
+        ],
+        "max": [
+          -108.4,
+          59.6,
+          36.0
+        ]
+      }
+    },
+    "42": {
+      "name": "2780.dat",
+      "pos_ldu": [
+        -280.0,
+        80.0,
+        70.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          28.8796,
+          20.0
+        ],
+        "max": [
+          -108.79978768000001,
+          35.120400000000004,
+          36.0
+        ]
+      }
+    },
+    "43": {
+      "name": "2780.dat",
+      "pos_ldu": [
+        -280.0,
+        100.0,
+        70.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          36.8796,
+          20.0
+        ],
+        "max": [
+          -108.79978768000001,
+          43.120400000000004,
+          36.0
+        ]
+      }
+    },
+    "44": {
+      "name": "6558.dat",
+      "pos_ldu": [
+        -280.0,
+        120.0,
+        80.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          44.8796,
+          20.0
+        ],
+        "max": [
+          -108.79978768000001,
+          51.120400000000004,
+          44.0
+        ]
+      }
+    },
+    "45": {
+      "name": "40490.dat",
+      "pos_ldu": [
+        -280.0,
+        60.0,
+        -80.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.60000000000001,
+          -11.600000000000001,
+          -36.0
+        ],
+        "max": [
+          -108.4,
+          59.6,
+          -28.0
+        ]
+      }
+    },
+    "46": {
+      "name": "2780.dat",
+      "pos_ldu": [
+        -280.0,
+        80.0,
+        -70.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          28.8796,
+          -36.0
+        ],
+        "max": [
+          -108.79978768000001,
+          35.120400000000004,
+          -20.0
+        ]
+      }
+    },
+    "47": {
+      "name": "2780.dat",
+      "pos_ldu": [
+        -280.0,
+        100.0,
+        -70.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          36.8796,
+          -36.0
+        ],
+        "max": [
+          -108.79978768000001,
+          43.120400000000004,
+          -20.0
+        ]
+      }
+    },
+    "48": {
+      "name": "2780.dat",
+      "pos_ldu": [
+        -280.0,
+        120.0,
+        -70.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -115.20021231999999,
+          44.8796,
+          -36.0
+        ],
+        "max": [
+          -108.79978768000001,
+          51.120400000000004,
+          -20.0
+        ]
+      }
+    },
+    "85": {
+      "name": "2780.dat",
+      "pos_ldu": [
+        -360.0,
+        60.0,
+        90.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -147.20021232,
+          20.8796,
+          28.0
+        ],
+        "max": [
+          -140.79978768,
+          27.120400000000004,
+          44.0
+        ]
+      }
+    },
+    "86": {
+      "name": "32524.dat",
+      "pos_ldu": [
+        -328.0,
+        84.0,
+        100.0
+      ],
+      "rotation": [
+        [
+          0.6,
+          0.0,
+          -0.8
+        ],
+        [
+          -0.8,
+          0.0,
+          -0.6
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "mesh_bounds_mm": {
+        "min": [
+          -153.96378400000003,
+          15.636216000000003,
+          36.0
+        ],
+        "max": [
+          -108.436216,
+          51.563784,
+          44.0
+        ]
+      }
+    }
+  },
+  "coaxial_host_checks": [
+    {
+      "pin": 35,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          -20.0,
+          60.0
+        ],
+        "boss": [
+          -280.0,
+          -20.0,
+          40.0
+        ],
+        "rail": [
+          -280.0,
+          -20.0,
+          80.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        -20.0,
+        70.0
+      ],
+      "long_end_ldu": [
+        -280.0,
+        -20.0,
+        30.0
+      ],
+      "short_end_ldu": [
+        -280.0,
+        -20.0,
+        90.0
+      ]
+    },
+    {
+      "pin": 36,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          0.0,
+          60.0
+        ],
+        "boss": [
+          -280.0,
+          0.0,
+          40.0
+        ],
+        "rail": [
+          -280.0,
+          0.0,
+          80.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        0.0,
+        70.0
+      ],
+      "long_end_ldu": [
+        -280.0,
+        0.0,
+        30.0
+      ],
+      "short_end_ldu": [
+        -280.0,
+        0.0,
+        90.0
+      ]
+    },
+    {
+      "pin": 37,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          20.0,
+          60.0
+        ],
+        "boss": [
+          -280.0,
+          20.0,
+          40.0
+        ],
+        "rail": [
+          -280.0,
+          20.0,
+          80.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        20.0,
+        70.0
+      ],
+      "long_end_ldu": [
+        -280.0,
+        20.0,
+        30.0
+      ],
+      "short_end_ldu": [
+        -280.0,
+        20.0,
+        90.0
+      ]
+    },
+    {
+      "pin": 38,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          -20.0,
+          -60.0
+        ],
+        "boss": [
+          -280.0,
+          -20.0,
+          -40.0
+        ],
+        "rail": [
+          -280.0,
+          -20.0,
+          -80.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        -20.0,
+        -70.0
+      ],
+      "long_end_ldu": [
+        -280.0,
+        -20.0,
+        -30.0
+      ],
+      "short_end_ldu": [
+        -280.0,
+        -20.0,
+        -90.0
+      ]
+    },
+    {
+      "pin": 39,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          0.0,
+          -60.0
+        ],
+        "boss": [
+          -280.0,
+          0.0,
+          -40.0
+        ],
+        "rail": [
+          -280.0,
+          0.0,
+          -80.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        0.0,
+        -70.0
+      ],
+      "long_end_ldu": [
+        -280.0,
+        0.0,
+        -30.0
+      ],
+      "short_end_ldu": [
+        -280.0,
+        0.0,
+        -90.0
+      ]
+    },
+    {
+      "pin": 40,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          20.0,
+          -60.0
+        ],
+        "boss": [
+          -280.0,
+          20.0,
+          -40.0
+        ],
+        "rail": [
+          -280.0,
+          20.0,
+          -80.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        20.0,
+        -70.0
+      ],
+      "long_end_ldu": [
+        -280.0,
+        20.0,
+        -30.0
+      ],
+      "short_end_ldu": [
+        -280.0,
+        20.0,
+        -90.0
+      ]
+    },
+    {
+      "pin": 42,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          80.0,
+          60.0
+        ],
+        "rail": [
+          -280.0,
+          80.0,
+          80.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        80.0,
+        70.0
+      ]
+    },
+    {
+      "pin": 43,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          100.0,
+          60.0
+        ],
+        "rail": [
+          -280.0,
+          100.0,
+          80.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        100.0,
+        70.0
+      ]
+    },
+    {
+      "pin": 46,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          80.0,
+          -60.0
+        ],
+        "rail": [
+          -280.0,
+          80.0,
+          -80.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        80.0,
+        -70.0
+      ]
+    },
+    {
+      "pin": 47,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          100.0,
+          -60.0
+        ],
+        "rail": [
+          -280.0,
+          100.0,
+          -80.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        100.0,
+        -70.0
+      ]
+    },
+    {
+      "pin": 48,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          120.0,
+          -60.0
+        ],
+        "rail": [
+          -280.0,
+          120.0,
+          -80.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        120.0,
+        -70.0
+      ]
+    },
+    {
+      "pin": 44,
+      "host_centres_ldu": {
+        "frame": [
+          -280.0,
+          120.0,
+          60.0
+        ],
+        "rail": [
+          -280.0,
+          120.0,
+          80.0
+        ],
+        "brace_first": [
+          -280.0,
+          120.0,
+          100.0
+        ]
+      },
+      "pin_shoulder_ldu": [
+        -280.0,
+        120.0,
+        90.0
+      ],
+      "long_end_ldu": [
+        -280.0,
+        120.0,
+        50.0
+      ],
+      "short_end_ldu": [
+        -280.0,
+        120.0,
+        110.0
+      ]
+    }
+  ],
+  "pin39_axial_approach_obstruction": {
+    "line_mm": {
+      "origin": [
+        -112,
+        0,
+        -60
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ]
+    },
+    "actual_mesh_hits_on_axle24_mm": [
+      [
+        -112.0,
+        0.0,
+        -42.4
+      ],
+      [
+        -112.0,
+        0.0,
+        -37.6
+      ]
+    ]
+  },
+  "drive_restore_nominal_clearances_mm": {
+    "bush27_to_side_rail45_z": 0.3999999999999986,
+    "gear28_to_side_rail45_x": 0.5499999999999972,
+    "gear28_to_lower_turntable34_z": 0.24396799999999885,
+    "gear28_to_top_frame1_x": 0.14999999999999147
+  },
+  "arm_rotations": {
+    "L": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "determinant": 1.0,
+      "mount_from_front_direction_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "from_plus_z_insertion_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "from_minus_z_insertion_world": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "R": {
+      "matrix": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "determinant": 1.0,
+      "mount_from_front_direction_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "from_plus_z_insertion_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "from_minus_z_insertion_world": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    "F": {
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "determinant": 1.0,
+      "mount_from_front_direction_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "from_plus_z_insertion_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "from_minus_z_insertion_world": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "B": {
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "determinant": 1.0,
+      "mount_from_front_direction_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "from_plus_z_insertion_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "from_minus_z_insertion_world": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "safe_chronology_nominal": [
+    "Stage drive24-29 and brace86 off their final hosts before work; independent support throughout",
+    "Seat34 from +X toward -X on frame1",
+    "Insert35-37 from +Z toward -Z and38-40 from -Z toward +Z before rails",
+    "Insert42,43 into frame2 from +Z toward -Z; insert46-48 from -Z toward +Z",
+    "Slide41 from +Z toward -Z over five exposed pin tails; slide45 from -Z toward +Z over six exposed pin tails",
+    "Insert44 long end from +Z toward -Z through41 into frame2; shoulder atZ90, short end toward brace",
+    "Fit86 from +Z toward -Z onto44 first hole and85 sixth hole together",
+    "Insert complete preassembled24-29 drive stack rigidly from+X toward-X into motor10 cross-hole at Y0,Z-100 LDU, maintaining phase, before upper head merges."
+  ],
+  "unresolved": [
+    "Tiny nominal clearances do not establish tolerances, insertion forces, access for fingers/tools, elastic deformation, or retention",
+    "No whole-motor reattachment path is asserted; drive stack is staged instead",
+    "No force permitted to push pin shoulder through host hole or to resolve misalignment"
+  ],
+  "recommended_main_core_count": 68,
+  "independent_preassembled_drive_count": 6,
+  "total_prebuilt_input_count": 74,
+  "explicit_lower_mount_and_brace_ids": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    86
+  ],
+  "explicit_total_lower_and_head_count": 91,
+  "whole_drive_stack_swept_aabb_candidates": {
+    "24": [
+      10
+    ],
+    "25": [
+      10
+    ],
+    "26": [
+      10
+    ],
+    "27": [],
+    "28": [],
+    "29": []
+  },
+  "motor_actual_mesh_maximum_x_in_full_collar_yz_corridor_mm": -124.0,
+  "whole_stack_route_recommendation": "Defensible nominal rigid translation from local+X along-X to frozen pose, before upper head merge. Shaft enters motor cross-hole; collars and gear never pass through motor or wall. Not physical/path/force certification."
+}

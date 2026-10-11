@@ -1,8 +1,8 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict'),crypto=require('node:crypto');
-const {LDrawLoader,LDrawConditionalLineMaterial}=require('../viewer-fix/dependencies-classic.cjs');
+const {LDrawLoader,LDrawConditionalLineMaterial}=require('./dependencies-classic.cjs');
 const manifest=JSON.parse(fs.readFileSync('dist/integrated/manifest.json')),guide=JSON.parse(fs.readFileSync('dist/integrated/operation-guide.json'));
 const ctx={};vm.createContext(ctx);vm.runInContext(fs.readFileSync('candidate-source-adapter.js','utf8'),ctx);vm.runInContext(fs.readFileSync('operation-guide-core.js','utf8'),ctx);vm.runInContext(fs.readFileSync('candidate-steps-core.js','utf8'),ctx);
-ctx.OperationGuideCore.create(guide);ctx.CandidateStepsCore.create(JSON.parse(fs.readFileSync('../lift-feasibility/integrated-revision/manual/support-steps.json')),150);
+ctx.OperationGuideCore.create(guide);ctx.CandidateStepsCore.create(JSON.parse(fs.readFileSync('../manual/support-steps.json')),150);
 const colors=fs.readFileSync('candidate-colors.ldr','utf8');let fetches=0;global.fetch=()=>{fetches++;throw Error('Unexpected external geometry request')};
 (async()=>{const results=[];for(const [key,s]of Object.entries(manifest)){
  const bytes=fs.readFileSync(path.join('dist/integrated',s.file));assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),s.sha256);assert.equal(bytes.toString().split('\n0 FILE ')[0].split('\n').filter(x=>x.startsWith('1 ')).length,s.parts);

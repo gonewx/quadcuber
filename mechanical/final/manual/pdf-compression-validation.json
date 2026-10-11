@@ -1,0 +1,43 @@
+{
+  "pages": 501,
+  "text_exact_all_pages": true,
+  "bookmarks_exact": true,
+  "pdf_size_bytes": 25013922,
+  "single_file_limit_bytes": 26214400,
+  "source_pngs_unchanged": true,
+  "pdf_head_diagram_encoding": "JPEG94,4:4:4,unchanged1000pixel dimensions",
+  "render_comparison": [
+    {
+      "page": 42,
+      "rendered_page_mean_absolute_error_255": 0.19759677372846096
+    },
+    {
+      "page": 67,
+      "rendered_page_mean_absolute_error_255": 0.19734678093731592
+    },
+    {
+      "page": 69,
+      "rendered_page_mean_absolute_error_255": 0.1972278348307155
+    },
+    {
+      "page": 76,
+      "rendered_page_mean_absolute_error_255": 0.19140282257566207
+    },
+    {
+      "page": 79,
+      "rendered_page_mean_absolute_error_255": 0.21172896147175982
+    },
+    {
+      "page": 93,
+      "rendered_page_mean_absolute_error_255": 0.19303279617065625
+    },
+    {
+      "page": 95,
+      "rendered_page_mean_absolute_error_255": 0.19173880670794252
+    },
+    {
+      "page": 98,
+      "rendered_page_mean_absolute_error_255": 0.1919324159550497
+    }
+  ]
+}

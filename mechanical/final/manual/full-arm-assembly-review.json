@@ -1,0 +1,34 @@
+{
+  "scope": "Frozen882 inventory, full arm from purchased individual parts; nominal sequence review only",
+  "part_partitions_per_arm": {
+    "wall_and_feet": 11,
+    "motor_and_mounts": 18,
+    "platform_servo_and_vertical_support": 33,
+    "crosshead_link_and_crank": 6,
+    "output_shaft_stack": 6,
+    "lower_turntable_and_diagonal": 16,
+    "head_parts": 75,
+    "post_seating_interface": 2
+  },
+  "no_prebuilt_inputs": true,
+  "ordering_checks": [
+    "Three wall frames use half-inserted pins before next frame",
+    "Guide long pins enter platform before guide frame closes",
+    "Crosshead/linkage assembled from +Z before servo installation",
+    "Servo ear pins short segments enter pad before servo descends",
+    "Crank attached to servo off platform, then pair descends onto ear pins",
+    "78 installed on79/80 before77 is horizontally attached;77 descends with whole arm",
+    "49/50 half-inserted in wall before whole-arm seating",
+    "Turntable pins and rails precede output shaft",
+    "84 half-inserted in base before81 fits three exposed pins"
+  ],
+  "critical_nominal_limits": {
+    "crosshead_guide_gap_mm": 0.4,
+    "crosshead_axle_stack_mm": 24,
+    "crosshead_axle_stack_reserve_mm": 0,
+    "servo_mesh": "approximate NOCERTIFY; physical ear holes and output interface not proven"
+  },
+  "continuous_path_certified": false,
+  "physical_certified": false,
+  "servo_powered_calibration_provided": false
+}

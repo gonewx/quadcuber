@@ -1,0 +1,7 @@
+Final model and assembly sources
+
+Python dependencies: requirements.txt. Use the included final model files for viewing. candidate.py and build_candidate.py reproduce the same final native geometry using frozen computational dependencies in source/; no external source checkout is required.
+
+Canonical assembly and image build instructions: manual/REBUILD.md. Current guide: manual/guide.json. Website builder: site-source/build_integrated_revision.py, using native-presentation.json. Offline reading needs no build: offline-viewer/index.html.
+
+The full Library package includes all PNG diagrams and the PDF. The compact website source download omits derived diagrams and PDF; use the same website's PDF download, or regenerate diagrams in the documented order.

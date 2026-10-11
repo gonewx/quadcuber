@@ -1,0 +1,8130 @@
+{
+  "schema_version": 1,
+  "status": "DETAILED_SOURCE_SEQUENCE_PHYSICAL_FIT_AND_LOAD_UNTESTED",
+  "title_zh": "完整132件小样：细分装配审查图解",
+  "source_assembly": "assembly132.json",
+  "source_assembly_sha256": "bba23990c0c5e4387262ddafd3ca4d908625f7291cd4e6e14fbb1fa552acd561",
+  "source_plan_sha256": "ef43d119926faf57c701ebc7dd98c41b7501337c6db0a6055398a975233e1f0f",
+  "indexing": "assembly132.index1, one-based, not old109 IDs",
+  "units": "millimeters for vectors; geometry source LDU × 0.4",
+  "main_view": {
+    "near": "green Z locator side / +Z",
+    "far": "-Z",
+    "right": "yellow X locator side / +X",
+    "up": "-Y"
+  },
+  "global_cautions_zh": [
+    "当前冻结132件模型尚未实物试装、承重、刚度或半轴套保持验收。",
+    "销尖越过孔缘在约8／32毫米行程附近仍可能卡滞；安装环境扫掠未证明。",
+    "原8枚墙脚销仍为独立HOLD／未批准。原四臂708件没有修改。",
+    "132核心＋59保留基座＝191；再加原708＝899整机。移除2锁销后为130／897。",
+    "219旧方案已出现实物下垂失败；旧145步仅作历史诊断，不适用于132。"
+  ],
+  "coverage": {
+    "expected_count": 132,
+    "introduced_count": 132,
+    "unique_count": 132,
+    "all_instances_once": true,
+    "step_count": 80,
+    "stage_count": 18,
+    "max_new_parts_per_step": 4,
+    "addition_step_count": 71,
+    "merge_and_check_step_count": 9,
+    "role_counts": {
+      "fixed": 30,
+      "moving": 100,
+      "key": 2
+    },
+    "functional_counts": {
+      "support": 83,
+      "seat": 25,
+      "z_locator": 9,
+      "x_locator": 15
+    }
+  },
+  "external_host_requirement": {
+    "stage": 0,
+    "retained_foundation_count": 59,
+    "original_walls_required": true,
+    "common_chassis_required": true,
+    "core132_standalone_load_fixture": false
+  },
+  "steps": [
+    {
+      "id": "D132-001",
+      "number": 1,
+      "key": "setup",
+      "stage": 0,
+      "module_id": "setup",
+      "module_title_zh": "确认外部基座和原墙接口",
+      "title_zh": "先核对边界、图向和未通过项目",
+      "added_part_ids": [],
+      "new_parts": [],
+      "visible_part_ids": [],
+      "highlight_part_ids": [],
+      "prerequisite_step_ids": [],
+      "instructions_zh": [
+        "这是132件冻结小样的拟定细分装配顺序。未实物试装，不能据此直接带魔方运行。",
+        "先确认59件保留基座、原左右墙及共同底盘连接齐备；这些不计入132件。原8枚墙脚销仍为HOLD／未批准。",
+        "近侧=绿色Z定位边（+Z），右侧=黄色X定位框（+X），上方=-Y。图中蓝色是本步新件或合并件，灰色是相关已装件。",
+        "编号#1–#132是当前模型的实例编号，零件型号另列。相同型号的不同实例不要混淆。"
+      ],
+      "cautions_zh": [
+        "完整安装扫掠、承重、滑动和半轴套保持均未实测。"
+      ],
+      "kind": "check",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [],
+      "cumulative_introduced_count": 0,
+      "image_file": "detailed-images132/001.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-002",
+      "number": 2,
+      "key": "R_foot_pins",
+      "stage": 1,
+      "module_id": "R_foot",
+      "module_title_zh": "先拼左右脚梁和基座短连梁",
+      "title_zh": "右脚：短连梁预插两销",
+      "added_part_ids": [
+        76,
+        77,
+        78
+      ],
+      "new_parts": [
+        {
+          "index1": 76,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "R_base_link"
+        },
+        {
+          "index1": 77,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_base_pin32"
+        },
+        {
+          "index1": 78,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_base_pin40"
+        }
+      ],
+      "visible_part_ids": [
+        76,
+        77,
+        78
+      ],
+      "highlight_part_ids": [
+        76,
+        77,
+        78
+      ],
+      "prerequisite_step_ids": [
+        "D132-001"
+      ],
+      "instructions_zh": [
+        "取#76三孔短连梁。在与脚梁重叠的两孔预插#77、#78；销肩留在两梁接缝，另一半向下露出。",
+        "短连梁外端第三孔暂留空；这里的两根销只连接脚梁。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            76,
+            77,
+            78
+          ],
+          "from": [
+            88.0,
+            120.667,
+            37.333
+          ],
+          "to": [
+            88.0,
+            106.667,
+            37.333
+          ],
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 3,
+      "image_file": "detailed-images132/002.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-003",
+      "number": 3,
+      "key": "R_foot_close",
+      "stage": 1,
+      "module_id": "R_foot",
+      "module_title_zh": "先拼左右脚梁和基座短连梁",
+      "title_zh": "右脚：脚梁同轴合拢",
+      "added_part_ids": [
+        4
+      ],
+      "new_parts": [
+        {
+          "index1": 4,
+          "part": "32316.dat",
+          "description_zh": "5孔厚直梁",
+          "instance_id": "R_foot5L"
+        }
+      ],
+      "visible_part_ids": [
+        4,
+        76,
+        77,
+        78
+      ],
+      "highlight_part_ids": [
+        4
+      ],
+      "prerequisite_step_ids": [
+        "D132-002"
+      ],
+      "instructions_zh": [
+        "把#4五孔脚梁的指定两孔对准两根露出的销，从下方沿-Y压到短连梁上。",
+        "保持两销同时入孔，不能让销肩穿过孔。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            4
+          ],
+          "from": [
+            88.0,
+            126.0,
+            24.0
+          ],
+          "to": [
+            88.0,
+            112.0,
+            24.0
+          ],
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 4,
+      "image_file": "detailed-images132/003.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-004",
+      "number": 4,
+      "key": "R_foot_external_pin",
+      "stage": 1,
+      "module_id": "R_foot",
+      "module_title_zh": "先拼左右脚梁和基座短连梁",
+      "title_zh": "右脚：预插基座外接销",
+      "added_part_ids": [
+        79
+      ],
+      "new_parts": [
+        {
+          "index1": 79,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_base_pin48"
+        }
+      ],
+      "visible_part_ids": [
+        4,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        79
+      ],
+      "prerequisite_step_ids": [
+        "D132-003"
+      ],
+      "instructions_zh": [
+        "把#79插进短连梁余下的外端孔，销肩停在梁下表面，留半根向下接原基座。",
+        "这根销的另一接收孔属于保留基座，不是悬空自由端。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            79
+          ],
+          "from": [
+            88.0,
+            122.0,
+            48.0
+          ],
+          "to": [
+            88.0,
+            108.0,
+            48.0
+          ],
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 5,
+      "image_file": "detailed-images132/004.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-005",
+      "number": 5,
+      "key": "L_foot_pins",
+      "stage": 1,
+      "module_id": "L_foot",
+      "module_title_zh": "先拼左右脚梁和基座短连梁",
+      "title_zh": "左脚：短连梁预插两销",
+      "added_part_ids": [
+        80,
+        81,
+        82
+      ],
+      "new_parts": [
+        {
+          "index1": 80,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "L_base_link"
+        },
+        {
+          "index1": 81,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_base_pin32"
+        },
+        {
+          "index1": 82,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_base_pin40"
+        }
+      ],
+      "visible_part_ids": [
+        80,
+        81,
+        82
+      ],
+      "highlight_part_ids": [
+        80,
+        81,
+        82
+      ],
+      "prerequisite_step_ids": [
+        "D132-001"
+      ],
+      "instructions_zh": [
+        "取#80三孔短连梁。在与脚梁重叠的两孔预插#81、#82；销肩留在两梁接缝，另一半向下露出。",
+        "短连梁外端第三孔暂留空；这里的两根销只连接脚梁。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            80,
+            81,
+            82
+          ],
+          "from": [
+            -88.0,
+            120.667,
+            -37.333
+          ],
+          "to": [
+            -88.0,
+            106.667,
+            -37.333
+          ],
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 8,
+      "image_file": "detailed-images132/005.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-006",
+      "number": 6,
+      "key": "L_foot_close",
+      "stage": 1,
+      "module_id": "L_foot",
+      "module_title_zh": "先拼左右脚梁和基座短连梁",
+      "title_zh": "左脚：脚梁同轴合拢",
+      "added_part_ids": [
+        25
+      ],
+      "new_parts": [
+        {
+          "index1": 25,
+          "part": "32316.dat",
+          "description_zh": "5孔厚直梁",
+          "instance_id": "L_foot5L"
+        }
+      ],
+      "visible_part_ids": [
+        25,
+        80,
+        81,
+        82
+      ],
+      "highlight_part_ids": [
+        25
+      ],
+      "prerequisite_step_ids": [
+        "D132-005"
+      ],
+      "instructions_zh": [
+        "把#25五孔脚梁的指定两孔对准两根露出的销，从下方沿-Y压到短连梁上。",
+        "保持两销同时入孔，不能让销肩穿过孔。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            25
+          ],
+          "from": [
+            -88.0,
+            126.0,
+            -24.0
+          ],
+          "to": [
+            -88.0,
+            112.0,
+            -24.0
+          ],
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 9,
+      "image_file": "detailed-images132/006.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-007",
+      "number": 7,
+      "key": "L_foot_external_pin",
+      "stage": 1,
+      "module_id": "L_foot",
+      "module_title_zh": "先拼左右脚梁和基座短连梁",
+      "title_zh": "左脚：预插基座外接销",
+      "added_part_ids": [
+        83
+      ],
+      "new_parts": [
+        {
+          "index1": 83,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_base_pin48"
+        }
+      ],
+      "visible_part_ids": [
+        25,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        83
+      ],
+      "prerequisite_step_ids": [
+        "D132-006"
+      ],
+      "instructions_zh": [
+        "把#83插进短连梁余下的外端孔，销肩停在梁下表面，留半根向下接原基座。",
+        "这根销的另一接收孔属于保留基座，不是悬空自由端。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            83
+          ],
+          "from": [
+            -88.0,
+            122.0,
+            -48.0
+          ],
+          "to": [
+            -88.0,
+            108.0,
+            -48.0
+          ],
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 10,
+      "image_file": "detailed-images132/007.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-008",
+      "number": 8,
+      "key": "R_foot_host",
+      "stage": 2,
+      "module_id": "R_frame",
+      "module_title_zh": "分方向接原基座、原墙和脚连接件",
+      "title_zh": "右脚：向下接入保留基座",
+      "added_part_ids": [],
+      "new_parts": [],
+      "visible_part_ids": [
+        4,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        4,
+        76,
+        77,
+        78,
+        79
+      ],
+      "prerequisite_step_ids": [
+        "D132-004"
+      ],
+      "instructions_zh": [
+        "托住右脚模块，将外接销对准保留基座对应孔，整组沿+Y垂直向下压入。",
+        "先接这一小模块；此时不要连接整根外竖轨。"
+      ],
+      "cautions_zh": [
+        "原基座在局部图中省略，必须实际存在。模块穿过原机的安装扫掠未证明。"
+      ],
+      "kind": "merge_subassemblies",
+      "merged_module_ids": [
+        "R_foot",
+        "retained_foundation59"
+      ],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            4,
+            76,
+            77,
+            78,
+            79
+          ],
+          "from": [
+            88.0,
+            94.0,
+            36.8
+          ],
+          "to": [
+            88.0,
+            108.0,
+            36.8
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 10,
+      "image_file": "detailed-images132/008.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-009",
+      "number": 9,
+      "key": "R_wall",
+      "stage": 2,
+      "module_id": "R_frame",
+      "module_title_zh": "分方向接原基座、原墙和脚连接件",
+      "title_zh": "右墙：单独装墙连接件",
+      "added_part_ids": [
+        2
+      ],
+      "new_parts": [
+        {
+          "index1": 2,
+          "part": "55615.dat",
+          "description_zh": "原生多向销连接件",
+          "instance_id": "R_wall55615"
+        }
+      ],
+      "visible_part_ids": [
+        2,
+        4,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        2
+      ],
+      "prerequisite_step_ids": [
+        "D132-008"
+      ],
+      "instructions_zh": [
+        "将#2的两根墙侧一体销对准保留原墙孔，沿+X向右装入。",
+        "不可把左右墙件先连成整框再向下压；墙销和脚销的入孔方向不同。"
+      ],
+      "cautions_zh": [
+        "原墙及共同底盘是必需接口，局部图未显示完整原墙。"
+      ],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            2
+          ],
+          "from": [
+            90.0,
+            64.0,
+            8.0
+          ],
+          "to": [
+            104.0,
+            64.0,
+            8.0
+          ],
+          "direction": [
+            1,
+            0,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 11,
+      "image_file": "detailed-images132/009.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-010",
+      "number": 10,
+      "key": "R_foot_connector",
+      "stage": 2,
+      "module_id": "R_frame",
+      "module_title_zh": "分方向接原基座、原墙和脚连接件",
+      "title_zh": "右脚：向下接脚连接件",
+      "added_part_ids": [
+        3
+      ],
+      "new_parts": [
+        {
+          "index1": 3,
+          "part": "55615.dat",
+          "description_zh": "原生多向销连接件",
+          "instance_id": "R_foot55615"
+        }
+      ],
+      "visible_part_ids": [
+        2,
+        3,
+        4,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        3
+      ],
+      "prerequisite_step_ids": [
+        "D132-009"
+      ],
+      "instructions_zh": [
+        "将#3的两根向下一体销对准五孔脚梁对应孔，沿+Y插入。",
+        "检查朝外竖轨的两根销与墙连接件那一根销平行。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            3
+          ],
+          "from": [
+            88.0,
+            90.0,
+            8.0
+          ],
+          "to": [
+            88.0,
+            104.0,
+            8.0
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 12,
+      "image_file": "detailed-images132/010.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-011",
+      "number": 11,
+      "key": "R_outer_rail",
+      "stage": 3,
+      "module_id": "R_frame",
+      "module_title_zh": "将两根外竖轨压到三根平行销上",
+      "title_zh": "右框：外竖轨同时接三销",
+      "added_part_ids": [
+        1
+      ],
+      "new_parts": [
+        {
+          "index1": 1,
+          "part": "40490.dat",
+          "description_zh": "9孔厚直梁",
+          "instance_id": "R_outer9L"
+        }
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        1
+      ],
+      "prerequisite_step_ids": [
+        "D132-010"
+      ],
+      "instructions_zh": [
+        "取#1九孔外竖轨，对齐墙连接件一孔、脚连接件两孔。",
+        "从远侧向近侧（+Z）直压，让三孔同时到位。",
+        "内轨、上下端梁和移动夹架暂不封闭。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            1
+          ],
+          "from": [
+            88.0,
+            80.0,
+            -14.0
+          ],
+          "to": [
+            88.0,
+            80.0,
+            0.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 13,
+      "image_file": "detailed-images132/011.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-012",
+      "number": 12,
+      "key": "L_foot_host",
+      "stage": 2,
+      "module_id": "L_frame",
+      "module_title_zh": "分方向接原基座、原墙和脚连接件",
+      "title_zh": "左脚：向下接入保留基座",
+      "added_part_ids": [],
+      "new_parts": [],
+      "visible_part_ids": [
+        25,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        25,
+        80,
+        81,
+        82,
+        83
+      ],
+      "prerequisite_step_ids": [
+        "D132-007"
+      ],
+      "instructions_zh": [
+        "托住左脚模块，将外接销对准保留基座对应孔，整组沿+Y垂直向下压入。",
+        "先接这一小模块；此时不要连接整根外竖轨。"
+      ],
+      "cautions_zh": [
+        "原基座在局部图中省略，必须实际存在。模块穿过原机的安装扫掠未证明。"
+      ],
+      "kind": "merge_subassemblies",
+      "merged_module_ids": [
+        "L_foot",
+        "retained_foundation59"
+      ],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            25,
+            80,
+            81,
+            82,
+            83
+          ],
+          "from": [
+            -88.0,
+            94.0,
+            -36.8
+          ],
+          "to": [
+            -88.0,
+            108.0,
+            -36.8
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 13,
+      "image_file": "detailed-images132/012.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-013",
+      "number": 13,
+      "key": "L_wall",
+      "stage": 2,
+      "module_id": "L_frame",
+      "module_title_zh": "分方向接原基座、原墙和脚连接件",
+      "title_zh": "左墙：单独装墙连接件",
+      "added_part_ids": [
+        23
+      ],
+      "new_parts": [
+        {
+          "index1": 23,
+          "part": "55615.dat",
+          "description_zh": "原生多向销连接件",
+          "instance_id": "L_wall55615"
+        }
+      ],
+      "visible_part_ids": [
+        23,
+        25,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        23
+      ],
+      "prerequisite_step_ids": [
+        "D132-012"
+      ],
+      "instructions_zh": [
+        "将#23的两根墙侧一体销对准保留原墙孔，沿-X向左装入。",
+        "不可把左右墙件先连成整框再向下压；墙销和脚销的入孔方向不同。"
+      ],
+      "cautions_zh": [
+        "原墙及共同底盘是必需接口，局部图未显示完整原墙。"
+      ],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            23
+          ],
+          "from": [
+            -90.0,
+            64.0,
+            -8.0
+          ],
+          "to": [
+            -104.0,
+            64.0,
+            -8.0
+          ],
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 14,
+      "image_file": "detailed-images132/013.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-014",
+      "number": 14,
+      "key": "L_foot_connector",
+      "stage": 2,
+      "module_id": "L_frame",
+      "module_title_zh": "分方向接原基座、原墙和脚连接件",
+      "title_zh": "左脚：向下接脚连接件",
+      "added_part_ids": [
+        24
+      ],
+      "new_parts": [
+        {
+          "index1": 24,
+          "part": "55615.dat",
+          "description_zh": "原生多向销连接件",
+          "instance_id": "L_foot55615"
+        }
+      ],
+      "visible_part_ids": [
+        23,
+        24,
+        25,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        24
+      ],
+      "prerequisite_step_ids": [
+        "D132-013"
+      ],
+      "instructions_zh": [
+        "将#24的两根向下一体销对准五孔脚梁对应孔，沿+Y插入。",
+        "检查朝外竖轨的两根销与墙连接件那一根销平行。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            24
+          ],
+          "from": [
+            -88.0,
+            90.0,
+            -8.0
+          ],
+          "to": [
+            -88.0,
+            104.0,
+            -8.0
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 15,
+      "image_file": "detailed-images132/014.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-015",
+      "number": 15,
+      "key": "L_outer_rail",
+      "stage": 3,
+      "module_id": "L_frame",
+      "module_title_zh": "将两根外竖轨压到三根平行销上",
+      "title_zh": "左框：外竖轨同时接三销",
+      "added_part_ids": [
+        22
+      ],
+      "new_parts": [
+        {
+          "index1": 22,
+          "part": "40490.dat",
+          "description_zh": "9孔厚直梁",
+          "instance_id": "L_outer9L"
+        }
+      ],
+      "visible_part_ids": [
+        22,
+        23,
+        24,
+        25,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        22
+      ],
+      "prerequisite_step_ids": [
+        "D132-014"
+      ],
+      "instructions_zh": [
+        "取#22九孔外竖轨，对齐墙连接件一孔、脚连接件两孔。",
+        "从近侧向远侧（-Z）直压，让三孔同时到位。",
+        "内轨、上下端梁和移动夹架暂不封闭。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            22
+          ],
+          "from": [
+            -88.0,
+            80.0,
+            14.0
+          ],
+          "to": [
+            -88.0,
+            80.0,
+            0.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 16,
+      "image_file": "detailed-images132/015.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-016",
+      "number": 16,
+      "key": "R_web_pins",
+      "stage": 4,
+      "module_id": "R_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "右半桥：原生L腹板预插三销",
+      "added_part_ids": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "new_parts": [
+        {
+          "index1": 50,
+          "part": "32140.dat",
+          "description_zh": "原生厚L形梁",
+          "instance_id": "R_bridge_native_web"
+        },
+        {
+          "index1": 51,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_bridge_extra_upper_web_pin"
+        },
+        {
+          "index1": 52,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_bridge_web_pin56"
+        },
+        {
+          "index1": 53,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_bridge_web_pin64"
+        }
+      ],
+      "visible_part_ids": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "highlight_part_ids": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "prerequisite_step_ids": [
+        "D132-001"
+      ],
+      "instructions_zh": [
+        "在#50原生L腹板的三个指定圆孔预插#51、#52、#53。",
+        "上排两孔、下排一孔；留半根在朝两条11孔桥梁的一侧。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "from": [
+            40.0,
+            58.0,
+            -17.0
+          ],
+          "to": [
+            40.0,
+            58.0,
+            -3.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 20,
+      "image_file": "detailed-images132/016.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-017",
+      "number": 17,
+      "key": "R_bridge_chords",
+      "stage": 4,
+      "module_id": "R_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "右半桥：装上下两条长梁",
+      "added_part_ids": [
+        43,
+        46
+      ],
+      "new_parts": [
+        {
+          "index1": 43,
+          "part": "32525.dat",
+          "description_zh": "11孔厚直梁",
+          "instance_id": "R_bridge_chord56"
+        },
+        {
+          "index1": 46,
+          "part": "32525.dat",
+          "description_zh": "11孔厚直梁",
+          "instance_id": "R_bridge_chord64"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        46,
+        50,
+        51,
+        52,
+        53
+      ],
+      "highlight_part_ids": [
+        43,
+        46
+      ],
+      "prerequisite_step_ids": [
+        "D132-016"
+      ],
+      "instructions_zh": [
+        "把#43上梁和#46下梁分别套到露出的短销；上下梁相隔一孔距。",
+        "对照原生L腹板确认上下方向，先保持这半桥独立。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            43,
+            46
+          ],
+          "from": [
+            24.0,
+            60.0,
+            -22.0
+          ],
+          "to": [
+            24.0,
+            60.0,
+            -8.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 22,
+      "image_file": "detailed-images132/017.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-018",
+      "number": 18,
+      "key": "R_thin_pin",
+      "stage": 4,
+      "module_id": "R_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "右桥端：先装厚薄转接销",
+      "added_part_ids": [
+        45
+      ],
+      "new_parts": [
+        {
+          "index1": 45,
+          "part": "32002.dat",
+          "description_zh": "厚薄转接半销",
+          "instance_id": "R_bridge_upper_adapter_pin"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        45,
+        46,
+        50,
+        51,
+        52,
+        53
+      ],
+      "highlight_part_ids": [
+        45
+      ],
+      "prerequisite_step_ids": [
+        "D132-017"
+      ],
+      "instructions_zh": [
+        "将#45半销的完整8毫米段插入上桥梁外端指定圆孔，4毫米段留给薄适配梁。",
+        "不要把4毫米端误插到厚桥梁内。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            45
+          ],
+          "from": [
+            64.0,
+            56.0,
+            -26.0
+          ],
+          "to": [
+            64.0,
+            56.0,
+            -12.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 23,
+      "image_file": "detailed-images132/018.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-019",
+      "number": 19,
+      "key": "R_thin_adapter",
+      "stage": 4,
+      "module_id": "R_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "右桥端：接薄适配梁",
+      "added_part_ids": [
+        44
+      ],
+      "new_parts": [
+        {
+          "index1": 44,
+          "part": "11478.dat",
+          "description_zh": "5格薄梁（两端十字孔）",
+          "instance_id": "R_bridge_upper_adapter"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        50,
+        51,
+        52,
+        53
+      ],
+      "highlight_part_ids": [
+        44
+      ],
+      "prerequisite_step_ids": [
+        "D132-018"
+      ],
+      "instructions_zh": [
+        "将#44薄适配梁指定圆孔压到刚露出的4毫米半销上。",
+        "薄梁两端十字孔保持原模型方向；下一步穿夹架轴的孔留空。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            44
+          ],
+          "from": [
+            72.0,
+            56.0,
+            -28.0
+          ],
+          "to": [
+            72.0,
+            56.0,
+            -14.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 24,
+      "image_file": "detailed-images132/019.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-020",
+      "number": 20,
+      "key": "R_thick_pins",
+      "stage": 4,
+      "module_id": "R_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "右桥端：下梁预插两根短销",
+      "added_part_ids": [
+        48,
+        49
+      ],
+      "new_parts": [
+        {
+          "index1": 48,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_bridge_lower_adapter_pin56"
+        },
+        {
+          "index1": 49,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_bridge_lower_adapter_pin64"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "highlight_part_ids": [
+        48,
+        49
+      ],
+      "prerequisite_step_ids": [
+        "D132-019"
+      ],
+      "instructions_zh": [
+        "在下桥梁对应的两个相邻圆孔预插普通短销，留半截朝厚适配梁方向。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            48,
+            49
+          ],
+          "from": [
+            60.0,
+            64.0,
+            -26.0
+          ],
+          "to": [
+            60.0,
+            64.0,
+            -12.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 26,
+      "image_file": "detailed-images132/020.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-021",
+      "number": 21,
+      "key": "R_thick_adapter",
+      "stage": 4,
+      "module_id": "R_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "右桥端：接五孔厚适配梁",
+      "added_part_ids": [
+        47
+      ],
+      "new_parts": [
+        {
+          "index1": 47,
+          "part": "32316.dat",
+          "description_zh": "5孔厚直梁",
+          "instance_id": "R_bridge_lower_adapter"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "highlight_part_ids": [
+        47
+      ],
+      "prerequisite_step_ids": [
+        "D132-020"
+      ],
+      "instructions_zh": [
+        "将#47五孔厚适配梁同时套到两根短销上；保持与上适配梁的轴孔排位一致。",
+        "两个半桥不要提前合拢；左半桥内表面必须能接近。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            47
+          ],
+          "from": [
+            72.0,
+            64.0,
+            -30.0
+          ],
+          "to": [
+            72.0,
+            64.0,
+            -16.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 27,
+      "image_file": "detailed-images132/021.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-022",
+      "number": 22,
+      "key": "L_web_pins",
+      "stage": 4,
+      "module_id": "L_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "左半桥：原生L腹板预插三销",
+      "added_part_ids": [
+        61,
+        62,
+        63,
+        64
+      ],
+      "new_parts": [
+        {
+          "index1": 61,
+          "part": "32140.dat",
+          "description_zh": "原生厚L形梁",
+          "instance_id": "L_bridge_native_web"
+        },
+        {
+          "index1": 62,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_bridge_extra_upper_web_pin"
+        },
+        {
+          "index1": 63,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_bridge_web_pin56"
+        },
+        {
+          "index1": 64,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_bridge_web_pin64"
+        }
+      ],
+      "visible_part_ids": [
+        61,
+        62,
+        63,
+        64
+      ],
+      "highlight_part_ids": [
+        61,
+        62,
+        63,
+        64
+      ],
+      "prerequisite_step_ids": [
+        "D132-001"
+      ],
+      "instructions_zh": [
+        "在#61原生L腹板的三个指定圆孔预插#62、#63、#64。",
+        "上排两孔、下排一孔；留半根在朝两条11孔桥梁的一侧。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            61,
+            62,
+            63,
+            64
+          ],
+          "from": [
+            -40.0,
+            58.0,
+            17.0
+          ],
+          "to": [
+            -40.0,
+            58.0,
+            3.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 31,
+      "image_file": "detailed-images132/022.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-023",
+      "number": 23,
+      "key": "L_bridge_chords",
+      "stage": 4,
+      "module_id": "L_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "左半桥：装上下两条长梁",
+      "added_part_ids": [
+        54,
+        57
+      ],
+      "new_parts": [
+        {
+          "index1": 54,
+          "part": "32525.dat",
+          "description_zh": "11孔厚直梁",
+          "instance_id": "L_bridge_chord56"
+        },
+        {
+          "index1": 57,
+          "part": "32525.dat",
+          "description_zh": "11孔厚直梁",
+          "instance_id": "L_bridge_chord64"
+        }
+      ],
+      "visible_part_ids": [
+        54,
+        57,
+        61,
+        62,
+        63,
+        64
+      ],
+      "highlight_part_ids": [
+        54,
+        57
+      ],
+      "prerequisite_step_ids": [
+        "D132-022"
+      ],
+      "instructions_zh": [
+        "把#54上梁和#57下梁分别套到露出的短销；上下梁相隔一孔距。",
+        "对照原生L腹板确认上下方向，先保持这半桥独立。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            54,
+            57
+          ],
+          "from": [
+            -24.0,
+            60.0,
+            22.0
+          ],
+          "to": [
+            -24.0,
+            60.0,
+            8.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 33,
+      "image_file": "detailed-images132/023.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-024",
+      "number": 24,
+      "key": "L_thin_pin",
+      "stage": 4,
+      "module_id": "L_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "左桥端：先装厚薄转接销",
+      "added_part_ids": [
+        56
+      ],
+      "new_parts": [
+        {
+          "index1": 56,
+          "part": "32002.dat",
+          "description_zh": "厚薄转接半销",
+          "instance_id": "L_bridge_upper_adapter_pin"
+        }
+      ],
+      "visible_part_ids": [
+        54,
+        56,
+        57,
+        61,
+        62,
+        63,
+        64
+      ],
+      "highlight_part_ids": [
+        56
+      ],
+      "prerequisite_step_ids": [
+        "D132-023"
+      ],
+      "instructions_zh": [
+        "将#56半销的完整8毫米段插入上桥梁外端指定圆孔，4毫米段留给薄适配梁。",
+        "不要把4毫米端误插到厚桥梁内。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            56
+          ],
+          "from": [
+            -64.0,
+            56.0,
+            26.0
+          ],
+          "to": [
+            -64.0,
+            56.0,
+            12.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 34,
+      "image_file": "detailed-images132/024.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-025",
+      "number": 25,
+      "key": "L_thin_adapter",
+      "stage": 4,
+      "module_id": "L_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "左桥端：接薄适配梁",
+      "added_part_ids": [
+        55
+      ],
+      "new_parts": [
+        {
+          "index1": 55,
+          "part": "11478.dat",
+          "description_zh": "5格薄梁（两端十字孔）",
+          "instance_id": "L_bridge_upper_adapter"
+        }
+      ],
+      "visible_part_ids": [
+        54,
+        55,
+        56,
+        57,
+        61,
+        62,
+        63,
+        64
+      ],
+      "highlight_part_ids": [
+        55
+      ],
+      "prerequisite_step_ids": [
+        "D132-024"
+      ],
+      "instructions_zh": [
+        "将#55薄适配梁指定圆孔压到刚露出的4毫米半销上。",
+        "薄梁两端十字孔保持原模型方向；下一步穿夹架轴的孔留空。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            55
+          ],
+          "from": [
+            -72.0,
+            56.0,
+            28.0
+          ],
+          "to": [
+            -72.0,
+            56.0,
+            14.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 35,
+      "image_file": "detailed-images132/025.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-026",
+      "number": 26,
+      "key": "L_thick_pins",
+      "stage": 4,
+      "module_id": "L_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "左桥端：下梁预插两根短销",
+      "added_part_ids": [
+        59,
+        60
+      ],
+      "new_parts": [
+        {
+          "index1": 59,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_bridge_lower_adapter_pin56"
+        },
+        {
+          "index1": 60,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_bridge_lower_adapter_pin64"
+        }
+      ],
+      "visible_part_ids": [
+        54,
+        55,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "highlight_part_ids": [
+        59,
+        60
+      ],
+      "prerequisite_step_ids": [
+        "D132-025"
+      ],
+      "instructions_zh": [
+        "在下桥梁对应的两个相邻圆孔预插普通短销，留半截朝厚适配梁方向。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            59,
+            60
+          ],
+          "from": [
+            -60.0,
+            64.0,
+            26.0
+          ],
+          "to": [
+            -60.0,
+            64.0,
+            12.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 37,
+      "image_file": "detailed-images132/026.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-027",
+      "number": 27,
+      "key": "L_thick_adapter",
+      "stage": 4,
+      "module_id": "L_bridge",
+      "module_title_zh": "在手中拼左右双梁桥模块",
+      "title_zh": "左桥端：接五孔厚适配梁",
+      "added_part_ids": [
+        58
+      ],
+      "new_parts": [
+        {
+          "index1": 58,
+          "part": "32316.dat",
+          "description_zh": "5孔厚直梁",
+          "instance_id": "L_bridge_lower_adapter"
+        }
+      ],
+      "visible_part_ids": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "highlight_part_ids": [
+        58
+      ],
+      "prerequisite_step_ids": [
+        "D132-026"
+      ],
+      "instructions_zh": [
+        "将#58五孔厚适配梁同时套到两根短销上；保持与上适配梁的轴孔排位一致。",
+        "两个半桥不要提前合拢；左半桥内表面必须能接近。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            58
+          ],
+          "from": [
+            -72.0,
+            64.0,
+            30.0
+          ],
+          "to": [
+            -72.0,
+            64.0,
+            16.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 38,
+      "image_file": "detailed-images132/027.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-028",
+      "number": 28,
+      "key": "preload_z5",
+      "stage": 5,
+      "module_id": "L_bridge",
+      "module_title_zh": "预装绿色定位边两根轴和内半套",
+      "title_zh": "封桥前：5格轴先带内半套",
+      "added_part_ids": [
+        110,
+        112
+      ],
+      "new_parts": [
+        {
+          "index1": 110,
+          "part": "32073.dat",
+          "description_zh": "5格十字轴",
+          "instance_id": "z_locator_root5L"
+        },
+        {
+          "index1": 112,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "z_locator_retainer-16_2"
+        }
+      ],
+      "visible_part_ids": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        110,
+        112
+      ],
+      "highlight_part_ids": [
+        110,
+        112
+      ],
+      "prerequisite_step_ids": [
+        "D132-027"
+      ],
+      "instructions_zh": [
+        "先把#112内半轴套套到#110五格轴尾端。",
+        "从敞开的桥内侧沿+Z穿过左上梁#54，直到内半套贴住梁面；长端向近侧伸出。",
+        "内半套最终困在两排桥梁之间，封桥后无法横向补装。"
+      ],
+      "cautions_zh": [
+        "这是必须提前完成的工序；外半套与绿色高L仍不装。"
+      ],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            110,
+            112
+          ],
+          "from": [
+            -16.0,
+            56.0,
+            -3.0
+          ],
+          "to": [
+            -16.0,
+            56.0,
+            11.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 40,
+      "image_file": "detailed-images132/028.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-029",
+      "number": 29,
+      "key": "preload_z6",
+      "stage": 5,
+      "module_id": "L_bridge",
+      "module_title_zh": "预装绿色定位边两根轴和内半套",
+      "title_zh": "封桥前：6格轴先带内半套",
+      "added_part_ids": [
+        111,
+        114
+      ],
+      "new_parts": [
+        {
+          "index1": 111,
+          "part": "3706.dat",
+          "description_zh": "6格十字轴",
+          "instance_id": "z_locator_root6L"
+        },
+        {
+          "index1": 114,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "z_locator_retainer-32_-6"
+        }
+      ],
+      "visible_part_ids": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        111,
+        114
+      ],
+      "prerequisite_step_ids": [
+        "D132-028"
+      ],
+      "instructions_zh": [
+        "先把#114内半套套在#111六格轴尾端。",
+        "从内侧沿+Z依次穿过原生L腹板#61和左上桥梁#54，内半套贴腹板；长端同样朝近侧。"
+      ],
+      "cautions_zh": [
+        "当前3706轴两端倒角使半套覆盖各为3.8／4毫米，保持力未实测。"
+      ],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            111,
+            114
+          ],
+          "from": [
+            -32.0,
+            56.0,
+            -9.0
+          ],
+          "to": [
+            -32.0,
+            56.0,
+            5.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 42,
+      "image_file": "detailed-images132/029.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-030",
+      "number": 30,
+      "key": "center_web",
+      "stage": 6,
+      "module_id": "bridge",
+      "module_title_zh": "按长销肩合拢中央桥",
+      "title_zh": "中央桥：先放中央短腹板",
+      "added_part_ids": [
+        65
+      ],
+      "new_parts": [
+        {
+          "index1": 65,
+          "part": "43857.dat",
+          "description_zh": "2孔厚短梁",
+          "instance_id": "center_web"
+        }
+      ],
+      "visible_part_ids": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        65
+      ],
+      "prerequisite_step_ids": [
+        "D132-029"
+      ],
+      "instructions_zh": [
+        "把#65中央2孔短腹板对准左半桥中央上下两孔。",
+        "右半桥仍单独放置，中央层朝远侧的面必须敞开。"
+      ],
+      "cautions_zh": [],
+      "kind": "position_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [],
+      "cumulative_introduced_count": 43,
+      "image_file": "detailed-images132/030.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-031",
+      "number": 31,
+      "key": "center_web_pins",
+      "stage": 6,
+      "module_id": "bridge",
+      "module_title_zh": "按长销肩合拢中央桥",
+      "title_zh": "中央桥：两根长销穿腹板和左梁",
+      "added_part_ids": [
+        66,
+        71
+      ],
+      "new_parts": [
+        {
+          "index1": 66,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "center_pin56"
+        },
+        {
+          "index1": 71,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "center_pin64"
+        }
+      ],
+      "visible_part_ids": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        71,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        66,
+        71
+      ],
+      "prerequisite_step_ids": [
+        "D132-030"
+      ],
+      "instructions_zh": [
+        "两根3格长销从远侧沿+Z穿入，长段依次穿中央腹板和左侧上下梁。",
+        "销肩停在中央层远侧接缝，短段露向远侧给右半桥。不要让销肩穿梁孔。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            66,
+            71
+          ],
+          "from": [
+            0.0,
+            60.0,
+            -14.0
+          ],
+          "to": [
+            0.0,
+            60.0,
+            0.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 45,
+      "image_file": "detailed-images132/031.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-032",
+      "number": 32,
+      "key": "center_minus_spacers",
+      "stage": 6,
+      "module_id": "bridge",
+      "module_title_zh": "按长销肩合拢中央桥",
+      "title_zh": "中央桥：左列两间隔件和长销",
+      "added_part_ids": [
+        67,
+        68,
+        72,
+        73
+      ],
+      "new_parts": [
+        {
+          "index1": 67,
+          "part": "18654.dat",
+          "description_zh": "1格圆间隔件",
+          "instance_id": "center_spacer-8_56"
+        },
+        {
+          "index1": 68,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "center_cross_pin-8_56"
+        },
+        {
+          "index1": 72,
+          "part": "18654.dat",
+          "description_zh": "1格圆间隔件",
+          "instance_id": "center_spacer-8_64"
+        },
+        {
+          "index1": 73,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "center_cross_pin-8_64"
+        }
+      ],
+      "visible_part_ids": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        71,
+        72,
+        73,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        67,
+        68,
+        72,
+        73
+      ],
+      "prerequisite_step_ids": [
+        "D132-031"
+      ],
+      "instructions_zh": [
+        "在中央腹板左侧一孔距处放两只1格间隔件。",
+        "把对应上下长销的长段沿+Z穿过间隔件和左桥梁；销肩与中央两销在同一平面。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            67,
+            68,
+            72,
+            73
+          ],
+          "from": [
+            -8.0,
+            60.0,
+            -14.0
+          ],
+          "to": [
+            -8.0,
+            60.0,
+            0.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 49,
+      "image_file": "detailed-images132/032.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-033",
+      "number": 33,
+      "key": "center_plus_spacers",
+      "stage": 6,
+      "module_id": "bridge",
+      "module_title_zh": "按长销肩合拢中央桥",
+      "title_zh": "中央桥：右列两间隔件和长销",
+      "added_part_ids": [
+        69,
+        70,
+        74,
+        75
+      ],
+      "new_parts": [
+        {
+          "index1": 69,
+          "part": "18654.dat",
+          "description_zh": "1格圆间隔件",
+          "instance_id": "center_spacer8_56"
+        },
+        {
+          "index1": 70,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "center_cross_pin8_56"
+        },
+        {
+          "index1": 74,
+          "part": "18654.dat",
+          "description_zh": "1格圆间隔件",
+          "instance_id": "center_spacer8_64"
+        },
+        {
+          "index1": 75,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "center_cross_pin8_64"
+        }
+      ],
+      "visible_part_ids": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        69,
+        70,
+        74,
+        75
+      ],
+      "prerequisite_step_ids": [
+        "D132-032"
+      ],
+      "instructions_zh": [
+        "在中央腹板右侧一孔距处重复两组间隔件和长销。",
+        "现在共六根长销的短段向远侧露出，上下各三根。两根Z定位轴及内半套必须仍在位。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            69,
+            70,
+            74,
+            75
+          ],
+          "from": [
+            8.0,
+            60.0,
+            -14.0
+          ],
+          "to": [
+            8.0,
+            60.0,
+            0.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 53,
+      "image_file": "detailed-images132/033.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-034",
+      "number": 34,
+      "key": "bridge_merge",
+      "stage": 6,
+      "module_id": "bridge",
+      "module_title_zh": "按长销肩合拢中央桥",
+      "title_zh": "合并：右半桥六孔同步封桥",
+      "added_part_ids": [],
+      "new_parts": [],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "prerequisite_step_ids": [
+        "D132-021",
+        "D132-033"
+      ],
+      "instructions_zh": [
+        "拿已完成的右半桥，从远侧沿+Z靠近。",
+        "把上下两排共六孔同时对准六根短销段，整组直压合拢；销肩仍停在中央接缝。",
+        "不能先封闭两桥，再强推长销肩穿孔。"
+      ],
+      "cautions_zh": [],
+      "kind": "merge_subassemblies",
+      "merged_module_ids": [
+        "L_bridge",
+        "central_web_and_spacers",
+        "R_bridge"
+      ],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ],
+          "from": [
+            48.727,
+            59.636,
+            -16.545
+          ],
+          "to": [
+            48.727,
+            59.636,
+            -8.545
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": 8,
+          "note_zh": "箭头表示装入方向；只标明名义行程，不表示所需推力。"
+        }
+      ],
+      "cumulative_introduced_count": 53,
+      "image_file": "detailed-images132/034.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-035",
+      "number": 35,
+      "key": "R_carriage_layout",
+      "stage": 7,
+      "module_id": "R_frame",
+      "module_title_zh": "围绕竖轨合拢两侧移动夹架和桥端",
+      "title_zh": "右夹架：围绕固定轨摆腹板和内轨",
+      "added_part_ids": [
+        12,
+        5
+      ],
+      "new_parts": [
+        {
+          "index1": 12,
+          "part": "43857.dat",
+          "description_zh": "2孔厚短梁",
+          "instance_id": "R_moving_web"
+        },
+        {
+          "index1": 5,
+          "part": "40490.dat",
+          "description_zh": "9孔厚直梁",
+          "instance_id": "R_inner9L"
+        }
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12,
+        44,
+        47,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        12,
+        5
+      ],
+      "prerequisite_step_ids": [
+        "D132-011",
+        "D132-034"
+      ],
+      "instructions_zh": [
+        "将#12移动短腹板放到外轨内侧的轨间空隙，再摆上#5内轨。",
+        "上下端横梁保持未封；这一步仅定位，需用手托住，不能把松件当作已锁定框架。"
+      ],
+      "cautions_zh": [
+        "桥须无载托稳；原机中的装入扫掠未验证。"
+      ],
+      "kind": "position_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [],
+      "cumulative_introduced_count": 55,
+      "image_file": "detailed-images132/035.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-036",
+      "number": 36,
+      "key": "R_carriage_Ls",
+      "stage": 7,
+      "module_id": "R_frame",
+      "module_title_zh": "围绕竖轨合拢两侧移动夹架和桥端",
+      "title_zh": "右夹架：两面原生L围住轨面",
+      "added_part_ids": [
+        14,
+        15
+      ],
+      "new_parts": [
+        {
+          "index1": 14,
+          "part": "32140.dat",
+          "description_zh": "原生厚L形梁",
+          "instance_id": "R_front_nativeL"
+        },
+        {
+          "index1": 15,
+          "part": "32140.dat",
+          "description_zh": "原生厚L形梁",
+          "instance_id": "R_rear_nativeL"
+        }
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12,
+        14,
+        15,
+        44,
+        47,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        14,
+        15
+      ],
+      "prerequisite_step_ids": [
+        "D132-035"
+      ],
+      "instructions_zh": [
+        "将#14、#15放到轨对的前后面，并让短腹板处于两L之间。",
+        "对齐桥端上下适配梁、前L、短腹板、后L的两排穿轴孔。",
+        "本步只是定位合并；还没有轴和半套固定。"
+      ],
+      "cautions_zh": [],
+      "kind": "position_parts",
+      "merged_module_ids": [
+        "bridge",
+        "R_frame"
+      ],
+      "insertion_vectors_mm": [],
+      "cumulative_introduced_count": 57,
+      "image_file": "detailed-images132/036.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-037",
+      "number": 37,
+      "key": "R_upper_axle",
+      "stage": 7,
+      "module_id": "R_frame",
+      "module_title_zh": "围绕竖轨合拢两侧移动夹架和桥端",
+      "title_zh": "右夹架：上轴先带外侧半套",
+      "added_part_ids": [
+        16,
+        17
+      ],
+      "new_parts": [
+        {
+          "index1": 16,
+          "part": "32073.dat",
+          "description_zh": "5格十字轴",
+          "instance_id": "R_axle56"
+        },
+        {
+          "index1": 17,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "R_bush56_-18"
+        }
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12,
+        14,
+        15,
+        16,
+        17,
+        44,
+        47,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        16,
+        17
+      ],
+      "prerequisite_step_ids": [
+        "D132-036"
+      ],
+      "instructions_zh": [
+        "先给#16轴装#17穿入端半套，再从远侧沿+Z穿过上适配梁、前L、短腹板和后L。",
+        "半套不穿梁孔；到穿入端适配梁外面即止。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            16,
+            17
+          ],
+          "from": [
+            80.0,
+            56.0,
+            -23.0
+          ],
+          "to": [
+            80.0,
+            56.0,
+            -9.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 59,
+      "image_file": "detailed-images132/037.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-038",
+      "number": 38,
+      "key": "R_lower_axle",
+      "stage": 7,
+      "module_id": "R_frame",
+      "module_title_zh": "围绕竖轨合拢两侧移动夹架和桥端",
+      "title_zh": "右夹架：下轴先带外侧半套",
+      "added_part_ids": [
+        19,
+        20
+      ],
+      "new_parts": [
+        {
+          "index1": 19,
+          "part": "32073.dat",
+          "description_zh": "5格十字轴",
+          "instance_id": "R_axle64"
+        },
+        {
+          "index1": 20,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "R_bush64_-22"
+        }
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        44,
+        47,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        19,
+        20
+      ],
+      "prerequisite_step_ids": [
+        "D132-037"
+      ],
+      "instructions_zh": [
+        "先给#19轴装#20穿入端半套，用与上轴相同方向穿入下排。",
+        "上下轴并非同一轴向终点：下梁适配层较厚，按图核对轴端及半套位置。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            19,
+            20
+          ],
+          "from": [
+            80.0,
+            64.0,
+            -27.0
+          ],
+          "to": [
+            80.0,
+            64.0,
+            -13.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 61,
+      "image_file": "detailed-images132/038.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-039",
+      "number": 39,
+      "key": "R_retaining_bushes",
+      "stage": 7,
+      "module_id": "R_frame",
+      "module_title_zh": "围绕竖轨合拢两侧移动夹架和桥端",
+      "title_zh": "右夹架：最后装另侧两只半套",
+      "added_part_ids": [
+        18,
+        21
+      ],
+      "new_parts": [
+        {
+          "index1": 18,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "R_bush56_14"
+        },
+        {
+          "index1": 21,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "R_bush64_14"
+        }
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        44,
+        47,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        18,
+        21
+      ],
+      "prerequisite_step_ids": [
+        "D132-038"
+      ],
+      "instructions_zh": [
+        "从另一端分别套上#18、#21，只推到刚贴住活动L。",
+        "两根轴、四只半套齐全后这侧夹架才算合拢。继续托住桥，工作锁销仍放在一旁。"
+      ],
+      "cautions_zh": [
+        "不得继续压紧两片活动L去夹固定轨；源模型没有额外滑隙。半套保持力未实测。"
+      ],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            18,
+            21
+          ],
+          "from": [
+            80.0,
+            60.0,
+            28.0
+          ],
+          "to": [
+            80.0,
+            60.0,
+            14.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 63,
+      "image_file": "detailed-images132/039.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-040",
+      "number": 40,
+      "key": "L_carriage_layout",
+      "stage": 7,
+      "module_id": "L_frame",
+      "module_title_zh": "围绕竖轨合拢两侧移动夹架和桥端",
+      "title_zh": "左夹架：围绕固定轨摆腹板和内轨",
+      "added_part_ids": [
+        33,
+        26
+      ],
+      "new_parts": [
+        {
+          "index1": 33,
+          "part": "43857.dat",
+          "description_zh": "2孔厚短梁",
+          "instance_id": "L_moving_web"
+        },
+        {
+          "index1": 26,
+          "part": "40490.dat",
+          "description_zh": "9孔厚直梁",
+          "instance_id": "L_inner9L"
+        }
+      ],
+      "visible_part_ids": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        55,
+        58,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        33,
+        26
+      ],
+      "prerequisite_step_ids": [
+        "D132-015",
+        "D132-034"
+      ],
+      "instructions_zh": [
+        "将#33移动短腹板放到外轨内侧的轨间空隙，再摆上#26内轨。",
+        "上下端横梁保持未封；这一步仅定位，需用手托住，不能把松件当作已锁定框架。"
+      ],
+      "cautions_zh": [
+        "桥须无载托稳；原机中的装入扫掠未验证。"
+      ],
+      "kind": "position_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [],
+      "cumulative_introduced_count": 65,
+      "image_file": "detailed-images132/040.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-041",
+      "number": 41,
+      "key": "L_carriage_Ls",
+      "stage": 7,
+      "module_id": "L_frame",
+      "module_title_zh": "围绕竖轨合拢两侧移动夹架和桥端",
+      "title_zh": "左夹架：两面原生L围住轨面",
+      "added_part_ids": [
+        35,
+        36
+      ],
+      "new_parts": [
+        {
+          "index1": 35,
+          "part": "32140.dat",
+          "description_zh": "原生厚L形梁",
+          "instance_id": "L_front_nativeL"
+        },
+        {
+          "index1": 36,
+          "part": "32140.dat",
+          "description_zh": "原生厚L形梁",
+          "instance_id": "L_rear_nativeL"
+        }
+      ],
+      "visible_part_ids": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        35,
+        36,
+        55,
+        58,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        35,
+        36
+      ],
+      "prerequisite_step_ids": [
+        "D132-040"
+      ],
+      "instructions_zh": [
+        "将#35、#36放到轨对的前后面，并让短腹板处于两L之间。",
+        "对齐桥端上下适配梁、前L、短腹板、后L的两排穿轴孔。",
+        "本步只是定位合并；还没有轴和半套固定。"
+      ],
+      "cautions_zh": [],
+      "kind": "position_parts",
+      "merged_module_ids": [
+        "bridge",
+        "L_frame"
+      ],
+      "insertion_vectors_mm": [],
+      "cumulative_introduced_count": 67,
+      "image_file": "detailed-images132/041.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-042",
+      "number": 42,
+      "key": "L_upper_axle",
+      "stage": 7,
+      "module_id": "L_frame",
+      "module_title_zh": "围绕竖轨合拢两侧移动夹架和桥端",
+      "title_zh": "左夹架：上轴先带外侧半套",
+      "added_part_ids": [
+        37,
+        38
+      ],
+      "new_parts": [
+        {
+          "index1": 37,
+          "part": "32073.dat",
+          "description_zh": "5格十字轴",
+          "instance_id": "L_axle56"
+        },
+        {
+          "index1": 38,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "L_bush56_-18"
+        }
+      ],
+      "visible_part_ids": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        35,
+        36,
+        37,
+        38,
+        55,
+        58,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        37,
+        38
+      ],
+      "prerequisite_step_ids": [
+        "D132-041"
+      ],
+      "instructions_zh": [
+        "先给#37轴装#38穿入端半套，再从近侧沿-Z穿过上适配梁、前L、短腹板和后L。",
+        "半套不穿梁孔；到穿入端适配梁外面即止。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            37,
+            38
+          ],
+          "from": [
+            -80.0,
+            56.0,
+            23.0
+          ],
+          "to": [
+            -80.0,
+            56.0,
+            9.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 69,
+      "image_file": "detailed-images132/042.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-043",
+      "number": 43,
+      "key": "L_lower_axle",
+      "stage": 7,
+      "module_id": "L_frame",
+      "module_title_zh": "围绕竖轨合拢两侧移动夹架和桥端",
+      "title_zh": "左夹架：下轴先带外侧半套",
+      "added_part_ids": [
+        40,
+        41
+      ],
+      "new_parts": [
+        {
+          "index1": 40,
+          "part": "32073.dat",
+          "description_zh": "5格十字轴",
+          "instance_id": "L_axle64"
+        },
+        {
+          "index1": 41,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "L_bush64_-22"
+        }
+      ],
+      "visible_part_ids": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        55,
+        58,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        40,
+        41
+      ],
+      "prerequisite_step_ids": [
+        "D132-042"
+      ],
+      "instructions_zh": [
+        "先给#40轴装#41穿入端半套，用与上轴相同方向穿入下排。",
+        "上下轴并非同一轴向终点：下梁适配层较厚，按图核对轴端及半套位置。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            40,
+            41
+          ],
+          "from": [
+            -80.0,
+            64.0,
+            27.0
+          ],
+          "to": [
+            -80.0,
+            64.0,
+            13.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 71,
+      "image_file": "detailed-images132/043.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-044",
+      "number": 44,
+      "key": "L_retaining_bushes",
+      "stage": 7,
+      "module_id": "L_frame",
+      "module_title_zh": "围绕竖轨合拢两侧移动夹架和桥端",
+      "title_zh": "左夹架：最后装另侧两只半套",
+      "added_part_ids": [
+        39,
+        42
+      ],
+      "new_parts": [
+        {
+          "index1": 39,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "L_bush56_14"
+        },
+        {
+          "index1": 42,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "L_bush64_14"
+        }
+      ],
+      "visible_part_ids": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        55,
+        58,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        39,
+        42
+      ],
+      "prerequisite_step_ids": [
+        "D132-043"
+      ],
+      "instructions_zh": [
+        "从另一端分别套上#39、#42，只推到刚贴住活动L。",
+        "两根轴、四只半套齐全后这侧夹架才算合拢。继续托住桥，工作锁销仍放在一旁。"
+      ],
+      "cautions_zh": [
+        "不得继续压紧两片活动L去夹固定轨；源模型没有额外滑隙。半套保持力未实测。"
+      ],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            39,
+            42
+          ],
+          "from": [
+            -80.0,
+            60.0,
+            -28.0
+          ],
+          "to": [
+            -80.0,
+            60.0,
+            -14.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 73,
+      "image_file": "detailed-images132/044.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-045",
+      "number": 45,
+      "key": "R上_endpins",
+      "stage": 8,
+      "module_id": "R_frame",
+      "module_title_zh": "封两侧竖轨的上下端横梁",
+      "title_zh": "右上端梁：两根销先入轨孔",
+      "added_part_ids": [
+        7,
+        8
+      ],
+      "new_parts": [
+        {
+          "index1": 7,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_endpin72_48"
+        },
+        {
+          "index1": 8,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_endpin88_48"
+        }
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        44,
+        47,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        7,
+        8
+      ],
+      "prerequisite_step_ids": [
+        "D132-039"
+      ],
+      "instructions_zh": [
+        "在两根竖轨对应的端孔各预插一根短销，从近侧沿-Z插入，销肩留在轨外表面。",
+        "移动夹架与桥端轴已合拢后才封这里；两根销朝同一端梁表面露出。预插销与随后横梁均从同一外侧接近。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            7,
+            8
+          ],
+          "from": [
+            80.0,
+            48.0,
+            18.0
+          ],
+          "to": [
+            80.0,
+            48.0,
+            4.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 75,
+      "image_file": "detailed-images132/045.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-046",
+      "number": 46,
+      "key": "R上_endbar",
+      "stage": 8,
+      "module_id": "R_frame",
+      "module_title_zh": "封两侧竖轨的上下端横梁",
+      "title_zh": "右上端梁：三孔横梁双孔合拢",
+      "added_part_ids": [
+        6
+      ],
+      "new_parts": [
+        {
+          "index1": 6,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "R_end48"
+        }
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        44,
+        47,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        6
+      ],
+      "prerequisite_step_ids": [
+        "D132-045"
+      ],
+      "instructions_zh": [
+        "将#6三孔端横梁的两端孔对齐两根露出的销。",
+        "从近侧沿-Z直压，不扭一端去扣另一端。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            6
+          ],
+          "from": [
+            80.0,
+            48.0,
+            22.0
+          ],
+          "to": [
+            80.0,
+            48.0,
+            8.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 76,
+      "image_file": "detailed-images132/046.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-047",
+      "number": 47,
+      "key": "R下_endpins",
+      "stage": 8,
+      "module_id": "R_frame",
+      "module_title_zh": "封两侧竖轨的上下端横梁",
+      "title_zh": "右下端梁：两根销先入轨孔",
+      "added_part_ids": [
+        10,
+        11
+      ],
+      "new_parts": [
+        {
+          "index1": 10,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_endpin72_112"
+        },
+        {
+          "index1": 11,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "R_endpin88_112"
+        }
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        44,
+        47,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        10,
+        11
+      ],
+      "prerequisite_step_ids": [
+        "D132-039",
+        "D132-046"
+      ],
+      "instructions_zh": [
+        "在两根竖轨对应的端孔各预插一根短销，从远侧沿+Z插入，销肩留在轨外表面。",
+        "移动夹架与桥端轴已合拢后才封这里；两根销朝同一端梁表面露出。预插销与随后横梁均从同一外侧接近。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            10,
+            11
+          ],
+          "from": [
+            80.0,
+            112.0,
+            -18.0
+          ],
+          "to": [
+            80.0,
+            112.0,
+            -4.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 78,
+      "image_file": "detailed-images132/047.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-048",
+      "number": 48,
+      "key": "R下_endbar",
+      "stage": 8,
+      "module_id": "R_frame",
+      "module_title_zh": "封两侧竖轨的上下端横梁",
+      "title_zh": "右下端梁：三孔横梁双孔合拢",
+      "added_part_ids": [
+        9
+      ],
+      "new_parts": [
+        {
+          "index1": 9,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "R_end112"
+        }
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        44,
+        47,
+        76,
+        77,
+        78,
+        79
+      ],
+      "highlight_part_ids": [
+        9
+      ],
+      "prerequisite_step_ids": [
+        "D132-047"
+      ],
+      "instructions_zh": [
+        "将#9三孔端横梁的两端孔对齐两根露出的销。",
+        "从远侧沿+Z直压，不扭一端去扣另一端。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            9
+          ],
+          "from": [
+            80.0,
+            112.0,
+            -22.0
+          ],
+          "to": [
+            80.0,
+            112.0,
+            -8.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 79,
+      "image_file": "detailed-images132/048.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-049",
+      "number": 49,
+      "key": "L上_endpins",
+      "stage": 8,
+      "module_id": "L_frame",
+      "module_title_zh": "封两侧竖轨的上下端横梁",
+      "title_zh": "左上端梁：两根销先入轨孔",
+      "added_part_ids": [
+        28,
+        29
+      ],
+      "new_parts": [
+        {
+          "index1": 28,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_endpin72_48"
+        },
+        {
+          "index1": 29,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_endpin88_48"
+        }
+      ],
+      "visible_part_ids": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        55,
+        58,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        28,
+        29
+      ],
+      "prerequisite_step_ids": [
+        "D132-044"
+      ],
+      "instructions_zh": [
+        "在两根竖轨对应的端孔各预插一根短销，从远侧沿+Z插入，销肩留在轨外表面。",
+        "移动夹架与桥端轴已合拢后才封这里；两根销朝同一端梁表面露出。预插销与随后横梁均从同一外侧接近。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            28,
+            29
+          ],
+          "from": [
+            -80.0,
+            48.0,
+            -18.0
+          ],
+          "to": [
+            -80.0,
+            48.0,
+            -4.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 81,
+      "image_file": "detailed-images132/049.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-050",
+      "number": 50,
+      "key": "L上_endbar",
+      "stage": 8,
+      "module_id": "L_frame",
+      "module_title_zh": "封两侧竖轨的上下端横梁",
+      "title_zh": "左上端梁：三孔横梁双孔合拢",
+      "added_part_ids": [
+        27
+      ],
+      "new_parts": [
+        {
+          "index1": 27,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "L_end48"
+        }
+      ],
+      "visible_part_ids": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        55,
+        58,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        27
+      ],
+      "prerequisite_step_ids": [
+        "D132-049"
+      ],
+      "instructions_zh": [
+        "将#27三孔端横梁的两端孔对齐两根露出的销。",
+        "从远侧沿+Z直压，不扭一端去扣另一端。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            27
+          ],
+          "from": [
+            -80.0,
+            48.0,
+            -22.0
+          ],
+          "to": [
+            -80.0,
+            48.0,
+            -8.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 82,
+      "image_file": "detailed-images132/050.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-051",
+      "number": 51,
+      "key": "L下_endpins",
+      "stage": 8,
+      "module_id": "L_frame",
+      "module_title_zh": "封两侧竖轨的上下端横梁",
+      "title_zh": "左下端梁：两根销先入轨孔",
+      "added_part_ids": [
+        31,
+        32
+      ],
+      "new_parts": [
+        {
+          "index1": 31,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_endpin72_112"
+        },
+        {
+          "index1": 32,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "L_endpin88_112"
+        }
+      ],
+      "visible_part_ids": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        55,
+        58,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        31,
+        32
+      ],
+      "prerequisite_step_ids": [
+        "D132-044",
+        "D132-050"
+      ],
+      "instructions_zh": [
+        "在两根竖轨对应的端孔各预插一根短销，从近侧沿-Z插入，销肩留在轨外表面。",
+        "移动夹架与桥端轴已合拢后才封这里；两根销朝同一端梁表面露出。预插销与随后横梁均从同一外侧接近。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            31,
+            32
+          ],
+          "from": [
+            -80.0,
+            112.0,
+            18.0
+          ],
+          "to": [
+            -80.0,
+            112.0,
+            4.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 84,
+      "image_file": "detailed-images132/051.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-052",
+      "number": 52,
+      "key": "L下_endbar",
+      "stage": 8,
+      "module_id": "L_frame",
+      "module_title_zh": "封两侧竖轨的上下端横梁",
+      "title_zh": "左下端梁：三孔横梁双孔合拢",
+      "added_part_ids": [
+        30
+      ],
+      "new_parts": [
+        {
+          "index1": 30,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "L_end112"
+        }
+      ],
+      "visible_part_ids": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        55,
+        58,
+        80,
+        81,
+        82,
+        83
+      ],
+      "highlight_part_ids": [
+        30
+      ],
+      "prerequisite_step_ids": [
+        "D132-051"
+      ],
+      "instructions_zh": [
+        "将#30三孔端横梁的两端孔对齐两根露出的销。",
+        "从近侧沿-Z直压，不扭一端去扣另一端。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            30
+          ],
+          "from": [
+            -80.0,
+            112.0,
+            22.0
+          ],
+          "to": [
+            -80.0,
+            112.0,
+            8.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 85,
+      "image_file": "detailed-images132/052.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-053",
+      "number": 53,
+      "key": "seat_H",
+      "stage": 9,
+      "module_id": "seat",
+      "module_title_zh": "先拼完整三条托面和H座",
+      "title_zh": "托面子组件：先取H座",
+      "added_part_ids": [
+        99
+      ],
+      "new_parts": [
+        {
+          "index1": 99,
+          "part": "14720.dat",
+          "description_zh": "原生H形框",
+          "instance_id": "seat_H"
+        }
+      ],
+      "visible_part_ids": [
+        99
+      ],
+      "highlight_part_ids": [
+        99
+      ],
+      "prerequisite_step_ids": [
+        "D132-001"
+      ],
+      "instructions_zh": [
+        "取#99原生H框，上面是将来三条7孔托面的位置。",
+        "四根座柱完全留在一旁；先把H座、四个15100和托面拼成一个独立组件。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [],
+      "cumulative_introduced_count": 86,
+      "image_file": "detailed-images132/053.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-054",
+      "number": 54,
+      "key": "seat_near_corners",
+      "stage": 9,
+      "module_id": "seat",
+      "module_title_zh": "先拼完整三条托面和H座",
+      "title_zh": "H座：近侧两个连接体和长销",
+      "added_part_ids": [
+        89,
+        96,
+        104,
+        107
+      ],
+      "new_parts": [
+        {
+          "index1": 89,
+          "part": "15100.dat",
+          "description_zh": "垂直销／圆孔连接件",
+          "instance_id": "seat_support15100_-16_16"
+        },
+        {
+          "index1": 96,
+          "part": "15100.dat",
+          "description_zh": "垂直销／圆孔连接件",
+          "instance_id": "seat_support15100_16_16"
+        },
+        {
+          "index1": 104,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "seat_corner_longpin_-16_8"
+        },
+        {
+          "index1": 107,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "seat_corner_longpin_16_8"
+        }
+      ],
+      "visible_part_ids": [
+        89,
+        96,
+        99,
+        104,
+        107
+      ],
+      "highlight_part_ids": [
+        89,
+        96,
+        104,
+        107
+      ],
+      "prerequisite_step_ids": [
+        "D132-053"
+      ],
+      "instructions_zh": [
+        "在H座近侧两个角孔下方放#89、#96圆孔体，一体销朝近侧外伸。",
+        "从H座上方把#104、#107长销的长段沿+Y穿过H座和圆孔体。销肩贴H座上面，短段朝上露出。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            89,
+            96,
+            104,
+            107
+          ],
+          "from": [
+            0.0,
+            30.0,
+            8.0
+          ],
+          "to": [
+            0.0,
+            44.0,
+            8.0
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 90,
+      "image_file": "detailed-images132/054.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-055",
+      "number": 55,
+      "key": "seat_far_corners",
+      "stage": 9,
+      "module_id": "seat",
+      "module_title_zh": "先拼完整三条托面和H座",
+      "title_zh": "H座：远侧两个连接体和长销",
+      "added_part_ids": [
+        85,
+        92,
+        103,
+        106
+      ],
+      "new_parts": [
+        {
+          "index1": 85,
+          "part": "15100.dat",
+          "description_zh": "垂直销／圆孔连接件",
+          "instance_id": "seat_support15100_-16_-16"
+        },
+        {
+          "index1": 92,
+          "part": "15100.dat",
+          "description_zh": "垂直销／圆孔连接件",
+          "instance_id": "seat_support15100_16_-16"
+        },
+        {
+          "index1": 103,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "seat_corner_longpin_-16_-8"
+        },
+        {
+          "index1": 106,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "seat_corner_longpin_16_-8"
+        }
+      ],
+      "visible_part_ids": [
+        85,
+        89,
+        92,
+        96,
+        99,
+        103,
+        104,
+        106,
+        107
+      ],
+      "highlight_part_ids": [
+        85,
+        92,
+        103,
+        106
+      ],
+      "prerequisite_step_ids": [
+        "D132-054"
+      ],
+      "instructions_zh": [
+        "远侧重复#85、#92与#103、#106，一体销朝远侧外伸。",
+        "四根长销的长段都占H座和圆孔体两层；短段留给托面，不强推销肩穿孔。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            85,
+            92,
+            103,
+            106
+          ],
+          "from": [
+            0.0,
+            30.0,
+            -8.0
+          ],
+          "to": [
+            0.0,
+            44.0,
+            -8.0
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 94,
+      "image_file": "detailed-images132/055.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-056",
+      "number": 56,
+      "key": "seat_middle_pins",
+      "stage": 9,
+      "module_id": "seat",
+      "module_title_zh": "先拼完整三条托面和H座",
+      "title_zh": "H座中排：独立预插两根短销",
+      "added_part_ids": [
+        105,
+        108
+      ],
+      "new_parts": [
+        {
+          "index1": 105,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "seat_middle_deck_pin_-16"
+        },
+        {
+          "index1": 108,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "seat_middle_deck_pin_16"
+        }
+      ],
+      "visible_part_ids": [
+        85,
+        89,
+        92,
+        96,
+        99,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "highlight_part_ids": [
+        105,
+        108
+      ],
+      "prerequisite_step_ids": [
+        "D132-055"
+      ],
+      "instructions_zh": [
+        "在H座中排左右对应孔预插#105、#108，另一半朝上。",
+        "它们只连接中间托面，不由四根角长销代替。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            105,
+            108
+          ],
+          "from": [
+            0.0,
+            22.0,
+            0.0
+          ],
+          "to": [
+            0.0,
+            36.0,
+            0.0
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 96,
+      "image_file": "detailed-images132/056.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-057",
+      "number": 57,
+      "key": "seat_far_deck",
+      "stage": 9,
+      "module_id": "seat",
+      "module_title_zh": "先拼完整三条托面和H座",
+      "title_zh": "托面：装远侧7孔梁",
+      "added_part_ids": [
+        100
+      ],
+      "new_parts": [
+        {
+          "index1": 100,
+          "part": "32524.dat",
+          "description_zh": "7孔厚直梁",
+          "instance_id": "seat_deck_-8"
+        }
+      ],
+      "visible_part_ids": [
+        85,
+        89,
+        92,
+        96,
+        99,
+        100,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "highlight_part_ids": [
+        100
+      ],
+      "prerequisite_step_ids": [
+        "D132-056"
+      ],
+      "instructions_zh": [
+        "把#100托面梁距两端各第二孔对准远侧两根长销短端，从上向下沿+Y压入。",
+        "最右端外孔留给黄色定位框。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            100
+          ],
+          "from": [
+            0.0,
+            18.0,
+            -8.0
+          ],
+          "to": [
+            0.0,
+            32.0,
+            -8.0
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 97,
+      "image_file": "detailed-images132/057.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-058",
+      "number": 58,
+      "key": "seat_middle_deck",
+      "stage": 9,
+      "module_id": "seat",
+      "module_title_zh": "先拼完整三条托面和H座",
+      "title_zh": "托面：装中间7孔梁",
+      "added_part_ids": [
+        101
+      ],
+      "new_parts": [
+        {
+          "index1": 101,
+          "part": "32524.dat",
+          "description_zh": "7孔厚直梁",
+          "instance_id": "seat_deck_0"
+        }
+      ],
+      "visible_part_ids": [
+        85,
+        89,
+        92,
+        96,
+        99,
+        100,
+        101,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "highlight_part_ids": [
+        101
+      ],
+      "prerequisite_step_ids": [
+        "D132-057"
+      ],
+      "instructions_zh": [
+        "把#101中间托面压到两根独立短销上；也使用距两端各第二孔。",
+        "三条梁的上表面需要在同一平面，不额外加片。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            101
+          ],
+          "from": [
+            0.0,
+            18.0,
+            0.0
+          ],
+          "to": [
+            0.0,
+            32.0,
+            0.0
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 98,
+      "image_file": "detailed-images132/058.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-059",
+      "number": 59,
+      "key": "seat_deck_ready",
+      "stage": 9,
+      "module_id": "seat",
+      "module_title_zh": "先拼完整三条托面和H座",
+      "title_zh": "托面：装近侧7孔梁并检查",
+      "added_part_ids": [
+        102
+      ],
+      "new_parts": [
+        {
+          "index1": 102,
+          "part": "32524.dat",
+          "description_zh": "7孔厚直梁",
+          "instance_id": "seat_deck_8"
+        }
+      ],
+      "visible_part_ids": [
+        85,
+        89,
+        92,
+        96,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "highlight_part_ids": [
+        102
+      ],
+      "prerequisite_step_ids": [
+        "D132-058"
+      ],
+      "instructions_zh": [
+        "把#102近侧托面压到余下两根长销短端上。",
+        "确认三条7孔托面齐全、四个15100朝近远两侧外伸。四柱仍未装，黄色框接口最右端两孔保持空。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            102
+          ],
+          "from": [
+            0.0,
+            18.0,
+            8.0
+          ],
+          "to": [
+            0.0,
+            32.0,
+            8.0
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 99,
+      "image_file": "detailed-images132/059.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-060",
+      "number": 60,
+      "key": "seat_far_rootpins",
+      "stage": 10,
+      "module_id": "seat_bridge",
+      "module_title_zh": "预插七根座柱根销并放入托面模块",
+      "title_zh": "桥上：远侧四根座柱根销",
+      "added_part_ids": [
+        86,
+        87,
+        93,
+        94
+      ],
+      "new_parts": [
+        {
+          "index1": 86,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "seat_column_pin_-16_-16_56"
+        },
+        {
+          "index1": 87,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "seat_column_pin_-16_-16_64"
+        },
+        {
+          "index1": 93,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "seat_column_pin_16_-16_56"
+        },
+        {
+          "index1": 94,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "seat_column_pin_16_-16_64"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        86,
+        87,
+        93,
+        94,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        86,
+        87,
+        93,
+        94
+      ],
+      "prerequisite_step_ids": [
+        "D132-048",
+        "D132-052"
+      ],
+      "instructions_zh": [
+        "在桥远侧左右两个柱位的上下两孔，各预插一根短销。",
+        "每根留半截朝远侧，销肩贴桥梁外面；四根销与后续15100一体销平行。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            86,
+            87,
+            93,
+            94
+          ],
+          "from": [
+            0.0,
+            60.0,
+            -26.0
+          ],
+          "to": [
+            0.0,
+            60.0,
+            -12.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 103,
+      "image_file": "detailed-images132/060.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-061",
+      "number": 61,
+      "key": "seat_near_right_rootpins",
+      "stage": 10,
+      "module_id": "seat_bridge",
+      "module_title_zh": "预插七根座柱根销并放入托面模块",
+      "title_zh": "桥上：近右柱两根根销",
+      "added_part_ids": [
+        97,
+        98
+      ],
+      "new_parts": [
+        {
+          "index1": 97,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "seat_column_pin_16_16_56"
+        },
+        {
+          "index1": 98,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "seat_column_pin_16_16_64"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        86,
+        87,
+        93,
+        94,
+        97,
+        98,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        97,
+        98
+      ],
+      "prerequisite_step_ids": [
+        "D132-060"
+      ],
+      "instructions_zh": [
+        "在近右柱位上下孔预插#97、#98，另一半向近侧伸出。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            97,
+            98
+          ],
+          "from": [
+            16.0,
+            60.0,
+            26.0
+          ],
+          "to": [
+            16.0,
+            60.0,
+            12.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 105,
+      "image_file": "detailed-images132/061.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-062",
+      "number": 62,
+      "key": "seat_near_left_rootpin",
+      "stage": 10,
+      "module_id": "seat_bridge",
+      "module_title_zh": "预插七根座柱根销并放入托面模块",
+      "title_zh": "桥上：长轴柱只插下孔短销",
+      "added_part_ids": [
+        90
+      ],
+      "new_parts": [
+        {
+          "index1": 90,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "seat_column_pin_-16_16_64"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        86,
+        87,
+        90,
+        93,
+        94,
+        97,
+        98,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        90
+      ],
+      "prerequisite_step_ids": [
+        "D132-061"
+      ],
+      "instructions_zh": [
+        "在近左柱位最下孔装#90。中孔已有提前装好的#110五格长轴，不再加第二根短销。",
+        "当前#90是保留的下排销；不要因为旧109编号相同而把它删掉。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            90
+          ],
+          "from": [
+            -16.0,
+            64.0,
+            26.0
+          ],
+          "to": [
+            -16.0,
+            64.0,
+            12.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 106,
+      "image_file": "detailed-images132/062.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-063",
+      "number": 63,
+      "key": "position_deck",
+      "stage": 10,
+      "module_id": "seat_bridge",
+      "module_title_zh": "预插七根座柱根销并放入托面模块",
+      "title_zh": "合并前定位：把完整托面放到桥上方",
+      "added_part_ids": [],
+      "new_parts": [],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        85,
+        86,
+        87,
+        89,
+        90,
+        92,
+        93,
+        94,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        85,
+        89,
+        92,
+        96,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "prerequisite_step_ids": [
+        "D132-059",
+        "D132-062"
+      ],
+      "instructions_zh": [
+        "托稳已经拼好的H座与三条托面，将它们放在桥上方对应高度。",
+        "四个15100横向一体销对准四根柱将来的最上孔高度。现在四柱仍全部缺席，不是把封闭托面向下硬塞进柱笼。",
+        "这是待侧向合柱的定位状态，需手扶，尚未独立锁固。"
+      ],
+      "cautions_zh": [],
+      "kind": "position_parts",
+      "merged_module_ids": [
+        "seat",
+        "bridge"
+      ],
+      "insertion_vectors_mm": [],
+      "cumulative_introduced_count": 106,
+      "image_file": "detailed-images132/063.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-064",
+      "number": 64,
+      "key": "column_far_left",
+      "stage": 11,
+      "module_id": "seat_bridge",
+      "module_title_zh": "合拢四根座柱，带长轴一柱从轴端套入",
+      "title_zh": "远左座柱：从外侧同时接三销",
+      "added_part_ids": [
+        84
+      ],
+      "new_parts": [
+        {
+          "index1": 84,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "seat_column_-16_-16"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        84,
+        85,
+        86,
+        87,
+        89,
+        90,
+        92,
+        93,
+        94,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        84
+      ],
+      "prerequisite_step_ids": [
+        "D132-063"
+      ],
+      "instructions_zh": [
+        "把3孔柱从该侧外面沿销轴直压。",
+        "最上孔接15100一体销，中孔和最下孔接桥上两根短销；最后8毫米三孔同时到位。",
+        "托住对面，只直压，不扭柱去扣最后一个孔。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            84
+          ],
+          "from": [
+            -16.0,
+            56.0,
+            -24.0
+          ],
+          "to": [
+            -16.0,
+            56.0,
+            -16.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": 8,
+          "note_zh": "箭头表示装入方向；只标明名义行程，不表示所需推力。"
+        }
+      ],
+      "cumulative_introduced_count": 107,
+      "image_file": "detailed-images132/064.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-065",
+      "number": 65,
+      "key": "column_far_right",
+      "stage": 11,
+      "module_id": "seat_bridge",
+      "module_title_zh": "合拢四根座柱，带长轴一柱从轴端套入",
+      "title_zh": "远右座柱：从外侧同时接三销",
+      "added_part_ids": [
+        91
+      ],
+      "new_parts": [
+        {
+          "index1": 91,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "seat_column_16_-16"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        84,
+        85,
+        86,
+        87,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        91
+      ],
+      "prerequisite_step_ids": [
+        "D132-064"
+      ],
+      "instructions_zh": [
+        "把3孔柱从该侧外面沿销轴直压。",
+        "最上孔接15100一体销，中孔和最下孔接桥上两根短销；最后8毫米三孔同时到位。",
+        "托住对面，只直压，不扭柱去扣最后一个孔。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            91
+          ],
+          "from": [
+            16.0,
+            56.0,
+            -24.0
+          ],
+          "to": [
+            16.0,
+            56.0,
+            -16.0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": 8,
+          "note_zh": "箭头表示装入方向；只标明名义行程，不表示所需推力。"
+        }
+      ],
+      "cumulative_introduced_count": 108,
+      "image_file": "detailed-images132/065.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-066",
+      "number": 66,
+      "key": "column_near_right",
+      "stage": 11,
+      "module_id": "seat_bridge",
+      "module_title_zh": "合拢四根座柱，带长轴一柱从轴端套入",
+      "title_zh": "近右座柱：从外侧同时接三销",
+      "added_part_ids": [
+        95
+      ],
+      "new_parts": [
+        {
+          "index1": 95,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "seat_column_16_16"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        84,
+        85,
+        86,
+        87,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        95
+      ],
+      "prerequisite_step_ids": [
+        "D132-065"
+      ],
+      "instructions_zh": [
+        "把3孔柱从该侧外面沿销轴直压。",
+        "最上孔接15100一体销，中孔和最下孔接桥上两根短销；最后8毫米三孔同时到位。",
+        "托住对面，只直压，不扭柱去扣最后一个孔。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            95
+          ],
+          "from": [
+            16.0,
+            56.0,
+            24.0
+          ],
+          "to": [
+            16.0,
+            56.0,
+            16.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": 8,
+          "note_zh": "箭头表示装入方向；只标明名义行程，不表示所需推力。"
+        }
+      ],
+      "cumulative_introduced_count": 109,
+      "image_file": "detailed-images132/066.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-067",
+      "number": 67,
+      "key": "column_long_axle",
+      "stage": 11,
+      "module_id": "seat_bridge",
+      "module_title_zh": "合拢四根座柱，带长轴一柱从轴端套入",
+      "title_zh": "近左座柱：从长轴末端套入",
+      "added_part_ids": [
+        88
+      ],
+      "new_parts": [
+        {
+          "index1": 88,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "seat_column_-16_16"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        110,
+        111,
+        112,
+        114
+      ],
+      "highlight_part_ids": [
+        88
+      ],
+      "prerequisite_step_ids": [
+        "D132-028",
+        "D132-066"
+      ],
+      "instructions_zh": [
+        "先把#88中孔从#110轴露出的末端套进去，再沿-Z向里滑。",
+        "从碰到轴端起名义至少走28毫米；最后8毫米才同时接上孔15100和最下孔#90。",
+        "不可横跨长轴扣柱；外侧间隔件和绿色高L此时必须仍未安装。"
+      ],
+      "cautions_zh": [
+        "28毫米装柱路径对原机环境的扫掠尚未验证。遇阻停止，不强压。"
+      ],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            88
+          ],
+          "from": [
+            -16.0,
+            56.0,
+            44.0
+          ],
+          "to": [
+            -16.0,
+            56.0,
+            16.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": 28,
+          "note_zh": "箭头表示装入方向；只标明名义行程，不表示所需推力。"
+        }
+      ],
+      "cumulative_introduced_count": 110,
+      "image_file": "detailed-images132/067.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-068",
+      "number": 68,
+      "key": "z_spacers",
+      "stage": 12,
+      "module_id": "seat_bridge",
+      "module_title_zh": "最后封绿色定位L和两只外半套",
+      "title_zh": "Z边：先套一格与两格间隔件",
+      "added_part_ids": [
+        116,
+        117
+      ],
+      "new_parts": [
+        {
+          "index1": 116,
+          "part": "18654.dat",
+          "description_zh": "1格圆间隔件",
+          "instance_id": "z_locator_one_layer_root_spacer"
+        },
+        {
+          "index1": 117,
+          "part": "62462.dat",
+          "description_zh": "2格圆间隔件",
+          "instance_id": "z_locator_two_layer_root_spacer"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        110,
+        111,
+        112,
+        114,
+        116,
+        117
+      ],
+      "highlight_part_ids": [
+        116,
+        117
+      ],
+      "prerequisite_step_ids": [
+        "D132-067"
+      ],
+      "instructions_zh": [
+        "#116一格间隔件套上五格轴，贴刚装好的座柱。",
+        " #117两格间隔件套上六格轴，贴桥梁；两外端应处于绿色L的同一内表面。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            116,
+            117
+          ],
+          "from": [
+            -24.0,
+            56.0,
+            36.0
+          ],
+          "to": [
+            -24.0,
+            56.0,
+            22.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 112,
+      "image_file": "detailed-images132/068.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-069",
+      "number": 69,
+      "key": "z_L",
+      "stage": 12,
+      "module_id": "seat_bridge",
+      "module_title_zh": "最后封绿色定位L和两只外半套",
+      "title_zh": "Z边：绿色高L同时套两轴",
+      "added_part_ids": [
+        109
+      ],
+      "new_parts": [
+        {
+          "index1": 109,
+          "part": "32526.dat",
+          "description_zh": "原生高L形梁",
+          "instance_id": "z_locator_positiveZ_L"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        114,
+        116,
+        117
+      ],
+      "highlight_part_ids": [
+        109
+      ],
+      "prerequisite_step_ids": [
+        "D132-068"
+      ],
+      "instructions_zh": [
+        "把#109绿色高L底部相隔两格的两孔同时对准两轴。",
+        "从近侧沿-Z向里滑到两个间隔件上；不扭一孔先锁死再逼另一孔。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            109
+          ],
+          "from": [
+            -16.0,
+            24.0,
+            46.0
+          ],
+          "to": [
+            -16.0,
+            24.0,
+            32.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 113,
+      "image_file": "detailed-images132/069.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-070",
+      "number": 70,
+      "key": "z_outer_bushes",
+      "stage": 12,
+      "module_id": "seat_bridge",
+      "module_title_zh": "最后封绿色定位L和两只外半套",
+      "title_zh": "Z边：最后两只外半套",
+      "added_part_ids": [
+        113,
+        115
+      ],
+      "new_parts": [
+        {
+          "index1": 113,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "z_locator_retainer-16_38"
+        },
+        {
+          "index1": 115,
+          "part": "32123a.dat",
+          "description_zh": "半轴套",
+          "instance_id": "z_locator_retainer-32_38"
+        }
+      ],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117
+      ],
+      "highlight_part_ids": [
+        113,
+        115
+      ],
+      "prerequisite_step_ids": [
+        "D132-069"
+      ],
+      "instructions_zh": [
+        "将#113、#115沿轴从近侧压入，贴绿色L外面。",
+        "核对两只预装内半套#112、#114仍在位。半套是可拆摩擦保持，不能当作不可脱出的锁扣。"
+      ],
+      "cautions_zh": [
+        "四只半套的保持力及使用中向外爬动风险未实测。"
+      ],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            113,
+            115
+          ],
+          "from": [
+            -24.0,
+            56.0,
+            52.0
+          ],
+          "to": [
+            -24.0,
+            56.0,
+            38.0
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 115,
+      "image_file": "detailed-images132/070.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-071",
+      "number": 71,
+      "key": "x_root_pins",
+      "stage": 13,
+      "module_id": "x_locator",
+      "module_title_zh": "在手中按销肩拼完整黄色双柱定位框",
+      "title_zh": "黄色X框：两根底销先装短端",
+      "added_part_ids": [
+        119,
+        120,
+        122,
+        123
+      ],
+      "new_parts": [
+        {
+          "index1": 119,
+          "part": "15100.dat",
+          "description_zh": "垂直销／圆孔连接件",
+          "instance_id": "x_locator_deck_root_-8"
+        },
+        {
+          "index1": 120,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "x_locator_root_pin_-8"
+        },
+        {
+          "index1": 122,
+          "part": "15100.dat",
+          "description_zh": "垂直销／圆孔连接件",
+          "instance_id": "x_locator_deck_root_8"
+        },
+        {
+          "index1": 123,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "x_locator_root_pin_8"
+        }
+      ],
+      "visible_part_ids": [
+        119,
+        120,
+        122,
+        123
+      ],
+      "highlight_part_ids": [
+        119,
+        120,
+        122,
+        123
+      ],
+      "prerequisite_step_ids": [
+        "D132-001"
+      ],
+      "instructions_zh": [
+        "#120、#123长销各把短端插入#119、#122横向圆孔，销肩停在孔外。",
+        "15100的一体销朝上，长销长端朝右，留给间隔件和立柱。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            119,
+            120,
+            122,
+            123
+          ],
+          "from": [
+            42.0,
+            40.0,
+            0.0
+          ],
+          "to": [
+            28.0,
+            40.0,
+            0.0
+          ],
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 119,
+      "image_file": "detailed-images132/071.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-072",
+      "number": 72,
+      "key": "x_posts",
+      "stage": 13,
+      "module_id": "x_locator",
+      "module_title_zh": "在手中按销肩拼完整黄色双柱定位框",
+      "title_zh": "黄色X框：先套垫块，再套双柱",
+      "added_part_ids": [
+        118,
+        121,
+        130,
+        131
+      ],
+      "new_parts": [
+        {
+          "index1": 118,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "x_locator_post_-8"
+        },
+        {
+          "index1": 121,
+          "part": "32523.dat",
+          "description_zh": "3孔厚直梁",
+          "instance_id": "x_locator_post_8"
+        },
+        {
+          "index1": 130,
+          "part": "18654.dat",
+          "description_zh": "1格圆间隔件",
+          "instance_id": "x_locator_root_spacer_-8"
+        },
+        {
+          "index1": 131,
+          "part": "18654.dat",
+          "description_zh": "1格圆间隔件",
+          "instance_id": "x_locator_root_spacer_8"
+        }
+      ],
+      "visible_part_ids": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        130,
+        131
+      ],
+      "highlight_part_ids": [
+        118,
+        121,
+        130,
+        131
+      ],
+      "prerequisite_step_ids": [
+        "D132-071"
+      ],
+      "instructions_zh": [
+        "每根长端先套一只1格间隔件#130／#131，再套#118／#121三孔柱最下孔。",
+        "两柱上端朝同一方向；长销长段贯穿垫块与立柱，短段留在15100圆孔体内。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            118,
+            121,
+            130,
+            131
+          ],
+          "from": [
+            50.0,
+            36.0,
+            0.0
+          ],
+          "to": [
+            36.0,
+            36.0,
+            0.0
+          ],
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 123,
+      "image_file": "detailed-images132/072.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-073",
+      "number": 73,
+      "key": "x_top_pins",
+      "stage": 13,
+      "module_id": "x_bar",
+      "module_title_zh": "在手中按销肩拼完整黄色双柱定位框",
+      "title_zh": "黄色X框：单独预插顶梁三销",
+      "added_part_ids": [
+        124,
+        127,
+        128,
+        129
+      ],
+      "new_parts": [
+        {
+          "index1": 124,
+          "part": "32316.dat",
+          "description_zh": "5孔厚直梁",
+          "instance_id": "x_locator_upper_bar"
+        },
+        {
+          "index1": 127,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "x_locator_right_upper_pin"
+        },
+        {
+          "index1": 128,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "x_locator_left_upper_pin"
+        },
+        {
+          "index1": 129,
+          "part": "6558.dat",
+          "description_zh": "3格摩擦长销",
+          "instance_id": "x_locator_bar_to_thinLs_pin"
+        }
+      ],
+      "visible_part_ids": [
+        124,
+        127,
+        128,
+        129
+      ],
+      "highlight_part_ids": [
+        124,
+        127,
+        128,
+        129
+      ],
+      "prerequisite_step_ids": [
+        "D132-001"
+      ],
+      "instructions_zh": [
+        "取#124五孔横梁；距两端各第二孔预插#127、#128短销给两柱顶孔。",
+        "靠近侧角撑端的最外孔用#129长销，短段在横梁内、长段向外露出。三个销肩均贴横梁外侧。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            124,
+            127,
+            128,
+            129
+          ],
+          "from": [
+            50.0,
+            24.0,
+            4.0
+          ],
+          "to": [
+            36.0,
+            24.0,
+            4.0
+          ],
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 127,
+      "image_file": "detailed-images132/073.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-074",
+      "number": 74,
+      "key": "x_top_merge",
+      "stage": 13,
+      "module_id": "x_locator",
+      "module_title_zh": "在手中按销肩拼完整黄色双柱定位框",
+      "title_zh": "合并：双柱顶孔套上顶横梁",
+      "added_part_ids": [],
+      "new_parts": [],
+      "visible_part_ids": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "highlight_part_ids": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        130,
+        131
+      ],
+      "prerequisite_step_ids": [
+        "D132-073",
+        "D132-072"
+      ],
+      "instructions_zh": [
+        "把两柱顶孔同时套到顶横梁两根短销上，柱侧从外向内沿-X合拢。",
+        "本步合并前两组，不加件。先扶正；下步角撑完成前仍可能摆动。"
+      ],
+      "cautions_zh": [],
+      "kind": "merge_subassemblies",
+      "merged_module_ids": [
+        "x_roots_and_posts",
+        "x_bar"
+      ],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            130,
+            131
+          ],
+          "from": [
+            46.0,
+            38.0,
+            0.0
+          ],
+          "to": [
+            32.0,
+            38.0,
+            0.0
+          ],
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 127,
+      "image_file": "detailed-images132/074.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-075",
+      "number": 75,
+      "key": "x_brace_pins",
+      "stage": 13,
+      "module_id": "x_locator",
+      "module_title_zh": "在手中按销肩拼完整黄色双柱定位框",
+      "title_zh": "黄色X框：预备角撑双销入口",
+      "added_part_ids": [
+        125,
+        126
+      ],
+      "new_parts": [
+        {
+          "index1": 125,
+          "part": "18654.dat",
+          "description_zh": "1格圆间隔件",
+          "instance_id": "x_locator_middle_spacer"
+        },
+        {
+          "index1": 126,
+          "part": "2780.dat",
+          "description_zh": "2格摩擦短销",
+          "instance_id": "x_locator_left_lower_longpin"
+        }
+      ],
+      "visible_part_ids": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "highlight_part_ids": [
+        125,
+        126
+      ],
+      "prerequisite_step_ids": [
+        "D132-074"
+      ],
+      "instructions_zh": [
+        "#125一格间隔件套到顶横梁余下长销#129上。",
+        "把#126短销预插近侧立柱中孔，半截朝外；这两处露出的销均沿X轴。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            125,
+            126
+          ],
+          "from": [
+            56.0,
+            28.0,
+            12.0
+          ],
+          "to": [
+            42.0,
+            28.0,
+            12.0
+          ],
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "nominal_travel_mm": null,
+          "note_zh": "示意装入方向；箭头长度不代表实际装入行程。"
+        }
+      ],
+      "cumulative_introduced_count": 129,
+      "image_file": "detailed-images132/075.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-076",
+      "number": 76,
+      "key": "x_brace",
+      "stage": 13,
+      "module_id": "x_locator",
+      "module_title_zh": "在手中按销肩拼完整黄色双柱定位框",
+      "title_zh": "黄色X框：原生厚L同时接两销",
+      "added_part_ids": [
+        132
+      ],
+      "new_parts": [
+        {
+          "index1": 132,
+          "part": "32140.dat",
+          "description_zh": "原生厚L形梁",
+          "instance_id": "x_locator_native32140"
+        }
+      ],
+      "visible_part_ids": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "highlight_part_ids": [
+        132
+      ],
+      "prerequisite_step_ids": [
+        "D132-075"
+      ],
+      "instructions_zh": [
+        "用一整件#132原生32140角撑。较高短端在近侧，其圆孔接上方长销；长边中间圆孔接下方短销。",
+        "从右侧沿-X同步直压；远端十字孔保持空置。不要用旧薄L或反向角撑替代。"
+      ],
+      "cautions_zh": [],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            132
+          ],
+          "from": [
+            56.0,
+            32.0,
+            -8.0
+          ],
+          "to": [
+            48.0,
+            32.0,
+            -8.0
+          ],
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "nominal_travel_mm": 8,
+          "note_zh": "箭头表示装入方向；只标明名义行程，不表示所需推力。"
+        }
+      ],
+      "cumulative_introduced_count": 130,
+      "image_file": "detailed-images132/076.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-077",
+      "number": 77,
+      "key": "x_attach",
+      "stage": 14,
+      "module_id": "seat_bridge",
+      "module_title_zh": "黄色框从托面下方双销同步上插",
+      "title_zh": "合并：完整黄色框从托面下方上插",
+      "added_part_ids": [],
+      "new_parts": [],
+      "visible_part_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "highlight_part_ids": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "prerequisite_step_ids": [
+        "D132-076",
+        "D132-070"
+      ],
+      "instructions_zh": [
+        "拿完整黄色框，让两个15100朝上的一体销同时对准外两条托面最右端孔。",
+        "整框从托面下方沿-Y向上压入，名义入孔8毫米；不能先插一根再扭另一根。",
+        "确认黄色横边与绿色L内表面组成两条定位边，三条托面依旧完整。"
+      ],
+      "cautions_zh": [
+        "完整X框由下方进入原机的环境安装扫掠尚未验证。"
+      ],
+      "kind": "merge_subassemblies",
+      "merged_module_ids": [
+        "complete_seat_and_bridge",
+        "x_locator"
+      ],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132
+          ],
+          "from": [
+            35.467,
+            40.533,
+            2.133
+          ],
+          "to": [
+            35.467,
+            32.533,
+            2.133
+          ],
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "nominal_travel_mm": 8,
+          "note_zh": "箭头表示装入方向；只标明名义行程，不表示所需推力。"
+        }
+      ],
+      "cumulative_introduced_count": 130,
+      "image_file": "detailed-images132/077.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-078",
+      "number": 78,
+      "key": "empty_travel",
+      "stage": 15,
+      "module_id": "complete",
+      "module_title_zh": "完整空托盘先做全程轻推和卡滞检查",
+      "title_zh": "130件空托盘：先检查再全程轻推",
+      "added_part_ids": [],
+      "new_parts": [],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "highlight_part_ids": [],
+      "prerequisite_step_ids": [
+        "D132-077",
+        "D132-048",
+        "D132-052"
+      ],
+      "instructions_zh": [
+        "不放魔方，两根锁销#13、#34放旁边。先记录所有销肩、轴和半套位置，确认固定约束完整。",
+        "托稳空托盘，从工作位到停车位走完整40毫米再返回；头部姿态遵守既有动作顺序。观察实际推力，不可强压。",
+        "特别检查约8／32毫米行程处导向面越过55615销尖及孔缘时，是否挂住、翘起或推力突增。",
+        "半套只贴活动L而不夹死固定轨。若必须松到明显侧晃才滑动，检查不算通过。",
+        "每次移动后复查夹架与Z边半套、黄色框销肩是否移位；有卡滞即停止记录，不磨销改孔。"
+      ],
+      "cautions_zh": [
+        "此步是待执行检查，未执行也未通过。空载顺畅不等于承重刚度通过。"
+      ],
+      "kind": "check",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [],
+      "cumulative_introduced_count": 130,
+      "image_file": "detailed-images132/078.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-079",
+      "number": 79,
+      "key": "working_keys",
+      "stage": 16,
+      "module_id": "complete",
+      "module_title_zh": "空载检查通过后插入工作锁销",
+      "title_zh": "空载检查通过后：插两根工作锁销",
+      "added_part_ids": [
+        13,
+        34
+      ],
+      "new_parts": [
+        {
+          "index1": 13,
+          "part": "32054.dat",
+          "description_zh": "带止挡工作锁销",
+          "instance_id": "R_working_key"
+        },
+        {
+          "index1": 34,
+          "part": "32054.dat",
+          "description_zh": "带止挡工作锁销",
+          "instance_id": "L_working_key"
+        }
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "highlight_part_ids": [
+        13,
+        34
+      ],
+      "prerequisite_step_ids": [
+        "D132-078"
+      ],
+      "instructions_zh": [
+        "仅在完整空托盘已全程轻推检查通过后，托住托盘并对齐工作孔。",
+        "右#13从近侧向远侧（-Z）插入；左#34从远侧向近侧（+Z）插入，止挡头留孔外。",
+        "以后移动前必须先卸下魔方、托稳空托盘，并把两销完整抽出放旁边。半拔状态未验证。"
+      ],
+      "cautions_zh": [
+        "130件空托盘＋两锁销＝132件工作态；本页没有宣布空载检查已通过。"
+      ],
+      "kind": "add_parts",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [
+        {
+          "part_ids": [
+            13
+          ],
+          "from": [
+            72,
+            56,
+            28
+          ],
+          "to": [
+            72,
+            56,
+            12
+          ],
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "nominal_travel_mm": 16,
+          "note_zh": "右工作销沿-Z；止挡留外侧。"
+        },
+        {
+          "part_ids": [
+            34
+          ],
+          "from": [
+            -72,
+            56,
+            -28
+          ],
+          "to": [
+            -72,
+            56,
+            -12
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "nominal_travel_mm": 16,
+          "note_zh": "左工作销沿+Z；止挡留外侧。"
+        }
+      ],
+      "cumulative_introduced_count": 132,
+      "image_file": "detailed-images132/079.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    },
+    {
+      "id": "D132-080",
+      "number": 80,
+      "key": "load_check",
+      "stage": 17,
+      "module_id": "complete",
+      "module_title_zh": "原墙与共同底盘约束齐备后再查实际魔方下垂",
+      "title_zh": "待实测：约束齐备才放56毫米魔方",
+      "added_part_ids": [],
+      "new_parts": [],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "highlight_part_ids": [],
+      "prerequisite_step_ids": [
+        "D132-079"
+      ],
+      "instructions_zh": [
+        "先确认原墙、59件基座和共同底盘构成规定固定约束，完整托盘与两工作销均到位，空载检查已经实际完成。",
+        "在完整三条托面上轻放实际56毫米魔方，轻靠两条定位边；不得放在裸桥或未完成H座上。",
+        "记录同一固定参照下放置前、放置后和取下后的高度、左右高差及定位边位置，检查持续下垂、恢复不良、销／半套移位。",
+        "不得用手或临时物暗托桥后报告没有下沉。若半套外爬、柱桥下垂、定位边移位或锁销难以自由重插，立即停止并记录。",
+        "本计划没有给出或满足承重、下垂、保持力、寿命的合格限值；这些仍需实测和验收要求。"
+      ],
+      "cautions_zh": [
+        "132件单独摆桌上不是代表性承重台架。离机验收也必须包含原墙及共同底盘约束，或另经验证的等效约束；本计划未提供等效台架。"
+      ],
+      "kind": "check",
+      "merged_module_ids": [],
+      "insertion_vectors_mm": [],
+      "cumulative_introduced_count": 132,
+      "image_file": "detailed-images132/080.png",
+      "view_note_zh": "蓝色为本步新件或正在合并的子组件，灰色为本步相关已装件；其余已完成组件省略。显示最终接合姿态，箭头示意接合方向。"
+    }
+  ],
+  "verification": {
+    "source_mutated": false,
+    "physical_fit_test_executed": false,
+    "physical_load_test_executed": false,
+    "environment_installation_sweep_verified": false,
+    "basis": "Source-level axial ordering and preserved18-stage plan; static source-pose drawings and rotatable step geometry are not insertion/strength simulations."
+  },
+  "part_catalog": [
+    {
+      "index1": 1,
+      "part": "40490.dat",
+      "description_zh": "9孔厚直梁",
+      "instance_id": "R_outer9L"
+    },
+    {
+      "index1": 2,
+      "part": "55615.dat",
+      "description_zh": "原生多向销连接件",
+      "instance_id": "R_wall55615"
+    },
+    {
+      "index1": 3,
+      "part": "55615.dat",
+      "description_zh": "原生多向销连接件",
+      "instance_id": "R_foot55615"
+    },
+    {
+      "index1": 4,
+      "part": "32316.dat",
+      "description_zh": "5孔厚直梁",
+      "instance_id": "R_foot5L"
+    },
+    {
+      "index1": 5,
+      "part": "40490.dat",
+      "description_zh": "9孔厚直梁",
+      "instance_id": "R_inner9L"
+    },
+    {
+      "index1": 6,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "R_end48"
+    },
+    {
+      "index1": 7,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_endpin72_48"
+    },
+    {
+      "index1": 8,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_endpin88_48"
+    },
+    {
+      "index1": 9,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "R_end112"
+    },
+    {
+      "index1": 10,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_endpin72_112"
+    },
+    {
+      "index1": 11,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_endpin88_112"
+    },
+    {
+      "index1": 12,
+      "part": "43857.dat",
+      "description_zh": "2孔厚短梁",
+      "instance_id": "R_moving_web"
+    },
+    {
+      "index1": 13,
+      "part": "32054.dat",
+      "description_zh": "带止挡工作锁销",
+      "instance_id": "R_working_key"
+    },
+    {
+      "index1": 14,
+      "part": "32140.dat",
+      "description_zh": "原生厚L形梁",
+      "instance_id": "R_front_nativeL"
+    },
+    {
+      "index1": 15,
+      "part": "32140.dat",
+      "description_zh": "原生厚L形梁",
+      "instance_id": "R_rear_nativeL"
+    },
+    {
+      "index1": 16,
+      "part": "32073.dat",
+      "description_zh": "5格十字轴",
+      "instance_id": "R_axle56"
+    },
+    {
+      "index1": 17,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "R_bush56_-18"
+    },
+    {
+      "index1": 18,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "R_bush56_14"
+    },
+    {
+      "index1": 19,
+      "part": "32073.dat",
+      "description_zh": "5格十字轴",
+      "instance_id": "R_axle64"
+    },
+    {
+      "index1": 20,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "R_bush64_-22"
+    },
+    {
+      "index1": 21,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "R_bush64_14"
+    },
+    {
+      "index1": 22,
+      "part": "40490.dat",
+      "description_zh": "9孔厚直梁",
+      "instance_id": "L_outer9L"
+    },
+    {
+      "index1": 23,
+      "part": "55615.dat",
+      "description_zh": "原生多向销连接件",
+      "instance_id": "L_wall55615"
+    },
+    {
+      "index1": 24,
+      "part": "55615.dat",
+      "description_zh": "原生多向销连接件",
+      "instance_id": "L_foot55615"
+    },
+    {
+      "index1": 25,
+      "part": "32316.dat",
+      "description_zh": "5孔厚直梁",
+      "instance_id": "L_foot5L"
+    },
+    {
+      "index1": 26,
+      "part": "40490.dat",
+      "description_zh": "9孔厚直梁",
+      "instance_id": "L_inner9L"
+    },
+    {
+      "index1": 27,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "L_end48"
+    },
+    {
+      "index1": 28,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_endpin72_48"
+    },
+    {
+      "index1": 29,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_endpin88_48"
+    },
+    {
+      "index1": 30,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "L_end112"
+    },
+    {
+      "index1": 31,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_endpin72_112"
+    },
+    {
+      "index1": 32,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_endpin88_112"
+    },
+    {
+      "index1": 33,
+      "part": "43857.dat",
+      "description_zh": "2孔厚短梁",
+      "instance_id": "L_moving_web"
+    },
+    {
+      "index1": 34,
+      "part": "32054.dat",
+      "description_zh": "带止挡工作锁销",
+      "instance_id": "L_working_key"
+    },
+    {
+      "index1": 35,
+      "part": "32140.dat",
+      "description_zh": "原生厚L形梁",
+      "instance_id": "L_front_nativeL"
+    },
+    {
+      "index1": 36,
+      "part": "32140.dat",
+      "description_zh": "原生厚L形梁",
+      "instance_id": "L_rear_nativeL"
+    },
+    {
+      "index1": 37,
+      "part": "32073.dat",
+      "description_zh": "5格十字轴",
+      "instance_id": "L_axle56"
+    },
+    {
+      "index1": 38,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "L_bush56_-18"
+    },
+    {
+      "index1": 39,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "L_bush56_14"
+    },
+    {
+      "index1": 40,
+      "part": "32073.dat",
+      "description_zh": "5格十字轴",
+      "instance_id": "L_axle64"
+    },
+    {
+      "index1": 41,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "L_bush64_-22"
+    },
+    {
+      "index1": 42,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "L_bush64_14"
+    },
+    {
+      "index1": 43,
+      "part": "32525.dat",
+      "description_zh": "11孔厚直梁",
+      "instance_id": "R_bridge_chord56"
+    },
+    {
+      "index1": 44,
+      "part": "11478.dat",
+      "description_zh": "5格薄梁（两端十字孔）",
+      "instance_id": "R_bridge_upper_adapter"
+    },
+    {
+      "index1": 45,
+      "part": "32002.dat",
+      "description_zh": "厚薄转接半销",
+      "instance_id": "R_bridge_upper_adapter_pin"
+    },
+    {
+      "index1": 46,
+      "part": "32525.dat",
+      "description_zh": "11孔厚直梁",
+      "instance_id": "R_bridge_chord64"
+    },
+    {
+      "index1": 47,
+      "part": "32316.dat",
+      "description_zh": "5孔厚直梁",
+      "instance_id": "R_bridge_lower_adapter"
+    },
+    {
+      "index1": 48,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_bridge_lower_adapter_pin56"
+    },
+    {
+      "index1": 49,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_bridge_lower_adapter_pin64"
+    },
+    {
+      "index1": 50,
+      "part": "32140.dat",
+      "description_zh": "原生厚L形梁",
+      "instance_id": "R_bridge_native_web"
+    },
+    {
+      "index1": 51,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_bridge_extra_upper_web_pin"
+    },
+    {
+      "index1": 52,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_bridge_web_pin56"
+    },
+    {
+      "index1": 53,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_bridge_web_pin64"
+    },
+    {
+      "index1": 54,
+      "part": "32525.dat",
+      "description_zh": "11孔厚直梁",
+      "instance_id": "L_bridge_chord56"
+    },
+    {
+      "index1": 55,
+      "part": "11478.dat",
+      "description_zh": "5格薄梁（两端十字孔）",
+      "instance_id": "L_bridge_upper_adapter"
+    },
+    {
+      "index1": 56,
+      "part": "32002.dat",
+      "description_zh": "厚薄转接半销",
+      "instance_id": "L_bridge_upper_adapter_pin"
+    },
+    {
+      "index1": 57,
+      "part": "32525.dat",
+      "description_zh": "11孔厚直梁",
+      "instance_id": "L_bridge_chord64"
+    },
+    {
+      "index1": 58,
+      "part": "32316.dat",
+      "description_zh": "5孔厚直梁",
+      "instance_id": "L_bridge_lower_adapter"
+    },
+    {
+      "index1": 59,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_bridge_lower_adapter_pin56"
+    },
+    {
+      "index1": 60,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_bridge_lower_adapter_pin64"
+    },
+    {
+      "index1": 61,
+      "part": "32140.dat",
+      "description_zh": "原生厚L形梁",
+      "instance_id": "L_bridge_native_web"
+    },
+    {
+      "index1": 62,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_bridge_extra_upper_web_pin"
+    },
+    {
+      "index1": 63,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_bridge_web_pin56"
+    },
+    {
+      "index1": 64,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_bridge_web_pin64"
+    },
+    {
+      "index1": 65,
+      "part": "43857.dat",
+      "description_zh": "2孔厚短梁",
+      "instance_id": "center_web"
+    },
+    {
+      "index1": 66,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "center_pin56"
+    },
+    {
+      "index1": 67,
+      "part": "18654.dat",
+      "description_zh": "1格圆间隔件",
+      "instance_id": "center_spacer-8_56"
+    },
+    {
+      "index1": 68,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "center_cross_pin-8_56"
+    },
+    {
+      "index1": 69,
+      "part": "18654.dat",
+      "description_zh": "1格圆间隔件",
+      "instance_id": "center_spacer8_56"
+    },
+    {
+      "index1": 70,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "center_cross_pin8_56"
+    },
+    {
+      "index1": 71,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "center_pin64"
+    },
+    {
+      "index1": 72,
+      "part": "18654.dat",
+      "description_zh": "1格圆间隔件",
+      "instance_id": "center_spacer-8_64"
+    },
+    {
+      "index1": 73,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "center_cross_pin-8_64"
+    },
+    {
+      "index1": 74,
+      "part": "18654.dat",
+      "description_zh": "1格圆间隔件",
+      "instance_id": "center_spacer8_64"
+    },
+    {
+      "index1": 75,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "center_cross_pin8_64"
+    },
+    {
+      "index1": 76,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "R_base_link"
+    },
+    {
+      "index1": 77,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_base_pin32"
+    },
+    {
+      "index1": 78,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_base_pin40"
+    },
+    {
+      "index1": 79,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "R_base_pin48"
+    },
+    {
+      "index1": 80,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "L_base_link"
+    },
+    {
+      "index1": 81,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_base_pin32"
+    },
+    {
+      "index1": 82,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_base_pin40"
+    },
+    {
+      "index1": 83,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "L_base_pin48"
+    },
+    {
+      "index1": 84,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "seat_column_-16_-16"
+    },
+    {
+      "index1": 85,
+      "part": "15100.dat",
+      "description_zh": "垂直销／圆孔连接件",
+      "instance_id": "seat_support15100_-16_-16"
+    },
+    {
+      "index1": 86,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "seat_column_pin_-16_-16_56"
+    },
+    {
+      "index1": 87,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "seat_column_pin_-16_-16_64"
+    },
+    {
+      "index1": 88,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "seat_column_-16_16"
+    },
+    {
+      "index1": 89,
+      "part": "15100.dat",
+      "description_zh": "垂直销／圆孔连接件",
+      "instance_id": "seat_support15100_-16_16"
+    },
+    {
+      "index1": 90,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "seat_column_pin_-16_16_64"
+    },
+    {
+      "index1": 91,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "seat_column_16_-16"
+    },
+    {
+      "index1": 92,
+      "part": "15100.dat",
+      "description_zh": "垂直销／圆孔连接件",
+      "instance_id": "seat_support15100_16_-16"
+    },
+    {
+      "index1": 93,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "seat_column_pin_16_-16_56"
+    },
+    {
+      "index1": 94,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "seat_column_pin_16_-16_64"
+    },
+    {
+      "index1": 95,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "seat_column_16_16"
+    },
+    {
+      "index1": 96,
+      "part": "15100.dat",
+      "description_zh": "垂直销／圆孔连接件",
+      "instance_id": "seat_support15100_16_16"
+    },
+    {
+      "index1": 97,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "seat_column_pin_16_16_56"
+    },
+    {
+      "index1": 98,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "seat_column_pin_16_16_64"
+    },
+    {
+      "index1": 99,
+      "part": "14720.dat",
+      "description_zh": "原生H形框",
+      "instance_id": "seat_H"
+    },
+    {
+      "index1": 100,
+      "part": "32524.dat",
+      "description_zh": "7孔厚直梁",
+      "instance_id": "seat_deck_-8"
+    },
+    {
+      "index1": 101,
+      "part": "32524.dat",
+      "description_zh": "7孔厚直梁",
+      "instance_id": "seat_deck_0"
+    },
+    {
+      "index1": 102,
+      "part": "32524.dat",
+      "description_zh": "7孔厚直梁",
+      "instance_id": "seat_deck_8"
+    },
+    {
+      "index1": 103,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "seat_corner_longpin_-16_-8"
+    },
+    {
+      "index1": 104,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "seat_corner_longpin_-16_8"
+    },
+    {
+      "index1": 105,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "seat_middle_deck_pin_-16"
+    },
+    {
+      "index1": 106,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "seat_corner_longpin_16_-8"
+    },
+    {
+      "index1": 107,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "seat_corner_longpin_16_8"
+    },
+    {
+      "index1": 108,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "seat_middle_deck_pin_16"
+    },
+    {
+      "index1": 109,
+      "part": "32526.dat",
+      "description_zh": "原生高L形梁",
+      "instance_id": "z_locator_positiveZ_L"
+    },
+    {
+      "index1": 110,
+      "part": "32073.dat",
+      "description_zh": "5格十字轴",
+      "instance_id": "z_locator_root5L"
+    },
+    {
+      "index1": 111,
+      "part": "3706.dat",
+      "description_zh": "6格十字轴",
+      "instance_id": "z_locator_root6L"
+    },
+    {
+      "index1": 112,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "z_locator_retainer-16_2"
+    },
+    {
+      "index1": 113,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "z_locator_retainer-16_38"
+    },
+    {
+      "index1": 114,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "z_locator_retainer-32_-6"
+    },
+    {
+      "index1": 115,
+      "part": "32123a.dat",
+      "description_zh": "半轴套",
+      "instance_id": "z_locator_retainer-32_38"
+    },
+    {
+      "index1": 116,
+      "part": "18654.dat",
+      "description_zh": "1格圆间隔件",
+      "instance_id": "z_locator_one_layer_root_spacer"
+    },
+    {
+      "index1": 117,
+      "part": "62462.dat",
+      "description_zh": "2格圆间隔件",
+      "instance_id": "z_locator_two_layer_root_spacer"
+    },
+    {
+      "index1": 118,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "x_locator_post_-8"
+    },
+    {
+      "index1": 119,
+      "part": "15100.dat",
+      "description_zh": "垂直销／圆孔连接件",
+      "instance_id": "x_locator_deck_root_-8"
+    },
+    {
+      "index1": 120,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "x_locator_root_pin_-8"
+    },
+    {
+      "index1": 121,
+      "part": "32523.dat",
+      "description_zh": "3孔厚直梁",
+      "instance_id": "x_locator_post_8"
+    },
+    {
+      "index1": 122,
+      "part": "15100.dat",
+      "description_zh": "垂直销／圆孔连接件",
+      "instance_id": "x_locator_deck_root_8"
+    },
+    {
+      "index1": 123,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "x_locator_root_pin_8"
+    },
+    {
+      "index1": 124,
+      "part": "32316.dat",
+      "description_zh": "5孔厚直梁",
+      "instance_id": "x_locator_upper_bar"
+    },
+    {
+      "index1": 125,
+      "part": "18654.dat",
+      "description_zh": "1格圆间隔件",
+      "instance_id": "x_locator_middle_spacer"
+    },
+    {
+      "index1": 126,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "x_locator_left_lower_longpin"
+    },
+    {
+      "index1": 127,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "x_locator_right_upper_pin"
+    },
+    {
+      "index1": 128,
+      "part": "2780.dat",
+      "description_zh": "2格摩擦短销",
+      "instance_id": "x_locator_left_upper_pin"
+    },
+    {
+      "index1": 129,
+      "part": "6558.dat",
+      "description_zh": "3格摩擦长销",
+      "instance_id": "x_locator_bar_to_thinLs_pin"
+    },
+    {
+      "index1": 130,
+      "part": "18654.dat",
+      "description_zh": "1格圆间隔件",
+      "instance_id": "x_locator_root_spacer_-8"
+    },
+    {
+      "index1": 131,
+      "part": "18654.dat",
+      "description_zh": "1格圆间隔件",
+      "instance_id": "x_locator_root_spacer_8"
+    },
+    {
+      "index1": 132,
+      "part": "32140.dat",
+      "description_zh": "原生厚L形梁",
+      "instance_id": "x_locator_native32140"
+    }
+  ]
+}

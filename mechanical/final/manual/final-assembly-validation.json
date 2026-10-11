@@ -1,0 +1,53 @@
+{
+  "status": "PASS_SOURCE_AND_NOMINAL_SEQUENCE",
+  "revision": "FINAL-ASSEMBLY-2026-10-09-FULL-PARTS",
+  "guide_steps": 501,
+  "head_steps_per_arm": 88,
+  "rotatable_steps": 480,
+  "diagram_only_steps": 21,
+  "prebuilt_core_parts": 0,
+  "direct_assembly_parts": 882,
+  "whole_parts": 882,
+  "model_geometry_changed": false,
+  "frozen_model_hashes": {
+    "loading-all50": "1bc59b1c4ec3be91c53e812a01e853c11e939887d3223d1de4ffd0cb9d215046",
+    "FB0-open": "c441578ef62a750e743402c7c01fce5d4a303c680e52770efa5a2e1c32ab0ff2",
+    "FB0-held": "ab3e86fbcc83fba6a4389795fb5d851b249f7ffec6d83e22e119ba564451e81e",
+    "support-held": "2e596e5aad61854cda8897936725df568ec2c1cc6fb5594448127ac9fa442cdf",
+    "support-down40_8": "4c65d5c3084f0e5b745bf686d397fc469ef9a95646ebe036cf4c90a67eaf6c6a",
+    "LR90-open": "de0e327c9bfeeb8b598bfe8d87116160ed1f3fea74a4baf7579cd2448e8b642b",
+    "both-held": "f1a85439604487ebbb2890af89065b129a9ece9ea4aea59f0aff32bfed41e6a0",
+    "head-open25": "871f53a27e704b261afb4ae9c494267e8f67ae6267973f8b87db60b1a2a33fb9",
+    "head-closed": "48a12976b3532747b6a7d6e705bf13feb4b1fb7207d0c518bbe57491d4149ba7",
+    "support-raised": "4b33aedabad790a9c929600d30ef1b74761721d0c1d8d6568db6ca5c8f94b8c1",
+    "support-only-down40_8": "6590b47e01e851c557631619f7608818b71eb23c650f7d9082dd43d7287e9f38"
+  },
+  "tests": {
+    "full_coverage_regressions": 3,
+    "turntable_regressions": 3,
+    "native_head_assertions": 3102,
+    "site_python": 11,
+    "reader_and_operation_js": 30
+  },
+  "independent_assembly_review": {
+    "fixed": [
+      "Guide pins before guide frame",
+      "Ear pins before servo body",
+      "Crosshead/linkage before servo",
+      "Crank attached off platform before servo placement",
+      "Base connector77 attached horizontally to78 before whole-arm vertical seating",
+      "Whole882 scoped unique introduction ledger"
+    ],
+    "limits": [
+      "Approximate NOCERTIFY servo mesh, real output interface unverified",
+      "No continuous path certification",
+      "No physical tolerances, retention, forces, loads or powered approval"
+    ],
+    "prebuilt_core_from_scratch_covered": true,
+    "pdf_and_guide": "All501 pages generated; changed core pictures and PDF layouts reviewed, exact882 namespace coverage"
+  },
+  "browser_visual_qa": {
+    "performed": false
+  },
+  "physical_validation": false
+}

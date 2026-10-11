@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,csv,re,unittest
-R=Path(__file__).resolve().parent;C=R.parent/'lift-feasibility/integrated-revision';D=R/'dist'
+R=Path(__file__).resolve().parent;C=R.parent;D=R/'dist'
 class FinalPresentation(unittest.TestCase):
  def test_operation_route_identifies_final_version(self):
   page=(D/'integrated-operation.html').read_text()
@@ -45,8 +45,8 @@ class FinalPresentation(unittest.TestCase):
  def test_download_pdf_fits_host_single_file_limit(self):
   self.assertLessEqual((C/'manual/manual.pdf').stat().st_size,25*1024*1024)
  def test_frozen_final_models(self):
-  old=json.loads((R.parent/'viewer-workbench-delivery.json').read_text())
-  for k,h in old['models'].items():self.assertEqual(hashlib.sha256((C/'models'/f'{k}.mpd').read_bytes()).hexdigest(),h)
+  old=json.loads((C/'PROVENANCE.json').read_text())
+  for row in old['frozen_models'].values():self.assertEqual(hashlib.sha256((C/row['file']).read_bytes()).hexdigest(),row['sha256'])
  def test_current_pages_no_history(self):
   for file in ['index.html','integrated-assembly.html','integrated-operation.html','integrated-support.html']:
    html=(D/file).read_text(); visible=re.sub(r'<script>[\s\S]*?</script>','',html)

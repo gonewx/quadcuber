@@ -1,0 +1,7326 @@
+{
+  "module_id": "foundation",
+  "title": "共用基础59件：四翼与三个3×5厚L梁",
+  "source": "detailed-instructions-192/inventory-compatible-candidate/assembly-candidate219.json",
+  "source_sha256": "8c4fa4a0893859e1a7e9f6de79ec6c0bf9629fc872ea7ee72fddf8970eda8bd6",
+  "part_id_convention": "one-based candidate219 core indices, resolved through viewer-handoff219.json; stable_ids preserve R001–R059",
+  "scope_part_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+  ],
+  "final_visible_part_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+  ],
+  "coordinate_convention": "mm; +Y down; tabletop Y116; 1 pitch = 8 mm",
+  "assembly_notes": [
+    "先分别做四个翼。所有黑销和蓝销先装入单独的下梁，使中央挡圈贴住梁上表面，再套入大框或L梁；不要将挡圈强推过已经闭合的两层孔。",
+    "三根普通角马达下梁沿自身长度向底盘中心多伸出1孔（8mm）；仍使用原32278 15孔厚梁。四块39790和马达固定销的位置不变。",
+    "四翼放平并分别支撑。每个32526最后从上方同时套入相邻两翼的4根预装黑销；长腿用从独立端起第1、3孔，短腿用两端孔。",
+    "本章不增设后横梁。A、D两翼间暂留开口，由后续公共转角组件连接。",
+    "所有最终几何取219件合并候选。箭头只表示装入前偏移；不代表额外零件。孔位正确不等于实物刚度或压入力已验证。"
+  ],
+  "subassemblies": {
+    "A_positive_X": {
+      "completed_at": "BAS-07",
+      "part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        34,
+        35,
+        36,
+        37,
+        38,
+        42,
+        43
+      ],
+      "stable_ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R042",
+        "R043"
+      ]
+    },
+    "B_positive_Z": {
+      "completed_at": "BAS-15",
+      "part_ids": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        40,
+        41
+      ],
+      "stable_ids": [
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R040",
+        "R041"
+      ]
+    },
+    "C_negative_X": {
+      "completed_at": "BAS-23",
+      "part_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        50,
+        51,
+        52,
+        53,
+        54,
+        58,
+        59
+      ],
+      "stable_ids": [
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R024",
+        "R025",
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R058",
+        "R059"
+      ]
+    },
+    "D_negative_Z": {
+      "completed_at": "BAS-30",
+      "part_ids": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        56,
+        57
+      ],
+      "stable_ids": [
+        "R007",
+        "R008",
+        "R009",
+        "R010",
+        "R011",
+        "R044",
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049",
+        "R056",
+        "R057"
+      ]
+    },
+    "foundation_complete": {
+      "completed_at": "BAS-36",
+      "part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "stable_ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R007",
+        "R008",
+        "R009",
+        "R010",
+        "R011",
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R039",
+        "R040",
+        "R041",
+        "R042",
+        "R043",
+        "R044",
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049",
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R055",
+        "R056",
+        "R057",
+        "R058",
+        "R059"
+      ]
+    }
+  },
+  "steps": [
+    {
+      "id": "BAS-01",
+      "module_id": "foundation",
+      "module_step_number": 1,
+      "title": "A：摆好 7L 下梁",
+      "instructions": [
+        "取1根 32524 7孔厚梁，按图平放，让圆孔朝上。",
+        "从靠底盘中心的一端起数，第1孔在内端，第7孔在外端；后续都按这个方向数孔。",
+        "四个翼先分别装配；所有下梁都在大框下面。"
+      ],
+      "added_part_ids": [
+        2
+      ],
+      "visible_part_ids": [
+        2
+      ],
+      "parts": [
+        {
+          "name": "32524 7孔厚梁",
+          "count": 1,
+          "part_number": "32524",
+          "part_ids": [
+            2
+          ],
+          "stable_ids": [
+            "R002"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R002 / core#2，32524.dat，中心[136.0, 112.0, -32.0]mm；孔轴Y。",
+        "主文从内端[112.0, 112.0, -32.0]mm数至外端[160.0, 112.0, -32.0]mm，孔序1–7。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R002"
+      ],
+      "visible_stable_ids": [
+        "R002"
+      ],
+      "stable_ids": [
+        "R002"
+      ]
+    },
+    {
+      "id": "BAS-02",
+      "module_id": "foundation",
+      "module_step_number": 2,
+      "title": "A：7L 下梁预装四根黑销",
+      "instructions": [
+        "取4根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第7、5、3、1孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "visible_part_ids": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 4,
+          "part_number": "2780",
+          "part_ids": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "stable_ids": [
+            "R003",
+            "R004",
+            "R005",
+            "R006"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-01"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R003",
+            "R004",
+            "R005",
+            "R006"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            160.0,
+            112.0,
+            -32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            2,
+            3
+          ],
+          "label": "从内端数第7孔",
+          "hole_number_from_inner_end": 7,
+          "host_part_id": 2,
+          "pin_part_id": 3,
+          "stable_ids": [
+            "R002",
+            "R003"
+          ]
+        },
+        {
+          "center_mm": [
+            144.0,
+            112.0,
+            -32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            2,
+            4
+          ],
+          "label": "从内端数第5孔",
+          "hole_number_from_inner_end": 5,
+          "host_part_id": 2,
+          "pin_part_id": 4,
+          "stable_ids": [
+            "R002",
+            "R004"
+          ]
+        },
+        {
+          "center_mm": [
+            128.0,
+            112.0,
+            -32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            2,
+            5
+          ],
+          "label": "从内端数第3孔",
+          "hole_number_from_inner_end": 3,
+          "host_part_id": 2,
+          "pin_part_id": 5,
+          "stable_ids": [
+            "R002",
+            "R005"
+          ]
+        },
+        {
+          "center_mm": [
+            112.0,
+            112.0,
+            -32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            2,
+            6
+          ],
+          "label": "从内端数第1孔",
+          "hole_number_from_inner_end": 1,
+          "host_part_id": 2,
+          "pin_part_id": 6,
+          "stable_ids": [
+            "R002",
+            "R006"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R003 / core#3 → R002第7孔；宿主孔中心[160.0, 112.0, -32.0]mm。",
+        "R004 / core#4 → R002第5孔；宿主孔中心[144.0, 112.0, -32.0]mm。",
+        "R005 / core#5 → R002第3孔；宿主孔中心[128.0, 112.0, -32.0]mm。",
+        "R006 / core#6 → R002第1孔；宿主孔中心[112.0, 112.0, -32.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R003",
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "visible_stable_ids": [
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "stable_ids": [
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006"
+      ]
+    },
+    {
+      "id": "BAS-03",
+      "module_id": "foundation",
+      "module_step_number": 3,
+      "title": "A：另做马达下梁",
+      "instructions": [
+        "取1根 32278 15孔厚梁，按图平放，让圆孔朝上。",
+        "从靠底盘中心的一端起数，第1孔在内端，第15孔在外端；后续都按这个方向数孔。",
+        "这根马达下梁向底盘中心多伸出1孔（8mm）；梁长仍为15孔，按后续新孔号装销。"
+      ],
+      "added_part_ids": [
+        34
+      ],
+      "visible_part_ids": [
+        34
+      ],
+      "parts": [
+        {
+          "name": "32278 15孔厚梁",
+          "count": 1,
+          "part_number": "32278",
+          "part_ids": [
+            34
+          ],
+          "stable_ids": [
+            "R034"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R034 / core#34，32278.dat，中心[104.0, 112.0, 48.0]mm；孔轴Y。",
+        "主文从内端[48.0, 112.0, 48.0]mm数至外端[160.0, 112.0, 48.0]mm，孔序1–15。",
+        "相对192源该梁沿自身长度向中心平移8mm；原39790及6558固定位置不动。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R034"
+      ],
+      "visible_stable_ids": [
+        "R034"
+      ],
+      "stable_ids": [
+        "R034"
+      ]
+    },
+    {
+      "id": "BAS-04",
+      "module_id": "foundation",
+      "module_step_number": 4,
+      "title": "A：马达下梁两根黑销",
+      "instructions": [
+        "取2根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第9、15孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        35,
+        36
+      ],
+      "visible_part_ids": [
+        34,
+        35,
+        36
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 2,
+          "part_number": "2780",
+          "part_ids": [
+            35,
+            36
+          ],
+          "stable_ids": [
+            "R035",
+            "R036"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-03"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            35,
+            36
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R035",
+            "R036"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            112.0,
+            112.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            34,
+            35
+          ],
+          "label": "从内端数第9孔",
+          "hole_number_from_inner_end": 9,
+          "host_part_id": 34,
+          "pin_part_id": 35,
+          "stable_ids": [
+            "R034",
+            "R035"
+          ]
+        },
+        {
+          "center_mm": [
+            160.0,
+            112.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            34,
+            36
+          ],
+          "label": "从内端数第15孔",
+          "hole_number_from_inner_end": 15,
+          "host_part_id": 34,
+          "pin_part_id": 36,
+          "stable_ids": [
+            "R034",
+            "R036"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R035 / core#35 → R034第9孔；宿主孔中心[112.0, 112.0, 48.0]mm。",
+        "R036 / core#36 → R034第15孔；宿主孔中心[160.0, 112.0, 48.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R035",
+        "R036"
+      ],
+      "visible_stable_ids": [
+        "R034",
+        "R035",
+        "R036"
+      ],
+      "stable_ids": [
+        "R034",
+        "R035",
+        "R036"
+      ]
+    },
+    {
+      "id": "BAS-05",
+      "module_id": "foundation",
+      "module_step_number": 5,
+      "title": "A：马达下梁两根蓝销",
+      "instructions": [
+        "取2根 6558 蓝色3L长摩擦销，从梁的靠内端数，分别装入第11、13孔。",
+        "把短段1L（8mm）朝下插进梁，中央挡圈贴住梁上表面；长段2L（16mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        37,
+        38
+      ],
+      "visible_part_ids": [
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "parts": [
+        {
+          "name": "6558 蓝色3L摩擦销",
+          "count": 2,
+          "part_number": "6558",
+          "part_ids": [
+            37,
+            38
+          ],
+          "stable_ids": [
+            "R037",
+            "R038"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-04"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            37,
+            38
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R037",
+            "R038"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            128.0,
+            112.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            34,
+            37
+          ],
+          "label": "从内端数第11孔",
+          "hole_number_from_inner_end": 11,
+          "host_part_id": 34,
+          "pin_part_id": 37,
+          "stable_ids": [
+            "R034",
+            "R037"
+          ]
+        },
+        {
+          "center_mm": [
+            144.0,
+            112.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            34,
+            38
+          ],
+          "label": "从内端数第13孔",
+          "hole_number_from_inner_end": 13,
+          "host_part_id": 34,
+          "pin_part_id": 38,
+          "stable_ids": [
+            "R034",
+            "R038"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R037 / core#37 → R034第11孔；宿主孔中心[128.0, 112.0, 48.0]mm。",
+        "R038 / core#38 → R034第13孔；宿主孔中心[144.0, 112.0, 48.0]mm。",
+        "6558短8mm段进入下梁Y108–116；挡肩Y108；长16mm段向上占Y92–108，后续穿39790并接马达。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R037",
+        "R038"
+      ],
+      "visible_stable_ids": [
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038"
+      ],
+      "stable_ids": [
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038"
+      ]
+    },
+    {
+      "id": "BAS-06",
+      "module_id": "foundation",
+      "module_step_number": 6,
+      "title": "A：预留第一处L梁黑销",
+      "instructions": [
+        "取2根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第3、1孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。",
+        "这两根黑销留给后面的32526 L梁，暂时露在外面。"
+      ],
+      "added_part_ids": [
+        42,
+        43
+      ],
+      "visible_part_ids": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        42,
+        43
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 2,
+          "part_number": "2780",
+          "part_ids": [
+            42,
+            43
+          ],
+          "stable_ids": [
+            "R042",
+            "R043"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-05"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            42,
+            43
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R042",
+            "R043"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            64.0,
+            112.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            34,
+            42
+          ],
+          "label": "从内端数第3孔",
+          "hole_number_from_inner_end": 3,
+          "host_part_id": 34,
+          "pin_part_id": 42,
+          "stable_ids": [
+            "R034",
+            "R042"
+          ]
+        },
+        {
+          "center_mm": [
+            48.0,
+            112.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            34,
+            43
+          ],
+          "label": "从内端数第1孔",
+          "hole_number_from_inner_end": 1,
+          "host_part_id": 34,
+          "pin_part_id": 43,
+          "stable_ids": [
+            "R034",
+            "R043"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R042 / core#42 → R034第3孔；宿主孔中心[64.0, 112.0, 48.0]mm。",
+        "R043 / core#43 → R034第1孔；宿主孔中心[48.0, 112.0, 48.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R042",
+        "R043"
+      ],
+      "visible_stable_ids": [
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R042",
+        "R043"
+      ],
+      "stable_ids": [
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R042",
+        "R043"
+      ]
+    },
+    {
+      "id": "BAS-07",
+      "module_id": "foundation",
+      "module_step_number": 7,
+      "title": "A：压下大框，合成第一翼",
+      "instructions": [
+        "把本翼两根已插销的下梁按图平行摆好，分别托住，让两列销朝上。取1个39790 15×11大框，两条长边对准两列销。",
+        "每条长边从靠底盘中心的一端起，使用最靠内的连续4个朝上圆孔。先让8个孔同时套住销尖，再均匀向下压到底。",
+        "中央挡圈留在大框与下梁之间；蓝色长销穿过大框后仍向上露出1孔长。角部的备用黑销保持露出。"
+      ],
+      "added_part_ids": [
+        1
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        34,
+        35,
+        36,
+        37,
+        38,
+        42,
+        43
+      ],
+      "parts": [
+        {
+          "name": "39790 15×11大框",
+          "count": 1,
+          "part_number": "39790",
+          "part_ids": [
+            1
+          ],
+          "stable_ids": [
+            "R001"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-02",
+        "BAS-06"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            1
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -40,
+            0
+          ],
+          "label": "大框同时套入两列预装销",
+          "stable_ids": [
+            "R001"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            160.0,
+            104.0,
+            -32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            1,
+            3
+          ],
+          "label": "大框标记孔 1",
+          "stable_ids": [
+            "R001",
+            "R003"
+          ]
+        },
+        {
+          "center_mm": [
+            144.0,
+            104.0,
+            -32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            1,
+            4
+          ],
+          "label": "大框标记孔 2",
+          "stable_ids": [
+            "R001",
+            "R004"
+          ]
+        },
+        {
+          "center_mm": [
+            128.0,
+            104.0,
+            -32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            1,
+            5
+          ],
+          "label": "大框标记孔 3",
+          "stable_ids": [
+            "R001",
+            "R005"
+          ]
+        },
+        {
+          "center_mm": [
+            112.0,
+            104.0,
+            -32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            1,
+            6
+          ],
+          "label": "大框标记孔 4",
+          "stable_ids": [
+            "R001",
+            "R006"
+          ]
+        },
+        {
+          "center_mm": [
+            112.0,
+            104.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            1,
+            35
+          ],
+          "label": "大框标记孔 5",
+          "stable_ids": [
+            "R001",
+            "R035"
+          ]
+        },
+        {
+          "center_mm": [
+            128.0,
+            104.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            1,
+            37
+          ],
+          "label": "大框标记孔 6",
+          "stable_ids": [
+            "R001",
+            "R037"
+          ]
+        },
+        {
+          "center_mm": [
+            144.0,
+            104.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            1,
+            38
+          ],
+          "label": "大框标记孔 7",
+          "stable_ids": [
+            "R001",
+            "R038"
+          ]
+        },
+        {
+          "center_mm": [
+            160.0,
+            104.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            1,
+            36
+          ],
+          "label": "大框标记孔 8",
+          "stable_ids": [
+            "R001",
+            "R036"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R001 / core#1中心[168.0, 104.0, 8.0]mm；沿+Y套入已预装销。",
+        "39790长边朝Y的实物圆孔间距16mm；这里使用从内端开始的连续四个真实孔，不能按8mm理论网格误写成第1、3、5、7个真实孔。",
+        "下梁中心Y112、上表面Y108；39790中心Y104，下表面Y108。所有6558短段及挡肩仍在原位；大框上方Y92–100露出8mm供后续马达连接。",
+        "R003对准R001孔[160.0, 104.0, -32.0]mm。",
+        "R004对准R001孔[144.0, 104.0, -32.0]mm。",
+        "R005对准R001孔[128.0, 104.0, -32.0]mm。",
+        "R006对准R001孔[112.0, 104.0, -32.0]mm。",
+        "R035对准R001孔[112.0, 104.0, 48.0]mm。",
+        "R037对准R001孔[128.0, 104.0, 48.0]mm。",
+        "R038对准R001孔[144.0, 104.0, 48.0]mm。",
+        "R036对准R001孔[160.0, 104.0, 48.0]mm。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R001"
+      ],
+      "visible_stable_ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R042",
+        "R043"
+      ],
+      "stable_ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R042",
+        "R043"
+      ]
+    },
+    {
+      "id": "BAS-08",
+      "module_id": "foundation",
+      "module_step_number": 8,
+      "title": "B：摆好第一根 15L 梁",
+      "instructions": [
+        "取1根 32278 15孔厚梁，按图平放，让圆孔朝上。",
+        "从靠底盘中心的一端起数，第1孔在内端，第15孔在外端；后续都按这个方向数孔。"
+      ],
+      "added_part_ids": [
+        29
+      ],
+      "visible_part_ids": [
+        29
+      ],
+      "parts": [
+        {
+          "name": "32278 15孔厚梁",
+          "count": 1,
+          "part_number": "32278",
+          "part_ids": [
+            29
+          ],
+          "stable_ids": [
+            "R029"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R029 / core#29，32278.dat，中心[32.0, 112.0, 104.0]mm；孔轴Y。",
+        "主文从内端[32.0, 112.0, 48.0]mm数至外端[32.0, 112.0, 160.0]mm，孔序1–15。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R029"
+      ],
+      "visible_stable_ids": [
+        "R029"
+      ],
+      "stable_ids": [
+        "R029"
+      ]
+    },
+    {
+      "id": "BAS-09",
+      "module_id": "foundation",
+      "module_step_number": 9,
+      "title": "B：第一根下梁预装四根黑销",
+      "instructions": [
+        "取4根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第15、13、11、9孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "visible_part_ids": [
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 4,
+          "part_number": "2780",
+          "part_ids": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "stable_ids": [
+            "R030",
+            "R031",
+            "R032",
+            "R033"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-08"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R030",
+            "R031",
+            "R032",
+            "R033"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            32.0,
+            112.0,
+            160.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            29,
+            30
+          ],
+          "label": "从内端数第15孔",
+          "hole_number_from_inner_end": 15,
+          "host_part_id": 29,
+          "pin_part_id": 30,
+          "stable_ids": [
+            "R029",
+            "R030"
+          ]
+        },
+        {
+          "center_mm": [
+            32.0,
+            112.0,
+            144.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            29,
+            31
+          ],
+          "label": "从内端数第13孔",
+          "hole_number_from_inner_end": 13,
+          "host_part_id": 29,
+          "pin_part_id": 31,
+          "stable_ids": [
+            "R029",
+            "R031"
+          ]
+        },
+        {
+          "center_mm": [
+            32.0,
+            112.0,
+            128.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            29,
+            32
+          ],
+          "label": "从内端数第11孔",
+          "hole_number_from_inner_end": 11,
+          "host_part_id": 29,
+          "pin_part_id": 32,
+          "stable_ids": [
+            "R029",
+            "R032"
+          ]
+        },
+        {
+          "center_mm": [
+            32.0,
+            112.0,
+            112.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            29,
+            33
+          ],
+          "label": "从内端数第9孔",
+          "hole_number_from_inner_end": 9,
+          "host_part_id": 29,
+          "pin_part_id": 33,
+          "stable_ids": [
+            "R029",
+            "R033"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R030 / core#30 → R029第15孔；宿主孔中心[32.0, 112.0, 160.0]mm。",
+        "R031 / core#31 → R029第13孔；宿主孔中心[32.0, 112.0, 144.0]mm。",
+        "R032 / core#32 → R029第11孔；宿主孔中心[32.0, 112.0, 128.0]mm。",
+        "R033 / core#33 → R029第9孔；宿主孔中心[32.0, 112.0, 112.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R030",
+        "R031",
+        "R032",
+        "R033"
+      ],
+      "visible_stable_ids": [
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033"
+      ],
+      "stable_ids": [
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033"
+      ]
+    },
+    {
+      "id": "BAS-10",
+      "module_id": "foundation",
+      "module_step_number": 10,
+      "title": "B：预留与 A 翼连接的两销",
+      "instructions": [
+        "取2根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第1、3孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。",
+        "这两根黑销留给后面的32526 L梁，暂时露在外面。"
+      ],
+      "added_part_ids": [
+        40,
+        41
+      ],
+      "visible_part_ids": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        40,
+        41
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 2,
+          "part_number": "2780",
+          "part_ids": [
+            40,
+            41
+          ],
+          "stable_ids": [
+            "R040",
+            "R041"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-09"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            40,
+            41
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R040",
+            "R041"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            32.0,
+            112.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            29,
+            40
+          ],
+          "label": "从内端数第1孔",
+          "hole_number_from_inner_end": 1,
+          "host_part_id": 29,
+          "pin_part_id": 40,
+          "stable_ids": [
+            "R029",
+            "R040"
+          ]
+        },
+        {
+          "center_mm": [
+            32.0,
+            112.0,
+            64.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            29,
+            41
+          ],
+          "label": "从内端数第3孔",
+          "hole_number_from_inner_end": 3,
+          "host_part_id": 29,
+          "pin_part_id": 41,
+          "stable_ids": [
+            "R029",
+            "R041"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R040 / core#40 → R029第1孔；宿主孔中心[32.0, 112.0, 48.0]mm。",
+        "R041 / core#41 → R029第3孔；宿主孔中心[32.0, 112.0, 64.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R040",
+        "R041"
+      ],
+      "visible_stable_ids": [
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R040",
+        "R041"
+      ],
+      "stable_ids": [
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R040",
+        "R041"
+      ]
+    },
+    {
+      "id": "BAS-11",
+      "module_id": "foundation",
+      "module_step_number": 11,
+      "title": "B：另做马达下梁",
+      "instructions": [
+        "取1根 32278 15孔厚梁，按图平放，让圆孔朝上。",
+        "从靠底盘中心的一端起数，第1孔在内端，第15孔在外端；后续都按这个方向数孔。",
+        "这根马达下梁向底盘中心多伸出1孔（8mm）；梁长仍为15孔，按后续新孔号装销。"
+      ],
+      "added_part_ids": [
+        18
+      ],
+      "visible_part_ids": [
+        18
+      ],
+      "parts": [
+        {
+          "name": "32278 15孔厚梁",
+          "count": 1,
+          "part_number": "32278",
+          "part_ids": [
+            18
+          ],
+          "stable_ids": [
+            "R018"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R018 / core#18，32278.dat，中心[-48.0, 112.0, 104.0]mm；孔轴Y。",
+        "主文从内端[-48.0, 112.0, 48.0]mm数至外端[-48.0, 112.0, 160.0]mm，孔序1–15。",
+        "相对192源该梁沿自身长度向中心平移8mm；原39790及6558固定位置不动。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R018"
+      ],
+      "visible_stable_ids": [
+        "R018"
+      ],
+      "stable_ids": [
+        "R018"
+      ]
+    },
+    {
+      "id": "BAS-12",
+      "module_id": "foundation",
+      "module_step_number": 12,
+      "title": "B：马达下梁两根黑销",
+      "instructions": [
+        "取2根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第9、15孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        19,
+        20
+      ],
+      "visible_part_ids": [
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 2,
+          "part_number": "2780",
+          "part_ids": [
+            19,
+            20
+          ],
+          "stable_ids": [
+            "R019",
+            "R020"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-11"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            19,
+            20
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R019",
+            "R020"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -48.0,
+            112.0,
+            112.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            18,
+            19
+          ],
+          "label": "从内端数第9孔",
+          "hole_number_from_inner_end": 9,
+          "host_part_id": 18,
+          "pin_part_id": 19,
+          "stable_ids": [
+            "R018",
+            "R019"
+          ]
+        },
+        {
+          "center_mm": [
+            -48.0,
+            112.0,
+            160.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            18,
+            20
+          ],
+          "label": "从内端数第15孔",
+          "hole_number_from_inner_end": 15,
+          "host_part_id": 18,
+          "pin_part_id": 20,
+          "stable_ids": [
+            "R018",
+            "R020"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R019 / core#19 → R018第9孔；宿主孔中心[-48.0, 112.0, 112.0]mm。",
+        "R020 / core#20 → R018第15孔；宿主孔中心[-48.0, 112.0, 160.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R019",
+        "R020"
+      ],
+      "visible_stable_ids": [
+        "R018",
+        "R019",
+        "R020"
+      ],
+      "stable_ids": [
+        "R018",
+        "R019",
+        "R020"
+      ]
+    },
+    {
+      "id": "BAS-13",
+      "module_id": "foundation",
+      "module_step_number": 13,
+      "title": "B：马达下梁两根蓝销",
+      "instructions": [
+        "取2根 6558 蓝色3L长摩擦销，从梁的靠内端数，分别装入第11、13孔。",
+        "把短段1L（8mm）朝下插进梁，中央挡圈贴住梁上表面；长段2L（16mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        21,
+        22
+      ],
+      "visible_part_ids": [
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "parts": [
+        {
+          "name": "6558 蓝色3L摩擦销",
+          "count": 2,
+          "part_number": "6558",
+          "part_ids": [
+            21,
+            22
+          ],
+          "stable_ids": [
+            "R021",
+            "R022"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-12"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            21,
+            22
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R021",
+            "R022"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -48.0,
+            112.0,
+            128.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            18,
+            21
+          ],
+          "label": "从内端数第11孔",
+          "hole_number_from_inner_end": 11,
+          "host_part_id": 18,
+          "pin_part_id": 21,
+          "stable_ids": [
+            "R018",
+            "R021"
+          ]
+        },
+        {
+          "center_mm": [
+            -48.0,
+            112.0,
+            144.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            18,
+            22
+          ],
+          "label": "从内端数第13孔",
+          "hole_number_from_inner_end": 13,
+          "host_part_id": 18,
+          "pin_part_id": 22,
+          "stable_ids": [
+            "R018",
+            "R022"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R021 / core#21 → R018第11孔；宿主孔中心[-48.0, 112.0, 128.0]mm。",
+        "R022 / core#22 → R018第13孔；宿主孔中心[-48.0, 112.0, 144.0]mm。",
+        "6558短8mm段进入下梁Y108–116；挡肩Y108；长16mm段向上占Y92–108，后续穿39790并接马达。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R021",
+        "R022"
+      ],
+      "visible_stable_ids": [
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022"
+      ],
+      "stable_ids": [
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022"
+      ]
+    },
+    {
+      "id": "BAS-14",
+      "module_id": "foundation",
+      "module_step_number": 14,
+      "title": "B：预留第二处L梁黑销",
+      "instructions": [
+        "取2根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第3、1孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。",
+        "这两根黑销留给后面的32526 L梁，暂时露在外面。"
+      ],
+      "added_part_ids": [
+        26,
+        27
+      ],
+      "visible_part_ids": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        26,
+        27
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 2,
+          "part_number": "2780",
+          "part_ids": [
+            26,
+            27
+          ],
+          "stable_ids": [
+            "R026",
+            "R027"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-13"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            26,
+            27
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R026",
+            "R027"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -48.0,
+            112.0,
+            64.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            18,
+            26
+          ],
+          "label": "从内端数第3孔",
+          "hole_number_from_inner_end": 3,
+          "host_part_id": 18,
+          "pin_part_id": 26,
+          "stable_ids": [
+            "R018",
+            "R026"
+          ]
+        },
+        {
+          "center_mm": [
+            -48.0,
+            112.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            18,
+            27
+          ],
+          "label": "从内端数第1孔",
+          "hole_number_from_inner_end": 1,
+          "host_part_id": 18,
+          "pin_part_id": 27,
+          "stable_ids": [
+            "R018",
+            "R027"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R026 / core#26 → R018第3孔；宿主孔中心[-48.0, 112.0, 64.0]mm。",
+        "R027 / core#27 → R018第1孔；宿主孔中心[-48.0, 112.0, 48.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R026",
+        "R027"
+      ],
+      "visible_stable_ids": [
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R026",
+        "R027"
+      ],
+      "stable_ids": [
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R026",
+        "R027"
+      ]
+    },
+    {
+      "id": "BAS-15",
+      "module_id": "foundation",
+      "module_step_number": 15,
+      "title": "B：压下大框，合成第二翼",
+      "instructions": [
+        "把本翼两根已插销的下梁按图平行摆好，分别托住，让两列销朝上。取1个39790 15×11大框，两条长边对准两列销。",
+        "每条长边从靠底盘中心的一端起，使用最靠内的连续4个朝上圆孔。先让8个孔同时套住销尖，再均匀向下压到底。",
+        "中央挡圈留在大框与下梁之间；蓝色长销穿过大框后仍向上露出1孔长。角部的备用黑销保持露出。"
+      ],
+      "added_part_ids": [
+        28
+      ],
+      "visible_part_ids": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        40,
+        41
+      ],
+      "parts": [
+        {
+          "name": "39790 15×11大框",
+          "count": 1,
+          "part_number": "39790",
+          "part_ids": [
+            28
+          ],
+          "stable_ids": [
+            "R028"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-10",
+        "BAS-14"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            28
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -40,
+            0
+          ],
+          "label": "大框同时套入两列预装销",
+          "stable_ids": [
+            "R028"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            32.0,
+            104.0,
+            160.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            28,
+            30
+          ],
+          "label": "大框标记孔 1",
+          "stable_ids": [
+            "R028",
+            "R030"
+          ]
+        },
+        {
+          "center_mm": [
+            32.0,
+            104.0,
+            144.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            28,
+            31
+          ],
+          "label": "大框标记孔 2",
+          "stable_ids": [
+            "R028",
+            "R031"
+          ]
+        },
+        {
+          "center_mm": [
+            32.0,
+            104.0,
+            128.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            28,
+            32
+          ],
+          "label": "大框标记孔 3",
+          "stable_ids": [
+            "R028",
+            "R032"
+          ]
+        },
+        {
+          "center_mm": [
+            32.0,
+            104.0,
+            112.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            28,
+            33
+          ],
+          "label": "大框标记孔 4",
+          "stable_ids": [
+            "R028",
+            "R033"
+          ]
+        },
+        {
+          "center_mm": [
+            -48.0,
+            104.0,
+            112.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            28,
+            19
+          ],
+          "label": "大框标记孔 5",
+          "stable_ids": [
+            "R028",
+            "R019"
+          ]
+        },
+        {
+          "center_mm": [
+            -48.0,
+            104.0,
+            128.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            28,
+            21
+          ],
+          "label": "大框标记孔 6",
+          "stable_ids": [
+            "R028",
+            "R021"
+          ]
+        },
+        {
+          "center_mm": [
+            -48.0,
+            104.0,
+            144.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            28,
+            22
+          ],
+          "label": "大框标记孔 7",
+          "stable_ids": [
+            "R028",
+            "R022"
+          ]
+        },
+        {
+          "center_mm": [
+            -48.0,
+            104.0,
+            160.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            28,
+            20
+          ],
+          "label": "大框标记孔 8",
+          "stable_ids": [
+            "R028",
+            "R020"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R028 / core#28中心[-8.0, 104.0, 168.0]mm；沿+Y套入已预装销。",
+        "39790长边朝Y的实物圆孔间距16mm；这里使用从内端开始的连续四个真实孔，不能按8mm理论网格误写成第1、3、5、7个真实孔。",
+        "下梁中心Y112、上表面Y108；39790中心Y104，下表面Y108。所有6558短段及挡肩仍在原位；大框上方Y92–100露出8mm供后续马达连接。",
+        "R030对准R028孔[32.0, 104.0, 160.0]mm。",
+        "R031对准R028孔[32.0, 104.0, 144.0]mm。",
+        "R032对准R028孔[32.0, 104.0, 128.0]mm。",
+        "R033对准R028孔[32.0, 104.0, 112.0]mm。",
+        "R019对准R028孔[-48.0, 104.0, 112.0]mm。",
+        "R021对准R028孔[-48.0, 104.0, 128.0]mm。",
+        "R022对准R028孔[-48.0, 104.0, 144.0]mm。",
+        "R020对准R028孔[-48.0, 104.0, 160.0]mm。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R028"
+      ],
+      "visible_stable_ids": [
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R040",
+        "R041"
+      ],
+      "stable_ids": [
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R040",
+        "R041"
+      ]
+    },
+    {
+      "id": "BAS-16",
+      "module_id": "foundation",
+      "module_step_number": 16,
+      "title": "C：摆好第一根 15L 梁",
+      "instructions": [
+        "取1根 32278 15孔厚梁，按图平放，让圆孔朝上。",
+        "从靠底盘中心的一端起数，第1孔在内端，第15孔在外端；后续都按这个方向数孔。"
+      ],
+      "added_part_ids": [
+        13
+      ],
+      "visible_part_ids": [
+        13
+      ],
+      "parts": [
+        {
+          "name": "32278 15孔厚梁",
+          "count": 1,
+          "part_number": "32278",
+          "part_ids": [
+            13
+          ],
+          "stable_ids": [
+            "R013"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R013 / core#13，32278.dat，中心[-104.0, 112.0, 32.0]mm；孔轴Y。",
+        "主文从内端[-48.0, 112.0, 32.0]mm数至外端[-160.0, 112.0, 32.0]mm，孔序1–15。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R013"
+      ],
+      "visible_stable_ids": [
+        "R013"
+      ],
+      "stable_ids": [
+        "R013"
+      ]
+    },
+    {
+      "id": "BAS-17",
+      "module_id": "foundation",
+      "module_step_number": 17,
+      "title": "C：第一根下梁预装四根黑销",
+      "instructions": [
+        "取4根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第15、13、11、9孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "visible_part_ids": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 4,
+          "part_number": "2780",
+          "part_ids": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "stable_ids": [
+            "R014",
+            "R015",
+            "R016",
+            "R017"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-16"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R014",
+            "R015",
+            "R016",
+            "R017"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -160.0,
+            112.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            13,
+            14
+          ],
+          "label": "从内端数第15孔",
+          "hole_number_from_inner_end": 15,
+          "host_part_id": 13,
+          "pin_part_id": 14,
+          "stable_ids": [
+            "R013",
+            "R014"
+          ]
+        },
+        {
+          "center_mm": [
+            -144.0,
+            112.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            13,
+            15
+          ],
+          "label": "从内端数第13孔",
+          "hole_number_from_inner_end": 13,
+          "host_part_id": 13,
+          "pin_part_id": 15,
+          "stable_ids": [
+            "R013",
+            "R015"
+          ]
+        },
+        {
+          "center_mm": [
+            -128.0,
+            112.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            13,
+            16
+          ],
+          "label": "从内端数第11孔",
+          "hole_number_from_inner_end": 11,
+          "host_part_id": 13,
+          "pin_part_id": 16,
+          "stable_ids": [
+            "R013",
+            "R016"
+          ]
+        },
+        {
+          "center_mm": [
+            -112.0,
+            112.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            13,
+            17
+          ],
+          "label": "从内端数第9孔",
+          "hole_number_from_inner_end": 9,
+          "host_part_id": 13,
+          "pin_part_id": 17,
+          "stable_ids": [
+            "R013",
+            "R017"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R014 / core#14 → R013第15孔；宿主孔中心[-160.0, 112.0, 32.0]mm。",
+        "R015 / core#15 → R013第13孔；宿主孔中心[-144.0, 112.0, 32.0]mm。",
+        "R016 / core#16 → R013第11孔；宿主孔中心[-128.0, 112.0, 32.0]mm。",
+        "R017 / core#17 → R013第9孔；宿主孔中心[-112.0, 112.0, 32.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R014",
+        "R015",
+        "R016",
+        "R017"
+      ],
+      "visible_stable_ids": [
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017"
+      ],
+      "stable_ids": [
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017"
+      ]
+    },
+    {
+      "id": "BAS-18",
+      "module_id": "foundation",
+      "module_step_number": 18,
+      "title": "C：预留与 B 翼连接的两销",
+      "instructions": [
+        "取2根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第1、3孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。",
+        "这两根黑销留给后面的32526 L梁，暂时露在外面。"
+      ],
+      "added_part_ids": [
+        24,
+        25
+      ],
+      "visible_part_ids": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 2,
+          "part_number": "2780",
+          "part_ids": [
+            24,
+            25
+          ],
+          "stable_ids": [
+            "R024",
+            "R025"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-17"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            24,
+            25
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R024",
+            "R025"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -48.0,
+            112.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            13,
+            24
+          ],
+          "label": "从内端数第1孔",
+          "hole_number_from_inner_end": 1,
+          "host_part_id": 13,
+          "pin_part_id": 24,
+          "stable_ids": [
+            "R013",
+            "R024"
+          ]
+        },
+        {
+          "center_mm": [
+            -64.0,
+            112.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            13,
+            25
+          ],
+          "label": "从内端数第3孔",
+          "hole_number_from_inner_end": 3,
+          "host_part_id": 13,
+          "pin_part_id": 25,
+          "stable_ids": [
+            "R013",
+            "R025"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R024 / core#24 → R013第1孔；宿主孔中心[-48.0, 112.0, 32.0]mm。",
+        "R025 / core#25 → R013第3孔；宿主孔中心[-64.0, 112.0, 32.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R024",
+        "R025"
+      ],
+      "visible_stable_ids": [
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R024",
+        "R025"
+      ],
+      "stable_ids": [
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R024",
+        "R025"
+      ]
+    },
+    {
+      "id": "BAS-19",
+      "module_id": "foundation",
+      "module_step_number": 19,
+      "title": "C：另做马达下梁",
+      "instructions": [
+        "取1根 32278 15孔厚梁，按图平放，让圆孔朝上。",
+        "从靠底盘中心的一端起数，第1孔在内端，第15孔在外端；后续都按这个方向数孔。",
+        "这根马达下梁向底盘中心多伸出1孔（8mm）；梁长仍为15孔，按后续新孔号装销。"
+      ],
+      "added_part_ids": [
+        50
+      ],
+      "visible_part_ids": [
+        50
+      ],
+      "parts": [
+        {
+          "name": "32278 15孔厚梁",
+          "count": 1,
+          "part_number": "32278",
+          "part_ids": [
+            50
+          ],
+          "stable_ids": [
+            "R050"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R050 / core#50，32278.dat，中心[-104.0, 112.0, -48.0]mm；孔轴Y。",
+        "主文从内端[-48.0, 112.0, -48.0]mm数至外端[-160.0, 112.0, -48.0]mm，孔序1–15。",
+        "相对192源该梁沿自身长度向中心平移8mm；原39790及6558固定位置不动。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R050"
+      ],
+      "visible_stable_ids": [
+        "R050"
+      ],
+      "stable_ids": [
+        "R050"
+      ]
+    },
+    {
+      "id": "BAS-20",
+      "module_id": "foundation",
+      "module_step_number": 20,
+      "title": "C：马达下梁两根黑销",
+      "instructions": [
+        "取2根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第9、15孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        51,
+        52
+      ],
+      "visible_part_ids": [
+        50,
+        51,
+        52
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 2,
+          "part_number": "2780",
+          "part_ids": [
+            51,
+            52
+          ],
+          "stable_ids": [
+            "R051",
+            "R052"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-19"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            51,
+            52
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R051",
+            "R052"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -112.0,
+            112.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            50,
+            51
+          ],
+          "label": "从内端数第9孔",
+          "hole_number_from_inner_end": 9,
+          "host_part_id": 50,
+          "pin_part_id": 51,
+          "stable_ids": [
+            "R050",
+            "R051"
+          ]
+        },
+        {
+          "center_mm": [
+            -160.0,
+            112.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            50,
+            52
+          ],
+          "label": "从内端数第15孔",
+          "hole_number_from_inner_end": 15,
+          "host_part_id": 50,
+          "pin_part_id": 52,
+          "stable_ids": [
+            "R050",
+            "R052"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R051 / core#51 → R050第9孔；宿主孔中心[-112.0, 112.0, -48.0]mm。",
+        "R052 / core#52 → R050第15孔；宿主孔中心[-160.0, 112.0, -48.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R051",
+        "R052"
+      ],
+      "visible_stable_ids": [
+        "R050",
+        "R051",
+        "R052"
+      ],
+      "stable_ids": [
+        "R050",
+        "R051",
+        "R052"
+      ]
+    },
+    {
+      "id": "BAS-21",
+      "module_id": "foundation",
+      "module_step_number": 21,
+      "title": "C：马达下梁两根蓝销",
+      "instructions": [
+        "取2根 6558 蓝色3L长摩擦销，从梁的靠内端数，分别装入第11、13孔。",
+        "把短段1L（8mm）朝下插进梁，中央挡圈贴住梁上表面；长段2L（16mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        53,
+        54
+      ],
+      "visible_part_ids": [
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "parts": [
+        {
+          "name": "6558 蓝色3L摩擦销",
+          "count": 2,
+          "part_number": "6558",
+          "part_ids": [
+            53,
+            54
+          ],
+          "stable_ids": [
+            "R053",
+            "R054"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-20"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            53,
+            54
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R053",
+            "R054"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -128.0,
+            112.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            50,
+            53
+          ],
+          "label": "从内端数第11孔",
+          "hole_number_from_inner_end": 11,
+          "host_part_id": 50,
+          "pin_part_id": 53,
+          "stable_ids": [
+            "R050",
+            "R053"
+          ]
+        },
+        {
+          "center_mm": [
+            -144.0,
+            112.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            50,
+            54
+          ],
+          "label": "从内端数第13孔",
+          "hole_number_from_inner_end": 13,
+          "host_part_id": 50,
+          "pin_part_id": 54,
+          "stable_ids": [
+            "R050",
+            "R054"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R053 / core#53 → R050第11孔；宿主孔中心[-128.0, 112.0, -48.0]mm。",
+        "R054 / core#54 → R050第13孔；宿主孔中心[-144.0, 112.0, -48.0]mm。",
+        "6558短8mm段进入下梁Y108–116；挡肩Y108；长16mm段向上占Y92–108，后续穿39790并接马达。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R053",
+        "R054"
+      ],
+      "visible_stable_ids": [
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054"
+      ],
+      "stable_ids": [
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054"
+      ]
+    },
+    {
+      "id": "BAS-22",
+      "module_id": "foundation",
+      "module_step_number": 22,
+      "title": "C：预留第三处L梁黑销",
+      "instructions": [
+        "取2根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第3、1孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。",
+        "这两根黑销留给后面的32526 L梁，暂时露在外面。"
+      ],
+      "added_part_ids": [
+        58,
+        59
+      ],
+      "visible_part_ids": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        58,
+        59
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 2,
+          "part_number": "2780",
+          "part_ids": [
+            58,
+            59
+          ],
+          "stable_ids": [
+            "R058",
+            "R059"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-21"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            58,
+            59
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R058",
+            "R059"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -64.0,
+            112.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            50,
+            58
+          ],
+          "label": "从内端数第3孔",
+          "hole_number_from_inner_end": 3,
+          "host_part_id": 50,
+          "pin_part_id": 58,
+          "stable_ids": [
+            "R050",
+            "R058"
+          ]
+        },
+        {
+          "center_mm": [
+            -48.0,
+            112.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            50,
+            59
+          ],
+          "label": "从内端数第1孔",
+          "hole_number_from_inner_end": 1,
+          "host_part_id": 50,
+          "pin_part_id": 59,
+          "stable_ids": [
+            "R050",
+            "R059"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R058 / core#58 → R050第3孔；宿主孔中心[-64.0, 112.0, -48.0]mm。",
+        "R059 / core#59 → R050第1孔；宿主孔中心[-48.0, 112.0, -48.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R058",
+        "R059"
+      ],
+      "visible_stable_ids": [
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R058",
+        "R059"
+      ],
+      "stable_ids": [
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R058",
+        "R059"
+      ]
+    },
+    {
+      "id": "BAS-23",
+      "module_id": "foundation",
+      "module_step_number": 23,
+      "title": "C：压下大框，合成第三翼",
+      "instructions": [
+        "把本翼两根已插销的下梁按图平行摆好，分别托住，让两列销朝上。取1个39790 15×11大框，两条长边对准两列销。",
+        "每条长边从靠底盘中心的一端起，使用最靠内的连续4个朝上圆孔。先让8个孔同时套住销尖，再均匀向下压到底。",
+        "中央挡圈留在大框与下梁之间；蓝色长销穿过大框后仍向上露出1孔长。角部的备用黑销保持露出。"
+      ],
+      "added_part_ids": [
+        12
+      ],
+      "visible_part_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        50,
+        51,
+        52,
+        53,
+        54,
+        58,
+        59
+      ],
+      "parts": [
+        {
+          "name": "39790 15×11大框",
+          "count": 1,
+          "part_number": "39790",
+          "part_ids": [
+            12
+          ],
+          "stable_ids": [
+            "R012"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-18",
+        "BAS-22"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            12
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -40,
+            0
+          ],
+          "label": "大框同时套入两列预装销",
+          "stable_ids": [
+            "R012"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -160.0,
+            104.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            12,
+            14
+          ],
+          "label": "大框标记孔 1",
+          "stable_ids": [
+            "R012",
+            "R014"
+          ]
+        },
+        {
+          "center_mm": [
+            -144.0,
+            104.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            12,
+            15
+          ],
+          "label": "大框标记孔 2",
+          "stable_ids": [
+            "R012",
+            "R015"
+          ]
+        },
+        {
+          "center_mm": [
+            -128.0,
+            104.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            12,
+            16
+          ],
+          "label": "大框标记孔 3",
+          "stable_ids": [
+            "R012",
+            "R016"
+          ]
+        },
+        {
+          "center_mm": [
+            -112.0,
+            104.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            12,
+            17
+          ],
+          "label": "大框标记孔 4",
+          "stable_ids": [
+            "R012",
+            "R017"
+          ]
+        },
+        {
+          "center_mm": [
+            -112.0,
+            104.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            12,
+            51
+          ],
+          "label": "大框标记孔 5",
+          "stable_ids": [
+            "R012",
+            "R051"
+          ]
+        },
+        {
+          "center_mm": [
+            -128.0,
+            104.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            12,
+            53
+          ],
+          "label": "大框标记孔 6",
+          "stable_ids": [
+            "R012",
+            "R053"
+          ]
+        },
+        {
+          "center_mm": [
+            -144.0,
+            104.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            12,
+            54
+          ],
+          "label": "大框标记孔 7",
+          "stable_ids": [
+            "R012",
+            "R054"
+          ]
+        },
+        {
+          "center_mm": [
+            -160.0,
+            104.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            12,
+            52
+          ],
+          "label": "大框标记孔 8",
+          "stable_ids": [
+            "R012",
+            "R052"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R012 / core#12中心[-168.0, 104.0, -8.0]mm；沿+Y套入已预装销。",
+        "39790长边朝Y的实物圆孔间距16mm；这里使用从内端开始的连续四个真实孔，不能按8mm理论网格误写成第1、3、5、7个真实孔。",
+        "下梁中心Y112、上表面Y108；39790中心Y104，下表面Y108。所有6558短段及挡肩仍在原位；大框上方Y92–100露出8mm供后续马达连接。",
+        "R014对准R012孔[-160.0, 104.0, 32.0]mm。",
+        "R015对准R012孔[-144.0, 104.0, 32.0]mm。",
+        "R016对准R012孔[-128.0, 104.0, 32.0]mm。",
+        "R017对准R012孔[-112.0, 104.0, 32.0]mm。",
+        "R051对准R012孔[-112.0, 104.0, -48.0]mm。",
+        "R053对准R012孔[-128.0, 104.0, -48.0]mm。",
+        "R054对准R012孔[-144.0, 104.0, -48.0]mm。",
+        "R052对准R012孔[-160.0, 104.0, -48.0]mm。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R012"
+      ],
+      "visible_stable_ids": [
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R024",
+        "R025",
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R058",
+        "R059"
+      ],
+      "stable_ids": [
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R024",
+        "R025",
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R058",
+        "R059"
+      ]
+    },
+    {
+      "id": "BAS-24",
+      "module_id": "foundation",
+      "module_step_number": 24,
+      "title": "D：摆好 15L 下梁",
+      "instructions": [
+        "取1根 32278 15孔厚梁，按图平放，让圆孔朝上。",
+        "从靠底盘中心的一端起数，第1孔在内端，第15孔在外端；后续都按这个方向数孔。"
+      ],
+      "added_part_ids": [
+        45
+      ],
+      "visible_part_ids": [
+        45
+      ],
+      "parts": [
+        {
+          "name": "32278 15孔厚梁",
+          "count": 1,
+          "part_number": "32278",
+          "part_ids": [
+            45
+          ],
+          "stable_ids": [
+            "R045"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R045 / core#45，32278.dat，中心[-32.0, 112.0, -104.0]mm；孔轴Y。",
+        "主文从内端[-32.0, 112.0, -48.0]mm数至外端[-32.0, 112.0, -160.0]mm，孔序1–15。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R045"
+      ],
+      "visible_stable_ids": [
+        "R045"
+      ],
+      "stable_ids": [
+        "R045"
+      ]
+    },
+    {
+      "id": "BAS-25",
+      "module_id": "foundation",
+      "module_step_number": 25,
+      "title": "D：15L 下梁预装四根黑销",
+      "instructions": [
+        "取4根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第15、13、11、9孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        46,
+        47,
+        48,
+        49
+      ],
+      "visible_part_ids": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 4,
+          "part_number": "2780",
+          "part_ids": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "stable_ids": [
+            "R046",
+            "R047",
+            "R048",
+            "R049"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-24"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R046",
+            "R047",
+            "R048",
+            "R049"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -32.0,
+            112.0,
+            -160.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            45,
+            46
+          ],
+          "label": "从内端数第15孔",
+          "hole_number_from_inner_end": 15,
+          "host_part_id": 45,
+          "pin_part_id": 46,
+          "stable_ids": [
+            "R045",
+            "R046"
+          ]
+        },
+        {
+          "center_mm": [
+            -32.0,
+            112.0,
+            -144.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            45,
+            47
+          ],
+          "label": "从内端数第13孔",
+          "hole_number_from_inner_end": 13,
+          "host_part_id": 45,
+          "pin_part_id": 47,
+          "stable_ids": [
+            "R045",
+            "R047"
+          ]
+        },
+        {
+          "center_mm": [
+            -32.0,
+            112.0,
+            -128.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            45,
+            48
+          ],
+          "label": "从内端数第11孔",
+          "hole_number_from_inner_end": 11,
+          "host_part_id": 45,
+          "pin_part_id": 48,
+          "stable_ids": [
+            "R045",
+            "R048"
+          ]
+        },
+        {
+          "center_mm": [
+            -32.0,
+            112.0,
+            -112.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            45,
+            49
+          ],
+          "label": "从内端数第9孔",
+          "hole_number_from_inner_end": 9,
+          "host_part_id": 45,
+          "pin_part_id": 49,
+          "stable_ids": [
+            "R045",
+            "R049"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R046 / core#46 → R045第15孔；宿主孔中心[-32.0, 112.0, -160.0]mm。",
+        "R047 / core#47 → R045第13孔；宿主孔中心[-32.0, 112.0, -144.0]mm。",
+        "R048 / core#48 → R045第11孔；宿主孔中心[-32.0, 112.0, -128.0]mm。",
+        "R049 / core#49 → R045第9孔；宿主孔中心[-32.0, 112.0, -112.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R046",
+        "R047",
+        "R048",
+        "R049"
+      ],
+      "visible_stable_ids": [
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049"
+      ],
+      "stable_ids": [
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049"
+      ]
+    },
+    {
+      "id": "BAS-26",
+      "module_id": "foundation",
+      "module_step_number": 26,
+      "title": "D：预留与 C 翼连接的两销",
+      "instructions": [
+        "取2根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第1、3孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。",
+        "这两根黑销留给后面的32526 L梁，暂时露在外面。"
+      ],
+      "added_part_ids": [
+        56,
+        57
+      ],
+      "visible_part_ids": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        56,
+        57
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 2,
+          "part_number": "2780",
+          "part_ids": [
+            56,
+            57
+          ],
+          "stable_ids": [
+            "R056",
+            "R057"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-25"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            56,
+            57
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R056",
+            "R057"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -32.0,
+            112.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            45,
+            56
+          ],
+          "label": "从内端数第1孔",
+          "hole_number_from_inner_end": 1,
+          "host_part_id": 45,
+          "pin_part_id": 56,
+          "stable_ids": [
+            "R045",
+            "R056"
+          ]
+        },
+        {
+          "center_mm": [
+            -32.0,
+            112.0,
+            -64.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            45,
+            57
+          ],
+          "label": "从内端数第3孔",
+          "hole_number_from_inner_end": 3,
+          "host_part_id": 45,
+          "pin_part_id": 57,
+          "stable_ids": [
+            "R045",
+            "R057"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R056 / core#56 → R045第1孔；宿主孔中心[-32.0, 112.0, -48.0]mm。",
+        "R057 / core#57 → R045第3孔；宿主孔中心[-32.0, 112.0, -64.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R056",
+        "R057"
+      ],
+      "visible_stable_ids": [
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049",
+        "R056",
+        "R057"
+      ],
+      "stable_ids": [
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049",
+        "R056",
+        "R057"
+      ]
+    },
+    {
+      "id": "BAS-27",
+      "module_id": "foundation",
+      "module_step_number": 27,
+      "title": "D：另做 7L 马达下梁",
+      "instructions": [
+        "取1根 32524 7孔厚梁，按图平放，让圆孔朝上。",
+        "从靠底盘中心的一端起数，第1孔在内端，第7孔在外端；后续都按这个方向数孔。"
+      ],
+      "added_part_ids": [
+        7
+      ],
+      "visible_part_ids": [
+        7
+      ],
+      "parts": [
+        {
+          "name": "32524 7孔厚梁",
+          "count": 1,
+          "part_number": "32524",
+          "part_ids": [
+            7
+          ],
+          "stable_ids": [
+            "R007"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [],
+      "insertion": [],
+      "ports": [],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R007 / core#7，32524.dat，中心[48.0, 112.0, -136.0]mm；孔轴Y。",
+        "主文从内端[48.0, 112.0, -112.0]mm数至外端[48.0, 112.0, -160.0]mm，孔序1–7。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R007"
+      ],
+      "visible_stable_ids": [
+        "R007"
+      ],
+      "stable_ids": [
+        "R007"
+      ]
+    },
+    {
+      "id": "BAS-28",
+      "module_id": "foundation",
+      "module_step_number": 28,
+      "title": "D：7L 马达下梁两根黑销",
+      "instructions": [
+        "取2根 2780 黑色2L摩擦销，从梁的靠内端数，分别装入第1、7孔。",
+        "从梁上方压入半根，中央挡圈贴住梁上表面；另一半1L（8mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        8,
+        9
+      ],
+      "visible_part_ids": [
+        7,
+        8,
+        9
+      ],
+      "parts": [
+        {
+          "name": "2780 黑色2L摩擦销",
+          "count": 2,
+          "part_number": "2780",
+          "part_ids": [
+            8,
+            9
+          ],
+          "stable_ids": [
+            "R008",
+            "R009"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-27"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            8,
+            9
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R008",
+            "R009"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            48.0,
+            112.0,
+            -112.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            7,
+            8
+          ],
+          "label": "从内端数第1孔",
+          "hole_number_from_inner_end": 1,
+          "host_part_id": 7,
+          "pin_part_id": 8,
+          "stable_ids": [
+            "R007",
+            "R008"
+          ]
+        },
+        {
+          "center_mm": [
+            48.0,
+            112.0,
+            -160.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            7,
+            9
+          ],
+          "label": "从内端数第7孔",
+          "hole_number_from_inner_end": 7,
+          "host_part_id": 7,
+          "pin_part_id": 9,
+          "stable_ids": [
+            "R007",
+            "R009"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R008 / core#8 → R007第1孔；宿主孔中心[48.0, 112.0, -112.0]mm。",
+        "R009 / core#9 → R007第7孔；宿主孔中心[48.0, 112.0, -160.0]mm。",
+        "2780下半段进入下梁Y108–116；中环停在Y108，上半段Y100–108留给大框或L梁。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R008",
+        "R009"
+      ],
+      "visible_stable_ids": [
+        "R007",
+        "R008",
+        "R009"
+      ],
+      "stable_ids": [
+        "R007",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "id": "BAS-29",
+      "module_id": "foundation",
+      "module_step_number": 29,
+      "title": "D：7L 马达下梁两根蓝销",
+      "instructions": [
+        "取2根 6558 蓝色3L长摩擦销，从梁的靠内端数，分别装入第3、5孔。",
+        "把短段1L（8mm）朝下插进梁，中央挡圈贴住梁上表面；长段2L（16mm）朝上露出。"
+      ],
+      "added_part_ids": [
+        10,
+        11
+      ],
+      "visible_part_ids": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "parts": [
+        {
+          "name": "6558 蓝色3L摩擦销",
+          "count": 2,
+          "part_number": "6558",
+          "part_ids": [
+            10,
+            11
+          ],
+          "stable_ids": [
+            "R010",
+            "R011"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-28"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            10,
+            11
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "从上方压入下梁；中央挡圈留在梁上表面",
+          "stable_ids": [
+            "R010",
+            "R011"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            48.0,
+            112.0,
+            -128.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            7,
+            10
+          ],
+          "label": "从内端数第3孔",
+          "hole_number_from_inner_end": 3,
+          "host_part_id": 7,
+          "pin_part_id": 10,
+          "stable_ids": [
+            "R007",
+            "R010"
+          ]
+        },
+        {
+          "center_mm": [
+            48.0,
+            112.0,
+            -144.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            7,
+            11
+          ],
+          "label": "从内端数第5孔",
+          "hole_number_from_inner_end": 5,
+          "host_part_id": 7,
+          "pin_part_id": 11,
+          "stable_ids": [
+            "R007",
+            "R011"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R010 / core#10 → R007第3孔；宿主孔中心[48.0, 112.0, -128.0]mm。",
+        "R011 / core#11 → R007第5孔；宿主孔中心[48.0, 112.0, -144.0]mm。",
+        "6558短8mm段进入下梁Y108–116；挡肩Y108；长16mm段向上占Y92–108，后续穿39790并接马达。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R010",
+        "R011"
+      ],
+      "visible_stable_ids": [
+        "R007",
+        "R008",
+        "R009",
+        "R010",
+        "R011"
+      ],
+      "stable_ids": [
+        "R007",
+        "R008",
+        "R009",
+        "R010",
+        "R011"
+      ]
+    },
+    {
+      "id": "BAS-30",
+      "module_id": "foundation",
+      "module_step_number": 30,
+      "title": "D：压下大框，合成第四翼",
+      "instructions": [
+        "把本翼两根已插销的下梁按图平行摆好，分别托住，让两列销朝上。取1个39790 15×11大框，两条长边对准两列销。",
+        "每条长边从靠底盘中心的一端起，使用最靠内的连续4个朝上圆孔。先让8个孔同时套住销尖，再均匀向下压到底。",
+        "中央挡圈留在大框与下梁之间；蓝色长销穿过大框后仍向上露出1孔长。角部的备用黑销保持露出。"
+      ],
+      "added_part_ids": [
+        44
+      ],
+      "visible_part_ids": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        56,
+        57
+      ],
+      "parts": [
+        {
+          "name": "39790 15×11大框",
+          "count": 1,
+          "part_number": "39790",
+          "part_ids": [
+            44
+          ],
+          "stable_ids": [
+            "R044"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts",
+      "requires_subassemblies": [
+        "BAS-26",
+        "BAS-29"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            44
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -40,
+            0
+          ],
+          "label": "大框同时套入两列预装销",
+          "stable_ids": [
+            "R044"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -32.0,
+            104.0,
+            -160.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            44,
+            46
+          ],
+          "label": "大框标记孔 1",
+          "stable_ids": [
+            "R044",
+            "R046"
+          ]
+        },
+        {
+          "center_mm": [
+            -32.0,
+            104.0,
+            -144.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            44,
+            47
+          ],
+          "label": "大框标记孔 2",
+          "stable_ids": [
+            "R044",
+            "R047"
+          ]
+        },
+        {
+          "center_mm": [
+            -32.0,
+            104.0,
+            -128.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            44,
+            48
+          ],
+          "label": "大框标记孔 3",
+          "stable_ids": [
+            "R044",
+            "R048"
+          ]
+        },
+        {
+          "center_mm": [
+            -32.0,
+            104.0,
+            -112.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            44,
+            49
+          ],
+          "label": "大框标记孔 4",
+          "stable_ids": [
+            "R044",
+            "R049"
+          ]
+        },
+        {
+          "center_mm": [
+            48.0,
+            104.0,
+            -112.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            44,
+            8
+          ],
+          "label": "大框标记孔 5",
+          "stable_ids": [
+            "R044",
+            "R008"
+          ]
+        },
+        {
+          "center_mm": [
+            48.0,
+            104.0,
+            -128.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            44,
+            10
+          ],
+          "label": "大框标记孔 6",
+          "stable_ids": [
+            "R044",
+            "R010"
+          ]
+        },
+        {
+          "center_mm": [
+            48.0,
+            104.0,
+            -144.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            44,
+            11
+          ],
+          "label": "大框标记孔 7",
+          "stable_ids": [
+            "R044",
+            "R011"
+          ]
+        },
+        {
+          "center_mm": [
+            48.0,
+            104.0,
+            -160.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            44,
+            9
+          ],
+          "label": "大框标记孔 8",
+          "stable_ids": [
+            "R044",
+            "R009"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "technical_instructions": [
+        "R044 / core#44中心[8.0, 104.0, -168.0]mm；沿+Y套入已预装销。",
+        "39790长边朝Y的实物圆孔间距16mm；这里使用从内端开始的连续四个真实孔，不能按8mm理论网格误写成第1、3、5、7个真实孔。",
+        "下梁中心Y112、上表面Y108；39790中心Y104，下表面Y108。所有6558短段及挡肩仍在原位；大框上方Y92–100露出8mm供后续马达连接。",
+        "R046对准R044孔[-32.0, 104.0, -160.0]mm。",
+        "R047对准R044孔[-32.0, 104.0, -144.0]mm。",
+        "R048对准R044孔[-32.0, 104.0, -128.0]mm。",
+        "R049对准R044孔[-32.0, 104.0, -112.0]mm。",
+        "R008对准R044孔[48.0, 104.0, -112.0]mm。",
+        "R010对准R044孔[48.0, 104.0, -128.0]mm。",
+        "R011对准R044孔[48.0, 104.0, -144.0]mm。",
+        "R009对准R044孔[48.0, 104.0, -160.0]mm。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "added_stable_ids": [
+        "R044"
+      ],
+      "visible_stable_ids": [
+        "R007",
+        "R008",
+        "R009",
+        "R010",
+        "R011",
+        "R044",
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049",
+        "R056",
+        "R057"
+      ],
+      "stable_ids": [
+        "R007",
+        "R008",
+        "R009",
+        "R010",
+        "R011",
+        "R044",
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049",
+        "R056",
+        "R057"
+      ]
+    },
+    {
+      "id": "BAS-32",
+      "module_id": "foundation",
+      "module_step_number": 31,
+      "title": "连接A、B两翼：装第一件L梁",
+      "instructions": [
+        "按图放平并分别托住A、B两翼，使各自预留的两根黑销都朝上。取1件32526 3×5厚L梁，按图转好方向。",
+        "5孔长腿从不在弯角的一端起数，用第1、3孔；3孔短腿用两端孔，包含弯角孔。让这4个孔同时对准两翼的4根黑销。",
+        "只把L梁从上方平直压下，先让4孔都套住销尖，再均匀压到两根下梁上；中央挡圈留在L梁与下梁之间。"
+      ],
+      "added_part_ids": [
+        39
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        18,
+        19,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "parts": [
+        {
+          "name": "32526 3×5厚L梁",
+          "count": 1,
+          "part_number": "32526",
+          "part_ids": [
+            39
+          ],
+          "stable_ids": [
+            "R039"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts_and_close_subassemblies",
+      "requires_subassemblies": [
+        "BAS-07",
+        "BAS-15"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            39
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "仅L梁向下；两翼保持放平支撑",
+          "stable_ids": [
+            "R039"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            64.0,
+            104.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            39,
+            42
+          ],
+          "label": "长腿第1孔（独立端）",
+          "host_part_id": 39,
+          "pin_part_id": 42,
+          "stable_ids": [
+            "R039",
+            "R042"
+          ]
+        },
+        {
+          "center_mm": [
+            48.0,
+            104.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            39,
+            43
+          ],
+          "label": "长腿第3孔",
+          "host_part_id": 39,
+          "pin_part_id": 43,
+          "stable_ids": [
+            "R039",
+            "R043"
+          ]
+        },
+        {
+          "center_mm": [
+            32.0,
+            104.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            39,
+            40
+          ],
+          "label": "短腿弯角端孔",
+          "host_part_id": 39,
+          "pin_part_id": 40,
+          "stable_ids": [
+            "R039",
+            "R040"
+          ]
+        },
+        {
+          "center_mm": [
+            32.0,
+            104.0,
+            64.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            39,
+            41
+          ],
+          "label": "短腿另一端孔",
+          "host_part_id": 39,
+          "pin_part_id": 41,
+          "stable_ids": [
+            "R039",
+            "R041"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "highlight_part_ids": [
+        39,
+        40,
+        41
+      ],
+      "technical_instructions": [
+        "R039 / core#39为32526；LDraw原点[64.0, 104.0, 48.0]mm，旋转矩阵[[0.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0]]。原点不是弯角。",
+        "四个2780均已在各自下梁内；两翼不随插入箭头移动。仅32526由最终位置Y−24mm处沿+Y移入，末端下降8mm完成销孔接合。",
+        "两根下梁中心Y112，L梁中心Y104；全部2780中环位于Y108；两腿各两销、中心距16mm。",
+        "R042 → 长腿第1孔（独立端），宿主孔[64.0, 104.0, 48.0]mm。",
+        "R043 → 长腿第3孔，宿主孔[48.0, 104.0, 48.0]mm。",
+        "R040 → 短腿弯角端孔，宿主孔[32.0, 104.0, 48.0]mm。",
+        "R041 → 短腿另一端孔，宿主孔[32.0, 104.0, 64.0]mm。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "source_step_ids": [
+        "BAS-31",
+        "BAS-32"
+      ],
+      "added_stable_ids": [
+        "R039"
+      ],
+      "visible_stable_ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R039",
+        "R040",
+        "R041",
+        "R042",
+        "R043"
+      ],
+      "highlight_stable_ids": [
+        "R039",
+        "R040",
+        "R041"
+      ],
+      "stable_ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R039",
+        "R040",
+        "R041",
+        "R042",
+        "R043"
+      ]
+    },
+    {
+      "id": "BAS-34",
+      "module_id": "foundation",
+      "module_step_number": 32,
+      "title": "接上C翼：装第二件L梁",
+      "instructions": [
+        "按图放平并分别托住B、C两翼，使各自预留的两根黑销都朝上。取1件32526 3×5厚L梁，按图转好方向。",
+        "5孔长腿从不在弯角的一端起数，用第1、3孔；3孔短腿用两端孔，包含弯角孔。让这4个孔同时对准两翼的4根黑销。",
+        "只把L梁从上方平直压下，先让4孔都套住销尖，再均匀压到两根下梁上；中央挡圈留在L梁与下梁之间。"
+      ],
+      "added_part_ids": [
+        23
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        50,
+        51,
+        52,
+        53,
+        54,
+        58,
+        59
+      ],
+      "parts": [
+        {
+          "name": "32526 3×5厚L梁",
+          "count": 1,
+          "part_number": "32526",
+          "part_ids": [
+            23
+          ],
+          "stable_ids": [
+            "R023"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts_and_close_subassemblies",
+      "requires_subassemblies": [
+        "BAS-32",
+        "BAS-23"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            23
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "仅L梁向下；两翼保持放平支撑",
+          "stable_ids": [
+            "R023"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -48.0,
+            104.0,
+            64.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            23,
+            26
+          ],
+          "label": "长腿第1孔（独立端）",
+          "host_part_id": 23,
+          "pin_part_id": 26,
+          "stable_ids": [
+            "R023",
+            "R026"
+          ]
+        },
+        {
+          "center_mm": [
+            -48.0,
+            104.0,
+            48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            23,
+            27
+          ],
+          "label": "长腿第3孔",
+          "host_part_id": 23,
+          "pin_part_id": 27,
+          "stable_ids": [
+            "R023",
+            "R027"
+          ]
+        },
+        {
+          "center_mm": [
+            -48.0,
+            104.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            23,
+            24
+          ],
+          "label": "短腿弯角端孔",
+          "host_part_id": 23,
+          "pin_part_id": 24,
+          "stable_ids": [
+            "R023",
+            "R024"
+          ]
+        },
+        {
+          "center_mm": [
+            -64.0,
+            104.0,
+            32.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            23,
+            25
+          ],
+          "label": "短腿另一端孔",
+          "host_part_id": 23,
+          "pin_part_id": 25,
+          "stable_ids": [
+            "R023",
+            "R025"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "highlight_part_ids": [
+        23,
+        24,
+        25
+      ],
+      "technical_instructions": [
+        "R023 / core#23为32526；LDraw原点[-48.0, 104.0, 64.0]mm，旋转矩阵[[-1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, -1.0]]。原点不是弯角。",
+        "四个2780均已在各自下梁内；两翼不随插入箭头移动。仅32526由最终位置Y−24mm处沿+Y移入，末端下降8mm完成销孔接合。",
+        "两根下梁中心Y112，L梁中心Y104；全部2780中环位于Y108；两腿各两销、中心距16mm。",
+        "R026 → 长腿第1孔（独立端），宿主孔[-48.0, 104.0, 64.0]mm。",
+        "R027 → 长腿第3孔，宿主孔[-48.0, 104.0, 48.0]mm。",
+        "R024 → 短腿弯角端孔，宿主孔[-48.0, 104.0, 32.0]mm。",
+        "R025 → 短腿另一端孔，宿主孔[-64.0, 104.0, 32.0]mm。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "source_step_ids": [
+        "BAS-33",
+        "BAS-34"
+      ],
+      "added_stable_ids": [
+        "R023"
+      ],
+      "visible_stable_ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R039",
+        "R040",
+        "R041",
+        "R042",
+        "R043",
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R058",
+        "R059"
+      ],
+      "highlight_stable_ids": [
+        "R023",
+        "R024",
+        "R025"
+      ],
+      "stable_ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R039",
+        "R040",
+        "R041",
+        "R042",
+        "R043",
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R058",
+        "R059"
+      ]
+    },
+    {
+      "id": "BAS-36",
+      "module_id": "foundation",
+      "module_step_number": 33,
+      "title": "接上D翼：基础59件完成",
+      "instructions": [
+        "按图放平并分别托住C、D两翼，使各自预留的两根黑销都朝上。取1件32526 3×5厚L梁，按图转好方向。",
+        "5孔长腿从不在弯角的一端起数，用第1、3孔；3孔短腿用两端孔，包含弯角孔。让这4个孔同时对准两翼的4根黑销。",
+        "只把L梁从上方平直压下，先让4孔都套住销尖，再均匀压到两根下梁上；中央挡圈留在L梁与下梁之间。",
+        "检查四块大框同高、下梁底面齐平，8根蓝销各露出1孔长。A、D之间留给后续公共转角组件；本章不加后横梁。"
+      ],
+      "added_part_ids": [
+        55
+      ],
+      "visible_part_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "parts": [
+        {
+          "name": "32526 3×5厚L梁",
+          "count": 1,
+          "part_number": "32526",
+          "part_ids": [
+            55
+          ],
+          "stable_ids": [
+            "R055"
+          ]
+        }
+      ],
+      "assembly_action": "add_parts_and_close_subassemblies",
+      "requires_subassemblies": [
+        "BAS-34",
+        "BAS-30"
+      ],
+      "insertion": [
+        {
+          "part_ids": [
+            55
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "start_offset_mm": [
+            0,
+            -24,
+            0
+          ],
+          "label": "仅L梁向下；两翼保持放平支撑",
+          "stable_ids": [
+            "R055"
+          ]
+        }
+      ],
+      "ports": [
+        {
+          "center_mm": [
+            -64.0,
+            104.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            55,
+            58
+          ],
+          "label": "长腿第1孔（独立端）",
+          "host_part_id": 55,
+          "pin_part_id": 58,
+          "stable_ids": [
+            "R055",
+            "R058"
+          ]
+        },
+        {
+          "center_mm": [
+            -48.0,
+            104.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            55,
+            59
+          ],
+          "label": "长腿第3孔",
+          "host_part_id": 55,
+          "pin_part_id": 59,
+          "stable_ids": [
+            "R055",
+            "R059"
+          ]
+        },
+        {
+          "center_mm": [
+            -32.0,
+            104.0,
+            -48.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            55,
+            56
+          ],
+          "label": "短腿弯角端孔",
+          "host_part_id": 55,
+          "pin_part_id": 56,
+          "stable_ids": [
+            "R055",
+            "R056"
+          ]
+        },
+        {
+          "center_mm": [
+            -32.0,
+            104.0,
+            -64.0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "part_ids": [
+            55,
+            57
+          ],
+          "label": "短腿另一端孔",
+          "host_part_id": 55,
+          "pin_part_id": 57,
+          "stable_ids": [
+            "R055",
+            "R057"
+          ]
+        }
+      ],
+      "view": {
+        "azim": 35,
+        "elev": 48
+      },
+      "highlight_part_ids": [
+        55,
+        56,
+        57
+      ],
+      "technical_instructions": [
+        "R055 / core#55为32526；LDraw原点[-64.0, 104.0, -48.0]mm，旋转矩阵[[0.0, 0.0, 1.0], [0.0, 1.0, 0.0], [-1.0, 0.0, 0.0]]。原点不是弯角。",
+        "四个2780均已在各自下梁内；两翼不随插入箭头移动。仅32526由最终位置Y−24mm处沿+Y移入，末端下降8mm完成销孔接合。",
+        "两根下梁中心Y112，L梁中心Y104；全部2780中环位于Y108；两腿各两销、中心距16mm。",
+        "R058 → 长腿第1孔（独立端），宿主孔[-64.0, 104.0, -48.0]mm。",
+        "R059 → 长腿第3孔，宿主孔[-48.0, 104.0, -48.0]mm。",
+        "R056 → 短腿弯角端孔，宿主孔[-32.0, 104.0, -48.0]mm。",
+        "R057 → 短腿另一端孔，宿主孔[-32.0, 104.0, -64.0]mm。"
+      ],
+      "module_title": "共用底盘：四翼与三个L形转角",
+      "source_step_ids": [
+        "BAS-35",
+        "BAS-36"
+      ],
+      "added_stable_ids": [
+        "R055"
+      ],
+      "visible_stable_ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R007",
+        "R008",
+        "R009",
+        "R010",
+        "R011",
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R039",
+        "R040",
+        "R041",
+        "R042",
+        "R043",
+        "R044",
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049",
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R055",
+        "R056",
+        "R057",
+        "R058",
+        "R059"
+      ],
+      "highlight_stable_ids": [
+        "R055",
+        "R056",
+        "R057"
+      ],
+      "stable_ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R007",
+        "R008",
+        "R009",
+        "R010",
+        "R011",
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R039",
+        "R040",
+        "R041",
+        "R042",
+        "R043",
+        "R044",
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049",
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R055",
+        "R056",
+        "R057",
+        "R058",
+        "R059"
+      ]
+    }
+  ],
+  "validation": {
+    "introduced_exactly_once": true,
+    "maximum_new_parts_per_step": 4,
+    "part_count": 59,
+    "step_count": 36,
+    "merge_step_ids": [
+      "BAS-32",
+      "BAS-34",
+      "BAS-36"
+    ],
+    "critical_joint_port_checks": [
+      {
+        "pin_id": 3,
+        "host_id": 2,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          160.0,
+          112,
+          -32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 7
+      },
+      {
+        "pin_id": 4,
+        "host_id": 2,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          144.0,
+          112,
+          -32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 5
+      },
+      {
+        "pin_id": 5,
+        "host_id": 2,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          128.0,
+          112,
+          -32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 3
+      },
+      {
+        "pin_id": 6,
+        "host_id": 2,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          112.0,
+          112,
+          -32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 1
+      },
+      {
+        "pin_id": 35,
+        "host_id": 34,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          112.0,
+          112,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 8
+      },
+      {
+        "pin_id": 36,
+        "host_id": 34,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          160.0,
+          112,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 14
+      },
+      {
+        "pin_id": 37,
+        "host_id": 34,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          128.0,
+          112,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 10
+      },
+      {
+        "pin_id": 38,
+        "host_id": 34,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          144.0,
+          112,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 12
+      },
+      {
+        "pin_id": 42,
+        "host_id": 34,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          64.0,
+          112,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 2
+      },
+      {
+        "pin_id": 43,
+        "host_id": 34,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          80.0,
+          112,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 4
+      },
+      {
+        "pin_id": 3,
+        "host_id": 1,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          160.0,
+          104,
+          -32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 4,
+        "host_id": 1,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          144.0,
+          104,
+          -32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 5,
+        "host_id": 1,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          128.0,
+          104,
+          -32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 6,
+        "host_id": 1,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          112.0,
+          104,
+          -32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 35,
+        "host_id": 1,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          112.0,
+          104,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 37,
+        "host_id": 1,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          128.0,
+          104,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 38,
+        "host_id": 1,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          144.0,
+          104,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 36,
+        "host_id": 1,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          160.0,
+          104,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 30,
+        "host_id": 29,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          32.0,
+          112,
+          160.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 15
+      },
+      {
+        "pin_id": 31,
+        "host_id": 29,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          32.0,
+          112,
+          144.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 13
+      },
+      {
+        "pin_id": 32,
+        "host_id": 29,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          32.0,
+          112,
+          128.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 11
+      },
+      {
+        "pin_id": 33,
+        "host_id": 29,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          32.0,
+          112,
+          112.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 9
+      },
+      {
+        "pin_id": 40,
+        "host_id": 29,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          32.0,
+          112,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 1
+      },
+      {
+        "pin_id": 41,
+        "host_id": 29,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          32.0,
+          112,
+          80.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 5
+      },
+      {
+        "pin_id": 19,
+        "host_id": 18,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -48.0,
+          112,
+          112.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 8
+      },
+      {
+        "pin_id": 20,
+        "host_id": 18,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -48.0,
+          112,
+          160.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 14
+      },
+      {
+        "pin_id": 21,
+        "host_id": 18,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -48.0,
+          112,
+          128.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 10
+      },
+      {
+        "pin_id": 22,
+        "host_id": 18,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -48.0,
+          112,
+          144.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 12
+      },
+      {
+        "pin_id": 26,
+        "host_id": 18,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -48.0,
+          112,
+          64.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 2
+      },
+      {
+        "pin_id": 27,
+        "host_id": 18,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -48.0,
+          112,
+          80.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 4
+      },
+      {
+        "pin_id": 30,
+        "host_id": 28,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          32.0,
+          104,
+          160.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 31,
+        "host_id": 28,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          32.0,
+          104,
+          144.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 32,
+        "host_id": 28,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          32.0,
+          104,
+          128.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 33,
+        "host_id": 28,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          32.0,
+          104,
+          112.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 19,
+        "host_id": 28,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -48.0,
+          104,
+          112.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 21,
+        "host_id": 28,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -48.0,
+          104,
+          128.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 22,
+        "host_id": 28,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -48.0,
+          104,
+          144.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 20,
+        "host_id": 28,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -48.0,
+          104,
+          160.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 14,
+        "host_id": 13,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -160.0,
+          112,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 1
+      },
+      {
+        "pin_id": 15,
+        "host_id": 13,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -144.0,
+          112,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 3
+      },
+      {
+        "pin_id": 16,
+        "host_id": 13,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -128.0,
+          112,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 5
+      },
+      {
+        "pin_id": 17,
+        "host_id": 13,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -112.0,
+          112,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 7
+      },
+      {
+        "pin_id": 24,
+        "host_id": 13,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -48.0,
+          112,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 15
+      },
+      {
+        "pin_id": 25,
+        "host_id": 13,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -80.0,
+          112,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 11
+      },
+      {
+        "pin_id": 51,
+        "host_id": 50,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -112.0,
+          112,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 8
+      },
+      {
+        "pin_id": 52,
+        "host_id": 50,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -160.0,
+          112,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 2
+      },
+      {
+        "pin_id": 53,
+        "host_id": 50,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -128.0,
+          112,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 6
+      },
+      {
+        "pin_id": 54,
+        "host_id": 50,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -144.0,
+          112,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 4
+      },
+      {
+        "pin_id": 58,
+        "host_id": 50,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -64.0,
+          112,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 14
+      },
+      {
+        "pin_id": 59,
+        "host_id": 50,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -80.0,
+          112,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 12
+      },
+      {
+        "pin_id": 14,
+        "host_id": 12,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -160.0,
+          104,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 15,
+        "host_id": 12,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -144.0,
+          104,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 16,
+        "host_id": 12,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -128.0,
+          104,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 17,
+        "host_id": 12,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -112.0,
+          104,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 51,
+        "host_id": 12,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -112.0,
+          104,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 53,
+        "host_id": 12,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -128.0,
+          104,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 54,
+        "host_id": 12,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -144.0,
+          104,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 52,
+        "host_id": 12,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -160.0,
+          104,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 46,
+        "host_id": 45,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -32.0,
+          112,
+          -160.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 1
+      },
+      {
+        "pin_id": 47,
+        "host_id": 45,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -32.0,
+          112,
+          -144.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 3
+      },
+      {
+        "pin_id": 48,
+        "host_id": 45,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -32.0,
+          112,
+          -128.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 5
+      },
+      {
+        "pin_id": 49,
+        "host_id": 45,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -32.0,
+          112,
+          -112.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 7
+      },
+      {
+        "pin_id": 56,
+        "host_id": 45,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -32.0,
+          112,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 15
+      },
+      {
+        "pin_id": 57,
+        "host_id": 45,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          -32.0,
+          112,
+          -80.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 11
+      },
+      {
+        "pin_id": 8,
+        "host_id": 7,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          48.0,
+          112,
+          -112.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 7
+      },
+      {
+        "pin_id": 9,
+        "host_id": 7,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          48.0,
+          112,
+          -160.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 1
+      },
+      {
+        "pin_id": 10,
+        "host_id": 7,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          48.0,
+          112,
+          -128.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 5
+      },
+      {
+        "pin_id": 11,
+        "host_id": 7,
+        "host_layer": "lower",
+        "hole_center_mm": [
+          48.0,
+          112,
+          -144.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "number_from_negative_axis_end": 3
+      },
+      {
+        "pin_id": 46,
+        "host_id": 44,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -32.0,
+          104,
+          -160.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 47,
+        "host_id": 44,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -32.0,
+          104,
+          -144.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 48,
+        "host_id": 44,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -32.0,
+          104,
+          -128.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 49,
+        "host_id": 44,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -32.0,
+          104,
+          -112.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 8,
+        "host_id": 44,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          48.0,
+          104,
+          -112.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 10,
+        "host_id": 44,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          48.0,
+          104,
+          -128.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 11,
+        "host_id": 44,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          48.0,
+          104,
+          -144.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 9,
+        "host_id": 44,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          48.0,
+          104,
+          -160.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 42,
+        "host_id": 39,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          64.0,
+          104,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 43,
+        "host_id": 39,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          80.0,
+          104,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 40,
+        "host_id": 39,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          32.0,
+          104,
+          48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 41,
+        "host_id": 39,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          32.0,
+          104,
+          80.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 26,
+        "host_id": 23,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -48.0,
+          104,
+          64.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 27,
+        "host_id": 23,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -48.0,
+          104,
+          80.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 24,
+        "host_id": 23,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -48.0,
+          104,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 25,
+        "host_id": 23,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -80.0,
+          104,
+          32.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 58,
+        "host_id": 55,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -64.0,
+          104,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 59,
+        "host_id": 55,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -80.0,
+          104,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 56,
+        "host_id": 55,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -32.0,
+          104,
+          -48.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pin_id": 57,
+        "host_id": 55,
+        "host_layer": "upper",
+        "hole_center_mm": [
+          -32.0,
+          104,
+          -80.0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    ],
+    "uncertain_closure_paths": [],
+    "scope_limit": "Critical final axes and staged straight translations are checked against exact MPD; mating rib compression and physical access need a real build.",
+    "exact_mpd_validation_file": "foundation-validation.json",
+    "all_port_axes_pass": true,
+    "all_pin_axes_and_collars_pass": true,
+    "all_frame_and_merge_nonmating_sweeps_pass": true
+  },
+  "module_title": "共用底盘：四翼与三个L形转角",
+  "source_previous_module_sha256": "d446c19566a138214e52a6b1aaa9c6c32d1b9528a500c719d57ddb8ebdcc16ab",
+  "stable_id_mapping_source": "detailed-instructions-192/inventory-compatible-candidate/viewer-handoff219.json",
+  "stable_ids": [
+    "R001",
+    "R002",
+    "R003",
+    "R004",
+    "R005",
+    "R006",
+    "R007",
+    "R008",
+    "R009",
+    "R010",
+    "R011",
+    "R012",
+    "R013",
+    "R014",
+    "R015",
+    "R016",
+    "R017",
+    "R018",
+    "R019",
+    "R020",
+    "R021",
+    "R022",
+    "R023",
+    "R024",
+    "R025",
+    "R026",
+    "R027",
+    "R028",
+    "R029",
+    "R030",
+    "R031",
+    "R032",
+    "R033",
+    "R034",
+    "R035",
+    "R036",
+    "R037",
+    "R038",
+    "R039",
+    "R040",
+    "R041",
+    "R042",
+    "R043",
+    "R044",
+    "R045",
+    "R046",
+    "R047",
+    "R048",
+    "R049",
+    "R050",
+    "R051",
+    "R052",
+    "R053",
+    "R054",
+    "R055",
+    "R056",
+    "R057",
+    "R058",
+    "R059"
+  ],
+  "scope_stable_ids": [
+    "R001",
+    "R002",
+    "R003",
+    "R004",
+    "R005",
+    "R006",
+    "R007",
+    "R008",
+    "R009",
+    "R010",
+    "R011",
+    "R012",
+    "R013",
+    "R014",
+    "R015",
+    "R016",
+    "R017",
+    "R018",
+    "R019",
+    "R020",
+    "R021",
+    "R022",
+    "R023",
+    "R024",
+    "R025",
+    "R026",
+    "R027",
+    "R028",
+    "R029",
+    "R030",
+    "R031",
+    "R032",
+    "R033",
+    "R034",
+    "R035",
+    "R036",
+    "R037",
+    "R038",
+    "R039",
+    "R040",
+    "R041",
+    "R042",
+    "R043",
+    "R044",
+    "R045",
+    "R046",
+    "R047",
+    "R048",
+    "R049",
+    "R050",
+    "R051",
+    "R052",
+    "R053",
+    "R054",
+    "R055",
+    "R056",
+    "R057",
+    "R058",
+    "R059"
+  ],
+  "final_visible_stable_ids": [
+    "R001",
+    "R002",
+    "R003",
+    "R004",
+    "R005",
+    "R006",
+    "R007",
+    "R008",
+    "R009",
+    "R010",
+    "R011",
+    "R012",
+    "R013",
+    "R014",
+    "R015",
+    "R016",
+    "R017",
+    "R018",
+    "R019",
+    "R020",
+    "R021",
+    "R022",
+    "R023",
+    "R024",
+    "R025",
+    "R026",
+    "R027",
+    "R028",
+    "R029",
+    "R030",
+    "R031",
+    "R032",
+    "R033",
+    "R034",
+    "R035",
+    "R036",
+    "R037",
+    "R038",
+    "R039",
+    "R040",
+    "R041",
+    "R042",
+    "R043",
+    "R044",
+    "R045",
+    "R046",
+    "R047",
+    "R048",
+    "R049",
+    "R050",
+    "R051",
+    "R052",
+    "R053",
+    "R054",
+    "R055",
+    "R056",
+    "R057",
+    "R058",
+    "R059"
+  ],
+  "mechanical_sequence_changes": [
+    "Original BAS-31/32 become one1-piece BAS-32 closure; BAS-33/34 become BAS-34; BAS-35/36 become BAS-36. Display module_step_number is1–33. BAS-36 completion ID retained.",
+    "Each closure lowers only its new32526 onto four preinserted upward pins; the two supported wing assemblies stay stationary. This removes the old metadata error that translated both mating sides together.",
+    "All straight-beam hole numbers in user-facing instructions now count from the inner end. Shifted rails are R018/R034/R050; all frame/motor pins stay fixed.",
+    "Three7x5 corner frames replaced by32526. No additional rearrail; original8 wall-pin issue remains outside this foundation chapter."
+  ],
+  "layout_only_metadata": {
+    "step_count": 33,
+    "new_parts_each_page_min": 1,
+    "new_parts_each_page_max": 4,
+    "zero_add_merge_pages": false
+  }
+}
