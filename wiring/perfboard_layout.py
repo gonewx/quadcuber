@@ -525,7 +525,7 @@ def section():
     pinrows=[(chr(64+r),f'{hole((9,r))} = {LEFT[r-9]}',f'{hole((13,r))} = {RIGHT[r-9]}') for r in range(9,17)]
     return f'''<section id="perfboard">
 <style>{STYLE}</style>
-<h2>洞洞板实物装配与焊接图</h2>
+<h2>可选单臂洞洞板实物装配与焊接图</h2><p>本方案仅供原 R 单臂可选装配，不是 R+L 接线方案；当前接线见 <a href="direct-breadboard.html">当前接线：原 R／新 R+L（条件式）</a>。</p>
 <div class="warn"><b>2026-09-27 更新：编码器改用电阻分压。</b>④⑤ 中编码器按最终方案画：每路 10kΩ 串联 + 20kΩ 接地，分压点在面包板第 26、28 列，不用电平转换模块。原因见<a href="../../docs/ev3-interface-verification.md">接口复核报告</a>。</div>
 <p>按这版孔位插元件，再左右翻板照背面焊 14 根线。列 1～32、行 A～X，孔距 2.54mm；选至少有这块完整孔阵的独立焊盘洞洞板，约 90 × 70mm。先给 A1 旁边做红色标记。</p>
 <div class="warn"><b>全部可拆换：</b>洞洞板只焊底座和配线，模块均可拔。选用5.08mm 插拔式端子（配套直针底座＋可拔螺钉插头）、2.54mm 排针、DRV8833 按你提供的实物丝印（左上 VM、右上 NC）安装，两排 8 针，机械排距暂按 10.16mm。你的模块若外形或脚序不同，先指出差异再改图，不能把同名芯片的其他模块直接插进这些孔。U2 按 XL4005 四角电源孔 <b>38.1 × 15.24mm</b> 这一机械假设画；这不是所有 XL4005 的统一尺寸。两块模块均插排母，无螺钉或支柱；不另装电容。</div>
@@ -560,7 +560,9 @@ def document():
     def mdtable(heads, rows):
         return '\n'.join(['| ' + ' | '.join(heads) + ' |', '| ' + ' | '.join('---' for _ in heads) + ' |'] + ['| ' + ' | '.join(str(c) for c in row) + ' |' for row in rows])
     wire_rows = [(w[0], f'{w[2]} / {hole(PINS[w[2]][0])}', f'{w[3]} / {hole(PINS[w[3]][0])}', ' → '.join(hole(p) for p in w[4]) or '直达', w[5]) for w in WIRES]
-    return '''# 单臂洞洞板：可拔插的逐孔安装与焊接图
+    return '''# 可选单臂洞洞板：可拔插的逐孔安装与焊接图
+
+本方案仅供原 R 单臂可选装配，不是 R+L 接线方案。[当前接线：原 R／新 R+L（条件式）](../generated/wiring/direct-breadboard.html)在同页切换；下文孔位仅用于洞洞板方案。
 
 > **2026-09-27 更新：编码器改用电阻分压**（每路 10kΩ 串联 + 20kΩ 接地，分压点在面包板第 26、28 列），不用电平转换模块。原因见 [接口复核报告](ev3-interface-verification.md)。
 
@@ -606,7 +608,7 @@ W01～W04 是电源入口分支；W05～W08 是降压输出分支；W09～W10 �
 
 ''' + mdtable(['线号', '洞洞板接口／孔位', '面包板孔位', '用途'], bridge_rows()) + '''
 
-a7、b7、c7 是同一列上半侧的连通组，c7 是 Pico 3V3，STBY 的 3.3V 线插 a7。编码器分压电阻和跳线按[接线指南](../generated/wiring/index.html#breadboard)插；上下地轨与电源轨中间断口按原图连接。
+a7、b7、c7 是同一列上半侧的连通组，c7 是 Pico 3V3，STBY 的 3.3V 线插 a7。编码器分压电阻和跳线按[可选单臂洞洞板配套面包板图](../generated/wiring/index.html#breadboard)插；上下地轨与电源轨中间断口按原图连接。
 
 ### 舵机与马达完整接线
 

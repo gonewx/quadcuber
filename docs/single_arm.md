@@ -1,8 +1,10 @@
-# v4 单臂：接线与实物标定步骤
+# 历史 v4 单臂：接线与实物标定步骤
 
-**当前机械基线是 v4 四臂整机中的一个模块**：反向连杆往后拉夹紧，转盘内 39793 导向，竖墙与舵机侧加固。模型以 `tools/lego/v4/model.py` 为准，搭建与最新修改见 [v4 设计说明](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md)。名义 CAD 检查不能代替实物验收；下一步是实物标定和分级测试，尚未完成 v4 夹紧力、保持力、旋转及四臂联合验证。
+**本文机械尺寸与装配步骤针对历史 v4 单臂模块**：反向连杆往后拉夹紧，转盘内 39793 导向，竖墙与舵机侧加固。历史模型见[固定版本源码](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/tools/lego/v4/model.py)，当时的搭建与修改见 [历史 v4 设计说明](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md)。名义 CAD 检查不能代替实物验收；下一步是实物标定和分级测试，尚未完成 v4 夹紧力、保持力、旋转及四臂联合验证。
 
-**先做断电手动检查**：按当前 [v4 实物验收](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md#实物验收)确认全行程避让、挡轴留隙、活动轴保持和底座刚度。保留开端挡轴作为异常保护，不能让舵机持续顶住挡轴，也不能把折叠死点当作必须到达的夹紧位置。
+**最终整机搭建入口：**[501 步装配说明](../generated/site/integrated-assembly.html)。下文历史机械尺寸不能直接作为最终整机装配依据；固件的 v4/R 标定身份保持不变，仍须按实际机构核验。
+
+**先做断电手动检查**：历史 v4 模块按 [v4 实物验收](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md#实物验收)确认全行程避让、挡轴留隙、活动轴保持和底座刚度。保留开端挡轴作为异常保护，不能让舵机持续顶住挡轴，也不能把折叠死点当作必须到达的夹紧位置。
 
 目标：用 **1 个 v4 机械手**（上下轮胎压头＋转盘）回答三个问题：
 
@@ -10,8 +12,8 @@
 2. 到位精度多少？（误差大了，下一次拧面会卡住）
 3. 夹持是否可靠？（拧面时魔方不打滑、不掉，夹指不被顶开）
 
-- **怎么搭**：[v4 搭建说明书](lego/v4/index.html)及[最新修改说明](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md)。单臂只搭一个模块。
-- **怎么接线**：先看[电路总览与方案边界](wiring/README.md)，再看本文第 2、3 节；图解版见 [docs/wiring/index.html](wiring/index.html)（以本仓库生成页为准）。当前调试用[面包板＋动力直连](wiring/direct-breadboard.html)。
+- **怎么搭**：最终整机见[501 步装配说明](../generated/site/integrated-assembly.html)；历史模块见 [v4 历史入口](lego/v4/index.html)及[历史修改说明](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md)。单臂只搭一个模块。
+- **怎么接线**：先看[电路总览与方案边界](wiring/README.md)，再看本文第 2、3 节；图解统一使用[当前接线：原 R／新 R+L（条件式）](../generated/wiring/direct-breadboard.html)，默认原 R；R+L 仅为条件式接线说明，不能套用本文单臂上电步骤。
 - **怎么测**：本文第 4、5 节。第 5 节开头先约定了方向、零位、夹紧/松开的含义，测试前请先看。
 
 > **已验证到哪一步（2026-09-28）**：Pico＋DRV8833＋编码器分压已经带 EV3 大马达**空载**（不装机械手，`GEAR_RATIO = 1.0`）跑通，90° 20/20、180° 10/10 成功。排查时名义 9V 电源实测约 7.9V；角度误差由编码器推算，不是外部量具测得。记录见[大马达空载实测](single_arm-results.md)。这些结果不能证明 v4 机械头、齿轮、舵机、魔方及四臂动作已通过验证，本文第 5 节从这里继续。
@@ -34,7 +36,7 @@
 
 ## 2. 引脚分配
 
-单臂用 R 臂的引脚。接线唯一数据源为 `docs/wiring/spec.py`，下面引脚表由它生成，不随机械版本手改。整机 4 个臂的分配已经一起排好，**PWM slice 不冲突**（RP2040 上 GPIO 号相差 16 的两个引脚共用同一路 PWM，不能随便挑）：
+单臂用 R 臂的引脚。接线唯一数据源为 `wiring/spec.py`，下面引脚表由它生成，不随机械版本手改。整机 4 个臂的分配已经一起排好，**PWM slice 不冲突**（RP2040 上 GPIO 号相差 16 的两个引脚共用同一路 PWM，不能随便挑）：
 
 <!-- wiring:pin-table:start -->
 | 用途 | R 臂 | L 臂 | F 臂 | B 臂 |
@@ -114,7 +116,7 @@ EV3 黄 ──[10kΩ]──●── GP4        EV3 蓝 ──[10kΩ]──●�
 1. 断开 USB 和 9V。降压输出应已空载调好至 5.0V。
 2. **P04 接 DC-005 负极 → 降压 IN−**，作为降压模块的独立回流。
 3. 舵机红线接降压 OUT+、棕线接 OUT−，均为独立动力引线；黄线接面包板 j13（GP8）。核对实际线序，电源不从面包板或 Pico 取。
-4. 马达、编码器和其余控制线按[直连页](wiring/direct-breadboard.html#complete-wiring)连接。图中已包含舵机及全部动力、信号接线。
+4. 马达、编码器和其余控制线按[当前接线：原 R／新 R+L（条件式）](../generated/wiring/direct-breadboard.html#complete-wiring)连接。图中已包含舵机及全部动力、信号接线。
 
 **分项测试是命令顺序，不是接线顺序：**马达方向 → 齿轮比 → 舵机开合标定 → 旋转及联合测试。当前配置已填写 `SERVO_OPEN_US = 1700`、`SERVO_CLOSE_US = 1450`，但仍为 `SERVO_CALIBRATED = False`；仅填写脉宽不代表完成标定；未标定时 `open`、`close`、`grip`、`cycle` 会拒绝执行且不启动马达。手动标定会话期间也拒绝这四条命令，不能绕过第 3 步。
 
@@ -124,7 +126,7 @@ EV3 黄 ──[10kΩ]──●── GP4        EV3 蓝 ──[10kΩ]──●�
 
 ### 洞洞板（可选，当前没用）
 
-以后要固定接线时再看 [洞洞板设计](perfboard.md) 和 [图解布局及端子表](wiring/index.html#perfboard)。当前调试用[面包板＋动力直连](wiring/direct-breadboard.html)，引脚不变。
+以后要固定接线时再看 [洞洞板设计](perfboard.md) 和 [可选单臂图解布局及端子表](../generated/wiring/index.html#perfboard)。当前调试用[当前接线：原 R／新 R+L（条件式）](../generated/wiring/direct-breadboard.html)，引脚不变。
 
 ## 4. 刷程序
 
@@ -167,7 +169,7 @@ import arm_test; arm_test.main()
 **夹紧 / 松开**：
 
 - **夹紧**（`close`，实测脉宽 `SERVO_CLOSE_US`）：推杆**往后拉**，上下轮胎压头接触魔方；主臂角约 3.84°、每侧轮胎压缩约 0.32mm 都只是名义模型值。当前名义夹紧位置在曲柄**折叠死点前 25°**，不是伸直死点，也不是必须拉到折叠成一线。实际夹紧力和保持能力须测量。
-- **松开**（`open`，实测脉宽 `SERVO_OPEN_US`）：推杆**往前推**，名义行程约 12.92mm；曲柄经远离推杆的一侧张开约 **110°**。25° 和约 110° 是 `tools/lego/v4/model.py` 的 CAD 几何角度，不能换算为已测端点或直接脉宽跳转。具体装配和更新见 [v4 说明](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md)。
+- **松开**（`open`，实测脉宽 `SERVO_OPEN_US`）：推杆**往前推**，名义行程约 12.92mm；曲柄经远离推杆的一侧张开约 **110°**。25° 和约 110° 是历史 v4 模型的 CAD 几何角度，不能换算为已测端点或直接脉宽跳转。具体装配和更新见 [v4 说明](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md)。
 - v4 舵机固定在平台上，不随机械头转动；不要套用旧中马达结构的舵机缠线角度限制。仍要手动确认实际线束没有进入任何运动包络。
 
 **停下来**：
@@ -239,12 +241,12 @@ import arm_test; arm_test.main()
 
 关闭 9V（确认舵机 5V 也已断开）、拔掉 USB，脱开曲柄与连杆，不放魔方。检查松脱处的销、梁孔、舵机安装耳和半轴套，损坏或明显松旷的零件先更换。
 
-- **垫梁 → 平台**：按当前 v4 第 9、10 步使用 7 孔垫梁；从平台后端数，黑销在第 1、5、6 孔，第 2、4 孔下方被 55615 占用，不补插贯穿销
+- **垫梁 → 平台**：按历史 v4 第 9、10 步使用 7 孔垫梁；从平台后端数，黑销在第 1、5、6 孔，第 2、4 孔下方被 55615 占用，不补插贯穿销
 - **舵机 → 垫梁**：安装耳的蓝色长销插在第 3、7 孔；耳朵贴合，销插到底
 - **平台 → 底座与竖墙**：核对前端竖墙、后端 55615、竖墙侧梁及舵机侧斜撑；轻推舵机本体观察安装耳、垫梁和整个平台，任何松动都先处理
-- **连杆轴向固定**：按当前 v4 装齐曲柄端、十字块端的轴和半轴套；挡住退出的同时，连杆圆孔仍能自由转动。舵机连杆是 7 孔粗梁的第 1、7 孔，不能沿用旧孔位
+- **连杆轴向固定**：按历史 v4 装齐曲柄端、十字块端的轴和半轴套；挡住退出的同时，连杆圆孔仍能自由转动。舵机连杆是 7 孔粗梁的第 1、7 孔，不能沿用旧孔位
 
-安装图见 [v4 搭建说明书](lego/v4/index.html)，最新加固见 [v4 设计说明](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md)。
+安装图见 [v4 搭建说明书](lego/v4/index.html)，历史加固见 [v4 设计说明](https://github.com/gonewx/quadcuber/blob/e9d56112fa59c3301faa3b19b167e14e95b1e212/docs/lego/v4/README.md)。
 
 #### B. 脱开连杆，声明会话后空载定位
 

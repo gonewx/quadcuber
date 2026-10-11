@@ -16,7 +16,7 @@
 
 ## 电路与硬件验证
 
-从[电路总览](docs/wiring/README.md)进入：当前使用面包板＋动力直连，洞洞板是可选装配方案。EV3 大马达＋DRV8833 的空载闭环已通过，范围见[实测记录](docs/single_arm-results.md)；这不等于 v4 机械头、舵机、带魔方动作或四臂供电已验收。接下来需要实物标定和分级测试。
+打开[当前接线：原 R／新 R+L（条件式）](generated/wiring/direct-breadboard.html)，在同一页面切换图、表和下载，默认显示原 R。适用条件见[电路总览](docs/wiring/README.md)；[历史单臂总览](generated/wiring/index.html)和[可选单臂洞洞板](generated/wiring/perfboard.html)保留作参考。EV3 大马达＋DRV8833 的空载闭环已通过，范围见[实测记录](docs/single_arm-results.md)；这不等于 v4 机械头、舵机、带魔方动作或四臂供电已验收。接下来需要实物标定和分级测试。
 
 当前硬件：EV3 大马达、DRV8833（名义 9V，实测不得超过 10.8V）、每路 10kΩ/20kΩ 编码器分压（`ENC_PULLUP = False`）、灰色 270° Geekservo。调试时 Pico 由 USB 供电，舵机由独立 5V 降压供电，所有模块共地。接线以 `wiring/spec.py` 及其生成图表为准。
 

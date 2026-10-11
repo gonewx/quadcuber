@@ -650,10 +650,10 @@ def perfboard_page():
     return ('<!doctype html>\n<html lang="zh-CN">\n<head>\n'
             '<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
-            '<title>quadcuber 洞洞板接线设计</title>\n'
+            '<title>quadcuber 可选单臂洞洞板接线设计</title>\n'
             f'<style>{CSS}</style>\n</head>\n<body>\n<main class="wrap">\n'
-            '<nav><a href="direct-breadboard.html">当前调试：面包板＋动力直连接线图</a> · '
-            '<a href="index.html#perfboard">返回完整接线指南</a></nav>\n'
+            '<nav><a href="direct-breadboard.html">当前接线：原 R／新 R+L（条件式）</a> · '
+            '<a href="index.html#perfboard">历史单臂总览中的可选洞洞板</a></nav>\n'
             + perfboard_section() + '\n</main>\n</body>\n</html>\n')
 
 
@@ -661,18 +661,18 @@ def page():
     esc = html.escape
     out = ['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">',
            '<meta name="viewport" content="width=device-width, initial-scale=1">',
-           '<title>quadcuber 单臂接线</title>',
+           '<title>quadcuber 历史单臂接线总览</title>',
            '<link rel="preconnect" href="https://fonts.googleapis.com">',
            '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600'
            '&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap">',
            f"<style>{CSS}</style></head><body>", '<div class="wrap">']
     out.append('<header style="display:flex;flex-direction:column;gap:10px">'
-               '<div class="eyebrow">quadcuber · 单臂原型 · 接线指南</div>'
-               '<h1>把机械手接到 Pico 上</h1>'
+               '<div class="eyebrow">quadcuber · 历史单臂总览 · 可选装配参考</div>'
+               '<h1>历史单臂电路与可选洞洞板</h1><p>本页保留原 R 单臂电路参考及可选洞洞板孔位，不是 R+L 接线图。当前接线请使用下方同一页面的原 R／新 R+L 切换，勿混用两种装配方案的线号与孔位。</p>'
                '<p>一个 EV3 马达 (大马达或中马达接法相同)、一个灰色 Geekservo、一块 DRV8833、4 个电阻 (10kΩ ×2、20kΩ ×2)。'
                '引脚按 <span class="mono">firmware/pico/config.py</span> 的 R 臂分配, 接完按 '
                '<span class="mono">docs/single_arm.md</span> 第 4、5 节刷程序和测试。</p>'
-               '<p><a href="direct-breadboard.html">当前调试：面包板＋动力直连（无洞洞板）</a> · '
+               '<p><a href="direct-breadboard.html">当前接线：原 R／新 R+L（条件式）</a> · '
                '<a href="../../docs/wiring/README.md">电路总览与验证状态</a> · <a href="#perfboard">可选洞洞板</a> · <a href="#breadboard">洞洞板配套面包板</a></p></header>')
     out.append('<div class="warn"><b>2026-09-27 更新：编码器改用电阻分压, 不再用电平转换模块。</b>'
                'BSS138 模块与 EV3 马达内部的串联电阻不匹配, 低电平降不下来。'

@@ -6,6 +6,8 @@ import argparse
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
+import re
+from urllib.parse import urljoin, urlparse
 from pathlib import Path
 import shutil
 import struct
@@ -57,6 +59,32 @@ def check(page, mode, group):
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), '页面横向溢出'
 
 
+def check_navigation(page, base):
+    """Follow current links and old bookmarks in a real browser before checking the reader."""
+    target = '/generated/wiring/direct-breadboard.html'
+    for name in ('README.md', 'docs/single_arm.md', 'docs/wiring/README.md', 'docs/perfboard.md'):
+        links = re.findall(r'\[([^\]]+)\]\(([^)]+)\)', (ROOT / name).read_text())
+        current = [href for label, href in links if '当前接线' in label]
+        assert current, name
+        for href in current:
+            page.goto(urljoin(base + name, href))
+            assert urlparse(page.url).path == target, (name, href)
+            assert page.locator('[data-mode="RL"]').is_visible()
+    for old, scope in [('index.html', '历史单臂'), ('perfboard.html', '可选单臂'),
+                       ('direct-breadboard.html', 'R+L')]:
+        page.goto(base + 'docs/wiring/' + old + '?navcheck=1#complete-wiring')
+        page.wait_for_url('**/generated/wiring/' + old + '?navcheck=1#complete-wiring')
+        assert scope in page.title()
+        if old != 'direct-breadboard.html':
+            current = page.get_by_role('link', name='当前接线：原 R／新 R+L（条件式）', exact=True)
+            for index in range(current.count()):
+                assert current.nth(index).get_attribute('href') == 'direct-breadboard.html'
+            current.first.click()
+        assert urlparse(page.url).path == target
+        assert page.locator('[data-mode="R"]').get_attribute('aria-pressed') == 'true'
+        assert page.locator('[data-mode="RL"]').is_visible()
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--export-png', action='store_true')
@@ -87,6 +115,7 @@ def main():
                 page = browser.new_page(viewport=viewport, is_mobile=name == 'mobile', has_touch=name == 'mobile')
                 errors = []
                 page.on('pageerror', lambda error: errors.append(str(error)))
+                check_navigation(page, url.removesuffix('generated/wiring/'))
                 page.goto(url + 'direct-breadboard.html#complete-wiring')
                 assert page.locator('[data-mode="R"]').get_attribute('aria-pressed') == 'true'
                 # 每种筛选下往返切换，确认筛选保持有效。
