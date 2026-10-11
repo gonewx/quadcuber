@@ -46,8 +46,8 @@ SERVO_CALIBRATION_PROFILE = None
 SERVO_CALIBRATION_ARM = None
 SERVO_MIN_US = None  # 实测安全工作区间下界
 SERVO_MAX_US = None  # 实测安全工作区间上界
-SERVO_OPEN_US = None
-SERVO_CLOSE_US = None
+SERVO_OPEN_US = 1700
+SERVO_CLOSE_US = 1450
 # 端点确认后先填人为选择的保守等待，仅用于单次 open/close 录像测时。
 # 取实测开合较慢值加余量写回，再确认时序，才允许组合动作和普通马达动作。
 SERVO_MOVE_MS = None
