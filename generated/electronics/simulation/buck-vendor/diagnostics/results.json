@@ -1,0 +1,58 @@
+[
+  {
+    "experiment": "a1-backward-euler",
+    "last_time_s": 0.000761022794,
+    "points": 41023,
+    "error": "doAnalyses: TRAN:  Timestep too small; time = 0.000761023, timestep = 1.2e-22: trouble with d_d-instance d.x1.d_u5_d9",
+    "full_chip_validation_passed": false
+  },
+  {
+    "experiment": "a1-ic-whitespace",
+    "last_time_s": 0.000761023844,
+    "points": 39455,
+    "error": "doAnalyses: TRAN:  Timestep too small; time = 0.000761024, timestep = 5.79655e-20: trouble with d_d-instance d.x1.d_u5_d9",
+    "full_chip_validation_passed": false
+  },
+  {
+    "experiment": "a1-iteration1000",
+    "last_time_s": 0.000761023844,
+    "points": 39808,
+    "error": "doAnalyses: TRAN:  Timestep too small; time = 0.000761024, timestep = 2.4e-20: trouble with d_d-instance d.x1.d_u5_d9",
+    "full_chip_validation_passed": false
+  },
+  {
+    "experiment": "a1-ng47",
+    "last_time_s": 0.000761019214,
+    "points": 39082,
+    "error": "doAnalyses: TRAN:  Timestep too small; time = 0.000761019, timestep = 2.5e-20: trouble with node \"e.x1.e_u5_abm9#branch\"",
+    "full_chip_validation_passed": false
+  },
+  {
+    "experiment": "a1-profile",
+    "last_time_s": 0.000761023844,
+    "points": 39808,
+    "error": "doAnalyses: TRAN:  Timestep too small; time = 0.000761024, timestep = 2.4e-20: trouble with d_d-instance d.x1.d_u5_d9",
+    "full_chip_validation_passed": false
+  },
+  {
+    "experiment": "a1-uic",
+    "last_time_s": null,
+    "points": null,
+    "error": null,
+    "full_chip_validation_passed": false
+  },
+  {
+    "experiment": "clamp-isolation",
+    "last_time_s": 2e-06,
+    "points": 20047,
+    "error": null,
+    "full_chip_validation_passed": false
+  },
+  {
+    "experiment": "minimal-profile",
+    "last_time_s": null,
+    "points": null,
+    "error": "doAnalyses: TRAN:  Timestep too small; time = 0.000204101, timestep = 5.87474e-20: trouble with d_d-instance d.xreg.d_u5_d9\", \"stderr run simulation(s) aborted\"]",
+    "full_chip_validation_passed": false
+  }
+]

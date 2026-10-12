@@ -1,0 +1,3 @@
+Diagnostic only: replace exactly one V(EN ) with V(EN) in the XOR-adapted model. This removes EN alias warnings but does not resolve transient failure. Not adopted by the main runner.
+SHA256 of diagnostic model: 1b607b685a8e1e09bbe22f0c653e6336d1efaa55a354435032f7e9f1e601843b
+Full model is not redistributed. Recreate this one-token whitespace change locally and update the .include path.

@@ -1,0 +1,16 @@
+Isolated exact low clamp branch - diagnostic only, not TPS54302 model
+Vsdwn sdwn 0 PWL(0 1 1u 1 1.001u 0)
+Bclamp low 0 V=(v(sdwn)>0.5 ? 0 : 0.439)
+Dlow low comp dd
+.model dd D(IS=1e-15 N=1e-5 TT=1e-11)
+Ccomp comp 0 18p
+Rcomp comp 0 4meg
+.options reltol=1e-4 abstol=10n vntol=10u itl1=1500 itl2=400 itl4=100 method=trap
+.control
+set wr_vecnames
+set wr_singlescale
+tran .1n 2u 0 .1n
+wrdata waveform.txt v(sdwn) v(low) v(comp)
+quit
+.endc
+.end

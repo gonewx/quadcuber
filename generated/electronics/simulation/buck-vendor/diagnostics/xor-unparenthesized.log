@@ -1,0 +1,16 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: native xor semantic check of expanded operator
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 1
+v(a) = 0.000000e+00
+v(b) = 0.000000e+00
+v(c) = 0.000000e+00
+v(d) = 1.000000e+00
+Note: Simulation executed from .control section 

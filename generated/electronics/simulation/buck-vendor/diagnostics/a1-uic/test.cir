@@ -1,0 +1,45 @@
+Quadcuber actual dual TPS54302 BOM, official model required
+.include "/workspace/quadcuber/output/electronics/ti-model/TPS54302_TRANS.ngspice.LIB"
+VIN vm 0 PWL(0 0 1m 9)
+X1 b1boot b1en 0 b1sw vm b1fb TPS54302_TRANS
+C1in vm 0 10e-06
+C1hf vm 0 100n
+R1boot b1boot b1bc 49.9
+C1boot b1bc b1sw 100n
+L1 b1sw b1ld 10u
+R1dcr b1ld b1out 0.0214
+R1esr b1out b1cap 0.003
+C1out b1cap 0 44e-06
+R1hi b1out b1fb 100k
+R1lo b1fb 0 13.3k
+C1ff b1out b1fb 75p
+R1enhi vm b1en 511k
+R1enlo b1en 0 105k
+V1load b1out b1load 0
+B1load b1load 0 I=min(max(v(b1out)/4,0),1)*(0.25+(1.5-0.25)*(time>0.012 && time<0.018))
+X2 b2boot b2en 0 b2sw vm b2fb TPS54302_TRANS
+C2in vm 0 10e-06
+C2hf vm 0 100n
+R2boot b2boot b2bc 49.9
+C2boot b2bc b2sw 100n
+L2 b2sw b2ld 10u
+R2dcr b2ld b2out 0.0214
+R2esr b2out b2cap 0.003
+C2out b2cap 0 44e-06
+R2hi b2out b2fb 100k
+R2lo b2fb 0 13.3k
+C2ff b2out b2fb 75p
+R2enhi vm b2en 511k
+R2enlo b2en 0 105k
+V2load b2out b2load 0
+B2load b2load 0 I=min(max(v(b2out)/4,0),1)*(0.05+(1.5-0.05)*(time>0.012 && time<0.018))
+.options reltol=1e-4 abstol=10n vntol=10u itl1=1500 itl2=400 itl4=100 method=trap
+.save v(vm) v(b1out) v(b2out) i(L1) i(L2) v(b1en) v(b2en) v(x1.sdwn) v(x1.u5_low_clmp) v(x1.ss_tr) v(x1.u11_enab) v(x1.vref_gm) v(x1.ocb)
+.control
+set wr_vecnames
+set wr_singlescale
+tran 20n 25m 0 20n uic
+wrdata waveform.txt v(vm) v(b1out) v(b2out) i(L1) i(L2) v(b1en) v(b2en) v(x1.sdwn) v(x1.u5_low_clmp) v(x1.ss_tr) v(x1.u11_enab) v(x1.vref_gm) v(x1.ocb)
+quit
+.endc
+.end
