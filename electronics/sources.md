@@ -26,8 +26,8 @@
 |---|---|---|
 |RP2040|https://pip.raspberrypi.com/documents/RP-008371-DS-rp2040-datasheet.pdf |QFN56+EP57；各供电组、TESTEN、USB、QSPI、晶振、SWD真实引脚|
 |最小系统参考|https://pip.raspberrypi.com/documents/RP-008279-DS-hardware-design-with-rp2040.pdf |每电源100n、LDO输入/输出1u；12MHz ABM8-272-T3/15p/1k；USB27Ω、90Ω差分目标|
-|Flash|https://docs.rs-online.com/dea4/0900766b81622f8e.pdf |Winbond原厂W25Q16JV订购表和SN150mil/SS208mil封装；本板SNIQ，EOL须生命周期复核|
-|Pico boot2|https://raw.githubusercontent.com/raspberrypi/pico-sdk/master/src/rp2040/boot_stage2/boot2_w25q080.S |源文件明确支持W25Q16JV；仅设计兼容性证据，不等于首板UF2已测试|
+|Flash|https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/9004/256_W25Q16RV.pdf |Winbond RV Rev H，CN 150mil，W25Q16RVCNJQ；选型/生命周期/命令差异见 sources/flash-selection-review.md|
+|Pico boot2|https://raw.githubusercontent.com/raspberrypi/pico-sdk/9a4113fbbae65ee82d8cd6537963bc3d3b14bcca/src/rp2040/boot_stage2/boot2_w25q080.S |固定MicroPython v1.27.0的SDK来源；RV的QE位判断补丁见firmware/，未实板测试|
 |3V3 LDO|https://www.ti.com/lit/ds/symlink/tlv755p.pdf |TLV75533PDBVR的DBV脚位、输入范围、输出电容及231.1°C/W热阻|
 |USB-C|https://www.mouser.com/catalog/specsheets/Global_Connector_Technology_usb4105.pdf |GCT原厂B3图：NPTHØ0.65/横距5.78；壳槽横距8.64/前后距4.18；槽0.6×1.7及0.6×1.4；细脚0.5pitch。与KiCad封装一致|
 |USB ESD|https://www.st.com/resource/en/datasheet/usblc6-2.pdf |IO1=1/6，IO2=3/4，GND2，上轨5；内部上导向二极管要求外供电时避免连接原始USB VBUS|

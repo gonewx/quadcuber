@@ -36571,7 +36571,7 @@
 				)
 			)
 		)
-		(property "Value" "W25Q16JVSNIQ 2MiB"
+		(property "Value" "W25Q16RVCNJQ 2MiB"
 			(at 0 3.4 0)
 			(layer "F.Fab")
 			(hide yes)

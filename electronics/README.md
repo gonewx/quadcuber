@@ -18,8 +18,8 @@ TP测试焊盘和安装孔是PCB内建特征，采购数量记为0；可选电�
 
 ## 架构与器件
 
-- **控制器：裸RP2040 QFN56+EP**。保留GPIO0～21、8个PIO状态机、12MHz时钟、2MiB Flash以及GP25指示灯，使用官方RPI_PICO MicroPython UF2，无需迁移MCU平台。GP22/23/26～29未用；GP24为USB VBUS分压检测。ROM BOOTSEL、RUN复位、UART和SWD均直接引出；SWD口3V3为参考电压，禁止外部注入供电。
-- **Flash：W25Q16JVSNIQ**，SN窄体SOIC8 3.9×4.9mm；不能混用SS宽体。Pico SDK boot2明确支持W25Q16JV，但本板尚未实刷。该料处于EOL、仍有原型采购库存，批量生产须先验证在产替代品，不能直接按名称相近替换。
+- **控制器：裸RP2040 QFN56+EP**。保留GPIO0～21、8个PIO状态机、12MHz时钟、2MiB Flash以及GP25指示灯，使用基于RPI_PICO的QUADCUBER_A1 MicroPython UF2，无需迁移MCU平台。GP22/23/26～29未用；GP24为USB VBUS分压检测。ROM BOOTSEL、RUN复位、UART和SWD均直接引出；SWD口3V3为参考电压，禁止外部注入供电。
+- **Flash：W25Q16RVCNJQ**，CN 150mil SOP8，原厂在产替代，保留3.9mm窄体焊盘。使用[QUADCUBER_A1启动配置](firmware/README.md)，在现有MicroPython/Pico启动代码上修正QE位判断，避免RV状态寄存器差异造成反复写入；仍通过USB UF2烧录。选型、供货及逐命令兼容证据见[Flash复核](sources/flash-selection-review.md)。
 - **12MHz ABM8-272-T3**，CL10pF、两颗15pF、XOUT串1k；RP2040每个电源脚配置100nF，内部稳压输入/输出各1µF。3.3V接IOVDD/ADC_AVDD/VREG_IN/USB_VDD；VREG_OUT仅接1.1V DVDD，TESTEN及EP接地。
 - **USB4105-GF-A** USB-C USB2从设备，CC1/CC2各独立5.1k，下游数据通过USBLC6-2SC6和27Ω串阻。GCT原厂图与库的定位孔、壳脚槽和针序逐项核对；没有USB PD，也不向主机提供VBUS。
 
@@ -96,7 +96,7 @@ python -m unittest tests.test_wiring tests.test_arm_selection tests.test_firmwar
 
 1. **EV3料号、针号/视向与接点额定**：孔位已按用户图落实；核对实物接点到焊尾的1～6通断及观察面，确认实际型号、触点电流、成品孔配合和固定耳完整外廓。如映射改变，更新封装网络并重跑ERC/DRC。
 2. **电源/热原型**：9 V台式电源限流，从无马达到单路负载再四路，测5 V启动、负载跃变、编码器波形和20 kHz电机电流；禁长时堵转。验证TVS能量、VM瞬态、铜温、驱动结温估算、输入保险及PTC降额。
-3. **控制器与USB组合**：首次按住BOOTSEL插USB，确认ROM盘枚举及官方RPI_PICO UF2刷写；RUN复位、SWD读写、12MHz时钟、1.1/3.3V启动、QSPI读写及编码器/舵机默认态。USB-only、9V-only、两者同时、动力掉电/恢复，确认无反向供电、复位失控或异常舵机脉冲。
+3. **控制器与USB组合**：首次按住BOOTSEL插USB，确认ROM盘枚举及QUADCUBER_A1 UF2刷写；RUN复位、SWD读写、12MHz时钟、1.1/3.3V启动、QSPI读写及编码器/舵机默认态。USB-only、9V-only、两者同时、动力掉电/恢复，确认无反向供电、复位失控或异常舵机脉冲。
 4. **机械**：托架与脚、USB/马达插拔、线缆运动包络、反面绝缘、安装螺钉不触铜、USB插头与BOOTSEL/RUN按键可达性。
 5. **制造**：板厂确认4层1.6 mm，外铜2 oz/内铜1 oz，RP2040细间距和USB差分阻抗需板厂复核，逻辑最小0.15 mm线宽/间距（其余网络0.20 mm），USB连接器原厂孔到焊盘间隙按专用0.18 mm规则，最小0.30 mm成品孔；驱动热孔工艺和锡膏分窗按TI，检查焊孔与排针实际料样。当前没有做过PCB实物测试。
 

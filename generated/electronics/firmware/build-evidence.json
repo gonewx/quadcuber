@@ -1,0 +1,12 @@
+{
+  "build_exit_code": 0,
+  "compiler": "arm-none-eabi-gcc 14.2.1 20241119 (Debian trixie official repository)",
+  "cmake": "3.31.6",
+  "micropython_tag": "v1.27.0",
+  "firmware_text_bytes": 337372,
+  "firmware_data_bytes": 0,
+  "firmware_bss_bytes": 5544,
+  "repository_regression_tests": 59,
+  "repository_regression_result": "OK",
+  "hardware_tested": false
+}

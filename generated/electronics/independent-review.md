@@ -2,21 +2,21 @@
 
 复核日期：2026-10-12。对象为 `electronics/quadcuber.kicad_pcb`，SHA-256：
 
-`38cbad26e5535d319daace2096d0ba92bf910ef28d2db5088a3bdf975e003f37`
+`6744d5985d91ce30513bbd1519a60979390d3df1fe49eee5f9bb2e0b84a96c2d`
 
 本报告替换旧 A0 报告。方法为只读 KiCad 9 `pcbnew` 原生对象，核查焊盘、线段、过孔、实填铜区、网络与器件方向，并与 A0 基线功率区域比较。另核读电气源、原厂参考和正式导出的检查报告。未修改 PCB；未制造、通电或进行信号完整性/热仿真。
 
 ## 检查证据与版本绑定
 
-- `drc.rpt`：2026-10-12 01:21:23 UTC，0 DRC 违规、0 未连接、0 封装错误。`build-log.json` 确认使用 `pcb drc --schematic-parity`。
-- `erc.rpt`：2026-10-12 01:21:21 UTC，0 错误、0 警告。
+- `drc.rpt`：2026-10-12 01:38:22 UTC，0 DRC 违规、0 未连接、0 封装错误。`build-log.json` 确认使用 `pcb drc --schematic-parity`。
+- `erc.rpt`：2026-10-12 01:38:19 UTC，0 错误、0 警告。
 - `contract-check.json`：`contract_errors=[]`。契约检查证明工程内连接符合设计定义，不证明 EV3 实物针号正确。
 - `release-status.json` 中全部原生文件 SHA-256 与复核时磁盘文件相符；`manufacturing_release=false`、`hardware_tested=false`。
-- 复核时电气源哈希：`circuit.py` 为 `abff89ea556a014241e22e40261e93b9682fbacbb5cd88722b5e4864366e1297`；`generate.py` 为 `ed746824238bf450522211a66a0dbc0c484b085808a5441efb8adf8c2c5e56c2`；`check.py` 为 `b0222950fbcf302a194888de1bb109fc12f26ca9f0fee98779763ec11599037f`；`build.py` 为 `ae45f9bcde3aa50246d8e3e7149cb4f03173e8a39c3e2afc04da5875193ae4ad`。
+- 复核时电气源哈希：`circuit.py` 为 `812039beec0ed76716601be5580485456867fac9958c5e304c20b2e335c1a04e`；`generate.py` 为 `ed746824238bf450522211a66a0dbc0c484b085808a5441efb8adf8c2c5e56c2`；`check.py` 为 `b0222950fbcf302a194888de1bb109fc12f26ca9f0fee98779763ec11599037f`；`build.py` 为 `e974396186046a995a8dc7f6384e0fc75c4ed8ce87c0974e430f492c0ef86195`。
 
 ## RP2040、启动和供电
 
-裸 RP2040 已替代 Pico 插座。IOVDD、ADC_AVDD、USB_VDD、VREG_IN 为3.3V；VREG_OUT仅供DVDD的1.1V，TESTEN及EP接地。W25Q16JVSNIQ为SN窄体SOIC8，已避免SS宽体封装误用。12MHz ABM8-272-T3、两颗15pF、XOUT串1k、BOOTSEL串1k及RUN复位符合所引用的最小系统方案。官方 Pico boot2 支持 W25Q16JV，但本板UF2启动尚未实测。
+裸 RP2040 已替代 Pico 插座。IOVDD、ADC_AVDD、USB_VDD、VREG_IN 为3.3V；VREG_OUT仅供DVDD的1.1V，TESTEN及EP接地。W25Q16RVCNJQ为CN 150mil窄体SOIC8，保持SOIC-8_3.9x4.9mm_P1.27mm封装，避免CS宽体封装误用。12MHz ABM8-272-T3、两颗15pF、XOUT串1k、BOOTSEL串1k及RUN复位符合所引用的最小系统方案。采用QUADCUBER_A1的QE掩码适配boot2；本板UF2启动尚未实测。
 
 USB和外部5V_A经独立SS14汇入VSYS，再由TLV75533PDBVR降至3.3V。USBLC6的上保护轨接VSYS并有C427，避免外供电时DP上拉通过该器件内部导向二极管给原始VBUS回灌。USB仅给逻辑供电。GP24只是检测分压；stock TinyUSB并不因此自动关闭上拉，断电主机数据脚保护路径仍须实测。SWD的3V3为参考电压，不能作为外部供电注入口。
 
@@ -64,6 +64,20 @@ J10～J13实际封装为`EV3_UserDrawing_PINMAP_HOLD`，中心分别为(66,156)�
 1. 插座实际料号、观察面及1～5针序、逐接点至EV3线缆的映射、接点载流、焊尾配孔和固定耳完整外廓。
 2. 托架、支脚、线缆运动、插拔操作和底部防护；本次未重做整机机械扫描。双面电容及其他背面器件需从原裸板间隙扣除真实高度与公差。
 3. RP2040 ROM/UF2启动、Flash读写、USB组合供电和断电主机回灌、降压启动与跃变、四桥并发热测、制动回灌、浪涌和PTC降额。
-4. 板厂堆叠、USB阻抗、2oz外层细间距能力、RP2040/驱动热孔与锡膏工艺。Flash的EOL状态还需在批量生产前解决。
+4. 板厂堆叠、USB阻抗、2oz外层细间距能力、RP2040/驱动热孔与锡膏工艺。Flash选型尾项已通过下述替换关闭；库存与交期仍需在采购时核实。
+
+## Flash选型及启动适配增量复核
+
+2026-10-12增量复核确认当前PCB与提交`bff3f69`的原生PCB相比，严格等于仅替换字符串`W25Q16JVSNIQ`→`W25Q16RVCNJQ`；所有铜、器件位置和焊盘网络未改变。因此上述几何及功率路径复核继续适用。电气源、逐件BOM、原生原理图和PCB均已更新为CNJQ，无旧SNIQ器件值残留。
+
+[Winbond PCN及迁移指南AN0000070](https://www.anglia.com/registration/pcn_ptn/docs/ptn/PTNW25Q16J280126%20%282%29.pdf)的表1明确包含旧SNIQ，PDF第7页表5列出150mil CNJQ替代型号；原SNIQ最后订购/交付日期仍未核实，未套用其他封装EOL日期。[Winbond 2026产品指南](https://www.winbond.com/export/sites/winbond/product-selection-guide/file/2026-Product-Selection-Guide-Winbond-Code-Storage-Flash-Memory.pdf)PDF第29页确认工业级W25Q16RV为Mass Production。[Rev H数据表](https://cdn.ozdisan.com/public/product/assets/W25Q16RV_SPI_QPI%20RevH%2010232025.pdf)的CN尺寸、2.7～3.6V、2MiB和引脚分配与当前封装/电路一致。生命周期选型HOLD已关闭。
+
+[Mouser确切管装454-W25Q16RVCNJQ](https://www.mouser.jp/en/ProductDetail/Winbond/W25Q16RVCNJQ?qs=fQuHqd5sRUjQgmLEOK%2FjDA%3D%3D)单品页及列表独立交叉核对：15颗现货、可立即发货、MOQ1；超现货36周估计工期。这是查询时的小量供应证据，不代表已经购买或锁定库存。DigiKey CNJQ的Active/可预订与0现货不得混淆。
+
+本地`boot2_w25q16rv.S`与pico-sdk提交`9a4113fbbae65ee82d8cd6537963bc3d3b14bcca`原`boot2_w25q080.S`独立逐行比较：除来源及解释注释外，仅`cmp r0,r2; beq`变为`tst r0,r2; bne`。`SREG_DATA=0x02`，所以SR2=0x02和0x06均跳过状态写，SR2=0x00/0x04仍进入原状态写路径；不接受QE默认0的M后缀替代。该修改正确避免RV-Q新增LB0使整字节比较失败而触发多余非易失SR1写。修改没有变更0xEB、0xA0模式、4个高阻dummy时钟或QSPI连接。
+
+外部board配置继续为`PICO_BOARD=pico`、`PICO_PLATFORM=rp2040`、1408KiB文件系统，仅指定定制boot2及板名。复核时boot2源SHA-256为`bc6bed8ea6832293d9b9dd6ec5953e1477a136cd0eab550d0d6fd0dcc3721b69`。必须区分本适配版与未修改的官方RPI_PICO UF2。随后独立读取实际UF2并重新计算SHA、逐块检查UF2头/家族ID/连续地址、重新计算boot2 CRC及核对机器码：全部通过。UF2 SHA-256为`ce965d9bd597be5377bd1bbb1f83bb69894be7ad3f3dac80cdbe60615d143eb9`，674816字节、1318块，family=`0xe48bff56`，Flash末端不含边界地址`0x10052600`。boot2原始240字节、补零到252字节，末尾CRC为`0x9a195ca8`。UF2启动区偏移0x34包含`movs r2,#2; tst r0,r2; bne`，分支由0x38正确跳至0x64的`skip_sreg_programming`，与反汇编一致；不是只凭源码或JSON推定补丁已进入产物。board源哈希与`firmware-check.json`逐一吻合。
+
+`firmware-build.log`显示固件链接及100%构建完成；新`tests.log`显示59项测试全部通过（8.869s）。这些是构建与静态验证，不等于已经在CNJQ实物上启动、写入或完成掉电恢复测试；`hardware_tested=false`保持不变。
 
 本报告结论为：所查A1工程连接与几何检查通过，未发现上述范围内新的确定性电气错误；**不等于制造放行或实板测试通过**。PCB或关键电气源改变后，须更新哈希和对应复核。

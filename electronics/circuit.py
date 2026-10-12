@@ -61,8 +61,8 @@ for ref,a,b,xy in [('R403','USB_DM','USB_DM_MCU',(21.4,21)),('R404','USB_DP','US
  add(ref,'27','Resistor_SMD:R_0402_1005Metric',{1:a,2:b},xy,'RC0402FR-0727RL','Yageo','usb',rot=270)
 cc('C427','100n','VSYS','GND',(24,11),'usb')
 r('R405','100k','USB_VBUS','GP24',(34,31),'controller');r('R406','100k','GP24','GND',(34,35),'controller')
-# Flash, clock, BOOTSEL; 2MiB W25Q16JV supports official Pico boot2 W25Q080 family code.
-add('U7','W25Q16JVSNIQ 2MiB','Package_SO:SOIC-8_3.9x4.9mm_P1.27mm',{1:'QSPI_SS',2:'QSPI_SD1',3:'QSPI_SD2',4:'GND',5:'QSPI_SD0',6:'QSPI_SCLK',7:'QSPI_SD3',8:'3V3'},(10,23),'W25Q16JVSNIQ','Winbond','flash_clock',note='Prototype stock obtainable; manufacturer EOL. Qualify current-production alternate before production. Exact SN narrow SOIC package.',names={'1':'CS_N','2':'DO_IO1','3':'WP_IO2','4':'GND','5':'DI_IO0','6':'CLK','7':'HOLD_IO3','8':'VCC'})
+# Flash, clock, BOOTSEL; 2MiB W25Q16RV; see firmware/QUADCUBER_A1 for QE-bit-aware W25Q080 boot2.
+add('U7','W25Q16RVCNJQ 2MiB','Package_SO:SOIC-8_3.9x4.9mm_P1.27mm',{1:'QSPI_SS',2:'QSPI_SD1',3:'QSPI_SD2',4:'GND',5:'QSPI_SD0',6:'QSPI_SCLK',7:'QSPI_SD3',8:'3V3'},(10,23),'W25Q16RVCNJQ','Winbond','flash_clock',note='Current-production RV successor per Winbond PCN DM202601-03-A / AN0000070. CN 150mil SOP8; use QUADCUBER_A1 MicroPython boot2 QE-mask adaptation.',names={'1':'CS_N','2':'DO_IO1','3':'WP_IO2','4':'GND','5':'DI_IO0','6':'CLK','7':'HOLD_IO3','8':'VCC'})
 cc('C424','100n','3V3','GND',(14,20),'flash_clock')
 r('R407','10k','3V3','QSPI_SS',(13,16.5),'flash_clock');r('R408','1k','QSPI_SS','BOOT_BUTTON',(7,9),'flash_clock')
 add('S1','BOOTSEL','Button_Switch_SMD:SW_SPST_TL3342',{1:'BOOT_BUTTON',2:'GND'},(7,13),'TL3342F160QG','E-Switch','flash_clock')

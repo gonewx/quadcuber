@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/quadcuber/electronics/quadcuber.kicad_sch</source>
-    <date>2026-10-12T01:21:21+0000</date>
+    <date>2026-10-12T01:38:20+0000</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1166,17 +1166,17 @@
       <tstamps>9392aee0-9baa-5da8-91bd-bb31053160ed</tstamps>
     </comp>
     <comp ref="U7">
-      <value>W25Q16JVSNIQ 2MiB</value>
+      <value>W25Q16RVCNJQ 2MiB</value>
       <footprint>Quadcuber:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
       <fields>
-        <field name="MPN">W25Q16JVSNIQ</field>
+        <field name="MPN">W25Q16RVCNJQ</field>
         <field name="Manufacturer">Winbond</field>
         <field name="Footprint">Quadcuber:SOIC-8_3.9x4.9mm_P1.27mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="U7" description=""/>
-      <property name="MPN" value="W25Q16JVSNIQ"/>
+      <property name="MPN" value="W25Q16RVCNJQ"/>
       <property name="Manufacturer" value="Winbond"/>
       <property name="Sheetname" value="flash_clock"/>
       <property name="Sheetfile" value="flash_clock.kicad_sch"/>
@@ -6450,7 +6450,7 @@
     <libpart lib="Quadcuber" part="U7">
       <fields>
         <field name="Reference">U7</field>
-        <field name="Value">W25Q16JVSNIQ 2MiB</field>
+        <field name="Value">W25Q16RVCNJQ 2MiB</field>
         <field name="Footprint">Quadcuber:SOIC-8_3.9x4.9mm_P1.27mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>

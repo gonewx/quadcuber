@@ -1,0 +1,21 @@
+{
+  "checks_passed": true,
+  "hardware_tested": false,
+  "micropython_commit": "78ff170de9e32c79db6e64d3e33d2bd60002bdcd",
+  "pico_sdk_commit": "9a4113fbbae65ee82d8cd6537963bc3d3b14bcca",
+  "flash_mpn": "W25Q16RVCNJQ",
+  "uf2_sha256": "ce965d9bd597be5377bd1bbb1f83bb69894be7ad3f3dac80cdbe60615d143eb9",
+  "uf2_bytes": 674816,
+  "uf2_blocks": 1318,
+  "family_id": "0xe48bff56",
+  "flash_address_end_exclusive": "0x10052600",
+  "boot2_raw_bytes": 240,
+  "boot2_crc32": "0x9a195ca8",
+  "qe_test": "binary TST r0,r2 then BNE to skip_sreg_programming; QE mask 0x02 accepts SR2=0x02 and 0x06",
+  "board_source_sha256": {
+    "LICENSE.pico-sdk.txt": "483f865953435b66c443dee7558debe3cc3cf8fcbb6a112fd9fc6a795d53f1f6",
+    "boot2_w25q16rv.S": "bc6bed8ea6832293d9b9dd6ec5953e1477a136cd0eab550d0d6fd0dcc3721b69",
+    "mpconfigboard.cmake": "bdcc58f22edac4b896837185ef7c53fb1cd400c07829e1fa2413cd3eea22e614",
+    "mpconfigboard.h": "ed698f8b6f14c777c211127adae2a8737b05400b89a783d096fcf7f7cb7ffd2a"
+  }
+}
