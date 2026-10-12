@@ -1,6 +1,6 @@
 # A1 制造预检（候选资料，不构成投板/装配放行）
 
-原板 SHA-256：`b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44`。KiCad 10.0.7；脚本 `electronics/verify_fabrication_preflight.py` 实际读取原板、BOM、CPL、Gerber job、Excellon；另在临时目录独立导出，再比较图像内容。30 项自动一致性检查全部通过。审计脚本未保存原板；本次已对修正后的最终板重新导出并核验，未放行标志保留。
+原板 SHA-256：`11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e`。KiCad 10.0.7；脚本 `electronics/verify_fabrication_preflight.py` 实际读取原板、BOM、CPL、Gerber job、Excellon；另在临时目录独立导出，再比较图像内容。30 项自动一致性检查全部通过。审计脚本未保存原板；本次已对修正后的最终板重新导出并核验，未放行标志保留。
 
 ## 已消除的资料风险
 

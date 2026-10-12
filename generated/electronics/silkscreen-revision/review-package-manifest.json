@@ -1,0 +1,29 @@
+{
+  "variant": "A1-v3-CN-SILK-FULL-EV3-REVIEW-ONLY",
+  "status": "REVIEW_ONLY_NOT_UPLOADED_NOT_RELEASED",
+  "pcb_sha256": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e",
+  "baseline_commit": "eb085ea323278550f2c8823be6b62153bf5e8b53",
+  "files": {
+    "A1-v3-CN-SILK-Gerber-Drill-REVIEW-ONLY.zip": "56145eb7bced8ed7b5b8fcc4fd0e77ff10d68ede3577363ff9d5114ff029649d",
+    "ENG-FULL-EV3-v3-CN-SILK-bom.csv": "894bfe86f7357be6e193289ee27ecd4baa5e93f7ebcd7f82d76afdb3df63d214",
+    "ENG-FULL-EV3-v3-CN-SILK-positions.csv": "08ec6b43a34179f566a1c90ecbefed33751cc75b26cc31c8778e51b3a63620f7",
+    "REVIEW-NOTES.txt": "2112096e2158da331640237e4dfe4a03a1c7bd82e4196ba3167bfd6f0e08c7cf"
+  },
+  "source_files": {
+    "quadcuber-B_Cu.gbl": "3a5d21f357c66586db33919c48e1326986c54daf967211d3c9dc087db03450c7",
+    "quadcuber-B_Mask.gbs": "9ccd4b8fb5804be6864398acd398fa7219801b94a054af304bd4edd7d1e05683",
+    "quadcuber-B_Paste.gbp": "7a8bd0501b5bd38c0ece49e15e14958901d013b6b77aa0a3937d960a6b965a96",
+    "quadcuber-B_Silkscreen.gbo": "acf86aff891ccda7a3c7ced03f01c25c4f1f04fc28483be7681d882f4a7c8cdb",
+    "quadcuber-Edge_Cuts.gm1": "9488e2f5ff0ea949e7964ae4083d2f97cf48e55c3a612c7256d76560cb6e0a5d",
+    "quadcuber-F_Cu.gtl": "21f85c1b61a8d2c5dcf2be7cf8c687086e17bbe4702b0bcb3832edbdd0e42bfe",
+    "quadcuber-F_Mask.gts": "a0db4dfe2278c77ee7792a67c1bd09dbc9735ea2a1577afc911b61c9aef1e016",
+    "quadcuber-F_Paste.gtp": "f457aa60ab9de86569f7d50352c3395902dd5302aced011a29ff37466943db38",
+    "quadcuber-F_Silkscreen.gto": "31c76d1e33d15aa4d802b5930b73cb90c65c24d866607a92654847f8b6430be9",
+    "quadcuber-In1_Cu.g1": "bf792c69d150dd402c98f63c1610ad2a8fa3a1107d87442f26637179c4ff6faa",
+    "quadcuber-In2_Cu.g2": "a0a1c15dbb30bdbd0255deee73c5342f88447e311f6cdb86c01047f968a9fbe3",
+    "quadcuber-NPTH.drl": "c0fa452d1906f44dd043658242eeaacf19cc3c5549f74d15c78b438536412ce1",
+    "quadcuber-PTH.drl": "f82cc4a76a6cd741e635fd76093e49096ed700dea9c7704d73148d80ffccebfc",
+    "quadcuber-job.gbrjob": "ab96f8ba7a9dbc4e1d907c04bec3340db0639a1d20a7e205911a6fc88e9e9c86"
+  },
+  "bom_cpl_refs": 171
+}

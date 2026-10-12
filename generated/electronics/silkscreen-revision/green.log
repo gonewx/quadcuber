@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "checks": {
+    "expected_52_original_labels": true,
+    "all_visible_silk_at_least_1mm": true,
+    "only_52_text_sizes_changed_all_other_bytes_identical": true
+  },
+  "small_visible_text": [],
+  "pcb_sha256": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e",
+  "baseline_commit": "eb085ea",
+  "scope": "Only 52 gr_text size fields .8 -> 1 mm; every other byte of PCB including hidden fields, nets, pads, copper, filled zones, orientation, positions and text unchanged."
+}

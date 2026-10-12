@@ -1,0 +1,20 @@
+{
+  "pcb_sha256": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e",
+  "date_fields_ignored_only": true,
+  "unchanged": {
+    "quadcuber-B_Cu.gbl": true,
+    "quadcuber-B_Mask.gbs": true,
+    "quadcuber-B_Paste.gbp": true,
+    "quadcuber-B_Silkscreen.gbo": true,
+    "quadcuber-Edge_Cuts.gm1": true,
+    "quadcuber-F_Cu.gtl": true,
+    "quadcuber-F_Mask.gts": true,
+    "quadcuber-F_Paste.gtp": true,
+    "quadcuber-F_Silkscreen.gto": false,
+    "quadcuber-In1_Cu.g1": true,
+    "quadcuber-In2_Cu.g2": true,
+    "quadcuber-NPTH.drl": true,
+    "quadcuber-PTH.drl": true
+  },
+  "expected_only_change": "quadcuber-F_Silkscreen.gto"
+}

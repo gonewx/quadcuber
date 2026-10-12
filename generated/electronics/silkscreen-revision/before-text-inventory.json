@@ -1,0 +1,5657 @@
+[
+  {
+    "parent": "board",
+    "id": "4f001985-230f-41dc-849b-554eb994e878",
+    "text": "G",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      53.8,
+      107.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "85da8c56-d52a-4f66-b1ac-c74d988fbd7f",
+    "text": "TX",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      53.8,
+      109.539999
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "6e2539cd-6757-4853-b7f7-c6e85111c227",
+    "text": "RX",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      53.8,
+      112.08
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "bc9910a9-1e25-49a9-aa04-a37164b1c385",
+    "text": "M1",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      56.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "056eb526-08dd-4bca-9733-850e6feb156e",
+    "text": "BOOT",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      57.0,
+      56.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "35d661a7-98b6-4a20-9e29-8a3be751f779",
+    "text": "RESET",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      57.0,
+      98.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "d623821a-8ab8-4448-8312-6b555b0e39b6",
+    "text": "M2",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      61.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "d2ea37aa-41a8-495c-a20a-f1301d643bc9",
+    "text": "3V3",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      65.0,
+      102.8
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "b5bbe193-812f-4b1e-9833-59be59d2aa4e",
+    "text": "A",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      66.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "13f711be-9aeb-4810-905f-04861a987d78",
+    "text": "IO",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      67.539999,
+      102.8
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "59fe599b-025b-43c9-84b4-75b01090bc93",
+    "text": "SWD",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      68.8,
+      100.8
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "7c058857-6275-49f3-a4a0-b75d54c543e9",
+    "text": "G",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      70.08,
+      102.8
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "1bec1d37-cbb5-4f17-8ce8-b3aa8faa71ff",
+    "text": "B",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      71.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "6ea95381-7a1a-40c0-996b-b0ecf7f54c74",
+    "text": "CLK",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      72.62,
+      102.8
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "c461e900-fef3-4a00-a5c7-a21b69f7d2c9",
+    "text": "USB",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      77.0,
+      52.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "56170033-e942-489d-af4a-3927839177c9",
+    "text": "GP25",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      78.0,
+      68.3
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "a1ae56f1-7def-4059-9a21-bfc8b5a3a6ce",
+    "text": "RUN",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      78.5,
+      111.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "fad28531-5d5a-4f44-9c3e-3a07d12ad93a",
+    "text": "G",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      80.5,
+      147.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "a5388299-fb08-4642-a4e0-4cd3340b004b",
+    "text": "+",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      80.5,
+      149.54
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "b86a3bdf-2c88-4a3f-964f-34ded47ac592",
+    "text": "S",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      80.5,
+      152.079999
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "4109a07f-15bd-432a-a18e-fadae4e3e326",
+    "text": "M1",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      90.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "1f813f77-4ea4-4d6a-af49-369b7879183c",
+    "text": "+9V",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      95.0,
+      66.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "a197a5b9-89db-4019-894c-cce59214cc73",
+    "text": "M2",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      95.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "3e1609af-95ed-462d-84cd-c883c4672509",
+    "text": "A",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      100.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "90d46957-50f5-4004-a216-6ec2eb048f38",
+    "text": "GND",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      100.08,
+      66.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "edb85145-fd83-4aec-9c72-7b1d9374cfc5",
+    "text": "B",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      105.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "4f42a034-0eac-46a2-b240-9be5cc176511",
+    "text": "G",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      114.5,
+      147.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "fb919f45-2b0f-4bfe-9fe7-18bee44251c0",
+    "text": "+",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      114.5,
+      149.54
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "1ba4ddc6-ccaa-4ab6-895e-c703003dd9e4",
+    "text": "S",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      114.5,
+      152.079999
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "fc6664ef-e7f2-4a30-a3cf-c875ec8020ef",
+    "text": "M1",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      124.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "190cd4f6-214b-4a1f-bb28-98cddb260c79",
+    "text": "M2",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      129.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "63bcac2f-1b47-4479-8710-682850df4c92",
+    "text": "GND",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      134.0,
+      113.3
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "4ee6dfb9-5a18-4900-9ae9-350c68c1cf5c",
+    "text": "A",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      134.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "a4a64345-5d37-41e5-902e-55886384dee4",
+    "text": "B",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      139.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "b50ad075-2117-4f91-8ff9-47d2fe8e8ddc",
+    "text": "VM",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      141.0,
+      113.3
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "85f53b9c-c6c1-40b3-8922-eb3da7e3d7f1",
+    "text": "5A",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      148.0,
+      113.3
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "06d73c8f-a8be-4fda-a642-e101081990a6",
+    "text": "G",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      148.5,
+      147.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "9e4981a1-7c4f-489d-993c-3173066d6fb3",
+    "text": "+",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      148.5,
+      149.54
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "3c9dccd5-0de1-4688-9fde-f82971094bf9",
+    "text": "S",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      148.5,
+      152.079999
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "cf504a8f-eedf-4e5a-b2cd-579cd38d4269",
+    "text": "5B",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      155.0,
+      113.3
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "15e8066a-1ad9-4886-90f5-c088913527f3",
+    "text": "M1",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      158.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "08ce3f64-d728-40ff-91cf-6e70e28716a5",
+    "text": "ENC",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      162.0,
+      113.3
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "d817d309-16db-4187-b7af-1a1f035d8c0f",
+    "text": "M2",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      163.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "df53d20a-da37-4cc6-88b6-1b5e1769d4a4",
+    "text": "A",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      168.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "de21ec6d-e19a-4267-be13-dd50dc183580",
+    "text": "3V3",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      169.0,
+      113.3
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "5400219f-db90-4ac6-88ef-27e2d686b511",
+    "text": "B",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      173.0,
+      114.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "b7bac4f4-e957-4561-8444-0d878c98d01f",
+    "text": "VSYS",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      176.0,
+      113.3
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "17e3f3bb-844c-4cfe-a595-eeff70b2abdb",
+    "text": "G",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      182.5,
+      147.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "669444aa-4ae1-42d1-91a1-3176109ffe23",
+    "text": "+",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      182.5,
+      149.54
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "9c45a42a-3c5a-4c7a-850b-c60e1bc13b3f",
+    "text": "S",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      182.5,
+      152.079999
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "edd265e8-15ac-43d5-8587-cdad11490ed8",
+    "text": "9V ONLY   USB = LOGIC ONLY",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      135.0,
+      77.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "board",
+    "id": "84381ea4-fd1e-4e5f-8b9b-1ae40a08e1cc",
+    "text": "EV3 PINMAP/CURRENT UNVERIFIED - DO NOT FABRICATE",
+    "layer": "F.Silkscreen",
+    "visible": true,
+    "xy": [
+      145.0,
+      108.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R106",
+    "id": "d41b06ae-b04a-4757-8a49-9706ab660175",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      64.0,
+      142.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R106",
+    "id": "da79a7e6-5404-4ef6-b335-527c0f254035",
+    "text": "R106",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      64.0,
+      138.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R405",
+    "id": "20ad43c3-49f8-4a4c-991f-548fb5fe50ca",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      84.0,
+      81.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R405",
+    "id": "85a90921-a72b-411f-9160-1de2825038bf",
+    "text": "R405",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      84.0,
+      79.57
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C34",
+    "id": "ff5f9f24-b44b-46e0-adef-f6be8d705f08",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      170.0,
+      90.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C34",
+    "id": "c909cb1a-84d2-437b-8efd-909b036aaabd",
+    "text": "C34",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      170.0,
+      86.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R409",
+    "id": "9e280085-b97a-436e-8e19-855f6a9bb233",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      74.0,
+      82.0
+    ],
+    "size": [
+      0.26,
+      0.26
+    ]
+  },
+  {
+    "parent": "F11",
+    "id": "cd5bcf71-3ee2-40a2-abc4-00833ff65fff",
+    "text": "F11",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      113.0,
+      133.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R34",
+    "id": "3490b085-11ef-4374-8b27-f7c7ea07d145",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      138.0,
+      85.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R34",
+    "id": "20619be8-8afc-4ee7-8de3-0a13d03b48b5",
+    "text": "R34",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      138.0,
+      81.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "J2",
+    "id": "d7ec89e6-3b6d-49c0-b1fd-95bd10568129",
+    "text": "J2",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      57.0,
+      103.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C145",
+    "id": "59518c98-945a-4e96-af6f-16229e98c7ce",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      157.0,
+      147.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C145",
+    "id": "9475aea7-be03-429c-9edf-ab20f2434fbd",
+    "text": "C145",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      157.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C4",
+    "id": "62c4b66f-404b-40c0-b8fd-ce02fb75c8e9",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      112.0,
+      75.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C4",
+    "id": "1e8a9100-f5ee-4d69-9a5c-1748e9a28ded",
+    "text": "C4",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      112.0,
+      71.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R104",
+    "id": "a1f6fc76-ffa8-4ad1-85a4-226317b5a321",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      53.0,
+      142.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R104",
+    "id": "abe7ce7d-1748-4759-b1aa-2b0c2b7453b4",
+    "text": "R104",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      53.0,
+      138.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R129",
+    "id": "629efd4d-fbd1-4acb-b195-fc28df65fdcc",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      119.0,
+      134.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R129",
+    "id": "225cf840-4c20-4c0b-89f3-81100a6f348a",
+    "text": "R129",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      119.0,
+      130.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R165",
+    "id": "90d5d36e-4b61-4826-9d78-bd98efd52b57",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      166.0,
+      138.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R165",
+    "id": "9a39571a-6338-4502-8f56-065a7e4caf9a",
+    "text": "R165",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      166.0,
+      134.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP14",
+    "id": "92237a49-f732-4daa-aa77-ede6994fc050",
+    "text": "TP14",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      90.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP5",
+    "id": "efc1a0af-973e-4241-b741-e89727ace1a0",
+    "text": "TP5",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      162.0,
+      107.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R145",
+    "id": "2492865b-c987-4c2a-af46-364cd0435db3",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      132.0,
+      138.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R145",
+    "id": "4a212547-6db0-4f69-a143-39821febebaa",
+    "text": "R145",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      132.0,
+      134.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C102",
+    "id": "e30a65df-9c91-40ea-8c42-ca63905eb6aa",
+    "text": "C102",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      79.0,
+      116.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U20",
+    "id": "2f40d12b-8317-4cfc-aa47-b986577c5d3f",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      59.0,
+      141.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U20",
+    "id": "98a4f638-3b97-4505-b178-ea56f81c64bc",
+    "text": "U20",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      59.0,
+      137.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R164",
+    "id": "f3b16cc7-3bba-42ca-8314-16397c4bc09e",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      155.0,
+      142.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R164",
+    "id": "8de6cb77-e862-4d85-80c9-2fa7ce4983de",
+    "text": "R164",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      155.0,
+      138.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP1",
+    "id": "df0991fa-0a80-498b-ae6d-6b324b22360f",
+    "text": "TP1",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      134.0,
+      107.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R401",
+    "id": "7758a86c-2d43-428a-a6cb-6fe627145231",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      62.0,
+      58.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R401",
+    "id": "ab48daf3-d1c1-413f-b337-c99a3f14731e",
+    "text": "R401",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      62.0,
+      56.57
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "H4",
+    "id": "28360c76-8be3-4631-beef-1f5f410b1cba",
+    "text": "H4",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      190.0,
+      154.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C5",
+    "id": "e960c4df-80af-4f46-bcb4-b03889d5cb82",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      122.0,
+      72.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C5",
+    "id": "4bd10ac9-ebb4-43ac-bc8a-de9836991a04",
+    "text": "C5",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      122.0,
+      68.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C103",
+    "id": "4fba52f8-eadc-429c-891b-d5720105faff",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      59.0,
+      136.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C103",
+    "id": "83bfefee-326f-4fd2-b86e-a91474cc51d3",
+    "text": "C103",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      59.0,
+      132.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U6",
+    "id": "92374215-c199-48df-b799-786b6a2938b1",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      70.0,
+      62.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U6",
+    "id": "9209a5c0-4ef8-4a10-a59d-8a833ee3420a",
+    "text": "U6",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      67.6,
+      62.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C123",
+    "id": "bc3b1da2-2919-4939-836e-c267f20deea4",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      93.0,
+      136.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C123",
+    "id": "becaf76b-d3b9-45ca-a01d-13a273e67bfc",
+    "text": "C123",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      93.0,
+      132.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C424",
+    "id": "0b99247b-cbb6-45b6-a446-c14cf576522e",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      64.0,
+      70.0
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C424",
+    "id": "291a418c-a84f-49a2-9b55-f7eba92b8b5b",
+    "text": "C424",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      64.0,
+      68.84
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "F2",
+    "id": "fb7a176a-e50b-4d25-9b80-d609753996b7",
+    "text": "F2",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      86.0,
+      104.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP11",
+    "id": "33b6818e-41b0-458d-bbe7-97e09c5c4ef3",
+    "text": "TP11",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      61.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C100",
+    "id": "30cc2614-4735-4b92-a94b-753f6267c8a3",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      72.0,
+      126.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C100",
+    "id": "1d3897ac-cb9e-4cac-b432-bd668938f28d",
+    "text": "C100",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      72.0,
+      122.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "D3",
+    "id": "82381700-ffce-4f05-90c6-2a9e06ddc3ff",
+    "text": "D3",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      134.0,
+      59.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "J5",
+    "id": "a699850a-ee43-4e3c-94dd-4196c9f846c0",
+    "text": "PCB Edge",
+    "layer": "User.Drawings",
+    "visible": true,
+    "xy": [
+      70.0,
+      50.575
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "J5",
+    "id": "152d5530-42b6-4915-9087-ea290236721c",
+    "text": "J5",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      70.0,
+      59.175
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R33",
+    "id": "416fa535-d152-4ed8-a9f6-c7e8f443c91f",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      140.0,
+      79.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R33",
+    "id": "90a7fbe3-34b0-4f11-9ccd-a62e5897ef1b",
+    "text": "R33",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      140.0,
+      75.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP12",
+    "id": "caeba34f-be71-4375-8413-ba1eacbcaaac",
+    "text": "TP12",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      66.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R31",
+    "id": "80742fb9-9979-4f90-a7db-bf068c5a8549",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      143.0,
+      95.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R31",
+    "id": "6cfa0eb0-345e-4ff6-8356-7030c7710b0b",
+    "text": "R31",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      143.0,
+      91.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP6",
+    "id": "d6ba2c57-c4bf-48b6-99ca-3428318a0a8e",
+    "text": "TP6",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      169.0,
+      107.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "L2",
+    "id": "09f8a7f1-b9e2-45d9-9eee-53608e5374c0",
+    "text": "L2",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      160.0,
+      84.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R108",
+    "id": "921c188c-eb02-45e0-9357-ea34366ed853",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      82.0,
+      143.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R108",
+    "id": "a06da311-3ac0-4bc8-9205-d68bb868444c",
+    "text": "R108",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      82.0,
+      139.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C425",
+    "id": "f45b4466-82e0-4133-b596-9ec0c6d2d3d8",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      66.7,
+      84.95
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "TP25",
+    "id": "7ead0973-f18c-46ea-91f4-7a1df10ec633",
+    "text": "TP25",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      173.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP16",
+    "id": "b26c8495-7113-4fd3-ace6-ba96192f5eff",
+    "text": "TP16",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      100.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R100",
+    "id": "18a406c0-89f9-4f05-9e61-2fe992b0609a",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      62.0,
+      133.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R100",
+    "id": "03da5c9b-2936-4348-8a71-a9fc82f47a32",
+    "text": "R100",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      62.0,
+      129.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "D4",
+    "id": "58125eea-068f-4111-bf42-810deb18e95e",
+    "text": "D4",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      106.0,
+      65.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R169",
+    "id": "947cd11d-d315-4520-b597-16df1eda19ba",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      187.0,
+      134.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R169",
+    "id": "7f05b94b-7c1b-483f-8e93-2576889b9bd8",
+    "text": "R169",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      187.0,
+      130.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C22",
+    "id": "3b873e89-dc4f-4cb1-9d89-654c5bd7f9cf",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      98.0,
+      91.9
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C22",
+    "id": "82953523-e32b-4cf0-8ffe-b238708fd2ee",
+    "text": "C22",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      98.0,
+      88.4
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R168",
+    "id": "8e6c43d8-fa4e-4acd-8f01-b4927fad75c4",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      184.0,
+      143.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R168",
+    "id": "c571a3e9-ee11-4666-86ea-20f5bb1dfacc",
+    "text": "R168",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      184.0,
+      139.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP19",
+    "id": "52480d0d-d354-4085-9599-faa00e9e2a91",
+    "text": "TP19",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      129.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP15",
+    "id": "e3a7ebdf-91bf-43a6-a198-1f8ed135b75d",
+    "text": "TP15",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      95.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "J3",
+    "id": "9149897d-4b77-49d5-abe3-10462ec45b1e",
+    "text": "J3",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      75.0,
+      107.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R500",
+    "id": "b866da20-83f6-4340-8ade-773a3a4fe058",
+    "text": "R500",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      175.0,
+      56.37
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "D2",
+    "id": "9a435d5c-29b1-4261-b703-8400762b28e1",
+    "text": "D2",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      87.0,
+      61.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "H2",
+    "id": "b949352b-24b7-4e92-b915-22587aa22b3e",
+    "text": "H2",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      190.0,
+      50.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "J22",
+    "id": "4396392e-1029-4a66-b289-5b33a0426f89",
+    "text": "J22",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      146.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "F13",
+    "id": "097c7f8d-f8bc-4ee4-a0bf-fb552fa99320",
+    "text": "F13",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      181.0,
+      133.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "F12",
+    "id": "2874b55f-1171-4bc4-b1d3-4ffe99774ddf",
+    "text": "F12",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      147.0,
+      133.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP23",
+    "id": "950c209a-6be9-43b1-b879-01c892354fc2",
+    "text": "TP23",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      163.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R121",
+    "id": "ecbef2ba-60a6-4916-b45c-08e7096901d4",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      92.0,
+      124.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R121",
+    "id": "30acdff5-d373-4f19-a90f-bfd0df9890a1",
+    "text": "R121",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      92.0,
+      120.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C105",
+    "id": "6a20a3e0-cd9c-4e9a-9718-3e85cfdb4c81",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      89.0,
+      147.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C105",
+    "id": "4cf11325-4222-4994-b094-7728223b9c46",
+    "text": "C105",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      89.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP17",
+    "id": "b3352aa9-f67a-4c64-b3d3-0d6e63669170",
+    "text": "TP17",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      105.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C26",
+    "id": "5b063e1f-0a2b-4f0a-859a-806d0eba8c7c",
+    "text": "C26",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      124.0,
+      96.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C120",
+    "id": "016a9468-bbc1-48ba-858f-10c4b2924f73",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      106.0,
+      126.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C120",
+    "id": "7e5e01cb-d0a7-46c3-8b24-4ecae35df166",
+    "text": "C120",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      106.0,
+      122.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C143",
+    "id": "49aceebd-8739-4549-b18d-cb4d7bb89dc9",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      127.0,
+      136.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C143",
+    "id": "34eab967-c6f3-4495-bbe8-68f8697b117b",
+    "text": "C143",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      127.0,
+      132.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C161",
+    "id": "e05d3ed2-1674-49ff-bf53-94f353a45012",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      175.0,
+      131.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C161",
+    "id": "b9fc6a70-6532-4bf4-bc69-3589c60af335",
+    "text": "C161",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      175.0,
+      127.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C3",
+    "id": "74ef66ea-da13-4ae0-be1b-829837a42bf6",
+    "text": "C3",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      157.0,
+      56.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C2",
+    "id": "5e6d02d0-ba74-4b0f-b121-b9029cae2594",
+    "text": "C2",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      141.0,
+      56.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R167",
+    "id": "734764bb-bbbc-4b4b-b25c-2f03c8966d7e",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      185.0,
+      153.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R167",
+    "id": "b10ebdd0-8219-4d12-a800-e137f7cc7d45",
+    "text": "R167",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      185.0,
+      149.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C164",
+    "id": "93808111-0b1e-4f49-8ecf-2b2a1405bcff",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      172.0,
+      139.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C164",
+    "id": "1f12fa68-80e5-464d-99c5-9755eba06735",
+    "text": "C164",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      172.0,
+      135.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U23",
+    "id": "03616ba2-c4bd-4ae8-a18a-c7b7190ac4ca",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      161.0,
+      141.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U23",
+    "id": "19775142-b82f-4037-90ee-4b7772c68f56",
+    "text": "U23",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      161.0,
+      137.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R24",
+    "id": "cc69df76-ea6c-4822-9961-e69dd35fc6ad",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      89.0,
+      85.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R24",
+    "id": "e3c74c49-8ae2-4e47-beac-b3def9ded3b4",
+    "text": "R24",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      89.0,
+      81.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R161",
+    "id": "323f91b8-a67e-4626-a590-9fffca072caa",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      160.0,
+      124.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R161",
+    "id": "0494c514-223e-4dc2-9f85-dc519c780c7d",
+    "text": "R161",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      160.0,
+      120.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "S2",
+    "id": "280af9f2-2cab-4e0a-836a-350cacbaed41",
+    "text": "S2",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      57.0,
+      89.25
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP21",
+    "id": "6b663285-b168-46ab-84d7-580ab1b806bf",
+    "text": "TP21",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      139.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R123",
+    "id": "9599e368-6e1c-4c89-8043-3e3b7bac756d",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      87.0,
+      138.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R123",
+    "id": "d963b2ec-6218-4e4f-992d-9a50ceb32db2",
+    "text": "R123",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      87.0,
+      134.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R403",
+    "id": "2a8542c2-b2e8-479c-90b0-2e1ec0b6aaa7",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      71.4,
+      71.0
+    ],
+    "size": [
+      0.26,
+      0.26
+    ]
+  },
+  {
+    "parent": "R403",
+    "id": "fc22ba56-266f-4b25-bc6d-dfc0437f0893",
+    "text": "R403",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      72.57,
+      71.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C1",
+    "id": "9b94316e-e0e8-4d9c-89f3-2fc50f01e25a",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      77.2,
+      70.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "R124",
+    "id": "262e1f87-838b-4e78-83f0-4b930d409eaa",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      87.0,
+      142.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R124",
+    "id": "0a8ae1e8-b83c-4059-b88f-610bcef65120",
+    "text": "R124",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      87.0,
+      138.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP18",
+    "id": "8e9d7e8a-5cfc-4e68-96db-e0b98e7bdff9",
+    "text": "TP18",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      124.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C160",
+    "id": "c7f17357-5f58-46b4-9c93-3f35a416fa7c",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      174.0,
+      126.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C160",
+    "id": "f99465a0-50eb-47d7-918a-5221b0dfe539",
+    "text": "C160",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      174.0,
+      122.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C140",
+    "id": "f95336af-b8b1-4a5b-acca-3dfb837ed1e3",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      140.0,
+      126.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C140",
+    "id": "b312ebc3-91c9-4dc3-af31-fedb4c7d4cb8",
+    "text": "C140",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      140.0,
+      122.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "F10",
+    "id": "93cca0d4-25a2-405b-ae86-d68d1f59ff6a",
+    "text": "F10",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      79.0,
+      133.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C23",
+    "id": "47dd574c-e037-4427-9aa0-6c037379c00f",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      121.0,
+      85.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C23",
+    "id": "73e2b397-c942-4748-8785-e43ac2757953",
+    "text": "C23",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      121.0,
+      81.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R146",
+    "id": "578289aa-dea2-4843-8e76-024f0c23940a",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      132.0,
+      142.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R146",
+    "id": "a5cd229a-18d6-4924-bf98-573e32e7f29d",
+    "text": "R146",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      132.0,
+      138.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C31",
+    "id": "99a91927-dfd4-4dbc-81e5-02920ee65b1f",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      151.5,
+      91.5
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C31",
+    "id": "21f93e95-e9ed-488d-af55-652c9e3206c0",
+    "text": "C31",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      151.5,
+      88.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C24",
+    "id": "8c56ae5f-df92-4e3d-9f1b-b8aa8309e32c",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      121.0,
+      90.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C24",
+    "id": "3e11d8df-d83c-4456-b637-9ca0d070c438",
+    "text": "C24",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      121.0,
+      86.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U32",
+    "id": "571b24d9-a822-44a1-9a2a-648d154a1cef",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      153.0,
+      147.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U32",
+    "id": "1440b3a7-5fab-446e-9767-37307723468f",
+    "text": "U32",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      153.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP3",
+    "id": "a76cd34f-4293-4f8d-85b4-fe8f8e5f4fcf",
+    "text": "TP3",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      148.0,
+      107.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C165",
+    "id": "fb701f1d-07a8-4778-9824-0b75828241f5",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      191.0,
+      147.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C165",
+    "id": "c937eaa3-bc67-4edf-b8fd-aebae9704dfe",
+    "text": "C165",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      191.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP13",
+    "id": "57039856-7ab0-4e39-8068-41d45c330a64",
+    "text": "TP13",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      71.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R122",
+    "id": "1f46b87c-bf98-41da-967e-1af1124e9ea0",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      92.0,
+      128.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R122",
+    "id": "4874045f-2d6e-4f1f-9b7e-cd8fb44bc62a",
+    "text": "R122",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      92.0,
+      124.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R22",
+    "id": "0abd774c-36f6-4649-96c7-85be7ae4f873",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      94.0,
+      91.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R22",
+    "id": "6c5a7e08-14fb-4770-8d19-d1bdb4e5e82d",
+    "text": "R22",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      94.0,
+      87.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C141",
+    "id": "eb22fc0d-8e84-4d5c-8d56-cab9bbf0c7a8",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      141.0,
+      131.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C141",
+    "id": "0ee5f58f-484f-4733-a64c-dc549e9ecacc",
+    "text": "C141",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      141.0,
+      127.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP20",
+    "id": "bf899fe6-e64d-436b-958d-ff6787c727b7",
+    "text": "TP20",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      134.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "S1",
+    "id": "9b9fc33d-2c33-46e1-9f02-3ed280ee17ab",
+    "text": "S1",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      57.0,
+      59.25
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U13",
+    "id": "dd0d06ee-3e66-41f8-a64d-6905227ffe96",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      167.0,
+      127.0
+    ],
+    "size": [
+      0.9,
+      0.9
+    ]
+  },
+  {
+    "parent": "U13",
+    "id": "4399fa83-20d7-44f2-a943-bd6d6011ecf3",
+    "text": "U13",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      167.0,
+      123.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R126",
+    "id": "e25fa1a9-61a9-4f29-b790-174c0fe8fdc4",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      98.0,
+      142.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R126",
+    "id": "0c57c521-f4e7-458c-8007-3189413fb36e",
+    "text": "R126",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      98.0,
+      138.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "H3",
+    "id": "911440fc-4f4a-479f-887e-de6e57836c4e",
+    "text": "H3",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      54.0,
+      154.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C35",
+    "id": "76478cdb-902d-45be-a748-5749838ee17e",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      139.0,
+      95.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "C35",
+    "id": "a01b5089-d7e9-41f8-90f8-8c53ab057313",
+    "text": "C35",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      139.0,
+      91.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "Q1",
+    "id": "b681be9b-e85c-4c20-94b5-3dd80a7699f0",
+    "text": "Q1",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      117.0,
+      59.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R402",
+    "id": "c2719a44-ca6c-449b-a200-4a4a25bbf65f",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      78.0,
+      59.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R402",
+    "id": "fdd84ad4-85d2-40f3-bc96-2e7275196c24",
+    "text": "R402",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      78.0,
+      57.57
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "H1",
+    "id": "cca2e541-8d59-4883-8457-2be7545b99aa",
+    "text": "H1",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      54.0,
+      50.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C32",
+    "id": "3813945c-f661-4ca3-83d1-8f1e1fc70bda",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      147.0,
+      91.9
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C32",
+    "id": "4a452ffe-a1f7-4d85-ad08-a4d8016d4441",
+    "text": "C32",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      147.0,
+      88.4
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R407",
+    "id": "4d3941d1-5632-4805-920f-a1835be48315",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      63.0,
+      66.5
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R407",
+    "id": "632a13e3-bf85-4677-a404-3cc7c9c1a265",
+    "text": "R407",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      63.0,
+      65.07
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP7",
+    "id": "52317a6a-6ab1-4364-b20a-23451872b2c0",
+    "text": "TP7",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      176.0,
+      107.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R147",
+    "id": "66096dcb-65c5-4ee3-b92b-fe186a74393c",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      151.0,
+      153.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R147",
+    "id": "adc826a3-3fec-4e28-8488-2f18865e279c",
+    "text": "R147",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      151.0,
+      149.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U12",
+    "id": "b99a2fee-825d-4121-be2f-033eb11ab509",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      133.0,
+      127.0
+    ],
+    "size": [
+      0.9,
+      0.9
+    ]
+  },
+  {
+    "parent": "U12",
+    "id": "6e1c8e13-cbe2-4e48-95a8-e7dae162900e",
+    "text": "U12",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      133.0,
+      123.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C142",
+    "id": "b5a33a2c-b712-4a75-823e-783468334093",
+    "text": "C142",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      147.0,
+      116.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U11",
+    "id": "61e97eb1-7050-47b7-894f-18d1747b9640",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      99.0,
+      127.0
+    ],
+    "size": [
+      0.9,
+      0.9
+    ]
+  },
+  {
+    "parent": "U11",
+    "id": "2b92203b-1f33-42be-8144-040b73778b06",
+    "text": "U11",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      99.0,
+      123.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R21",
+    "id": "ae8daf5e-f60c-4971-ad35-1a5b13a05192",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      94.0,
+      95.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R21",
+    "id": "04fb9568-e13b-4222-b502-13b159d134d4",
+    "text": "R21",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      94.0,
+      91.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "J21",
+    "id": "63f66e96-a021-49c6-b90b-21086bcd1571",
+    "text": "J21",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      112.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "F1",
+    "id": "2d0f775a-9afc-4a36-bfd6-10bd9d7d4954",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      107.0,
+      59.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "F1",
+    "id": "add46864-07cc-4fc3-bfd7-855b6e0d5d8b",
+    "text": "F1",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      107.0,
+      55.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R144",
+    "id": "fda23440-602a-4e38-ad67-38d73febcecc",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      121.0,
+      142.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R144",
+    "id": "cd1e515b-b8f1-4411-b01b-5f3f89cc1532",
+    "text": "R144",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      121.0,
+      138.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "J1",
+    "id": "a9c3b20a-0c63-4422-bcc8-427a7e73b2ef",
+    "text": "J1",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      95.0,
+      54.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U30",
+    "id": "18ad5442-5d69-4b17-b74c-093c98435d3f",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      85.0,
+      147.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U30",
+    "id": "46ed023a-ff17-4d83-a5bf-ff75967261f0",
+    "text": "U30",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      85.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R109",
+    "id": "a53aa322-8b96-48db-843f-08ba4917a196",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      85.0,
+      134.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R109",
+    "id": "26632939-0253-4be5-b763-01773c286fd1",
+    "text": "R109",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      85.0,
+      130.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C163",
+    "id": "eae1ef41-80dc-4faf-a899-bed74f8b8381",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      161.0,
+      136.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C163",
+    "id": "c35357ca-5a70-4c49-a634-9e213b81775b",
+    "text": "C163",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      161.0,
+      132.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "J4",
+    "id": "1099eda5-9249-4652-a640-3321860487ea",
+    "text": "J4",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      62.62,
+      105.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R32",
+    "id": "09df418c-3e2e-4939-b8f3-9c43976618a4",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      143.0,
+      91.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R32",
+    "id": "bc0a5e82-cc64-4b7e-826f-846dc052257a",
+    "text": "R32",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      143.0,
+      87.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U31",
+    "id": "f8393ecc-9d42-4e94-bfb6-593fba7e234c",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      119.0,
+      147.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U31",
+    "id": "ba03f3fc-55fd-49d0-bb64-b7a7848c7126",
+    "text": "U31",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      119.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U21",
+    "id": "cf5ff0c2-f260-4ffa-b9b0-e4ddb2584c17",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      93.0,
+      141.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U21",
+    "id": "35243965-0ed4-4f72-89ae-a027c38d01b8",
+    "text": "U21",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      93.0,
+      137.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R142",
+    "id": "511bc21d-babe-419a-bfa7-c6910b5b4026",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      126.0,
+      128.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R142",
+    "id": "69bc3c99-f4ec-4de5-8826-cc877637862a",
+    "text": "R142",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      126.0,
+      124.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R140",
+    "id": "21def605-3de0-416d-92b6-73c633c4c14b",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      130.0,
+      133.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R140",
+    "id": "a6ec6447-84fd-4106-b50a-e69c1ab7e59d",
+    "text": "R140",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      130.0,
+      129.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C423",
+    "id": "4e000363-bbdc-4292-9913-235cc832a6a1",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      87.0,
+      54.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C423",
+    "id": "8744fbf1-0feb-4bb4-aa6b-4eacee8a26af",
+    "text": "C423",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      87.0,
+      52.32
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R107",
+    "id": "1ac23334-b628-4ace-88f6-260c353452f6",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      83.0,
+      153.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R107",
+    "id": "434c878e-cde6-4b70-9a88-6fa59e92f2ef",
+    "text": "R107",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      83.0,
+      149.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U5",
+    "id": "3d051f9c-0a9c-4a2b-afff-7a90cb1ea2bc",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      81.0,
+      72.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U5",
+    "id": "1494f0bc-afea-419d-b3ed-22468c3ad8be",
+    "text": "U5",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      81.0,
+      69.6
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U33",
+    "id": "97a5784b-7991-48bf-91ef-2f4539a0bd6e",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      187.0,
+      147.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U33",
+    "id": "c6c3a050-2d42-4c81-b559-28fc97f8812e",
+    "text": "U33",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      187.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R406",
+    "id": "bc8e0dce-9724-42e9-aca5-d07f04d9bde7",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      84.0,
+      85.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R406",
+    "id": "68e58240-c2a4-4e4d-b2d7-d4ca9d580160",
+    "text": "R406",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      84.0,
+      83.57
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "F3",
+    "id": "738d8c4a-52b4-469b-98a7-225781cedf16",
+    "text": "F3",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      82.0,
+      51.35
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C426",
+    "id": "2e2dc19b-d0f6-471a-b59e-dddb55c41f17",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      73.2,
+      83.5
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "R160",
+    "id": "da1149f0-32be-4c85-a68f-e0b0da167425",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      164.0,
+      133.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R160",
+    "id": "04fade60-ecb1-4179-9fdc-14844b1e1474",
+    "text": "R160",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      164.0,
+      129.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U7",
+    "id": "3cf2850f-6f0e-44d3-b54c-14586a66960e",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      60.0,
+      73.0
+    ],
+    "size": [
+      0.98,
+      0.98
+    ]
+  },
+  {
+    "parent": "U7",
+    "id": "6fab955a-1d9b-4bac-8988-21de09d07d87",
+    "text": "U7",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      60.0,
+      69.6
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R128",
+    "id": "6f9c062d-4ad4-449c-a2d4-cd43bef468bc",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      116.0,
+      143.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R128",
+    "id": "806eb011-2ca9-4154-8c79-6f1ae17b7e2b",
+    "text": "R128",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      116.0,
+      139.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R163",
+    "id": "30b438b9-0061-465e-8497-22295eb3675b",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      155.0,
+      138.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R163",
+    "id": "973d5910-e0d4-408f-b4b8-a7ac9ee639ad",
+    "text": "R163",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      155.0,
+      134.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C422",
+    "id": "3ae41d37-5ece-4ee7-b04a-e57c8b1f768b",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      85.0,
+      70.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "U4",
+    "id": "6369a17a-10c9-4a34-bb19-9027625e877c",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      117.0,
+      72.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U4",
+    "id": "69adc16a-d444-405c-8bd1-e9836149485a",
+    "text": "U4",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      117.0,
+      68.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R408",
+    "id": "ecb13f9a-4625-4f94-bcd7-089a14e3378a",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      57.0,
+      59.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R408",
+    "id": "9355fa22-d4dd-4582-b37b-03a415b5e7d7",
+    "text": "R408",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      57.0,
+      57.57
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "Y1",
+    "id": "f008a5aa-bccc-47db-b312-2a9ff0b50e3e",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      70.0,
+      84.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R404",
+    "id": "532b2f88-bacb-4af2-93ab-b75acb393e6b",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      70.4,
+      71.0
+    ],
+    "size": [
+      0.26,
+      0.26
+    ]
+  },
+  {
+    "parent": "R404",
+    "id": "661f0846-61ba-4584-a4c8-19ece2489f85",
+    "text": "R404",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      71.57,
+      71.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "J20",
+    "id": "ca943213-ee40-4677-91c2-97eca0a91018",
+    "text": "J20",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      78.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R166",
+    "id": "c38cb6ac-c5ba-47c0-9cb4-46c49d57a212",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      166.0,
+      142.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R166",
+    "id": "7a222978-582a-454f-b826-016206cd8724",
+    "text": "R166",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      166.0,
+      138.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R410",
+    "id": "049639d4-7d15-49a1-8fd5-fed341b5f473",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      75.0,
+      66.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R410",
+    "id": "eb236260-1123-477d-95f1-cf890725c7c8",
+    "text": "R410",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      75.0,
+      64.57
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R103",
+    "id": "fc6aa05e-f1af-42e4-bd2d-a8aabd16e451",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      53.0,
+      138.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R103",
+    "id": "4d243d58-3772-463e-b819-eb956aa038af",
+    "text": "R103",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      53.0,
+      134.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C104",
+    "id": "225c2634-7c2b-4a23-981f-98d80bacd321",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      70.0,
+      139.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C104",
+    "id": "11677eed-8dfe-4a42-91b1-487b2b9dc5e8",
+    "text": "C104",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      70.0,
+      135.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C33",
+    "id": "d255ba79-3fac-4d14-8dc1-c7a8ca76f87a",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      170.0,
+      85.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C33",
+    "id": "182eb42e-fa54-4f7f-be42-2b27f10e7ae4",
+    "text": "C33",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      170.0,
+      81.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "L1",
+    "id": "3b86c4dd-3e4c-4b4e-b3d1-22df50f2deac",
+    "text": "L1",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      111.0,
+      84.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C21",
+    "id": "127979bc-f227-4da2-a338-78e67cb93bff",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      102.5,
+      91.5
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C21",
+    "id": "d14104a0-a940-4bd1-8977-1fde20ecbf6f",
+    "text": "C21",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      102.5,
+      88.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C162",
+    "id": "a02a89a9-b61c-47b2-be28-d3b18e196325",
+    "text": "C162",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      181.0,
+      116.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R105",
+    "id": "99b4c4d7-20fe-4b80-b404-92a3cfb4e0da",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      64.0,
+      138.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R105",
+    "id": "4d8c9f56-0dbd-473c-ab6a-9ca234c8b8f4",
+    "text": "R105",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      64.0,
+      134.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "J23",
+    "id": "07652315-0a84-40d0-8e8e-aaf2c059dc9f",
+    "text": "J23",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      180.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP4",
+    "id": "a33d36cd-dd37-4eaa-91b3-1d709f5a8d3e",
+    "text": "TP4",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      155.0,
+      107.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C122",
+    "id": "81d54c20-f947-42c2-a3a9-6c602f63653a",
+    "text": "C122",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      113.0,
+      116.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R148",
+    "id": "094140fd-b3c4-4955-8b30-1b4785229fc8",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      150.0,
+      143.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R148",
+    "id": "7e3b5c25-5c6b-422f-9e20-61b29baafbe1",
+    "text": "R148",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      150.0,
+      139.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP2",
+    "id": "4775ff8d-9d95-40b9-b2c9-8f349e62163b",
+    "text": "TP2",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      141.0,
+      107.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R23",
+    "id": "87f38040-52a6-41f5-a5af-71517fd5fe56",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      91.0,
+      79.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R23",
+    "id": "1bbfb0cf-ee1f-43d8-b73f-5ddb9341de9f",
+    "text": "R23",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      91.0,
+      75.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U10",
+    "id": "d615af87-ae0c-4ec9-bcc9-cbc2664742d7",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      65.0,
+      127.0
+    ],
+    "size": [
+      0.9,
+      0.9
+    ]
+  },
+  {
+    "parent": "U10",
+    "id": "c10c0c86-8d6e-4412-8912-ac751802afb0",
+    "text": "U10",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      65.0,
+      123.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C121",
+    "id": "6056769b-26bd-44db-aeb1-d5ef9a29e14e",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      107.0,
+      131.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C121",
+    "id": "7564ea8d-dfe3-467f-993e-83ee57e6fda1",
+    "text": "C121",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      107.0,
+      127.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C101",
+    "id": "fd080de9-8473-4e1a-81d4-70d3196f0b88",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      73.0,
+      131.0
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C101",
+    "id": "f9432093-c779-4b29-afcf-ac50627f1b28",
+    "text": "C101",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      73.0,
+      127.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R125",
+    "id": "061f316e-c7c6-4abc-a87d-9af979426ace",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      98.0,
+      138.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R125",
+    "id": "f1fa3eb3-c737-4b94-bc49-36df4c82d390",
+    "text": "R125",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      98.0,
+      134.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C400",
+    "id": "02e0412c-2bbc-48f7-ab74-371a162ae02e",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      61.0,
+      87.0
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C400",
+    "id": "87e40ee2-5989-4fc1-bcb0-85e8801dd276",
+    "text": "C400",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      61.0,
+      85.84
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R400",
+    "id": "eb910e0c-1442-42d4-b0a8-6d7a4bebbb91",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      58.0,
+      87.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R400",
+    "id": "fa8211c7-4549-46a2-9d20-bfac22ad1a4a",
+    "text": "R400",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      58.0,
+      85.57
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C144",
+    "id": "f8a90df2-53fa-4043-a03b-843a6cfe9e72",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      138.0,
+      139.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C144",
+    "id": "b4900398-e7bb-42f7-aba8-74f7823e3b5f",
+    "text": "C144",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      138.0,
+      135.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U2",
+    "id": "e569900c-5f49-43bb-99fa-e5f8c4b245d7",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      99.0,
+      88.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U2",
+    "id": "1e95af71-6a27-4268-a391-20dc53d81fec",
+    "text": "U2",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      99.0,
+      84.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U1",
+    "id": "7497e6c1-4a23-445c-8de2-666543575484",
+    "text": "U1",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      70.0,
+      72.17
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R141",
+    "id": "10c278cd-29fa-4d21-80ef-838988805ddb",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      126.0,
+      124.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R141",
+    "id": "2a418386-7f3d-48dd-a2b7-546b0a8fc716",
+    "text": "R141",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      126.0,
+      120.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP24",
+    "id": "d701cb41-2528-4d0a-a5d9-9f48e7328193",
+    "text": "TP24",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      168.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R120",
+    "id": "7bcf0ae1-3e1f-48c5-8e39-08ef98a7a165",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      96.0,
+      133.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R120",
+    "id": "5bc77d37-644b-4bac-b71a-06604f32ab78",
+    "text": "R120",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      96.0,
+      129.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R127",
+    "id": "77aa49c2-2c17-48ca-b738-fcff95dd9b80",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      117.0,
+      153.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R127",
+    "id": "0f52fdec-b53d-419b-9747-e3b83dc63c3e",
+    "text": "R127",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      117.0,
+      149.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C25",
+    "id": "1e14e007-8352-4ecb-9b54-ca2191c6655a",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      90.0,
+      95.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "C25",
+    "id": "57cc86a5-a4ea-4cd3-bb07-55badb2bc05f",
+    "text": "C25",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      90.0,
+      91.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP10",
+    "id": "d19f668d-fc97-41ed-9a6a-5fb35473ff55",
+    "text": "TP10",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      56.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C125",
+    "id": "ebe018ac-3277-47d7-a7ef-f7fbbd24b086",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      123.0,
+      147.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C125",
+    "id": "8236ce3d-5c41-4948-9bf5-2db73b33f576",
+    "text": "C125",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      123.0,
+      143.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U22",
+    "id": "545321e0-51ee-4ded-8aaf-9f7121732084",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      127.0,
+      141.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U22",
+    "id": "2a47e1ec-46e8-4251-ab9f-25dc7079b9e6",
+    "text": "U22",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      127.0,
+      137.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "U3",
+    "id": "076c2842-165b-4c12-b033-3aa653869caf",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      148.0,
+      88.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "U3",
+    "id": "8091e646-24c5-4c0b-b801-f238b4508cfa",
+    "text": "U3",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      148.0,
+      84.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R162",
+    "id": "8136c6c6-0eef-4cf2-bdfc-76e0598c68b4",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      160.0,
+      128.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R162",
+    "id": "7073c14e-c6ac-4b9c-8cd3-3302bc486696",
+    "text": "R162",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      160.0,
+      124.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C124",
+    "id": "f0979756-b5a3-41ac-b259-cb630fc5bf1f",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      104.0,
+      139.0
+    ],
+    "size": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "parent": "C124",
+    "id": "5e377d6a-2572-4454-a71f-f30147668d46",
+    "text": "C124",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      104.0,
+      135.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C36",
+    "id": "da9a52a0-c0d3-40cf-9594-22663d57df32",
+    "text": "C36",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      173.0,
+      96.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R102",
+    "id": "ad73112e-3568-4df7-b1da-1e2e42f33902",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      58.0,
+      128.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R102",
+    "id": "67968cab-9cf9-4ee5-ae39-2919eba91413",
+    "text": "R102",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      58.0,
+      124.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C427",
+    "id": "d9735654-bee6-4fb2-bd3d-945e121b01b1",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      74.0,
+      61.0
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C427",
+    "id": "4a5d8c7e-0b1f-4fa7-b809-cce711da6aa2",
+    "text": "C427",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      74.0,
+      59.84
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "TP22",
+    "id": "615756de-638e-47df-a2ac-96e636a8ae85",
+    "text": "TP22",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      158.0,
+      113.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "D7",
+    "id": "190f766b-5609-4d18-b673-b919d783db18",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      78.0,
+      66.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "D7",
+    "id": "b9488952-0a08-47ed-8493-3846f97a54fc",
+    "text": "D7",
+    "layer": "F.Fab",
+    "visible": false,
+    "xy": [
+      78.0,
+      64.57
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R149",
+    "id": "a419e6fe-9c3c-40d3-b31f-c918ae097913",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      153.0,
+      134.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R149",
+    "id": "ba517127-c86e-42b2-b910-d95227f14026",
+    "text": "R149",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      153.0,
+      130.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R501",
+    "id": "f28b4959-e944-4011-aae7-c3ba4a86fc0f",
+    "text": "R501",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      175.0,
+      71.37
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R143",
+    "id": "c699aa6d-e40b-4d90-ad81-72af15b62772",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      121.0,
+      138.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R143",
+    "id": "eab7b189-8c7b-4560-8dff-599ebfe871dd",
+    "text": "R143",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      121.0,
+      134.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "R101",
+    "id": "0ba08cfa-816c-43c6-942c-9e9bcaf7085f",
+    "text": "${REFERENCE}",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      58.0,
+      124.0
+    ],
+    "size": [
+      0.4,
+      0.4
+    ]
+  },
+  {
+    "parent": "R101",
+    "id": "a8892fad-9d45-4c4f-881e-9986a82c8ec5",
+    "text": "R101",
+    "layer": "F.Fab",
+    "visible": true,
+    "xy": [
+      58.0,
+      120.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "D5",
+    "id": "b7e86fe9-8e28-4282-b66a-0ec699c82ee7",
+    "text": "D5",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      82.0,
+      60.5
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C420",
+    "id": "5e777b3a-d079-46cc-9e74-100dc6cf8f8a",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      74.28,
+      73.5625
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C420",
+    "id": "f774ee91-f65a-4d19-8df3-85b12c2a8ee2",
+    "text": "C420",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      74.28,
+      74.7225
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C414",
+    "id": "9f04fa79-065b-44ca-a954-6bd811f54eee",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      76.5175,
+      74.4
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C414",
+    "id": "1a90bb06-139e-4233-94a1-c276da193125",
+    "text": "C414",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      76.5175,
+      75.56
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C413",
+    "id": "d7713518-dc73-4f07-9513-bb1b2ce58952",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      73.7175,
+      78.0
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C413",
+    "id": "3089ac6e-d2d8-41a2-b95e-2d8cc69f8051",
+    "text": "C413",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      73.7175,
+      79.16
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C419",
+    "id": "a5d0dc18-9cad-40c2-b651-e692d04cb255",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      70.28,
+      73.3625
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C419",
+    "id": "afd3c4e4-e3d5-40f7-a99b-d22d5687dfaf",
+    "text": "C419",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      70.28,
+      74.5225
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C416",
+    "id": "724cffef-7af7-4f27-b352-d3423c628920",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      71.68,
+      74.3625
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C416",
+    "id": "8e504522-4752-4057-a449-16cf1dea3644",
+    "text": "C416",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      71.68,
+      75.5225
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C412",
+    "id": "64cfca5a-f924-4d80-8821-22c6c3472cc0",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      69.02,
+      80.2
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C412",
+    "id": "963a917d-5191-445e-a7c4-fbd94260263e",
+    "text": "C412",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      69.02,
+      79.04
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C421",
+    "id": "f325b15d-e3a7-4080-98fc-2f7c596e43fc",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      73.08,
+      72.5625
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C421",
+    "id": "a067bf57-f716-4a58-b636-b538a9232703",
+    "text": "C421",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      73.08,
+      73.7225
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C417",
+    "id": "cab35ae3-8e89-4101-af19-b01a2bd73bfb",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      72.32,
+      76.2
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C417",
+    "id": "d9415085-05d7-459f-905b-251210b2c1ae",
+    "text": "C417",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      72.32,
+      75.04
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C411",
+    "id": "b09a40ad-07e4-4020-9909-3ff217d8d532",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      66.8425,
+      78.0
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C411",
+    "id": "d8d4d488-e3e6-4586-83b9-aa6f164fd8a7",
+    "text": "C411",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      66.8425,
+      79.16
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C418",
+    "id": "ec0c4f31-3a3a-4ed1-825e-dc0b291718b6",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      70.6,
+      80.68
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C418",
+    "id": "fc6d4c3a-052c-423f-beb9-2bedbe91d531",
+    "text": "C418",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      69.44,
+      80.68
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C30",
+    "id": "bc720e66-88ba-4dcd-be93-d35c6555e17d",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      149.2,
+      86.2
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C30",
+    "id": "5c014fcb-d002-4f0d-a489-f445c7970730",
+    "text": "C30",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      149.2,
+      82.7
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C20",
+    "id": "97eb4491-12c4-48c4-ae02-73484faa5a01",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      101.8,
+      86.8
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C20",
+    "id": "fb3403ae-21b7-4315-95ba-bea6460b058a",
+    "text": "C20",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      101.8,
+      83.3
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C410",
+    "id": "7005e3b8-b97f-45d1-9b7d-129c7656c605",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      65.6,
+      73.12
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C410",
+    "id": "b07e6345-1f19-4cf3-85e6-11f7b184abf8",
+    "text": "C410",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      66.76,
+      73.12
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "parent": "C415",
+    "id": "fd79e8c7-725e-407e-9488-2f483795ca7e",
+    "text": "${REFERENCE}",
+    "layer": "B.Fab",
+    "visible": true,
+    "xy": [
+      73.88,
+      74.5625
+    ],
+    "size": [
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "parent": "C415",
+    "id": "7b547630-b782-4e4f-b4e6-ddf336d06282",
+    "text": "C415",
+    "layer": "B.Fab",
+    "visible": false,
+    "xy": [
+      73.88,
+      75.7225
+    ],
+    "size": [
+      0.8,
+      0.8
+    ]
+  }
+]

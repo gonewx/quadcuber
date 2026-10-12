@@ -1,0 +1,621 @@
+TARGETED RESULTS WRITTEN
+{
+  "source_sha256": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e",
+  "kicad": "10.0.7",
+  "geometry_tolerance_mm": 0.0001,
+  "source_urls": 3,
+  "limits_note": "Different-net copper only for hole-to-copper/track; same-net copper intentionally connected to its plated barrel is excluded. Thermal pads are reported separately from ordinary component PTH. Borderline distances within 0.0003mm polygon approximation tolerance are not flagged.",
+  "hole_classes": {
+    "npth": 14,
+    "component_pth": 67,
+    "thermal_pad_via_function": 28,
+    "native_via": 299
+  },
+  "component_pth_min_ring_by_ref": {
+    "C102": 0.5,
+    "C122": 0.5,
+    "C142": 0.5,
+    "C162": 0.5,
+    "C2": 0.5,
+    "C26": 0.4,
+    "C3": 0.5,
+    "C36": 0.4,
+    "J1": 0.65,
+    "J10": 0.30499999999999994,
+    "J11": 0.30499999999999994,
+    "J12": 0.30499999999999994,
+    "J13": 0.30499999999999994,
+    "J2": 0.35,
+    "J20": 0.35,
+    "J21": 0.35,
+    "J22": 0.35,
+    "J23": 0.35,
+    "J3": 0.35,
+    "J4": 0.35,
+    "J5": 0.254
+  },
+  "smd_pads_narrower_than_025mm": 56,
+  "via_diameter_minus_drill_min_mm": 0.3,
+  "hole_spacing_violations": 0,
+  "native_thermal_pad_strict_045mm_pairs": 1,
+  "mask_gap_below_02mm": 4,
+  "mask_to_other_net_track_below_009mm": 0,
+  "copper_edge_minimum": {
+    "F.Cu": {
+      "clearance_mm": 0.4,
+      "object": {
+        "id": "5d633391-ff72-4a8a-9cf1-a76726be52bc",
+        "ref": "zone:5d633391-ff72-4a8a-9cf1-a76726be52bc",
+        "kind": "zone",
+        "net": "GND",
+        "layer": "F.Cu"
+      },
+      "routed_limit_mm": 0.2,
+      "vcut_limit_mm": 0.4
+    },
+    "In1.Cu": {
+      "clearance_mm": 0.4,
+      "object": {
+        "id": "5ef5fb90-2312-42e8-bc5d-c3a2145d0293",
+        "ref": "zone:5ef5fb90-2312-42e8-bc5d-c3a2145d0293",
+        "kind": "zone",
+        "net": "GND",
+        "layer": "In1.Cu"
+      },
+      "routed_limit_mm": 0.2,
+      "vcut_limit_mm": 0.4
+    },
+    "In2.Cu": {
+      "clearance_mm": 0.4,
+      "object": {
+        "id": "51f5bc73-933e-461b-94a7-f7c2d211f5f5",
+        "ref": "zone:51f5bc73-933e-461b-94a7-f7c2d211f5f5",
+        "kind": "zone",
+        "net": "3V3",
+        "layer": "In2.Cu"
+      },
+      "routed_limit_mm": 0.2,
+      "vcut_limit_mm": 0.4
+    },
+    "B.Cu": {
+      "clearance_mm": 0.4,
+      "object": {
+        "id": "40bf01d6-2133-45ba-8657-3e1e9c7a1a8a",
+        "ref": "zone:40bf01d6-2133-45ba-8657-3e1e9c7a1a8a",
+        "kind": "zone",
+        "net": "GND",
+        "layer": "B.Cu"
+      },
+      "routed_limit_mm": 0.2,
+      "vcut_limit_mm": 0.4
+    }
+  },
+  "copper_spacing_violations": null,
+  "copper_spacing_check": "Full different-net copper-to-copper sweep not completed here; existing native DRC has 0.15mm constraints. Actual hole/copper, pad/mask and outline checks below are independent.",
+  "track_width_min_mm": 0.15,
+  "silk_after_mask_clip_close_to_mask": 73,
+  "fiducial_footprints": 0,
+  "edge_segment_count": 4,
+  "populated_sides": {
+    "top": 156,
+    "bottom": 15
+  },
+  "hole_to_track_violations": 0,
+  "inner_hole_to_copper_violations": 0,
+  "unchanged_source": true
+}
+PTH ring fails []
+Expansion [
+  {
+    "slot": {
+      "id": "f5bb76d1-5ca8-4a76-8bb7-bd471d57b325",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        74.32,
+        56.78
+      ],
+      "size_mm": [
+        1.108,
+        2.208
+      ],
+      "drill_mm": [
+        0.6,
+        1.7
+      ],
+      "layer": "F.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": [
+      {
+        "ref": "track:d45ae99b-2573-4fd8-8747-c22624b25667",
+        "class": "track",
+        "clearance_mm": 0.210998
+      },
+      {
+        "ref": "track:1c9cde93-6b13-45a4-931d-3873bbf8384b",
+        "class": "track",
+        "clearance_mm": 0.2295
+      },
+      {
+        "ref": "track:83e1a1c5-9865-47ec-8c64-46ecab0ba978",
+        "class": "track",
+        "clearance_mm": 0.273197
+      },
+      {
+        "ref": "J5.",
+        "class": "npth",
+        "clearance_mm": 0.551098
+      }
+    ]
+  },
+  {
+    "slot": {
+      "id": "f5bb76d1-5ca8-4a76-8bb7-bd471d57b325",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        74.32,
+        56.78
+      ],
+      "size_mm": [
+        1.108,
+        2.208
+      ],
+      "drill_mm": [
+        0.6,
+        1.7
+      ],
+      "layer": "In1.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": [
+      {
+        "ref": "J5.",
+        "class": "npth",
+        "clearance_mm": 0.551098
+      }
+    ]
+  },
+  {
+    "slot": {
+      "id": "f5bb76d1-5ca8-4a76-8bb7-bd471d57b325",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        74.32,
+        56.78
+      ],
+      "size_mm": [
+        1.108,
+        2.208
+      ],
+      "drill_mm": [
+        0.6,
+        1.7
+      ],
+      "layer": "In2.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": [
+      {
+        "ref": "zone:51f5bc73-933e-461b-94a7-f7c2d211f5f5",
+        "class": "zone",
+        "clearance_mm": 0.2505
+      },
+      {
+        "ref": "J5.",
+        "class": "npth",
+        "clearance_mm": 0.551098
+      }
+    ]
+  },
+  {
+    "slot": {
+      "id": "f5bb76d1-5ca8-4a76-8bb7-bd471d57b325",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        74.32,
+        56.78
+      ],
+      "size_mm": [
+        1.108,
+        2.208
+      ],
+      "drill_mm": [
+        0.6,
+        1.7
+      ],
+      "layer": "B.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": [
+      {
+        "ref": "track:a7600500-eb80-496c-9746-6b660bced47b",
+        "class": "track",
+        "clearance_mm": 0.216797
+      },
+      {
+        "ref": "J5.",
+        "class": "npth",
+        "clearance_mm": 0.551098
+      }
+    ]
+  },
+  {
+    "slot": {
+      "id": "71c472c2-2b78-4094-92d6-faef4fd476a5",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        74.32,
+        52.6
+      ],
+      "size_mm": [
+        1.108,
+        1.908
+      ],
+      "drill_mm": [
+        0.6,
+        1.4
+      ],
+      "layer": "F.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": []
+  },
+  {
+    "slot": {
+      "id": "71c472c2-2b78-4094-92d6-faef4fd476a5",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        74.32,
+        52.6
+      ],
+      "size_mm": [
+        1.108,
+        1.908
+      ],
+      "drill_mm": [
+        0.6,
+        1.4
+      ],
+      "layer": "In1.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": []
+  },
+  {
+    "slot": {
+      "id": "71c472c2-2b78-4094-92d6-faef4fd476a5",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        74.32,
+        52.6
+      ],
+      "size_mm": [
+        1.108,
+        1.908
+      ],
+      "drill_mm": [
+        0.6,
+        1.4
+      ],
+      "layer": "In2.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": [
+      {
+        "ref": "zone:51f5bc73-933e-461b-94a7-f7c2d211f5f5",
+        "class": "zone",
+        "clearance_mm": 0.2505
+      }
+    ]
+  },
+  {
+    "slot": {
+      "id": "71c472c2-2b78-4094-92d6-faef4fd476a5",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        74.32,
+        52.6
+      ],
+      "size_mm": [
+        1.108,
+        1.908
+      ],
+      "drill_mm": [
+        0.6,
+        1.4
+      ],
+      "layer": "B.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": []
+  },
+  {
+    "slot": {
+      "id": "347de923-4367-4ecb-bbae-ee27e6c3b950",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        65.68,
+        56.78
+      ],
+      "size_mm": [
+        1.108,
+        2.208
+      ],
+      "drill_mm": [
+        0.6,
+        1.7
+      ],
+      "layer": "F.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": [
+      {
+        "ref": "track:43ceb25f-a44f-41ae-8ca0-c8adbc1e96a7",
+        "class": "track",
+        "clearance_mm": 0.242297
+      },
+      {
+        "ref": "J5.",
+        "class": "npth",
+        "clearance_mm": 0.551098
+      }
+    ]
+  },
+  {
+    "slot": {
+      "id": "347de923-4367-4ecb-bbae-ee27e6c3b950",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        65.68,
+        56.78
+      ],
+      "size_mm": [
+        1.108,
+        2.208
+      ],
+      "drill_mm": [
+        0.6,
+        1.7
+      ],
+      "layer": "In1.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": [
+      {
+        "ref": "J5.",
+        "class": "npth",
+        "clearance_mm": 0.551098
+      }
+    ]
+  },
+  {
+    "slot": {
+      "id": "347de923-4367-4ecb-bbae-ee27e6c3b950",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        65.68,
+        56.78
+      ],
+      "size_mm": [
+        1.108,
+        2.208
+      ],
+      "drill_mm": [
+        0.6,
+        1.7
+      ],
+      "layer": "In2.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": [
+      {
+        "ref": "zone:51f5bc73-933e-461b-94a7-f7c2d211f5f5",
+        "class": "zone",
+        "clearance_mm": 0.2505
+      },
+      {
+        "ref": "J5.",
+        "class": "npth",
+        "clearance_mm": 0.551098
+      }
+    ]
+  },
+  {
+    "slot": {
+      "id": "347de923-4367-4ecb-bbae-ee27e6c3b950",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        65.68,
+        56.78
+      ],
+      "size_mm": [
+        1.108,
+        2.208
+      ],
+      "drill_mm": [
+        0.6,
+        1.7
+      ],
+      "layer": "B.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": [
+      {
+        "ref": "J5.",
+        "class": "npth",
+        "clearance_mm": 0.551098
+      }
+    ]
+  },
+  {
+    "slot": {
+      "id": "0836535f-55ed-488c-9bba-38c7f0834379",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        65.68,
+        52.6
+      ],
+      "size_mm": [
+        1.108,
+        1.908
+      ],
+      "drill_mm": [
+        0.6,
+        1.4
+      ],
+      "layer": "F.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": []
+  },
+  {
+    "slot": {
+      "id": "0836535f-55ed-488c-9bba-38c7f0834379",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        65.68,
+        52.6
+      ],
+      "size_mm": [
+        1.108,
+        1.908
+      ],
+      "drill_mm": [
+        0.6,
+        1.4
+      ],
+      "layer": "In1.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": []
+  },
+  {
+    "slot": {
+      "id": "0836535f-55ed-488c-9bba-38c7f0834379",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        65.68,
+        52.6
+      ],
+      "size_mm": [
+        1.108,
+        1.908
+      ],
+      "drill_mm": [
+        0.6,
+        1.4
+      ],
+      "layer": "In2.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": [
+      {
+        "ref": "zone:51f5bc73-933e-461b-94a7-f7c2d211f5f5",
+        "class": "zone",
+        "clearance_mm": 0.2505
+      }
+    ]
+  },
+  {
+    "slot": {
+      "id": "0836535f-55ed-488c-9bba-38c7f0834379",
+      "ref": "J5.S1",
+      "kind": "pad",
+      "net": "GND",
+      "footprint_ref": "J5",
+      "pad": "S1",
+      "attribute": 0,
+      "xy": [
+        65.68,
+        52.6
+      ],
+      "size_mm": [
+        1.108,
+        1.908
+      ],
+      "drill_mm": [
+        0.6,
+        1.4
+      ],
+      "layer": "B.Cu"
+    },
+    "additional_expansion_mm": 0.0,
+    "neighbors": []
+  }
+]
+THERMAL Counter({(1.0, 1.0, 1.0): 24, (1.0, 0.0, 0.417102): 4})

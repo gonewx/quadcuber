@@ -215,7 +215,7 @@
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:33097): WARNING **: 11:58:17.330: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:33097): WARNING **: 11:58:17.567: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:34459): WARNING **: 12:13:06.660: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:34459): WARNING **: 12:13:06.915: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [
@@ -227,7 +227,7 @@
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:33108): WARNING **: 11:58:17.867: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:33108): WARNING **: 11:58:18.006: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:34466): WARNING **: 12:13:07.235: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:34466): WARNING **: 12:13:07.370: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [
@@ -239,7 +239,7 @@
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:33115): WARNING **: 11:58:18.223: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:33115): WARNING **: 11:58:18.537: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:34473): WARNING **: 12:13:07.581: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:34473): WARNING **: 12:13:08.042: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [
@@ -251,7 +251,7 @@
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:33122): WARNING **: 11:58:18.856: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:33122): WARNING **: 11:58:18.955: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:34480): WARNING **: 12:13:08.434: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:34480): WARNING **: 12:13:08.561: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [

@@ -1,0 +1,49 @@
+{
+  "all_automatic_checks_pass": true,
+  "native_footprints": 200,
+  "bom_rows": 200,
+  "cpl_rows": 171,
+  "populated_quantity": 171,
+  "dnp": [
+    "C26",
+    "C36"
+  ],
+  "zero_quantity_in_original_cpl": [],
+  "native_edge_centerline_size_mm": [
+    144.0,
+    112.0
+  ],
+  "annular_min_by_class": {
+    "via": {
+      "class": "via",
+      "reference": "8961f878-ee42-485f-be68-d4dd536c16ca",
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "annular_mm": 0.15
+    },
+    "component_pad": {
+      "class": "component_pad",
+      "reference": "U13.9",
+      "diameter_mm": [
+        0.63,
+        0.63
+      ],
+      "drill_mm": [
+        0.33,
+        0.33
+      ],
+      "annular_mm": 0.15,
+      "offset_mm": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "mask_setup": {
+    "expansion_mm": 0.0,
+    "min_web_mm": 0.0,
+    "allow_bridges_in_footprints": false
+  },
+  "minimum_track_width_mm": 0.15
+}
+FAILURES []

@@ -1,5 +1,5 @@
 {
-  "source_sha256": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
+  "source_sha256": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e",
   "kicad": "10.0.7",
   "geometry_tolerance_mm": 0.0001,
   "source_urls": [
@@ -26178,7 +26178,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "G",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26188,7 +26188,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "TX",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26198,7 +26198,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "RX",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26208,7 +26208,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "M1",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26218,7 +26218,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "BOOT",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26228,7 +26228,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "RESET",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26238,7 +26238,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "M2",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26248,7 +26248,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "3V3",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26258,7 +26258,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "A",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26268,7 +26268,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "IO",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26278,7 +26278,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "SWD",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26288,7 +26288,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "G",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26298,7 +26298,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "B",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26308,7 +26308,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "CLK",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26318,7 +26318,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "USB",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26328,7 +26328,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "GP25",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26338,7 +26338,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "RUN",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26348,7 +26348,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "G",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26358,7 +26358,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "+",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26368,7 +26368,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "S",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26378,7 +26378,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "M1",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26388,7 +26388,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "+9V",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26398,7 +26398,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "M2",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26408,7 +26408,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "A",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26418,7 +26418,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "GND",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26428,7 +26428,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "B",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26438,7 +26438,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "G",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26448,7 +26448,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "+",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26458,7 +26458,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "S",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26468,7 +26468,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "M1",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26478,7 +26478,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "M2",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26488,7 +26488,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "GND",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26498,7 +26498,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "A",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26508,7 +26508,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "B",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26518,7 +26518,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "VM",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26528,7 +26528,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "5A",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26538,7 +26538,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "G",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26548,7 +26548,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "+",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26558,7 +26558,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "S",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26568,7 +26568,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "5B",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26578,7 +26578,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "M1",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26588,7 +26588,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "ENC",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26598,7 +26598,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "M2",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26608,7 +26608,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "A",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26618,7 +26618,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "3V3",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26628,7 +26628,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "B",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26638,7 +26638,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "VSYS",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26648,7 +26648,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "G",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26658,7 +26658,7 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "+",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     },
     {
@@ -26668,532 +26668,11 @@
       "net": "",
       "layer": "F.Silkscreen",
       "text": "S",
-      "height_mm": 0.8,
+      "height_mm": 1.0,
       "width_mm": 0.12
     }
   ],
-  "silk_text_below_1mm": [
-    {
-      "id": "4f001985-230f-41dc-849b-554eb994e878",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "G",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "85da8c56-d52a-4f66-b1ac-c74d988fbd7f",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "TX",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "6e2539cd-6757-4853-b7f7-c6e85111c227",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "RX",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "bc9910a9-1e25-49a9-aa04-a37164b1c385",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "M1",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "056eb526-08dd-4bca-9733-850e6feb156e",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "BOOT",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "35d661a7-98b6-4a20-9e29-8a3be751f779",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "RESET",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "d623821a-8ab8-4448-8312-6b555b0e39b6",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "M2",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "d2ea37aa-41a8-495c-a20a-f1301d643bc9",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "3V3",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "b5bbe193-812f-4b1e-9833-59be59d2aa4e",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "A",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "13f711be-9aeb-4810-905f-04861a987d78",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "IO",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "59fe599b-025b-43c9-84b4-75b01090bc93",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "SWD",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "7c058857-6275-49f3-a4a0-b75d54c543e9",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "G",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "1bec1d37-cbb5-4f17-8ce8-b3aa8faa71ff",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "B",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "6ea95381-7a1a-40c0-996b-b0ecf7f54c74",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "CLK",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "c461e900-fef3-4a00-a5c7-a21b69f7d2c9",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "USB",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "56170033-e942-489d-af4a-3927839177c9",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "GP25",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "a1ae56f1-7def-4059-9a21-bfc8b5a3a6ce",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "RUN",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "fad28531-5d5a-4f44-9c3e-3a07d12ad93a",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "G",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "a5388299-fb08-4642-a4e0-4cd3340b004b",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "+",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "b86a3bdf-2c88-4a3f-964f-34ded47ac592",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "S",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "4109a07f-15bd-432a-a18e-fadae4e3e326",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "M1",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "1f813f77-4ea4-4d6a-af49-369b7879183c",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "+9V",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "a197a5b9-89db-4019-894c-cce59214cc73",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "M2",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "3e1609af-95ed-462d-84cd-c883c4672509",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "A",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "90d46957-50f5-4004-a216-6ec2eb048f38",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "GND",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "edb85145-fd83-4aec-9c72-7b1d9374cfc5",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "B",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "4f42a034-0eac-46a2-b240-9be5cc176511",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "G",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "fb919f45-2b0f-4bfe-9fe7-18bee44251c0",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "+",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "1ba4ddc6-ccaa-4ab6-895e-c703003dd9e4",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "S",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "fc6664ef-e7f2-4a30-a3cf-c875ec8020ef",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "M1",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "190cd4f6-214b-4a1f-bb28-98cddb260c79",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "M2",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "63bcac2f-1b47-4479-8710-682850df4c92",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "GND",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "4ee6dfb9-5a18-4900-9ae9-350c68c1cf5c",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "A",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "a4a64345-5d37-41e5-902e-55886384dee4",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "B",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "b50ad075-2117-4f91-8ff9-47d2fe8e8ddc",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "VM",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "85f53b9c-c6c1-40b3-8922-eb3da7e3d7f1",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "5A",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "06d73c8f-a8be-4fda-a642-e101081990a6",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "G",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "9e4981a1-7c4f-489d-993c-3173066d6fb3",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "+",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "3c9dccd5-0de1-4688-9fde-f82971094bf9",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "S",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "cf504a8f-eedf-4e5a-b2cd-579cd38d4269",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "5B",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "15e8066a-1ad9-4886-90f5-c088913527f3",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "M1",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "08ce3f64-d728-40ff-91cf-6e70e28716a5",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "ENC",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "d817d309-16db-4187-b7af-1a1f035d8c0f",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "M2",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "df53d20a-da37-4cc6-88b6-1b5e1769d4a4",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "A",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "de21ec6d-e19a-4267-be13-dd50dc183580",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "3V3",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "5400219f-db90-4ac6-88ef-27e2d686b511",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "B",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "b7bac4f4-e957-4561-8444-0d878c98d01f",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "VSYS",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "17e3f3bb-844c-4cfe-a595-eeff70b2abdb",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "G",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "669444aa-4ae1-42d1-91a1-3176109ffe23",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "+",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "9c45a42a-3c5a-4c7a-850b-c60e1bc13b3f",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "S",
-      "height_mm": 0.8,
-      "width_mm": 0.12
-    },
-    {
-      "id": "edd265e8-15ac-43d5-8587-cdad11490ed8",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "9V ONLY   USB = LOGIC ONLY",
-      "height_mm": 0.8,
-      "width_mm": 0.15
-    },
-    {
-      "id": "84381ea4-fd1e-4e5f-8b9b-1ae40a08e1cc",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "EV3 PINMAP/CURRENT UNVERIFIED - DO NOT FABRICATE",
-      "height_mm": 0.8,
-      "width_mm": 0.15
-    }
-  ],
+  "silk_text_below_1mm": [],
   "silk_after_mask_clip_close_to_mask": [
     {
       "object": {

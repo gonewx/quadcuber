@@ -1,6 +1,6 @@
 {
   "tool": "10.0.7",
-  "source_sha256": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
+  "source_sha256": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e",
   "checks": [
     {
       "check": "BOM unique references",
@@ -96,12 +96,12 @@
     {
       "check": "Fresh export gerbers",
       "pass": true,
-      "detail": "Plotted to '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-F_Cu.gtl'.\nPlotted to '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-In1_Cu.g1'.\nPlotted to '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-In2_Cu.g2'.\nPlotted to '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-B_Cu.gbl'.\nPlotted to '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-F_Paste.gtp'.\nPlotted to '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-B_Paste.gbp'.\nPlotted to '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-F_Silkscreen.gto'.\nPlotted to '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-B_Silkscreen.gbo'.\nPlotted to '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-F_Mask.gts'.\nPlotted to '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-B_Mask.gbs'.\nPlotted to '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-Edge_Cuts.gm1'.\n"
+      "detail": "Plotted to '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-F_Cu.gtl'.\nPlotted to '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-In1_Cu.g1'.\nPlotted to '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-In2_Cu.g2'.\nPlotted to '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-B_Cu.gbl'.\nPlotted to '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-F_Paste.gtp'.\nPlotted to '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-B_Paste.gbp'.\nPlotted to '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-F_Silkscreen.gto'.\nPlotted to '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-B_Silkscreen.gbo'.\nPlotted to '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-F_Mask.gts'.\nPlotted to '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-B_Mask.gbs'.\nPlotted to '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-Edge_Cuts.gm1'.\n"
     },
     {
       "check": "Fresh export drill",
       "pass": true,
-      "detail": "Created file '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-PTH.drl'\nCreated file '/tmp/quadcuber-fabrication-4ckunreh/quadcuber-NPTH.drl'\nDone.\n"
+      "detail": "Created file '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-PTH.drl'\nCreated file '/tmp/quadcuber-fabrication-z9plprzw/quadcuber-NPTH.drl'\nDone.\n"
     },
     {
       "check": "Gerber job native stackup/specs/rules fresh export",
@@ -207,7 +207,7 @@
     {
       "check": "Native source unchanged",
       "pass": true,
-      "detail": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44"
+      "detail": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e"
     }
   ],
   "all_automatic_checks_pass": true,
@@ -375,27 +375,27 @@
     "4": 299
   },
   "original_files_sha256": {
-    "electronics/quadcuber.kicad_pcb": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
+    "electronics/quadcuber.kicad_pcb": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e",
     "electronics/quadcuber.kicad_pro": "ac152eda29668a9e3d24a2b0b9e71fe127afb965978503afcaabbe787b566dbd",
     "generated/electronics/bom.csv": "1ddd6eb9967414952ba391555c7e8fdbfd042f5155f91776ae2a5d50134e4446",
     "generated/electronics/positions.csv": "7a9dc3fea81b18233c1e46ed544b21885d5fc4b84135988a4513ac5e5f47de94",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/DO_NOT_FABRICATE.txt": "72a895ca24bd2752fcbbbd09f68ec617d7097839184d6d13a3bdd16386927e04",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Cu.gbl": "b90993fd78557b2ecce0a24521516a094ef7f045826a9e88e990ec61e7b24b34",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Mask.gbs": "a35142559162f388449ae77dac3c3930b688d01e4c0bc5e9832b41ef97a768b8",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Paste.gbp": "6c2871caa1c74dd027aaa52e90ef7ddbc609a41c715d1c557541fd5a7d94b6cb",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Silkscreen.gbo": "31ac5ee579db42d2463f4edfc656e98c750d02aba61654dc9d20627b3dbe9198",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-Edge_Cuts.gm1": "dfbaeb41a00f7b6c4d05727ce22a1ceff385fa9152445de1cce7af519651a60b",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Cu.gtl": "0e963f5f6eccc1375d1571bbd796e582ecdbfc7f4be2e3250fef7abc23dd8ac3",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Mask.gts": "11dd689e1697426c8a4a6a8e55ca9af19d8e0d90b17b9abcc915a7b81f3bab0d",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Paste.gtp": "1ba7b62b072d7089f90bba9b66765ff429259344c9cbd361bd42848c56949acb",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Silkscreen.gto": "c0b1cf52686c470dcc12701e14148844545d6914bfa7abb929079120d9b0391a",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-In1_Cu.g1": "43c9134ca1c8b74aada9c1e6c8df5965b7e81a48a23b24aa51306925f6b0c11a",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-In2_Cu.g2": "2cf68c9ff729f64b441776b09b7469be792f2f90fbe020a504d3e5fd85502f36",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-NPTH-drl_map.svg": "37edd7ff8bba20b6e7d71c1d7b974557b8540918a198eaa43d7ccfe8be636506",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-NPTH.drl": "26bc3e6cf5c285e5aa590fff25e95c95a0110df2e13d170f8ab51f91cb877454",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-PTH-drl_map.svg": "232cf3bcd26dcb385229945b3a50a25a17145341928a0e7a772924d087cb6623",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-PTH.drl": "40d655b322fb95a02e153b95758a10e0bc84eb4d4e6f79e4544825c2a1efbdce",
-    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-job.gbrjob": "722d5b1c0d5734e2582b58caade0dca1527809c2bf65f0330ff1cde224afa9d2"
+    "generated/electronics/fabrication-preview-NOT-RELEASED/DO_NOT_FABRICATE.txt": "1b6a1e5c36163a8032af9153830958f7decb599519bf06c87ca5474dfa495540",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Cu.gbl": "3a5d21f357c66586db33919c48e1326986c54daf967211d3c9dc087db03450c7",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Mask.gbs": "9ccd4b8fb5804be6864398acd398fa7219801b94a054af304bd4edd7d1e05683",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Paste.gbp": "7a8bd0501b5bd38c0ece49e15e14958901d013b6b77aa0a3937d960a6b965a96",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Silkscreen.gbo": "acf86aff891ccda7a3c7ced03f01c25c4f1f04fc28483be7681d882f4a7c8cdb",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-Edge_Cuts.gm1": "9488e2f5ff0ea949e7964ae4083d2f97cf48e55c3a612c7256d76560cb6e0a5d",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Cu.gtl": "21f85c1b61a8d2c5dcf2be7cf8c687086e17bbe4702b0bcb3832edbdd0e42bfe",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Mask.gts": "a0db4dfe2278c77ee7792a67c1bd09dbc9735ea2a1577afc911b61c9aef1e016",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Paste.gtp": "f457aa60ab9de86569f7d50352c3395902dd5302aced011a29ff37466943db38",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Silkscreen.gto": "31c76d1e33d15aa4d802b5930b73cb90c65c24d866607a92654847f8b6430be9",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-In1_Cu.g1": "bf792c69d150dd402c98f63c1610ad2a8fa3a1107d87442f26637179c4ff6faa",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-In2_Cu.g2": "a0a1c15dbb30bdbd0255deee73c5342f88447e311f6cdb86c01047f968a9fbe3",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-NPTH-drl_map.svg": "f77ea1a3a6164df45606fc24ff08ecbb24ab89e951710992d36cccc63ef5cf8d",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-NPTH.drl": "c0fa452d1906f44dd043658242eeaacf19cc3c5549f74d15c78b438536412ce1",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-PTH-drl_map.svg": "3ecd5691d5805cb659639795a704ecc6c0ed26a9894853dfdd2d6966487972bd",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-PTH.drl": "f82cc4a76a6cd741e635fd76093e49096ed700dea9c7704d73148d80ffccebfc",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-job.gbrjob": "ab96f8ba7a9dbc4e1d907c04bec3340db0639a1d20a7e205911a6fc88e9e9c86"
   },
   "polarity_limit": "Pad/net/position table is a static assembly aid, not independent MPN pin-1 or feeder rotation validation; connector user drawing still needs physical orientation and pin mapping verification."
 }

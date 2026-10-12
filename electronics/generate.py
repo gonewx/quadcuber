@@ -146,9 +146,9 @@ if '--metadata-only' not in sys.argv:
         t=p.PCB_TEXT(b);t.SetText(text);t.SetPosition(vec(x+50,y+50));t.SetTextSize(vec(sz,sz));t.SetTextThickness(p.FromMM(.15));t.SetLayer(layer);b.Add(t)
     txt('QUADCUBER A1  /  ENGINEERING HOLD',105,20,1.1)
     txt('9V ONLY   USB = LOGIC ONLY',87,28,1)
-    txt('EV3 PINMAP/CURRENT UNVERIFIED - DO NOT FABRICATE',95,58,.8)
+    txt('EV3 PINMAP/CURRENT UNVERIFIED - DO NOT FABRICATE',95,58,1)
     for idx,arm in enumerate(['R','L','F','B']):txt(arm,27+34*idx,109,1.5)
-    txt('G + S',132,106,.8)
+    txt('G + S',132,106,1)
     p.SaveBoard(str(HERE/'quadcuber.kicad_pcb'),b)
 (OUT/'circuit.json').write_text(json.dumps(C,indent=2,ensure_ascii=False)+'\n')
 with (OUT/'bom.csv').open('w') as f:

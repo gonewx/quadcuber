@@ -1,0 +1,20 @@
+{
+  "variant": "ENG-FULL-EV3-v3-CN-SILK",
+  "status": "REVIEW_ONLY_NOT_RELEASED_NOT_ORDERED",
+  "design_baseline_commit": "eb085ea323278550f2c8823be6b62153bf5e8b53",
+  "pcb_sha256": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e",
+  "populated_ref_count": 171,
+  "do_not_populate": [
+    "C26",
+    "C36"
+  ],
+  "conditions": [
+    "Full EV3: same-lot six-way continuity and physical fit before fabrication; contact operating limits unverified",
+    "Domestic JLC CAM, assembly and stackup acceptance required",
+    "Controlled first-board testing remains pending"
+  ],
+  "output_sha256": {
+    "ENG-FULL-EV3-v3-CN-SILK-bom.csv": "894bfe86f7357be6e193289ee27ecd4baa5e93f7ebcd7f82d76afdb3df63d214",
+    "ENG-FULL-EV3-v3-CN-SILK-positions.csv": "08ec6b43a34179f566a1c90ecbefed33751cc75b26cc31c8778e51b3a63620f7"
+  }
+}
