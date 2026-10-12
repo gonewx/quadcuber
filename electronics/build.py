@@ -30,7 +30,7 @@ run('kicad-cli','sch','erc','-o',O/'erc.rpt',SCH)
 run('kicad-cli','sch','export','netlist','--format','kicadxml','-o',O/'netlist.xml',SCH)
 run('kicad-cli','sch','export','pdf','-o',O/'schematic.pdf',SCH)
 run('kicad-cli','sch','export','svg','-o',str(O/'schematic')+'/',SCH)
-run('kicad-cli','pcb','drc','-o',O/'drc.rpt',PCB)
+run('kicad-cli','pcb','drc','--schematic-parity','-o',O/'drc.rpt',PCB)
 for name,layers in [('pcb-top','F.Cu,F.Silkscreen,Edge.Cuts'),('pcb-bottom','B.Cu,B.Silkscreen,Edge.Cuts'),('assembly','F.Fab,Edge.Cuts'),('assembly-bottom','B.Fab,Edge.Cuts'),('ground-plane','In1.Cu,Edge.Cuts'),('vm-plane','In2.Cu,Edge.Cuts')]:
     run('kicad-cli','pcb','export','svg','--mode-single','--fit-page-to-board','--exclude-drawing-sheet','--layers',layers,'-o',O/(name+'.svg'),PCB)
 if shutil.which('inkscape'):
@@ -43,11 +43,14 @@ run('kicad-cli','pcb','export','pos','--format','csv','--units','mm','--side','b
 run('/usr/bin/python3',H/'check.py')
 erc=(O/'erc.rpt').read_text();drc=(O/'drc.rpt').read_text()
 count=lambda pat,txt:int(re.search(pat,txt).group(1)) if re.search(pat,txt) else None
-status={'revision':'A0','manufacturing_release':False,'hardware_tested':False,'erc_errors':count(r'Errors (\d+)',erc),'erc_warnings':count(r'Warnings (\d+)',erc),'drc_violations':count(r'Found (\d+) DRC violations',drc),'unconnected_pads':count(r'Found (\d+) unconnected',drc),'release_blockers':['Adafruit4434 PCB-tail coordinates, numbering and contact-current rating not confirmed; provisional footprint must be replaced','New mounting bracket/feet and cable-motion clearance not finalized','Prototype concurrent-load, regenerative transient, thermal and power-combination tests outstanding'],'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(p for p in H.glob('*.kicad_*') if p.suffix in ['.kicad_sch','.kicad_pcb','.kicad_pro'])},'tool_version':run('kicad-cli','version').strip()}
+status={'revision':'A1','manufacturing_release':False,'hardware_tested':False,'erc_errors':count(r'Errors (\d+)',erc),'erc_warnings':count(r'Warnings (\d+)',erc),'drc_violations':count(r'Found (\d+) DRC violations',drc),'footprint_errors':count(r'Found (\d+) Footprint errors',drc),'unconnected_pads':count(r'Found (\d+) unconnected',drc),'release_blockers':['EV3 hole geometry updated from user drawing; actual MPN, pin numbers 1-5/view, contact rating and full ear envelope remain unconfirmed','New mounting bracket/feet and cable-motion clearance not finalized','Prototype concurrent-load, regenerative transient, thermal and power-combination tests outstanding','First-board RP2040 UF2 boot and USB host-off data-pin backfeed tests outstanding; USB impedance stackup requires fabricator approval','W25Q16JVSNIQ is EOL; qualify current-production alternate before production'],'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(p for p in H.glob('*.kicad_*') if p.suffix in ['.kicad_sch','.kicad_pcb','.kicad_pro','.kicad_dru'])},'tool_version':run('kicad-cli','version').strip()}
 (O/'release-status.json').write_text(json.dumps(status,indent=2)+'\n')
 (O/'build-log.json').write_text(json.dumps(commands,indent=2)+'\n')
-(fab/'DO_NOT_FABRICATE.txt').write_text('ENGINEERING PREVIEW ONLY - NOT RELEASED\nEV3 4434 footprint is PROVISIONAL. Read electronics/README.md.\n'+json.dumps(status,indent=2)+'\n')
+(fab/'DO_NOT_FABRICATE.txt').write_text('ENGINEERING PREVIEW ONLY - NOT RELEASED\nEV3 geometry follows user drawing; PINMAP/MPN/CURRENT remain HOLD. Read electronics/README.md.\n'+json.dumps(status,indent=2)+'\n')
 # KiCad SVG exporter leaves trailing spaces; normalize formatting only.
 for svg in O.rglob('*.svg'):
     svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
 print(json.dumps(status,indent=2))
+
+if any(status[k] != 0 for k in ['erc_errors','erc_warnings','drc_violations','unconnected_pads','footprint_errors']):
+    raise SystemExit('EDA checks failed; exported files remain engineering previews. See reports.')

@@ -1,123 +1,187 @@
 [
   {
     "ref": "U1",
-    "value": "Pico H socketed",
-    "fp": "Quadcuber:Pico_H_Sockets",
+    "value": "RP2040",
+    "fp": "Quadcuber:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm_ThermalVias",
     "pins": {
-      "1": "GP0",
-      "2": "GP1",
-      "3": "GND",
+      "1": "3V3",
+      "2": "GP0",
+      "3": "GP1",
       "4": "GP2",
       "5": "GP3",
       "6": "GP4",
       "7": "GP5",
-      "8": "GND",
-      "9": "GP6",
-      "10": "GP7",
+      "8": "GP6",
+      "9": "GP7",
+      "10": "3V3",
       "11": "GP8",
       "12": "GP9",
-      "13": "GND",
-      "14": "GP10",
-      "15": "GP11",
-      "16": "GP12",
-      "17": "GP13",
-      "18": "GND",
-      "19": "GP14",
-      "20": "GP15",
-      "21": "GP16",
-      "22": "GP17",
-      "23": "GND",
-      "24": "GP18",
-      "25": "GP19",
-      "26": "GP20",
-      "27": "GP21",
-      "28": "GND",
-      "29": null,
-      "30": "RUN",
-      "31": null,
-      "32": null,
-      "33": "GND",
+      "13": "GP10",
+      "14": "GP11",
+      "15": "GP12",
+      "16": "GP13",
+      "17": "GP14",
+      "18": "GP15",
+      "19": "GND",
+      "20": "XIN",
+      "21": "XOUT",
+      "22": "3V3",
+      "23": "1V1",
+      "24": "SWCLK",
+      "25": "SWDIO",
+      "26": "RUN",
+      "27": "GP16",
+      "28": "GP17",
+      "29": "GP18",
+      "30": "GP19",
+      "31": "GP20",
+      "32": "GP21",
+      "33": "3V3",
       "34": null,
       "35": null,
-      "36": "3V3",
-      "37": null,
-      "38": "GND",
-      "39": "VSYS",
-      "40": null
+      "36": "GP24",
+      "37": "GP25",
+      "38": null,
+      "39": null,
+      "40": null,
+      "41": null,
+      "42": "3V3",
+      "43": "3V3",
+      "44": "3V3",
+      "45": "1V1",
+      "46": "USB_DM_MCU",
+      "47": "USB_DP_MCU",
+      "48": "3V3",
+      "49": "3V3",
+      "50": "1V1",
+      "51": "QSPI_SD3",
+      "52": "QSPI_SCLK",
+      "53": "QSPI_SD0",
+      "54": "QSPI_SD2",
+      "55": "QSPI_SD1",
+      "56": "QSPI_SS",
+      "57": "GND"
     },
     "xy": [
-      12,
-      8
+      20,
+      27
     ],
-    "mpn": "SC0917",
+    "mpn": "RP2040",
     "mfr": "Raspberry Pi",
     "section": "controller",
     "names": {
-      "1": "GP0",
-      "2": "GP1",
-      "4": "GP2",
-      "5": "GP3",
-      "6": "GP4",
-      "7": "GP5",
-      "9": "GP6",
-      "10": "GP7",
-      "11": "GP8",
-      "12": "GP9",
-      "14": "GP10",
-      "15": "GP11",
-      "16": "GP12",
-      "17": "GP13",
-      "19": "GP14",
-      "20": "GP15",
-      "21": "GP16",
-      "22": "GP17",
-      "24": "GP18",
-      "25": "GP19",
-      "26": "GP20",
-      "27": "GP21",
-      "29": "GP22",
-      "31": "GP26",
-      "32": "GP27",
-      "34": "GP28",
-      "30": "RUN",
-      "36": "3V3_OUT",
-      "39": "VSYS",
-      "40": "VBUS_USB_NC",
-      "37": "3V3_EN_NC",
-      "35": "ADC_VREF_NC"
+      "2": "GPIO0",
+      "3": "GPIO1",
+      "4": "GPIO2",
+      "5": "GPIO3",
+      "6": "GPIO4",
+      "7": "GPIO5",
+      "8": "GPIO6",
+      "9": "GPIO7",
+      "11": "GPIO8",
+      "12": "GPIO9",
+      "13": "GPIO10",
+      "14": "GPIO11",
+      "15": "GPIO12",
+      "16": "GPIO13",
+      "17": "GPIO14",
+      "18": "GPIO15",
+      "27": "GPIO16",
+      "28": "GPIO17",
+      "29": "GPIO18",
+      "30": "GPIO19",
+      "31": "GPIO20",
+      "32": "GPIO21",
+      "34": "GPIO22",
+      "35": "GPIO23",
+      "36": "GPIO24",
+      "37": "GPIO25",
+      "38": "GPIO26",
+      "39": "GPIO27",
+      "40": "GPIO28",
+      "41": "GPIO29",
+      "1": "IOVDD",
+      "10": "IOVDD",
+      "22": "IOVDD",
+      "33": "IOVDD",
+      "42": "IOVDD",
+      "49": "IOVDD",
+      "43": "ADC_AVDD",
+      "44": "VREG_IN",
+      "45": "VREG_OUT",
+      "48": "USB_VDD",
+      "23": "DVDD",
+      "50": "DVDD",
+      "19": "TESTEN",
+      "20": "XIN",
+      "21": "XOUT",
+      "24": "SWCLK",
+      "25": "SWDIO",
+      "26": "RUN",
+      "46": "USB_DM",
+      "47": "USB_DP",
+      "51": "QSPI_SD3",
+      "52": "QSPI_SCLK",
+      "53": "QSPI_SD0",
+      "54": "QSPI_SD2",
+      "55": "QSPI_SD1",
+      "56": "QSPI_SS",
+      "57": "GND_EP"
     },
     "types": {
-      "1": "bidirectional",
+      "1": "power_in",
+      "10": "power_in",
+      "22": "power_in",
+      "23": "power_in",
+      "33": "power_in",
+      "42": "power_in",
+      "43": "power_in",
+      "44": "power_in",
+      "48": "power_in",
+      "49": "power_in",
+      "50": "power_in",
+      "57": "power_in",
+      "45": "power_out",
+      "19": "input",
+      "26": "input",
+      "24": "input",
+      "25": "bidirectional",
+      "20": "input",
+      "21": "output",
       "2": "bidirectional",
+      "3": "bidirectional",
       "4": "bidirectional",
       "5": "bidirectional",
       "6": "bidirectional",
       "7": "bidirectional",
+      "8": "bidirectional",
       "9": "bidirectional",
-      "10": "bidirectional",
       "11": "bidirectional",
       "12": "bidirectional",
+      "13": "bidirectional",
       "14": "bidirectional",
       "15": "bidirectional",
       "16": "bidirectional",
       "17": "bidirectional",
-      "19": "bidirectional",
-      "20": "bidirectional",
-      "21": "bidirectional",
-      "22": "bidirectional",
-      "24": "bidirectional",
-      "25": "bidirectional",
-      "26": "bidirectional",
+      "18": "bidirectional",
       "27": "bidirectional",
+      "28": "bidirectional",
       "29": "bidirectional",
+      "30": "bidirectional",
       "31": "bidirectional",
       "32": "bidirectional",
       "34": "bidirectional",
-      "36": "power_out",
-      "39": "power_in"
+      "35": "bidirectional",
+      "36": "bidirectional",
+      "37": "bidirectional",
+      "38": "bidirectional",
+      "39": "bidirectional",
+      "40": "bidirectional",
+      "41": "bidirectional"
     },
-    "note": "Pico H on two 20-way sockets; USB faces top edge. Socket BOM separate.",
-    "rot": 0
+    "note": "Bare RP2040, not a Pico module. EP57 and TESTEN19 ground; DVDD23/50 supplied only by VREG_OUT45.",
+    "rot": 0,
+    "source_fp": "Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm_ThermalVias"
   },
   {
     "ref": "J2",
@@ -163,8 +227,370 @@
     "source_fp": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
   },
   {
+    "ref": "J4",
+    "value": "SWD VREF D G C",
+    "fp": "Quadcuber:PinHeader_1x04_P2.54mm_Vertical",
+    "pins": {
+      "1": "3V3",
+      "2": "SWDIO",
+      "3": "GND",
+      "4": "SWCLK"
+    },
+    "xy": [
+      15,
+      55
+    ],
+    "mpn": "61300411121",
+    "mfr": "Wurth Elektronik",
+    "section": "controller",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 90,
+    "source_fp": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+  },
+  {
+    "ref": "R400",
+    "value": "10k",
+    "fp": "Quadcuber:R_0603_1608Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "RUN"
+    },
+    "xy": [
+      8,
+      37
+    ],
+    "mpn": "RC0603FR-0710KL",
+    "mfr": "Yageo",
+    "section": "controller",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
+  },
+  {
+    "ref": "S2",
+    "value": "RUN RESET",
+    "fp": "Quadcuber:SW_SPST_TL3342",
+    "pins": {
+      "1": "RUN",
+      "2": "GND"
+    },
+    "xy": [
+      7,
+      43
+    ],
+    "mpn": "TL3342F160QG",
+    "mfr": "E-Switch",
+    "section": "controller",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Button_Switch_SMD:SW_SPST_TL3342"
+  },
+  {
+    "ref": "C400",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "RUN",
+      "2": "GND"
+    },
+    "xy": [
+      11,
+      37
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "controller",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C410",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "xy": [
+      10,
+      25
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 1,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C411",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "xy": [
+      12,
+      25
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 10,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C412",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "xy": [
+      14,
+      25
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 22,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C413",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "xy": [
+      16,
+      25
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 33,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C414",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "xy": [
+      18,
+      25
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 42,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C415",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "xy": [
+      20,
+      25
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 43,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C416",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "xy": [
+      22,
+      25
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 48,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C417",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "xy": [
+      24,
+      25
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 49,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C418",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "1V1",
+      "2": "GND"
+    },
+    "xy": [
+      26,
+      25
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 23,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C419",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "1V1",
+      "2": "GND"
+    },
+    "xy": [
+      28,
+      25
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 50,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C420",
+    "value": "1u",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "xy": [
+      28,
+      20
+    ],
+    "mpn": "GRM155R61A105KE15D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 44,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C421",
+    "value": "1u",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "1V1",
+      "2": "GND"
+    },
+    "xy": [
+      28,
+      20
+    ],
+    "mpn": "GRM155R61A105KE15D",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "decouple_pin": 45,
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
     "ref": "D2",
-    "value": "SS14 VSYS isolation",
+    "value": "SS14 external logic isolation",
     "fp": "Quadcuber:D_SMA",
     "pins": {
       "1": "VSYS",
@@ -176,7 +602,7 @@
     ],
     "mpn": "SS14-E3/61T",
     "mfr": "Vishay",
-    "section": "controller",
+    "section": "controller_power",
     "names": {
       "1": "K",
       "2": "A"
@@ -187,28 +613,614 @@
     "source_fp": "Diode_SMD:D_SMA"
   },
   {
+    "ref": "D5",
+    "value": "SS14 USB isolation",
+    "fp": "Quadcuber:D_SMA",
+    "pins": {
+      "1": "VSYS",
+      "2": "USB_FUSED"
+    },
+    "xy": [
+      32,
+      13
+    ],
+    "mpn": "SS14-E3/61T",
+    "mfr": "Vishay",
+    "section": "usb",
+    "names": {
+      "1": "K",
+      "2": "A"
+    },
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "side": "B.Cu",
+    "source_fp": "Diode_SMD:D_SMA"
+  },
+  {
     "ref": "C1",
-    "value": "10u/25V",
-    "fp": "Quadcuber:C_1210_3225Metric",
+    "value": "1u/16V",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "VSYS",
       "2": "GND"
     },
     "xy": [
-      37,
+      27.2,
       20
     ],
-    "mpn": "GRM32ER71E106KA12L",
+    "mpn": "GRM21BR71C105KA01L",
     "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 180,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
+  },
+  {
+    "ref": "U5",
+    "value": "TLV75533PDBVR",
+    "fp": "Quadcuber:SOT-23-5",
+    "pins": {
+      "1": "VSYS",
+      "2": "GND",
+      "3": "VSYS",
+      "4": null,
+      "5": "3V3"
+    },
+    "xy": [
+      31,
+      22
+    ],
+    "mpn": "TLV75533PDBVR",
+    "mfr": "Texas Instruments",
+    "section": "controller_power",
+    "names": {
+      "1": "IN",
+      "2": "GND",
+      "3": "EN",
+      "4": "NC",
+      "5": "OUT"
+    },
+    "types": {
+      "1": "power_in",
+      "2": "power_in",
+      "3": "input",
+      "5": "power_out"
+    },
+    "note": "3.3V/500mA IC rating; controller continuous design target <=150mA; no external 3V3 injection.",
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-5"
+  },
+  {
+    "ref": "C422",
+    "value": "4.7u/10V",
+    "fp": "Quadcuber:C_0805_2012Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "xy": [
+      35,
+      20
+    ],
+    "mpn": "GRM21BR61A475KA73L",
+    "mfr": "Murata",
+    "section": "controller_power",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
+  },
+  {
+    "ref": "J5",
+    "value": "USB-C data / BOOTSEL",
+    "fp": "Quadcuber:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+    "pins": {
+      "A1": "GND",
+      "A4": "USB_VBUS",
+      "A5": "USB_CC1",
+      "A6": "USB_DP",
+      "A7": "USB_DM",
+      "A8": null,
+      "A9": "USB_VBUS",
+      "A12": "GND",
+      "B1": "GND",
+      "B4": "USB_VBUS",
+      "B5": "USB_CC2",
+      "B6": "USB_DP",
+      "B7": "USB_DM",
+      "B8": null,
+      "B9": "USB_VBUS",
+      "B12": "GND",
+      "S1": "GND"
+    },
+    "xy": [
+      20,
+      3.675
+    ],
+    "mpn": "USB4105-GF-A",
+    "mfr": "GCT",
+    "section": "usb",
+    "names": {},
+    "types": {},
+    "note": "USB2 device only. CC1/CC2 each 5.1k to ground. Shell ground. No PD.",
+    "rot": 180,
+    "source_fp": "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
+  },
+  {
+    "ref": "R401",
+    "value": "5.1k",
+    "fp": "Quadcuber:R_0603_1608Metric",
+    "pins": {
+      "1": "USB_CC1",
+      "2": "GND"
+    },
+    "xy": [
+      12,
+      8
+    ],
+    "mpn": "RC0603FR-075K1L",
+    "mfr": "Yageo",
+    "section": "usb",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
+  },
+  {
+    "ref": "R402",
+    "value": "5.1k",
+    "fp": "Quadcuber:R_0603_1608Metric",
+    "pins": {
+      "1": "USB_CC2",
+      "2": "GND"
+    },
+    "xy": [
+      28,
+      9
+    ],
+    "mpn": "RC0603FR-075K1L",
+    "mfr": "Yageo",
+    "section": "usb",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
+  },
+  {
+    "ref": "F3",
+    "value": "0.5A USB PTC",
+    "fp": "Quadcuber:Fuse_1812_4532Metric",
+    "pins": {
+      "1": "USB_VBUS",
+      "2": "USB_FUSED"
+    },
+    "xy": [
+      32,
+      4
+    ],
+    "mpn": "MF-MSMF050-2",
+    "mfr": "Bourns",
+    "section": "usb",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Fuse:Fuse_1812_4532Metric"
+  },
+  {
+    "ref": "C423",
+    "value": "1u/16V",
+    "fp": "Quadcuber:C_0805_2012Metric",
+    "pins": {
+      "1": "USB_VBUS",
+      "2": "GND"
+    },
+    "xy": [
+      37,
+      4
+    ],
+    "mpn": "GRM21BR71C105KA01L",
+    "mfr": "Murata",
+    "section": "usb",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
+  },
+  {
+    "ref": "U6",
+    "value": "USBLC6-2SC6",
+    "fp": "Quadcuber:SOT-23-6",
+    "pins": {
+      "1": "USB_DP",
+      "2": "GND",
+      "3": "USB_DM",
+      "4": "USB_DM",
+      "5": "VSYS",
+      "6": "USB_DP"
+    },
+    "xy": [
+      20,
+      12
+    ],
+    "mpn": "USBLC6-2SC6",
+    "mfr": "STMicroelectronics",
+    "section": "usb",
+    "names": {
+      "1": "IO1",
+      "2": "GND",
+      "3": "IO2",
+      "4": "IO2",
+      "5": "VBUS",
+      "6": "IO1"
+    },
+    "types": {},
+    "note": "",
+    "rot": 90,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-6"
+  },
+  {
+    "ref": "R403",
+    "value": "27",
+    "fp": "Quadcuber:R_0402_1005Metric",
+    "pins": {
+      "1": "USB_DM",
+      "2": "USB_DM_MCU"
+    },
+    "xy": [
+      21.4,
+      21
+    ],
+    "mpn": "RC0402FR-0727RL",
+    "mfr": "Yageo",
+    "section": "usb",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 270,
+    "source_fp": "Resistor_SMD:R_0402_1005Metric"
+  },
+  {
+    "ref": "R404",
+    "value": "27",
+    "fp": "Quadcuber:R_0402_1005Metric",
+    "pins": {
+      "1": "USB_DP",
+      "2": "USB_DP_MCU"
+    },
+    "xy": [
+      20.4,
+      21
+    ],
+    "mpn": "RC0402FR-0727RL",
+    "mfr": "Yageo",
+    "section": "usb",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 270,
+    "source_fp": "Resistor_SMD:R_0402_1005Metric"
+  },
+  {
+    "ref": "C427",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "VSYS",
+      "2": "GND"
+    },
+    "xy": [
+      24,
+      11
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "usb",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "R405",
+    "value": "100k",
+    "fp": "Quadcuber:R_0603_1608Metric",
+    "pins": {
+      "1": "USB_VBUS",
+      "2": "GP24"
+    },
+    "xy": [
+      34,
+      31
+    ],
+    "mpn": "RC0603FR-07100KL",
+    "mfr": "Yageo",
+    "section": "controller",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
+  },
+  {
+    "ref": "R406",
+    "value": "100k",
+    "fp": "Quadcuber:R_0603_1608Metric",
+    "pins": {
+      "1": "GP24",
+      "2": "GND"
+    },
+    "xy": [
+      34,
+      35
+    ],
+    "mpn": "RC0603FR-07100KL",
+    "mfr": "Yageo",
+    "section": "controller",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
+  },
+  {
+    "ref": "U7",
+    "value": "W25Q16JVSNIQ 2MiB",
+    "fp": "Quadcuber:SOIC-8_3.9x4.9mm_P1.27mm",
+    "pins": {
+      "1": "QSPI_SS",
+      "2": "QSPI_SD1",
+      "3": "QSPI_SD2",
+      "4": "GND",
+      "5": "QSPI_SD0",
+      "6": "QSPI_SCLK",
+      "7": "QSPI_SD3",
+      "8": "3V3"
+    },
+    "xy": [
+      10,
+      23
+    ],
+    "mpn": "W25Q16JVSNIQ",
+    "mfr": "Winbond",
+    "section": "flash_clock",
+    "names": {
+      "1": "CS_N",
+      "2": "DO_IO1",
+      "3": "WP_IO2",
+      "4": "GND",
+      "5": "DI_IO0",
+      "6": "CLK",
+      "7": "HOLD_IO3",
+      "8": "VCC"
+    },
+    "types": {},
+    "note": "Prototype stock obtainable; manufacturer EOL. Qualify current-production alternate before production. Exact SN narrow SOIC package.",
+    "rot": 0,
+    "source_fp": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+  },
+  {
+    "ref": "C424",
+    "value": "100n",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "xy": [
+      14,
+      20
+    ],
+    "mpn": "GRM155R71C104KA88D",
+    "mfr": "Murata",
+    "section": "flash_clock",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "R407",
+    "value": "10k",
+    "fp": "Quadcuber:R_0603_1608Metric",
+    "pins": {
+      "1": "3V3",
+      "2": "QSPI_SS"
+    },
+    "xy": [
+      13,
+      16.5
+    ],
+    "mpn": "RC0603FR-0710KL",
+    "mfr": "Yageo",
+    "section": "flash_clock",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
+  },
+  {
+    "ref": "R408",
+    "value": "1k",
+    "fp": "Quadcuber:R_0603_1608Metric",
+    "pins": {
+      "1": "QSPI_SS",
+      "2": "BOOT_BUTTON"
+    },
+    "xy": [
+      7,
+      9
+    ],
+    "mpn": "RC0603FR-071KL",
+    "mfr": "Yageo",
+    "section": "flash_clock",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
+  },
+  {
+    "ref": "S1",
+    "value": "BOOTSEL",
+    "fp": "Quadcuber:SW_SPST_TL3342",
+    "pins": {
+      "1": "BOOT_BUTTON",
+      "2": "GND"
+    },
+    "xy": [
+      7,
+      13
+    ],
+    "mpn": "TL3342F160QG",
+    "mfr": "E-Switch",
+    "section": "flash_clock",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Button_Switch_SMD:SW_SPST_TL3342"
+  },
+  {
+    "ref": "Y1",
+    "value": "12MHz CL10pF",
+    "fp": "Quadcuber:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "pins": {
+      "1": "XIN",
+      "2": "GND",
+      "3": "XOUT_DAMPED",
+      "4": "GND"
+    },
+    "xy": [
+      20,
+      34
+    ],
+    "mpn": "ABM8-272-T3",
+    "mfr": "Abracon",
+    "section": "flash_clock",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
+  },
+  {
+    "ref": "R409",
+    "value": "1k",
+    "fp": "Quadcuber:R_0402_1005Metric",
+    "pins": {
+      "1": "XOUT",
+      "2": "XOUT_DAMPED"
+    },
+    "xy": [
+      24,
+      32
+    ],
+    "mpn": "RC0402FR-071KL",
+    "mfr": "Yageo",
+    "section": "flash_clock",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0402_1005Metric"
+  },
+  {
+    "ref": "C425",
+    "value": "15p",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "XIN",
+      "2": "GND"
+    },
+    "xy": [
+      16.7,
+      34.95
+    ],
+    "mpn": "GRM1555C1H150JA01D",
+    "mfr": "Murata",
+    "section": "flash_clock",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 180,
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "C426",
+    "value": "15p",
+    "fp": "Quadcuber:C_0402_1005Metric",
+    "pins": {
+      "1": "XOUT_DAMPED",
+      "2": "GND"
+    },
+    "xy": [
+      23.2,
+      33.5
+    ],
+    "mpn": "GRM1555C1H150JA01D",
+    "mfr": "Murata",
+    "section": "flash_clock",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  {
+    "ref": "D7",
+    "value": "USER LED GP25",
+    "fp": "Quadcuber:LED_0603_1608Metric",
+    "pins": {
+      "1": "GND",
+      "2": "LED_ANODE"
+    },
+    "xy": [
+      28,
+      16
+    ],
+    "mpn": "LTST-C190KGKT",
+    "mfr": "Lite-On",
     "section": "controller",
     "names": {
-      "1": "1",
-      "2": "2"
+      "1": "K",
+      "2": "A"
     },
     "types": {},
     "note": "",
     "rot": 0,
-    "source_fp": "Capacitor_SMD:C_1210_3225Metric"
+    "source_fp": "LED_SMD:LED_0603_1608Metric"
+  },
+  {
+    "ref": "R410",
+    "value": "1k",
+    "fp": "Quadcuber:R_0603_1608Metric",
+    "pins": {
+      "1": "GP25",
+      "2": "LED_ANODE"
+    },
+    "xy": [
+      25,
+      16
+    ],
+    "mpn": "RC0603FR-071KL",
+    "mfr": "Yageo",
+    "section": "controller",
+    "names": {},
+    "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "J1",
@@ -1342,8 +2354,8 @@
   },
   {
     "ref": "J10",
-    "value": "EV3 R 4434 HOLD",
-    "fp": "Quadcuber:EV3_4434_PROVISIONAL",
+    "value": "EV3 R PINMAP HOLD",
+    "fp": "Quadcuber:EV3_UserDrawing_PINMAP_HOLD",
     "pins": {
       "1": "R_M1",
       "2": "R_M2",
@@ -1353,11 +2365,11 @@
       "6": "R_ENC_B_RAW"
     },
     "xy": [
-      15,
-      102
+      16,
+      106
     ],
-    "mpn": "4434",
-    "mfr": "Adafruit (supplier brand)",
+    "mpn": "UNCONFIRMED user drawing",
+    "mfr": "Unconfirmed (Coorle watermark)",
     "section": "arm_R",
     "names": {
       "1": "M1",
@@ -1368,8 +2380,8 @@
       "6": "TACHO1"
     },
     "types": {},
-    "note": "HOLD: PCB tail numbering, hole layout and contact current not manufacturer-confirmed. Do not fabricate.",
-    "rot": 0
+    "note": "Nominal hole geometry from user drawing. HOLD: actual MPN, numbering 1-5, observation side, contact current and ear envelope require confirmation. See sources/ev3-user-drawing-review.md.",
+    "rot": 180
   },
   {
     "ref": "U20",
@@ -1893,8 +2905,8 @@
   },
   {
     "ref": "J11",
-    "value": "EV3 L 4434 HOLD",
-    "fp": "Quadcuber:EV3_4434_PROVISIONAL",
+    "value": "EV3 L PINMAP HOLD",
+    "fp": "Quadcuber:EV3_UserDrawing_PINMAP_HOLD",
     "pins": {
       "1": "L_M1",
       "2": "L_M2",
@@ -1905,10 +2917,10 @@
     },
     "xy": [
       49,
-      102
+      106
     ],
-    "mpn": "4434",
-    "mfr": "Adafruit (supplier brand)",
+    "mpn": "UNCONFIRMED user drawing",
+    "mfr": "Unconfirmed (Coorle watermark)",
     "section": "arm_L",
     "names": {
       "1": "M1",
@@ -1919,8 +2931,8 @@
       "6": "TACHO1"
     },
     "types": {},
-    "note": "HOLD: PCB tail numbering, hole layout and contact current not manufacturer-confirmed. Do not fabricate.",
-    "rot": 0
+    "note": "Nominal hole geometry from user drawing. HOLD: actual MPN, numbering 1-5, observation side, contact current and ear envelope require confirmation. See sources/ev3-user-drawing-review.md.",
+    "rot": 180
   },
   {
     "ref": "U21",
@@ -2444,8 +3456,8 @@
   },
   {
     "ref": "J12",
-    "value": "EV3 F 4434 HOLD",
-    "fp": "Quadcuber:EV3_4434_PROVISIONAL",
+    "value": "EV3 F PINMAP HOLD",
+    "fp": "Quadcuber:EV3_UserDrawing_PINMAP_HOLD",
     "pins": {
       "1": "F_M1",
       "2": "F_M2",
@@ -2456,10 +3468,10 @@
     },
     "xy": [
       83,
-      102
+      106
     ],
-    "mpn": "4434",
-    "mfr": "Adafruit (supplier brand)",
+    "mpn": "UNCONFIRMED user drawing",
+    "mfr": "Unconfirmed (Coorle watermark)",
     "section": "arm_F",
     "names": {
       "1": "M1",
@@ -2470,8 +3482,8 @@
       "6": "TACHO1"
     },
     "types": {},
-    "note": "HOLD: PCB tail numbering, hole layout and contact current not manufacturer-confirmed. Do not fabricate.",
-    "rot": 0
+    "note": "Nominal hole geometry from user drawing. HOLD: actual MPN, numbering 1-5, observation side, contact current and ear envelope require confirmation. See sources/ev3-user-drawing-review.md.",
+    "rot": 180
   },
   {
     "ref": "U22",
@@ -2995,8 +4007,8 @@
   },
   {
     "ref": "J13",
-    "value": "EV3 B 4434 HOLD",
-    "fp": "Quadcuber:EV3_4434_PROVISIONAL",
+    "value": "EV3 B PINMAP HOLD",
+    "fp": "Quadcuber:EV3_UserDrawing_PINMAP_HOLD",
     "pins": {
       "1": "B_M1",
       "2": "B_M2",
@@ -3007,10 +4019,10 @@
     },
     "xy": [
       117,
-      102
+      106
     ],
-    "mpn": "4434",
-    "mfr": "Adafruit (supplier brand)",
+    "mpn": "UNCONFIRMED user drawing",
+    "mfr": "Unconfirmed (Coorle watermark)",
     "section": "arm_B",
     "names": {
       "1": "M1",
@@ -3021,8 +4033,8 @@
       "6": "TACHO1"
     },
     "types": {},
-    "note": "HOLD: PCB tail numbering, hole layout and contact current not manufacturer-confirmed. Do not fabricate.",
-    "rot": 0
+    "note": "Nominal hole geometry from user drawing. HOLD: actual MPN, numbering 1-5, observation side, contact current and ear envelope require confirmation. See sources/ev3-user-drawing-review.md.",
+    "rot": 180
   },
   {
     "ref": "U23",
@@ -3988,6 +5000,29 @@
   {
     "ref": "#FLG5",
     "pins": {
+      "1": "USB_VBUS"
+    },
+    "names": {
+      "1": "SUPPLIED_USB_VBUS"
+    },
+    "types": {
+      "1": "power_out"
+    },
+    "value": "PWR_FLAG",
+    "fp": "",
+    "xy": [
+      0,
+      0
+    ],
+    "mpn": "",
+    "mfr": "",
+    "section": "power",
+    "note": "",
+    "rot": 0
+  },
+  {
+    "ref": "#FLG6",
+    "pins": {
       "1": "R_SERVO_5V"
     },
     "names": {
@@ -4009,7 +5044,7 @@
     "rot": 0
   },
   {
-    "ref": "#FLG6",
+    "ref": "#FLG7",
     "pins": {
       "1": "L_SERVO_5V"
     },
@@ -4032,7 +5067,7 @@
     "rot": 0
   },
   {
-    "ref": "#FLG7",
+    "ref": "#FLG8",
     "pins": {
       "1": "F_SERVO_5V"
     },
@@ -4055,7 +5090,7 @@
     "rot": 0
   },
   {
-    "ref": "#FLG8",
+    "ref": "#FLG9",
     "pins": {
       "1": "B_SERVO_5V"
     },

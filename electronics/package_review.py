@@ -3,16 +3,16 @@
 from pathlib import Path
 import hashlib,json,subprocess,zipfile,shutil
 R=Path(__file__).resolve().parents[1];O=R/'output/electronics';O.mkdir(parents=True,exist_ok=True)
-name='quadcuber-A0-ENGINEERING-REVIEW-EV3-UNVERIFIED-DO-NOT-FABRICATE'
+name='quadcuber-A1-ENGINEERING-REVIEW-EV3-UNVERIFIED-DO-NOT-FABRICATE'
 sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip()
 files=[p for folder in [R/'electronics',R/'generated/electronics'] for p in folder.rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix not in ['.pyc','.kicad_prl','.lck']]
 files.append(R/'wiring/spec.py')
 warning='''工程评审版 / ENGINEERING REVIEW ONLY / DO NOT FABRICATE
 
-架构：集成驱动/电源主板＋Pico H插装，实体两块PCB；RP2040/Flash/时钟/USB仍在Pico H，不是全单板。
+架构：单PCB，RP2040/Flash/晶振/USB-C直接焊接，与四臂驱动、电源转换和接口集成；无Pico插装。
 
-EV3 Adafruit 4434 偏置卡扣插座的焊脚几何、针号和载流额定尚未确认。
-EV3_4434_PROVISIONAL 是明确占位封装；普通RJ12不能替代。
+EV3插座孔位已按用户尺寸图更新；实际料号、针号/视向和载流额定尚未确认。
+EV3_UserDrawing_PINMAP_HOLD 保存图示孔位；普通RJ12不能替代。
 包含的Gerber、钻孔文件仅用于工程审查，不是制造发布，禁止据此下单。
 尚需安装托架/双面器件净空验证及并发负载、回灌、热、USB组合供电实测。
 

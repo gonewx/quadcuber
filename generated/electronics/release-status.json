@@ -1,28 +1,35 @@
 {
-  "revision": "A0",
+  "revision": "A1",
   "manufacturing_release": false,
   "hardware_tested": false,
   "erc_errors": 0,
   "erc_warnings": 0,
   "drc_violations": 0,
+  "footprint_errors": 0,
   "unconnected_pads": 0,
   "release_blockers": [
-    "Adafruit4434 PCB-tail coordinates, numbering and contact-current rating not confirmed; provisional footprint must be replaced",
+    "EV3 hole geometry updated from user drawing; actual MPN, pin numbers 1-5/view, contact rating and full ear envelope remain unconfirmed",
     "New mounting bracket/feet and cable-motion clearance not finalized",
-    "Prototype concurrent-load, regenerative transient, thermal and power-combination tests outstanding"
+    "Prototype concurrent-load, regenerative transient, thermal and power-combination tests outstanding",
+    "First-board RP2040 UF2 boot and USB host-off data-pin backfeed tests outstanding; USB impedance stackup requires fabricator approval",
+    "W25Q16JVSNIQ is EOL; qualify current-production alternate before production"
   ],
   "source_sha256": {
-    "arm_B.kicad_sch": "ed939edae08ab40c8976127506e525a50e808cd8a7d86a2fef1c63582ce24c59",
-    "arm_F.kicad_sch": "e19a0cbf9d0f69129b19e36680d61212a967f0700db21517b7fd1f955cf657ee",
-    "arm_L.kicad_sch": "b506711cbd9a3c451f0083f67c417dd2b53895ab9c4e3d1cdd66e1c2645546a4",
-    "arm_R.kicad_sch": "6bb70dee4b3027394f4a01f90715085fb445316fcdb73e445d867811260da7e2",
-    "buck1.kicad_sch": "5e770532a7bb393e73d81df366bf0de09af87298aade7194bb8ac6a39e6f9c93",
-    "buck2.kicad_sch": "925993f8a4321986a26804219f25dae878550588059e0a2322165e4b1201e0f0",
-    "controller.kicad_sch": "cf1130b3b784cf3caad311e7a4923eec4ae66930d481be93ff4958d2966ab688",
-    "power.kicad_sch": "1a93da195e09aebfe5d59d2da54c29c8f4ac2b24eb9dd277a6eef3644922fdc5",
-    "quadcuber.kicad_pcb": "6e55c552e96ef753099a58cf31b53271ccdbdc6d3761fdee337b0af05f2c8baa",
-    "quadcuber.kicad_pro": "fc60c8c0820530ce3f36724058d4e1845c8c6725594ddb483d9072eec5e86427",
-    "quadcuber.kicad_sch": "d650e6d7fa260ef9f4cfa407578ca123e210f7be214a508edd0c302aa18ddde1"
+    "arm_B.kicad_sch": "2558ea48fb6da56c4a1d9c6e7e691c55f3d5a0efa7d536538b7078e751c9402a",
+    "arm_F.kicad_sch": "39809e128b1a7fd413abaa1a427e6d86ac309e0b39116798995103f3062ffd4d",
+    "arm_L.kicad_sch": "618489fb22f3700819c392a5c0a476c553d5d58ebaf243d3112df90292a3967a",
+    "arm_R.kicad_sch": "7a0401bb27ea5016deb8314146fdf632970605d7b6210a934000e095522c5591",
+    "buck1.kicad_sch": "08c8a231d530c07ad37881fbfeaa552fe7906f70b98af9bbeeb621f3573f5476",
+    "buck2.kicad_sch": "d26300e247ddbe3c30a4dc1d2d69210452717b4de3ce502b5f13b1e7943f57b2",
+    "controller.kicad_sch": "de185a81aec9d7774ca3506372ba793a60bb9bdc88863677472d04dc06fbf5a9",
+    "controller_power.kicad_sch": "a67e6127b885657acdfeb30ba092a286ac24d0284d0770682806f1e064da3e14",
+    "flash_clock.kicad_sch": "1f10ae200bfac5b160f4eca111525ccc9278bf21f664d0cf963c9abf9106c5b4",
+    "power.kicad_sch": "bb3484e6a704bce45130c60dd719fca3916bcfbd7abaadd4a9d0315f6e5daebc",
+    "quadcuber.kicad_dru": "13c20282ff1d0ecae15ad773debb06a556564dcbee91617d1f616ba47f197fcb",
+    "quadcuber.kicad_pcb": "38cbad26e5535d319daace2096d0ba92bf910ef28d2db5088a3bdf975e003f37",
+    "quadcuber.kicad_pro": "dea11b86c5702656311be2e673108cc5f40c595a949a0513c03ea995777a2e16",
+    "quadcuber.kicad_sch": "7ac93e5270eb73d996b3f640be73c5708d9b7cea248a666343bc7b414a3581bf",
+    "usb.kicad_sch": "328e432b91cd335e09938b4b786234dd32ae46aacd1dd83467daa29030769da9"
   },
   "tool_version": "9.0.2"
 }

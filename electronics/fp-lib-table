@@ -1,1 +1,1 @@
-(fp_lib_table (version 7) (lib (name "Quadcuber")(type "KiCad")(uri "${KIPRJMOD}/lib/Quadcuber.pretty")(options "")(descr "Pinned footprints; EV3 footprint explicitly provisional")))
+(fp_lib_table (version 7) (lib (name "Quadcuber")(type "KiCad")(uri "${KIPRJMOD}/lib/Quadcuber.pretty")(options "")(descr "Pinned footprints; EV3 drawing geometry with pinmap HOLD")))

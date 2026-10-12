@@ -12,6 +12,7 @@ for idx in range(4):
  for j,n in enumerate(['M1','M2','A','B']):labels.append((n,6+idx*34+j*5,64.7,.8))
 for j,n in enumerate(['GND','VM','5A','5B','ENC','3V3','VSYS']):labels.append((n,84+j*7,63.3,.8))
 labels.extend([('+9V',45,16,.8),('GND',50.08,16,.8),('G',3.8,57,.8),('TX',3.8,59.54,.8),('RX',3.8,62.08,.8),('RUN',28.5,61,.8)])
+labels.extend([('BOOT',7,6,.8),('RESET',7,48.5,.8),('USB',27,2,.8),('SWD',18.8,50.8,.8),('3V3',15,52.8,.8),('IO',17.54,52.8,.8),('G',20.08,52.8,.8),('CLK',22.62,52.8,.8),('GP25',28,18.3,.8)])
 for text,x,y,size in labels:
  pos=p.VECTOR2I(p.FromMM(50+x),p.FromMM(50+y))
  if any(isinstance(d,p.PCB_TEXT) and d.GetText()==text and d.GetPosition()==pos for d in b.GetDrawings()):continue

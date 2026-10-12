@@ -12,24 +12,15 @@ def through_layers():
     ls=p.LSET.AllCuMask();ls.AddLayer(p.F_Mask);ls.AddLayer(p.B_Mask);return ls
 def vec(x,y):return p.VECTOR2I(p.FromMM(x),p.FromMM(y))
 def effect(sz=1,extra=''):return f'(effects (font (size {sz} {sz})) {extra})'
-# This deliberately named placeholder is NOT a verified 4434 land pattern.
-# Body envelope provisionally taken from Adafruit drawing; tails intentionally flagged.
-fp=p.FOOTPRINT(None);fp.SetFPID(p.LIB_ID('Quadcuber','EV3_4434_PROVISIONAL'));fp.SetReference('REF**');fp.SetValue('4434 HOLD - verify tails')
-for num,(x,y) in enumerate([(-3.175,-5),(-1.905,-2.46),(-.635,-5),(.635,-2.46),(1.905,-5),(3.175,-2.46)],1):
-    pad=p.PAD(fp);pad.SetNumber(str(num));pad.SetAttribute(p.PAD_ATTRIB_PTH);pad.SetShape(p.PAD_SHAPE_CIRCLE);pad.SetSize(vec(1.65,1.65));pad.SetDrillSize(vec(.9,.9));pad.SetLayerSet(through_layers());pad.SetPosition(vec(x,y));fp.Add(pad)
-for x in [-5,5]:
-    pad=p.PAD(fp);pad.SetAttribute(p.PAD_ATTRIB_NPTH);pad.SetShape(p.PAD_SHAPE_CIRCLE);pad.SetSize(vec(2,2));pad.SetDrillSize(vec(2,2));pad.SetLayerSet(through_layers());pad.SetPosition(vec(x,1));fp.Add(pad)
-for layer,w,h,yo in [(p.F_Fab,12.24,14.65,-.325),(p.F_CrtYd,13.24,15.65,-.325),(p.F_SilkS,12.7,14.9,-.325)]:
+# User-supplied dimension drawing: nominal geometry confirmed; pinmap/view remain HOLD.
+fp=p.FOOTPRINT(None);fp.SetFPID(p.LIB_ID('Quadcuber','EV3_UserDrawing_PINMAP_HOLD'));fp.SetReference('REF**');fp.SetValue('EV3 drawing - PINMAP HOLD')
+for num,(x,y) in enumerate([(-2.55,4.84),(-1.53,2.30),(-.51,4.84),(.51,2.30),(1.53,4.84),(2.55,2.30)],1):
+    pad=p.PAD(fp);pad.SetNumber(str(num));pad.SetAttribute(p.PAD_ATTRIB_PTH);pad.SetShape(p.PAD_SHAPE_CIRCLE);pad.SetSize(vec(1.4,1.4));pad.SetDrillSize(vec(.79,.79));pad.SetLayerSet(through_layers());pad.SetPosition(vec(x,y));fp.Add(pad)
+for x in [-6,6]:
+    pad=p.PAD(fp);pad.SetAttribute(p.PAD_ATTRIB_NPTH);pad.SetShape(p.PAD_SHAPE_CIRCLE);pad.SetSize(vec(2.3,2.3));pad.SetDrillSize(vec(2.3,2.3));pad.SetLayerSet(through_layers());pad.SetPosition(vec(x,0));fp.Add(pad)
+for layer,w,h,yo in [(p.F_Fab,12.2,15,1.5),(p.F_CrtYd,15.3,16.4,1.5),(p.F_SilkS,15,14.7,1.85)]:
     sh=p.PCB_SHAPE(fp);sh.SetShape(p.SHAPE_T_RECT);sh.SetStart(vec(-w/2,yo-h/2));sh.SetEnd(vec(w/2,yo+h/2));sh.SetLayer(layer);sh.SetWidth(p.FromMM(.15));fp.Add(sh)
 p.PCB_IO_KICAD_SEXPR().FootprintSave(str(LIB),fp)
-# Pico H socket pattern: Raspberry Pi mechanical drawing, 17.78mm rows / 2.54mm pitch.
-pf=p.FOOTPRINT(None);pf.SetFPID(p.LIB_ID('Quadcuber','Pico_H_Sockets'));pf.SetReference('REF**');pf.SetValue('Pico H sockets')
-for num in range(1,41):
-    x=0 if num<=20 else 17.78;y=(num-1)*2.54 if num<=20 else (40-num)*2.54
-    pad=p.PAD(pf);pad.SetNumber(str(num));pad.SetAttribute(p.PAD_ATTRIB_PTH);pad.SetShape(p.PAD_SHAPE_RECT if num==1 else p.PAD_SHAPE_CIRCLE);pad.SetSize(vec(1.8,1.8));pad.SetDrillSize(vec(1,1));pad.SetLayerSet(through_layers());pad.SetPosition(vec(x,y));pf.Add(pad)
-for layer,start,end in [(p.F_Fab,(-1.61,-1.37),(19.39,49.63)),(p.F_CrtYd,(-2.11,-1.87),(19.89,50.13)),(p.F_SilkS,(-1.9,-1.7),(19.7,50))]:
-    sh=p.PCB_SHAPE(pf);sh.SetShape(p.SHAPE_T_RECT);sh.SetStart(vec(*start));sh.SetEnd(vec(*end));sh.SetLayer(layer);sh.SetWidth(p.FromMM(.12));pf.Add(sh)
-p.PCB_IO_KICAD_SEXPR().FootprintSave(str(LIB),pf)
 # Snapshot exact KiCad library footprints so opening the project is independent of OS libraries.
 for comp in C:
     lib,name=comp['fp'].split(':',1)
@@ -37,17 +28,17 @@ for comp in C:
         src=Path('/usr/share/kicad/footprints')/(lib+'.pretty')/(name+'.kicad_mod')
         if not src.exists():raise FileNotFoundError(src)
         dst=LIB/(name+'.kicad_mod');shutil.copyfile(src,dst)
-        if name=='RaspberryPi_Pico_Common_THT':
+        if name.startswith('QFN-56-1EP_7x7mm'):
             pf=p.PCB_IO_KICAD_SEXPR().FootprintLoad(str(LIB),name)
             for pp in pf.Pads():
-                if pp.GetShape()==p.PAD_SHAPE_CUSTOM:
-                    pp.SetShape(p.PAD_SHAPE_CIRCLE);pp.SetSize(vec(1.8,1.8))
+                if pp.GetDrillSize().x:
+                    pp.SetDrillSize(vec(.3,.3));pp.SetSize(vec(.6,.6))
             p.PCB_IO_KICAD_SEXPR().FootprintSave(str(LIB),pf)
         comp['source_fp']=comp['fp'];comp['fp']='Quadcuber:'+name
-(HERE/'fp-lib-table').write_text('(fp_lib_table (version 7) (lib (name "Quadcuber")(type "KiCad")(uri "${KIPRJMOD}/lib/Quadcuber.pretty")(options "")(descr "Pinned footprints; EV3 footprint explicitly provisional")))\n')
+(HERE/'fp-lib-table').write_text('(fp_lib_table (version 7) (lib (name "Quadcuber")(type "KiCad")(uri "${KIPRJMOD}/lib/Quadcuber.pretty")(options "")(descr "Pinned footprints; EV3 drawing geometry with pinmap HOLD")))\n')
 # Self-contained native symbols with real pin identities and electrical types.
 # ICs retain explicit pad identities; passives use standard circuit graphics.
-rootid=uid('root'); sections=['controller','power','buck1','buck2','arm_R','arm_L','arm_F','arm_B']; libsym={}
+rootid=uid('root'); sections=['controller','controller_power','usb','flash_clock','power','buck1','buck2','arm_R','arm_L','arm_F','arm_B']; libsym={}
 def pindefs(comp):
     pins=list(comp['pins']); n=len(pins);half=math.ceil(n/2); result=[]
     for i,num in enumerate(pins):
@@ -78,9 +69,10 @@ for comp in C:
     for num,x,y,a in pins:
         typ=comp['types'].get(num,'passive');name=comp['names'].get(num,num)
         ss+=f'(pin {typ} line (at {x} {y} {a})(length 2.54)(name {q(name)} {effect(.75)})(number {q(num)} {effect(.75)}))'
+    if ref.startswith('TP'):ss=ss.replace('(in_bom yes)','(in_bom no)')
     libsym[ref]=ss+'))'
 # Explicit power flags describe supply provenance; not ERC suppressions.
-for i,net in enumerate(['GND','VM','VIN_FUSED','VSYS','R_SERVO_5V','L_SERVO_5V','F_SERVO_5V','B_SERVO_5V']):
+for i,net in enumerate(['GND','VM','VIN_FUSED','VSYS','USB_VBUS','R_SERVO_5V','L_SERVO_5V','F_SERVO_5V','B_SERVO_5V']):
     ref='#FLG'+str(i+1)
     cc=dict(ref=ref,pins={'1':net},names={'1':'SUPPLIED_'+net},types={'1':'power_out'},value='PWR_FLAG',fp='',xy=(0,0),mpn='',mfr='',section='power',note='',rot=0)
     C.append(cc)
@@ -89,8 +81,8 @@ for i,net in enumerate(['GND','VM','VIN_FUSED','VSYS','R_SERVO_5V','L_SERVO_5V',
 (HERE/'sym-lib-table').write_text('(sym_lib_table(version 7)(lib(name "Quadcuber")(type "KiCad")(uri "${KIPRJMOD}/lib/Quadcuber.kicad_sym")(options "")(descr "Self-contained explicit pin definitions")))')
 
 # Root sheets.
-root=f'(kicad_sch (version 20250114)(generator "eeschema")(uuid {rootid})(paper "A3")(title_block(title "Quadcuber four-arm integrated controller - A0 ENGINEERING HOLD")(rev "A0")(company "gonewx/quadcuber"))(lib_symbols)'
-root+=f'(text "Integrated motor drivers, dual buck supplies, encoder conditioning and Pico H.\\nEV3 jack land pattern is PROVISIONAL. Manufacturing release is blocked.\\nUse electronics/README.md and generated/electronics/release-status.json." (at 25.4 25.4 0) {effect(1.5,"(justify left)")}(uuid {uid("title")}))'
+root=f'(kicad_sch (version 20250114)(generator "eeschema")(uuid {rootid})(paper "A3")(title_block(title "Quadcuber four-arm integrated controller - A1 ENGINEERING HOLD")(rev "A1")(company "gonewx/quadcuber"))(lib_symbols)'
+root+=f'(text "Integrated motor drivers, dual buck supplies, encoder conditioning and onboard RP2040.\\nEV3 nominal hole geometry from user drawing; pinmap/current HOLD. Manufacturing release is blocked.\\nUse electronics/README.md and generated/electronics/release-status.json." (at 25.4 25.4 0) {effect(1.5,"(justify left)")}(uuid {uid("title")}))'
 for i,sec in enumerate(sections):
     x=25.4+(i%4)*91.44;y=60.96+(i//4)*60.96; sid=uid('sheet-'+sec)
     root+=f'(sheet(at {x} {y})(size 71.12 35.56)(fields_autoplaced)(stroke(width 0.1524)(type solid))(fill(color 0 0 0 0))(uuid {sid})(property "Sheetname" {q(sec)}(at {x} {y-1.27} 0){effect(1.27,"(justify left bottom)")})(property "Sheetfile" {q(sec+".kicad_sch")}(at {x} {y+36.83} 0){effect(1.27,"(justify left top)")})(instances(project "quadcuber"(path "/{rootid}"(page "{i+2}")))))'
@@ -98,14 +90,14 @@ root+='(sheet_instances(path "/"(page "1")))(embedded_fonts no))'
 (HERE/'quadcuber.kicad_sch').write_text(root)
 for si,sec in enumerate(sections):
     comps=[cc for cc in C if cc['section']==sec and cc['pins']];sid=uid('sheet-'+sec); allsym=''.join(libsym[cc['ref']] for cc in comps)
-    s=f'(kicad_sch(version 20250114)(generator "eeschema")(uuid {uid("doc-"+sec)})(paper "A3")(title_block(title {q("Quadcuber A0 / "+sec+" / ENGINEERING HOLD")})(rev "A0"))(lib_symbols {allsym})'
+    s=f'(kicad_sch(version 20250114)(generator "eeschema")(uuid {uid("doc-"+sec)})(paper "A3")(title_block(title {q("Quadcuber A1 / "+sec+" / ENGINEERING HOLD")})(rev "A1"))(lib_symbols {allsym})'
     for i,comp in enumerate(comps):
         ref=comp['ref'];cx=35.56+(i%6)*63.5;cy=38.1+(i//6)*40.64
         if sec=='controller':
             if ref=='U1':cx=45.72;cy=63.5
             else:cx=132.08+((i-1)%4)*66.04;cy=38.1+((i-1)//4)*40.64
         hh=max(3.81,math.ceil(len(comp['pins'])/2)*1.27+1.27)
-        s+=f'(symbol(lib_id "Quadcuber:{ref}")(at {cx} {cy} 0)(unit 1)(in_bom {'no' if ref.startswith('#') else 'yes'})(on_board {'no' if ref.startswith('#') else 'yes'})(dnp {"yes" if comp.get("dnp") else "no"})(uuid {uid(ref)})'
+        s+=f'(symbol(lib_id "Quadcuber:{ref}")(at {cx} {cy} 0)(unit 1)(in_bom {'no' if ref.startswith(('#','TP')) else 'yes'})(on_board {'no' if ref.startswith('#') else 'yes'})(dnp {"yes" if comp.get("dnp") else "no"})(uuid {uid(ref)})'
         for prop,val,dy,hide in [('Reference',ref,-hh-3.81,False),('Value',comp['value'],hh+3.81,False),('Footprint',comp['fp'],0,True),('MPN',comp['mpn'],0,True),('Manufacturer',comp['mfr'],0,True)]:
             s+=f'(property {q(prop)} {q(val)}(at {cx} {cy+dy} 0){effect(1.27,"(hide yes)" if hide else "")})'
         for num,xx,yy,ang in pindefs(comp):s+=f'(pin {q(num)}(uuid {uid(ref+"-"+num)}))'
@@ -120,10 +112,11 @@ for si,sec in enumerate(sections):
     s+='(embedded_fonts no))';(HERE/(sec+'.kicad_sch')).write_text(s)
 # Common project rules. No intentional DRC exclusion.
 classes=[]
-for name,width in [('Default',.25),('Motor',1.0),('PowerBranch',1.0),('PowerBus',1.0),('Ground',.3)]:
-    classes.append(dict(name=name,clearance=.2,track_width=width,via_diameter=.7,via_drill=.35,microvia_diameter=.3,microvia_drill=.1,diff_pair_width=.25,diff_pair_gap=.2,diff_pair_via_gap=.25,pcb_color='rgba(0, 0, 0, 0.000)',schematic_color='rgba(0, 0, 0, 0.000)',wire_width=6,bus_width=12,line_style=0))
+for name,width in [('Default',.25),('LogicFine',.15),('Motor',1.0),('PowerBranch',1.0),('PowerBus',1.0),('Ground',.3)]:
+    classes.append(dict(name=name,clearance=.15 if name=='LogicFine' else .2,track_width=width,via_diameter=.7,via_drill=.35,microvia_diameter=.3,microvia_drill=.1,diff_pair_width=.25,diff_pair_gap=.2,diff_pair_via_gap=.25,pcb_color='rgba(0, 0, 0, 0.000)',schematic_color='rgba(0, 0, 0, 0.000)',wire_width=6,bus_width=12,line_style=0))
 patterns=[{'netclass':'PowerBus','pattern':n} for n in ['VIN','VIN_FUSED','VM']]+[{'netclass':'Ground','pattern':'GND'}]+[{'netclass':'PowerBranch','pattern':n} for n in ['5V_A','5V_B','5V_ENC','*_SERVO_5V','B?_SW']]+[{'netclass':'Motor','pattern':'*_M?'}]
-project={'meta':{'filename':'quadcuber.kicad_pro','version':1},'net_settings':{'classes':classes,'meta':{'version':3},'netclass_patterns':patterns},'board':{'design_settings':{'rules':{'min_clearance':.2,'min_track_width':.2,'min_via_diameter':.6,'min_through_hole_diameter':.3,'min_copper_edge_clearance':.3,'solder_mask_to_copper_clearance':0},'rule_severities':{'silk_over_copper':'warning','silk_overlap':'warning'}}}}
+patterns += [{'netclass':'LogicFine','pattern':n} for n in ['GP*','QSPI_*','USB_*','XIN','XOUT*','1V1','3V3','RUN','SWD*','SWCLK','BOOT_BUTTON','LED_ANODE']]
+project={'meta':{'filename':'quadcuber.kicad_pro','version':1},'net_settings':{'classes':classes,'meta':{'version':3},'netclass_patterns':patterns},'board':{'design_settings':{'rules':{'min_clearance':.15,'min_track_width':.15,'min_via_diameter':.6,'min_through_hole_diameter':.3,'min_copper_edge_clearance':.3,'solder_mask_to_copper_clearance':0},'rule_severities':{'silk_over_copper':'warning','silk_overlap':'warning'}}}}
 (HERE/'quadcuber.kicad_pro').write_text(json.dumps(project,indent=2)+'\n')
 # Initial placement; routed PCB is subsequently edited in KiCad and is authoritative.
 import sys
@@ -146,9 +139,9 @@ if '--metadata-only' not in sys.argv:
         sh=p.PCB_SHAPE();sh.SetShape(p.SHAPE_T_SEGMENT);sh.SetStart(vec(*start));sh.SetEnd(vec(*end));sh.SetLayer(p.Edge_Cuts);sh.SetWidth(p.FromMM(.05));b.Add(sh)
     def txt(text,x,y,sz=1,layer=p.F_SilkS):
         t=p.PCB_TEXT(b);t.SetText(text);t.SetPosition(vec(x+50,y+50));t.SetTextSize(vec(sz,sz));t.SetTextThickness(p.FromMM(.15));t.SetLayer(layer);b.Add(t)
-    txt('QUADCUBER A0  /  ENGINEERING HOLD',105,20,1.1)
-    txt('9V ONLY   USB = PICO ONLY',87,28,1)
-    txt('4434 JACK TAILS UNVERIFIED - DO NOT FABRICATE',95,58,.8)
+    txt('QUADCUBER A1  /  ENGINEERING HOLD',105,20,1.1)
+    txt('9V ONLY   USB = LOGIC ONLY',87,28,1)
+    txt('EV3 PINMAP/CURRENT UNVERIFIED - DO NOT FABRICATE',95,58,.8)
     for idx,arm in enumerate(['R','L','F','B']):txt(arm,27+34*idx,109,1.5)
     txt('G + S',132,106,.8)
     p.SaveBoard(str(HERE/'quadcuber.kicad_pcb'),b)
@@ -157,6 +150,6 @@ with (OUT/'bom.csv').open('w') as f:
     w=csv.writer(f,lineterminator="\n");w.writerow(['Reference','Value','Manufacturer','MPN','Footprint','Quantity','Notes'])
     for cc in C:
         if cc['ref'].startswith('#'):continue
-        w.writerow([cc['ref'],cc['value'],cc['mfr'],cc['mpn'],cc['fp'],0 if cc.get('dnp') else 1,cc['note']])
-    w.writerow(['U1 sockets','1x20 female 2.54mm','Wurth Elektronik','61302011821','U1 holes',2,'Pico socket rows; do not solder Pico module directly'])
-print(f'Generated {len(C)} components, 9 schematic sheets, 144x112mm PCB')
+        w.writerow([cc['ref'],cc['value'],cc['mfr'],cc['mpn'],cc['fp'],0 if cc.get('dnp') or cc['ref'].startswith(('TP','H')) else 1,cc['note']])
+
+print(f'Generated {len(C)} components, {len(sections)+1} schematic sheets, 144x112mm PCB')

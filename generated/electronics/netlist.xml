@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>/workspace/quadcuber/electronics/quadcuber.kicad_sch</source>
-    <date>2026-10-11T23:06:27+0000</date>
+    <date>2026-10-12T01:21:21+0000</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title>Quadcuber four-arm integrated controller - A0 ENGINEERING HOLD</title>
+        <title>Quadcuber four-arm integrated controller - A1 ENGINEERING HOLD</title>
         <company>gonewx/quadcuber</company>
-        <rev>A0</rev>
+        <rev>A1</rev>
         <date/>
         <source>quadcuber.kicad_sch</source>
         <comment number="1" value=""/>
@@ -24,9 +24,9 @@
     </sheet>
     <sheet number="2" name="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/">
       <title_block>
-        <title>Quadcuber A0 / controller / ENGINEERING HOLD</title>
+        <title>Quadcuber A1 / controller / ENGINEERING HOLD</title>
         <company/>
-        <rev>A0</rev>
+        <rev>A1</rev>
         <date/>
         <source>controller.kicad_sch</source>
         <comment number="1" value=""/>
@@ -40,11 +40,65 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="3" name="/power/" tstamps="/aa82877a-e39c-5600-906d-cd639555cb3d/">
+    <sheet number="3" name="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/">
       <title_block>
-        <title>Quadcuber A0 / power / ENGINEERING HOLD</title>
+        <title>Quadcuber A1 / controller_power / ENGINEERING HOLD</title>
         <company/>
-        <rev>A0</rev>
+        <rev>A1</rev>
+        <date/>
+        <source>controller_power.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/usb/" tstamps="/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010/">
+      <title_block>
+        <title>Quadcuber A1 / usb / ENGINEERING HOLD</title>
+        <company/>
+        <rev>A1</rev>
+        <date/>
+        <source>usb.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/flash_clock/" tstamps="/4191b64a-cab3-547d-b44d-c86556a51d60/">
+      <title_block>
+        <title>Quadcuber A1 / flash_clock / ENGINEERING HOLD</title>
+        <company/>
+        <rev>A1</rev>
+        <date/>
+        <source>flash_clock.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/power/" tstamps="/aa82877a-e39c-5600-906d-cd639555cb3d/">
+      <title_block>
+        <title>Quadcuber A1 / power / ENGINEERING HOLD</title>
+        <company/>
+        <rev>A1</rev>
         <date/>
         <source>power.kicad_sch</source>
         <comment number="1" value=""/>
@@ -58,11 +112,11 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="4" name="/buck1/" tstamps="/4b61397d-34d2-574d-ac4b-37e872fca1f8/">
+    <sheet number="7" name="/buck1/" tstamps="/4b61397d-34d2-574d-ac4b-37e872fca1f8/">
       <title_block>
-        <title>Quadcuber A0 / buck1 / ENGINEERING HOLD</title>
+        <title>Quadcuber A1 / buck1 / ENGINEERING HOLD</title>
         <company/>
-        <rev>A0</rev>
+        <rev>A1</rev>
         <date/>
         <source>buck1.kicad_sch</source>
         <comment number="1" value=""/>
@@ -76,11 +130,11 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="5" name="/buck2/" tstamps="/e8b2a047-8402-5099-87d9-9604c9e31a0c/">
+    <sheet number="8" name="/buck2/" tstamps="/e8b2a047-8402-5099-87d9-9604c9e31a0c/">
       <title_block>
-        <title>Quadcuber A0 / buck2 / ENGINEERING HOLD</title>
+        <title>Quadcuber A1 / buck2 / ENGINEERING HOLD</title>
         <company/>
-        <rev>A0</rev>
+        <rev>A1</rev>
         <date/>
         <source>buck2.kicad_sch</source>
         <comment number="1" value=""/>
@@ -94,11 +148,11 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="6" name="/arm_R/" tstamps="/685933de-b949-5744-9019-4836c7cf2044/">
+    <sheet number="9" name="/arm_R/" tstamps="/685933de-b949-5744-9019-4836c7cf2044/">
       <title_block>
-        <title>Quadcuber A0 / arm_R / ENGINEERING HOLD</title>
+        <title>Quadcuber A1 / arm_R / ENGINEERING HOLD</title>
         <company/>
-        <rev>A0</rev>
+        <rev>A1</rev>
         <date/>
         <source>arm_R.kicad_sch</source>
         <comment number="1" value=""/>
@@ -112,11 +166,11 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="7" name="/arm_L/" tstamps="/69c11592-d9f6-51a0-a214-cdcfcb517076/">
+    <sheet number="10" name="/arm_L/" tstamps="/69c11592-d9f6-51a0-a214-cdcfcb517076/">
       <title_block>
-        <title>Quadcuber A0 / arm_L / ENGINEERING HOLD</title>
+        <title>Quadcuber A1 / arm_L / ENGINEERING HOLD</title>
         <company/>
-        <rev>A0</rev>
+        <rev>A1</rev>
         <date/>
         <source>arm_L.kicad_sch</source>
         <comment number="1" value=""/>
@@ -130,11 +184,11 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="8" name="/arm_F/" tstamps="/4d2f273c-a6cc-544e-afa2-1237dc6b88c9/">
+    <sheet number="11" name="/arm_F/" tstamps="/4d2f273c-a6cc-544e-afa2-1237dc6b88c9/">
       <title_block>
-        <title>Quadcuber A0 / arm_F / ENGINEERING HOLD</title>
+        <title>Quadcuber A1 / arm_F / ENGINEERING HOLD</title>
         <company/>
-        <rev>A0</rev>
+        <rev>A1</rev>
         <date/>
         <source>arm_F.kicad_sch</source>
         <comment number="1" value=""/>
@@ -148,11 +202,11 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="9" name="/arm_B/" tstamps="/7e025fd2-1fa3-515a-9613-504a980a5b9d/">
+    <sheet number="12" name="/arm_B/" tstamps="/7e025fd2-1fa3-515a-9613-504a980a5b9d/">
       <title_block>
-        <title>Quadcuber A0 / arm_B / ENGINEERING HOLD</title>
+        <title>Quadcuber A1 / arm_B / ENGINEERING HOLD</title>
         <company/>
-        <rev>A0</rev>
+        <rev>A1</rev>
         <date/>
         <source>arm_B.kicad_sch</source>
         <comment number="1" value=""/>
@@ -168,41 +222,41 @@
     </sheet>
   </design>
   <components>
-    <comp ref="C1">
-      <value>10u/25V</value>
-      <footprint>Quadcuber:C_1210_3225Metric</footprint>
+    <comp ref="C400">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
       <fields>
-        <field name="MPN">GRM32ER71E106KA12L</field>
+        <field name="MPN">GRM155R71C104KA88D</field>
         <field name="Manufacturer">Murata</field>
-        <field name="Footprint">Quadcuber:C_1210_3225Metric</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="Quadcuber" part="C1" description=""/>
-      <property name="MPN" value="GRM32ER71E106KA12L"/>
+      <libsource lib="Quadcuber" part="C400" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
       <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="controller"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
       <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
-      <tstamps>20f9aa9a-2c00-5b30-b3e1-e3e17cd15c0a</tstamps>
+      <tstamps>f065b4ee-fc36-5852-9a4b-7be5dc43ff82</tstamps>
     </comp>
-    <comp ref="D2">
-      <value>SS14 VSYS isolation</value>
-      <footprint>Quadcuber:D_SMA</footprint>
+    <comp ref="D7">
+      <value>USER LED GP25</value>
+      <footprint>Quadcuber:LED_0603_1608Metric</footprint>
       <fields>
-        <field name="MPN">SS14-E3/61T</field>
-        <field name="Manufacturer">Vishay</field>
-        <field name="Footprint">Quadcuber:D_SMA</field>
+        <field name="MPN">LTST-C190KGKT</field>
+        <field name="Manufacturer">Lite-On</field>
+        <field name="Footprint">Quadcuber:LED_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="Quadcuber" part="D2" description=""/>
-      <property name="MPN" value="SS14-E3/61T"/>
-      <property name="Manufacturer" value="Vishay"/>
+      <libsource lib="Quadcuber" part="D7" description=""/>
+      <property name="MPN" value="LTST-C190KGKT"/>
+      <property name="Manufacturer" value="Lite-On"/>
       <property name="Sheetname" value="controller"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
       <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
-      <tstamps>4ba49b49-3914-5919-af1b-9bd4ed7372b7</tstamps>
+      <tstamps>daf59ff9-0636-551d-bac8-6f45c3a5d85b</tstamps>
     </comp>
     <comp ref="F2">
       <value>0.5A encoder PTC</value>
@@ -258,6 +312,114 @@
       <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
       <tstamps>2c807e01-7cbb-52e7-8751-944571f6e197</tstamps>
     </comp>
+    <comp ref="J4">
+      <value>SWD VREF D G C</value>
+      <footprint>Quadcuber:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="MPN">61300411121</field>
+        <field name="Manufacturer">Wurth Elektronik</field>
+        <field name="Footprint">Quadcuber:PinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="J4" description=""/>
+      <property name="MPN" value="61300411121"/>
+      <property name="Manufacturer" value="Wurth Elektronik"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
+      <tstamps>2d2b5556-6963-5efb-915e-1693513cbed1</tstamps>
+    </comp>
+    <comp ref="R400">
+      <value>10k</value>
+      <footprint>Quadcuber:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R400" description=""/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
+      <tstamps>e2b5f9f0-3c4b-5b27-94d1-8c2ded907837</tstamps>
+    </comp>
+    <comp ref="R405">
+      <value>100k</value>
+      <footprint>Quadcuber:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R405" description=""/>
+      <property name="MPN" value="RC0603FR-07100KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
+      <tstamps>3b617637-88c8-51f8-9a0e-d304885ae804</tstamps>
+    </comp>
+    <comp ref="R406">
+      <value>100k</value>
+      <footprint>Quadcuber:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R406" description=""/>
+      <property name="MPN" value="RC0603FR-07100KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
+      <tstamps>9fbbf335-15dd-5c5b-bfa8-397ddc21eba5</tstamps>
+    </comp>
+    <comp ref="R410">
+      <value>1k</value>
+      <footprint>Quadcuber:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-071KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R410" description=""/>
+      <property name="MPN" value="RC0603FR-071KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
+      <tstamps>d33c5501-af5e-5f8b-a58a-49c36d385bca</tstamps>
+    </comp>
+    <comp ref="S2">
+      <value>RUN RESET</value>
+      <footprint>Quadcuber:SW_SPST_TL3342</footprint>
+      <fields>
+        <field name="MPN">TL3342F160QG</field>
+        <field name="Manufacturer">E-Switch</field>
+        <field name="Footprint">Quadcuber:SW_SPST_TL3342</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="S2" description=""/>
+      <property name="MPN" value="TL3342F160QG"/>
+      <property name="Manufacturer" value="E-Switch"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
+      <tstamps>87858a5f-bcfe-5b8b-b01b-c7c63c6be9aa</tstamps>
+    </comp>
     <comp ref="TP1">
       <value>GND</value>
       <footprint>Quadcuber:TestPoint_Pad_D2.0mm</footprint>
@@ -273,6 +435,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="controller"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
       <tstamps>826c8fb3-b5d1-54e0-8bd9-dd81d2cfc87a</tstamps>
     </comp>
@@ -291,6 +454,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="controller"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
       <tstamps>f17a97a0-f7ca-52a1-bcb5-a8434d63d6f8</tstamps>
     </comp>
@@ -309,6 +473,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="controller"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
       <tstamps>56b0b06c-37db-55fd-8409-1773145b6278</tstamps>
     </comp>
@@ -327,6 +492,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="controller"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
       <tstamps>207ec222-f152-5e46-bbfb-b41d1fe3377d</tstamps>
     </comp>
@@ -345,6 +511,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="controller"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
       <tstamps>b67fcb53-e153-55f6-a675-43e0b4fb1bd8</tstamps>
     </comp>
@@ -363,6 +530,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="controller"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
       <tstamps>b23c8b59-c8e6-5cf4-a3d2-71002822d304</tstamps>
     </comp>
@@ -381,26 +549,657 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="controller"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
       <tstamps>aad94936-27cf-55b3-b078-70cdf7ba458e</tstamps>
     </comp>
     <comp ref="U1">
-      <value>Pico H socketed</value>
-      <footprint>Quadcuber:Pico_H_Sockets</footprint>
+      <value>RP2040</value>
+      <footprint>Quadcuber:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm_ThermalVias</footprint>
       <fields>
-        <field name="MPN">SC0917</field>
+        <field name="MPN">RP2040</field>
         <field name="Manufacturer">Raspberry Pi</field>
-        <field name="Footprint">Quadcuber:Pico_H_Sockets</field>
+        <field name="Footprint">Quadcuber:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm_ThermalVias</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="U1" description=""/>
-      <property name="MPN" value="SC0917"/>
+      <property name="MPN" value="RP2040"/>
       <property name="Manufacturer" value="Raspberry Pi"/>
       <property name="Sheetname" value="controller"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
       <sheetpath names="/controller/" tstamps="/87dbc8ce-f14c-5d5c-ad8b-13a6fe446f1e/"/>
       <tstamps>c4a5dc26-211c-5803-9549-7fe836972ef8</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>1u/16V</value>
+      <footprint>Quadcuber:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">GRM21BR71C105KA01L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C1" description=""/>
+      <property name="MPN" value="GRM21BR71C105KA01L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>20f9aa9a-2c00-5b30-b3e1-e3e17cd15c0a</tstamps>
+    </comp>
+    <comp ref="C410">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C410" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>ed556764-81b3-544b-9631-ae7f20d74751</tstamps>
+    </comp>
+    <comp ref="C411">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C411" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>737dc129-f02d-5e9d-a6f6-47000d85c0c7</tstamps>
+    </comp>
+    <comp ref="C412">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C412" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>be24a362-db71-5db6-8f60-683cd713873c</tstamps>
+    </comp>
+    <comp ref="C413">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C413" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>8c18ff5c-0396-5383-b4b3-58aa7631c3da</tstamps>
+    </comp>
+    <comp ref="C414">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C414" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>9e9d2535-2dbe-52bb-9f53-845c109d630f</tstamps>
+    </comp>
+    <comp ref="C415">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C415" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>e69760f7-e2c7-596d-ab04-f82d181a0d48</tstamps>
+    </comp>
+    <comp ref="C416">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C416" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>083d7bb1-398a-5634-89bd-c95d5ce5494e</tstamps>
+    </comp>
+    <comp ref="C417">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C417" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>78acf7ed-7ce5-5e82-9849-fb03d0b8c0d3</tstamps>
+    </comp>
+    <comp ref="C418">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C418" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>89757ddc-63de-504e-829f-57f11dad0c59</tstamps>
+    </comp>
+    <comp ref="C419">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C419" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>6c6f0937-8d91-50fb-84da-44959a0242f4</tstamps>
+    </comp>
+    <comp ref="C420">
+      <value>1u</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R61A105KE15D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C420" description=""/>
+      <property name="MPN" value="GRM155R61A105KE15D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>3b782b00-0f60-5267-92cb-cd1bbd7d5acb</tstamps>
+    </comp>
+    <comp ref="C421">
+      <value>1u</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R61A105KE15D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C421" description=""/>
+      <property name="MPN" value="GRM155R61A105KE15D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>f31c8cfa-d033-5358-b7c6-f82d4b4fdadd</tstamps>
+    </comp>
+    <comp ref="C422">
+      <value>4.7u/10V</value>
+      <footprint>Quadcuber:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">GRM21BR61A475KA73L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C422" description=""/>
+      <property name="MPN" value="GRM21BR61A475KA73L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>9e114f1d-f7ad-5079-a3a2-c9cb66a48f8e</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>SS14 external logic isolation</value>
+      <footprint>Quadcuber:D_SMA</footprint>
+      <fields>
+        <field name="MPN">SS14-E3/61T</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Quadcuber:D_SMA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="D2" description=""/>
+      <property name="MPN" value="SS14-E3/61T"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>4ba49b49-3914-5919-af1b-9bd4ed7372b7</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>TLV75533PDBVR</value>
+      <footprint>Quadcuber:SOT-23-5</footprint>
+      <fields>
+        <field name="MPN">TLV75533PDBVR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Footprint">Quadcuber:SOT-23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="U5" description=""/>
+      <property name="MPN" value="TLV75533PDBVR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Sheetname" value="controller_power"/>
+      <property name="Sheetfile" value="controller_power.kicad_sch"/>
+      <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
+      <tstamps>a807fb44-b75b-56d2-9adf-77af2c5a845f</tstamps>
+    </comp>
+    <comp ref="C423">
+      <value>1u/16V</value>
+      <footprint>Quadcuber:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">GRM21BR71C105KA01L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C423" description=""/>
+      <property name="MPN" value="GRM21BR71C105KA01L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="usb"/>
+      <property name="Sheetfile" value="usb.kicad_sch"/>
+      <sheetpath names="/usb/" tstamps="/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010/"/>
+      <tstamps>f2bae750-3afc-5a6c-aa55-ac1ee6fdab61</tstamps>
+    </comp>
+    <comp ref="C427">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C427" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="usb"/>
+      <property name="Sheetfile" value="usb.kicad_sch"/>
+      <sheetpath names="/usb/" tstamps="/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010/"/>
+      <tstamps>0144128c-1ab6-551a-bf99-766c9ba59cff</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>SS14 USB isolation</value>
+      <footprint>Quadcuber:D_SMA</footprint>
+      <fields>
+        <field name="MPN">SS14-E3/61T</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Quadcuber:D_SMA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="D5" description=""/>
+      <property name="MPN" value="SS14-E3/61T"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="usb"/>
+      <property name="Sheetfile" value="usb.kicad_sch"/>
+      <sheetpath names="/usb/" tstamps="/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010/"/>
+      <tstamps>00bab47a-ea8c-54c3-956a-73bc71cf4fea</tstamps>
+    </comp>
+    <comp ref="F3">
+      <value>0.5A USB PTC</value>
+      <footprint>Quadcuber:Fuse_1812_4532Metric</footprint>
+      <fields>
+        <field name="MPN">MF-MSMF050-2</field>
+        <field name="Manufacturer">Bourns</field>
+        <field name="Footprint">Quadcuber:Fuse_1812_4532Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="F3" description=""/>
+      <property name="MPN" value="MF-MSMF050-2"/>
+      <property name="Manufacturer" value="Bourns"/>
+      <property name="Sheetname" value="usb"/>
+      <property name="Sheetfile" value="usb.kicad_sch"/>
+      <sheetpath names="/usb/" tstamps="/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010/"/>
+      <tstamps>28283adb-52a1-57d7-823b-6144410297a3</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>USB-C data / BOOTSEL</value>
+      <footprint>Quadcuber:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</footprint>
+      <fields>
+        <field name="MPN">USB4105-GF-A</field>
+        <field name="Manufacturer">GCT</field>
+        <field name="Footprint">Quadcuber:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="J5" description=""/>
+      <property name="MPN" value="USB4105-GF-A"/>
+      <property name="Manufacturer" value="GCT"/>
+      <property name="Sheetname" value="usb"/>
+      <property name="Sheetfile" value="usb.kicad_sch"/>
+      <sheetpath names="/usb/" tstamps="/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010/"/>
+      <tstamps>67a31cb4-925a-5a6f-ba89-d0e72742d31f</tstamps>
+    </comp>
+    <comp ref="R401">
+      <value>5.1k</value>
+      <footprint>Quadcuber:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-075K1L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R401" description=""/>
+      <property name="MPN" value="RC0603FR-075K1L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="usb"/>
+      <property name="Sheetfile" value="usb.kicad_sch"/>
+      <sheetpath names="/usb/" tstamps="/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010/"/>
+      <tstamps>5a3a90eb-6374-5b11-a1ec-347188fca16d</tstamps>
+    </comp>
+    <comp ref="R402">
+      <value>5.1k</value>
+      <footprint>Quadcuber:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-075K1L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R402" description=""/>
+      <property name="MPN" value="RC0603FR-075K1L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="usb"/>
+      <property name="Sheetfile" value="usb.kicad_sch"/>
+      <sheetpath names="/usb/" tstamps="/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010/"/>
+      <tstamps>e90acd74-2b29-5658-b158-1a68cd2b6e59</tstamps>
+    </comp>
+    <comp ref="R403">
+      <value>27</value>
+      <footprint>Quadcuber:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">RC0402FR-0727RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Quadcuber:R_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R403" description=""/>
+      <property name="MPN" value="RC0402FR-0727RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="usb"/>
+      <property name="Sheetfile" value="usb.kicad_sch"/>
+      <sheetpath names="/usb/" tstamps="/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010/"/>
+      <tstamps>0ced63a4-606c-50ba-b4a6-fdfc4b054c24</tstamps>
+    </comp>
+    <comp ref="R404">
+      <value>27</value>
+      <footprint>Quadcuber:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">RC0402FR-0727RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Quadcuber:R_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R404" description=""/>
+      <property name="MPN" value="RC0402FR-0727RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="usb"/>
+      <property name="Sheetfile" value="usb.kicad_sch"/>
+      <sheetpath names="/usb/" tstamps="/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010/"/>
+      <tstamps>6be264f4-5ca8-5750-8896-d5252495143d</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>USBLC6-2SC6</value>
+      <footprint>Quadcuber:SOT-23-6</footprint>
+      <fields>
+        <field name="MPN">USBLC6-2SC6</field>
+        <field name="Manufacturer">STMicroelectronics</field>
+        <field name="Footprint">Quadcuber:SOT-23-6</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="U6" description=""/>
+      <property name="MPN" value="USBLC6-2SC6"/>
+      <property name="Manufacturer" value="STMicroelectronics"/>
+      <property name="Sheetname" value="usb"/>
+      <property name="Sheetfile" value="usb.kicad_sch"/>
+      <sheetpath names="/usb/" tstamps="/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010/"/>
+      <tstamps>b5267775-376d-5a3b-a48b-68651b049f6c</tstamps>
+    </comp>
+    <comp ref="C424">
+      <value>100n</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM155R71C104KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C424" description=""/>
+      <property name="MPN" value="GRM155R71C104KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="flash_clock"/>
+      <property name="Sheetfile" value="flash_clock.kicad_sch"/>
+      <sheetpath names="/flash_clock/" tstamps="/4191b64a-cab3-547d-b44d-c86556a51d60/"/>
+      <tstamps>177c3328-6e97-54c8-a97e-99f03aa70522</tstamps>
+    </comp>
+    <comp ref="C425">
+      <value>15p</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM1555C1H150JA01D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C425" description=""/>
+      <property name="MPN" value="GRM1555C1H150JA01D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="flash_clock"/>
+      <property name="Sheetfile" value="flash_clock.kicad_sch"/>
+      <sheetpath names="/flash_clock/" tstamps="/4191b64a-cab3-547d-b44d-c86556a51d60/"/>
+      <tstamps>667ef3cd-6651-5ce5-aecc-0af410dc27c0</tstamps>
+    </comp>
+    <comp ref="C426">
+      <value>15p</value>
+      <footprint>Quadcuber:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">GRM1555C1H150JA01D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="C426" description=""/>
+      <property name="MPN" value="GRM1555C1H150JA01D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="flash_clock"/>
+      <property name="Sheetfile" value="flash_clock.kicad_sch"/>
+      <sheetpath names="/flash_clock/" tstamps="/4191b64a-cab3-547d-b44d-c86556a51d60/"/>
+      <tstamps>df9600fc-a920-5095-bfef-51ad49e9da38</tstamps>
+    </comp>
+    <comp ref="R407">
+      <value>10k</value>
+      <footprint>Quadcuber:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R407" description=""/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="flash_clock"/>
+      <property name="Sheetfile" value="flash_clock.kicad_sch"/>
+      <sheetpath names="/flash_clock/" tstamps="/4191b64a-cab3-547d-b44d-c86556a51d60/"/>
+      <tstamps>e5063d9c-1743-570c-a1ee-042bec2420c0</tstamps>
+    </comp>
+    <comp ref="R408">
+      <value>1k</value>
+      <footprint>Quadcuber:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-071KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R408" description=""/>
+      <property name="MPN" value="RC0603FR-071KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="flash_clock"/>
+      <property name="Sheetfile" value="flash_clock.kicad_sch"/>
+      <sheetpath names="/flash_clock/" tstamps="/4191b64a-cab3-547d-b44d-c86556a51d60/"/>
+      <tstamps>b515cab3-ec49-5b37-b1d0-6779a2778976</tstamps>
+    </comp>
+    <comp ref="R409">
+      <value>1k</value>
+      <footprint>Quadcuber:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="MPN">RC0402FR-071KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Quadcuber:R_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R409" description=""/>
+      <property name="MPN" value="RC0402FR-071KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="flash_clock"/>
+      <property name="Sheetfile" value="flash_clock.kicad_sch"/>
+      <sheetpath names="/flash_clock/" tstamps="/4191b64a-cab3-547d-b44d-c86556a51d60/"/>
+      <tstamps>0c36665e-4a6d-5c9f-a5a8-d9f9cc8e5275</tstamps>
+    </comp>
+    <comp ref="S1">
+      <value>BOOTSEL</value>
+      <footprint>Quadcuber:SW_SPST_TL3342</footprint>
+      <fields>
+        <field name="MPN">TL3342F160QG</field>
+        <field name="Manufacturer">E-Switch</field>
+        <field name="Footprint">Quadcuber:SW_SPST_TL3342</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="S1" description=""/>
+      <property name="MPN" value="TL3342F160QG"/>
+      <property name="Manufacturer" value="E-Switch"/>
+      <property name="Sheetname" value="flash_clock"/>
+      <property name="Sheetfile" value="flash_clock.kicad_sch"/>
+      <sheetpath names="/flash_clock/" tstamps="/4191b64a-cab3-547d-b44d-c86556a51d60/"/>
+      <tstamps>9392aee0-9baa-5da8-91bd-bb31053160ed</tstamps>
+    </comp>
+    <comp ref="U7">
+      <value>W25Q16JVSNIQ 2MiB</value>
+      <footprint>Quadcuber:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="MPN">W25Q16JVSNIQ</field>
+        <field name="Manufacturer">Winbond</field>
+        <field name="Footprint">Quadcuber:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="U7" description=""/>
+      <property name="MPN" value="W25Q16JVSNIQ"/>
+      <property name="Manufacturer" value="Winbond"/>
+      <property name="Sheetname" value="flash_clock"/>
+      <property name="Sheetfile" value="flash_clock.kicad_sch"/>
+      <sheetpath names="/flash_clock/" tstamps="/4191b64a-cab3-547d-b44d-c86556a51d60/"/>
+      <tstamps>bf2b5ed4-d8aa-59ea-9634-e60c721ea286</tstamps>
+    </comp>
+    <comp ref="Y1">
+      <value>12MHz CL10pF</value>
+      <footprint>Quadcuber:Crystal_SMD_3225-4Pin_3.2x2.5mm</footprint>
+      <fields>
+        <field name="MPN">ABM8-272-T3</field>
+        <field name="Manufacturer">Abracon</field>
+        <field name="Footprint">Quadcuber:Crystal_SMD_3225-4Pin_3.2x2.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="Y1" description=""/>
+      <property name="MPN" value="ABM8-272-T3"/>
+      <property name="Manufacturer" value="Abracon"/>
+      <property name="Sheetname" value="flash_clock"/>
+      <property name="Sheetfile" value="flash_clock.kicad_sch"/>
+      <sheetpath names="/flash_clock/" tstamps="/4191b64a-cab3-547d-b44d-c86556a51d60/"/>
+      <tstamps>547347a4-7bd4-5099-8dac-897963c8c70a</tstamps>
     </comp>
     <comp ref="C2">
       <value>470u/25V</value>
@@ -1215,18 +2014,18 @@
       <tstamps>d1f5f2ea-71ad-5fb6-bde1-253e401b8d67</tstamps>
     </comp>
     <comp ref="J10">
-      <value>EV3 R 4434 HOLD</value>
-      <footprint>Quadcuber:EV3_4434_PROVISIONAL</footprint>
+      <value>EV3 R PINMAP HOLD</value>
+      <footprint>Quadcuber:EV3_UserDrawing_PINMAP_HOLD</footprint>
       <fields>
-        <field name="MPN">4434</field>
-        <field name="Manufacturer">Adafruit (supplier brand)</field>
-        <field name="Footprint">Quadcuber:EV3_4434_PROVISIONAL</field>
+        <field name="MPN">UNCONFIRMED user drawing</field>
+        <field name="Manufacturer">Unconfirmed (Coorle watermark)</field>
+        <field name="Footprint">Quadcuber:EV3_UserDrawing_PINMAP_HOLD</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="J10" description=""/>
-      <property name="MPN" value="4434"/>
-      <property name="Manufacturer" value="Adafruit (supplier brand)"/>
+      <property name="MPN" value="UNCONFIRMED user drawing"/>
+      <property name="Manufacturer" value="Unconfirmed (Coorle watermark)"/>
       <property name="Sheetname" value="arm_R"/>
       <property name="Sheetfile" value="arm_R.kicad_sch"/>
       <sheetpath names="/arm_R/" tstamps="/685933de-b949-5744-9019-4836c7cf2044/"/>
@@ -1445,6 +2244,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_R"/>
       <property name="Sheetfile" value="arm_R.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_R/" tstamps="/685933de-b949-5744-9019-4836c7cf2044/"/>
       <tstamps>65ba829c-4d93-523c-9552-4c99ab1ed4ee</tstamps>
     </comp>
@@ -1463,6 +2263,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_R"/>
       <property name="Sheetfile" value="arm_R.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_R/" tstamps="/685933de-b949-5744-9019-4836c7cf2044/"/>
       <tstamps>97104b60-a7bd-5fc1-a345-6a3ef1d3c21e</tstamps>
     </comp>
@@ -1481,6 +2282,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_R"/>
       <property name="Sheetfile" value="arm_R.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_R/" tstamps="/685933de-b949-5744-9019-4836c7cf2044/"/>
       <tstamps>20b56371-0474-5e86-9fc0-cf13ce2e973d</tstamps>
     </comp>
@@ -1499,6 +2301,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_R"/>
       <property name="Sheetfile" value="arm_R.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_R/" tstamps="/685933de-b949-5744-9019-4836c7cf2044/"/>
       <tstamps>6d7d2615-6e59-5a8f-863a-8457cade8ef6</tstamps>
     </comp>
@@ -1683,18 +2486,18 @@
       <tstamps>8200da14-6013-525b-93c5-ec6daf60e62a</tstamps>
     </comp>
     <comp ref="J11">
-      <value>EV3 L 4434 HOLD</value>
-      <footprint>Quadcuber:EV3_4434_PROVISIONAL</footprint>
+      <value>EV3 L PINMAP HOLD</value>
+      <footprint>Quadcuber:EV3_UserDrawing_PINMAP_HOLD</footprint>
       <fields>
-        <field name="MPN">4434</field>
-        <field name="Manufacturer">Adafruit (supplier brand)</field>
-        <field name="Footprint">Quadcuber:EV3_4434_PROVISIONAL</field>
+        <field name="MPN">UNCONFIRMED user drawing</field>
+        <field name="Manufacturer">Unconfirmed (Coorle watermark)</field>
+        <field name="Footprint">Quadcuber:EV3_UserDrawing_PINMAP_HOLD</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="J11" description=""/>
-      <property name="MPN" value="4434"/>
-      <property name="Manufacturer" value="Adafruit (supplier brand)"/>
+      <property name="MPN" value="UNCONFIRMED user drawing"/>
+      <property name="Manufacturer" value="Unconfirmed (Coorle watermark)"/>
       <property name="Sheetname" value="arm_L"/>
       <property name="Sheetfile" value="arm_L.kicad_sch"/>
       <sheetpath names="/arm_L/" tstamps="/69c11592-d9f6-51a0-a214-cdcfcb517076/"/>
@@ -1913,6 +2716,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_L"/>
       <property name="Sheetfile" value="arm_L.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_L/" tstamps="/69c11592-d9f6-51a0-a214-cdcfcb517076/"/>
       <tstamps>bb63322e-b4e6-53f6-87df-eb7096d89b61</tstamps>
     </comp>
@@ -1931,6 +2735,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_L"/>
       <property name="Sheetfile" value="arm_L.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_L/" tstamps="/69c11592-d9f6-51a0-a214-cdcfcb517076/"/>
       <tstamps>cff8eda8-d658-53a7-aba6-00a390bd5400</tstamps>
     </comp>
@@ -1949,6 +2754,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_L"/>
       <property name="Sheetfile" value="arm_L.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_L/" tstamps="/69c11592-d9f6-51a0-a214-cdcfcb517076/"/>
       <tstamps>884b2ec9-10b8-587a-9182-3e7edfe6b0a1</tstamps>
     </comp>
@@ -1967,6 +2773,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_L"/>
       <property name="Sheetfile" value="arm_L.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_L/" tstamps="/69c11592-d9f6-51a0-a214-cdcfcb517076/"/>
       <tstamps>e8fe76ff-0d63-5b4a-ba0e-fe77438da0c0</tstamps>
     </comp>
@@ -2151,18 +2958,18 @@
       <tstamps>17779b2a-c613-527c-a160-b4ea4d890481</tstamps>
     </comp>
     <comp ref="J12">
-      <value>EV3 F 4434 HOLD</value>
-      <footprint>Quadcuber:EV3_4434_PROVISIONAL</footprint>
+      <value>EV3 F PINMAP HOLD</value>
+      <footprint>Quadcuber:EV3_UserDrawing_PINMAP_HOLD</footprint>
       <fields>
-        <field name="MPN">4434</field>
-        <field name="Manufacturer">Adafruit (supplier brand)</field>
-        <field name="Footprint">Quadcuber:EV3_4434_PROVISIONAL</field>
+        <field name="MPN">UNCONFIRMED user drawing</field>
+        <field name="Manufacturer">Unconfirmed (Coorle watermark)</field>
+        <field name="Footprint">Quadcuber:EV3_UserDrawing_PINMAP_HOLD</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="J12" description=""/>
-      <property name="MPN" value="4434"/>
-      <property name="Manufacturer" value="Adafruit (supplier brand)"/>
+      <property name="MPN" value="UNCONFIRMED user drawing"/>
+      <property name="Manufacturer" value="Unconfirmed (Coorle watermark)"/>
       <property name="Sheetname" value="arm_F"/>
       <property name="Sheetfile" value="arm_F.kicad_sch"/>
       <sheetpath names="/arm_F/" tstamps="/4d2f273c-a6cc-544e-afa2-1237dc6b88c9/"/>
@@ -2381,6 +3188,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_F"/>
       <property name="Sheetfile" value="arm_F.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_F/" tstamps="/4d2f273c-a6cc-544e-afa2-1237dc6b88c9/"/>
       <tstamps>041c445b-22a9-5421-8bb5-7c1eebaeafe6</tstamps>
     </comp>
@@ -2399,6 +3207,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_F"/>
       <property name="Sheetfile" value="arm_F.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_F/" tstamps="/4d2f273c-a6cc-544e-afa2-1237dc6b88c9/"/>
       <tstamps>0cb50973-2df0-5169-9dd7-f587beaef72b</tstamps>
     </comp>
@@ -2417,6 +3226,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_F"/>
       <property name="Sheetfile" value="arm_F.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_F/" tstamps="/4d2f273c-a6cc-544e-afa2-1237dc6b88c9/"/>
       <tstamps>38b190d9-1afa-5a33-8b70-ecb72bc2e8bc</tstamps>
     </comp>
@@ -2435,6 +3245,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_F"/>
       <property name="Sheetfile" value="arm_F.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_F/" tstamps="/4d2f273c-a6cc-544e-afa2-1237dc6b88c9/"/>
       <tstamps>a4655286-1cb0-5602-9cc2-a58e7363aaff</tstamps>
     </comp>
@@ -2619,18 +3430,18 @@
       <tstamps>d98c1a69-9d55-5b08-a87b-695819b934d8</tstamps>
     </comp>
     <comp ref="J13">
-      <value>EV3 B 4434 HOLD</value>
-      <footprint>Quadcuber:EV3_4434_PROVISIONAL</footprint>
+      <value>EV3 B PINMAP HOLD</value>
+      <footprint>Quadcuber:EV3_UserDrawing_PINMAP_HOLD</footprint>
       <fields>
-        <field name="MPN">4434</field>
-        <field name="Manufacturer">Adafruit (supplier brand)</field>
-        <field name="Footprint">Quadcuber:EV3_4434_PROVISIONAL</field>
+        <field name="MPN">UNCONFIRMED user drawing</field>
+        <field name="Manufacturer">Unconfirmed (Coorle watermark)</field>
+        <field name="Footprint">Quadcuber:EV3_UserDrawing_PINMAP_HOLD</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="J13" description=""/>
-      <property name="MPN" value="4434"/>
-      <property name="Manufacturer" value="Adafruit (supplier brand)"/>
+      <property name="MPN" value="UNCONFIRMED user drawing"/>
+      <property name="Manufacturer" value="Unconfirmed (Coorle watermark)"/>
       <property name="Sheetname" value="arm_B"/>
       <property name="Sheetfile" value="arm_B.kicad_sch"/>
       <sheetpath names="/arm_B/" tstamps="/7e025fd2-1fa3-515a-9613-504a980a5b9d/"/>
@@ -2849,6 +3660,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_B"/>
       <property name="Sheetfile" value="arm_B.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_B/" tstamps="/7e025fd2-1fa3-515a-9613-504a980a5b9d/"/>
       <tstamps>f3cea417-5c40-55b6-be43-800b62baa4d8</tstamps>
     </comp>
@@ -2867,6 +3679,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_B"/>
       <property name="Sheetfile" value="arm_B.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_B/" tstamps="/7e025fd2-1fa3-515a-9613-504a980a5b9d/"/>
       <tstamps>04003333-ff5f-5bff-8699-0ac18146aefb</tstamps>
     </comp>
@@ -2885,6 +3698,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_B"/>
       <property name="Sheetfile" value="arm_B.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_B/" tstamps="/7e025fd2-1fa3-515a-9613-504a980a5b9d/"/>
       <tstamps>58b91246-fcef-5fd6-a029-5bd0f166f8cc</tstamps>
     </comp>
@@ -2903,6 +3717,7 @@
       <property name="Manufacturer" value="PCB"/>
       <property name="Sheetname" value="arm_B"/>
       <property name="Sheetfile" value="arm_B.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <sheetpath names="/arm_B/" tstamps="/7e025fd2-1fa3-515a-9613-504a980a5b9d/"/>
       <tstamps>d6f21eba-07d7-5843-9253-b3944f9eab79</tstamps>
     </comp>
@@ -2965,8 +3780,8 @@
     <libpart lib="Quadcuber" part="C1">
       <fields>
         <field name="Reference">C1</field>
-        <field name="Value">10u/25V</field>
-        <field name="Footprint">Quadcuber:C_1210_3225Metric</field>
+        <field name="Value">1u/16V</field>
+        <field name="Footprint">Quadcuber:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3508,6 +4323,253 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Quadcuber" part="C400">
+      <fields>
+        <field name="Reference">C400</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C410">
+      <fields>
+        <field name="Reference">C410</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C411">
+      <fields>
+        <field name="Reference">C411</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C412">
+      <fields>
+        <field name="Reference">C412</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C413">
+      <fields>
+        <field name="Reference">C413</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C414">
+      <fields>
+        <field name="Reference">C414</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C415">
+      <fields>
+        <field name="Reference">C415</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C416">
+      <fields>
+        <field name="Reference">C416</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C417">
+      <fields>
+        <field name="Reference">C417</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C418">
+      <fields>
+        <field name="Reference">C418</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C419">
+      <fields>
+        <field name="Reference">C419</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C420">
+      <fields>
+        <field name="Reference">C420</field>
+        <field name="Value">1u</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C421">
+      <fields>
+        <field name="Reference">C421</field>
+        <field name="Value">1u</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C422">
+      <fields>
+        <field name="Reference">C422</field>
+        <field name="Value">4.7u/10V</field>
+        <field name="Footprint">Quadcuber:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C423">
+      <fields>
+        <field name="Reference">C423</field>
+        <field name="Value">1u/16V</field>
+        <field name="Footprint">Quadcuber:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C424">
+      <fields>
+        <field name="Reference">C424</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C425">
+      <fields>
+        <field name="Reference">C425</field>
+        <field name="Value">15p</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C426">
+      <fields>
+        <field name="Reference">C426</field>
+        <field name="Value">15p</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="C427">
+      <fields>
+        <field name="Reference">C427</field>
+        <field name="Value">100n</field>
+        <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Quadcuber" part="C5">
       <fields>
         <field name="Reference">C5</field>
@@ -3524,7 +4586,7 @@
     <libpart lib="Quadcuber" part="D2">
       <fields>
         <field name="Reference">D2</field>
-        <field name="Value">SS14 VSYS isolation</field>
+        <field name="Value">SS14 external logic isolation</field>
         <field name="Footprint">Quadcuber:D_SMA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -3558,6 +4620,32 @@
       <pins>
         <pin num="1" name="BI" type="passive"/>
         <pin num="2" name="BI" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="D5">
+      <fields>
+        <field name="Reference">D5</field>
+        <field name="Value">SS14 USB isolation</field>
+        <field name="Footprint">Quadcuber:D_SMA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="D7">
+      <fields>
+        <field name="Reference">D7</field>
+        <field name="Value">USER LED GP25</field>
+        <field name="Footprint">Quadcuber:LED_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Quadcuber" part="F1">
@@ -3638,6 +4726,19 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Quadcuber" part="F3">
+      <fields>
+        <field name="Reference">F3</field>
+        <field name="Value">0.5A USB PTC</field>
+        <field name="Footprint">Quadcuber:Fuse_1812_4532Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Quadcuber" part="J1">
       <fields>
         <field name="Reference">J1</field>
@@ -3654,8 +4755,8 @@
     <libpart lib="Quadcuber" part="J10">
       <fields>
         <field name="Reference">J10</field>
-        <field name="Value">EV3 R 4434 HOLD</field>
-        <field name="Footprint">Quadcuber:EV3_4434_PROVISIONAL</field>
+        <field name="Value">EV3 R PINMAP HOLD</field>
+        <field name="Footprint">Quadcuber:EV3_UserDrawing_PINMAP_HOLD</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3671,8 +4772,8 @@
     <libpart lib="Quadcuber" part="J11">
       <fields>
         <field name="Reference">J11</field>
-        <field name="Value">EV3 L 4434 HOLD</field>
-        <field name="Footprint">Quadcuber:EV3_4434_PROVISIONAL</field>
+        <field name="Value">EV3 L PINMAP HOLD</field>
+        <field name="Footprint">Quadcuber:EV3_UserDrawing_PINMAP_HOLD</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3688,8 +4789,8 @@
     <libpart lib="Quadcuber" part="J12">
       <fields>
         <field name="Reference">J12</field>
-        <field name="Value">EV3 F 4434 HOLD</field>
-        <field name="Footprint">Quadcuber:EV3_4434_PROVISIONAL</field>
+        <field name="Value">EV3 F PINMAP HOLD</field>
+        <field name="Footprint">Quadcuber:EV3_UserDrawing_PINMAP_HOLD</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3705,8 +4806,8 @@
     <libpart lib="Quadcuber" part="J13">
       <fields>
         <field name="Reference">J13</field>
-        <field name="Value">EV3 B 4434 HOLD</field>
-        <field name="Footprint">Quadcuber:EV3_4434_PROVISIONAL</field>
+        <field name="Value">EV3 B PINMAP HOLD</field>
+        <field name="Footprint">Quadcuber:EV3_UserDrawing_PINMAP_HOLD</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3800,6 +4901,49 @@
       <pins>
         <pin num="1" name="1" type="passive"/>
         <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="J4">
+      <fields>
+        <field name="Reference">J4</field>
+        <field name="Value">SWD VREF D G C</field>
+        <field name="Footprint">Quadcuber:PinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="J5">
+      <fields>
+        <field name="Reference">J5</field>
+        <field name="Value">USB-C data / BOOTSEL</field>
+        <field name="Footprint">Quadcuber:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="A1" name="A1" type="passive"/>
+        <pin num="A4" name="A4" type="passive"/>
+        <pin num="A5" name="A5" type="passive"/>
+        <pin num="A6" name="A6" type="passive"/>
+        <pin num="A7" name="A7" type="passive"/>
+        <pin num="A8" name="A8" type="passive"/>
+        <pin num="A9" name="A9" type="passive"/>
+        <pin num="A12" name="A12" type="passive"/>
+        <pin num="B1" name="B1" type="passive"/>
+        <pin num="B4" name="B4" type="passive"/>
+        <pin num="B5" name="B5" type="passive"/>
+        <pin num="B6" name="B6" type="passive"/>
+        <pin num="B7" name="B7" type="passive"/>
+        <pin num="B8" name="B8" type="passive"/>
+        <pin num="B9" name="B9" type="passive"/>
+        <pin num="B12" name="B12" type="passive"/>
+        <pin num="S1" name="S1" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Quadcuber" part="L1">
@@ -4494,6 +5638,175 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Quadcuber" part="R400">
+      <fields>
+        <field name="Reference">R400</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="R401">
+      <fields>
+        <field name="Reference">R401</field>
+        <field name="Value">5.1k</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="R402">
+      <fields>
+        <field name="Reference">R402</field>
+        <field name="Value">5.1k</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="R403">
+      <fields>
+        <field name="Reference">R403</field>
+        <field name="Value">27</field>
+        <field name="Footprint">Quadcuber:R_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="R404">
+      <fields>
+        <field name="Reference">R404</field>
+        <field name="Value">27</field>
+        <field name="Footprint">Quadcuber:R_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="R405">
+      <fields>
+        <field name="Reference">R405</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="R406">
+      <fields>
+        <field name="Reference">R406</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="R407">
+      <fields>
+        <field name="Reference">R407</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="R408">
+      <fields>
+        <field name="Reference">R408</field>
+        <field name="Value">1k</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="R409">
+      <fields>
+        <field name="Reference">R409</field>
+        <field name="Value">1k</field>
+        <field name="Footprint">Quadcuber:R_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="R410">
+      <fields>
+        <field name="Reference">R410</field>
+        <field name="Value">1k</field>
+        <field name="Footprint">Quadcuber:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="S1">
+      <fields>
+        <field name="Reference">S1</field>
+        <field name="Value">BOOTSEL</field>
+        <field name="Footprint">Quadcuber:SW_SPST_TL3342</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="S2">
+      <fields>
+        <field name="Reference">S2</field>
+        <field name="Value">RUN RESET</field>
+        <field name="Footprint">Quadcuber:SW_SPST_TL3342</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Quadcuber" part="TP1">
       <fields>
         <field name="Reference">TP1</field>
@@ -4773,52 +6086,69 @@
     <libpart lib="Quadcuber" part="U1">
       <fields>
         <field name="Reference">U1</field>
-        <field name="Value">Pico H socketed</field>
-        <field name="Footprint">Quadcuber:Pico_H_Sockets</field>
+        <field name="Value">RP2040</field>
+        <field name="Footprint">Quadcuber:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm_ThermalVias</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="GP0" type="bidirectional"/>
-        <pin num="2" name="GP1" type="bidirectional"/>
-        <pin num="3" name="3" type="passive"/>
-        <pin num="4" name="GP2" type="bidirectional"/>
-        <pin num="5" name="GP3" type="bidirectional"/>
-        <pin num="6" name="GP4" type="bidirectional"/>
-        <pin num="7" name="GP5" type="bidirectional"/>
-        <pin num="8" name="8" type="passive"/>
-        <pin num="9" name="GP6" type="bidirectional"/>
-        <pin num="10" name="GP7" type="bidirectional"/>
-        <pin num="11" name="GP8" type="bidirectional"/>
-        <pin num="12" name="GP9" type="bidirectional"/>
-        <pin num="13" name="13" type="passive"/>
-        <pin num="14" name="GP10" type="bidirectional"/>
-        <pin num="15" name="GP11" type="bidirectional"/>
-        <pin num="16" name="GP12" type="bidirectional"/>
-        <pin num="17" name="GP13" type="bidirectional"/>
-        <pin num="18" name="18" type="passive"/>
-        <pin num="19" name="GP14" type="bidirectional"/>
-        <pin num="20" name="GP15" type="bidirectional"/>
-        <pin num="21" name="GP16" type="bidirectional"/>
-        <pin num="22" name="GP17" type="bidirectional"/>
-        <pin num="23" name="23" type="passive"/>
-        <pin num="24" name="GP18" type="bidirectional"/>
-        <pin num="25" name="GP19" type="bidirectional"/>
-        <pin num="26" name="GP20" type="bidirectional"/>
-        <pin num="27" name="GP21" type="bidirectional"/>
-        <pin num="28" name="28" type="passive"/>
-        <pin num="29" name="GP22" type="bidirectional"/>
-        <pin num="30" name="RUN" type="passive"/>
-        <pin num="31" name="GP26" type="bidirectional"/>
-        <pin num="32" name="GP27" type="bidirectional"/>
-        <pin num="33" name="33" type="passive"/>
-        <pin num="34" name="GP28" type="bidirectional"/>
-        <pin num="35" name="ADC_VREF_NC" type="passive"/>
-        <pin num="36" name="3V3_OUT" type="power_out"/>
-        <pin num="37" name="3V3_EN_NC" type="passive"/>
-        <pin num="38" name="38" type="passive"/>
-        <pin num="39" name="VSYS" type="power_in"/>
-        <pin num="40" name="VBUS_USB_NC" type="passive"/>
+        <pin num="1" name="IOVDD" type="power_in"/>
+        <pin num="2" name="GPIO0" type="bidirectional"/>
+        <pin num="3" name="GPIO1" type="bidirectional"/>
+        <pin num="4" name="GPIO2" type="bidirectional"/>
+        <pin num="5" name="GPIO3" type="bidirectional"/>
+        <pin num="6" name="GPIO4" type="bidirectional"/>
+        <pin num="7" name="GPIO5" type="bidirectional"/>
+        <pin num="8" name="GPIO6" type="bidirectional"/>
+        <pin num="9" name="GPIO7" type="bidirectional"/>
+        <pin num="10" name="IOVDD" type="power_in"/>
+        <pin num="11" name="GPIO8" type="bidirectional"/>
+        <pin num="12" name="GPIO9" type="bidirectional"/>
+        <pin num="13" name="GPIO10" type="bidirectional"/>
+        <pin num="14" name="GPIO11" type="bidirectional"/>
+        <pin num="15" name="GPIO12" type="bidirectional"/>
+        <pin num="16" name="GPIO13" type="bidirectional"/>
+        <pin num="17" name="GPIO14" type="bidirectional"/>
+        <pin num="18" name="GPIO15" type="bidirectional"/>
+        <pin num="19" name="TESTEN" type="input"/>
+        <pin num="20" name="XIN" type="input"/>
+        <pin num="21" name="XOUT" type="output"/>
+        <pin num="22" name="IOVDD" type="power_in"/>
+        <pin num="23" name="DVDD" type="power_in"/>
+        <pin num="24" name="SWCLK" type="input"/>
+        <pin num="25" name="SWDIO" type="bidirectional"/>
+        <pin num="26" name="RUN" type="input"/>
+        <pin num="27" name="GPIO16" type="bidirectional"/>
+        <pin num="28" name="GPIO17" type="bidirectional"/>
+        <pin num="29" name="GPIO18" type="bidirectional"/>
+        <pin num="30" name="GPIO19" type="bidirectional"/>
+        <pin num="31" name="GPIO20" type="bidirectional"/>
+        <pin num="32" name="GPIO21" type="bidirectional"/>
+        <pin num="33" name="IOVDD" type="power_in"/>
+        <pin num="34" name="GPIO22" type="bidirectional"/>
+        <pin num="35" name="GPIO23" type="bidirectional"/>
+        <pin num="36" name="GPIO24" type="bidirectional"/>
+        <pin num="37" name="GPIO25" type="bidirectional"/>
+        <pin num="38" name="GPIO26" type="bidirectional"/>
+        <pin num="39" name="GPIO27" type="bidirectional"/>
+        <pin num="40" name="GPIO28" type="bidirectional"/>
+        <pin num="41" name="GPIO29" type="bidirectional"/>
+        <pin num="42" name="IOVDD" type="power_in"/>
+        <pin num="43" name="ADC_AVDD" type="power_in"/>
+        <pin num="44" name="VREG_IN" type="power_in"/>
+        <pin num="45" name="VREG_OUT" type="power_out"/>
+        <pin num="46" name="USB_DM" type="passive"/>
+        <pin num="47" name="USB_DP" type="passive"/>
+        <pin num="48" name="USB_VDD" type="power_in"/>
+        <pin num="49" name="IOVDD" type="power_in"/>
+        <pin num="50" name="DVDD" type="power_in"/>
+        <pin num="51" name="QSPI_SD3" type="passive"/>
+        <pin num="52" name="QSPI_SCLK" type="passive"/>
+        <pin num="53" name="QSPI_SD0" type="passive"/>
+        <pin num="54" name="QSPI_SD2" type="passive"/>
+        <pin num="55" name="QSPI_SD1" type="passive"/>
+        <pin num="56" name="QSPI_SS" type="passive"/>
+        <pin num="57" name="GND_EP" type="power_in"/>
       </pins>
     </libpart>
     <libpart lib="Quadcuber" part="U10">
@@ -5084,6 +6414,73 @@
         <pin num="6" name="ANODE" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="Quadcuber" part="U5">
+      <fields>
+        <field name="Reference">U5</field>
+        <field name="Value">TLV75533PDBVR</field>
+        <field name="Footprint">Quadcuber:SOT-23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="NC" type="passive"/>
+        <pin num="5" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="U6">
+      <fields>
+        <field name="Reference">U6</field>
+        <field name="Value">USBLC6-2SC6</field>
+        <field name="Footprint">Quadcuber:SOT-23-6</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IO1" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="IO2" type="passive"/>
+        <pin num="4" name="IO2" type="passive"/>
+        <pin num="5" name="VBUS" type="passive"/>
+        <pin num="6" name="IO1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="U7">
+      <fields>
+        <field name="Reference">U7</field>
+        <field name="Value">W25Q16JVSNIQ 2MiB</field>
+        <field name="Footprint">Quadcuber:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="CS_N" type="passive"/>
+        <pin num="2" name="DO_IO1" type="passive"/>
+        <pin num="3" name="WP_IO2" type="passive"/>
+        <pin num="4" name="GND" type="passive"/>
+        <pin num="5" name="DI_IO0" type="passive"/>
+        <pin num="6" name="CLK" type="passive"/>
+        <pin num="7" name="HOLD_IO3" type="passive"/>
+        <pin num="8" name="VCC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="Y1">
+      <fields>
+        <field name="Reference">Y1</field>
+        <field name="Value">12MHz CL10pF</field>
+        <field name="Footprint">Quadcuber:Crystal_SMD_3225-4Pin_3.2x2.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
     <library logical="Quadcuber">
@@ -5091,19 +6488,51 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="3V3" class="Default">
+    <net code="1" name="1V1" class="Default">
+      <node ref="C418" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C419" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C421" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="23" pinfunction="DVDD" pintype="power_in"/>
+      <node ref="U1" pin="45" pinfunction="VREG_OUT" pintype="power_out"/>
+      <node ref="U1" pin="50" pinfunction="DVDD" pintype="power_in"/>
+    </net>
+    <net code="2" name="3V3" class="Default">
       <node ref="C103" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C123" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C143" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C163" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C410" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C411" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C412" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C413" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C414" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C415" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C416" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C417" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C420" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C422" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C424" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R400" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R407" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP6" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="36" pinfunction="3V3_OUT" pintype="power_out"/>
+      <node ref="U1" pin="1" pinfunction="IOVDD" pintype="power_in"/>
+      <node ref="U1" pin="10" pinfunction="IOVDD" pintype="power_in"/>
+      <node ref="U1" pin="22" pinfunction="IOVDD" pintype="power_in"/>
+      <node ref="U1" pin="33" pinfunction="IOVDD" pintype="power_in"/>
+      <node ref="U1" pin="42" pinfunction="IOVDD" pintype="power_in"/>
+      <node ref="U1" pin="43" pinfunction="ADC_AVDD" pintype="power_in"/>
+      <node ref="U1" pin="44" pinfunction="VREG_IN" pintype="power_in"/>
+      <node ref="U1" pin="48" pinfunction="USB_VDD" pintype="power_in"/>
+      <node ref="U1" pin="49" pinfunction="IOVDD" pintype="power_in"/>
       <node ref="U20" pin="5" pinfunction="VCC" pintype="power_in"/>
       <node ref="U21" pin="5" pinfunction="VCC" pintype="power_in"/>
       <node ref="U22" pin="5" pinfunction="VCC" pintype="power_in"/>
       <node ref="U23" pin="5" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U5" pin="5" pinfunction="OUT" pintype="power_out"/>
+      <node ref="U7" pin="8" pinfunction="VCC" pintype="passive"/>
     </net>
-    <net code="2" name="5V_A" class="Default">
+    <net code="3" name="5V_A" class="Default">
       <node ref="C23" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C24" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C25" pin="1" pinfunction="1" pintype="passive"/>
@@ -5116,7 +6545,7 @@
       <node ref="R21" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP3" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="3" name="5V_B" class="Default">
+    <net code="4" name="5V_B" class="Default">
       <node ref="C33" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C34" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C35" pin="1" pinfunction="1" pintype="passive"/>
@@ -5127,7 +6556,7 @@
       <node ref="R31" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP4" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="4" name="5V_ENC" class="Default">
+    <net code="5" name="5V_ENC" class="Default">
       <node ref="C104" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C124" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C144" pin="1" pinfunction="1" pintype="passive"/>
@@ -5139,149 +6568,153 @@
       <node ref="J13" pin="4" pinfunction="+5V" pintype="passive"/>
       <node ref="TP5" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="5" name="B1_BOOT" class="Default">
+    <net code="6" name="B1_BOOT" class="Default">
       <node ref="R20" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U2" pin="6" pinfunction="BOOT" pintype="passive"/>
     </net>
-    <net code="6" name="B1_BOOT_CAP" class="Default">
+    <net code="7" name="B1_BOOT_CAP" class="Default">
       <node ref="C22" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R20" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="7" name="B1_EN" class="Default">
+    <net code="8" name="B1_EN" class="Default">
       <node ref="R23" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R24" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U2" pin="5" pinfunction="EN" pintype="input"/>
     </net>
-    <net code="8" name="B1_FB" class="Default">
+    <net code="9" name="B1_FB" class="Default">
       <node ref="C25" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R21" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R22" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U2" pin="4" pinfunction="FB" pintype="input"/>
     </net>
-    <net code="9" name="B1_SW" class="Default">
+    <net code="10" name="B1_SW" class="Default">
       <node ref="C22" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="L1" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U2" pin="2" pinfunction="SW" pintype="output"/>
     </net>
-    <net code="10" name="B2_BOOT" class="Default">
+    <net code="11" name="B2_BOOT" class="Default">
       <node ref="R30" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U3" pin="6" pinfunction="BOOT" pintype="passive"/>
     </net>
-    <net code="11" name="B2_BOOT_CAP" class="Default">
+    <net code="12" name="B2_BOOT_CAP" class="Default">
       <node ref="C32" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R30" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="12" name="B2_EN" class="Default">
+    <net code="13" name="B2_EN" class="Default">
       <node ref="R33" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R34" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U3" pin="5" pinfunction="EN" pintype="input"/>
     </net>
-    <net code="13" name="B2_FB" class="Default">
+    <net code="14" name="B2_FB" class="Default">
       <node ref="C35" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R31" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R32" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U3" pin="4" pinfunction="FB" pintype="input"/>
     </net>
-    <net code="14" name="B2_SW" class="Default">
+    <net code="15" name="B2_SW" class="Default">
       <node ref="C32" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="L2" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U3" pin="2" pinfunction="SW" pintype="output"/>
     </net>
-    <net code="15" name="B_ENC_A_F" class="Default">
+    <net code="16" name="BOOT_BUTTON" class="Default">
+      <node ref="R408" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="17" name="B_ENC_A_F" class="Default">
       <node ref="R163" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R165" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U23" pin="1" pinfunction="1A" pintype="input"/>
     </net>
-    <net code="16" name="B_ENC_A_RAW" class="Default">
+    <net code="18" name="B_ENC_A_RAW" class="Default">
       <node ref="J13" pin="5" pinfunction="TACHO0" pintype="passive"/>
       <node ref="R163" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="17" name="B_ENC_B_F" class="Default">
+    <net code="19" name="B_ENC_B_F" class="Default">
       <node ref="R164" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R166" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U23" pin="3" pinfunction="2A" pintype="input"/>
     </net>
-    <net code="18" name="B_ENC_B_RAW" class="Default">
+    <net code="20" name="B_ENC_B_RAW" class="Default">
       <node ref="J13" pin="6" pinfunction="TACHO1" pintype="passive"/>
       <node ref="R164" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="19" name="B_ILIM" class="Default">
+    <net code="21" name="B_ILIM" class="Default">
       <node ref="R160" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U13" pin="4" pinfunction="ILIM" pintype="input"/>
     </net>
-    <net code="20" name="B_M1" class="Default">
+    <net code="22" name="B_M1" class="Default">
       <node ref="J13" pin="1" pinfunction="M1" pintype="passive"/>
       <node ref="TP22" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U13" pin="6" pinfunction="OUT1" pintype="output"/>
     </net>
-    <net code="21" name="B_M2" class="Default">
+    <net code="23" name="B_M2" class="Default">
       <node ref="J13" pin="2" pinfunction="M2" pintype="passive"/>
       <node ref="TP23" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U13" pin="8" pinfunction="OUT2" pintype="output"/>
     </net>
-    <net code="22" name="B_SERVO_5V" class="Default">
+    <net code="24" name="B_SERVO_5V" class="Default">
       <node ref="C165" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="F13" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="J23" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U33" pin="5" pinfunction="VCC" pintype="power_in"/>
     </net>
-    <net code="23" name="B_SERVO_BUF" class="Default">
+    <net code="25" name="B_SERVO_BUF" class="Default">
       <node ref="R167" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U33" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="24" name="B_SERVO_PWM" class="Default">
+    <net code="26" name="B_SERVO_PWM" class="Default">
       <node ref="J23" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="R167" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R168" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="25" name="F_ENC_A_F" class="Default">
+    <net code="27" name="F_ENC_A_F" class="Default">
       <node ref="R143" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R145" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U22" pin="1" pinfunction="1A" pintype="input"/>
     </net>
-    <net code="26" name="F_ENC_A_RAW" class="Default">
+    <net code="28" name="F_ENC_A_RAW" class="Default">
       <node ref="J12" pin="5" pinfunction="TACHO0" pintype="passive"/>
       <node ref="R143" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="27" name="F_ENC_B_F" class="Default">
+    <net code="29" name="F_ENC_B_F" class="Default">
       <node ref="R144" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R146" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U22" pin="3" pinfunction="2A" pintype="input"/>
     </net>
-    <net code="28" name="F_ENC_B_RAW" class="Default">
+    <net code="30" name="F_ENC_B_RAW" class="Default">
       <node ref="J12" pin="6" pinfunction="TACHO1" pintype="passive"/>
       <node ref="R144" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="29" name="F_ILIM" class="Default">
+    <net code="31" name="F_ILIM" class="Default">
       <node ref="R140" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U12" pin="4" pinfunction="ILIM" pintype="input"/>
     </net>
-    <net code="30" name="F_M1" class="Default">
+    <net code="32" name="F_M1" class="Default">
       <node ref="J12" pin="1" pinfunction="M1" pintype="passive"/>
       <node ref="TP18" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U12" pin="6" pinfunction="OUT1" pintype="output"/>
     </net>
-    <net code="31" name="F_M2" class="Default">
+    <net code="33" name="F_M2" class="Default">
       <node ref="J12" pin="2" pinfunction="M2" pintype="passive"/>
       <node ref="TP19" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U12" pin="8" pinfunction="OUT2" pintype="output"/>
     </net>
-    <net code="32" name="F_SERVO_5V" class="Default">
+    <net code="34" name="F_SERVO_5V" class="Default">
       <node ref="C145" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="F12" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="J22" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U32" pin="5" pinfunction="VCC" pintype="power_in"/>
     </net>
-    <net code="33" name="F_SERVO_BUF" class="Default">
+    <net code="35" name="F_SERVO_BUF" class="Default">
       <node ref="R147" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U32" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="34" name="F_SERVO_PWM" class="Default">
+    <net code="36" name="F_SERVO_PWM" class="Default">
       <node ref="J22" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="R147" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R148" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="35" name="GND" class="Default">
+    <net code="37" name="GND" class="Default">
       <node ref="C1" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C100" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C101" pin="2" pinfunction="2" pintype="passive"/>
@@ -5319,9 +6752,29 @@
       <node ref="C33" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C34" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C36" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C400" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C410" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C411" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C412" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C413" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C414" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C415" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C416" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C417" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C418" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C419" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C420" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C421" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C422" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C423" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C424" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C425" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C426" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C427" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C5" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D4" pin="2" pinfunction="BI" pintype="passive"/>
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="J1" pin="2" pinfunction="GND" pintype="passive"/>
       <node ref="J10" pin="3" pinfunction="GND" pintype="passive"/>
       <node ref="J11" pin="3" pinfunction="GND" pintype="passive"/>
@@ -5333,6 +6786,12 @@
       <node ref="J22" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="J23" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="J3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J4" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="J5" pin="A1" pinfunction="A1" pintype="passive"/>
+      <node ref="J5" pin="A12" pinfunction="A12" pintype="passive"/>
+      <node ref="J5" pin="B1" pinfunction="B1" pintype="passive"/>
+      <node ref="J5" pin="B12" pinfunction="B12" pintype="passive"/>
+      <node ref="J5" pin="S1" pinfunction="S1" pintype="passive"/>
       <node ref="R100" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R101" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R102" pin="2" pinfunction="2" pintype="passive"/>
@@ -5365,15 +6824,14 @@
       <node ref="R24" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R32" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R34" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R401" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R402" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R406" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S2" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="13" pinfunction="13" pintype="passive"/>
-      <node ref="U1" pin="18" pinfunction="18" pintype="passive"/>
-      <node ref="U1" pin="23" pinfunction="23" pintype="passive"/>
-      <node ref="U1" pin="28" pinfunction="28" pintype="passive"/>
-      <node ref="U1" pin="3" pinfunction="3" pintype="passive"/>
-      <node ref="U1" pin="33" pinfunction="33" pintype="passive"/>
-      <node ref="U1" pin="38" pinfunction="38" pintype="passive"/>
-      <node ref="U1" pin="8" pinfunction="8" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="TESTEN" pintype="input"/>
+      <node ref="U1" pin="57" pinfunction="GND_EP" pintype="power_in"/>
       <node ref="U10" pin="1" pinfunction="GND" pintype="power_in"/>
       <node ref="U10" pin="7" pinfunction="PGND" pintype="power_in"/>
       <node ref="U10" pin="9" pinfunction="EP_GND" pintype="power_in"/>
@@ -5401,226 +6859,324 @@
       <node ref="U33" pin="1" pinfunction="OE_N" pintype="input"/>
       <node ref="U33" pin="3" pinfunction="GND" pintype="power_in"/>
       <node ref="U4" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U6" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="U7" pin="4" pinfunction="GND" pintype="passive"/>
+      <node ref="Y1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="Y1" pin="4" pinfunction="4" pintype="passive"/>
     </net>
-    <net code="36" name="GP0" class="Default">
+    <net code="38" name="GP0" class="Default">
       <node ref="J2" pin="2" pinfunction="2" pintype="passive"/>
-      <node ref="U1" pin="1" pinfunction="GP0" pintype="bidirectional"/>
+      <node ref="U1" pin="2" pinfunction="GPIO0" pintype="bidirectional"/>
     </net>
-    <net code="37" name="GP1" class="Default">
+    <net code="39" name="GP1" class="Default">
       <node ref="J2" pin="3" pinfunction="3" pintype="passive"/>
-      <node ref="U1" pin="2" pinfunction="GP1" pintype="bidirectional"/>
+      <node ref="U1" pin="3" pinfunction="GPIO1" pintype="bidirectional"/>
     </net>
-    <net code="38" name="GP2" class="Default">
+    <net code="40" name="GP2" class="Default">
       <node ref="R101" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="4" pinfunction="GP2" pintype="bidirectional"/>
+      <node ref="U1" pin="4" pinfunction="GPIO2" pintype="bidirectional"/>
       <node ref="U10" pin="3" pinfunction="IN1" pintype="input"/>
     </net>
-    <net code="39" name="GP3" class="Default">
+    <net code="41" name="GP3" class="Default">
       <node ref="R102" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="5" pinfunction="GP3" pintype="bidirectional"/>
+      <node ref="U1" pin="5" pinfunction="GPIO3" pintype="bidirectional"/>
       <node ref="U10" pin="2" pinfunction="IN2" pintype="input"/>
     </net>
-    <net code="40" name="GP4" class="Default">
+    <net code="42" name="GP4" class="Default">
       <node ref="TP12" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="6" pinfunction="GP4" pintype="bidirectional"/>
+      <node ref="U1" pin="6" pinfunction="GPIO4" pintype="bidirectional"/>
       <node ref="U20" pin="6" pinfunction="1Y" pintype="output"/>
     </net>
-    <net code="41" name="GP5" class="Default">
+    <net code="43" name="GP5" class="Default">
       <node ref="TP13" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="7" pinfunction="GP5" pintype="bidirectional"/>
+      <node ref="U1" pin="7" pinfunction="GPIO5" pintype="bidirectional"/>
       <node ref="U20" pin="4" pinfunction="2Y" pintype="output"/>
     </net>
-    <net code="42" name="GP6" class="Default">
+    <net code="44" name="GP6" class="Default">
       <node ref="R121" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="9" pinfunction="GP6" pintype="bidirectional"/>
+      <node ref="U1" pin="8" pinfunction="GPIO6" pintype="bidirectional"/>
       <node ref="U11" pin="3" pinfunction="IN1" pintype="input"/>
     </net>
-    <net code="43" name="GP7" class="Default">
+    <net code="45" name="GP7" class="Default">
       <node ref="R122" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="10" pinfunction="GP7" pintype="bidirectional"/>
+      <node ref="U1" pin="9" pinfunction="GPIO7" pintype="bidirectional"/>
       <node ref="U11" pin="2" pinfunction="IN2" pintype="input"/>
     </net>
-    <net code="44" name="GP8" class="Default">
+    <net code="46" name="GP8" class="Default">
       <node ref="R109" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="11" pinfunction="GP8" pintype="bidirectional"/>
+      <node ref="U1" pin="11" pinfunction="GPIO8" pintype="bidirectional"/>
       <node ref="U30" pin="2" pinfunction="A" pintype="input"/>
     </net>
-    <net code="45" name="GP9" class="Default">
+    <net code="47" name="GP9" class="Default">
       <node ref="R129" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="12" pinfunction="GP9" pintype="bidirectional"/>
+      <node ref="U1" pin="12" pinfunction="GPIO9" pintype="bidirectional"/>
       <node ref="U31" pin="2" pinfunction="A" pintype="input"/>
     </net>
-    <net code="46" name="GP10" class="Default">
+    <net code="48" name="GP10" class="Default">
       <node ref="R141" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="14" pinfunction="GP10" pintype="bidirectional"/>
+      <node ref="U1" pin="13" pinfunction="GPIO10" pintype="bidirectional"/>
       <node ref="U12" pin="3" pinfunction="IN1" pintype="input"/>
     </net>
-    <net code="47" name="GP11" class="Default">
+    <net code="49" name="GP11" class="Default">
       <node ref="R142" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="15" pinfunction="GP11" pintype="bidirectional"/>
+      <node ref="U1" pin="14" pinfunction="GPIO11" pintype="bidirectional"/>
       <node ref="U12" pin="2" pinfunction="IN2" pintype="input"/>
     </net>
-    <net code="48" name="GP12" class="Default">
+    <net code="50" name="GP12" class="Default">
       <node ref="TP16" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="16" pinfunction="GP12" pintype="bidirectional"/>
+      <node ref="U1" pin="15" pinfunction="GPIO12" pintype="bidirectional"/>
       <node ref="U21" pin="6" pinfunction="1Y" pintype="output"/>
     </net>
-    <net code="49" name="GP13" class="Default">
+    <net code="51" name="GP13" class="Default">
       <node ref="TP17" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="17" pinfunction="GP13" pintype="bidirectional"/>
+      <node ref="U1" pin="16" pinfunction="GPIO13" pintype="bidirectional"/>
       <node ref="U21" pin="4" pinfunction="2Y" pintype="output"/>
     </net>
-    <net code="50" name="GP14" class="Default">
+    <net code="52" name="GP14" class="Default">
       <node ref="R161" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="19" pinfunction="GP14" pintype="bidirectional"/>
+      <node ref="U1" pin="17" pinfunction="GPIO14" pintype="bidirectional"/>
       <node ref="U13" pin="3" pinfunction="IN1" pintype="input"/>
     </net>
-    <net code="51" name="GP15" class="Default">
+    <net code="53" name="GP15" class="Default">
       <node ref="R162" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="20" pinfunction="GP15" pintype="bidirectional"/>
+      <node ref="U1" pin="18" pinfunction="GPIO15" pintype="bidirectional"/>
       <node ref="U13" pin="2" pinfunction="IN2" pintype="input"/>
     </net>
-    <net code="52" name="GP16" class="Default">
+    <net code="54" name="GP16" class="Default">
       <node ref="TP20" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="21" pinfunction="GP16" pintype="bidirectional"/>
+      <node ref="U1" pin="27" pinfunction="GPIO16" pintype="bidirectional"/>
       <node ref="U22" pin="6" pinfunction="1Y" pintype="output"/>
     </net>
-    <net code="53" name="GP17" class="Default">
+    <net code="55" name="GP17" class="Default">
       <node ref="TP21" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="22" pinfunction="GP17" pintype="bidirectional"/>
+      <node ref="U1" pin="28" pinfunction="GPIO17" pintype="bidirectional"/>
       <node ref="U22" pin="4" pinfunction="2Y" pintype="output"/>
     </net>
-    <net code="54" name="GP18" class="Default">
+    <net code="56" name="GP18" class="Default">
       <node ref="TP24" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="24" pinfunction="GP18" pintype="bidirectional"/>
+      <node ref="U1" pin="29" pinfunction="GPIO18" pintype="bidirectional"/>
       <node ref="U23" pin="6" pinfunction="1Y" pintype="output"/>
     </net>
-    <net code="55" name="GP19" class="Default">
+    <net code="57" name="GP19" class="Default">
       <node ref="TP25" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="25" pinfunction="GP19" pintype="bidirectional"/>
+      <node ref="U1" pin="30" pinfunction="GPIO19" pintype="bidirectional"/>
       <node ref="U23" pin="4" pinfunction="2Y" pintype="output"/>
     </net>
-    <net code="56" name="GP20" class="Default">
+    <net code="58" name="GP20" class="Default">
       <node ref="R149" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="26" pinfunction="GP20" pintype="bidirectional"/>
+      <node ref="U1" pin="31" pinfunction="GPIO20" pintype="bidirectional"/>
       <node ref="U32" pin="2" pinfunction="A" pintype="input"/>
     </net>
-    <net code="57" name="GP21" class="Default">
+    <net code="59" name="GP21" class="Default">
       <node ref="R169" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="27" pinfunction="GP21" pintype="bidirectional"/>
+      <node ref="U1" pin="32" pinfunction="GPIO21" pintype="bidirectional"/>
       <node ref="U33" pin="2" pinfunction="A" pintype="input"/>
     </net>
-    <net code="58" name="IDEAL_GATE" class="Default">
+    <net code="60" name="GP24" class="Default">
+      <node ref="R405" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R406" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="36" pinfunction="GPIO24" pintype="bidirectional"/>
+    </net>
+    <net code="61" name="GP25" class="Default">
+      <node ref="R410" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="37" pinfunction="GPIO25" pintype="bidirectional"/>
+    </net>
+    <net code="62" name="IDEAL_GATE" class="Default">
       <node ref="Q1" pin="4" pinfunction="G" pintype="passive"/>
       <node ref="U4" pin="5" pinfunction="GATE" pintype="output"/>
     </net>
-    <net code="59" name="IDEAL_VCAP" class="Default">
+    <net code="63" name="IDEAL_VCAP" class="Default">
       <node ref="C4" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U4" pin="1" pinfunction="VCAP" pintype="passive"/>
     </net>
-    <net code="60" name="L_ENC_A_F" class="Default">
+    <net code="64" name="LED_ANODE" class="Default">
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R410" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="65" name="L_ENC_A_F" class="Default">
       <node ref="R123" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R125" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U21" pin="1" pinfunction="1A" pintype="input"/>
     </net>
-    <net code="61" name="L_ENC_A_RAW" class="Default">
+    <net code="66" name="L_ENC_A_RAW" class="Default">
       <node ref="J11" pin="5" pinfunction="TACHO0" pintype="passive"/>
       <node ref="R123" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="62" name="L_ENC_B_F" class="Default">
+    <net code="67" name="L_ENC_B_F" class="Default">
       <node ref="R124" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R126" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U21" pin="3" pinfunction="2A" pintype="input"/>
     </net>
-    <net code="63" name="L_ENC_B_RAW" class="Default">
+    <net code="68" name="L_ENC_B_RAW" class="Default">
       <node ref="J11" pin="6" pinfunction="TACHO1" pintype="passive"/>
       <node ref="R124" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="64" name="L_ILIM" class="Default">
+    <net code="69" name="L_ILIM" class="Default">
       <node ref="R120" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U11" pin="4" pinfunction="ILIM" pintype="input"/>
     </net>
-    <net code="65" name="L_M1" class="Default">
+    <net code="70" name="L_M1" class="Default">
       <node ref="J11" pin="1" pinfunction="M1" pintype="passive"/>
       <node ref="TP14" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U11" pin="6" pinfunction="OUT1" pintype="output"/>
     </net>
-    <net code="66" name="L_M2" class="Default">
+    <net code="71" name="L_M2" class="Default">
       <node ref="J11" pin="2" pinfunction="M2" pintype="passive"/>
       <node ref="TP15" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U11" pin="8" pinfunction="OUT2" pintype="output"/>
     </net>
-    <net code="67" name="L_SERVO_5V" class="Default">
+    <net code="72" name="L_SERVO_5V" class="Default">
       <node ref="C125" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="F11" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="J21" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U31" pin="5" pinfunction="VCC" pintype="power_in"/>
     </net>
-    <net code="68" name="L_SERVO_BUF" class="Default">
+    <net code="73" name="L_SERVO_BUF" class="Default">
       <node ref="R127" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U31" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="69" name="L_SERVO_PWM" class="Default">
+    <net code="74" name="L_SERVO_PWM" class="Default">
       <node ref="J21" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="R127" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R128" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="70" name="RUN" class="Default">
-      <node ref="J3" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="30" pinfunction="RUN" pintype="passive"/>
+    <net code="75" name="QSPI_SCLK" class="Default">
+      <node ref="U1" pin="52" pinfunction="QSPI_SCLK" pintype="passive"/>
+      <node ref="U7" pin="6" pinfunction="CLK" pintype="passive"/>
     </net>
-    <net code="71" name="R_ENC_A_F" class="Default">
+    <net code="76" name="QSPI_SD0" class="Default">
+      <node ref="U1" pin="53" pinfunction="QSPI_SD0" pintype="passive"/>
+      <node ref="U7" pin="5" pinfunction="DI_IO0" pintype="passive"/>
+    </net>
+    <net code="77" name="QSPI_SD1" class="Default">
+      <node ref="U1" pin="55" pinfunction="QSPI_SD1" pintype="passive"/>
+      <node ref="U7" pin="2" pinfunction="DO_IO1" pintype="passive"/>
+    </net>
+    <net code="78" name="QSPI_SD2" class="Default">
+      <node ref="U1" pin="54" pinfunction="QSPI_SD2" pintype="passive"/>
+      <node ref="U7" pin="3" pinfunction="WP_IO2" pintype="passive"/>
+    </net>
+    <net code="79" name="QSPI_SD3" class="Default">
+      <node ref="U1" pin="51" pinfunction="QSPI_SD3" pintype="passive"/>
+      <node ref="U7" pin="7" pinfunction="HOLD_IO3" pintype="passive"/>
+    </net>
+    <net code="80" name="QSPI_SS" class="Default">
+      <node ref="R407" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R408" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="56" pinfunction="QSPI_SS" pintype="passive"/>
+      <node ref="U7" pin="1" pinfunction="CS_N" pintype="passive"/>
+    </net>
+    <net code="81" name="RUN" class="Default">
+      <node ref="C400" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R400" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="S2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="26" pinfunction="RUN" pintype="input"/>
+    </net>
+    <net code="82" name="R_ENC_A_F" class="Default">
       <node ref="R103" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R105" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U20" pin="1" pinfunction="1A" pintype="input"/>
     </net>
-    <net code="72" name="R_ENC_A_RAW" class="Default">
+    <net code="83" name="R_ENC_A_RAW" class="Default">
       <node ref="J10" pin="5" pinfunction="TACHO0" pintype="passive"/>
       <node ref="R103" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="73" name="R_ENC_B_F" class="Default">
+    <net code="84" name="R_ENC_B_F" class="Default">
       <node ref="R104" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R106" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U20" pin="3" pinfunction="2A" pintype="input"/>
     </net>
-    <net code="74" name="R_ENC_B_RAW" class="Default">
+    <net code="85" name="R_ENC_B_RAW" class="Default">
       <node ref="J10" pin="6" pinfunction="TACHO1" pintype="passive"/>
       <node ref="R104" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="75" name="R_ILIM" class="Default">
+    <net code="86" name="R_ILIM" class="Default">
       <node ref="R100" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U10" pin="4" pinfunction="ILIM" pintype="input"/>
     </net>
-    <net code="76" name="R_M1" class="Default">
+    <net code="87" name="R_M1" class="Default">
       <node ref="J10" pin="1" pinfunction="M1" pintype="passive"/>
       <node ref="TP10" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U10" pin="6" pinfunction="OUT1" pintype="output"/>
     </net>
-    <net code="77" name="R_M2" class="Default">
+    <net code="88" name="R_M2" class="Default">
       <node ref="J10" pin="2" pinfunction="M2" pintype="passive"/>
       <node ref="TP11" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U10" pin="8" pinfunction="OUT2" pintype="output"/>
     </net>
-    <net code="78" name="R_SERVO_5V" class="Default">
+    <net code="89" name="R_SERVO_5V" class="Default">
       <node ref="C105" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="F10" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="J20" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U30" pin="5" pinfunction="VCC" pintype="power_in"/>
     </net>
-    <net code="79" name="R_SERVO_BUF" class="Default">
+    <net code="90" name="R_SERVO_BUF" class="Default">
       <node ref="R107" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U30" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="80" name="R_SERVO_PWM" class="Default">
+    <net code="91" name="R_SERVO_PWM" class="Default">
       <node ref="J20" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="R107" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R108" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="81" name="VIN" class="Default">
+    <net code="92" name="SWCLK" class="Default">
+      <node ref="J4" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="U1" pin="24" pinfunction="SWCLK" pintype="input"/>
+    </net>
+    <net code="93" name="SWDIO" class="Default">
+      <node ref="J4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="25" pinfunction="SWDIO" pintype="bidirectional"/>
+    </net>
+    <net code="94" name="USB_CC1" class="Default">
+      <node ref="J5" pin="A5" pinfunction="A5" pintype="passive"/>
+      <node ref="R401" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="95" name="USB_CC2" class="Default">
+      <node ref="J5" pin="B5" pinfunction="B5" pintype="passive"/>
+      <node ref="R402" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="96" name="USB_DM" class="Default">
+      <node ref="J5" pin="A7" pinfunction="A7" pintype="passive"/>
+      <node ref="J5" pin="B7" pinfunction="B7" pintype="passive"/>
+      <node ref="R403" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U6" pin="3" pinfunction="IO2" pintype="passive"/>
+      <node ref="U6" pin="4" pinfunction="IO2" pintype="passive"/>
+    </net>
+    <net code="97" name="USB_DM_MCU" class="Default">
+      <node ref="R403" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="46" pinfunction="USB_DM" pintype="passive"/>
+    </net>
+    <net code="98" name="USB_DP" class="Default">
+      <node ref="J5" pin="A6" pinfunction="A6" pintype="passive"/>
+      <node ref="J5" pin="B6" pinfunction="B6" pintype="passive"/>
+      <node ref="R404" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U6" pin="1" pinfunction="IO1" pintype="passive"/>
+      <node ref="U6" pin="6" pinfunction="IO1" pintype="passive"/>
+    </net>
+    <net code="99" name="USB_DP_MCU" class="Default">
+      <node ref="R404" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="47" pinfunction="USB_DP" pintype="passive"/>
+    </net>
+    <net code="100" name="USB_FUSED" class="Default">
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="F3" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="101" name="USB_VBUS" class="Default">
+      <node ref="C423" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="F3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J5" pin="A4" pinfunction="A4" pintype="passive"/>
+      <node ref="J5" pin="A9" pinfunction="A9" pintype="passive"/>
+      <node ref="J5" pin="B4" pinfunction="B4" pintype="passive"/>
+      <node ref="J5" pin="B9" pinfunction="B9" pintype="passive"/>
+      <node ref="R405" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="102" name="VIN" class="Default">
       <node ref="F1" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="J1" pin="1" pinfunction="+9V" pintype="passive"/>
     </net>
-    <net code="82" name="VIN_FUSED" class="Default">
+    <net code="103" name="VIN_FUSED" class="Default">
       <node ref="C4" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C5" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="D4" pin="1" pinfunction="BI" pintype="passive"/>
@@ -5631,7 +7187,7 @@
       <node ref="U4" pin="3" pinfunction="EN" pintype="input"/>
       <node ref="U4" pin="6" pinfunction="ANODE" pintype="power_in"/>
     </net>
-    <net code="83" name="VM" class="Default">
+    <net code="104" name="VM" class="Default">
       <node ref="C100" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C101" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C102" pin="1" pinfunction="+" pintype="passive"/>
@@ -5663,32 +7219,56 @@
       <node ref="U3" pin="3" pinfunction="VIN" pintype="power_in"/>
       <node ref="U4" pin="4" pinfunction="CATHODE" pintype="input"/>
     </net>
-    <net code="84" name="VSYS" class="Default">
+    <net code="105" name="VSYS" class="Default">
       <node ref="C1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C427" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="TP7" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U1" pin="39" pinfunction="VSYS" pintype="power_in"/>
+      <node ref="U5" pin="1" pinfunction="IN" pintype="power_in"/>
+      <node ref="U5" pin="3" pinfunction="EN" pintype="input"/>
+      <node ref="U6" pin="5" pinfunction="VBUS" pintype="passive"/>
     </net>
-    <net code="85" name="unconnected-(U1-3V3_EN_NC-Pad37)" class="Default">
-      <node ref="U1" pin="37" pinfunction="3V3_EN_NC" pintype="passive+no_connect"/>
+    <net code="106" name="XIN" class="Default">
+      <node ref="C425" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="XIN" pintype="input"/>
+      <node ref="Y1" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="86" name="unconnected-(U1-ADC_VREF_NC-Pad35)" class="Default">
-      <node ref="U1" pin="35" pinfunction="ADC_VREF_NC" pintype="passive+no_connect"/>
+    <net code="107" name="XOUT" class="Default">
+      <node ref="R409" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="XOUT" pintype="output"/>
     </net>
-    <net code="87" name="unconnected-(U1-GP22-Pad29)" class="Default">
-      <node ref="U1" pin="29" pinfunction="GP22" pintype="bidirectional+no_connect"/>
+    <net code="108" name="XOUT_DAMPED" class="Default">
+      <node ref="C426" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R409" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="Y1" pin="3" pinfunction="3" pintype="passive"/>
     </net>
-    <net code="88" name="unconnected-(U1-GP26-Pad31)" class="Default">
-      <node ref="U1" pin="31" pinfunction="GP26" pintype="bidirectional+no_connect"/>
+    <net code="109" name="unconnected-(J5-PadA8)" class="Default">
+      <node ref="J5" pin="A8" pinfunction="A8" pintype="passive+no_connect"/>
     </net>
-    <net code="89" name="unconnected-(U1-GP27-Pad32)" class="Default">
-      <node ref="U1" pin="32" pinfunction="GP27" pintype="bidirectional+no_connect"/>
+    <net code="110" name="unconnected-(J5-PadB8)" class="Default">
+      <node ref="J5" pin="B8" pinfunction="B8" pintype="passive+no_connect"/>
     </net>
-    <net code="90" name="unconnected-(U1-GP28-Pad34)" class="Default">
-      <node ref="U1" pin="34" pinfunction="GP28" pintype="bidirectional+no_connect"/>
+    <net code="111" name="unconnected-(U1-GPIO22-Pad34)" class="Default">
+      <node ref="U1" pin="34" pinfunction="GPIO22" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="91" name="unconnected-(U1-VBUS_USB_NC-Pad40)" class="Default">
-      <node ref="U1" pin="40" pinfunction="VBUS_USB_NC" pintype="passive+no_connect"/>
+    <net code="112" name="unconnected-(U1-GPIO23-Pad35)" class="Default">
+      <node ref="U1" pin="35" pinfunction="GPIO23" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="113" name="unconnected-(U1-GPIO26-Pad38)" class="Default">
+      <node ref="U1" pin="38" pinfunction="GPIO26" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="114" name="unconnected-(U1-GPIO27-Pad39)" class="Default">
+      <node ref="U1" pin="39" pinfunction="GPIO27" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="115" name="unconnected-(U1-GPIO28-Pad40)" class="Default">
+      <node ref="U1" pin="40" pinfunction="GPIO28" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="116" name="unconnected-(U1-GPIO29-Pad41)" class="Default">
+      <node ref="U1" pin="41" pinfunction="GPIO29" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="117" name="unconnected-(U5-NC-Pad4)" class="Default">
+      <node ref="U5" pin="4" pinfunction="NC" pintype="passive+no_connect"/>
     </net>
   </nets>
 </export>

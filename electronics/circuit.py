@@ -1,4 +1,4 @@
-"""Quadcuber integrated four-arm PCB A0. Pin contract imported, never duplicated."""
+"""Quadcuber integrated four-arm PCB A1. Pin contract imported, never duplicated."""
 from pathlib import Path
 import runpy
 ARMS=runpy.run_path(str(Path(__file__).resolve().parents[1]/'wiring/spec.py'))['ARMS']
@@ -8,25 +8,69 @@ def add(ref,value,fp,pins,xy,mpn,mfr,section,names=None,types=None,note='',rot=0
 RFP='Resistor_SMD:R_0603_1608Metric'
 CFP='Capacitor_SMD:C_0805_2012Metric'
 def r(ref,v,a,b,xy,sec,mpn=None):
-    codes={'100k':'100K','10k':'10K','100':'100R','220':'220R','43.2k':'43K2','100k 0.1%':'100K','13.3k':'13K3','511k':'511K','105k':'105K','49.9':'49R9','1k':'1K'}
+    codes={'100k':'100K','10k':'10K','100':'100R','220':'220R','43.2k':'43K2','100k 0.1%':'100K','13.3k':'13K3','511k':'511K','105k':'105K','49.9':'49R9','1k':'1K','5.1k':'5K1'}
     add(ref,v,RFP,{1:a,2:b},xy,mpn or 'RC0603FR-07'+codes[v]+'L','Yageo',sec)
 def c(ref,v,a,b,xy,sec):
     spec={'100n':('GRM21BR71H104KA01L',CFP),'10u/25V':('GRM32ER71E106KA12L','Capacitor_SMD:C_1210_3225Metric'),'22u/25V':('GRM32ER71E226KE15L','Capacitor_SMD:C_1210_3225Metric'),'75p':('GRM1885C1H750JA01D','Capacitor_SMD:C_0603_1608Metric'),'470u/25V':('EEU-FR1E471','Capacitor_THT:CP_Radial_D10.0mm_P5.00mm'),'470u/10V':('EEU-FR1A471','Capacitor_THT:CP_Radial_D8.0mm_P3.50mm')}
     mpn,fp=spec[v];add(ref,v,fp,{1:a,2:b},xy,mpn,'Panasonic' if v.startswith('470') else 'Murata',sec,names={'1':'+' if v.startswith('470') else '1','2':'-' if v.startswith('470') else '2'})
 def header(ref,nets,xy,sec,desc):
     n=len(nets);add(ref,desc,f'Connector_PinHeader_2.54mm:PinHeader_1x{n:02d}_P2.54mm_Vertical',dict(enumerate(nets,1)),xy,f'6130{n:02d}11121','Wurth Elektronik',sec)
-# GPIO physical Pico pins. 3V3_EN, VBUS and unused GPIO are deliberately NC.
-gp={0:1,1:2,2:4,3:5,4:6,5:7,6:9,7:10,8:11,9:12,10:14,11:15,12:16,13:17,14:19,15:20,16:21,17:22,18:24,19:25,20:26,21:27,22:29,26:31,27:32,28:34}
-pins={i:None for i in range(1,41)}
-for g,p in gp.items(): pins[p]=f'GP{g}' if g in [0,1]+[x for a in ARMS.values() for group in a[:3] for x in group] else None
-for p in (3,8,13,18,23,28,33,38):pins[p]='GND'
-pins.update({30:'RUN',36:'3V3',39:'VSYS'})
-names={str(p):f'GP{g}' for g,p in gp.items()}; names.update({'30':'RUN','36':'3V3_OUT','39':'VSYS','40':'VBUS_USB_NC','37':'3V3_EN_NC','35':'ADC_VREF_NC'})
-add('U1','Pico H socketed','Quadcuber:Pico_H_Sockets',pins,(12,8),'SC0917','Raspberry Pi','controller',names=names,types={**{str(p):'bidirectional' for g,p in gp.items()},'36':'power_out','39':'power_in'},note='Pico H on two 20-way sockets; USB faces top edge. Socket BOM separate.')
+# Direct RP2040: official pin identities, 12MHz/2MiB Pico-compatible boot hardware.
+gp={0:2,1:3,2:4,3:5,4:6,5:7,6:8,7:9,8:11,9:12,10:13,11:14,12:15,13:16,14:17,15:18,16:27,17:28,18:29,19:30,20:31,21:32,22:34,23:35,24:36,25:37,26:38,27:39,28:40,29:41}
+pins={i:None for i in range(1,58)}
+for g,pin in gp.items():pins[pin]=f'GP{g}' if g in list(range(22))+[24,25] else None
+for pin in [1,10,22,33,42,43,44,48,49]:pins[pin]='3V3'
+for pin in [23,45,50]:pins[pin]='1V1'
+pins.update({19:'GND',20:'XIN',21:'XOUT',24:'SWCLK',25:'SWDIO',26:'RUN',46:'USB_DM_MCU',47:'USB_DP_MCU',51:'QSPI_SD3',52:'QSPI_SCLK',53:'QSPI_SD0',54:'QSPI_SD2',55:'QSPI_SD1',56:'QSPI_SS',57:'GND'})
+names={str(pin):f'GPIO{g}' for g,pin in gp.items()}
+names.update({str(i):n for i,n in {1:'IOVDD',10:'IOVDD',22:'IOVDD',33:'IOVDD',42:'IOVDD',49:'IOVDD',43:'ADC_AVDD',44:'VREG_IN',45:'VREG_OUT',48:'USB_VDD',23:'DVDD',50:'DVDD',19:'TESTEN',20:'XIN',21:'XOUT',24:'SWCLK',25:'SWDIO',26:'RUN',46:'USB_DM',47:'USB_DP',51:'QSPI_SD3',52:'QSPI_SCLK',53:'QSPI_SD0',54:'QSPI_SD2',55:'QSPI_SD1',56:'QSPI_SS',57:'GND_EP'}.items()})
+types={str(i):'power_in' for i in [1,10,22,23,33,42,43,44,48,49,50,57]};types.update({'45':'power_out','19':'input','26':'input','24':'input','25':'bidirectional','20':'input','21':'output'})
+for g,pin in gp.items():types[str(pin)]='bidirectional'
+add('U1','RP2040','Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm_ThermalVias',pins,(20,27),'RP2040','Raspberry Pi','controller',names=names,types=types,note='Bare RP2040, not a Pico module. EP57 and TESTEN19 ground; DVDD23/50 supplied only by VREG_OUT45.')
 header('J2',['GND','GP0','GP1'],(7,57),'controller','UART GND TX RX')
 header('J3',['RUN','GND'],(25,61),'controller','RESET')
-add('D2','SS14 VSYS isolation','Diode_SMD:D_SMA',{1:'VSYS',2:'5V_A'},(37,14),'SS14-E3/61T','Vishay','controller',names={'1':'K','2':'A'})
-c('C1','10u/25V','VSYS','GND',(37,20),'controller')
+header('J4',['3V3','SWDIO','GND','SWCLK'],(15,55),'controller','SWD VREF D G C')
+C[-1]['rot']=90
+r('R400','10k','3V3','RUN',(8,37),'controller')
+add('S2','RUN RESET','Button_Switch_SMD:SW_SPST_TL3342',{1:'RUN',2:'GND'},(7,43),'TL3342F160QG','E-Switch','controller')
+def cc(ref,value,a,b,xy,sec,rot=0):
+ specs={'100n':('GRM155R71C104KA88D','Capacitor_SMD:C_0402_1005Metric'),'1u':('GRM155R61A105KE15D','Capacitor_SMD:C_0402_1005Metric'),'15p':('GRM1555C1H150JA01D','Capacitor_SMD:C_0402_1005Metric'),'1u/16V':('GRM21BR71C105KA01L','Capacitor_SMD:C_0805_2012Metric'),'4.7u/10V':('GRM21BR61A475KA73L','Capacitor_SMD:C_0805_2012Metric')}
+ mpn,fp=specs[value];add(ref,value,fp,{1:a,2:b},xy,mpn,'Murata',sec,rot=rot)
+cc('C400','100n','RUN','GND',(11,37),'controller')
+# One local 100n per supply pin; internal LDO in/out each additionally has 1uF.
+for i,pin in enumerate([1,10,22,33,42,43,48,49,23,50]):
+ cc(f'C{410+i}','100n','1V1' if pin in [23,50] else '3V3','GND',(10+i*2,25),'controller_power')
+ C[-1]['decouple_pin']=pin;C[-1]['side']='B.Cu'
+for ref,pin in [('C420',44),('C421',45)]:
+ cc(ref,'1u','3V3' if pin==44 else '1V1','GND',(28,20),'controller_power');C[-1]['decouple_pin']=pin;C[-1]['side']='B.Cu'
+# 5V_A and USB independently diode-OR into VSYS; neither can feed the other source.
+add('D2','SS14 external logic isolation','Diode_SMD:D_SMA',{1:'VSYS',2:'5V_A'},(37,14),'SS14-E3/61T','Vishay','controller_power',names={'1':'K','2':'A'})
+add('D5','SS14 USB isolation','Diode_SMD:D_SMA',{1:'VSYS',2:'USB_FUSED'},(32,13),'SS14-E3/61T','Vishay','usb',names={'1':'K','2':'A'})
+C[-1]['side']='B.Cu'
+cc('C1','1u/16V','VSYS','GND',(27.2,20),'controller_power',rot=180)
+add('U5','TLV75533PDBVR','Package_TO_SOT_SMD:SOT-23-5',{1:'VSYS',2:'GND',3:'VSYS',4:None,5:'3V3'},(31,22),'TLV75533PDBVR','Texas Instruments','controller_power',names={'1':'IN','2':'GND','3':'EN','4':'NC','5':'OUT'},types={'1':'power_in','2':'power_in','3':'input','5':'power_out'},note='3.3V/500mA IC rating; controller continuous design target <=150mA; no external 3V3 injection.')
+cc('C422','4.7u/10V','3V3','GND',(35,20),'controller_power')
+# USB-C USB2 UFP only: independent 5.1k CC resistors, no PD and no host power sourcing.
+up={'A1':'GND','A4':'USB_VBUS','A5':'USB_CC1','A6':'USB_DP','A7':'USB_DM','A8':None,'A9':'USB_VBUS','A12':'GND','B1':'GND','B4':'USB_VBUS','B5':'USB_CC2','B6':'USB_DP','B7':'USB_DM','B8':None,'B9':'USB_VBUS','B12':'GND','S1':'GND'}
+add('J5','USB-C data / BOOTSEL','Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal',up,(20,3.675),'USB4105-GF-A','GCT','usb',rot=180,note='USB2 device only. CC1/CC2 each 5.1k to ground. Shell ground. No PD.')
+r('R401','5.1k','USB_CC1','GND',(12,8),'usb');r('R402','5.1k','USB_CC2','GND',(28,9),'usb')
+add('F3','0.5A USB PTC','Fuse:Fuse_1812_4532Metric',{1:'USB_VBUS',2:'USB_FUSED'},(32,4),'MF-MSMF050-2','Bourns','usb')
+cc('C423','1u/16V','USB_VBUS','GND',(37,4),'usb')
+add('U6','USBLC6-2SC6','Package_TO_SOT_SMD:SOT-23-6',{1:'USB_DP',2:'GND',3:'USB_DM',4:'USB_DM',5:'VSYS',6:'USB_DP'},(20,12),'USBLC6-2SC6','STMicroelectronics','usb',names={'1':'IO1','2':'GND','3':'IO2','4':'IO2','5':'VBUS','6':'IO1'},rot=90)
+for ref,a,b,xy in [('R403','USB_DM','USB_DM_MCU',(21.4,21)),('R404','USB_DP','USB_DP_MCU',(20.4,21))]:
+ add(ref,'27','Resistor_SMD:R_0402_1005Metric',{1:a,2:b},xy,'RC0402FR-0727RL','Yageo','usb',rot=270)
+cc('C427','100n','VSYS','GND',(24,11),'usb')
+r('R405','100k','USB_VBUS','GP24',(34,31),'controller');r('R406','100k','GP24','GND',(34,35),'controller')
+# Flash, clock, BOOTSEL; 2MiB W25Q16JV supports official Pico boot2 W25Q080 family code.
+add('U7','W25Q16JVSNIQ 2MiB','Package_SO:SOIC-8_3.9x4.9mm_P1.27mm',{1:'QSPI_SS',2:'QSPI_SD1',3:'QSPI_SD2',4:'GND',5:'QSPI_SD0',6:'QSPI_SCLK',7:'QSPI_SD3',8:'3V3'},(10,23),'W25Q16JVSNIQ','Winbond','flash_clock',note='Prototype stock obtainable; manufacturer EOL. Qualify current-production alternate before production. Exact SN narrow SOIC package.',names={'1':'CS_N','2':'DO_IO1','3':'WP_IO2','4':'GND','5':'DI_IO0','6':'CLK','7':'HOLD_IO3','8':'VCC'})
+cc('C424','100n','3V3','GND',(14,20),'flash_clock')
+r('R407','10k','3V3','QSPI_SS',(13,16.5),'flash_clock');r('R408','1k','QSPI_SS','BOOT_BUTTON',(7,9),'flash_clock')
+add('S1','BOOTSEL','Button_Switch_SMD:SW_SPST_TL3342',{1:'BOOT_BUTTON',2:'GND'},(7,13),'TL3342F160QG','E-Switch','flash_clock')
+add('Y1','12MHz CL10pF','Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm',{1:'XIN',2:'GND',3:'XOUT_DAMPED',4:'GND'},(20,34),'ABM8-272-T3','Abracon','flash_clock')
+add('R409','1k','Resistor_SMD:R_0402_1005Metric',{1:'XOUT',2:'XOUT_DAMPED'},(24,32),'RC0402FR-071KL','Yageo','flash_clock')
+cc('C425','15p','XIN','GND',(16.7,34.95),'flash_clock',rot=180);cc('C426','15p','XOUT_DAMPED','GND',(23.2,33.5),'flash_clock')
+add('D7','USER LED GP25','LED_SMD:LED_0603_1608Metric',{1:'GND',2:'LED_ANODE'},(28,16),'LTST-C190KGKT','Lite-On','controller',names={'1':'K','2':'A'})
+r('R410','1k','GP25','LED_ANODE',(25,16),'controller')
 # Main 9V path: fuse + ideal diode; external physical disconnect is still required.
 add('J1','9V regulated input','TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal',{1:'VIN',2:'GND'},(45,8),'1715721','Phoenix Contact','power',names={'1':'+9V','2':'GND'})
 add('F1','8A 32V fuse','Fuse:Fuse_1206_3216Metric',{1:'VIN',2:'VIN_FUSED'},(57,9),'0467008.NR','Littelfuse','power')
@@ -66,7 +110,7 @@ for idx,(arm,(motor,enc,servo,sm)) in enumerate(ARMS.items()):
     c(f'C{base}','100n','VM','GND',(x+7,76),sec)
     c(f'C{base+1}','10u/25V','VM','GND',(x+8,81),sec)
     c(f'C{base+2}','470u/25V','VM','GND',(x+14,70),sec)
-    add(f'J{10+idx}',f'EV3 {arm} 4434 HOLD','Quadcuber:EV3_4434_PROVISIONAL',{1:en+'M1',2:en+'M2',3:'GND',4:'5V_ENC',5:en+'ENC_A_RAW',6:en+'ENC_B_RAW'},(x,102),'4434','Adafruit (supplier brand)',sec,names={'1':'M1','2':'M2','3':'GND','4':'+5V','5':'TACHO0','6':'TACHO1'},note='HOLD: PCB tail numbering, hole layout and contact current not manufacturer-confirmed. Do not fabricate.')
+    add(f'J{10+idx}',f'EV3 {arm} PINMAP HOLD','Quadcuber:EV3_UserDrawing_PINMAP_HOLD',{1:en+'M1',2:en+'M2',3:'GND',4:'5V_ENC',5:en+'ENC_A_RAW',6:en+'ENC_B_RAW'},(x+(1 if idx==0 else 0),106),'UNCONFIRMED user drawing','Unconfirmed (Coorle watermark)',sec,names={'1':'M1','2':'M2','3':'GND','4':'+5V','5':'TACHO0','6':'TACHO1'},rot=180,note='Nominal hole geometry from user drawing. HOLD: actual MPN, numbering 1-5, observation side, contact current and ear envelope require confirmation. See sources/ev3-user-drawing-review.md.')
     add(f'U{buf}','SN74LVC2G17DBVR','Package_TO_SOT_SMD:SOT-23-6',{1:en+'ENC_A_F',2:'GND',3:en+'ENC_B_F',4:f'GP{enc[1]}',5:'3V3',6:f'GP{enc[0]}'},(x-6,91),'SN74LVC2G17DBVR','Texas Instruments',sec,names={'1':'1A','2':'GND','3':'2A','4':'2Y','5':'VCC','6':'1Y'},types={'1':'input','2':'power_in','3':'input','4':'output','5':'power_in','6':'output'})
     for j,ab in enumerate(('A','B')):
         r(f'R{base+3+j}','1k',en+f'ENC_{ab}_RAW',en+f'ENC_{ab}_F',(x-12,88+j*4),sec)

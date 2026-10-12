@@ -117,7 +117,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.2,
+        "min_clearance": 0.15,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.3,
         "min_groove_width": 0.0,
@@ -130,7 +130,7 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
+        "min_track_width": 0.15,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.6,
         "solder_mask_to_copper_clearance": 0.0,
@@ -264,9 +264,27 @@
         "microvia_drill": 0.1,
         "name": "Ground",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 3,
+        "priority": 4,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.3,
+        "via_diameter": 0.7,
+        "via_drill": 0.35,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.2,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.25,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "LogicFine",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.15,
         "via_diameter": 0.7,
         "via_drill": 0.35,
         "wire_width": 6
@@ -281,24 +299,6 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "Motor",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 1.0,
-        "via_diameter": 0.7,
-        "via_drill": 0.35,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.2,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.25,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "PowerBranch",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
@@ -316,9 +316,27 @@
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "PowerBus",
+        "name": "PowerBranch",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.0,
+        "via_diameter": 0.7,
+        "via_drill": 0.35,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.2,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.25,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "PowerBus",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.0,
         "via_diameter": 0.7,
@@ -371,6 +389,54 @@
       {
         "netclass": "Motor",
         "pattern": "*_M?"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "GP*"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "QSPI_*"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "USB_*"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "XIN"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "XOUT*"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "1V1"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "3V3"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "RUN"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "SWD*"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "SWCLK"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "BOOT_BUTTON"
+      },
+      {
+        "netclass": "LogicFine",
+        "pattern": "LED_ANODE"
       }
     ]
   },
