@@ -1,0 +1,10 @@
+case,vin_V,cap_factor,input_bulk_uF_per_rail,output_uF_per_rail,status,completed,passed,last_time_s,min_A_after10ms_V,min_B_after10ms_V,max_A_V,max_B_V,peak_abs_L1_A,peak_abs_L2_A,notes
+VIN8.82_C0.4,8.82,0.4,4.0,17.6,NOT_RUN,,,,,,,,,,
+VIN8.82_C0.8,8.82,0.8,8.0,35.2,NOT_RUN,,,,,,,,,,
+VIN8.82_C1.2,8.82,1.2,12.0,52.8,NOT_RUN,,,,,,,,,,
+VIN9_C0.4,9,0.4,4.0,17.6,NOT_RUN,,,,,,,,,,
+VIN9_C0.8,9,0.8,8.0,35.2,NOT_RUN,,,,,,,,,,
+VIN9_C1.2,9,1.2,12.0,52.8,NOT_RUN,,,,,,,,,,
+VIN9.18_C0.4,9.18,0.4,4.0,17.6,NOT_RUN,,,,,,,,,,
+VIN9.18_C0.8,9.18,0.8,8.0,35.2,NOT_RUN,,,,,,,,,,
+VIN9.18_C1.2,9.18,1.2,12.0,52.8,NOT_RUN,,,,,,,,,,

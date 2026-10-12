@@ -1,0 +1,23 @@
+{
+  "status": "STATIC_CHECKS_ONLY_NOT_PSPICE_EXECUTED",
+  "cases_checked": [
+    "VIN8.82_C0.4",
+    "VIN8.82_C0.8",
+    "VIN8.82_C1.2",
+    "VIN9_C0.4",
+    "VIN9_C0.8",
+    "VIN9_C1.2",
+    "VIN9.18_C0.4",
+    "VIN9.18_C0.8",
+    "VIN9.18_C1.2"
+  ],
+  "checks": [
+    "In all 9 decks, passive elements, X pin connections, source ramp and sensing-source lines match recorded A1 cases",
+    "All 9 deck SHA256 values match source-manifest",
+    "Original TI LIB SHA256 and six-pin header match",
+    "No ngspice .control block; original LIB reference and 25ms/20ns transient settings present",
+    "External load expressions mathematically match at 80 voltage/time/channel combinations per case",
+    "All case outcomes remain NOT_RUN"
+  ],
+  "limits": "No Windows, PSpice parser, Capture import, or transient execution performed"
+}

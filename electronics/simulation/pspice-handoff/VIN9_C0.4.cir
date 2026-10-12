@@ -1,0 +1,43 @@
+A1 VIN9_C0.4 - PSpice handoff ONLY - NOT RUN ON WINDOWS
+* Original unmodified TI TPS54302_TRANS.LIB is required.
+* This A1 fixture is NOT the original TI reference testbench.
+.LIB "TPS54302_TRANS.LIB"
+VIN vm 0 PWL(0 0 1m 9)
+X1 b1boot b1en 0 b1sw vm b1fb TPS54302_TRANS
+C1in vm 0 4e-06
+C1hf vm 0 100n
+R1boot b1boot b1bc 49.9
+C1boot b1bc b1sw 100n
+L1 b1sw b1ld 10u
+R1dcr b1ld b1out 0.0214
+R1esr b1out b1cap 0.003
+C1out b1cap 0 1.76e-05
+R1hi b1out b1fb 100k
+R1lo b1fb 0 13.3k
+C1ff b1out b1fb 75p
+R1enhi vm b1en 511k
+R1enlo b1en 0 105k
+V1load b1out b1load 0
+G1load b1load 0 VALUE = {LIMIT(V(b1out)/4,0,1)*(0.25+(1.5-0.25)*IF(TIME>12m,IF(TIME<18m,1,0),0))}
+X2 b2boot b2en 0 b2sw vm b2fb TPS54302_TRANS
+C2in vm 0 4e-06
+C2hf vm 0 100n
+R2boot b2boot b2bc 49.9
+C2boot b2bc b2sw 100n
+L2 b2sw b2ld 10u
+R2dcr b2ld b2out 0.0214
+R2esr b2out b2cap 0.003
+C2out b2cap 0 1.76e-05
+R2hi b2out b2fb 100k
+R2lo b2fb 0 13.3k
+C2ff b2out b2fb 75p
+R2enhi vm b2en 511k
+R2enlo b2en 0 105k
+V2load b2out b2load 0
+G2load b2load 0 VALUE = {LIMIT(V(b2out)/4,0,1)*(0.05+(1.5-0.05)*IF(TIME>12m,IF(TIME<18m,1,0),0))}
+.OPTIONS RELTOL=1e-4 ABSTOL=10n VNTOL=10u ITL1=1500 ITL2=400 ITL4=100
+.TEMP 27
+.TRAN 100n 25m 0 20n
+.PROBE V(vm) V(b1out) V(b2out) I(L1) I(L2) V(b1en) V(b2en)
+.PRINT TRAN V(vm) V(b1out) V(b2out) I(L1) I(L2) V(b1en) V(b2en)
+.END

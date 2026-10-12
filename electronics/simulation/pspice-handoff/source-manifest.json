@@ -1,0 +1,30 @@
+{
+  "status": "NOT_RUN_ON_WINDOWS",
+  "a1_baseline_git": "e34395e68b175cf9a279664fd4a13fd6573d95db",
+  "prepared_from_git": "fab04782a22657a1abe33b5f5fbd95e2b93cc1d0",
+  "original_zip_url": "https://www.ti.com/lit/zip/slvmbl9",
+  "original_zip_sha256": "d06e58535f99c35ee5da259e68c09c471b819d00c2fe98d4d5d1da49ea730f77",
+  "original_files_sha256": {
+    "TPS54302DDC_TRANS.OLB": "7bfc3da46cf1aa92df10b5a5a50991d4f15973ebb4d424d75f4fc54eed29768c",
+    "TPS54302_TRANS-PSpiceFiles/Startup/trans/trans.mrk": "bfcc7ef9671f96aaa5d55cdcca1dd6fe1be676e50c8e025b0d60a8d884f5fdcb",
+    "TPS54302_TRANS-PSpiceFiles/Startup/trans/trans.prb": "3d0d7dce94df7f05bfa66e24a3bf6b36f82ec850c836e0d60de7bf3d5799f493",
+    "TPS54302_TRANS-PSpiceFiles/Startup/trans.sim": "30879e4908a2f663606aac05283e57019cbb96a51043e378453bf2cc0b9d333f",
+    "TPS54302_TRANS-PSpiceFiles/Steady_State/trans/trans.mrk": "ac738519bfbd49e7ff71c406386b1a047eddf3f1b90aa7baa37b420804c5d391",
+    "TPS54302_TRANS-PSpiceFiles/Steady_State/trans/trans.prb": "9b7027097b519dda27db140455aa82279c64cbb16c9b9a81d16ce47d8f478548",
+    "TPS54302_TRANS-PSpiceFiles/Steady_State/trans.sim": "c8509179fbda3ae2676145ded0e9f5416e7ad0e360b56a5404e1c1bef5c2687a",
+    "TPS54302_TRANS.DSN": "5f4c2c64f087f981c837bef4bb3f8294eab80a1731ea90afcd15d464342d9777",
+    "TPS54302_TRANS.LIB": "52a568f08f1eed44961238a1ff10b68c2ce1faa1cdf2c24659b17b1f820f0026",
+    "TPS54302_TRANS.OPJ": "00a4fc0b26e76c8decf9f961b6191249588c68946c4078def25808ebf5eb94a3"
+  },
+  "handoff_netlists_sha256": {
+    "VIN8.82_C0.4.cir": "5083629f2aa9dc3e7ccaa814b858fd87f6fb7c753dcc3061eada687749438138",
+    "VIN8.82_C0.8.cir": "6b9575b15ff276eb0a26f4b5ee307e7a1ec232ef6503a98b60befdf806fcb62c",
+    "VIN8.82_C1.2.cir": "c9ad3dcc27b30cf690ed8a5a26d41fb354d6413c8fd9534ede7b3a062b5a3aed",
+    "VIN9.18_C0.4.cir": "6d273875c05a867570a56129af4d62ff248e5e898ebfa19bfdf04c0bc73f54ff",
+    "VIN9.18_C0.8.cir": "cbec70565b97a05f267b72fb1906f87e829e8a946440b36d7e7397e01f58e119",
+    "VIN9.18_C1.2.cir": "1268d47dce4210d592f7d14bc4311dd4257f3a0c0f55ae64df464fd5ccecc9e2",
+    "VIN9_C0.4.cir": "8e98c988174d88b9b88f272f353527ca0da30fe7a2cfc58ee471c306c3e79657",
+    "VIN9_C0.8.cir": "bbc50644d6cb8873031d63a2b0e9f744328cbec94da40cf637a4405a7fcb91f9",
+    "VIN9_C1.2.cir": "8c12deb1c82a1f1ebc3cc4cf76faeed757b185a244ad1cae2bd841ffbe34d361"
+  }
+}
