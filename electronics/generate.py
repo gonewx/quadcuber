@@ -78,7 +78,8 @@ for i,net in enumerate(['GND','VM','VIN_FUSED','VSYS','USB_VBUS','R_SERVO_5V','L
     C.append(cc)
     libsym[ref]=f'(symbol "Quadcuber:{ref}" (in_bom no)(on_board no)(property "Reference" "{ref}" (at 0 0 0) {effect(extra="(hide yes)")})(property "Value" "PWR_FLAG" (at 0 2.54 0) {effect()})(symbol "{ref}_0_1" (rectangle(start -1.27 1.27)(end 1.27 -1.27)(stroke(width .254)(type default))(fill(type none))))(symbol "{ref}_1_1"(pin power_out line(at -10.16 0 0)(length 8.89)(name "SUPPLY" {effect(.75)})(number "1" {effect(.75)}))))'
 (HERE/'lib/Quadcuber.kicad_sym').write_text('(kicad_symbol_lib(version 20241209)(generator "kicad_symbol_editor")'+''.join(v.replace('Quadcuber:','',1) for v in libsym.values())+')')
-(HERE/'sym-lib-table').write_text('(sym_lib_table(version 7)(lib(name "Quadcuber")(type "KiCad")(uri "${KIPRJMOD}/lib/Quadcuber.kicad_sym")(options "")(descr "Self-contained explicit pin definitions")))')
+# Keep whitespace after table/lib keywords for the newer library-table parser.
+(HERE/'sym-lib-table').write_text('(sym_lib_table\n  (version 7)\n  (lib\n    (name "Quadcuber")\n    (type "KiCad")\n    (uri "${KIPRJMOD}/lib/Quadcuber.kicad_sym")\n    (options "")\n    (descr "Self-contained explicit pin definitions")\n  )\n)\n')
 
 # Root sheets.
 root=f'(kicad_sch (version 20250114)(generator "eeschema")(uuid {rootid})(paper "A3")(title_block(title "Quadcuber four-arm integrated controller - A1 ENGINEERING HOLD")(rev "A1")(company "gonewx/quadcuber"))(lib_symbols)'

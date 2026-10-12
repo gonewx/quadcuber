@@ -1,1 +1,10 @@
-(sym_lib_table(version 7)(lib(name "Quadcuber")(type "KiCad")(uri "${KIPRJMOD}/lib/Quadcuber.kicad_sym")(options "")(descr "Self-contained explicit pin definitions")))
+(sym_lib_table
+  (version 7)
+  (lib
+    (name "Quadcuber")
+    (type "KiCad")
+    (uri "${KIPRJMOD}/lib/Quadcuber.kicad_sym")
+    (options "")
+    (descr "Self-contained explicit pin definitions")
+  )
+)
