@@ -45,3 +45,5 @@
 - 用户追加要求：保存阶段提交后继续合法模型兼容/参考testbench诊断；不以失败记录充当仿真任务完成。
 
 - Linux后续：官方Xyce7.10源码构建成功；官方KiCad上游解析器恢复TI两参考DSN并审计69引脚/107连线。记录四处IC等号及同电位节点初值候选适配，稳态参考完整800us；冷启动默认/Gear/阻尼Newton/有界无LTE/一阶Gear均失败（最远0.648ms/要求6.5ms）。未进入Xyce A1九工况，动态验收仍阻塞。证据见 generated/electronics/simulation/linux-reference/README.md。
+
+- 追加独立范围完成实际尝试：A1预初始化动态18项（轻载/工作负载各9）为15数值失败、3超时、0完整完成；超时未称不收敛。原参考全程延长1.5ms后发现SYSCLK约1.6MHz异常，U3最小单元首次比较器事件失败；已记录三项冷启动差异、完整/缺失窗口判定及合理停止点。芯片动态验收仍未完成，不改PCB。见 generated/electronics/simulation/linux-steady-followup/README.md。

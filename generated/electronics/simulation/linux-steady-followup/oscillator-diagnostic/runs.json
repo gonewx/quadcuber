@@ -1,0 +1,24 @@
+[
+  {
+    "case": "default",
+    "returncode": 1,
+    "elapsed_s": 0.1643135379999876,
+    "options": "",
+    "original_U3_lines": [
+      196,
+      217
+    ],
+    "unchanged_extraction_sha256": "ebb4abb6ce481df5a2d2c2a4ea54d8dd5cad1fe59d828abb0e68558eb3c77e81"
+  },
+  {
+    "case": "strict",
+    "returncode": 1,
+    "elapsed_s": 0.1643031820003671,
+    "options": ".OPTIONS TIMEINT RELTOL=1e-5 ABSTOL=1e-9\n.OPTIONS NONLIN-TRAN RELTOL=1e-6 ABSTOL=1e-12\n",
+    "original_U3_lines": [
+      196,
+      217
+    ],
+    "unchanged_extraction_sha256": "ebb4abb6ce481df5a2d2c2a4ea54d8dd5cad1fe59d828abb0e68558eb3c77e81"
+  }
+]

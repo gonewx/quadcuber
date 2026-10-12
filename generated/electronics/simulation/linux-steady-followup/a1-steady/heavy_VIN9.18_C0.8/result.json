@@ -1,0 +1,62 @@
+{
+  "case": "heavy_VIN9.18_C0.8",
+  "vin": 9.18,
+  "cap_factor": 0.8,
+  "initial_load_A": [
+    1.5,
+    1.5
+  ],
+  "returncode": 1,
+  "elapsed_s": 166.52888461099974,
+  "requested_stop_s": 0.005,
+  "completed": false,
+  "passed": false,
+  "cold_start_test": false,
+  "load_step_reached": true,
+  "input_step_reached": false,
+  "testbench_sha256": "469e7503abac7d4fabfe227563dbe93fe69f05e31f863547ff9cd9cb590bc173",
+  "rows": 108628,
+  "last_time_s": 0.0010029598434349273,
+  "finite": true,
+  "strictly_increasing": true,
+  "observed_rails": {
+    "5V_A": {
+      "min_V": 4.889663306015985,
+      "max_V": 5.632006901477154,
+      "final_V": 5.172237151656367,
+      "max_abs_inductor_A": 4.23372825993791
+    },
+    "5V_B": {
+      "min_V": 4.88966330601603,
+      "max_V": 5.632006901477332,
+      "final_V": 5.187915881612028,
+      "max_abs_inductor_A": 4.2337282599378545
+    }
+  },
+  "termination": "NUMERICAL_FAILURE",
+  "input_events": [
+    {
+      "start_s": 0.003,
+      "end_s": 0.00301,
+      "from_V": 9.18,
+      "to_V": 9.18,
+      "delta_V": 0.0,
+      "actual_change_reached": false
+    },
+    {
+      "start_s": 0.004,
+      "end_s": 0.00401,
+      "from_V": 9.18,
+      "to_V": 8.82,
+      "delta_V": -0.36,
+      "actual_change_reached": false
+    }
+  ],
+  "load_step_full_after_window": false,
+  "periodic_steady_state_verified": false,
+  "model_compatibility_verified": false,
+  "blocker": "Solver timestep too small",
+  "waveform": "test.cir.csv.gz",
+  "log": "xyce.log",
+  "waveform_compression": "gzip"
+}

@@ -1,0 +1,292 @@
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version Xyce Release 7.10.0-opensource
+***** Date: Mon Oct 12 05:40:12 UTC 2026
+
+
+***** Executing netlist test.cir
+
+***** Reading and parsing netlist...
+***** Setting up topology...
+
+Netlist warning: Voltage Node (X1:XCORE:U12_N16766365) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U12_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U12_N16779415) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U11_N166402810) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U10_N16864680) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U10_N16878597) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U3_ULQ_CLK) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:U3_N16813790) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U12_N16779389) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U5_TAIL_CUR) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U5_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:VREF_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_ISWF) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U603:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17096138) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17027443) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_ISLOPE_INT) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17026548) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U10_N16864604) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17026579) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17026548) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_SLEEP_N) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U10_N16878597) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17026579) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U11_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17027443) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U11_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U12_N16779389) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U12_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U10_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U10_N16864604) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_ICTRL) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U647:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U3_N16692390) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U603:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U11_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_ISLOPE) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U11_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_ISWF) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17027150) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U10_N16864680) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17162707) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:OCLOW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U12_N16766365) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17162707) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_SLEEP_N) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17027150) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U11_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U11_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_ICTRL) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17096138) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U5_TAIL_CUR) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:VREF_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U5_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U3_N16813790) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U3_N16692390) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U10_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U12_N16779415) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U11_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U3_ULQ_CLK) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U10_N16855026) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U10_N16855026) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_ISLOPE_INT) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_ISLOPE) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:ISW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U11_N166402810) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U11_N16642234) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U11_N16642234) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U11_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U12_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U12_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:ISW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:OCLOW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U647:QQQ) connected to only 1
+ device Terminal
+***** Device Count Summary ...
+       B level 1 (Expression Based Voltage or Current Source)  306
+       C level 1 (Capacitor)                                   280
+       D level 1,2 (Diode)                                      62
+       E level 1 (Linear Voltage Controlled Voltage Source)     20
+       G level 1 (Linear Voltage Controlled Current Source)      6
+       I level 1 (Independent Current Source)                    2
+       L level 1 (Inductor)                                      2
+       R level 1 (Resistor)                                    340
+       S level 1 (Controlled Switch)                            28
+       V level 1 (Independent Voltage Source)                   95
+       -----------------------------------------------------------
+       Total Devices                                          1141
+***** Setting up matrix structure...
+***** Number of Unknowns = 1116
+***** Initializing...
+
+***** Beginning DC Operating Point Calculation...
+
+***** Beginning Transient Calculation...
+
+***** Percent complete: 1 %
+***** Current system time: Mon Oct 12 05:40:20 2026
+***** Estimated time to completion: 12 min., 34 sec.
+
+***** Percent complete: 2.00001 %
+***** Current system time: Mon Oct 12 05:40:30 2026
+***** Estimated time to completion: 14 min., 23 sec.
+
+Netlist warning: Current time exceeds stop time!
+***** Percent complete: 3.00001 %
+***** Current system time: Mon Oct 12 05:40:41 2026
+***** Estimated time to completion: 15 min., 26 sec.
+
+Netlist warning: Current time exceeds stop time!
+***** Percent complete: 4.00002 %
+***** Current system time: Mon Oct 12 05:40:51 2026
+***** Estimated time to completion: 15 min., 29 sec.
+
+***** Percent complete: 5.00002 %
+***** Current system time: Mon Oct 12 05:41:01 2026
+***** Estimated time to completion: 15 min., 26 sec.
+
+Netlist warning: Current time exceeds stop time!
+Netlist warning: Current time exceeds stop time!
+***** Percent complete: 6.00002 %
+***** Current system time: Mon Oct 12 05:41:11 2026
+***** Estimated time to completion: 15 min., 18 sec.
+
+Netlist warning: Current time exceeds stop time!
+Netlist warning: Current time exceeds stop time!
+***** Percent complete: 7.00002 %
+***** Current system time: Mon Oct 12 05:41:20 2026
+***** Estimated time to completion: 15 min., 3 sec.
+
+***** Percent complete: 8.00003 %
+***** Current system time: Mon Oct 12 05:41:30 2026
+***** Estimated time to completion: 14 min., 54 sec.
+
+***** Percent complete: 9.00003 %
+***** Current system time: Mon Oct 12 05:41:39 2026
+***** Estimated time to completion: 14 min., 41 sec.
+
+Netlist warning: Current time exceeds stop time!
+Netlist warning: Current time exceeds stop time!
+***** Percent complete: 10 %
+***** Current system time: Mon Oct 12 05:41:48 2026
+***** Estimated time to completion: 14 min., 25 sec.
+
+***** Percent complete: 11 %
+***** Current system time: Mon Oct 12 05:41:57 2026
+***** Estimated time to completion: 14 min., 11 sec.
+
+***** Percent complete: 12.0001 %
+***** Current system time: Mon Oct 12 05:42:06 2026
+***** Estimated time to completion: 13 min., 53 sec.
+
+***** Percent complete: 13.0001 %
+***** Current system time: Mon Oct 12 05:42:15 2026
+***** Estimated time to completion: 13 min., 44 sec.
+
+***** Percent complete: 14.0001 %
+***** Current system time: Mon Oct 12 05:42:24 2026
+***** Estimated time to completion: 13 min., 28 sec.
+
+***** Percent complete: 15.0001 %
+***** Current system time: Mon Oct 12 05:42:33 2026
+***** Estimated time to completion: 13 min., 17 sec.
+
+***** Percent complete: 16.0002 %
+***** Current system time: Mon Oct 12 05:42:42 2026
+***** Estimated time to completion: 13 min., 7 sec.
+
+***** Percent complete: 17.0004 %
+***** Current system time: Mon Oct 12 05:42:51 2026
+***** Estimated time to completion: 12 min., 57 sec.
+
+***** Percent complete: 18.0005 %
+***** Current system time: Mon Oct 12 05:43:01 2026
+***** Estimated time to completion: 12 min., 49 sec.
+
+
+HARNESS TIMEOUT 180s: INCOMPLETE

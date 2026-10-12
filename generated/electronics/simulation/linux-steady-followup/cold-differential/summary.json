@@ -1,0 +1,71 @@
+[
+  {
+    "case": "startup_state1",
+    "switch_rises_above_1V": 1,
+    "first_rise": {
+      "before_s": 0.000108131713,
+      "after_s": 0.000108132338,
+      "after_SW_V": 9.7584275
+    },
+    "last_time_s": 0.000108133086,
+    "last_minus_first_rise_s": 7.479999999926955e-10,
+    "model_sha256": "47f1df44d7467c19c63eedf896bb61e2061eb455c65938f05a43e12819f812e7",
+    "files_sha256": {
+      "driver.cir.csv": "ad11a6e63cf8b9839f514312628e91f6f5cf279cf46da34f83a262c33ca46d3d",
+      "stdout.log": "894116285c755bf1bbfd1cb264aa306acee6c73395666744bc32549f710a6272",
+      "tail.json": "328a0b821f3ca7f1c232d3f6c404e036b21f2a38a4d8aeb131aa1f52c7e957a2",
+      "driver.cir": "e52bd198648ec7f2f927dd196cddc7c57f7bcdb1b354a1236ba4e7e9b2e5d1af",
+      "driver.patch": "51e9be35a9192e01d20be4a69c372248a1e164921aee74281ed9560ececfe18d"
+    },
+    "last_50us_VOUT_range": [
+      -1.85282652e-34,
+      1.13682783e-06
+    ]
+  },
+  {
+    "case": "startup_dc12",
+    "switch_rises_above_1V": 1,
+    "first_rise": {
+      "before_s": 2.3856189e-06,
+      "after_s": 2.3862439e-06,
+      "after_SW_V": 11.999536
+    },
+    "last_time_s": 2.38699189e-06,
+    "last_minus_first_rise_s": 7.479900000000707e-10,
+    "model_sha256": "47f1df44d7467c19c63eedf896bb61e2061eb455c65938f05a43e12819f812e7",
+    "files_sha256": {
+      "driver.cir.csv": "f1fa782fcd878dde3dfd5f5c1738c1ac2051008689a05dad692ee79df56bba85",
+      "stdout.log": "969210fc98e2f0636d08ffdff139e1c6457731ccb26ab4524e00d5118a8c0829",
+      "tail.json": "d3d9bc19236ac81482b31dafd308f67fda573dd42f9bbfb9a919b2cf4907c5eb",
+      "driver.cir": "aebae45966298d9978d8befd5408704040b3ea6b5412f3e72fc46b2d7bec24ae",
+      "driver.patch": "fbee4b89bb3ba5a3e87a81f5421c69ae832c57b3f5886b6d00eb3944c4ee2a0b"
+    },
+    "last_50us_VOUT_range": [
+      0.0,
+      1.35416301e-06
+    ]
+  },
+  {
+    "case": "steady_state0",
+    "switch_rises_above_1V": 423,
+    "first_rise": {
+      "before_s": 5.9966356e-06,
+      "after_s": 5.9991356e-06,
+      "after_SW_V": 1.00412643
+    },
+    "last_time_s": 0.0008,
+    "last_minus_first_rise_s": 0.0007940008644,
+    "model_sha256": "47f1df44d7467c19c63eedf896bb61e2061eb455c65938f05a43e12819f812e7",
+    "files_sha256": {
+      "driver.cir.csv": "113b28fbfd1a8151a8c0f54a9440224cb11b654c8c5a48e4334e9b3431d2b764",
+      "stdout.log": "1f02112633d7688c855f42661d23e221b19730703b9e4e79e47d1c921a7cb1c2",
+      "tail.json": "02a30356dcc9006b1954e5c6540283611e5b1c30052af2af6ce93fe1c3484e45",
+      "driver.cir": "44afd1c7030162bc23c4c2e66ed8d0df3f96f9487d5a491a2c015db98db35696",
+      "driver.patch": "944a2184bab796c635fb2775ff58247be7d203bb0778f5defa7b06349ef11c7e"
+    },
+    "last_50us_VOUT_range": [
+      0.656263522,
+      0.749524979
+    ]
+  }
+]

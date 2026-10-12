@@ -1,0 +1,283 @@
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version Xyce Release 7.10.0-opensource
+***** Date: Mon Oct 12 05:34:00 UTC 2026
+
+
+***** Executing netlist test.cir
+
+***** Reading and parsing netlist...
+***** Setting up topology...
+
+Netlist warning: Voltage Node (X1:XCORE:U12_N16766365) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U12_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U12_N16779415) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U11_N166402810) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U10_N16864680) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U10_N16878597) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U3_ULQ_CLK) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:U3_N16813790) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U12_N16779389) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U5_TAIL_CUR) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U5_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:VREF_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_ISWF) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U603:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17096138) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17027443) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_ISLOPE_INT) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17026548) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U10_N16864604) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17026579) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17026548) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_SLEEP_N) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U10_N16878597) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17026579) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U11_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17027443) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U11_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U12_N16779389) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U12_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U10_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U10_N16864604) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_ICTRL) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U647:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U3_N16692390) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U603:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U11_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_ISLOPE) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U11_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_ISWF) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17027150) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U10_N16864680) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17162707) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:OCLOW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U12_N16766365) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17162707) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_SLEEP_N) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_N17027150) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U11_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U11_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_ICTRL) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_N17096138) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U5_TAIL_CUR) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:VREF_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U5_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U3_N16813790) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U3_N16692390) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U10_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U12_N16779415) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U11_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U3_ULQ_CLK) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U10_N16855026) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U10_N16855026) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U6_ISLOPE_INT) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U6_ISLOPE) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:ISW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:U11_N166402810) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U11_N16642234) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:U11_N16642234) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U11_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:U12_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U12_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:X_U6_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X2:XCORE:ISW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X2:XCORE:OCLOW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X1:XCORE:X_U6_U647:QQQ) connected to only 1
+ device Terminal
+***** Device Count Summary ...
+       B level 1 (Expression Based Voltage or Current Source)  306
+       C level 1 (Capacitor)                                   280
+       D level 1,2 (Diode)                                      62
+       E level 1 (Linear Voltage Controlled Voltage Source)     20
+       G level 1 (Linear Voltage Controlled Current Source)      6
+       I level 1 (Independent Current Source)                    2
+       L level 1 (Inductor)                                      2
+       R level 1 (Resistor)                                    340
+       S level 1 (Controlled Switch)                            28
+       V level 1 (Independent Voltage Source)                   95
+       -----------------------------------------------------------
+       Total Devices                                          1141
+***** Setting up matrix structure...
+***** Number of Unknowns = 1116
+***** Initializing...
+
+***** Beginning DC Operating Point Calculation...
+
+***** Beginning Transient Calculation...
+
+ *** Transient failure history: 
+Time        Time      Step   EstErr       Non-Linear Solver       node     node
+(sec)       Step     Status  OverTol    Status    Iters  ||F||    index    name
+ 6.804e-07  4.432e-16  pass  7.769e-01  P:normal  13  2.594e-05    724    B2CAP
+ 6.804e-07  3.826e-16  pass  5.493e-01  P:normal   6  5.093e-03      1    X2:XCORE:X_U8_D15:3
+ 6.804e-07  3.443e-16  pass  4.694e-01  P:normal   6  4.032e-05    400    B1CAP
+ 6.804e-07  3.443e-16  pass  7.769e-01  P:normal  13  6.142e-05      1    X2:XCORE:X_U8_D15:3
+ 6.804e-07  2.973e-16  pass  5.494e-01  P:normal   6  5.134e-03     43    B2SW
+ 6.804e-07  2.675e-16  pass  4.695e-01  P:normal   4  5.193e-05     20    X2:XCORE:X_U8_D16:3
+ 6.804e-07  2.675e-16  pass  7.770e-01  P:normal  13  6.597e-05      1    X2:XCORE:X_U8_D15:3
+ 6.804e-07  2.310e-16  pass  5.494e-01  P:normal   6  5.296e-03     43    B2SW
+ 6.804e-07  2.079e-16  pass  4.695e-01  P:normal   6  4.543e-05    400    B1CAP
+ 6.804e-07  2.079e-16  pass  7.771e-01  P:normal  13  1.676e-04    724    B2CAP
+ 6.804e-07  1.795e-16  pass  5.494e-01  P:normal   6  5.355e-03      1    X2:XCORE:X_U8_D15:3
+ 6.804e-07  1.615e-16  pass  4.696e-01  P:normal   4  3.586e-04     20    X2:XCORE:X_U8_D16:3
+ 6.804e-07  1.615e-16  pass  7.773e-01  P:normal  14  5.260e-05    724    B2CAP
+ 6.804e-07  1.394e-16  pass  5.494e-01  P:normal   6  6.047e-03      1    X2:XCORE:X_U8_D15:3
+ 6.804e-07  1.255e-16  pass  4.696e-01  P:normal   6  1.030e-04    400    B1CAP
+ 6.804e-07  1.255e-16  pass  7.774e-01  P:normal  13  1.030e-04    400    B1CAP
+ 6.804e-07  1.083e-16  pass  5.494e-01  P:normal   6  6.064e-03      1    X2:XCORE:X_U8_D15:3
+ 6.804e-07  9.747e-17  pass  4.697e-01  P:normal   4  3.090e-04    379    X2:XCORE:U8_N16881733
+ 6.804e-07  9.747e-17  pass  7.777e-01  P:normal  13  4.721e-04     43    B2SW
+ 6.804e-07  8.412e-17  fail  7.777e-01  P:near    20  1.579e-04    724    B2CAP
+ 6.804e-07  1.052e-17  pass  1.607e-01  P:normal  13  3.058e-03    724    B2CAP
+ 6.804e-07  1.052e-17  fail  1.607e-01  P:near    14  4.801e-04    724    B2CAP
+ 6.804e-07  1.314e-18  fail  1.607e-01  P:near    10  8.213e-03    724    B2CAP
+ 6.804e-07  1.643e-19  fail  1.607e-01  P:near     6  8.508e-02    400    B1CAP
+ 6.804e-07  2.054e-20  fail  1.607e-01  P:near     7  2.500e-01    400    B1CAP
+Time step too small near step number: 328  Exiting transient loop.
+
+
+***** Solution Summary *****
+	Number Successful Steps Taken:		329
+	Number Failed Steps Attempted:		8
+	Number Jacobians Evaluated:		2019
+	Number Linear Solves:			2019
+	Number Failed Linear Solves:		0
+	Number Residual Evaluations:		2356
+	Number Nonlinear Convergence Failures:	5
+	Total Residual Load Time:		0.230 seconds
+	Total Jacobian Load Time:		0.078 seconds
+	Total Linear Solution Time:		0.134 seconds
+
+
+***** Total Simulation Solvers Run Time: 0.488 seconds
+***** Total Elapsed Run Time:            0.521 seconds
+*****
+***** End of Xyce(TM) Simulation
+*****
+
+Timing summary of 1 processor
+                 Stats                   Count       CPU Time              Wall Time
+---------------------------------------- ----- --------------------- ---------------------
+Xyce                                         1        0.509 (100.0%)        0.521 (100.0%)
+  Analysis                                   1        0.488 (95.87%)        0.488 (93.59%)
+    Transient                                1        0.488 (95.86%)        0.488 (93.58%)
+      Nonlinear Solve                      337        0.468 (91.96%)        0.468 (89.77%)
+        Residual                          2356        0.232 (45.64%)        0.232 (44.60%)
+        Jacobian                          2019        0.079 (15.56%)        0.079 (15.19%)
+        Linear Solve                      2019        0.135 (26.47%)        0.135 (25.86%)
+      Successful DCOP Steps                  1        0.000 ( 0.04%)        0.000 ( 0.04%)
+      Successful Step                      328        0.013 ( 2.50%)        0.013 ( 2.44%)
+      Failed Steps                           8        0.000 ( 0.02%)        0.000 ( 0.02%)
+        Nonlinear Failure                    5        0.000 ( 0.00%)        0.000 ( 0.00%)
+  Netlist Import                             1        0.016 ( 3.23%)        0.028 ( 5.41%)
+    Parse Context                            1        0.001 ( 0.27%)        0.001 ( 0.26%)
+    Distribute Devices                       1        0.011 ( 2.10%)        0.022 ( 4.23%)
+    Verify Devices                           1        0.000 (<0.01%)        0.000 (<0.01%)
+    Instantiate                              1        0.004 ( 0.82%)        0.004 ( 0.85%)
+  Late Initialization                        1        0.004 ( 0.84%)        0.004 ( 0.82%)
+    Global Indices                           1        0.002 ( 0.40%)        0.002 ( 0.39%)
+  Setup Matrix Structure                     1        0.001 ( 0.24%)        0.001 ( 0.23%)
+

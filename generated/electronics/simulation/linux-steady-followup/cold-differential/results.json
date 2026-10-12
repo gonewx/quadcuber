@@ -1,0 +1,323 @@
+[
+  {
+    "case": "startup_state1",
+    "base_reference": "Startup",
+    "scientific_change": {
+      "from": "X_U1 BOOT EN 0 SW VIN VFB TPS54302DDC_TRANS PARAMS: STEADY_STATE=0",
+      "to": "X_U1 BOOT EN 0 SW VIN VFB TPS54302DDC_TRANS PARAMS: STEADY_STATE=1"
+    },
+    "returncode": 1,
+    "elapsed_s": 1.417876425999566,
+    "requested_stop_s": 0.0008,
+    "model_sha256": "47f1df44d7467c19c63eedf896bb61e2061eb455c65938f05a43e12819f812e7",
+    "alias_sha256": "de8cc57e8f0dc8092dfe7b527ce3c3937ac32b66b53ce60bf1b5af19b997de38",
+    "rows": 5669,
+    "first": {
+      "TIME": 0.0,
+      "V(VIN)": 0.0,
+      "V(VOUT)": 0.0,
+      "V(EN)": 0.0,
+      "V(SW)": -1.39384082e-28,
+      "I(X_L1:L)": 0.0,
+      "V(X_U1:XCORE:SDWN)": 1.0,
+      "V(X_U1:XCORE:COMP)": 1.3695,
+      "V(X_U1:XCORE:SS_TR)": 1.7,
+      "V(X_U1:XCORE:VREF_GM)": 0.6,
+      "V(X_U1:XCORE:U5_LOW_CLMP)": 0.0,
+      "V(X_U1:XCORE:N16888001)": 1.3695,
+      "V(X_U1:XCORE:U10_N16864604)": 0.0,
+      "V(X_U1:XCORE:HICCUP)": 0.0,
+      "V(X_U1:XCORE:U11_ENAB)": 0.0
+    },
+    "last": {
+      "TIME": 0.000108133086,
+      "V(VIN)": 9.75970301,
+      "V(VOUT)": 1.13682783e-06,
+      "V(EN)": 1.86319603,
+      "V(SW)": 9.51084189,
+      "I(X_L1:L)": 0.0010361446,
+      "V(X_U1:XCORE:SDWN)": 4.3674542e-15,
+      "V(X_U1:XCORE:COMP)": 2.30000627,
+      "V(X_U1:XCORE:SS_TR)": 0.000116330551,
+      "V(X_U1:XCORE:VREF_GM)": 0.6,
+      "V(X_U1:XCORE:U5_LOW_CLMP)": 0.439,
+      "V(X_U1:XCORE:N16888001)": 2.30000627,
+      "V(X_U1:XCORE:U10_N16864604)": 1.0,
+      "V(X_U1:XCORE:HICCUP)": 0.0,
+      "V(X_U1:XCORE:U11_ENAB)": 1.0
+    },
+    "completed": false,
+    "ranges": {
+      "V(VIN)": [
+        0.0,
+        9.75970301
+      ],
+      "V(VOUT)": [
+        -1.85282652e-34,
+        1.13682783e-06
+      ],
+      "V(EN)": [
+        0.0,
+        1.86319603
+      ],
+      "V(SW)": [
+        -1.39384082e-28,
+        9.75965135
+      ],
+      "I(X_L1:L)": [
+        -2.50193654e-34,
+        0.0010361446
+      ],
+      "V(X_U1:XCORE:SDWN)": [
+        -0.0743801653,
+        1.0
+      ],
+      "V(X_U1:XCORE:COMP)": [
+        -7.88546934e-06,
+        2.30000784
+      ],
+      "V(X_U1:XCORE:SS_TR)": [
+        -9.9960886e-05,
+        1.7
+      ],
+      "V(X_U1:XCORE:VREF_GM)": [
+        0.6,
+        0.6
+      ],
+      "V(X_U1:XCORE:U5_LOW_CLMP)": [
+        0.0,
+        0.439
+      ],
+      "V(X_U1:XCORE:N16888001)": [
+        -7.88546934e-06,
+        2.30000784
+      ],
+      "V(X_U1:XCORE:U10_N16864604)": [
+        0.0,
+        1.0
+      ],
+      "V(X_U1:XCORE:HICCUP)": [
+        0.0,
+        0.0
+      ],
+      "V(X_U1:XCORE:U11_ENAB)": [
+        0.0,
+        1.0
+      ]
+    }
+  },
+  {
+    "case": "startup_dc12",
+    "base_reference": "Startup",
+    "scientific_change": {
+      "from": "V_Vin VIN 0 PULSE(0 12 100u 10u 10u 1 2)",
+      "to": "V_Vin VIN 0 DC 12"
+    },
+    "returncode": 1,
+    "elapsed_s": 0.1643328019999899,
+    "requested_stop_s": 0.0008,
+    "model_sha256": "47f1df44d7467c19c63eedf896bb61e2061eb455c65938f05a43e12819f812e7",
+    "alias_sha256": "de8cc57e8f0dc8092dfe7b527ce3c3937ac32b66b53ce60bf1b5af19b997de38",
+    "rows": 183,
+    "first": {
+      "TIME": 0.0,
+      "V(VIN)": 12.0,
+      "V(VOUT)": 0.0,
+      "V(EN)": 0.0,
+      "V(SW)": 4.02659119,
+      "I(X_L1:L)": 0.0,
+      "V(X_U1:XCORE:SDWN)": 1.0,
+      "V(X_U1:XCORE:COMP)": 0.0,
+      "V(X_U1:XCORE:SS_TR)": 0.0,
+      "V(X_U1:XCORE:VREF_GM)": 0.0,
+      "V(X_U1:XCORE:U5_LOW_CLMP)": 0.0,
+      "V(X_U1:XCORE:N16888001)": 0.0,
+      "V(X_U1:XCORE:U10_N16864604)": 0.0,
+      "V(X_U1:XCORE:HICCUP)": 0.0,
+      "V(X_U1:XCORE:U11_ENAB)": 0.0
+    },
+    "last": {
+      "TIME": 2.38699189e-06,
+      "V(VIN)": 12.0,
+      "V(VOUT)": 1.35413925e-06,
+      "V(EN)": 2.24535313,
+      "V(SW)": 11.6935503,
+      "I(X_L1:L)": 0.00127363107,
+      "V(X_U1:XCORE:SDWN)": -1.35306647e-20,
+      "V(X_U1:XCORE:COMP)": 0.438993955,
+      "V(X_U1:XCORE:SS_TR)": 0.000256454216,
+      "V(X_U1:XCORE:VREF_GM)": 0.000256454216,
+      "V(X_U1:XCORE:U5_LOW_CLMP)": 0.439,
+      "V(X_U1:XCORE:N16888001)": 0.438993955,
+      "V(X_U1:XCORE:U10_N16864604)": 0.0,
+      "V(X_U1:XCORE:HICCUP)": 0.0,
+      "V(X_U1:XCORE:U11_ENAB)": 1.0
+    },
+    "completed": false,
+    "ranges": {
+      "V(VIN)": [
+        12.0,
+        12.0
+      ],
+      "V(VOUT)": [
+        0.0,
+        1.35416301e-06
+      ],
+      "V(EN)": [
+        0.0,
+        2.24535313
+      ],
+      "V(SW)": [
+        -0.00881072636,
+        11.9999927
+      ],
+      "I(X_L1:L)": [
+        0.0,
+        0.00127363107
+      ],
+      "V(X_U1:XCORE:SDWN)": [
+        -9.77618057e-06,
+        1.0
+      ],
+      "V(X_U1:XCORE:COMP)": [
+        -5.91147704e-11,
+        1.18418709
+      ],
+      "V(X_U1:XCORE:SS_TR)": [
+        -5.45267658e-08,
+        0.000256454216
+      ],
+      "V(X_U1:XCORE:VREF_GM)": [
+        -5.45267658e-08,
+        0.000256454216
+      ],
+      "V(X_U1:XCORE:U5_LOW_CLMP)": [
+        0.0,
+        0.439
+      ],
+      "V(X_U1:XCORE:N16888001)": [
+        -5.91147704e-11,
+        1.18418709
+      ],
+      "V(X_U1:XCORE:U10_N16864604)": [
+        0.0,
+        0.0
+      ],
+      "V(X_U1:XCORE:HICCUP)": [
+        0.0,
+        0.0
+      ],
+      "V(X_U1:XCORE:U11_ENAB)": [
+        0.0,
+        1.0
+      ]
+    }
+  },
+  {
+    "case": "steady_state0",
+    "base_reference": "Steady_State",
+    "scientific_change": {
+      "from": "X_U1 BOOT EN 0 SW VIN VFB TPS54302DDC_TRANS PARAMS: STEADY_STATE=1",
+      "to": "X_U1 BOOT EN 0 SW VIN VFB TPS54302DDC_TRANS PARAMS: STEADY_STATE=0"
+    },
+    "returncode": 0,
+    "elapsed_s": 36.636597182000514,
+    "requested_stop_s": 0.0008,
+    "model_sha256": "47f1df44d7467c19c63eedf896bb61e2061eb455c65938f05a43e12819f812e7",
+    "alias_sha256": "de8cc57e8f0dc8092dfe7b527ce3c3937ac32b66b53ce60bf1b5af19b997de38",
+    "rows": 61330,
+    "first": {
+      "TIME": 0.0,
+      "V(VIN)": 12.0,
+      "V(VOUT)": 5.0,
+      "V(EN)": 0.0,
+      "V(SW)": -0.861177571,
+      "I(X_L1:L)": 3.0,
+      "V(X_U1:XCORE:SDWN)": 1.0,
+      "V(X_U1:XCORE:COMP)": 0.0,
+      "V(X_U1:XCORE:SS_TR)": 0.0,
+      "V(X_U1:XCORE:VREF_GM)": 0.0,
+      "V(X_U1:XCORE:U5_LOW_CLMP)": 0.0,
+      "V(X_U1:XCORE:N16888001)": 0.0,
+      "V(X_U1:XCORE:U10_N16864604)": 0.0,
+      "V(X_U1:XCORE:HICCUP)": 0.0,
+      "V(X_U1:XCORE:U11_ENAB)": 0.0
+    },
+    "last": {
+      "TIME": 0.0008,
+      "V(VIN)": 12.0,
+      "V(VOUT)": 0.749524979,
+      "V(EN)": 2.24535313,
+      "V(SW)": -0.139655471,
+      "I(X_L1:L)": 3.49103051,
+      "V(X_U1:XCORE:SDWN)": 0.0,
+      "V(X_U1:XCORE:COMP)": 0.438994517,
+      "V(X_U1:XCORE:SS_TR)": 0.086190184,
+      "V(X_U1:XCORE:VREF_GM)": 0.086190184,
+      "V(X_U1:XCORE:U5_LOW_CLMP)": 0.439,
+      "V(X_U1:XCORE:N16888001)": 0.438994517,
+      "V(X_U1:XCORE:U10_N16864604)": 0.0,
+      "V(X_U1:XCORE:HICCUP)": 0.0,
+      "V(X_U1:XCORE:U11_ENAB)": 1.0
+    },
+    "completed": true,
+    "ranges": {
+      "V(VIN)": [
+        12.0,
+        12.0
+      ],
+      "V(VOUT)": [
+        -0.198851036,
+        5.0
+      ],
+      "V(EN)": [
+        0.0,
+        2.24535313
+      ],
+      "V(SW)": [
+        -0.879806945,
+        11.9989956
+      ],
+      "I(X_L1:L)": [
+        -0.546387443,
+        4.50382344
+      ],
+      "V(X_U1:XCORE:SDWN)": [
+        -5.76912038e-06,
+        1.0
+      ],
+      "V(X_U1:XCORE:COMP)": [
+        -6.35755908e-06,
+        0.871019331
+      ],
+      "V(X_U1:XCORE:SS_TR)": [
+        -5.45267658e-08,
+        0.086190184
+      ],
+      "V(X_U1:XCORE:VREF_GM)": [
+        -5.45267658e-08,
+        0.086190184
+      ],
+      "V(X_U1:XCORE:U5_LOW_CLMP)": [
+        0.0,
+        0.439
+      ],
+      "V(X_U1:XCORE:N16888001)": [
+        -6.35755908e-06,
+        0.871019331
+      ],
+      "V(X_U1:XCORE:U10_N16864604)": [
+        0.0,
+        0.0
+      ],
+      "V(X_U1:XCORE:HICCUP)": [
+        0.0,
+        0.0
+      ],
+      "V(X_U1:XCORE:U11_ENAB)": [
+        0.0,
+        1.0
+      ]
+    }
+  }
+]

@@ -1,0 +1,29 @@
+--- Steady_State/init-compatible-driver.cir
++++ steady_state0/driver.cir
+@@ -3,7 +3,7 @@
+ * not an export made by Cadence. See pin-connectivity.csv and recovery-audit.json.
+ * Original model file is included read-only without modifications.
+ .INCLUDE "/workspace/tool-verification/xyce-reference/TPS54302_TRANS.xyce-init.LIB"
+-.INCLUDE "../ti-name-alias.lib"
++.INCLUDE "/workspace/tool-verification/xyce-reference/ti-name-alias.lib"
+ * DSN instance 16782995: C2; template: C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|
+ C_C2 VIN 0 10u
+ * DSN instance 16783013: C4; template: C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|
+@@ -11,7 +11,7 @@
+ * DSN instance 16782929: R5; template: R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|
+ R_R5 0 EN 105k
+ * DSN instance 16777949: U1; template: X^@REFDES %BOOT %EN %GND %SW %VIN %FB @MODEL PARAMS: ?STEADY_STATE|STEADY_STATE=@STEADY_STATE||STEADY_STATE=0|
+-X_U1 BOOT EN 0 SW VIN VFB TPS54302DDC_TRANS PARAMS: STEADY_STATE=1
++X_U1 BOOT EN 0 SW VIN VFB TPS54302DDC_TRANS PARAMS: STEADY_STATE=0
+ * DSN instance 16783033: C8; template: C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|
+ C_C8 N16785508 VFB 75p
+ * DSN instance 16782982: L1; template: X^@REFDES %1 %2 @MODEL PARAMS: ?L|L=@L||L=10U| ?DCR|DCR=@DCR||DCR=20M| ?IC|IC=@IC||IC=0|
+@@ -37,6 +37,6 @@
+ * DSN instance 16782959: R2; template: R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|
+ R_R2 VFB N16785508 100k
+ * Analysis restored from original trans.sim; no UIC requested.
+-.TRAN 20n 800u 750u 20n
+-.PRINT TRAN FORMAT=CSV V(VIN) V(VOUT) V(EN) V(SW) I(X_L1:L) V(X_U1:XCORE:SDWN) V(X_U1:XCORE:COMP)
++.TRAN 20n 800u 0 20n
++.PRINT TRAN FORMAT=CSV V(VIN) V(VOUT) V(EN) V(SW) I(X_L1:L) V(X_U1:XCORE:SDWN) V(X_U1:XCORE:COMP) V(X_U1:XCORE:SS_TR) V(X_U1:XCORE:VREF_GM) V(X_U1:XCORE:U5_LOW_CLMP) V(X_U1:XCORE:N16888001) V(X_U1:XCORE:U10_N16864604) V(X_U1:XCORE:HICCUP) V(X_U1:XCORE:U11_ENAB)
+ .END

@@ -1,0 +1,12 @@
+[
+  {
+    "case": "uic_gear_default",
+    "returncode": 1,
+    "elapsed_s": 0.0319373030006318
+  },
+  {
+    "case": "uic_gear_strict",
+    "returncode": 1,
+    "elapsed_s": 0.031992891000300006
+  }
+]

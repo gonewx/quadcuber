@@ -1,0 +1,111 @@
+{
+  "run_returncode": 0,
+  "completed": true,
+  "last_time_s": 0.0015,
+  "rows": 171721,
+  "periodic_steady_state_verified": false,
+  "reason": "Original 750-800us window is too short for 50 nominal 400kHz cycles; extended windows expose drift/spikes and SYSCLK periods far below nominal. Counted crossings are observations, not accepted physical switching cycles.",
+  "original_saved_window": {
+    "start_s": 0.00075,
+    "end_s": 0.0008,
+    "v_min": 5.09295553,
+    "v_max": 5.09980521,
+    "v_mean": 5.096287410574658,
+    "il_mean": 3.0046119013223183,
+    "SYSCLK_threshold_rises": 81,
+    "SYSCLK_rise_interval_median_s": 6.145099999997693e-07
+  },
+  "extended_windows": [
+    {
+      "start_s": 0.0007,
+      "end_s": 0.0007999999999999999,
+      "v_min": 5.08806732,
+      "v_max": 5.09980521,
+      "v_mean": 5.094006854786209,
+      "il_mean": 3.0051896698414633,
+      "SYSCLK_threshold_rises": 162,
+      "SYSCLK_rise_interval_median_s": 6.200000000000042e-07
+    },
+    {
+      "start_s": 0.0007999999999999999,
+      "end_s": 0.0009,
+      "v_min": 5.09693198,
+      "v_max": 5.10406632,
+      "v_mean": 5.100604498178772,
+      "il_mean": 3.0013967002072492,
+      "SYSCLK_threshold_rises": 165,
+      "SYSCLK_rise_interval_median_s": 6.022344999999764e-07
+    },
+    {
+      "start_s": 0.0009,
+      "end_s": 0.001,
+      "v_min": 5.09770662,
+      "v_max": 5.14315315,
+      "v_mean": 5.105550170815859,
+      "il_mean": 2.999170590251854,
+      "SYSCLK_threshold_rises": 167,
+      "SYSCLK_rise_interval_median_s": 5.875534999999835e-07
+    },
+    {
+      "start_s": 0.001,
+      "end_s": 0.0010999999999999998,
+      "v_min": 5.09687064,
+      "v_max": 5.10430205,
+      "v_mean": 5.1010019598047185,
+      "il_mean": 2.9999558791310648,
+      "SYSCLK_threshold_rises": 171,
+      "SYSCLK_rise_interval_median_s": 5.864599999999076e-07
+    },
+    {
+      "start_s": 0.0010999999999999998,
+      "end_s": 0.0012,
+      "v_min": 5.09644679,
+      "v_max": 5.10614651,
+      "v_mean": 5.101075333731068,
+      "il_mean": 3.000912113399767,
+      "SYSCLK_threshold_rises": 168,
+      "SYSCLK_rise_interval_median_s": 5.994999999997357e-07
+    },
+    {
+      "start_s": 0.0012,
+      "end_s": 0.0013,
+      "v_min": 5.09612885,
+      "v_max": 5.14767512,
+      "v_mean": 5.104309440818448,
+      "il_mean": 2.9994594486824733,
+      "SYSCLK_threshold_rises": 160,
+      "SYSCLK_rise_interval_median_s": 6.082100000002772e-07
+    },
+    {
+      "start_s": 0.0013,
+      "end_s": 0.0014,
+      "v_min": 5.09525826,
+      "v_max": 5.14014339,
+      "v_mean": 5.103779373435415,
+      "il_mean": 2.9988388848395635,
+      "SYSCLK_threshold_rises": 157,
+      "SYSCLK_rise_interval_median_s": 6.222700000000411e-07
+    },
+    {
+      "start_s": 0.0014,
+      "end_s": 0.0015,
+      "v_min": 5.09641924,
+      "v_max": 5.13997495,
+      "v_mean": 5.104112868551372,
+      "il_mean": 3.001212549497724,
+      "SYSCLK_threshold_rises": 154,
+      "SYSCLK_rise_interval_median_s": 6.412900000001519e-07
+    }
+  ],
+  "max_adjacent_window_mean_shift_V": 0.006597643392562524,
+  "criteria": {
+    "max_window_mean_shift_V": 0.005,
+    "min_nominal_cycles": 50,
+    "output_range_V": [
+      4.75,
+      5.25
+    ]
+  },
+  "testbench_sha256": "e1917a61b1cc56a5fca1553f2211e22bb35db9b9f3bdc5a01c872ca78a23db33",
+  "original_model_parameter_changes": []
+}

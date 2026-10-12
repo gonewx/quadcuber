@@ -1,0 +1,29 @@
+--- Startup/init-compatible-driver.cir
++++ startup_dc12/driver.cir
+@@ -3,7 +3,7 @@
+ * not an export made by Cadence. See pin-connectivity.csv and recovery-audit.json.
+ * Original model file is included read-only without modifications.
+ .INCLUDE "/workspace/tool-verification/xyce-reference/TPS54302_TRANS.xyce-init.LIB"
+-.INCLUDE "../ti-name-alias.lib"
++.INCLUDE "/workspace/tool-verification/xyce-reference/ti-name-alias.lib"
+ * DSN instance 16766235: R2; template: R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|
+ R_R2 VFB N16776600 100k
+ * DSN instance 16766049: L1; template: X^@REFDES %1 %2 @MODEL PARAMS: ?L|L=@L||L=10U| ?DCR|DCR=@DCR||DCR=20M| ?IC|IC=@IC||IC=0|
+@@ -25,7 +25,7 @@
+ * DSN instance 16766091: R4; template: R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|
+ R_R4 EN VIN 510k
+ * DSN instance 16766125: Vin; template: V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+PULSE @V1 @V2 ?TD/@TD/~TD/0/ #TR/@TR/ #TF/@TF/ #PW/@PW/ #PER/@PER/
+-V_Vin VIN 0 PULSE(0 12 100u 10u 10u 1 2)
++V_Vin VIN 0 DC 12
+ * DSN instance 16766075: C8; template: C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|
+ C_C8 N16776600 VFB 75p
+ * DSN instance 16766857: C6; template: X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|
+@@ -35,6 +35,6 @@
+ * DSN instance 16766163: C5; template: X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|
+ X_C5 VOUT 0 CESR PARAMS: C=22u ESR=2m IC=0 X=1
+ * Analysis restored from original trans.sim; no UIC requested.
+-.TRAN 20n 6.5m 0 20n
+-.PRINT TRAN FORMAT=CSV V(VIN) V(VOUT) V(EN) V(SW) I(X_L1:L) V(X_U1:XCORE:SDWN) V(X_U1:XCORE:COMP)
++.TRAN 20n 800u 0 20n
++.PRINT TRAN FORMAT=CSV V(VIN) V(VOUT) V(EN) V(SW) I(X_L1:L) V(X_U1:XCORE:SDWN) V(X_U1:XCORE:COMP) V(X_U1:XCORE:SS_TR) V(X_U1:XCORE:VREF_GM) V(X_U1:XCORE:U5_LOW_CLMP) V(X_U1:XCORE:N16888001) V(X_U1:XCORE:U10_N16864604) V(X_U1:XCORE:HICCUP) V(X_U1:XCORE:U11_ENAB)
+ .END

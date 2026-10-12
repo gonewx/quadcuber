@@ -1,0 +1,14 @@
+[
+  {
+    "case": "enable_default",
+    "returncode": 1,
+    "elapsed_s": 0.015803863000655838,
+    "boundary": "SDWN=1 for OP and 1us, ramps to zero over 1ns; ULQ_MODE=0"
+  },
+  {
+    "case": "enable_strict",
+    "returncode": 1,
+    "elapsed_s": 0.015958455999680154,
+    "boundary": "SDWN=1 for OP and 1us, ramps to zero over 1ns; ULQ_MODE=0"
+  }
+]

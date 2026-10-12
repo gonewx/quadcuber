@@ -1,0 +1,116 @@
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version Xyce Release 7.10.0-opensource
+***** Date: Mon Oct 12 05:37:21 UTC 2026
+
+
+***** Executing netlist test.cir
+
+***** Reading and parsing netlist...
+Netlist warning in file test.cir at or near line 30
+ No options parameter PRECISION found, parameter will be ignored.
+***** Setting up topology...
+
+Netlist warning: Voltage Node (SDWN) connected to only 1 device Terminal
+Netlist warning: Voltage Node (U3_ULQ_CLK) connected to only 1 device Terminal
+Netlist warning: Voltage Node (U3_N16692390) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (U3_N16813790) connected to only 1 device
+ Terminal
+***** Device Count Summary ...
+       B level 1 (Expression Based Voltage or Current Source)  6
+       C level 1 (Capacitor)                                   7
+       D level 1,2 (Diode)                                     2
+       E level 1 (Linear Voltage Controlled Voltage Source)    1
+       R level 1 (Resistor)                                    7
+       S level 1 (Controlled Switch)                           1
+       V level 1 (Independent Voltage Source)                  6
+       ---------------------------------------------------------
+       Total Devices                                          30
+***** Setting up matrix structure...
+***** Number of Unknowns = 31
+***** Initializing...
+
+***** Beginning Transient Calculation...
+
+***** Percent complete: 1.0137 %
+***** Current system time: Mon Oct 12 05:37:21 2026
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 2.0337 %
+***** Current system time: Mon Oct 12 05:37:21 2026
+***** Estimated time to completion:  0 sec.
+
+ *** Transient failure history: 
+Time        Time      Step   EstErr       Non-Linear Solver       node     node
+(sec)       Step     Status  OverTol    Status    Iters  ||F||    index    name
+ 2.363e-06  2.384e-15  pass  8.862e-14  P:normal   1  1.995e-13      2    RAMP
+ 2.363e-06  4.768e-15  fail  9.236e+02  P:normal   2  1.995e-13      2    RAMP
+ 2.363e-06  1.192e-15  pass  1.781e-13  P:normal   1  8.772e-13      2    RAMP
+ 2.363e-06  2.384e-15  fail  2.032e+03  P:normal   2  1.995e-13      2    RAMP
+ 2.363e-06  5.960e-16  fail  7.257e+02  P:normal   2  1.833e-12      2    RAMP
+ 2.363e-06  1.490e-16  fail  5.644e+02  P:normal   2  5.221e-12      2    RAMP
+ 2.363e-06  3.725e-17  pass  0.000e+00  P:normal   1  1.646e-11      2    RAMP
+ 2.363e-06  7.451e-17  fail  2.903e+02  P:normal   2  1.646e-11      2    RAMP
+ 2.363e-06  1.863e-17  pass  1.684e-14  P:normal   1  2.691e-11      2    RAMP
+ 2.363e-06  3.725e-17  fail  2.032e+03  P:normal   2  1.646e-11      2    RAMP
+ 2.363e-06  9.313e-18  pass  1.139e-13  P:normal   1  3.200e-10      2    RAMP
+ 2.363e-06  1.863e-17  fail  2.032e+03  P:normal   2  7.027e-11      2    RAMP
+ 2.363e-06  4.657e-18  pass  1.139e-13  P:normal   1  2.767e-10      2    RAMP
+ 2.363e-06  9.313e-18  fail  2.032e+03  P:normal   2  7.027e-11      2    RAMP
+ 2.363e-06  2.328e-18  pass  4.355e-19  P:normal   1  4.172e-10      2    RAMP
+ 2.363e-06  4.657e-18  pass  6.381e-13  P:normal   1  7.027e-11      2    RAMP
+ 2.363e-06  9.313e-18  fail  2.903e+03  P:normal   2  7.027e-11      2    RAMP
+ 2.363e-06  2.328e-18  fail  1.270e+03  P:normal   2  7.642e-10      2    RAMP
+ 2.363e-06  5.821e-19  pass  0.000e+00  P:normal   1  6.236e-10      2    RAMP
+ 2.363e-06  1.164e-18  fail  9.236e+02  P:normal   2  6.236e-10      2    RAMP
+ 2.363e-06  2.910e-19  pass  1.781e-13  P:normal   1  3.399e-09      2    RAMP
+ 2.363e-06  5.821e-19  fail  2.032e+03  P:normal   2  6.236e-10      2    RAMP
+ 2.363e-06  1.455e-19  pass  4.355e-19  P:normal   1  6.236e-10      2    RAMP
+ 2.363e-06  2.910e-19  fail  2.032e+03  P:normal   2  6.175e-09      2    RAMP
+ 2.363e-06  7.276e-20  fail  7.257e+02  P:normal   2  4.927e-09      2    RAMP
+Time step too small near step number: 166  Exiting transient loop.
+
+
+***** Solution Summary *****
+	Number Successful Steps Taken:		166
+	Number Failed Steps Attempted:		36
+	Number Jacobians Evaluated:		228
+	Number Linear Solves:			228
+	Number Failed Linear Solves:		0
+	Number Residual Evaluations:		430
+	Number Nonlinear Convergence Failures:	0
+	Total Residual Load Time:		0.002 seconds
+	Total Jacobian Load Time:		0.000 seconds
+	Total Linear Solution Time:		0.001 seconds
+
+
+***** Total Simulation Solvers Run Time: 0.007 seconds
+***** Total Elapsed Run Time:            0.012 seconds
+*****
+***** End of Xyce(TM) Simulation
+*****
+
+Timing summary of 1 processor
+                 Stats                   Count       CPU Time              Wall Time
+---------------------------------------- ----- --------------------- ---------------------
+Xyce                                         1        0.013 (100.0%)        0.013 (100.0%)
+  Analysis                                   1        0.007 (57.04%)        0.007 (57.05%)
+    Transient                                1        0.007 (57.01%)        0.007 (57.02%)
+      Nonlinear Solve                      202        0.005 (36.61%)        0.005 (36.36%)
+        Residual                           430        0.002 (15.22%)        0.002 (15.24%)
+        Jacobian                           228        0.001 ( 4.45%)        0.001 ( 4.46%)
+        Linear Solve                       228        0.001 ( 8.20%)        0.001 ( 8.20%)
+      Successful Step                      166        0.001 (11.65%)        0.001 (11.79%)
+      Failed Steps                          36        0.000 ( 0.88%)        0.000 ( 0.83%)
+  Netlist Import                             1        0.004 (30.34%)        0.004 (30.34%)
+    Parse Context                            1        0.002 (16.19%)        0.002 (16.20%)
+    Distribute Devices                       1        0.001 ( 9.44%)        0.001 ( 9.45%)
+    Verify Devices                           1        0.000 ( 0.02%)        0.000 ( 0.02%)
+    Instantiate                              1        0.000 ( 1.98%)        0.000 ( 1.99%)
+  Late Initialization                        1        0.001 ( 4.83%)        0.001 ( 4.83%)
+    Global Indices                           1        0.000 ( 0.68%)        0.000 ( 0.68%)
+  Setup Matrix Structure                     1        0.000 ( 1.11%)        0.000 ( 1.11%)
+

@@ -1,0 +1,707 @@
+{
+  "note": "Observed clock rises are not accepted physical cycles until oscillator compatibility is validated. Partial voltage extrema are not a hardware failure diagnosis.",
+  "cases": [
+    {
+      "case": "light_VIN8.82_C0.4",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "light_VIN8.82_C0.8",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "light_VIN8.82_C1.2",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "light_VIN9_C0.4",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "light_VIN9_C0.8",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "light_VIN9_C1.2",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "light_VIN9.18_C0.4",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "light_VIN9.18_C0.8",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "light_VIN9.18_C1.2",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "heavy_VIN8.82_C0.4",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "heavy_VIN8.82_C0.8",
+      "termination": "TIMEOUT_180S",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": true,
+          "rails": {
+            "5V_1": {
+              "min_V": 5.015155101361475,
+              "max_V": 5.308695923264501,
+              "mean_V": 5.1130813627653655,
+              "half_window_mean_shift_V": -0.010682980898992334,
+              "max_abs_IL_A": 3.002374256825317,
+              "observed_clock_rises": 383,
+              "voltage_current_band_met": false,
+              "stationarity_mean_criterion_met": false,
+              "physical_clock_validated": false
+            },
+            "5V_2": {
+              "min_V": 5.015155101361443,
+              "max_V": 5.308695923264521,
+              "mean_V": 5.113081362765387,
+              "half_window_mean_shift_V": -0.010682980899034966,
+              "max_abs_IL_A": 3.002374256825147,
+              "observed_clock_rises": 383,
+              "voltage_current_band_met": false,
+              "stationarity_mean_criterion_met": false,
+              "physical_clock_validated": false
+            }
+          }
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "heavy_VIN8.82_C1.2",
+      "termination": "TIMEOUT_180S",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": true,
+          "rails": {
+            "5V_1": {
+              "min_V": 5.059380985034905,
+              "max_V": 5.223344887509568,
+              "mean_V": 5.114069485988975,
+              "half_window_mean_shift_V": 0.0017232720728577178,
+              "max_abs_IL_A": 2.994837757985275,
+              "observed_clock_rises": 431,
+              "voltage_current_band_met": true,
+              "stationarity_mean_criterion_met": true,
+              "physical_clock_validated": false
+            },
+            "5V_2": {
+              "min_V": 5.059380985034823,
+              "max_V": 5.223344887509526,
+              "mean_V": 5.114069485988982,
+              "half_window_mean_shift_V": 0.0017232720729021267,
+              "max_abs_IL_A": 2.994837757985008,
+              "observed_clock_rises": 431,
+              "voltage_current_band_met": true,
+              "stationarity_mean_criterion_met": true,
+              "physical_clock_validated": false
+            }
+          }
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "heavy_VIN9_C0.4",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "heavy_VIN9_C0.8",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "heavy_VIN9_C1.2",
+      "termination": "TIMEOUT_180S",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "heavy_VIN9.18_C0.4",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "heavy_VIN9.18_C0.8",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": true,
+          "rails": {
+            "5V_1": {
+              "min_V": 5.094254754020262,
+              "max_V": 5.32087729490252,
+              "mean_V": 5.1281918222531395,
+              "half_window_mean_shift_V": 0.056990315341450604,
+              "max_abs_IL_A": 3.064440271925496,
+              "observed_clock_rises": 444,
+              "voltage_current_band_met": false,
+              "stationarity_mean_criterion_met": false,
+              "physical_clock_validated": false
+            },
+            "5V_2": {
+              "min_V": 5.094254754020247,
+              "max_V": 5.320877294902562,
+              "mean_V": 5.128191822253158,
+              "half_window_mean_shift_V": 0.05699031534145682,
+              "max_abs_IL_A": 3.0644402719252204,
+              "observed_clock_rises": 444,
+              "voltage_current_band_met": false,
+              "stationarity_mean_criterion_met": false,
+              "physical_clock_validated": false
+            }
+          }
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "case": "heavy_VIN9.18_C1.2",
+      "termination": "NUMERICAL_FAILURE",
+      "completed": false,
+      "periodic_steady_state_verified": false,
+      "load_step_verified": false,
+      "input_change_verified": false,
+      "windows": [
+        {
+          "start_s": 0.0007,
+          "end_s": 0.001,
+          "complete": false
+        },
+        {
+          "start_s": 0.0017,
+          "end_s": 0.002,
+          "complete": false
+        },
+        {
+          "start_s": 0.0027,
+          "end_s": 0.003,
+          "complete": false
+        },
+        {
+          "start_s": 0.0037,
+          "end_s": 0.004,
+          "complete": false
+        },
+        {
+          "start_s": 0.0047,
+          "end_s": 0.005,
+          "complete": false
+        }
+      ]
+    }
+  ]
+}

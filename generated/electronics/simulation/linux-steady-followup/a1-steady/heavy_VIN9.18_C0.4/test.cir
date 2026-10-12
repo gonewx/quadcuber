@@ -1,0 +1,39 @@
+Quadcuber actual dual TPS54302 BOM, official model required
+.include "/workspace/tool-verification/xyce-reference/TPS54302_TRANS.xyce-init.LIB"
+.include "/workspace/tool-verification/xyce-reference/ti-name-alias.lib"
+VIN vm 0 PWL(0 9.18 3m 9.18 3.01m 9.18 4m 9.18 4.01m 8.82)
+X1 b1boot b1en 0 b1sw vm b1fb TPS54302DDC_TRANS PARAMS: STEADY_STATE=1
+C1in vm 0 4e-06
+C1hf vm 0 100n
+R1boot b1boot b1bc 49.9
+C1boot b1bc b1sw 100n IC=9.18
+L1 b1sw b1ld 10u IC=1.5
+R1dcr b1ld b1out 0.0214
+R1esr b1out b1cap 0.003
+C1out b1cap 0 1.76e-05
+R1hi b1out b1fb 100k
+R1lo b1fb 0 13.3k
+C1ff b1out b1fb 75p
+R1enhi vm b1en 511k
+R1enlo b1en 0 105k
+B1load b1out 0 I={min(max(v(b1out)/4,0),1)*(1.5-(1.5-0.25)*(time>0.001 && time<0.002))}
+X2 b2boot b2en 0 b2sw vm b2fb TPS54302DDC_TRANS PARAMS: STEADY_STATE=1
+C2in vm 0 4e-06
+C2hf vm 0 100n
+R2boot b2boot b2bc 49.9
+C2boot b2bc b2sw 100n IC=9.18
+L2 b2sw b2ld 10u IC=1.5
+R2dcr b2ld b2out 0.0214
+R2esr b2out b2cap 0.003
+C2out b2cap 0 1.76e-05
+R2hi b2out b2fb 100k
+R2lo b2fb 0 13.3k
+C2ff b2out b2fb 75p
+R2enhi vm b2en 511k
+R2enlo b2en 0 105k
+B2load b2out 0 I={min(max(v(b2out)/4,0),1)*(1.5-(1.5-0.05)*(time>0.001 && time<0.002))}
+.IC V(b1out)=5
+.IC V(b2out)=5
+.TRAN 20n 5m 0 20n
+.PRINT TRAN FORMAT=CSV PRECISION=16 V(vm) V(b1out) V(b2out) I(L1) I(L2) V(b1en) V(b2en) V(b1sw) V(b2sw) V(X1:XCORE:SYSCLK) V(X2:XCORE:SYSCLK)
+.END

@@ -1,0 +1,14 @@
+[
+  {
+    "case": "uic_default",
+    "returncode": 1,
+    "elapsed_s": 0.03187012699982006,
+    "initialization": "UIC all zero, diagnostic only; SDWN=ULQ_MODE=0"
+  },
+  {
+    "case": "uic_strict",
+    "returncode": 1,
+    "elapsed_s": 0.01588122400062275,
+    "initialization": "UIC all zero, diagnostic only; SDWN=ULQ_MODE=0"
+  }
+]

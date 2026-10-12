@@ -1,0 +1,176 @@
+{
+  "full_waveform_sha256": "f15c01a4d888847b9051c994a737fdcf36f4d12418474fcc0caee90a5e6ce04f",
+  "full_SYSCLK_column": "V(X_U1:XCORE:SYSCLK), index 8 including TIME",
+  "windows": [
+    {
+      "from_s": 0,
+      "to_s": 0.0001,
+      "SYSCLK_range": [
+        -0.000624968051,
+        0.996753594
+      ],
+      "threshold05": {
+        "count": 158,
+        "period_quantiles_s": [
+          5.634375000000005e-07,
+          5.78557440000003e-07,
+          5.868538999999952e-07,
+          6.011689799999964e-07,
+          2.3509374999999973e-06
+        ],
+        "median_frequency_Hz": 1704001.626299166
+      },
+      "schmitt01_09": {
+        "count": 158,
+        "period_quantiles_s": [
+          5.634374999999996e-07,
+          5.78557439999999e-07,
+          5.868539000000088e-07,
+          6.011689800000019e-07,
+          2.3509375000000007e-06
+        ],
+        "median_frequency_Hz": 1704001.6262991265
+      }
+    },
+    {
+      "from_s": 0.00075,
+      "to_s": 0.0008,
+      "SYSCLK_range": [
+        3.90481833e-15,
+        0.996614709
+      ],
+      "threshold05": {
+        "count": 81,
+        "period_quantiles_s": [
+          5.994929999999805e-07,
+          6.000648999999721e-07,
+          6.145099999999861e-07,
+          6.215500000000015e-07,
+          6.269269999999725e-07
+        ],
+        "median_frequency_Hz": 1627312.818343107
+      },
+      "schmitt01_09": {
+        "count": 81,
+        "period_quantiles_s": [
+          5.994929999999805e-07,
+          6.000649000000588e-07,
+          6.145099999999861e-07,
+          6.215500000000015e-07,
+          6.269270000000809e-07
+        ],
+        "median_frequency_Hz": 1627312.818343107
+      }
+    },
+    {
+      "from_s": 0.001,
+      "to_s": 0.0015,
+      "SYSCLK_range": [
+        -3.05126526e-06,
+        1.03101762
+      ],
+      "threshold05": {
+        "count": 810,
+        "period_quantiles_s": [
+          5.665100000001519e-07,
+          5.837299999998223e-07,
+          6.077100000001067e-07,
+          6.414419999999782e-07,
+          2.653730000000149e-06
+        ],
+        "median_frequency_Hz": 1645521.7126587096
+      },
+      "schmitt01_09": {
+        "count": 810,
+        "period_quantiles_s": [
+          5.66509999999935e-07,
+          5.837300000000392e-07,
+          6.077100000001067e-07,
+          6.414419999999782e-07,
+          2.6612300000001046e-06
+        ],
+        "median_frequency_Hz": 1645521.7126587096
+      }
+    }
+  ],
+  "isolated": [
+    {
+      "case": "enable_default",
+      "rows": 98,
+      "last_time_s": 1.0005e-06,
+      "last_SYSCLK": 0.0,
+      "last_RAMP": 5.29883254e-07,
+      "last_raw_comparator": 0.0,
+      "SYSCLK_rising_count": 0,
+      "completed_100us": false,
+      "csv_sha256": "7b92ebb7700069cc0ae62310b15c94e277860b40b28e25710952cbf6540ed4a2"
+    },
+    {
+      "case": "enable_strict",
+      "rows": 102,
+      "last_time_s": 1.0005e-06,
+      "last_SYSCLK": 0.0,
+      "last_RAMP": 5.29883254e-07,
+      "last_raw_comparator": 0.0,
+      "SYSCLK_rising_count": 0,
+      "completed_100us": false,
+      "csv_sha256": "023bf2c55c236bd058295a1eade51df07ff908d40951fc20834e1f7fe95fb9e7"
+    },
+    {
+      "case": "uic_default",
+      "rows": 191,
+      "last_time_s": 2.36370372e-06,
+      "last_SYSCLK": 0.152877173,
+      "last_RAMP": 1.75051225,
+      "last_raw_comparator": 0.5,
+      "SYSCLK_rising_count": 0,
+      "completed_100us": false,
+      "csv_sha256": "ed643ce61a977e0e0ebfe10d06da6851be2e48173e4e0a7af928adf8052940a7"
+    },
+    {
+      "case": "uic_gear_default",
+      "rows": 168,
+      "last_time_s": 2.36301067e-06,
+      "last_SYSCLK": 0.0,
+      "last_RAMP": 1.75,
+      "last_raw_comparator": 0.0,
+      "SYSCLK_rising_count": 0,
+      "completed_100us": false,
+      "csv_sha256": "ef548932a1a47c17c3edb22e5e60c6909e1a9cfbb56ae11219cc69a21bd08e7d"
+    },
+    {
+      "case": "uic_gear_strict",
+      "rows": 167,
+      "last_time_s": 2.36301067e-06,
+      "last_SYSCLK": 0.0,
+      "last_RAMP": 1.75,
+      "last_raw_comparator": 0.0,
+      "SYSCLK_rising_count": 0,
+      "completed_100us": false,
+      "csv_sha256": "e9602b5611e8e53a6f2edece01648f3e647b70ec653abccafe8e7996aafadbb1"
+    },
+    {
+      "case": "uic_strict",
+      "rows": 172,
+      "last_time_s": 2.36301069e-06,
+      "last_SYSCLK": 0.0,
+      "last_RAMP": 1.75,
+      "last_raw_comparator": 0.0,
+      "SYSCLK_rising_count": 0,
+      "completed_100us": false,
+      "csv_sha256": "b1bfab621445eb99b36410889081e5c6a212514aaf28d3042776304ea5c9826d"
+    }
+  ],
+  "nominal_estimate": {
+    "C_F": 7.14286e-12,
+    "threshold_V": 1.75,
+    "base_current_A": 5e-06,
+    "base_charge_time_s": 2.500001e-06,
+    "initial_current_A": 5.3e-06,
+    "initial_charge_time_s": 2.358491509433962e-06,
+    "approx_charge_period_range_s": [
+      2.358491509433962e-06,
+      2.6595755319148936e-06
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "verified_at_utc": "2026-10-12T05:48:29.823358+00:00",
+  "baseline_git": "0c2517720d7764b3bae5c0347b3b211606647013",
+  "checks": {
+    "a1_netlist_hashes": 18,
+    "a1_waveform_row_time_extrema_checks": 18,
+    "termination_numerical_failure": 15,
+    "termination_timeout": 3,
+    "load_event_reached_but_no_complete_postwindow": 3,
+    "input_change_reached": 0,
+    "completed": 0,
+    "passed": 0,
+    "pcb_unchanged": true
+  },
+  "pcb_sha256": "9e55fcbee01241fc6ec3682fde79daaacd6bc623ecfc311809600e001099350a",
+  "model_original_sha256": "52a568f08f1eed44961238a1ff10b68c2ce1faa1cdf2c24659b17b1f820f0026",
+  "model_candidate_sha256": "47f1df44d7467c19c63eedf896bb61e2061eb455c65938f05a43e12819f812e7",
+  "note": "Raw logs/CSV/netlist patches retain original whitespace. Whitespace checks applied to authored Markdown/Python/JSON. Full solver acceptance remains blocked."
+}

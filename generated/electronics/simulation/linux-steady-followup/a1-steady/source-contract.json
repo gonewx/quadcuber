@@ -1,0 +1,581 @@
+{
+  "circuit_sha256": "e90767906205461e028785313fd5f1c17ea48440ee5bd65a107c31c6d903ade2",
+  "pcb_sha256": "9e55fcbee01241fc6ec3682fde79daaacd6bc623ecfc311809600e001099350a",
+  "vm_bulk_refs": [
+    "C2",
+    "C3",
+    "C102",
+    "C122",
+    "C142",
+    "C162"
+  ],
+  "vm_bulk_nominal_F": 0.00282,
+  "parts": {
+    "U6": {
+      "ref": "U6",
+      "value": "USBLC6-2SC6",
+      "fp": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "1": "USB_DP",
+        "2": "GND",
+        "3": "USB_DM",
+        "4": "USB_DM",
+        "5": "VSYS",
+        "6": "USB_DP"
+      },
+      "xy": [
+        20,
+        12
+      ],
+      "mpn": "USBLC6-2SC6",
+      "mfr": "STMicroelectronics",
+      "section": "usb",
+      "names": {
+        "1": "IO1",
+        "2": "GND",
+        "3": "IO2",
+        "4": "IO2",
+        "5": "VBUS",
+        "6": "IO1"
+      },
+      "types": {},
+      "note": "",
+      "rot": 90
+    },
+    "U7": {
+      "ref": "U7",
+      "value": "W25Q16RVCNJQ 2MiB",
+      "fp": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "pins": {
+        "1": "QSPI_SS",
+        "2": "QSPI_SD1",
+        "3": "QSPI_SD2",
+        "4": "GND",
+        "5": "QSPI_SD0",
+        "6": "QSPI_SCLK",
+        "7": "QSPI_SD3",
+        "8": "3V3"
+      },
+      "xy": [
+        10,
+        23
+      ],
+      "mpn": "W25Q16RVCNJQ",
+      "mfr": "Winbond",
+      "section": "flash_clock",
+      "names": {
+        "1": "CS_N",
+        "2": "DO_IO1",
+        "3": "WP_IO2",
+        "4": "GND",
+        "5": "DI_IO0",
+        "6": "CLK",
+        "7": "HOLD_IO3",
+        "8": "VCC"
+      },
+      "types": {},
+      "note": "Current-production RV successor per Winbond PCN DM202601-03-A / AN0000070. CN 150mil SOP8; use QUADCUBER_A1 MicroPython boot2 QE-mask adaptation.",
+      "rot": 0
+    },
+    "L1": {
+      "ref": "L1",
+      "value": "10uH 9A Isat16A",
+      "fp": "Inductor_SMD:L_Bourns_SRP1245A",
+      "pins": {
+        "1": "B1_SW",
+        "2": "5V_A"
+      },
+      "xy": [
+        61,
+        38
+      ],
+      "mpn": "SRP1245A-100M",
+      "mfr": "Bourns",
+      "section": "buck1",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "L2": {
+      "ref": "L2",
+      "value": "10uH 9A Isat16A",
+      "fp": "Inductor_SMD:L_Bourns_SRP1245A",
+      "pins": {
+        "1": "B2_SW",
+        "2": "5V_B"
+      },
+      "xy": [
+        110,
+        38
+      ],
+      "mpn": "SRP1245A-100M",
+      "mfr": "Bourns",
+      "section": "buck2",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "C20": {
+      "ref": "C20",
+      "value": "10u/25V",
+      "fp": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "VM",
+        "2": "GND"
+      },
+      "xy": [
+        52,
+        46.5
+      ],
+      "mpn": "GRM32DR71E106KA12L",
+      "mfr": "Murata",
+      "section": "buck1",
+      "names": {
+        "1": "1",
+        "2": "2"
+      },
+      "types": {},
+      "note": "",
+      "rot": 270
+    },
+    "C30": {
+      "ref": "C30",
+      "value": "10u/25V",
+      "fp": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "VM",
+        "2": "GND"
+      },
+      "xy": [
+        101,
+        46.5
+      ],
+      "mpn": "GRM32DR71E106KA12L",
+      "mfr": "Murata",
+      "section": "buck2",
+      "names": {
+        "1": "1",
+        "2": "2"
+      },
+      "types": {},
+      "note": "",
+      "rot": 270
+    },
+    "C23": {
+      "ref": "C23",
+      "value": "22u/25V",
+      "fp": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "5V_A",
+        "2": "GND"
+      },
+      "xy": [
+        71,
+        35
+      ],
+      "mpn": "GRM32ER71E226KE15L",
+      "mfr": "Murata",
+      "section": "buck1",
+      "names": {
+        "1": "1",
+        "2": "2"
+      },
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "C24": {
+      "ref": "C24",
+      "value": "22u/25V",
+      "fp": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "5V_A",
+        "2": "GND"
+      },
+      "xy": [
+        71,
+        40
+      ],
+      "mpn": "GRM32ER71E226KE15L",
+      "mfr": "Murata",
+      "section": "buck1",
+      "names": {
+        "1": "1",
+        "2": "2"
+      },
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "C33": {
+      "ref": "C33",
+      "value": "22u/25V",
+      "fp": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "5V_B",
+        "2": "GND"
+      },
+      "xy": [
+        120,
+        35
+      ],
+      "mpn": "GRM32ER71E226KE15L",
+      "mfr": "Murata",
+      "section": "buck2",
+      "names": {
+        "1": "1",
+        "2": "2"
+      },
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "C34": {
+      "ref": "C34",
+      "value": "22u/25V",
+      "fp": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "5V_B",
+        "2": "GND"
+      },
+      "xy": [
+        120,
+        40
+      ],
+      "mpn": "GRM32ER71E226KE15L",
+      "mfr": "Murata",
+      "section": "buck2",
+      "names": {
+        "1": "1",
+        "2": "2"
+      },
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "R20": {
+      "ref": "R20",
+      "value": "49.9",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "B1_BOOT",
+        "2": "B1_BOOT_CAP"
+      },
+      "xy": [
+        42.5,
+        34
+      ],
+      "mpn": "RC0603FR-0749R9L",
+      "mfr": "Yageo",
+      "section": "buck1",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "R30": {
+      "ref": "R30",
+      "value": "49.9",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "B2_BOOT",
+        "2": "B2_BOOT_CAP"
+      },
+      "xy": [
+        91.5,
+        34
+      ],
+      "mpn": "RC0603FR-0749R9L",
+      "mfr": "Yageo",
+      "section": "buck2",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "R21": {
+      "ref": "R21",
+      "value": "100k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "5V_A",
+        "2": "B1_FB"
+      },
+      "xy": [
+        44,
+        45
+      ],
+      "mpn": "RC0603FR-07100KL",
+      "mfr": "Yageo",
+      "section": "buck1",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "R31": {
+      "ref": "R31",
+      "value": "100k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "5V_B",
+        "2": "B2_FB"
+      },
+      "xy": [
+        93,
+        45
+      ],
+      "mpn": "RC0603FR-07100KL",
+      "mfr": "Yageo",
+      "section": "buck2",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "R22": {
+      "ref": "R22",
+      "value": "13.3k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "B1_FB",
+        "2": "GND"
+      },
+      "xy": [
+        44,
+        41
+      ],
+      "mpn": "RC0603FR-0713K3L",
+      "mfr": "Yageo",
+      "section": "buck1",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "R32": {
+      "ref": "R32",
+      "value": "13.3k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "B2_FB",
+        "2": "GND"
+      },
+      "xy": [
+        93,
+        41
+      ],
+      "mpn": "RC0603FR-0713K3L",
+      "mfr": "Yageo",
+      "section": "buck2",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "R23": {
+      "ref": "R23",
+      "value": "511k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "VM",
+        "2": "B1_EN"
+      },
+      "xy": [
+        41,
+        29
+      ],
+      "mpn": "RC0603FR-07511KL",
+      "mfr": "Yageo",
+      "section": "buck1",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "R33": {
+      "ref": "R33",
+      "value": "511k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "VM",
+        "2": "B2_EN"
+      },
+      "xy": [
+        90,
+        29
+      ],
+      "mpn": "RC0603FR-07511KL",
+      "mfr": "Yageo",
+      "section": "buck2",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "R24": {
+      "ref": "R24",
+      "value": "105k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "B1_EN",
+        "2": "GND"
+      },
+      "xy": [
+        39,
+        35
+      ],
+      "mpn": "RC0603FR-07105KL",
+      "mfr": "Yageo",
+      "section": "buck1",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "R34": {
+      "ref": "R34",
+      "value": "105k",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "B2_EN",
+        "2": "GND"
+      },
+      "xy": [
+        88,
+        35
+      ],
+      "mpn": "RC0603FR-07105KL",
+      "mfr": "Yageo",
+      "section": "buck2",
+      "names": {},
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "C25": {
+      "ref": "C25",
+      "value": "75p",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "5V_A",
+        "2": "B1_FB"
+      },
+      "xy": [
+        40,
+        45
+      ],
+      "mpn": "C0603C750J5GACTU",
+      "mfr": "KEMET",
+      "section": "buck1",
+      "names": {
+        "1": "1",
+        "2": "2"
+      },
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "C35": {
+      "ref": "C35",
+      "value": "75p",
+      "fp": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "5V_B",
+        "2": "B2_FB"
+      },
+      "xy": [
+        89,
+        45
+      ],
+      "mpn": "C0603C750J5GACTU",
+      "mfr": "KEMET",
+      "section": "buck2",
+      "names": {
+        "1": "1",
+        "2": "2"
+      },
+      "types": {},
+      "note": "",
+      "rot": 0
+    },
+    "U2": {
+      "ref": "U2",
+      "value": "TPS54302DDCR",
+      "fp": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "1": "GND",
+        "2": "B1_SW",
+        "3": "VM",
+        "4": "B1_FB",
+        "5": "B1_EN",
+        "6": "B1_BOOT"
+      },
+      "xy": [
+        49,
+        38
+      ],
+      "mpn": "TPS54302DDCR",
+      "mfr": "Texas Instruments",
+      "section": "buck1",
+      "names": {
+        "1": "GND",
+        "2": "SW",
+        "3": "VIN",
+        "4": "FB",
+        "5": "EN",
+        "6": "BOOT"
+      },
+      "types": {
+        "1": "power_in",
+        "2": "output",
+        "3": "power_in",
+        "4": "input",
+        "5": "input",
+        "6": "passive"
+      },
+      "note": "",
+      "rot": 180
+    },
+    "U3": {
+      "ref": "U3",
+      "value": "TPS54302DDCR",
+      "fp": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "1": "GND",
+        "2": "B2_SW",
+        "3": "VM",
+        "4": "B2_FB",
+        "5": "B2_EN",
+        "6": "B2_BOOT"
+      },
+      "xy": [
+        98,
+        38
+      ],
+      "mpn": "TPS54302DDCR",
+      "mfr": "Texas Instruments",
+      "section": "buck2",
+      "names": {
+        "1": "GND",
+        "2": "SW",
+        "3": "VIN",
+        "4": "FB",
+        "5": "EN",
+        "6": "BOOT"
+      },
+      "types": {
+        "1": "power_in",
+        "2": "output",
+        "3": "power_in",
+        "4": "input",
+        "5": "input",
+        "6": "passive"
+      },
+      "note": "",
+      "rot": 180
+    }
+  }
+}

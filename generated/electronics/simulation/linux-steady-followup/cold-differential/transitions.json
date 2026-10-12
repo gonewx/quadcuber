@@ -1,0 +1,59 @@
+[
+  {
+    "case": "startup_state1",
+    "transitions": {
+      "V(X_U1:XCORE:SDWN)": [
+        {
+          "t_prev": 0.0001056814,
+          "t_next": 0.0001057014,
+          "before": 1.0,
+          "after": 0.0909090909
+        }
+      ],
+      "V(SW)": [
+        {
+          "t_prev": 0.000108131713,
+          "t_next": 0.000108132338,
+          "before": 0.00011795427,
+          "after": 9.7584275
+        }
+      ],
+      "V(X_U1:XCORE:SS_TR)": [
+        {
+          "t_prev": 4.37024e-05,
+          "t_next": 4.37224e-05,
+          "before": 0.0010004331,
+          "after": 0.000996741501
+        }
+      ]
+    }
+  },
+  {
+    "case": "startup_dc12",
+    "transitions": {
+      "V(X_U1:XCORE:SDWN)": [
+        {
+          "t_prev": 1.4032e-09,
+          "t_next": 1.864e-09,
+          "before": 0.560385741,
+          "after": 0.350514358
+        }
+      ],
+      "V(SW)": [
+        {
+          "t_prev": 5.734375e-12,
+          "t_next": 6.296875e-12,
+          "before": 1.18697856,
+          "after": 0.984116005
+        },
+        {
+          "t_prev": 2.3856189e-06,
+          "t_next": 2.3862439e-06,
+          "before": 0.00014352093,
+          "after": 11.999536
+        }
+      ],
+      "V(X_U1:XCORE:SS_TR)": []
+    }
+  }
+]
