@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-12",
+  "image_sha256": "0808d9590fab3bfbbe8f75c32301f15bebc2252b61f9d1b91cafab78275b486b",
+  "image_size_px": [
+    750,
+    1378
+  ],
+  "inspection_crop_original_pixels": [
+    340,
+    1020,
+    730,
+    1305
+  ],
+  "direct_labels": {
+    "1": {
+      "x_mm": -2.55,
+      "y_mm": 4.84,
+      "location": "lower left signal hole, numeral beneath diameter leader"
+    },
+    "6": {
+      "x_mm": 2.55,
+      "y_mm": 2.3,
+      "location": "upper right signal hole"
+    }
+  },
+  "correction": "Prior statement only 6 is directly labelled was incorrect; 1 was missed.",
+  "inference": "2–5 sequential between endpoints; complementary underside/PCB views support component-side PCB layout, not explicit TOP/BOTTOM wording.",
+  "minimum_external_evidence": "Same-lot unpowered sample six-way continuity map and physical fit can replace additional complete manufacturer drawing/MPN. Continuity cannot establish contact current rating.",
+  "hardware_changed": false
+}

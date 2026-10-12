@@ -1,0 +1,198 @@
+11:48:27: Debug: Adding duplicate image handler for 'PNG file'
+11:48:27: Debug: Adding duplicate image handler for 'JPEG file'
+11:48:27: Debug: Adding duplicate image handler for 'TIFF file'
+11:48:27: Debug: Adding duplicate image handler for 'GIF file'
+11:48:27: Debug: Adding duplicate image handler for 'PNM file'
+11:48:27: Debug: Adding duplicate image handler for 'PCX file'
+11:48:27: Debug: Adding duplicate image handler for 'IFF file'
+11:48:27: Debug: Adding duplicate image handler for 'Windows icon file'
+11:48:27: Debug: Adding duplicate image handler for 'Windows cursor file'
+11:48:27: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+11:48:27: Debug: Adding duplicate image handler for 'TGA file'
+11:48:27: Debug: Adding duplicate image handler for 'XPM file'
+11:48:27: Debug: Adding duplicate image handler for 'WebP file'
+{
+  "state": "FAIL",
+  "checks": 16,
+  "failures": [
+    {
+      "check": "native shield target f5bb76d1-5ca8-4a76-8bb7-bd471d57b325",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          2.1
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          74.32,
+          56.78
+        ]
+      }
+    },
+    {
+      "check": "native shield target 71c472c2-2b78-4094-92d6-faef4fd476a5",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          1.8
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          74.32,
+          52.6
+        ]
+      }
+    },
+    {
+      "check": "native shield target 347de923-4367-4ecb-bbae-ee27e6c3b950",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          2.1
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          65.68,
+          56.78
+        ]
+      }
+    },
+    {
+      "check": "native shield target 0836535f-55ed-488c-9bba-38c7f0834379",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          1.8
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          65.68,
+          52.6
+        ]
+      }
+    },
+    {
+      "check": "native exactly four changed pads, only permitted size delta",
+      "pass": false,
+      "detail": {
+        "changed_pad_count": 0
+      }
+    },
+    {
+      "check": "library shield target c5c06ab0-cd72-42d4-ac8f-2b6b69d1fed9",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          2.1
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          -4.32,
+          -3.105
+        ]
+      }
+    },
+    {
+      "check": "library shield target d94549c6-d0ec-4808-8ae9-e28498d85703",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          1.8
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          -4.32,
+          1.075
+        ]
+      }
+    },
+    {
+      "check": "library shield target 3a422bfa-7628-47bf-894f-55d1f60030b1",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          2.1
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          4.32,
+          -3.105
+        ]
+      }
+    },
+    {
+      "check": "library shield target 3f90b31e-1282-4b25-a55d-19e18c1aaa22",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          1.8
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          4.32,
+          1.075
+        ]
+      }
+    },
+    {
+      "check": "library exactly four changed pads, only permitted size delta",
+      "pass": false,
+      "detail": {
+        "changed_pad_count": 0
+      }
+    },
+    {
+      "check": "generator persists exact USB footprint adapter and saves it",
+      "pass": false,
+      "detail": {
+        "adapter_import": false,
+        "matching_branches": 0
+      }
+    },
+    {
+      "check": "real adapter changes only target four pad sizes and is idempotent",
+      "pass": false,
+      "detail": "adapter implementation absent in red phase"
+    }
+  ]
+}

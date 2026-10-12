@@ -1,0 +1,1448 @@
+{
+  "state": "PASS",
+  "kicad": "10.0.7",
+  "baseline_dir": "/workspace/a1-jlc-baseline",
+  "label": "green",
+  "checks": [
+    {
+      "check": "native exactly four S1 shield pads",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "check": "native shield target f5bb76d1-5ca8-4a76-8bb7-bd471d57b325",
+      "pass": true,
+      "detail": {
+        "size_mm": [
+          1.108,
+          2.208
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.254,
+        "position_mm": [
+          74.32,
+          56.78
+        ]
+      }
+    },
+    {
+      "check": "native shield target 71c472c2-2b78-4094-92d6-faef4fd476a5",
+      "pass": true,
+      "detail": {
+        "size_mm": [
+          1.108,
+          1.908
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.254,
+        "position_mm": [
+          74.32,
+          52.6
+        ]
+      }
+    },
+    {
+      "check": "native shield target 347de923-4367-4ecb-bbae-ee27e6c3b950",
+      "pass": true,
+      "detail": {
+        "size_mm": [
+          1.108,
+          2.208
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.254,
+        "position_mm": [
+          65.68,
+          56.78
+        ]
+      }
+    },
+    {
+      "check": "native shield target 0836535f-55ed-488c-9bba-38c7f0834379",
+      "pass": true,
+      "detail": {
+        "size_mm": [
+          1.108,
+          1.908
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.254,
+        "position_mm": [
+          65.68,
+          52.6
+        ]
+      }
+    },
+    {
+      "check": "native exactly four changed pads, only permitted size delta",
+      "pass": true,
+      "detail": {
+        "changed_pad_count": 4
+      }
+    },
+    {
+      "check": "library exactly four S1 shield pads",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "check": "library shield target 91b79efc-d2c2-4b39-abc6-61d2968aa99f",
+      "pass": true,
+      "detail": {
+        "size_mm": [
+          1.108,
+          2.208
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.254,
+        "position_mm": [
+          -4.32,
+          -3.105
+        ]
+      }
+    },
+    {
+      "check": "library shield target d62d9208-e48e-44c4-b5d0-c6a3b3edcc20",
+      "pass": true,
+      "detail": {
+        "size_mm": [
+          1.108,
+          1.908
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.254,
+        "position_mm": [
+          -4.32,
+          1.075
+        ]
+      }
+    },
+    {
+      "check": "library shield target 11b3217d-2af0-41c3-874b-ee0efa17e414",
+      "pass": true,
+      "detail": {
+        "size_mm": [
+          1.108,
+          2.208
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.254,
+        "position_mm": [
+          4.32,
+          -3.105
+        ]
+      }
+    },
+    {
+      "check": "library shield target 7862cffd-48af-4003-87a2-191048c41c74",
+      "pass": true,
+      "detail": {
+        "size_mm": [
+          1.108,
+          1.908
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.254,
+        "position_mm": [
+          4.32,
+          1.075
+        ]
+      }
+    },
+    {
+      "check": "library exactly four changed pads, only permitted size delta",
+      "pass": true,
+      "detail": {
+        "changed_pad_count": 4
+      }
+    },
+    {
+      "check": "authorized VBUS clearance segment 1c9cde93-6b13-45a4-931d-3873bbf8384b",
+      "pass": true,
+      "detail": {
+        "start_nm": [
+          75178500,
+          55049600
+        ],
+        "end_nm": [
+          75178500,
+          57659300
+        ],
+        "width_nm": 150000,
+        "layer": "F.Cu",
+        "net": "USB_VBUS"
+      }
+    },
+    {
+      "check": "authorized VBUS clearance segment 798bdb25-1303-4523-bcb3-bd55121a7036",
+      "pass": true,
+      "detail": {
+        "start_nm": [
+          78812900,
+          55049600
+        ],
+        "end_nm": [
+          75178500,
+          55049600
+        ],
+        "width_nm": 150000,
+        "layer": "F.Cu",
+        "net": "USB_VBUS"
+      }
+    },
+    {
+      "check": "authorized VBUS clearance segment cc9f98a0-4228-4c78-8163-aa595ae3845c",
+      "pass": true,
+      "detail": {
+        "start_nm": [
+          75178500,
+          55049600
+        ],
+        "end_nm": [
+          63025100,
+          55049600
+        ],
+        "width_nm": 150000,
+        "layer": "F.Cu",
+        "net": "USB_VBUS"
+      }
+    },
+    {
+      "check": "authorized VBUS clearance segment d45ae99b-2573-4fd8-8747-c22624b25667",
+      "pass": true,
+      "detail": {
+        "start_nm": [
+          75178500,
+          57659300
+        ],
+        "end_nm": [
+          74605700,
+          58232100
+        ],
+        "width_nm": 150000,
+        "layer": "F.Cu",
+        "net": "USB_VBUS"
+      }
+    },
+    {
+      "check": "authorized VBUS clearance segment 83e1a1c5-9865-47ec-8c64-46ecab0ba978",
+      "pass": true,
+      "detail": {
+        "start_nm": [
+          74605700,
+          58232100
+        ],
+        "end_nm": [
+          72827100,
+          58232100
+        ],
+        "width_nm": 150000,
+        "layer": "F.Cu",
+        "net": "USB_VBUS"
+      }
+    },
+    {
+      "check": "native all other semantic data unchanged",
+      "pass": true,
+      "detail": {
+        "baseline_digest": "4b50cdd171cecb1f246c877ec6548f8d8c4c4c034418e5777b5f7f9a9a7ba5bb",
+        "current_digest": "4b50cdd171cecb1f246c877ec6548f8d8c4c4c034418e5777b5f7f9a9a7ba5bb",
+        "differences": []
+      }
+    },
+    {
+      "check": "library all other semantic data unchanged",
+      "pass": true,
+      "detail": {
+        "baseline_digest": "cb207cd3da1c6d5e00d32ffca65bcb37cb12f134335d253f6c6ee145caa2e5d5",
+        "current_digest": "cb207cd3da1c6d5e00d32ffca65bcb37cb12f134335d253f6c6ee145caa2e5d5",
+        "differences": []
+      }
+    },
+    {
+      "check": "generator persists exact USB footprint text adapter",
+      "pass": true,
+      "detail": {
+        "adapter_import": true,
+        "matching_branches": 1
+      }
+    },
+    {
+      "check": "real adapter changes only target four pad sizes and is idempotent",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "real VBUS adapter changes only five allowed segments and is idempotent",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "file adapter changes only four size fields and is idempotent",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "changes": {
+    "native": [
+      {
+        "before": {
+          "number": "S1",
+          "size_nm": [
+            1000000,
+            1800000
+          ],
+          "drill_nm": [
+            600000,
+            1400000
+          ],
+          "position_nm": [
+            65680000,
+            52600000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 180.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "GND",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        },
+        "after": {
+          "number": "S1",
+          "size_nm": [
+            1108000,
+            1908000
+          ],
+          "drill_nm": [
+            600000,
+            1400000
+          ],
+          "position_nm": [
+            65680000,
+            52600000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 180.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "GND",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        }
+      },
+      {
+        "before": {
+          "number": "S1",
+          "size_nm": [
+            1000000,
+            2100000
+          ],
+          "drill_nm": [
+            600000,
+            1700000
+          ],
+          "position_nm": [
+            74320000,
+            56780000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 180.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "GND",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        },
+        "after": {
+          "number": "S1",
+          "size_nm": [
+            1108000,
+            2208000
+          ],
+          "drill_nm": [
+            600000,
+            1700000
+          ],
+          "position_nm": [
+            74320000,
+            56780000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 180.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "GND",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        }
+      },
+      {
+        "before": {
+          "number": "S1",
+          "size_nm": [
+            1000000,
+            1800000
+          ],
+          "drill_nm": [
+            600000,
+            1400000
+          ],
+          "position_nm": [
+            74320000,
+            52600000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 180.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "GND",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        },
+        "after": {
+          "number": "S1",
+          "size_nm": [
+            1108000,
+            1908000
+          ],
+          "drill_nm": [
+            600000,
+            1400000
+          ],
+          "position_nm": [
+            74320000,
+            52600000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 180.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "GND",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        }
+      },
+      {
+        "before": {
+          "number": "S1",
+          "size_nm": [
+            1000000,
+            2100000
+          ],
+          "drill_nm": [
+            600000,
+            1700000
+          ],
+          "position_nm": [
+            65680000,
+            56780000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 180.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "GND",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        },
+        "after": {
+          "number": "S1",
+          "size_nm": [
+            1108000,
+            2208000
+          ],
+          "drill_nm": [
+            600000,
+            1700000
+          ],
+          "position_nm": [
+            65680000,
+            56780000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 180.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "GND",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        }
+      }
+    ],
+    "library": [
+      {
+        "before": {
+          "number": "S1",
+          "size_nm": [
+            1000000,
+            1800000
+          ],
+          "drill_nm": [
+            600000,
+            1400000
+          ],
+          "position_nm": [
+            4320000,
+            1075000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 0.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        },
+        "after": {
+          "number": "S1",
+          "size_nm": [
+            1108000,
+            1908000
+          ],
+          "drill_nm": [
+            600000,
+            1400000
+          ],
+          "position_nm": [
+            4320000,
+            1075000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 0.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        }
+      },
+      {
+        "before": {
+          "number": "S1",
+          "size_nm": [
+            1000000,
+            2100000
+          ],
+          "drill_nm": [
+            600000,
+            1700000
+          ],
+          "position_nm": [
+            -4320000,
+            -3105000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 0.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        },
+        "after": {
+          "number": "S1",
+          "size_nm": [
+            1108000,
+            2208000
+          ],
+          "drill_nm": [
+            600000,
+            1700000
+          ],
+          "position_nm": [
+            -4320000,
+            -3105000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 0.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        }
+      },
+      {
+        "before": {
+          "number": "S1",
+          "size_nm": [
+            1000000,
+            1800000
+          ],
+          "drill_nm": [
+            600000,
+            1400000
+          ],
+          "position_nm": [
+            -4320000,
+            1075000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 0.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        },
+        "after": {
+          "number": "S1",
+          "size_nm": [
+            1108000,
+            1908000
+          ],
+          "drill_nm": [
+            600000,
+            1400000
+          ],
+          "position_nm": [
+            -4320000,
+            1075000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 0.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        }
+      },
+      {
+        "before": {
+          "number": "S1",
+          "size_nm": [
+            1000000,
+            2100000
+          ],
+          "drill_nm": [
+            600000,
+            1700000
+          ],
+          "position_nm": [
+            4320000,
+            -3105000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 0.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        },
+        "after": {
+          "number": "S1",
+          "size_nm": [
+            1108000,
+            2208000
+          ],
+          "drill_nm": [
+            600000,
+            1700000
+          ],
+          "position_nm": [
+            4320000,
+            -3105000
+          ],
+          "offset_nm": [
+            0,
+            0
+          ],
+          "orientation": 0.0,
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62
+          ],
+          "net": "",
+          "shape": 2,
+          "attribute": 0,
+          "drill_shape": 2
+        }
+      }
+    ],
+    "vbus_clearance_segments": [
+      {
+        "uuid": "1c9cde93-6b13-45a4-931d-3873bbf8384b",
+        "before": {
+          "start_nm": [
+            75118500,
+            55049600
+          ],
+          "end_nm": [
+            75118500,
+            57659300
+          ]
+        },
+        "after": {
+          "start_nm": [
+            75178500,
+            55049600
+          ],
+          "end_nm": [
+            75178500,
+            57659300
+          ],
+          "width_nm": 150000,
+          "layer": "F.Cu",
+          "net": "USB_VBUS"
+        }
+      },
+      {
+        "uuid": "798bdb25-1303-4523-bcb3-bd55121a7036",
+        "before": {
+          "start_nm": [
+            78812900,
+            55049600
+          ],
+          "end_nm": [
+            75118500,
+            55049600
+          ]
+        },
+        "after": {
+          "start_nm": [
+            78812900,
+            55049600
+          ],
+          "end_nm": [
+            75178500,
+            55049600
+          ],
+          "width_nm": 150000,
+          "layer": "F.Cu",
+          "net": "USB_VBUS"
+        }
+      },
+      {
+        "uuid": "cc9f98a0-4228-4c78-8163-aa595ae3845c",
+        "before": {
+          "start_nm": [
+            75118500,
+            55049600
+          ],
+          "end_nm": [
+            63025100,
+            55049600
+          ]
+        },
+        "after": {
+          "start_nm": [
+            75178500,
+            55049600
+          ],
+          "end_nm": [
+            63025100,
+            55049600
+          ],
+          "width_nm": 150000,
+          "layer": "F.Cu",
+          "net": "USB_VBUS"
+        }
+      },
+      {
+        "uuid": "d45ae99b-2573-4fd8-8747-c22624b25667",
+        "before": {
+          "start_nm": [
+            75118500,
+            57659300
+          ],
+          "end_nm": [
+            74545700,
+            58232100
+          ]
+        },
+        "after": {
+          "start_nm": [
+            75178500,
+            57659300
+          ],
+          "end_nm": [
+            74605700,
+            58232100
+          ],
+          "width_nm": 150000,
+          "layer": "F.Cu",
+          "net": "USB_VBUS"
+        }
+      },
+      {
+        "uuid": "83e1a1c5-9865-47ec-8c64-46ecab0ba978",
+        "before": {
+          "start_nm": [
+            74545700,
+            58232100
+          ],
+          "end_nm": [
+            72827100,
+            58232100
+          ]
+        },
+        "after": {
+          "start_nm": [
+            74605700,
+            58232100
+          ],
+          "end_nm": [
+            72827100,
+            58232100
+          ],
+          "width_nm": 150000,
+          "layer": "F.Cu",
+          "net": "USB_VBUS"
+        }
+      }
+    ]
+  },
+  "hashes": {
+    "/workspace/a1-jlc-baseline/quadcuber.kicad_pcb": "aa17fa9b22cc113f423552e96b39004e5b6b77cb64c0e49f54233de939642a5a",
+    "/workspace/quadcuber/electronics/quadcuber.kicad_pcb": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
+    "/workspace/a1-jlc-baseline/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.kicad_mod": "f350bfcd388f6081aa7570d5929d6d7fb9556adc3bb24b84d6482e0d5c320818",
+    "/workspace/quadcuber/electronics/lib/Quadcuber.pretty/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.kicad_mod": "554637d89d37f1270d6053f04e8fd83dbfda61a06c074dfd7e7078d48691ecb3",
+    "/workspace/quadcuber/electronics/generate.py": "62d289fbd952600e39e64711c4df27462b5ece902f417984402711a7ab84adc3"
+  },
+  "scope": "Only four S1 copper/paste/mask pad dimensions and five enumerated USB_VBUS segment endpoints may change. Zone filled_polygon/fill_segments caches may change upon refill; all other parsed PCB and footprint semantic data must match the frozen baseline."
+}

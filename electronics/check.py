@@ -102,7 +102,7 @@ for t in b.GetTracks():
 widths={}
 for t in b.GetTracks():
     net=str(t.GetNetname());widths.setdefault(net,[]).append(round(p.ToMM(t.GetWidth(p.F_Cu) if isinstance(t,p.PCB_VIA) else t.GetWidth()),3))
-report={'contract_errors':errors,'connected_pad_count':len(xmlnets),'footprints':len(b.GetFootprints()),'tracks_and_vias':len(b.GetTracks()),'copper_layers':b.GetCopperLayerCount(),'outline_mm':[144,112],'minimum_trace_or_via_width_mm':{k:min(v) for k,v in widths.items()},'manufacturing_release':False,'not_verified':['EV3 MPN, pinmap/view, contact rating and full ear envelope (nominal holes follow user drawing)','Board prototype thermal and regenerative tests','Mechanical bracket and cable clearances']}
+report={'contract_errors':errors,'connected_pad_count':len(xmlnets),'footprints':len(b.GetFootprints()),'tracks_and_vias':len(b.GetTracks()),'copper_layers':b.GetCopperLayerCount(),'outline_mm':[144,112],'minimum_trace_or_via_width_mm':{k:min(v) for k,v in widths.items()},'manufacturing_release':False,'not_verified':['EV3 same-lot six-way physical continuity and controlled current/temperature limits (drawing labels 1 and 6; no additional vendor files requested)','Board prototype thermal and regenerative tests','Mechanical bracket and cable clearances']}
 (O/'contract-check.json').write_text(json.dumps(report,indent=2)+'\n')
 print(f'Contract checks: {len(errors)} errors; {len(xmlnets)} connected symbol pins compared with PCB')
 for e in errors:print(e)

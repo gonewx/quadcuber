@@ -1,0 +1,14 @@
+{
+  "variant": "ENG-POWER-CONTROLLER-NO-EV3-v2-JLC",
+  "bom_cpl_refs_match": true,
+  "populated_refs": 167,
+  "do_not_populate": [
+    "C26",
+    "C36",
+    "J10",
+    "J11",
+    "J12",
+    "J13"
+  ],
+  "pcb_sha256": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44"
+}

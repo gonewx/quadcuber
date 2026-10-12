@@ -1,0 +1,34 @@
+{
+  "variant": "ENG-POWER-CONTROLLER-NO-EV3-v2-JLC",
+  "status": "CANDIDATE_NOT_RELEASED_NOT_ORDERED",
+  "design_baseline_commit": "da5fc42b5e0c6352c827f9ae905eb891fe0dd12b",
+  "pcb_sha256": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
+  "populated_ref_count": 167,
+  "do_not_populate": [
+    "C26",
+    "C36",
+    "J10",
+    "J11",
+    "J12",
+    "J13"
+  ],
+  "assembly_variant_only": true,
+  "hardware_changed": false,
+  "scope": "Power/controller bench evaluation; no EV3 connectors or external motors/servos/encoders connected.",
+  "conditions": [
+    "Resolve JLC fabrication findings before ordering.",
+    "No generic/full-board BOM or CPL may be substituted.",
+    "Begin with no external loads, controlled 9V source, 0.5A current limit and known source capacitance.",
+    "USB host must supply VBUS while connected; disconnect before host power-off.",
+    "C26/C36 remain DNP; do not add bulk output capacitance without loop verification.",
+    "No robot integration/EV3 operation approval; later verified pin mapping may require a PCB revision."
+  ],
+  "source_sha256": {
+    "generated/electronics/release-preflight/fabrication-populated-bom.csv": "894bfe86f7357be6e193289ee27ecd4baa5e93f7ebcd7f82d76afdb3df63d214",
+    "generated/electronics/release-preflight/fabrication-populated-positions.csv": "08ec6b43a34179f566a1c90ecbefed33751cc75b26cc31c8778e51b3a63620f7"
+  },
+  "output_sha256": {
+    "ENG-POWER-CONTROLLER-NO-EV3-v2-JLC-bom.csv": "dbef2836d122c2eb5cd8d4fe00cc101f2295adbdc7424723dfc0a2f9188875f0",
+    "ENG-POWER-CONTROLLER-NO-EV3-v2-JLC-positions.csv": "76889d9502ffffc7bf95dd03789df159078490c83f788a7df67c24df0d30e553"
+  }
+}

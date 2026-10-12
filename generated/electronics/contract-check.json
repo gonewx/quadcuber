@@ -58,6 +58,7 @@
     "GP12": 0.15,
     "R_ILIM": 0.25,
     "GP21": 0.15,
+    "B1_BOOT": 0.25,
     "B1_SW": 0.25,
     "B_SERVO_PWM": 0.25,
     "RUN": 0.15,
@@ -68,7 +69,6 @@
     "R_SERVO_5V": 1.0,
     "GP13": 0.15,
     "B_SERVO_BUF": 0.25,
-    "B2_BOOT": 0.25,
     "GP18": 0.15,
     "B1_EN": 0.25,
     "GP14": 0.15,
@@ -76,7 +76,6 @@
     "L_ENC_A_F": 0.25,
     "USB_DM_MCU": 0.15,
     "L_ENC_B_F": 0.25,
-    "B1_BOOT": 0.25,
     "F_ENC_B_F": 0.25,
     "GP20": 0.15,
     "F_SERVO_BUF": 0.25,
@@ -90,6 +89,7 @@
     "B_ILIM": 0.25,
     "B_M1": 0.6,
     "IDEAL_GATE": 0.25,
+    "B2_BOOT": 0.25,
     "QSPI_SS": 0.15,
     "GP11": 0.15,
     "GP10": 0.15,
@@ -118,7 +118,7 @@
   },
   "manufacturing_release": false,
   "not_verified": [
-    "EV3 MPN, pinmap/view, contact rating and full ear envelope (nominal holes follow user drawing)",
+    "EV3 same-lot six-way physical continuity and controlled current/temperature limits (drawing labels 1 and 6; no additional vendor files requested)",
     "Board prototype thermal and regenerative tests",
     "Mechanical bracket and cable clearances"
   ]

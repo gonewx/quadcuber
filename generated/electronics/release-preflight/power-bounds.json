@@ -1,0 +1,309 @@
+{
+  "commit": "da5fc42b5e0c6352c827f9ae905eb891fe0dd12b",
+  "scope": "algebraic bounds; source/native/BOM contract; no macro-model run",
+  "contract_refs": [
+    "F1",
+    "U4",
+    "Q1",
+    "D3",
+    "D4",
+    "R500",
+    "R501",
+    "C2",
+    "C3",
+    "C102",
+    "C122",
+    "C142",
+    "C162",
+    "U2",
+    "U3",
+    "L1",
+    "L2",
+    "C20",
+    "C21",
+    "C22",
+    "C23",
+    "C24",
+    "C25",
+    "C30",
+    "C31",
+    "C32",
+    "C33",
+    "C34",
+    "C35",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "R31",
+    "R32",
+    "R33",
+    "R34"
+  ],
+  "contract": "PASS",
+  "hashes": {
+    "electronics/circuit.py": "7a9c1efa78a20b625537c039264d4b7d18260798ffccf299d9e3b760f7603cea",
+    "electronics/quadcuber.kicad_pcb": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
+    "generated/electronics/netlist.xml": "016b09171080c2a90fc61179a3e2b835a10f0c94c38bc4bcdb0ffffd4fe6a548",
+    "generated/electronics/bom.csv": "1ddd6eb9967414952ba391555c7e8fdbfd042f5155f91776ae2a5d50134e4446"
+  },
+  "feedback": {
+    "nominal_V": 5.077203007518797,
+    "corners": [
+      {
+        "delta_from_25_C": 0,
+        "low_V": 4.940692938640306,
+        "high_V": 5.214182129497917,
+        "low_budget_mV": 190.69293864030624,
+        "high_budget_mV": 35.81787050208263
+      },
+      {
+        "delta_from_25_C": 15,
+        "low_V": 4.937424394640327,
+        "high_V": 5.217635811225691,
+        "low_budget_mV": 187.42439464032668,
+        "high_budget_mV": 32.364188774309355
+      },
+      {
+        "delta_from_25_C": 40,
+        "low_V": 4.931982263438229,
+        "high_V": 5.223397709336752,
+        "low_budget_mV": 181.9822634382291,
+        "high_budget_mV": 26.602290663247707
+      },
+      {
+        "delta_from_25_C": 65,
+        "low_V": 4.9265469238637385,
+        "high_V": 5.229166821543361,
+        "low_budget_mV": 176.5469238637385,
+        "high_budget_mV": 20.833178456639345
+      },
+      {
+        "delta_from_25_C": 100,
+        "low_V": 4.918948834208186,
+        "high_V": 5.237255724131993,
+        "low_budget_mV": 168.9488342081864,
+        "high_budget_mV": 12.744275868007193
+      }
+    ],
+    "warning": "VFB limits specified at VIN12V; resistor temperatures independent; no line/load, aging, FB bias or dynamic guarantee"
+  },
+  "caps": {
+    "curves": "UNAVAILABLE official403; all capacitance factors/3mOhm remain assumptions",
+    "corners": [
+      {
+        "assumed_factor": 0.4,
+        "Cout_uF": 17.6,
+        "fo_no_Cff_kHz": 57.07329938227892,
+        "step_B_two_cycle_drop_V": 0.5681818181818181,
+        "ripple_cap_V": 0.023725781963688086,
+        "Cin_uF": 4.0,
+        "Cin_ripple_no_ESR_V": 0.32327586206896547
+      },
+      {
+        "assumed_factor": 0.8,
+        "Cout_uF": 35.2,
+        "fo_no_Cff_kHz": 28.53664969113946,
+        "step_B_two_cycle_drop_V": 0.28409090909090906,
+        "ripple_cap_V": 0.011862890981844043,
+        "Cin_uF": 8.0,
+        "Cin_ripple_no_ESR_V": 0.16163793103448273
+      },
+      {
+        "assumed_factor": 1.0,
+        "Cout_uF": 44.0,
+        "fo_no_Cff_kHz": 22.82931975291157,
+        "step_B_two_cycle_drop_V": 0.22727272727272727,
+        "ripple_cap_V": 0.009490312785475234,
+        "Cin_uF": 10.0,
+        "Cin_ripple_no_ESR_V": 0.1293103448275862
+      },
+      {
+        "assumed_factor": 1.2,
+        "Cout_uF": 52.8,
+        "fo_no_Cff_kHz": 19.02443312742631,
+        "step_B_two_cycle_drop_V": 0.1893939393939394,
+        "ripple_cap_V": 0.007908593987896029,
+        "Cin_uF": 12.0,
+        "Cin_ripple_no_ESR_V": 0.10775862068965518
+      }
+    ],
+    "inductor_ripple_pp_A": 0.9687711291413119,
+    "peak_at_1p5_A": 1.984385564570656,
+    "output_C_for_40kHz_uF": 25.920172032145956,
+    "output_C_for_B_1p45A_step_250mV_290kHz_uF": 40.0,
+    "output_C_for_B_step_low_PVT_budget_uF": 59.18951762447527,
+    "input_C_for_400mV_1p5A_290kHz_no_ESR_uF": 3.2327586206896552
+  },
+  "regen": {
+    "C_min_F": 0.002256,
+    "C_max_F": 0.003384,
+    "VM_initial_V": 9.18,
+    "E_per_whole_board_event_J": 0.05,
+    "Vpeak_ideal_C_V": 11.3401340880411,
+    "energy_to_12V_J": 0.06737273280000002,
+    "return_to_9p18_ms": 72.22610861705073,
+    "minimum_quiet_gap_ms": 100,
+    "bleed_power_each_12V_W": 0.48484848484848486,
+    "bleed_power_each_peak_W": 0.4329920576927669,
+    "E_times_5Hz_W": 0.25,
+    "cold_start_charge_C": 0.031065119999999998,
+    "ramp_100ms_cap_current_A": 0.31065119999999996
+  },
+  "thermal": [
+    {
+      "Ta_C": 25,
+      "Iout_A": 0.25,
+      "assumed_efficiency": 0.85,
+      "all_converter_loss_W": 0.2316176470588236,
+      "Tj_using_118p9_C": 52.539338235294125,
+      "Tj_using_EVM_57p2_C": 38.24852941176471
+    },
+    {
+      "Ta_C": 25,
+      "Iout_A": 0.25,
+      "assumed_efficiency": 0.9,
+      "all_converter_loss_W": 0.1458333333333334,
+      "Tj_using_118p9_C": 42.33958333333334,
+      "Tj_using_EVM_57p2_C": 33.34166666666667
+    },
+    {
+      "Ta_C": 25,
+      "Iout_A": 0.25,
+      "assumed_efficiency": 0.95,
+      "all_converter_loss_W": 0.06907894736842098,
+      "Tj_using_118p9_C": 33.213486842105254,
+      "Tj_using_EVM_57p2_C": 28.95131578947368
+    },
+    {
+      "Ta_C": 25,
+      "Iout_A": 0.75,
+      "assumed_efficiency": 0.85,
+      "all_converter_loss_W": 0.6948529411764708,
+      "Tj_using_118p9_C": 107.61801470588237,
+      "Tj_using_EVM_57p2_C": 64.74558823529412
+    },
+    {
+      "Ta_C": 25,
+      "Iout_A": 0.75,
+      "assumed_efficiency": 0.9,
+      "all_converter_loss_W": 0.4375000000000002,
+      "Tj_using_118p9_C": 77.01875000000003,
+      "Tj_using_EVM_57p2_C": 50.02500000000001
+    },
+    {
+      "Ta_C": 25,
+      "Iout_A": 0.75,
+      "assumed_efficiency": 0.95,
+      "all_converter_loss_W": 0.20723684210526294,
+      "Tj_using_118p9_C": 49.64046052631576,
+      "Tj_using_EVM_57p2_C": 36.85394736842104
+    },
+    {
+      "Ta_C": 25,
+      "Iout_A": 1.5,
+      "assumed_efficiency": 0.85,
+      "all_converter_loss_W": 1.3897058823529416,
+      "Tj_using_118p9_C": 190.23602941176475,
+      "Tj_using_EVM_57p2_C": 104.49117647058826
+    },
+    {
+      "Ta_C": 25,
+      "Iout_A": 1.5,
+      "assumed_efficiency": 0.9,
+      "all_converter_loss_W": 0.8750000000000004,
+      "Tj_using_118p9_C": 129.03750000000005,
+      "Tj_using_EVM_57p2_C": 75.05000000000003
+    },
+    {
+      "Ta_C": 25,
+      "Iout_A": 1.5,
+      "assumed_efficiency": 0.95,
+      "all_converter_loss_W": 0.4144736842105259,
+      "Tj_using_118p9_C": 74.28092105263153,
+      "Tj_using_EVM_57p2_C": 48.70789473684208
+    },
+    {
+      "Ta_C": 40,
+      "Iout_A": 0.25,
+      "assumed_efficiency": 0.85,
+      "all_converter_loss_W": 0.2316176470588236,
+      "Tj_using_118p9_C": 67.53933823529412,
+      "Tj_using_EVM_57p2_C": 53.24852941176471
+    },
+    {
+      "Ta_C": 40,
+      "Iout_A": 0.25,
+      "assumed_efficiency": 0.9,
+      "all_converter_loss_W": 0.1458333333333334,
+      "Tj_using_118p9_C": 57.33958333333334,
+      "Tj_using_EVM_57p2_C": 48.34166666666667
+    },
+    {
+      "Ta_C": 40,
+      "Iout_A": 0.25,
+      "assumed_efficiency": 0.95,
+      "all_converter_loss_W": 0.06907894736842098,
+      "Tj_using_118p9_C": 48.213486842105254,
+      "Tj_using_EVM_57p2_C": 43.95131578947368
+    },
+    {
+      "Ta_C": 40,
+      "Iout_A": 0.75,
+      "assumed_efficiency": 0.85,
+      "all_converter_loss_W": 0.6948529411764708,
+      "Tj_using_118p9_C": 122.61801470588237,
+      "Tj_using_EVM_57p2_C": 79.74558823529412
+    },
+    {
+      "Ta_C": 40,
+      "Iout_A": 0.75,
+      "assumed_efficiency": 0.9,
+      "all_converter_loss_W": 0.4375000000000002,
+      "Tj_using_118p9_C": 92.01875000000003,
+      "Tj_using_EVM_57p2_C": 65.025
+    },
+    {
+      "Ta_C": 40,
+      "Iout_A": 0.75,
+      "assumed_efficiency": 0.95,
+      "all_converter_loss_W": 0.20723684210526294,
+      "Tj_using_118p9_C": 64.64046052631576,
+      "Tj_using_EVM_57p2_C": 51.85394736842104
+    },
+    {
+      "Ta_C": 40,
+      "Iout_A": 1.5,
+      "assumed_efficiency": 0.85,
+      "all_converter_loss_W": 1.3897058823529416,
+      "Tj_using_118p9_C": 205.23602941176475,
+      "Tj_using_EVM_57p2_C": 119.49117647058826
+    },
+    {
+      "Ta_C": 40,
+      "Iout_A": 1.5,
+      "assumed_efficiency": 0.9,
+      "all_converter_loss_W": 0.8750000000000004,
+      "Tj_using_118p9_C": 144.03750000000005,
+      "Tj_using_EVM_57p2_C": 90.05000000000003
+    },
+    {
+      "Ta_C": 40,
+      "Iout_A": 1.5,
+      "assumed_efficiency": 0.95,
+      "all_converter_loss_W": 0.4144736842105259,
+      "Tj_using_118p9_C": 89.28092105263153,
+      "Tj_using_EVM_57p2_C": 63.70789473684208
+    }
+  ],
+  "joint_input_current_A": {
+    "8": 5.370048524460289,
+    "8.82": 5.160234275528393,
+    "9.18": 5.080272622417951
+  },
+  "motor_ILIM_range_A": [
+    1.3522185551888521,
+    1.6133557800224467
+  ],
+  "thermal_IC_loss_budget_Ta40_Tj125_W": 0.7148864592094196
+}

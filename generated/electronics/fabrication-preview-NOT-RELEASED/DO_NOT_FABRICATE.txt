@@ -1,5 +1,5 @@
 ENGINEERING PREVIEW ONLY - NOT RELEASED
-EV3 geometry follows user drawing; PINMAP/MPN/CURRENT remain HOLD. Read electronics/README.md.
+EV3 geometry follows user drawing; six-way physical pin mapping remains unchecked; contact operating limits require controlled sample testing. Read electronics/README.md.
 {
   "revision": "A1",
   "manufacturing_release": false,
@@ -11,7 +11,7 @@ EV3 geometry follows user drawing; PINMAP/MPN/CURRENT remain HOLD. Read electron
   "unconnected_pads": 0,
   "release_blockers": [
     "TPS54302 vendor-model ngspice startup aborted numerically; load-step/tolerance dynamic validation remains unresolved",
-    "EV3 hole geometry updated from user drawing; actual MPN, pin numbers 1-5/view, contact rating and full ear envelope remain unconfirmed",
+    "EV3 drawing explicitly labels 1 and 6; full-EV3 prototype needs one same-lot six-way continuity check; no additional vendor documents requested",
     "New mounting bracket/feet and cable-motion clearance not finalized",
     "Prototype concurrent-load, regenerative transient, thermal and power-combination tests outstanding",
     "First-board RP2040 UF2 boot and USB host-off data-pin backfeed tests outstanding; USB impedance stackup requires fabricator approval"
@@ -28,10 +28,21 @@ EV3 geometry follows user drawing; PINMAP/MPN/CURRENT remain HOLD. Read electron
     "flash_clock.kicad_sch": "0f0cdaa82e78ae9f24b46be02ead3a127b85f0638b94a8d28f5b36e1619cc54b",
     "power.kicad_sch": "84a1416a829c907b63f28c670e9a9cefceb92a628188f930114a7875cba45799",
     "quadcuber.kicad_dru": "13c20282ff1d0ecae15ad773debb06a556564dcbee91617d1f616ba47f197fcb",
-    "quadcuber.kicad_pcb": "aa17fa9b22cc113f423552e96b39004e5b6b77cb64c0e49f54233de939642a5a",
+    "quadcuber.kicad_pcb": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
     "quadcuber.kicad_pro": "ac152eda29668a9e3d24a2b0b9e71fe127afb965978503afcaabbe787b566dbd",
     "quadcuber.kicad_sch": "5aace6a2ca53fb36f6b5fc7948c173f784a674ef56fdc5b231ec28dcf25afdba",
     "usb.kicad_sch": "ec9b6ff8ea6e54a50779f389608066f1ee478bd4437e5b8b8d0dae8a1cc4f1fe"
   },
-  "tool_version": "10.0.7"
+  "tool_version": "10.0.7",
+  "prototype_preconditions": [
+    "Select full-EV3 or explicitly marked NO-EV3 assembly candidate; full-EV3 requires six-way continuity before board fabrication",
+    "JLC CAM/assembly acceptance: narrow QFN lands, thermal-hole process, important silkscreen readability, removable tooling rails/fiducials and chosen stackup",
+    "Known current-limited 9V bench source and staged no-external-load startup plan"
+  ],
+  "qualification_pending": [
+    "Actual MLCC capacitance/ESR and 5V transients/PVT",
+    "Concurrent input-current budget, regenerative energy and thermal testing",
+    "RP2040 first boot and supported USB power combinations",
+    "Robot mounting/cable clearance and endurance"
+  ]
 }

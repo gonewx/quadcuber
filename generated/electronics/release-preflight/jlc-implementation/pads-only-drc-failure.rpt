@@ -1,0 +1,28 @@
+** Drc report for quadcuber.kicad_pcb **
+** Created on 2026-10-12T11:50:22 **
+** Report includes: Errors, Warnings **
+
+** Found 2 DRC violations **
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1695 mm)
+    Local override; error
+    @(75.1185 mm, 55.0496 mm): Track [USB_VBUS] on F.Cu, length 2.6097 mm
+    @(74.3200 mm, 56.7800 mm): PTH pad S1 [GND] of J5
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1685 mm)
+    Local override; error
+    @(75.1185 mm, 57.6593 mm): Track [USB_VBUS] on F.Cu, length 0.8101 mm
+    @(74.3200 mm, 56.7800 mm): PTH pad S1 [GND] of J5
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - PTH inside courtyard
+    - NPTH inside courtyard
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

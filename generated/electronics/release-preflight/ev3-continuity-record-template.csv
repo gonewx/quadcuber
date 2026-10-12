@@ -1,0 +1,7 @@
+Drawing_tail,Local_X_mm,Local_Y_mm,Drawing_number_evidence,Mating_cable_contact_position_and_view,Unique_continuity_measured,Adjacent_short_check,Sample_batch_mark
+1,-2.55,4.84,explicit,,NOT_MEASURED,NOT_MEASURED,
+2,-1.53,2.3,inferred_between_endpoints,,NOT_MEASURED,NOT_MEASURED,
+3,-0.51,4.84,inferred_between_endpoints,,NOT_MEASURED,NOT_MEASURED,
+4,0.51,2.3,inferred_between_endpoints,,NOT_MEASURED,NOT_MEASURED,
+5,1.53,4.84,inferred_between_endpoints,,NOT_MEASURED,NOT_MEASURED,
+6,2.55,2.3,explicit,,NOT_MEASURED,NOT_MEASURED,

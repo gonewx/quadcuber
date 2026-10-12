@@ -1,0 +1,270 @@
+{
+  "checks": [
+    {
+      "ref": "J11",
+      "rotation_deg": 180.0,
+      "pins": [
+        {
+          "pin": "1",
+          "local_mm": [
+            -2.55,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "L_M1",
+          "direct_number_label_in_user_drawing": true
+        },
+        {
+          "pin": "2",
+          "local_mm": [
+            -1.53,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "L_M2",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "3",
+          "local_mm": [
+            -0.51,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "GND",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "4",
+          "local_mm": [
+            0.51,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "5V_ENC",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "5",
+          "local_mm": [
+            1.53,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "L_ENC_A_RAW",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "6",
+          "local_mm": [
+            2.55,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "L_ENC_B_RAW",
+          "direct_number_label_in_user_drawing": true
+        }
+      ]
+    },
+    {
+      "ref": "J12",
+      "rotation_deg": 180.0,
+      "pins": [
+        {
+          "pin": "1",
+          "local_mm": [
+            -2.55,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "F_M1",
+          "direct_number_label_in_user_drawing": true
+        },
+        {
+          "pin": "2",
+          "local_mm": [
+            -1.53,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "F_M2",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "3",
+          "local_mm": [
+            -0.51,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "GND",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "4",
+          "local_mm": [
+            0.51,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "5V_ENC",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "5",
+          "local_mm": [
+            1.53,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "F_ENC_A_RAW",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "6",
+          "local_mm": [
+            2.55,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "F_ENC_B_RAW",
+          "direct_number_label_in_user_drawing": true
+        }
+      ]
+    },
+    {
+      "ref": "J10",
+      "rotation_deg": 180.0,
+      "pins": [
+        {
+          "pin": "1",
+          "local_mm": [
+            -2.55,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "R_M1",
+          "direct_number_label_in_user_drawing": true
+        },
+        {
+          "pin": "2",
+          "local_mm": [
+            -1.53,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "R_M2",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "3",
+          "local_mm": [
+            -0.51,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "GND",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "4",
+          "local_mm": [
+            0.51,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "5V_ENC",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "5",
+          "local_mm": [
+            1.53,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "R_ENC_A_RAW",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "6",
+          "local_mm": [
+            2.55,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "R_ENC_B_RAW",
+          "direct_number_label_in_user_drawing": true
+        }
+      ]
+    },
+    {
+      "ref": "J13",
+      "rotation_deg": 180.0,
+      "pins": [
+        {
+          "pin": "1",
+          "local_mm": [
+            -2.55,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "B_M1",
+          "direct_number_label_in_user_drawing": true
+        },
+        {
+          "pin": "2",
+          "local_mm": [
+            -1.53,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "B_M2",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "3",
+          "local_mm": [
+            -0.51,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "GND",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "4",
+          "local_mm": [
+            0.51,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "5V_ENC",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "5",
+          "local_mm": [
+            1.53,
+            4.84
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "B_ENC_A_RAW",
+          "direct_number_label_in_user_drawing": false
+        },
+        {
+          "pin": "6",
+          "local_mm": [
+            2.55,
+            2.3
+          ],
+          "matches_drawing_coordinate": true,
+          "net": "B_ENC_B_RAW",
+          "direct_number_label_in_user_drawing": true
+        }
+      ]
+    }
+  ],
+  "all_coordinate_checks_pass": true,
+  "scope": "Native footprint coordinate agreement with drawing/inferred numbering; not physical continuity"
+}

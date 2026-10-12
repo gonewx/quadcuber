@@ -1,0 +1,109 @@
+{
+  "state": "PASS_WITH_1NM_REFILL_QUANTIZATION",
+  "comparison": "KiCad actual filled copper polygons before/after, normalized with make_valid; unchanged outlines/net/layers separately enforced by semantic contract",
+  "allowed_local_region_mm": [
+    64.5,
+    51,
+    76,
+    59
+  ],
+  "zones": [
+    {
+      "uuid": "2ae4b439-aae6-4ba3-aba3-202714ff508b",
+      "layer": "F.Cu",
+      "net": "VIN",
+      "symmetric_difference_area_mm2": 0.0,
+      "difference_bbox_mm": null,
+      "within_usb_local_region": true,
+      "outside_local_raw_difference_area_mm2": 0.0,
+      "outside_local_difference_beyond_1nm_area_mm2": 0
+    },
+    {
+      "uuid": "5d633391-ff72-4a8a-9cf1-a76726be52bc",
+      "layer": "F.Cu",
+      "net": "GND",
+      "symmetric_difference_area_mm2": 0.34283999999998205,
+      "difference_bbox_mm": [
+        74.359193,
+        55.3751,
+        75.611243,
+        58.5576
+      ],
+      "within_usb_local_region": true,
+      "outside_local_raw_difference_area_mm2": 0.0,
+      "outside_local_difference_beyond_1nm_area_mm2": 0
+    },
+    {
+      "uuid": "c77c2232-4908-4c77-81d5-72ac58af2823",
+      "layer": "F.Cu",
+      "net": "VIN_FUSED",
+      "symmetric_difference_area_mm2": 0.0,
+      "difference_bbox_mm": null,
+      "within_usb_local_region": true,
+      "outside_local_raw_difference_area_mm2": 0.0,
+      "outside_local_difference_beyond_1nm_area_mm2": 0
+    },
+    {
+      "uuid": "f6be2ee6-7b15-4dce-917b-c99975f9c24c",
+      "layer": "F.Cu",
+      "net": "VM",
+      "symmetric_difference_area_mm2": 0.0,
+      "difference_bbox_mm": null,
+      "within_usb_local_region": true,
+      "outside_local_raw_difference_area_mm2": 0.0,
+      "outside_local_difference_beyond_1nm_area_mm2": 0
+    },
+    {
+      "uuid": "40bf01d6-2133-45ba-8657-3e1e9c7a1a8a",
+      "layer": "B.Cu",
+      "net": "GND",
+      "symmetric_difference_area_mm2": 0.0,
+      "difference_bbox_mm": null,
+      "within_usb_local_region": true,
+      "outside_local_raw_difference_area_mm2": 0.0,
+      "outside_local_difference_beyond_1nm_area_mm2": 0
+    },
+    {
+      "uuid": "5ef5fb90-2312-42e8-bc5d-c3a2145d0293",
+      "layer": "In1.Cu",
+      "net": "GND",
+      "symmetric_difference_area_mm2": 0.0,
+      "difference_bbox_mm": null,
+      "within_usb_local_region": true,
+      "outside_local_raw_difference_area_mm2": 0.0,
+      "outside_local_difference_beyond_1nm_area_mm2": 0
+    },
+    {
+      "uuid": "51f5bc73-933e-461b-94a7-f7c2d211f5f5",
+      "layer": "In2.Cu",
+      "net": "3V3",
+      "symmetric_difference_area_mm2": 1.4683830564471627,
+      "difference_bbox_mm": [
+        54.361791,
+        51.3955,
+        75.1245,
+        58.1345
+      ],
+      "within_usb_local_region": false,
+      "outside_local_raw_difference_area_mm2": 6.972634059824475e-08,
+      "outside_local_difference_beyond_1nm_area_mm2": 0.0
+    },
+    {
+      "uuid": "dec0467f-7ba5-4e85-9ee8-69e83affab1b",
+      "layer": "In2.Cu",
+      "net": "VM",
+      "symmetric_difference_area_mm2": 2.785994809690836e-08,
+      "difference_bbox_mm": [
+        96.292327,
+        55.394555,
+        188.969711,
+        56.592522
+      ],
+      "within_usb_local_region": false,
+      "outside_local_raw_difference_area_mm2": 2.7859948096772835e-08,
+      "outside_local_difference_beyond_1nm_area_mm2": 0.0
+    }
+  ],
+  "source_sha256": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
+  "tolerance_note": "Raw symmetric-difference data retained. Tiny remote zone slivers are accepted only when every point is within 0.000001 mm (one KiCad nanometre coordinate unit) of the original filled copper. The intended J5 neighborhood changes remain explicitly quantified."
+}

@@ -1,0 +1,144 @@
+{
+  "state": "APPLIED",
+  "kicad": "10.0.7",
+  "changes": {
+    "native": [],
+    "library": [],
+    "vbus_clearance_segments": [
+      {
+        "uuid": "1c9cde93-6b13-45a4-931d-3873bbf8384b",
+        "before_nm": [
+          [
+            75118500,
+            55049600
+          ],
+          [
+            75118500,
+            57659300
+          ]
+        ],
+        "after_nm": [
+          [
+            75178500,
+            55049600
+          ],
+          [
+            75178500,
+            57659300
+          ]
+        ],
+        "net": "USB_VBUS",
+        "width_mm": 0.15
+      },
+      {
+        "uuid": "798bdb25-1303-4523-bcb3-bd55121a7036",
+        "before_nm": [
+          [
+            78812900,
+            55049600
+          ],
+          [
+            75118500,
+            55049600
+          ]
+        ],
+        "after_nm": [
+          [
+            78812900,
+            55049600
+          ],
+          [
+            75178500,
+            55049600
+          ]
+        ],
+        "net": "USB_VBUS",
+        "width_mm": 0.15
+      },
+      {
+        "uuid": "cc9f98a0-4228-4c78-8163-aa595ae3845c",
+        "before_nm": [
+          [
+            75118500,
+            55049600
+          ],
+          [
+            63025100,
+            55049600
+          ]
+        ],
+        "after_nm": [
+          [
+            75178500,
+            55049600
+          ],
+          [
+            63025100,
+            55049600
+          ]
+        ],
+        "net": "USB_VBUS",
+        "width_mm": 0.15
+      },
+      {
+        "uuid": "d45ae99b-2573-4fd8-8747-c22624b25667",
+        "before_nm": [
+          [
+            75118500,
+            57659300
+          ],
+          [
+            74545700,
+            58232100
+          ]
+        ],
+        "after_nm": [
+          [
+            75178500,
+            57659300
+          ],
+          [
+            74605700,
+            58232100
+          ]
+        ],
+        "net": "USB_VBUS",
+        "width_mm": 0.15
+      },
+      {
+        "uuid": "83e1a1c5-9865-47ec-8c64-46ecab0ba978",
+        "before_nm": [
+          [
+            74545700,
+            58232100
+          ],
+          [
+            72827100,
+            58232100
+          ]
+        ],
+        "after_nm": [
+          [
+            74605700,
+            58232100
+          ],
+          [
+            72827100,
+            58232100
+          ]
+        ],
+        "net": "USB_VBUS",
+        "width_mm": 0.15
+      }
+    ]
+  },
+  "hashes_before": {
+    "board": "a4f6868ef3f61184bce1481a82aa4e79d5711f8a356dca8b88fc5123ac14d299",
+    "footprint": "554637d89d37f1270d6053f04e8fd83dbfda61a06c074dfd7e7078d48691ecb3"
+  },
+  "hashes_after": {
+    "board": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
+    "footprint": "554637d89d37f1270d6053f04e8fd83dbfda61a06c074dfd7e7078d48691ecb3"
+  },
+  "scope": "Four J5 S1 copper/paste/mask sizes and five exact USB_VBUS segments at three shared nodes +0.06mm X; drill/slot, net and width unchanged; existing zones refilled. Whole-build ERC/DRC/export verification is a separate next step."
+}

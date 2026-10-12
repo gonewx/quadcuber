@@ -1,0 +1,16 @@
+test_default_cpl_exactly_matches_populated_bom (test_assembly_exports.AssemblyExportContract.test_default_cpl_exactly_matches_populated_bom) ... FAIL
+
+======================================================================
+FAIL: test_default_cpl_exactly_matches_populated_bom (test_assembly_exports.AssemblyExportContract.test_default_cpl_exactly_matches_populated_bom)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quadcuber/electronics/test_assembly_exports.py", line 16, in test_default_cpl_exactly_matches_populated_bom
+    self.assertSetEqual(set(actual), wanted)
+AssertionError: Items in the first set but not the second:
+'C26'
+'C36'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

@@ -1,0 +1,179 @@
+{
+  "state": "APPLIED",
+  "kicad": "10.0.7",
+  "changes": {
+    "native": [
+      {
+        "uuid": "f5bb76d1-5ca8-4a76-8bb7-bd471d57b325",
+        "position_mm": [
+          74.32,
+          56.78
+        ],
+        "old_size_mm": [
+          1.0,
+          2.1
+        ],
+        "new_size_mm": [
+          1.108,
+          2.208
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "net": "GND"
+      },
+      {
+        "uuid": "71c472c2-2b78-4094-92d6-faef4fd476a5",
+        "position_mm": [
+          74.32,
+          52.6
+        ],
+        "old_size_mm": [
+          1.0,
+          1.8
+        ],
+        "new_size_mm": [
+          1.108,
+          1.908
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "net": "GND"
+      },
+      {
+        "uuid": "347de923-4367-4ecb-bbae-ee27e6c3b950",
+        "position_mm": [
+          65.68,
+          56.78
+        ],
+        "old_size_mm": [
+          1.0,
+          2.1
+        ],
+        "new_size_mm": [
+          1.108,
+          2.208
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "net": "GND"
+      },
+      {
+        "uuid": "0836535f-55ed-488c-9bba-38c7f0834379",
+        "position_mm": [
+          65.68,
+          52.6
+        ],
+        "old_size_mm": [
+          1.0,
+          1.8
+        ],
+        "new_size_mm": [
+          1.108,
+          1.908
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "net": "GND"
+      }
+    ],
+    "library": [
+      {
+        "uuid": "3e23aed6-97fe-44d1-9f3a-4c7b917dff43",
+        "position_mm": [
+          -4.32,
+          -3.105
+        ],
+        "old_size_mm": [
+          1.0,
+          2.1
+        ],
+        "new_size_mm": [
+          1.108,
+          2.208
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "net": ""
+      },
+      {
+        "uuid": "434300ca-4588-4905-8aba-56e4bab733e6",
+        "position_mm": [
+          -4.32,
+          1.075
+        ],
+        "old_size_mm": [
+          1.0,
+          1.8
+        ],
+        "new_size_mm": [
+          1.108,
+          1.908
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "net": ""
+      },
+      {
+        "uuid": "31016ad3-3a0b-4f35-9e7b-fc5be523f65d",
+        "position_mm": [
+          4.32,
+          -3.105
+        ],
+        "old_size_mm": [
+          1.0,
+          2.1
+        ],
+        "new_size_mm": [
+          1.108,
+          2.208
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "net": ""
+      },
+      {
+        "uuid": "e2470509-08ad-4f1b-9981-6dc32f808362",
+        "position_mm": [
+          4.32,
+          1.075
+        ],
+        "old_size_mm": [
+          1.0,
+          1.8
+        ],
+        "new_size_mm": [
+          1.108,
+          1.908
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "net": ""
+      }
+    ]
+  },
+  "hashes_before": {
+    "board": "aa17fa9b22cc113f423552e96b39004e5b6b77cb64c0e49f54233de939642a5a",
+    "footprint": "f350bfcd388f6081aa7570d5929d6d7fb9556adc3bb24b84d6482e0d5c320818"
+  },
+  "hashes_after": {
+    "board": "a4f6868ef3f61184bce1481a82aa4e79d5711f8a356dca8b88fc5123ac14d299",
+    "footprint": "52a6947468a3dffb1ac47f1f1d111b8a8ee4b326cc402ed9ed83d018f1dc5634"
+  },
+  "scope": "Four J5 S1 copper/paste/mask sizes only; drill/slot unchanged; existing zones refilled. Whole-build ERC/DRC/export verification is a separate next step."
+}

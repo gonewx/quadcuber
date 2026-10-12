@@ -1,0 +1,7 @@
+/workspace/quadcuber/web/test_final_presentation.py:56: ResourceWarning: unclosed file <_io.TextIOWrapper name='/workspace/quadcuber/dist/site/integrated/final-BOM.csv' mode='r' encoding='UTF-8'>
+  rows=list(csv.DictReader((D/'integrated/final-BOM.csv').open()))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+----------------------------------------------------------------------
+Ran 12 tests in 0.962s
+
+OK

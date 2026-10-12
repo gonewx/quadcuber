@@ -1,0 +1,227 @@
+{
+  "state": "FAIL",
+  "kicad": "10.0.7",
+  "baseline_dir": "/workspace/a1-jlc-baseline",
+  "label": "red",
+  "checks": [
+    {
+      "check": "native exactly four S1 shield pads",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "check": "native shield target f5bb76d1-5ca8-4a76-8bb7-bd471d57b325",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          2.1
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          74.32,
+          56.78
+        ]
+      }
+    },
+    {
+      "check": "native shield target 71c472c2-2b78-4094-92d6-faef4fd476a5",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          1.8
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          74.32,
+          52.6
+        ]
+      }
+    },
+    {
+      "check": "native shield target 347de923-4367-4ecb-bbae-ee27e6c3b950",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          2.1
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          65.68,
+          56.78
+        ]
+      }
+    },
+    {
+      "check": "native shield target 0836535f-55ed-488c-9bba-38c7f0834379",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          1.8
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          65.68,
+          52.6
+        ]
+      }
+    },
+    {
+      "check": "native exactly four changed pads, only permitted size delta",
+      "pass": false,
+      "detail": {
+        "changed_pad_count": 0
+      }
+    },
+    {
+      "check": "library exactly four S1 shield pads",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "check": "library shield target c5c06ab0-cd72-42d4-ac8f-2b6b69d1fed9",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          2.1
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          -4.32,
+          -3.105
+        ]
+      }
+    },
+    {
+      "check": "library shield target d94549c6-d0ec-4808-8ae9-e28498d85703",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          1.8
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          -4.32,
+          1.075
+        ]
+      }
+    },
+    {
+      "check": "library shield target 3a422bfa-7628-47bf-894f-55d1f60030b1",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          2.1
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          4.32,
+          -3.105
+        ]
+      }
+    },
+    {
+      "check": "library shield target 3f90b31e-1282-4b25-a55d-19e18c1aaa22",
+      "pass": false,
+      "detail": {
+        "size_mm": [
+          1.0,
+          1.8
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ],
+        "ring_mm": 0.2,
+        "position_mm": [
+          4.32,
+          1.075
+        ]
+      }
+    },
+    {
+      "check": "library exactly four changed pads, only permitted size delta",
+      "pass": false,
+      "detail": {
+        "changed_pad_count": 0
+      }
+    },
+    {
+      "check": "native all other semantic data unchanged",
+      "pass": true,
+      "detail": {
+        "baseline_digest": "69fef23b122eb6565fbed4ca4050d72cfdb5b414763f1ee8517cb5cab4005cba",
+        "current_digest": "69fef23b122eb6565fbed4ca4050d72cfdb5b414763f1ee8517cb5cab4005cba",
+        "differences": []
+      }
+    },
+    {
+      "check": "library all other semantic data unchanged",
+      "pass": true,
+      "detail": {
+        "baseline_digest": "334c7dd8cafb354683106a8b7857770ff40b0c9023f5dbf150581b58fd2af040",
+        "current_digest": "334c7dd8cafb354683106a8b7857770ff40b0c9023f5dbf150581b58fd2af040",
+        "differences": []
+      }
+    },
+    {
+      "check": "generator persists exact USB footprint adapter and saves it",
+      "pass": false,
+      "detail": {
+        "adapter_import": false,
+        "matching_branches": 0
+      }
+    },
+    {
+      "check": "real adapter changes only target four pad sizes and is idempotent",
+      "pass": false,
+      "detail": "adapter implementation absent in red phase"
+    }
+  ],
+  "changes": {
+    "native": [],
+    "library": []
+  },
+  "hashes": {
+    "/workspace/a1-jlc-baseline/quadcuber.kicad_pcb": "aa17fa9b22cc113f423552e96b39004e5b6b77cb64c0e49f54233de939642a5a",
+    "/workspace/quadcuber/electronics/quadcuber.kicad_pcb": "aa17fa9b22cc113f423552e96b39004e5b6b77cb64c0e49f54233de939642a5a",
+    "/workspace/a1-jlc-baseline/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.kicad_mod": "f350bfcd388f6081aa7570d5929d6d7fb9556adc3bb24b84d6482e0d5c320818",
+    "/workspace/quadcuber/electronics/lib/Quadcuber.pretty/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.kicad_mod": "f350bfcd388f6081aa7570d5929d6d7fb9556adc3bb24b84d6482e0d5c320818",
+    "/workspace/quadcuber/electronics/generate.py": "166d08ceefc09b39418e97cb4f855fcf3093a610e6bb8de885b4837512bb2500"
+  },
+  "scope": "Only four S1 copper/paste/mask pad dimensions may change. Zone filled_polygon/fill_segments caches may change upon refill; all other parsed PCB and footprint semantic data must match the frozen baseline."
+}

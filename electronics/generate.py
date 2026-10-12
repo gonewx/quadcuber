@@ -3,6 +3,7 @@
 import json,uuid,math,shutil,csv,re
 from pathlib import Path
 import pcbnew as p
+from revise_usb_slots import adapt_usb_shield_slots_file
 from circuit import C
 HERE=Path(__file__).resolve().parent; ROOT=HERE.parent; OUT=ROOT/'generated/electronics'; LIB=HERE/'lib/Quadcuber.pretty'
 OUT.mkdir(exist_ok=True,parents=True);LIB.mkdir(exist_ok=True,parents=True)
@@ -34,6 +35,9 @@ for comp in C:
                 if pp.GetDrillSize().x:
                     pp.SetDrillSize(vec(.3,.3));pp.SetSize(vec(.6,.6))
             p.PCB_IO_KICAD_SEXPR().FootprintSave(str(LIB),pf)
+        if name=='USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal':
+            # A1 JLC 2-oz revision: 0.254 mm shield-slot rings, unchanged drills.
+            adapt_usb_shield_slots_file(dst)
         comp['source_fp']=comp['fp'];comp['fp']='Quadcuber:'+name
 (HERE/'fp-lib-table').write_text('(fp_lib_table (version 7) (lib (name "Quadcuber")(type "KiCad")(uri "${KIPRJMOD}/lib/Quadcuber.pretty")(options "")(descr "Pinned footprints; EV3 drawing geometry with pinmap HOLD")))\n')
 # Self-contained native symbols with real pin identities and electrical types.

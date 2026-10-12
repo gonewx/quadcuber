@@ -1,0 +1,104 @@
+11:53:59: Debug: Adding duplicate image handler for 'PNG file'
+11:53:59: Debug: Adding duplicate image handler for 'JPEG file'
+11:53:59: Debug: Adding duplicate image handler for 'TIFF file'
+11:53:59: Debug: Adding duplicate image handler for 'GIF file'
+11:53:59: Debug: Adding duplicate image handler for 'PNM file'
+11:53:59: Debug: Adding duplicate image handler for 'PCX file'
+11:53:59: Debug: Adding duplicate image handler for 'IFF file'
+11:53:59: Debug: Adding duplicate image handler for 'Windows icon file'
+11:53:59: Debug: Adding duplicate image handler for 'Windows cursor file'
+11:53:59: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+11:53:59: Debug: Adding duplicate image handler for 'TGA file'
+11:53:59: Debug: Adding duplicate image handler for 'XPM file'
+11:53:59: Debug: Adding duplicate image handler for 'WebP file'
+{
+  "state": "FAIL",
+  "checks": 22,
+  "failures": [
+    {
+      "check": "authorized VBUS clearance segment 1c9cde93-6b13-45a4-931d-3873bbf8384b",
+      "pass": false,
+      "detail": {
+        "start_nm": [
+          75118500,
+          55049600
+        ],
+        "end_nm": [
+          75118500,
+          57659300
+        ],
+        "width_nm": 150000,
+        "layer": "F.Cu",
+        "net": "USB_VBUS"
+      }
+    },
+    {
+      "check": "authorized VBUS clearance segment 798bdb25-1303-4523-bcb3-bd55121a7036",
+      "pass": false,
+      "detail": {
+        "start_nm": [
+          78812900,
+          55049600
+        ],
+        "end_nm": [
+          75118500,
+          55049600
+        ],
+        "width_nm": 150000,
+        "layer": "F.Cu",
+        "net": "USB_VBUS"
+      }
+    },
+    {
+      "check": "authorized VBUS clearance segment cc9f98a0-4228-4c78-8163-aa595ae3845c",
+      "pass": false,
+      "detail": {
+        "start_nm": [
+          75118500,
+          55049600
+        ],
+        "end_nm": [
+          63025100,
+          55049600
+        ],
+        "width_nm": 150000,
+        "layer": "F.Cu",
+        "net": "USB_VBUS"
+      }
+    },
+    {
+      "check": "authorized VBUS clearance segment d45ae99b-2573-4fd8-8747-c22624b25667",
+      "pass": false,
+      "detail": {
+        "start_nm": [
+          75118500,
+          57659300
+        ],
+        "end_nm": [
+          74545700,
+          58232100
+        ],
+        "width_nm": 150000,
+        "layer": "F.Cu",
+        "net": "USB_VBUS"
+      }
+    },
+    {
+      "check": "authorized VBUS clearance segment 83e1a1c5-9865-47ec-8c64-46ecab0ba978",
+      "pass": false,
+      "detail": {
+        "start_nm": [
+          74545700,
+          58232100
+        ],
+        "end_nm": [
+          72827100,
+          58232100
+        ],
+        "width_nm": 150000,
+        "layer": "F.Cu",
+        "net": "USB_VBUS"
+      }
+    }
+  ]
+}
