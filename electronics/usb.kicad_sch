@@ -1,1 +1,3944 @@
-(kicad_sch(version 20250114)(generator "eeschema")(uuid a88cae6a-0eef-5b67-9774-cc5ba03fda5d)(paper "A3")(title_block(title "Quadcuber A1 / usb / ENGINEERING HOLD")(rev "A1"))(lib_symbols (symbol "Quadcuber:D5" (pin_names (offset 0.508) hide) (in_bom yes)(on_board yes) (property "Reference" "D5" (at 0 6.35 0) (effects (font (size 1 1)) )) (property "Value" "SS14 USB isolation" (at 0 -6.35 0) (effects (font (size 1 1)) )) (property "Footprint" "Quadcuber:D_SMA" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "D5_0_1" (polyline(pts(xy -7.62 0)(xy -2.54 0))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy 2.54 0)(xy 7.62 0))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy -2.54 -2.54)(xy -2.54 2.54))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy -2.54 0)(xy 2.54 -2.54)(xy 2.54 2.54)(xy -2.54 0))(stroke(width .254)(type default))(fill(type none)))) (symbol "D5_1_1" (pin passive line (at -10.16 0.0 0)(length 2.54)(name "K" (effects (font (size 0.75 0.75)) ))(number "1" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 0.0 180)(length 2.54)(name "A" (effects (font (size 0.75 0.75)) ))(number "2" (effects (font (size 0.75 0.75)) )))))(symbol "Quadcuber:J5" (pin_names (offset 0.508)) (in_bom yes)(on_board yes) (property "Reference" "J5" (at 0 15.239999999999998 0) (effects (font (size 1 1)) )) (property "Value" "USB-C data / BOOTSEL" (at 0 -15.239999999999998 0) (effects (font (size 1 1)) )) (property "Footprint" "Quadcuber:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "J5_0_1" (rectangle (start -7.62 12.7)(end 7.62 -12.7)(stroke (width 0.254)(type default))(fill (type background)))) (symbol "J5_1_1" (pin passive line (at -10.16 10.16 0)(length 2.54)(name "A1" (effects (font (size 0.75 0.75)) ))(number "A1" (effects (font (size 0.75 0.75)) )))(pin passive line (at -10.16 7.62 0)(length 2.54)(name "A4" (effects (font (size 0.75 0.75)) ))(number "A4" (effects (font (size 0.75 0.75)) )))(pin passive line (at -10.16 5.08 0)(length 2.54)(name "A5" (effects (font (size 0.75 0.75)) ))(number "A5" (effects (font (size 0.75 0.75)) )))(pin passive line (at -10.16 2.54 0)(length 2.54)(name "A6" (effects (font (size 0.75 0.75)) ))(number "A6" (effects (font (size 0.75 0.75)) )))(pin passive line (at -10.16 0.0 0)(length 2.54)(name "A7" (effects (font (size 0.75 0.75)) ))(number "A7" (effects (font (size 0.75 0.75)) )))(pin passive line (at -10.16 -2.54 0)(length 2.54)(name "A8" (effects (font (size 0.75 0.75)) ))(number "A8" (effects (font (size 0.75 0.75)) )))(pin passive line (at -10.16 -5.08 0)(length 2.54)(name "A9" (effects (font (size 0.75 0.75)) ))(number "A9" (effects (font (size 0.75 0.75)) )))(pin passive line (at -10.16 -7.62 0)(length 2.54)(name "A12" (effects (font (size 0.75 0.75)) ))(number "A12" (effects (font (size 0.75 0.75)) )))(pin passive line (at -10.16 -10.16 0)(length 2.54)(name "B1" (effects (font (size 0.75 0.75)) ))(number "B1" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 10.16 180)(length 2.54)(name "B4" (effects (font (size 0.75 0.75)) ))(number "B4" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 7.62 180)(length 2.54)(name "B5" (effects (font (size 0.75 0.75)) ))(number "B5" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 5.08 180)(length 2.54)(name "B6" (effects (font (size 0.75 0.75)) ))(number "B6" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 2.54 180)(length 2.54)(name "B7" (effects (font (size 0.75 0.75)) ))(number "B7" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 0.0 180)(length 2.54)(name "B8" (effects (font (size 0.75 0.75)) ))(number "B8" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 -2.54 180)(length 2.54)(name "B9" (effects (font (size 0.75 0.75)) ))(number "B9" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 -5.08 180)(length 2.54)(name "B12" (effects (font (size 0.75 0.75)) ))(number "B12" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 -7.62 180)(length 2.54)(name "S1" (effects (font (size 0.75 0.75)) ))(number "S1" (effects (font (size 0.75 0.75)) )))))(symbol "Quadcuber:R401" (pin_names (offset 0.508) hide) (in_bom yes)(on_board yes) (property "Reference" "R401" (at 0 6.35 0) (effects (font (size 1 1)) )) (property "Value" "5.1k" (at 0 -6.35 0) (effects (font (size 1 1)) )) (property "Footprint" "Quadcuber:R_0603_1608Metric" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "R401_0_1" (polyline(pts(xy -7.62 0)(xy -3.81 0))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy 3.81 0)(xy 7.62 0))(stroke(width .254)(type default))(fill(type none)))(rectangle(start -3.81 1.27)(end 3.81 -1.27)(stroke(width .254)(type default))(fill(type none)))) (symbol "R401_1_1" (pin passive line (at -10.16 0.0 0)(length 2.54)(name "1" (effects (font (size 0.75 0.75)) ))(number "1" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 0.0 180)(length 2.54)(name "2" (effects (font (size 0.75 0.75)) ))(number "2" (effects (font (size 0.75 0.75)) )))))(symbol "Quadcuber:R402" (pin_names (offset 0.508) hide) (in_bom yes)(on_board yes) (property "Reference" "R402" (at 0 6.35 0) (effects (font (size 1 1)) )) (property "Value" "5.1k" (at 0 -6.35 0) (effects (font (size 1 1)) )) (property "Footprint" "Quadcuber:R_0603_1608Metric" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "R402_0_1" (polyline(pts(xy -7.62 0)(xy -3.81 0))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy 3.81 0)(xy 7.62 0))(stroke(width .254)(type default))(fill(type none)))(rectangle(start -3.81 1.27)(end 3.81 -1.27)(stroke(width .254)(type default))(fill(type none)))) (symbol "R402_1_1" (pin passive line (at -10.16 0.0 0)(length 2.54)(name "1" (effects (font (size 0.75 0.75)) ))(number "1" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 0.0 180)(length 2.54)(name "2" (effects (font (size 0.75 0.75)) ))(number "2" (effects (font (size 0.75 0.75)) )))))(symbol "Quadcuber:F3" (pin_names (offset 0.508) hide) (in_bom yes)(on_board yes) (property "Reference" "F3" (at 0 6.35 0) (effects (font (size 1 1)) )) (property "Value" "0.5A USB PTC" (at 0 -6.35 0) (effects (font (size 1 1)) )) (property "Footprint" "Quadcuber:Fuse_1812_4532Metric" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "F3_0_1" (polyline(pts(xy -7.62 0)(xy -3.81 0))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy 3.81 0)(xy 7.62 0))(stroke(width .254)(type default))(fill(type none)))(rectangle(start -3.81 1.27)(end 3.81 -1.27)(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy -3.81 0)(xy 3.81 0))(stroke(width .254)(type default))(fill(type none)))) (symbol "F3_1_1" (pin passive line (at -10.16 0.0 0)(length 2.54)(name "1" (effects (font (size 0.75 0.75)) ))(number "1" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 0.0 180)(length 2.54)(name "2" (effects (font (size 0.75 0.75)) ))(number "2" (effects (font (size 0.75 0.75)) )))))(symbol "Quadcuber:C423" (pin_names (offset 0.508) hide) (in_bom yes)(on_board yes) (property "Reference" "C423" (at 0 6.35 0) (effects (font (size 1 1)) )) (property "Value" "1u/16V" (at 0 -6.35 0) (effects (font (size 1 1)) )) (property "Footprint" "Quadcuber:C_0805_2012Metric" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "C423_0_1" (polyline(pts(xy -7.62 0)(xy -1.27 0))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy 1.27 0)(xy 7.62 0))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy -1.27 -3.81)(xy -1.27 3.81))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy 1.27 -3.81)(xy 1.27 3.81))(stroke(width .254)(type default))(fill(type none)))) (symbol "C423_1_1" (pin passive line (at -10.16 0.0 0)(length 2.54)(name "1" (effects (font (size 0.75 0.75)) ))(number "1" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 0.0 180)(length 2.54)(name "2" (effects (font (size 0.75 0.75)) ))(number "2" (effects (font (size 0.75 0.75)) )))))(symbol "Quadcuber:U6" (pin_names (offset 0.508)) (in_bom yes)(on_board yes) (property "Reference" "U6" (at 0 7.62 0) (effects (font (size 1 1)) )) (property "Value" "USBLC6-2SC6" (at 0 -7.62 0) (effects (font (size 1 1)) )) (property "Footprint" "Quadcuber:SOT-23-6" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "U6_0_1" (rectangle (start -7.62 5.08)(end 7.62 -5.08)(stroke (width 0.254)(type default))(fill (type background)))) (symbol "U6_1_1" (pin passive line (at -10.16 2.54 0)(length 2.54)(name "IO1" (effects (font (size 0.75 0.75)) ))(number "1" (effects (font (size 0.75 0.75)) )))(pin passive line (at -10.16 0.0 0)(length 2.54)(name "GND" (effects (font (size 0.75 0.75)) ))(number "2" (effects (font (size 0.75 0.75)) )))(pin passive line (at -10.16 -2.54 0)(length 2.54)(name "IO2" (effects (font (size 0.75 0.75)) ))(number "3" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 2.54 180)(length 2.54)(name "IO2" (effects (font (size 0.75 0.75)) ))(number "4" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 0.0 180)(length 2.54)(name "VBUS" (effects (font (size 0.75 0.75)) ))(number "5" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 -2.54 180)(length 2.54)(name "IO1" (effects (font (size 0.75 0.75)) ))(number "6" (effects (font (size 0.75 0.75)) )))))(symbol "Quadcuber:R403" (pin_names (offset 0.508) hide) (in_bom yes)(on_board yes) (property "Reference" "R403" (at 0 6.35 0) (effects (font (size 1 1)) )) (property "Value" "27" (at 0 -6.35 0) (effects (font (size 1 1)) )) (property "Footprint" "Quadcuber:R_0402_1005Metric" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "R403_0_1" (polyline(pts(xy -7.62 0)(xy -3.81 0))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy 3.81 0)(xy 7.62 0))(stroke(width .254)(type default))(fill(type none)))(rectangle(start -3.81 1.27)(end 3.81 -1.27)(stroke(width .254)(type default))(fill(type none)))) (symbol "R403_1_1" (pin passive line (at -10.16 0.0 0)(length 2.54)(name "1" (effects (font (size 0.75 0.75)) ))(number "1" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 0.0 180)(length 2.54)(name "2" (effects (font (size 0.75 0.75)) ))(number "2" (effects (font (size 0.75 0.75)) )))))(symbol "Quadcuber:R404" (pin_names (offset 0.508) hide) (in_bom yes)(on_board yes) (property "Reference" "R404" (at 0 6.35 0) (effects (font (size 1 1)) )) (property "Value" "27" (at 0 -6.35 0) (effects (font (size 1 1)) )) (property "Footprint" "Quadcuber:R_0402_1005Metric" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "R404_0_1" (polyline(pts(xy -7.62 0)(xy -3.81 0))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy 3.81 0)(xy 7.62 0))(stroke(width .254)(type default))(fill(type none)))(rectangle(start -3.81 1.27)(end 3.81 -1.27)(stroke(width .254)(type default))(fill(type none)))) (symbol "R404_1_1" (pin passive line (at -10.16 0.0 0)(length 2.54)(name "1" (effects (font (size 0.75 0.75)) ))(number "1" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 0.0 180)(length 2.54)(name "2" (effects (font (size 0.75 0.75)) ))(number "2" (effects (font (size 0.75 0.75)) )))))(symbol "Quadcuber:C427" (pin_names (offset 0.508) hide) (in_bom yes)(on_board yes) (property "Reference" "C427" (at 0 6.35 0) (effects (font (size 1 1)) )) (property "Value" "100n" (at 0 -6.35 0) (effects (font (size 1 1)) )) (property "Footprint" "Quadcuber:C_0402_1005Metric" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "C427_0_1" (polyline(pts(xy -7.62 0)(xy -1.27 0))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy 1.27 0)(xy 7.62 0))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy -1.27 -3.81)(xy -1.27 3.81))(stroke(width .254)(type default))(fill(type none)))(polyline(pts(xy 1.27 -3.81)(xy 1.27 3.81))(stroke(width .254)(type default))(fill(type none)))) (symbol "C427_1_1" (pin passive line (at -10.16 0.0 0)(length 2.54)(name "1" (effects (font (size 0.75 0.75)) ))(number "1" (effects (font (size 0.75 0.75)) )))(pin passive line (at 10.16 0.0 180)(length 2.54)(name "2" (effects (font (size 0.75 0.75)) ))(number "2" (effects (font (size 0.75 0.75)) ))))))(symbol(lib_id "Quadcuber:D5")(at 35.56 38.1 0)(unit 1)(in_bom yes)(on_board yes)(dnp no)(uuid 00bab47a-ea8c-54c3-956a-73bc71cf4fea)(property "Reference" "D5"(at 35.56 30.48 0)(effects (font (size 1.27 1.27)) ))(property "Value" "SS14 USB isolation"(at 35.56 45.72 0)(effects (font (size 1.27 1.27)) ))(property "Footprint" "Quadcuber:D_SMA"(at 35.56 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "SS14-E3/61T"(at 35.56 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Vishay"(at 35.56 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(pin "1"(uuid 1ff07f56-dced-5d1b-90e5-71cecb529974))(pin "2"(uuid 626091d2-da05-543a-acf8-f21f9f021596))(instances(project "quadcuber"(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"(reference "D5")(unit 1)))))(wire(pts(xy 25.400000000000002 38.1)(xy 20.32 38.1))(stroke(width 0)(type default))(uuid 0766a503-2ca6-500b-849f-f587d9cceb02))(global_label "VSYS"(shape bidirectional)(at 20.32 38.1 0)(effects (font (size 0.8 0.8)) )(uuid 3b84ba4c-f83c-57cc-abe3-3b921ed97997)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 20.32 38.1 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 45.72 38.1)(xy 50.8 38.1))(stroke(width 0)(type default))(uuid f2a0a07c-c333-503b-b397-81c8710df580))(global_label "USB_FUSED"(shape bidirectional)(at 50.8 38.1 180)(effects (font (size 0.8 0.8)) )(uuid a1b4a226-b516-5618-9a1d-d66535810cf8)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 50.8 38.1 180)(effects (font (size 0.8 0.8)) (hide yes))))(symbol(lib_id "Quadcuber:J5")(at 99.06 38.1 0)(unit 1)(in_bom yes)(on_board yes)(dnp no)(uuid 67a31cb4-925a-5a6f-ba89-d0e72742d31f)(property "Reference" "J5"(at 99.06 21.590000000000003 0)(effects (font (size 1.27 1.27)) ))(property "Value" "USB-C data / BOOTSEL"(at 99.06 54.61 0)(effects (font (size 1.27 1.27)) ))(property "Footprint" "Quadcuber:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"(at 99.06 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "USB4105-GF-A"(at 99.06 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "GCT"(at 99.06 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(pin "A1"(uuid ff0067bb-9016-5679-ae6b-5f2fb56d4b2f))(pin "A4"(uuid bbfbace7-a413-5489-9b0e-76cb951f70bb))(pin "A5"(uuid 1086814c-2b73-5722-b512-d05e3d21dd51))(pin "A6"(uuid 641c8c09-0ca0-52ec-8e7d-4dbf6e38f4e2))(pin "A7"(uuid f6b62d25-4745-5444-9f0b-ff854347b6aa))(pin "A8"(uuid 223e6305-5ed3-5387-948b-6893b33e2dd8))(pin "A9"(uuid d5c66222-003c-57ef-b3ca-5345514044ee))(pin "A12"(uuid dc52e58b-6017-5d05-9b75-83ba40ced1bd))(pin "B1"(uuid ee2d52e7-cb56-5f21-995f-9646d247a4c5))(pin "B4"(uuid 6fcb0718-1cd3-5667-a48e-cdaf1a9ac27b))(pin "B5"(uuid baffaffa-a26a-5d50-a0b4-579a97c6c963))(pin "B6"(uuid c23c8bfd-960f-5910-8835-7380814a47ca))(pin "B7"(uuid 5f9e05be-5097-5ed7-87d4-c9c049a9dffb))(pin "B8"(uuid b06e88d9-22a8-5683-9f0f-7db347e7d427))(pin "B9"(uuid 4631fde2-7c27-5812-9ce6-8d1d12bd8d5e))(pin "B12"(uuid f55a2fed-81ac-541c-a10a-8000a190c759))(pin "S1"(uuid 62fe7e00-024e-5f97-a565-ef0eab508969))(instances(project "quadcuber"(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"(reference "J5")(unit 1)))))(wire(pts(xy 88.9 27.94)(xy 83.82000000000001 27.94))(stroke(width 0)(type default))(uuid 856acc56-5fc9-5e4d-9a18-accaa5bdf2d5))(global_label "GND"(shape bidirectional)(at 83.82000000000001 27.94 0)(effects (font (size 0.8 0.8)) )(uuid c9f3b620-43e3-5cb8-b4c8-82a6cfa6c926)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 83.82000000000001 27.94 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 88.9 30.48)(xy 83.82000000000001 30.48))(stroke(width 0)(type default))(uuid 36c469fa-4da7-55e4-ab3e-dac7a6549ed1))(global_label "USB_VBUS"(shape bidirectional)(at 83.82000000000001 30.48 0)(effects (font (size 0.8 0.8)) )(uuid 83553652-2cbd-5348-8aee-6edd136618c1)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 83.82000000000001 30.48 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 88.9 33.02)(xy 83.82000000000001 33.02))(stroke(width 0)(type default))(uuid 0da3cc4d-8e7c-51b1-9078-47594c95312b))(global_label "USB_CC1"(shape bidirectional)(at 83.82000000000001 33.02 0)(effects (font (size 0.8 0.8)) )(uuid bdd99d5e-28b3-56a5-a1dc-f32f8a382bdf)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 83.82000000000001 33.02 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 88.9 35.56)(xy 83.82000000000001 35.56))(stroke(width 0)(type default))(uuid 86189e1c-8ed2-597e-8904-146b6eed2271))(global_label "USB_DP"(shape bidirectional)(at 83.82000000000001 35.56 0)(effects (font (size 0.8 0.8)) )(uuid 4843b4aa-391d-5f8a-8377-f118ab28af1f)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 83.82000000000001 35.56 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 88.9 38.1)(xy 83.82000000000001 38.1))(stroke(width 0)(type default))(uuid 1cb0ebde-eb10-5dde-bab3-dc73afe2c2a7))(global_label "USB_DM"(shape bidirectional)(at 83.82000000000001 38.1 0)(effects (font (size 0.8 0.8)) )(uuid 9695a65f-6e21-5f74-803a-e0de1812996b)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 83.82000000000001 38.1 0)(effects (font (size 0.8 0.8)) (hide yes))))(no_connect(at 88.9 40.64)(uuid fc1341fc-c8ac-5a9b-8674-f61203f38237))(wire(pts(xy 88.9 43.18)(xy 83.82000000000001 43.18))(stroke(width 0)(type default))(uuid 316b8945-9fb0-5f93-9893-7dad6b8ef05d))(global_label "USB_VBUS"(shape bidirectional)(at 83.82000000000001 43.18 0)(effects (font (size 0.8 0.8)) )(uuid de3710cc-4d99-5006-a5ba-374921d9304b)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 83.82000000000001 43.18 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 88.9 45.72)(xy 83.82000000000001 45.72))(stroke(width 0)(type default))(uuid 3dea7de6-2b51-5035-8c3d-c15a9e8c8e10))(global_label "GND"(shape bidirectional)(at 83.82000000000001 45.72 0)(effects (font (size 0.8 0.8)) )(uuid ad37953a-63e4-56bd-9c91-3ba62473d1a6)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 83.82000000000001 45.72 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 88.9 48.260000000000005)(xy 83.82000000000001 48.260000000000005))(stroke(width 0)(type default))(uuid 1f55636d-9f19-58b5-babb-49a36520546f))(global_label "GND"(shape bidirectional)(at 83.82000000000001 48.260000000000005 0)(effects (font (size 0.8 0.8)) )(uuid be37399c-8421-5145-ab5f-2d9a00b42355)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 83.82000000000001 48.260000000000005 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 109.22 27.94)(xy 114.3 27.94))(stroke(width 0)(type default))(uuid 2d9da8ad-23d6-5047-b5ca-429e5f77e8d2))(global_label "USB_VBUS"(shape bidirectional)(at 114.3 27.94 180)(effects (font (size 0.8 0.8)) )(uuid 27327594-e761-5ca1-a6f7-7ab17f09fc59)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 114.3 27.94 180)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 109.22 30.48)(xy 114.3 30.48))(stroke(width 0)(type default))(uuid 95f31a40-93a8-5a9a-8ed0-e3f1981888aa))(global_label "USB_CC2"(shape bidirectional)(at 114.3 30.48 180)(effects (font (size 0.8 0.8)) )(uuid 44975dfc-7561-509c-8a90-761aedaa83d4)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 114.3 30.48 180)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 109.22 33.02)(xy 114.3 33.02))(stroke(width 0)(type default))(uuid 29e3a394-30ee-5259-9053-318aca0db16d))(global_label "USB_DP"(shape bidirectional)(at 114.3 33.02 180)(effects (font (size 0.8 0.8)) )(uuid 4085a1e7-7136-51e7-ac5e-6c2c59109416)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 114.3 33.02 180)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 109.22 35.56)(xy 114.3 35.56))(stroke(width 0)(type default))(uuid 9dcdc8f4-12bc-508e-8b72-eb46d0eceaa3))(global_label "USB_DM"(shape bidirectional)(at 114.3 35.56 180)(effects (font (size 0.8 0.8)) )(uuid f1f32d21-2a83-5c55-a701-72566833143d)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 114.3 35.56 180)(effects (font (size 0.8 0.8)) (hide yes))))(no_connect(at 109.22 38.1)(uuid 9e17165d-4bfb-5067-baab-faa3c036b8d3))(wire(pts(xy 109.22 40.64)(xy 114.3 40.64))(stroke(width 0)(type default))(uuid 23c44509-b35f-5123-9845-f43b9f4fbedc))(global_label "USB_VBUS"(shape bidirectional)(at 114.3 40.64 180)(effects (font (size 0.8 0.8)) )(uuid f7f266cf-1214-59b1-80ce-3cc7b1ba163c)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 114.3 40.64 180)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 109.22 43.18)(xy 114.3 43.18))(stroke(width 0)(type default))(uuid 7d0f05d4-7def-5160-89ac-cdb51cc327f5))(global_label "GND"(shape bidirectional)(at 114.3 43.18 180)(effects (font (size 0.8 0.8)) )(uuid d67b6c1e-6bf6-5b38-a2b1-735ec2f33bc2)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 114.3 43.18 180)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 109.22 45.72)(xy 114.3 45.72))(stroke(width 0)(type default))(uuid 350b9822-f4b9-5fc4-9226-bc4e8ada2bd9))(global_label "GND"(shape bidirectional)(at 114.3 45.72 180)(effects (font (size 0.8 0.8)) )(uuid 4278abf0-777a-5960-990c-0677a3b36c82)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 114.3 45.72 180)(effects (font (size 0.8 0.8)) (hide yes))))(symbol(lib_id "Quadcuber:R401")(at 162.56 38.1 0)(unit 1)(in_bom yes)(on_board yes)(dnp no)(uuid 5a3a90eb-6374-5b11-a1ec-347188fca16d)(property "Reference" "R401"(at 162.56 30.48 0)(effects (font (size 1.27 1.27)) ))(property "Value" "5.1k"(at 162.56 45.72 0)(effects (font (size 1.27 1.27)) ))(property "Footprint" "Quadcuber:R_0603_1608Metric"(at 162.56 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-075K1L"(at 162.56 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo"(at 162.56 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(pin "1"(uuid 02efe53a-acb1-5db3-853b-0f6136eb9181))(pin "2"(uuid 96f6b830-30b2-5f84-92b4-b589a0682636))(instances(project "quadcuber"(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"(reference "R401")(unit 1)))))(wire(pts(xy 152.4 38.1)(xy 147.32 38.1))(stroke(width 0)(type default))(uuid 185553c9-73f4-54f2-aba4-9b30c0bca008))(global_label "USB_CC1"(shape bidirectional)(at 147.32 38.1 0)(effects (font (size 0.8 0.8)) )(uuid 366b8d64-a29f-5a92-8230-17fa80276970)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 147.32 38.1 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 172.72 38.1)(xy 177.8 38.1))(stroke(width 0)(type default))(uuid b79ef883-0ab2-5065-88e8-cd43aa9ea534))(global_label "GND"(shape bidirectional)(at 177.8 38.1 180)(effects (font (size 0.8 0.8)) )(uuid 1648d54e-6105-5b7c-a0f0-cef5a056d597)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 177.8 38.1 180)(effects (font (size 0.8 0.8)) (hide yes))))(symbol(lib_id "Quadcuber:R402")(at 226.06 38.1 0)(unit 1)(in_bom yes)(on_board yes)(dnp no)(uuid e90acd74-2b29-5658-b158-1a68cd2b6e59)(property "Reference" "R402"(at 226.06 30.48 0)(effects (font (size 1.27 1.27)) ))(property "Value" "5.1k"(at 226.06 45.72 0)(effects (font (size 1.27 1.27)) ))(property "Footprint" "Quadcuber:R_0603_1608Metric"(at 226.06 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-075K1L"(at 226.06 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo"(at 226.06 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(pin "1"(uuid d6785205-3867-5ff9-8b91-3d3639617540))(pin "2"(uuid 6b979add-f4d1-5ab1-9dd3-67c255604301))(instances(project "quadcuber"(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"(reference "R402")(unit 1)))))(wire(pts(xy 215.9 38.1)(xy 210.82 38.1))(stroke(width 0)(type default))(uuid 5a7bbd8d-8d1f-509c-b66a-1bd7d85ead5e))(global_label "USB_CC2"(shape bidirectional)(at 210.82 38.1 0)(effects (font (size 0.8 0.8)) )(uuid 105f462b-ac67-5914-ac2b-f06d6a8a22a0)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 210.82 38.1 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 236.22 38.1)(xy 241.3 38.1))(stroke(width 0)(type default))(uuid 17c91806-18cc-528c-9fcb-918f49ffddb0))(global_label "GND"(shape bidirectional)(at 241.3 38.1 180)(effects (font (size 0.8 0.8)) )(uuid 6dee89ce-5904-5565-b46b-e85fa0c6a2f6)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 241.3 38.1 180)(effects (font (size 0.8 0.8)) (hide yes))))(symbol(lib_id "Quadcuber:F3")(at 289.56 38.1 0)(unit 1)(in_bom yes)(on_board yes)(dnp no)(uuid 28283adb-52a1-57d7-823b-6144410297a3)(property "Reference" "F3"(at 289.56 30.48 0)(effects (font (size 1.27 1.27)) ))(property "Value" "0.5A USB PTC"(at 289.56 45.72 0)(effects (font (size 1.27 1.27)) ))(property "Footprint" "Quadcuber:Fuse_1812_4532Metric"(at 289.56 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "MF-MSMF050-2"(at 289.56 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Bourns"(at 289.56 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(pin "1"(uuid 267fab7c-78b6-546a-aacb-b937472974dc))(pin "2"(uuid 7ecf56cc-c93c-5b0b-bfd1-27593cc3f0a1))(instances(project "quadcuber"(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"(reference "F3")(unit 1)))))(wire(pts(xy 279.4 38.1)(xy 274.32 38.1))(stroke(width 0)(type default))(uuid 33b8bd64-e282-5d8b-a0c7-98f60da6e081))(global_label "USB_VBUS"(shape bidirectional)(at 274.32 38.1 0)(effects (font (size 0.8 0.8)) )(uuid 7b8e74a3-0457-538c-9651-7d0f7894c951)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 274.32 38.1 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 299.72 38.1)(xy 304.8 38.1))(stroke(width 0)(type default))(uuid c74ab78a-7c90-5fcf-9873-e95b5723a050))(global_label "USB_FUSED"(shape bidirectional)(at 304.8 38.1 180)(effects (font (size 0.8 0.8)) )(uuid 3a495856-b9d4-5106-ad8e-03334f0161d8)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 304.8 38.1 180)(effects (font (size 0.8 0.8)) (hide yes))))(symbol(lib_id "Quadcuber:C423")(at 353.06 38.1 0)(unit 1)(in_bom yes)(on_board yes)(dnp no)(uuid f2bae750-3afc-5a6c-aa55-ac1ee6fdab61)(property "Reference" "C423"(at 353.06 30.48 0)(effects (font (size 1.27 1.27)) ))(property "Value" "1u/16V"(at 353.06 45.72 0)(effects (font (size 1.27 1.27)) ))(property "Footprint" "Quadcuber:C_0805_2012Metric"(at 353.06 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "GRM21BR71C105KA01L"(at 353.06 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Murata"(at 353.06 38.1 0)(effects (font (size 1.27 1.27)) (hide yes)))(pin "1"(uuid ff0fbe31-568d-52b4-9673-8f0adaf568a9))(pin "2"(uuid d49ef67a-5f77-59a4-ba7d-847e753eda46))(instances(project "quadcuber"(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"(reference "C423")(unit 1)))))(wire(pts(xy 342.9 38.1)(xy 337.82 38.1))(stroke(width 0)(type default))(uuid 6fe4131d-5ec0-5e6f-80cf-193c18cb3ed0))(global_label "USB_VBUS"(shape bidirectional)(at 337.82 38.1 0)(effects (font (size 0.8 0.8)) )(uuid 30d13265-484d-59cb-b7dd-a58b204ec662)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 337.82 38.1 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 363.22 38.1)(xy 368.3 38.1))(stroke(width 0)(type default))(uuid e51b00ba-b2ee-5bb5-99c9-ab9c09c68c74))(global_label "GND"(shape bidirectional)(at 368.3 38.1 180)(effects (font (size 0.8 0.8)) )(uuid 3aec6897-bf77-5e14-acc1-f8c9d126d6b1)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 368.3 38.1 180)(effects (font (size 0.8 0.8)) (hide yes))))(symbol(lib_id "Quadcuber:U6")(at 35.56 78.74000000000001 0)(unit 1)(in_bom yes)(on_board yes)(dnp no)(uuid b5267775-376d-5a3b-a48b-68651b049f6c)(property "Reference" "U6"(at 35.56 69.85000000000001 0)(effects (font (size 1.27 1.27)) ))(property "Value" "USBLC6-2SC6"(at 35.56 87.63000000000001 0)(effects (font (size 1.27 1.27)) ))(property "Footprint" "Quadcuber:SOT-23-6"(at 35.56 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "USBLC6-2SC6"(at 35.56 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "STMicroelectronics"(at 35.56 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(pin "1"(uuid c34d6565-b77c-54f2-8f7a-5fd901851c23))(pin "2"(uuid 16c9a3e3-6865-5886-90e1-fc151eeec609))(pin "3"(uuid 9f28ae27-a072-52d4-8baf-1d26f0755df8))(pin "4"(uuid 6ccae118-a8e8-5e75-80a5-f456470bbc61))(pin "5"(uuid 7228acba-6536-56a5-bec3-b2b827880228))(pin "6"(uuid 64411d25-6f79-5e8b-98dc-70705656201c))(instances(project "quadcuber"(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"(reference "U6")(unit 1)))))(wire(pts(xy 25.400000000000002 76.2)(xy 20.32 76.2))(stroke(width 0)(type default))(uuid 533f4e8b-26f5-55ee-887a-c30cdd7a9005))(global_label "USB_DP"(shape bidirectional)(at 20.32 76.2 0)(effects (font (size 0.8 0.8)) )(uuid aa264aef-4121-535e-8a28-f1b20c0173e5)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 20.32 76.2 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 25.400000000000002 78.74000000000001)(xy 20.32 78.74000000000001))(stroke(width 0)(type default))(uuid f56ce459-43c6-5f64-9f19-a47cb37ce70c))(global_label "GND"(shape bidirectional)(at 20.32 78.74000000000001 0)(effects (font (size 0.8 0.8)) )(uuid 2d0cefac-d557-5f05-9d50-c1f06de75069)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 20.32 78.74000000000001 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 25.400000000000002 81.28000000000002)(xy 20.32 81.28000000000002))(stroke(width 0)(type default))(uuid 309190f5-3e18-5a00-a96d-53c5653f4479))(global_label "USB_DM"(shape bidirectional)(at 20.32 81.28000000000002 0)(effects (font (size 0.8 0.8)) )(uuid 19dac92d-d56f-54c7-804d-dbdf5c4685d7)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 20.32 81.28000000000002 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 45.72 76.2)(xy 50.8 76.2))(stroke(width 0)(type default))(uuid 76e20756-0f50-58a7-a06e-0c098afbb20c))(global_label "USB_DM"(shape bidirectional)(at 50.8 76.2 180)(effects (font (size 0.8 0.8)) )(uuid d3b8aea5-718e-5326-a157-f81b14efe525)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 50.8 76.2 180)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 45.72 78.74000000000001)(xy 50.8 78.74000000000001))(stroke(width 0)(type default))(uuid 687f2955-e0bb-587a-bc2d-d00da031f7a3))(global_label "VSYS"(shape bidirectional)(at 50.8 78.74000000000001 180)(effects (font (size 0.8 0.8)) )(uuid e54dd8fd-e24e-5a9e-9285-8aa1dba4703d)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 50.8 78.74000000000001 180)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 45.72 81.28000000000002)(xy 50.8 81.28000000000002))(stroke(width 0)(type default))(uuid e4f67de7-8bdf-577d-87a2-6a9b56d2bb1e))(global_label "USB_DP"(shape bidirectional)(at 50.8 81.28000000000002 180)(effects (font (size 0.8 0.8)) )(uuid e0566b4b-e853-5a17-8a8f-95352a0961da)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 50.8 81.28000000000002 180)(effects (font (size 0.8 0.8)) (hide yes))))(symbol(lib_id "Quadcuber:R403")(at 99.06 78.74000000000001 0)(unit 1)(in_bom yes)(on_board yes)(dnp no)(uuid 0ced63a4-606c-50ba-b4a6-fdfc4b054c24)(property "Reference" "R403"(at 99.06 71.12 0)(effects (font (size 1.27 1.27)) ))(property "Value" "27"(at 99.06 86.36000000000001 0)(effects (font (size 1.27 1.27)) ))(property "Footprint" "Quadcuber:R_0402_1005Metric"(at 99.06 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0402FR-0727RL"(at 99.06 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo"(at 99.06 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(pin "1"(uuid 4abe47b8-4373-51fd-a8f9-006bc3d01a34))(pin "2"(uuid b8105554-eb23-5610-af53-1cf67c0d8902))(instances(project "quadcuber"(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"(reference "R403")(unit 1)))))(wire(pts(xy 88.9 78.74000000000001)(xy 83.82000000000001 78.74000000000001))(stroke(width 0)(type default))(uuid 34317d00-3548-5db3-8e00-0e03f9c71fda))(global_label "USB_DM"(shape bidirectional)(at 83.82000000000001 78.74000000000001 0)(effects (font (size 0.8 0.8)) )(uuid 2cd49234-3aa0-5fc5-9049-954ad217587b)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 83.82000000000001 78.74000000000001 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 109.22 78.74000000000001)(xy 114.3 78.74000000000001))(stroke(width 0)(type default))(uuid 2fc9ab78-86b7-5c48-9b1a-9bc70c8b19ac))(global_label "USB_DM_MCU"(shape bidirectional)(at 114.3 78.74000000000001 180)(effects (font (size 0.8 0.8)) )(uuid 484a671f-5a34-5a1d-b97d-08e691665ac1)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 114.3 78.74000000000001 180)(effects (font (size 0.8 0.8)) (hide yes))))(symbol(lib_id "Quadcuber:R404")(at 162.56 78.74000000000001 0)(unit 1)(in_bom yes)(on_board yes)(dnp no)(uuid 6be264f4-5ca8-5750-8896-d5252495143d)(property "Reference" "R404"(at 162.56 71.12 0)(effects (font (size 1.27 1.27)) ))(property "Value" "27"(at 162.56 86.36000000000001 0)(effects (font (size 1.27 1.27)) ))(property "Footprint" "Quadcuber:R_0402_1005Metric"(at 162.56 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0402FR-0727RL"(at 162.56 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo"(at 162.56 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(pin "1"(uuid 3a1c4b44-79b5-5d82-a6f4-beaf6794c993))(pin "2"(uuid 9827fb52-ecfc-5efb-9146-328fe9345d5d))(instances(project "quadcuber"(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"(reference "R404")(unit 1)))))(wire(pts(xy 152.4 78.74000000000001)(xy 147.32 78.74000000000001))(stroke(width 0)(type default))(uuid d424cb01-28d1-512a-b022-be314bb0a019))(global_label "USB_DP"(shape bidirectional)(at 147.32 78.74000000000001 0)(effects (font (size 0.8 0.8)) )(uuid 6bc5e52c-cea9-5cb3-a061-273ff03e57d8)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 147.32 78.74000000000001 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 172.72 78.74000000000001)(xy 177.8 78.74000000000001))(stroke(width 0)(type default))(uuid 10078640-f5fd-568c-ae50-09774a9283b4))(global_label "USB_DP_MCU"(shape bidirectional)(at 177.8 78.74000000000001 180)(effects (font (size 0.8 0.8)) )(uuid f1037290-45bc-5861-ada0-149acf947d29)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 177.8 78.74000000000001 180)(effects (font (size 0.8 0.8)) (hide yes))))(symbol(lib_id "Quadcuber:C427")(at 226.06 78.74000000000001 0)(unit 1)(in_bom yes)(on_board yes)(dnp no)(uuid 0144128c-1ab6-551a-bf99-766c9ba59cff)(property "Reference" "C427"(at 226.06 71.12 0)(effects (font (size 1.27 1.27)) ))(property "Value" "100n"(at 226.06 86.36000000000001 0)(effects (font (size 1.27 1.27)) ))(property "Footprint" "Quadcuber:C_0402_1005Metric"(at 226.06 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "GRM155R71C104KA88D"(at 226.06 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Murata"(at 226.06 78.74000000000001 0)(effects (font (size 1.27 1.27)) (hide yes)))(pin "1"(uuid 6bb752c7-b4c0-5e1c-b59f-16b72bde95af))(pin "2"(uuid 209d4a1e-0744-5823-ab16-51ed6ee1c47c))(instances(project "quadcuber"(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"(reference "C427")(unit 1)))))(wire(pts(xy 215.9 78.74000000000001)(xy 210.82 78.74000000000001))(stroke(width 0)(type default))(uuid 4bfb906b-9a08-5e95-8b61-bc847f4c2f05))(global_label "VSYS"(shape bidirectional)(at 210.82 78.74000000000001 0)(effects (font (size 0.8 0.8)) )(uuid c6b0c99f-22cb-5706-b0c4-5c0f1126c413)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 210.82 78.74000000000001 0)(effects (font (size 0.8 0.8)) (hide yes))))(wire(pts(xy 236.22 78.74000000000001)(xy 241.3 78.74000000000001))(stroke(width 0)(type default))(uuid ceb7757b-f2ad-51b7-bbf7-ecc1a952a163))(global_label "GND"(shape bidirectional)(at 241.3 78.74000000000001 180)(effects (font (size 0.8 0.8)) )(uuid e81fcf1d-d9d0-5454-ba83-ba7a3b996087)(property "Intersheetrefs" "${INTERSHEET_REFS}"(at 241.3 78.74000000000001 180)(effects (font (size 0.8 0.8)) (hide yes))))(embedded_fonts no))
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "a88cae6a-0eef-5b67-9774-cc5ba03fda5d")
+	(paper "A3")
+	(title_block
+		(title "Quadcuber A1 / usb / ENGINEERING HOLD")
+		(rev "A1")
+	)
+	(lib_symbols
+		(symbol "Quadcuber:C423"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C423"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "1u/16V"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" "Quadcuber:C_0805_2012Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C423_0_1"
+				(polyline
+					(pts
+						(xy -7.62 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -3.81) (xy -1.27 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -3.81) (xy 1.27 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C423_1_1"
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Quadcuber:C427"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C427"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "100n"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" "Quadcuber:C_0402_1005Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C427_0_1"
+				(polyline
+					(pts
+						(xy -7.62 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -3.81) (xy -1.27 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -3.81) (xy 1.27 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C427_1_1"
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Quadcuber:D5"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D5"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "SS14 USB isolation"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" "Quadcuber:D_SMA"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D5_0_1"
+				(polyline
+					(pts
+						(xy -7.62 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 2.54 -2.54) (xy 2.54 2.54) (xy -2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -2.54) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D5_1_1"
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Quadcuber:F3"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "F3"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "0.5A USB PTC"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" "Quadcuber:Fuse_1812_4532Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "F3_0_1"
+				(polyline
+					(pts
+						(xy -7.62 0) (xy -3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -3.81 1.27)
+					(end 3.81 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 0) (xy 3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "F3_1_1"
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Quadcuber:J5"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J5"
+				(at 0 15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "USB-C data / BOOTSEL"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" "Quadcuber:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "J5_0_1"
+				(rectangle
+					(start -7.62 12.7)
+					(end 7.62 -12.7)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "J5_1_1"
+				(pin passive line
+					(at -10.16 10.16 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "A1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 7.62 0)
+					(length 2.54)
+					(name "A4"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "A4"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "A5"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "A5"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "A6"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "A6"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "A7"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "A7"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "A8"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "A8"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "A9"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "A9"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -7.62 0)
+					(length 2.54)
+					(name "A12"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "A12"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -10.16 0)
+					(length 2.54)
+					(name "B1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "B1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 10.16 180)
+					(length 2.54)
+					(name "B4"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "B4"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 7.62 180)
+					(length 2.54)
+					(name "B5"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "B5"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "B6"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "B6"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "B7"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "B7"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "B8"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "B8"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "B9"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "B9"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "B12"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "B12"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 -7.62 180)
+					(length 2.54)
+					(name "S1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "S1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Quadcuber:R401"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R401"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "5.1k"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" "Quadcuber:R_0603_1608Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R401_0_1"
+				(polyline
+					(pts
+						(xy -7.62 0) (xy -3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -3.81 1.27)
+					(end 3.81 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R401_1_1"
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Quadcuber:R402"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R402"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "5.1k"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" "Quadcuber:R_0603_1608Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R402_0_1"
+				(polyline
+					(pts
+						(xy -7.62 0) (xy -3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -3.81 1.27)
+					(end 3.81 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R402_1_1"
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Quadcuber:R403"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R403"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "27"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" "Quadcuber:R_0402_1005Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R403_0_1"
+				(polyline
+					(pts
+						(xy -7.62 0) (xy -3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -3.81 1.27)
+					(end 3.81 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R403_1_1"
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Quadcuber:R404"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R404"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "27"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" "Quadcuber:R_0402_1005Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R404_0_1"
+				(polyline
+					(pts
+						(xy -7.62 0) (xy -3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -3.81 1.27)
+					(end 3.81 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R404_1_1"
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Quadcuber:U6"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U6"
+				(at 0 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "USBLC6-2SC6"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" "Quadcuber:SOT-23-6"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "U6_0_1"
+				(rectangle
+					(start -7.62 5.08)
+					(end 7.62 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "U6_1_1"
+				(pin passive line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "IO1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "IO2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "IO2"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "VBUS"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "IO1"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 0.75 0.75)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(no_connect
+		(at 109.22 38.1)
+		(uuid "9e17165d-4bfb-5067-baab-faa3c036b8d3")
+	)
+	(no_connect
+		(at 88.9 40.64)
+		(uuid "fc1341fc-c8ac-5a9b-8674-f61203f38237")
+	)
+	(wire
+		(pts
+			(xy 25.4 38.1) (xy 20.32 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0766a503-2ca6-500b-849f-f587d9cceb02")
+	)
+	(wire
+		(pts
+			(xy 88.9 33.02) (xy 83.82 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0da3cc4d-8e7c-51b1-9078-47594c95312b")
+	)
+	(wire
+		(pts
+			(xy 172.72 78.74) (xy 177.8 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10078640-f5fd-568c-ae50-09774a9283b4")
+	)
+	(wire
+		(pts
+			(xy 236.22 38.1) (xy 241.3 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17c91806-18cc-528c-9fcb-918f49ffddb0")
+	)
+	(wire
+		(pts
+			(xy 152.4 38.1) (xy 147.32 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "185553c9-73f4-54f2-aba4-9b30c0bca008")
+	)
+	(wire
+		(pts
+			(xy 88.9 38.1) (xy 83.82 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cb0ebde-eb10-5dde-bab3-dc73afe2c2a7")
+	)
+	(wire
+		(pts
+			(xy 88.9 48.26) (xy 83.82 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f55636d-9f19-58b5-babb-49a36520546f")
+	)
+	(wire
+		(pts
+			(xy 109.22 40.64) (xy 114.3 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23c44509-b35f-5123-9845-f43b9f4fbedc")
+	)
+	(wire
+		(pts
+			(xy 109.22 33.02) (xy 114.3 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29e3a394-30ee-5259-9053-318aca0db16d")
+	)
+	(wire
+		(pts
+			(xy 109.22 27.94) (xy 114.3 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d9da8ad-23d6-5047-b5ca-429e5f77e8d2")
+	)
+	(wire
+		(pts
+			(xy 109.22 78.74) (xy 114.3 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fc9ab78-86b7-5c48-9b1a-9bc70c8b19ac")
+	)
+	(wire
+		(pts
+			(xy 25.4 81.28) (xy 20.32 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "309190f5-3e18-5a00-a96d-53c5653f4479")
+	)
+	(wire
+		(pts
+			(xy 88.9 43.18) (xy 83.82 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "316b8945-9fb0-5f93-9893-7dad6b8ef05d")
+	)
+	(wire
+		(pts
+			(xy 279.4 38.1) (xy 274.32 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33b8bd64-e282-5d8b-a0c7-98f60da6e081")
+	)
+	(wire
+		(pts
+			(xy 88.9 78.74) (xy 83.82 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34317d00-3548-5db3-8e00-0e03f9c71fda")
+	)
+	(wire
+		(pts
+			(xy 109.22 45.72) (xy 114.3 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "350b9822-f4b9-5fc4-9226-bc4e8ada2bd9")
+	)
+	(wire
+		(pts
+			(xy 88.9 30.48) (xy 83.82 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36c469fa-4da7-55e4-ab3e-dac7a6549ed1")
+	)
+	(wire
+		(pts
+			(xy 88.9 45.72) (xy 83.82 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3dea7de6-2b51-5035-8c3d-c15a9e8c8e10")
+	)
+	(wire
+		(pts
+			(xy 215.9 78.74) (xy 210.82 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4bfb906b-9a08-5e95-8b61-bc847f4c2f05")
+	)
+	(wire
+		(pts
+			(xy 25.4 76.2) (xy 20.32 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "533f4e8b-26f5-55ee-887a-c30cdd7a9005")
+	)
+	(wire
+		(pts
+			(xy 215.9 38.1) (xy 210.82 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a7bbd8d-8d1f-509c-b66a-1bd7d85ead5e")
+	)
+	(wire
+		(pts
+			(xy 45.72 78.74) (xy 50.8 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "687f2955-e0bb-587a-bc2d-d00da031f7a3")
+	)
+	(wire
+		(pts
+			(xy 342.9 38.1) (xy 337.82 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fe4131d-5ec0-5e6f-80cf-193c18cb3ed0")
+	)
+	(wire
+		(pts
+			(xy 45.72 76.2) (xy 50.8 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76e20756-0f50-58a7-a06e-0c098afbb20c")
+	)
+	(wire
+		(pts
+			(xy 109.22 43.18) (xy 114.3 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d0f05d4-7def-5160-89ac-cdb51cc327f5")
+	)
+	(wire
+		(pts
+			(xy 88.9 27.94) (xy 83.82 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "856acc56-5fc9-5e4d-9a18-accaa5bdf2d5")
+	)
+	(wire
+		(pts
+			(xy 88.9 35.56) (xy 83.82 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86189e1c-8ed2-597e-8904-146b6eed2271")
+	)
+	(wire
+		(pts
+			(xy 109.22 30.48) (xy 114.3 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95f31a40-93a8-5a9a-8ed0-e3f1981888aa")
+	)
+	(wire
+		(pts
+			(xy 109.22 35.56) (xy 114.3 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dcdc8f4-12bc-508e-8b72-eb46d0eceaa3")
+	)
+	(wire
+		(pts
+			(xy 172.72 38.1) (xy 177.8 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b79ef883-0ab2-5065-88e8-cd43aa9ea534")
+	)
+	(wire
+		(pts
+			(xy 299.72 38.1) (xy 304.8 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c74ab78a-7c90-5fcf-9873-e95b5723a050")
+	)
+	(wire
+		(pts
+			(xy 236.22 78.74) (xy 241.3 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ceb7757b-f2ad-51b7-bbf7-ecc1a952a163")
+	)
+	(wire
+		(pts
+			(xy 152.4 78.74) (xy 147.32 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d424cb01-28d1-512a-b022-be314bb0a019")
+	)
+	(wire
+		(pts
+			(xy 45.72 81.28) (xy 50.8 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4f67de7-8bdf-577d-87a2-6a9b56d2bb1e")
+	)
+	(wire
+		(pts
+			(xy 363.22 38.1) (xy 368.3 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e51b00ba-b2ee-5bb5-99c9-ab9c09c68c74")
+	)
+	(wire
+		(pts
+			(xy 45.72 38.1) (xy 50.8 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2a0a07c-c333-503b-b397-81c8710df580")
+	)
+	(wire
+		(pts
+			(xy 25.4 78.74) (xy 20.32 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f56ce459-43c6-5f64-9f19-a47cb37ce70c")
+	)
+	(global_label "USB_CC2"
+		(shape bidirectional)
+		(at 210.82 38.1 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "105f462b-ac67-5914-ac2b-f06d6a8a22a0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 210.82 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 177.8 38.1 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "1648d54e-6105-5b7c-a0f0-cef5a056d597")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 177.8 38.1 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DM"
+		(shape bidirectional)
+		(at 20.32 81.28 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "19dac92d-d56f-54c7-804d-dbdf5c4685d7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 20.32 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_VBUS"
+		(shape bidirectional)
+		(at 114.3 27.94 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "27327594-e761-5ca1-a6f7-7ab17f09fc59")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 114.3 27.94 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DM"
+		(shape bidirectional)
+		(at 83.82 78.74 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "2cd49234-3aa0-5fc5-9049-954ad217587b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 20.32 78.74 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "2d0cefac-d557-5f05-9d50-c1f06de75069")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 20.32 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_VBUS"
+		(shape bidirectional)
+		(at 337.82 38.1 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "30d13265-484d-59cb-b7dd-a58b204ec662")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 337.82 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_CC1"
+		(shape bidirectional)
+		(at 147.32 38.1 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "366b8d64-a29f-5a92-8230-17fa80276970")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_FUSED"
+		(shape bidirectional)
+		(at 304.8 38.1 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "3a495856-b9d4-5106-ad8e-03334f0161d8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 304.8 38.1 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 368.3 38.1 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "3aec6897-bf77-5e14-acc1-f8c9d126d6b1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 368.3 38.1 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "VSYS"
+		(shape bidirectional)
+		(at 20.32 38.1 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "3b84ba4c-f83c-57cc-abe3-3b921ed97997")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 20.32 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DP"
+		(shape bidirectional)
+		(at 114.3 33.02 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "4085a1e7-7136-51e7-ac5e-6c2c59109416")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 114.3 33.02 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 114.3 45.72 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "4278abf0-777a-5960-990c-0677a3b36c82")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 114.3 45.72 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_CC2"
+		(shape bidirectional)
+		(at 114.3 30.48 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "44975dfc-7561-509c-8a90-761aedaa83d4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 114.3 30.48 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DP"
+		(shape bidirectional)
+		(at 83.82 35.56 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "4843b4aa-391d-5f8a-8377-f118ab28af1f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DM_MCU"
+		(shape bidirectional)
+		(at 114.3 78.74 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "484a671f-5a34-5a1d-b97d-08e691665ac1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 114.3 78.74 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DP"
+		(shape bidirectional)
+		(at 147.32 78.74 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "6bc5e52c-cea9-5cb3-a061-273ff03e57d8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 241.3 38.1 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "6dee89ce-5904-5565-b46b-e85fa0c6a2f6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 241.3 38.1 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_VBUS"
+		(shape bidirectional)
+		(at 274.32 38.1 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "7b8e74a3-0457-538c-9651-7d0f7894c951")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 274.32 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_VBUS"
+		(shape bidirectional)
+		(at 83.82 30.48 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "83553652-2cbd-5348-8aee-6edd136618c1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DM"
+		(shape bidirectional)
+		(at 83.82 38.1 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "9695a65f-6e21-5f74-803a-e0de1812996b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_FUSED"
+		(shape bidirectional)
+		(at 50.8 38.1 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "a1b4a226-b516-5618-9a1d-d66535810cf8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 50.8 38.1 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DP"
+		(shape bidirectional)
+		(at 20.32 76.2 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "aa264aef-4121-535e-8a28-f1b20c0173e5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 20.32 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 83.82 45.72 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "ad37953a-63e4-56bd-9c91-3ba62473d1a6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_CC1"
+		(shape bidirectional)
+		(at 83.82 33.02 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "bdd99d5e-28b3-56a5-a1dc-f32f8a382bdf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 83.82 48.26 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "be37399c-8421-5145-ab5f-2d9a00b42355")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "VSYS"
+		(shape bidirectional)
+		(at 210.82 78.74 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "c6b0c99f-22cb-5706-b0c4-5c0f1126c413")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 210.82 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 83.82 27.94 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "c9f3b620-43e3-5cb8-b4c8-82a6cfa6c926")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DM"
+		(shape bidirectional)
+		(at 50.8 76.2 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "d3b8aea5-718e-5326-a157-f81b14efe525")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 50.8 76.2 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 114.3 43.18 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "d67b6c1e-6bf6-5b38-a2b1-735ec2f33bc2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 114.3 43.18 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_VBUS"
+		(shape bidirectional)
+		(at 83.82 43.18 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "de3710cc-4d99-5006-a5ba-374921d9304b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DP"
+		(shape bidirectional)
+		(at 50.8 81.28 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "e0566b4b-e853-5a17-8a8f-95352a0961da")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 50.8 81.28 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "VSYS"
+		(shape bidirectional)
+		(at 50.8 78.74 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "e54dd8fd-e24e-5a9e-9285-8aa1dba4703d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 50.8 78.74 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 241.3 78.74 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "e81fcf1d-d9d0-5454-ba83-ba7a3b996087")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 241.3 78.74 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DP_MCU"
+		(shape bidirectional)
+		(at 177.8 78.74 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "f1037290-45bc-5861-ada0-149acf947d29")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 177.8 78.74 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_DM"
+		(shape bidirectional)
+		(at 114.3 35.56 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "f1f32d21-2a83-5c55-a701-72566833143d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 114.3 35.56 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(global_label "USB_VBUS"
+		(shape bidirectional)
+		(at 114.3 40.64 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "f7f266cf-1214-59b1-80ce-3cc7b1ba163c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 114.3 40.64 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Quadcuber:D5")
+		(at 35.56 38.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00bab47a-ea8c-54c3-956a-73bc71cf4fea")
+		(property "Reference" "D5"
+			(at 35.56 30.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS14 USB isolation"
+			(at 35.56 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Quadcuber:D_SMA"
+			(at 35.56 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35.56 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 35.56 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "SS14-E3/61T"
+			(at 35.56 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 35.56 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1ff07f56-dced-5d1b-90e5-71cecb529974")
+		)
+		(pin "2"
+			(uuid "626091d2-da05-543a-acf8-f21f9f021596")
+		)
+		(instances
+			(project "quadcuber"
+				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Quadcuber:C427")
+		(at 226.06 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0144128c-1ab6-551a-bf99-766c9ba59cff")
+		(property "Reference" "C427"
+			(at 226.06 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100n"
+			(at 226.06 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Quadcuber:C_0402_1005Metric"
+			(at 226.06 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71C104KA88D"
+			(at 226.06 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 226.06 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6bb752c7-b4c0-5e1c-b59f-16b72bde95af")
+		)
+		(pin "2"
+			(uuid "209d4a1e-0744-5823-ab16-51ed6ee1c47c")
+		)
+		(instances
+			(project "quadcuber"
+				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"
+					(reference "C427")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Quadcuber:R403")
+		(at 99.06 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0ced63a4-606c-50ba-b4a6-fdfc4b054c24")
+		(property "Reference" "R403"
+			(at 99.06 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "27"
+			(at 99.06 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Quadcuber:R_0402_1005Metric"
+			(at 99.06 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-0727RL"
+			(at 99.06 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 99.06 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4abe47b8-4373-51fd-a8f9-006bc3d01a34")
+		)
+		(pin "2"
+			(uuid "b8105554-eb23-5610-af53-1cf67c0d8902")
+		)
+		(instances
+			(project "quadcuber"
+				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"
+					(reference "R403")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Quadcuber:F3")
+		(at 289.56 38.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "28283adb-52a1-57d7-823b-6144410297a3")
+		(property "Reference" "F3"
+			(at 289.56 30.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.5A USB PTC"
+			(at 289.56 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Quadcuber:Fuse_1812_4532Metric"
+			(at 289.56 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 289.56 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 289.56 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MF-MSMF050-2"
+			(at 289.56 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Bourns"
+			(at 289.56 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "267fab7c-78b6-546a-aacb-b937472974dc")
+		)
+		(pin "2"
+			(uuid "7ecf56cc-c93c-5b0b-bfd1-27593cc3f0a1")
+		)
+		(instances
+			(project "quadcuber"
+				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"
+					(reference "F3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Quadcuber:R401")
+		(at 162.56 38.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5a3a90eb-6374-5b11-a1ec-347188fca16d")
+		(property "Reference" "R401"
+			(at 162.56 30.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 162.56 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Quadcuber:R_0603_1608Metric"
+			(at 162.56 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-075K1L"
+			(at 162.56 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 162.56 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "02efe53a-acb1-5db3-853b-0f6136eb9181")
+		)
+		(pin "2"
+			(uuid "96f6b830-30b2-5f84-92b4-b589a0682636")
+		)
+		(instances
+			(project "quadcuber"
+				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"
+					(reference "R401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Quadcuber:J5")
+		(at 99.06 38.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "67a31cb4-925a-5a6f-ba89-d0e72742d31f")
+		(property "Reference" "J5"
+			(at 99.06 21.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB-C data / BOOTSEL"
+			(at 99.06 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Quadcuber:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
+			(at 99.06 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "USB4105-GF-A"
+			(at 99.06 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "GCT"
+			(at 99.06 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "A1"
+			(uuid "ff0067bb-9016-5679-ae6b-5f2fb56d4b2f")
+		)
+		(pin "A4"
+			(uuid "bbfbace7-a413-5489-9b0e-76cb951f70bb")
+		)
+		(pin "A5"
+			(uuid "1086814c-2b73-5722-b512-d05e3d21dd51")
+		)
+		(pin "A6"
+			(uuid "641c8c09-0ca0-52ec-8e7d-4dbf6e38f4e2")
+		)
+		(pin "A7"
+			(uuid "f6b62d25-4745-5444-9f0b-ff854347b6aa")
+		)
+		(pin "A8"
+			(uuid "223e6305-5ed3-5387-948b-6893b33e2dd8")
+		)
+		(pin "A9"
+			(uuid "d5c66222-003c-57ef-b3ca-5345514044ee")
+		)
+		(pin "A12"
+			(uuid "dc52e58b-6017-5d05-9b75-83ba40ced1bd")
+		)
+		(pin "B1"
+			(uuid "ee2d52e7-cb56-5f21-995f-9646d247a4c5")
+		)
+		(pin "B4"
+			(uuid "6fcb0718-1cd3-5667-a48e-cdaf1a9ac27b")
+		)
+		(pin "B5"
+			(uuid "baffaffa-a26a-5d50-a0b4-579a97c6c963")
+		)
+		(pin "B6"
+			(uuid "c23c8bfd-960f-5910-8835-7380814a47ca")
+		)
+		(pin "B7"
+			(uuid "5f9e05be-5097-5ed7-87d4-c9c049a9dffb")
+		)
+		(pin "B8"
+			(uuid "b06e88d9-22a8-5683-9f0f-7db347e7d427")
+		)
+		(pin "B9"
+			(uuid "4631fde2-7c27-5812-9ce6-8d1d12bd8d5e")
+		)
+		(pin "B12"
+			(uuid "f55a2fed-81ac-541c-a10a-8000a190c759")
+		)
+		(pin "S1"
+			(uuid "62fe7e00-024e-5f97-a565-ef0eab508969")
+		)
+		(instances
+			(project "quadcuber"
+				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Quadcuber:R404")
+		(at 162.56 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6be264f4-5ca8-5750-8896-d5252495143d")
+		(property "Reference" "R404"
+			(at 162.56 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "27"
+			(at 162.56 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Quadcuber:R_0402_1005Metric"
+			(at 162.56 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-0727RL"
+			(at 162.56 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 162.56 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3a1c4b44-79b5-5d82-a6f4-beaf6794c993")
+		)
+		(pin "2"
+			(uuid "9827fb52-ecfc-5efb-9146-328fe9345d5d")
+		)
+		(instances
+			(project "quadcuber"
+				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"
+					(reference "R404")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Quadcuber:U6")
+		(at 35.56 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b5267775-376d-5a3b-a48b-68651b049f6c")
+		(property "Reference" "U6"
+			(at 35.56 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USBLC6-2SC6"
+			(at 35.56 87.63 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Quadcuber:SOT-23-6"
+			(at 35.56 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35.56 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 35.56 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "USBLC6-2SC6"
+			(at 35.56 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "STMicroelectronics"
+			(at 35.56 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c34d6565-b77c-54f2-8f7a-5fd901851c23")
+		)
+		(pin "2"
+			(uuid "16c9a3e3-6865-5886-90e1-fc151eeec609")
+		)
+		(pin "3"
+			(uuid "9f28ae27-a072-52d4-8baf-1d26f0755df8")
+		)
+		(pin "4"
+			(uuid "6ccae118-a8e8-5e75-80a5-f456470bbc61")
+		)
+		(pin "5"
+			(uuid "7228acba-6536-56a5-bec3-b2b827880228")
+		)
+		(pin "6"
+			(uuid "64411d25-6f79-5e8b-98dc-70705656201c")
+		)
+		(instances
+			(project "quadcuber"
+				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Quadcuber:R402")
+		(at 226.06 38.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e90acd74-2b29-5658-b158-1a68cd2b6e59")
+		(property "Reference" "R402"
+			(at 226.06 30.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 226.06 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Quadcuber:R_0603_1608Metric"
+			(at 226.06 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-075K1L"
+			(at 226.06 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 226.06 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d6785205-3867-5ff9-8b91-3d3639617540")
+		)
+		(pin "2"
+			(uuid "6b979add-f4d1-5ab1-9dd3-67c255604301")
+		)
+		(instances
+			(project "quadcuber"
+				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"
+					(reference "R402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Quadcuber:C423")
+		(at 353.06 38.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f2bae750-3afc-5a6c-aa55-ac1ee6fdab61")
+		(property "Reference" "C423"
+			(at 353.06 30.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1u/16V"
+			(at 353.06 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Quadcuber:C_0805_2012Metric"
+			(at 353.06 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 353.06 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 353.06 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM21BR71C105KA01L"
+			(at 353.06 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 353.06 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ff0fbe31-568d-52b4-9673-8f0adaf568a9")
+		)
+		(pin "2"
+			(uuid "d49ef67a-5f77-59a4-ba7d-847e753eda46")
+		)
+		(instances
+			(project "quadcuber"
+				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/b9e9bff5-278e-52b2-b42a-ecb9cf9dd010"
+					(reference "C423")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 """Independent net-contract checks; compare EDA-exported XML and physical PCB pads."""
-import json,runpy,sys,xml.etree.ElementTree as ET
+import json,os,runpy,subprocess,sys,xml.etree.ElementTree as ET
 from pathlib import Path
+from toolchain import python_command, require_version
+if (os.environ.get('KICAD_PYTHON') or os.environ.get('KICAD_APP_RUN')) and not os.environ.get('QUADCUBER_PCBNEW_CHILD'):
+    env=dict(os.environ,QUADCUBER_PCBNEW_CHILD='1')
+    raise SystemExit(subprocess.call([*python_command(),str(Path(__file__).resolve()),*sys.argv[1:]],env=env))
 import pcbnew as p
+require_version(p.GetBuildVersion())
 H=Path(__file__).resolve().parent;R=H.parent;O=R/'generated/electronics'
 arms=runpy.run_path(str(R/'wiring/spec.py'))['ARMS']
 tree=ET.parse(O/'netlist.xml'); xmlnets={}
@@ -27,6 +32,7 @@ for i,(arm,(motor,enc,servo,sm)) in enumerate(arms.items()):
 for ref,pins in {'F1':{1:'VIN',2:'VIN_FUSED'},'R500':{1:'VM',2:'GND'},'R501':{1:'VM',2:'GND'}}.items():
     for pin,net in pins.items():check(ref,pin,net)
 verified_mpn={'F1':'0407008.WR','R500':'CRCW2512300RFKEG','R501':'CRCW2512300RFKEG'}
+verified_mpn['U7']='W25Q16RVCNJQ'
 for refs,mpn in [(['F10','F11','F12','F13'],'MF-MSMF110/16X-2'),(['C20','C30','C101','C121','C141','C161'],'GRM32DR71E106KA12L'),(['C420','C421'],'GRM155R61C105KA12D'),(['C422'],'C0805C475K4PACTU'),(['C25','C35'],'C0603C750J5GACTU')]:
     verified_mpn.update(dict.fromkeys(refs,mpn))
 for ref,mpn in verified_mpn.items():

@@ -1,0 +1,12 @@
+Native XOR semantic check of expanded operator
+Vhi hi 0 1
+Vlo lo 0 0
+B00 a 0 V=(v(lo) > .5) ^ (v(lo) > .5)
+B01 b 0 V=(v(lo) > .5) ^ (v(hi) > .5)
+B10 c 0 V=(v(hi) > .5) ^ (v(lo) > .5)
+B11 d 0 V=(v(hi) > .5) ^ (v(hi) > .5)
+.control
+op
+print v(a) v(b) v(c) v(d)
+.endc
+.end

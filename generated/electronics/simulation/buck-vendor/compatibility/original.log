@@ -1,0 +1,43 @@
+stderr Warning: can't find the initialization file spinit.
+stdout ******
+stdout ** ngspice-44.2 shared library
+stdout ** Creation Date: Sun Jan 12 08:19:15 UTC 2025
+stdout ******
+COMMAND set ngbehavior=ps RETURN 0
+stdout ******
+stdout ** ngspice-44.2 : Circuit level simulation program
+stdout ** Compiled with KLU Direct Linear Solver
+stdout ** The U. C. Berkeley CAD Group
+stdout ** Copyright 1985-1994, Regents of the University of California.
+stdout ** Copyright 2001-2024, The ngspice team.
+stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html
+stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+stdout ** Creation Date: Sun Jan 12 08:19:15 UTC 2025
+stdout ******
+COMMAND version RETURN 0
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: tps54302 minimum startup baseline - independently chosen values, not a1 or exact ti schematic
+stderr Warning : IC on non-existent node - xreg.en, ignored
+stderr Please check line .ic v(xreg.en )=0
+stderr Error on line 370 or its substitute:
+stderr a.xreg.x_u8_s31.as_u8_s31 %gd xreg.ldrv 0 %gd ph xreg.u8_n16881733 xreg.x_u8_s31:a_u8_s31
+stderr MIF-ERROR - unable to find definition of model xreg.x_u8_s31:a_u8_s31
+stderr Simulation interrupted due to error!
+COMMAND source /workspace/tool-verification/ngspice-baseline/baseline-original.cir RETURN 0
+stderr Error: circuit not parsed.
+COMMAND run RETURN 0
+ELAPSED 1.693600000862716e-05
+COMMAND set filetype=ascii RETURN 0
+stderr Error: no such function as i,
+stderr or i(l1) is not available.
+stderr Error during 'write': no writable vector found.
+COMMAND write /workspace/tool-verification/ngspice-baseline/baseline-original.raw time v(out) v(ph) i(l1) v(en) v(vin) RETURN 0
+stderr Error: measure limited to tran, dc, sp, or ac analysis
+stdout meas tran vout_avg AVG v(out) from=5m to=6.5m failed!
+COMMAND meas tran vout_avg AVG v(out) from=5m to=6.5m RETURN 0
+stderr Error: measure limited to tran, dc, sp, or ac analysis
+stdout meas tran vout_min MIN v(out) from=5m to=6.5m failed!
+COMMAND meas tran vout_min MIN v(out) from=5m to=6.5m RETURN 0
+stderr Error: measure limited to tran, dc, sp, or ac analysis
+stdout meas tran vout_max MAX v(out) from=5m to=6.5m failed!
+COMMAND meas tran vout_max MAX v(out) from=5m to=6.5m RETURN 0

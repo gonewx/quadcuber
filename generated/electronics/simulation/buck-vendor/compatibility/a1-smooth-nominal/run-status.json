@@ -1,0 +1,71 @@
+{
+  "circuit_sha256": "e90767906205461e028785313fd5f1c17ea48440ee5bd65a107c31c6d903ade2",
+  "pcb_sha256": "9e55fcbee01241fc6ec3682fde79daaacd6bc623ecfc311809600e001099350a",
+  "vm_bulk_refs": [
+    "C2",
+    "C3",
+    "C102",
+    "C122",
+    "C142",
+    "C162"
+  ],
+  "vm_bulk_nominal_F": 0.00282,
+  "parts": {
+    "U2": "TPS54302DDCR",
+    "U3": "TPS54302DDCR",
+    "Q1": "CSD18540Q5B",
+    "U4": "LM74700QDBVRQ1",
+    "D3": "SMBJ12A",
+    "D2": "SS14-E3/61T",
+    "D5": "SS14-E3/61T"
+  },
+  "model_sha256": "2f29a29f35e9b8d7cf5ec701d7f367bb9a862e8810a43e6c6536e4b0005d086b",
+  "model_source": "https://www.ti.com/lit/zip/slvmbl9",
+  "subckt": "TPS54302_TRANS",
+  "pins": [
+    "BOOT",
+    "EN",
+    "GND",
+    "PH",
+    "VIN",
+    "VSENSE"
+  ],
+  "simulator": "******\n** ngspice-44.2 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2024, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Sun Jan 12 08:19:15 UTC 2025\n******\n",
+  "cases": [
+    {
+      "completed": false,
+      "passed": false,
+      "returncode": 0,
+      "log_error": "Timestep too small",
+      "last_time_s": 0.000763499198,
+      "points": 10360,
+      "case": "VIN9_C1",
+      "elapsed_s": 3.386
+    }
+  ],
+  "state": "FAILED_OR_BLOCKED",
+  "pin_mapping": {
+    "PH": "SW",
+    "VSENSE": "FB"
+  },
+  "model_transformations": [
+    "CRLF to LF",
+    "XOR ^ -> parenthesized !=",
+    "SDWN low-clamp IF -> 0.439*LIMIT((0.5001-V(SDWN))/0.0002,0,1); DISCARDED"
+  ],
+  "compatibility": "ngbehavior=ps; analog.cm and xtradev.cm required",
+  "method": "trap",
+  "timeout_s": 180.0,
+  "baseline_git": "e34395e68b175cf9a279664fd4a13fd6573d95db",
+  "thresholds": {
+    "settled_min_V": 4.75,
+    "all_time_max_V": 5.25,
+    "startup_deadline_s": 0.01,
+    "inductor_peak_A": 6,
+    "stop_s": 0.025
+  },
+  "manufacturing_released": false,
+  "error": "One or more acceptance criteria failed.",
+  "experimental_only": true,
+  "original_model_sha256": "52a568f08f1eed44961238a1ff10b68c2ce1faa1cdf2c24659b17b1f820f0026"
+}

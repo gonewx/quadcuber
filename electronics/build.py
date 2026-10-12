@@ -2,6 +2,7 @@
 """Export the checked-in native KiCad files. Does not regenerate placement/routing."""
 import json,subprocess,os,re,sys,hashlib,tempfile,shutil,csv
 from pathlib import Path
+from toolchain import cli_command, python_command, require_version
 H=Path(__file__).resolve().parent;R=H.parent;O=R/'generated/electronics';O.mkdir(exist_ok=True,parents=True)
 SCH=H/'quadcuber.kicad_sch';PCB=H/'quadcuber.kicad_pcb'
 # Consolidated assembly BOM; DNP parts remain explicit quantity zero.
@@ -19,13 +20,15 @@ with (O/'bom-grouped.csv').open('w') as f:
 cache=Path(tempfile.gettempdir())/'quadcuber-kicad'
 env=os.environ.copy()
 for key,leaf in [('XDG_CONFIG_HOME','config'),('XDG_CACHE_HOME','cache'),('XDG_DATA_HOME','data')]:
-    d=cache/leaf;d.mkdir(parents=True,exist_ok=True);env[key]=str(d)
+    d=Path(env.get(key,cache/leaf));d.mkdir(parents=True,exist_ok=True);env[key]=str(d)
 commands=[]
 def run(*args):
+    if args[0]=='kicad-cli':args=(*cli_command(),*args[1:])
     args=list(map(str,args));result=subprocess.run(args,cwd=R,env=env,text=True,capture_output=True)
     commands.append({'command':args,'returncode':result.returncode,'stdout':result.stdout,'stderr':result.stderr})
     if result.returncode: print(result.stdout,result.stderr);raise RuntimeError(args)
     return result.stdout
+version=run('kicad-cli','version').strip();require_version(version)
 run('kicad-cli','sch','erc','-o',O/'erc.rpt',SCH)
 run('kicad-cli','sch','export','netlist','--format','kicadxml','-o',O/'netlist.xml',SCH)
 run('kicad-cli','sch','export','pdf','-o',O/'schematic.pdf',SCH)
@@ -40,15 +43,15 @@ fab=O/'fabrication-preview-NOT-RELEASED';fab.mkdir(exist_ok=True)
 run('kicad-cli','pcb','export','gerbers','--layers','F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Silkscreen,B.Silkscreen,F.Paste,B.Paste,Edge.Cuts','--subtract-soldermask','-o',str(fab)+'/',PCB)
 run('kicad-cli','pcb','export','drill','--excellon-separate-th','--generate-map','--map-format','svg','-o',str(fab)+'/',PCB)
 run('kicad-cli','pcb','export','pos','--format','csv','--units','mm','--side','both','-o',O/'positions.csv',PCB)
-run('/usr/bin/python3',H/'check.py')
+run(*python_command(),H/'check.py')
 erc=(O/'erc.rpt').read_text();drc=(O/'drc.rpt').read_text()
 count=lambda pat,txt:int(re.search(pat,txt).group(1)) if re.search(pat,txt) else None
-status={'revision':'A1','manufacturing_release':False,'hardware_tested':False,'erc_errors':count(r'Errors (\d+)',erc),'erc_warnings':count(r'Warnings (\d+)',erc),'drc_violations':count(r'Found (\d+) DRC violations',drc),'footprint_errors':count(r'Found (\d+) Footprint errors',drc),'unconnected_pads':count(r'Found (\d+) unconnected',drc),'release_blockers':['EV3 hole geometry updated from user drawing; actual MPN, pin numbers 1-5/view, contact rating and full ear envelope remain unconfirmed','New mounting bracket/feet and cable-motion clearance not finalized','Prototype concurrent-load, regenerative transient, thermal and power-combination tests outstanding','First-board RP2040 UF2 boot and USB host-off data-pin backfeed tests outstanding; USB impedance stackup requires fabricator approval'],'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(p for p in H.glob('*.kicad_*') if p.suffix in ['.kicad_sch','.kicad_pcb','.kicad_pro','.kicad_dru'])},'tool_version':run('kicad-cli','version').strip()}
+status={'revision':'A1','manufacturing_release':False,'hardware_tested':False,'erc_errors':count(r'Errors (\d+)',erc),'erc_warnings':count(r'Warnings (\d+)',erc),'drc_violations':count(r'Found (\d+) DRC violations',drc),'footprint_errors':count(r'Found (\d+) Footprint errors',drc),'unconnected_pads':count(r'Found (\d+) unconnected',drc),'release_blockers':['TPS54302 vendor-model ngspice startup aborted numerically; load-step/tolerance dynamic validation remains unresolved','EV3 hole geometry updated from user drawing; actual MPN, pin numbers 1-5/view, contact rating and full ear envelope remain unconfirmed','New mounting bracket/feet and cable-motion clearance not finalized','Prototype concurrent-load, regenerative transient, thermal and power-combination tests outstanding','First-board RP2040 UF2 boot and USB host-off data-pin backfeed tests outstanding; USB impedance stackup requires fabricator approval'],'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(p for p in H.glob('*.kicad_*') if p.suffix in ['.kicad_sch','.kicad_pcb','.kicad_pro','.kicad_dru'])},'tool_version':run('kicad-cli','version').strip()}
 (O/'release-status.json').write_text(json.dumps(status,indent=2)+'\n')
 (O/'build-log.json').write_text(json.dumps(commands,indent=2)+'\n')
 (fab/'DO_NOT_FABRICATE.txt').write_text('ENGINEERING PREVIEW ONLY - NOT RELEASED\nEV3 geometry follows user drawing; PINMAP/MPN/CURRENT remain HOLD. Read electronics/README.md.\n'+json.dumps(status,indent=2)+'\n')
 # KiCad SVG exporter leaves trailing spaces; normalize formatting only.
-for svg in O.rglob('*.svg'):
+for svg in [*O.glob('*.svg'),*(O/'schematic').glob('*.svg'),*fab.glob('*.svg')]:
     svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
 print(json.dumps(status,indent=2))
 

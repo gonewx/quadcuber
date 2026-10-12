@@ -1,0 +1,10 @@
+case,completed,passed,last_time_s,points,returncode,elapsed_s,failure,partial_max_A_V,partial_max_B_V
+VIN8.82_C0.4,False,False,0.000779071496,10204,0,3.136,"doAnalyses: TRAN:  Timestep too small; time = 0.000779071, timestep = 1.25e-19: trouble with node ""e.x2.e_u5_abm9#branch""",7.34243103e-06,1.28792251e-05
+VIN8.82_C0.8,False,False,0.00077927528,12097,0,4.285,"doAnalyses: TRAN:  Timestep too small; time = 0.000779275, timestep = 5.83097e-19: trouble with node ""b1boot""",7.69955265e-06,9.62953123e-06
+VIN8.82_C1.2,False,False,0.000779074267,10553,0,3.382,"doAnalyses: TRAN:  Timestep too small; time = 0.000779074, timestep = 1.25e-19: trouble with node ""e.x2.e_u5_abm9#branch""",3.85194548e-06,4.82092181e-06
+VIN9_C0.4,False,False,0.000763479669,9688,0,2.929,"doAnalyses: TRAN:  Timestep too small; time = 0.00076348, timestep = 1.25e-19: trouble with node ""e.x2.e_u5_abm9#branch""",7.28019847e-06,1.26639271e-05
+VIN9_C0.8,False,False,0.000763498166,10432,0,3.642,"doAnalyses: TRAN:  Timestep too small; time = 0.000763498, timestep = 6.006e-21: trouble with node ""e.x1.e_u5_abm9#branch""",5.02497398e-06,6.89141559e-06
+VIN9_C1.2,False,False,0.000761900923,9166,0,2.831,"doAnalyses: TRAN:  Timestep too small; time = 0.000761901, timestep = 1.25e-19: trouble with node ""e.x2.e_u5_abm9#branch""",3.781129e-06,4.71105927e-06
+VIN9.18_C0.4,False,False,0.000747010747,9296,0,2.932,"doAnalyses: TRAN:  Timestep too small; time = 0.000747011, timestep = 1.25e-19: trouble with node ""e.x2.e_u5_abm9#branch""",7.19823927e-06,1.24101533e-05
+VIN9.18_C0.8,False,False,0.000457550594,5375,0,1.774,"doAnalyses: TRAN:  Timestep too small; time = 0.000457551, timestep = 1.25e-19: trouble with node ""e.x2.e_u5_abm9#branch""",2.14104552e-06,2.61474886e-06
+VIN9.18_C1.2,False,False,0.000748607972,10335,0,3.281,"doAnalyses: TRAN:  Timestep too small; time = 0.000748608, timestep = 1.25e-19: trouble with node ""e.x1.e_u5_abm9#branch""",3.74021486e-06,4.64383006e-06

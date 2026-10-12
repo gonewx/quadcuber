@@ -6,7 +6,7 @@
 
 ## KiCad版本与显示
 
-用户指定后续设计和交付使用 **KiCad 10.0.7**。当前已执行检查的环境仍为 **9.0.2**，尚未完成10.0.7原生重存及ERC/DRC复验；不得把目标版本当成已验证版本。官方下载页已提供10.0.7，但本环境代理拒绝对 `kicad-downloads.s3.cern.ch:443` 的CONNECT（403）；需要正常放行该域名后继续迁移，不手改文件版本号冒充升级。
+已使用用户批准的官方 **KiCad 10.0.7 Lite** 完成PCB与全部12张原理图的原生 `upgrade --force` 重存，以及ERC、含schematic parity的DRC和引脚契约复验。通过原生pcbnew API把原理图已有的MPN/Manufacturer同步为PCB隐藏字段，解决10版新增的198个缺失MPN一致性告警；未屏蔽检查。Lite安装缺少完整标准3D模型库，不能称为完整3D验证。
 
 二维编辑器的红/褐色铜区和其他图层配色不是实物阻焊颜色。查看实物外观用“视图→3D查看器”（Alt+3）；成品绿色阻焊应在最终制造规格中明确。带Pico双排插座、丝印A0的板图是旧版；本目录A1采用直接焊接RP2040，打开时应核对丝印及工程路径。
 
@@ -24,7 +24,7 @@ TP测试焊盘和安装孔是PCB内建特征，采购数量记为0；可选电�
 
 ## 电源仿真状态
 
-已完成[65个ngspice边界工况及热敏感性计算](simulation/README.md)，结果见[报告](../generated/electronics/simulation/report.md)。它们使用明确标注的简化模型；TPS54302原厂模型下载遇HTTP403，实际原厂模型运行次数仍为0。不能据此宣称降压环路或PCB通过验证，制造HOLD保持。后续[保护修订与108个RLC/能量工况](../generated/electronics/protection-analysis/report.md)纠正F1并增加母线泄放；[确切料号审查](sources/bom-exact-part-audit.md)记录原厂已核与未决项。
+已保留[65个简化ngspice边界工况及热敏感性计算](simulation/README.md)，以及[108个保护/RLC/能量工况](../generated/electronics/protection-analysis/report.md)。它们不等于芯片动态验证。本轮已取得TI未加密TPS54302原厂模型，执行9个真实双路BOM输入/电容工况，但均在0.458～0.779ms因数值问题中止，**0个完整完成、0个通过，负载阶跃尚未执行到**。见[原厂模型报告、部分波形与日志](../generated/electronics/simulation/buck-vendor/report.md)。当前阻塞已从下载变为ngspice动态兼容；制造HOLD保持。[确切料号审查](sources/bom-exact-part-audit.md)仍记录原厂已核与未决项。
 
 ## BOM选型标准
 
@@ -83,16 +83,23 @@ DRV8871在1 A时以0.565Ω典型桥阻估算0.565 W；升温后桥阻上升，1.
 
 ## 重建与编辑
 
-已安装/使用KiCad 9.0.2、系统Python3的pcbnew；外部布线工具从[Freerouting官方v2.1.0发布](https://github.com/freerouting/freerouting/releases/tag/v2.1.0)下载。无需购买模块、运行云端EDA或迁移固件。
+已安装/使用官方KiCad 10.0.7 Lite和其Python 3.11 pcbnew；外部布线工具从[Freerouting官方v2.1.0发布](https://github.com/freerouting/freerouting/releases/tag/v2.1.0)下载。无需购买模块、运行云端EDA或迁移固件。
 
 ```sh
 # 如环境HOME只读，可把XDG配置/缓存指向可写临时目录（build.py已自动处理）。
 export XDG_CONFIG_HOME=/tmp/quadcuber-kicad/config
 export XDG_CACHE_HOME=/tmp/quadcuber-kicad/cache
 export XDG_DATA_HOME=/tmp/quadcuber-kicad/data
+# 本环境的官方Lite AppImage解包入口；其他安装可改为自己的路径。
+export KICAD_APP_RUN=/workspace/tools/kicad-10.0.7/squashfs-root/AppRun
+# 或分别设置KICAD_CLI（可执行文件路径）和KICAD_PYTHON（Python命令，可含参数）。
+# 普通系统安装不设上述变量：使用PATH内kicad-cli和当前Python。
+# CLI及pcbnew均须为10.0.7，版本不符立即报错。
 # 正常编辑：直接用KiCad编辑原理图/PCB，再导出验证。
-/usr/bin/python3 electronics/build.py
-/usr/bin/python3 electronics/check.py
+python3 electronics/build.py
+python3 electronics/check.py
+# 对比冻结的迁移前基线与当前板的几何/网表（不修改设计）。
+"$KICAD_APP_RUN" python3.11 electronics/verify_kicad10_migration.py
 python tools/build_distribution.py
 python -m unittest tests.test_wiring tests.test_arm_selection tests.test_firmware tests.test_repository_layout -q
 
@@ -106,7 +113,7 @@ python -m unittest tests.test_wiring tests.test_arm_selection tests.test_firmwar
 
 ## 实际验证记录
 
-本次正式导出：ERC 0错误/0警告；包含原理图一致性检查的DRC 0违规、0未连接、0封装错误；539个已连接符号引脚与PCB的网络契约核对为0错误。报告和源哈希见交付入口。独立审查已复核电源铜路、热孔和双面输入电容，记录在`generated/electronics/independent-review.md`，绑定PCB哈希。既有接线/R-L选择/固件51项测试通过。按仓库命令`python tools/build_distribution.py`补建分发产物后，相关51项与仓库布局8项合计**59项全部通过**，没有修改测试断言；这不等同四臂软件或PCB实物通过。
+本次正式导出：ERC 0错误/0警告；包含原理图一致性检查的DRC 0违规、0未连接、0封装错误；543个已连接符号引脚与PCB的网络契约核对为0错误。报告和源哈希见交付入口。历史独立审查`generated/electronics/independent-review.md`绑定迁移前KiCad 9 PCB哈希，不能作为当前10版文件已被重新独立审查的证明。当前迁移证据见`generated/electronics/kicad10-migration.json`及本次重新导出的报告；迁移前后器件位置、焊盘尺寸/钻孔/网络、走线与过孔、铜区轮廓和实填铜、板框均相同。J5两个无编号NPTH的层掩码由10版原生保存规范化为全部铜层（孔位与孔径不变），物理几何比较明确归一此项。本次再次执行既有接线/R-L选择/固件与仓库布局回归；按仓库命令`python tools/build_distribution.py`补建分发产物后，相关51项与仓库布局8项合计**59项全部通过**，没有修改测试断言；这不等同四臂软件或PCB实物通过。
 
 ## 放行清单
 

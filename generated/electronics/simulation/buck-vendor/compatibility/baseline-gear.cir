@@ -1,0 +1,18 @@
+TPS54302 minimum startup baseline - independently chosen values, NOT A1 or exact TI schematic
+.include /workspace/tool-verification/ti-model/TPS54302_PSPICE_TRANS/TPS54302_TRANS.LIB
+Vinput vin 0 PWL(0 0 100u 12)
+Ven en 0 PWL(0 0 200u 0 210u 3)
+Cin vin 0 10u
+Xreg boot en 0 ph vin fb TPS54302_TRANS PARAMS: STEADY_STATE=0
+Cboot boot ph 100n
+L1 ph lx 10u
+Rdcr lx out 50m
+Cout out cx 44u
+Resr cx 0 5m
+Rtop out fb 73.2k
+Rbot fb 0 10k
+Rload out 0 5
+.options method=gear
+.tran 20n 6.5m 0 20n
+.save v(out) v(ph) i(l1) v(en) v(vin)
+.end

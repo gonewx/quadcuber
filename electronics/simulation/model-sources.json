@@ -1,13 +1,15 @@
 {
   "date": "2026-10-12",
-  "vendor_models_executed": 0,
+  "vendor_models_executed": 9,
   "tps54302": {
     "url": "https://www.ti.com/lit/zip/slvmbl9",
     "advertised_version": "SLVMBL9A, unencrypted PSpice transient, 103 KB",
-    "status": "DOWNLOAD_BLOCKED_HTTP_403",
-    "local_sha256": null,
-    "license": "Not inspected: archive unavailable. Do not redistribute without checking included terms.",
-    "compatibility": "UNTESTED; no model bytes, not a demonstrated ngspice incompatibility"
+    "status": "ACQUIRED_BUT_NGSPICE_TRANSIENT_ABORTS",
+    "local_sha256": "52a568f08f1eed44961238a1ff10b68c2ce1faa1cdf2c24659b17b1f820f0026",
+    "license": "TI copyright 2016 and as-is disclaimer retained in original. No model body redistributed in Git; no additional redistribution permission inferred.",
+    "compatibility": "ps + analog.cm/xtradev.cm load the model; PH/VSENSE aliases reviewed, XOR adapted. All 9 actual dual-BOM runs aborted before 0.8ms; 0 complete/0 pass.",
+    "archive_sha256": "d06e58535f99c35ee5da259e68c09c471b819d00c2fe98d4d5d1da49ea730f77",
+    "report": "../../generated/electronics/simulation/buck-vendor/report.md"
   },
   "ngspice": {
     "version": "44.2",
@@ -23,11 +25,39 @@
     "license": "Original project source; repository terms apply. No manufacturer model code copied."
   },
   "parameter_sources": [
-    {"part":"CSD18540Q5B","url":"https://www.ti.com/lit/ds/symlink/csd18540q5b.pdf","revision":"SLPS488B","used":"RDSon 3.3 mOhm max at 4.5V gate, 25C; constant boundary value, not hot resistance"},
-    {"part":"SRP1245A-100M","url":"https://www.bourns.com/docs/product-datasheets/srp1245a.pdf","used":"10uH +/-20%, DCR21.4mOhm typical /25.5mOhm max, Irms9A, Isat16A"},
-    {"part":"TPS54302","url":"https://www.ti.com/lit/ds/symlink/tps54302.pdf","revision":"SLVSDG6C","used":"118.9C/W reference-board thetaJA, 5V application circuit and +/-5% load-step design target"},
-    {"part":"SMBJ12A","url":"https://www.littelfuse.com/products/overvoltage-protection/tvs-diodes/surface-mount/smbj","used":"12V standoff, 13.3..14.7V breakdown, 19.9V at30.2A. Straight-line fit between points is an assumption, not guaranteed curve."},
-    {"part":"DRV8871","url":"https://www.ti.com/lit/ds/symlink/drv8871.pdf","used":"0.565Ohm typical bridge and41.1C/W reference PCB. 1.13Ohm and60/80C/W are sensitivity parameters, not vendor limits."},
-    {"part":"TLV75533PDBVR","url":"https://www.ti.com/lit/ds/symlink/tlv755p.pdf","used":"231.1C/W DBV reference board; thermal estimate, not FEM."}
-  ]
+    {
+      "part": "CSD18540Q5B",
+      "url": "https://www.ti.com/lit/ds/symlink/csd18540q5b.pdf",
+      "revision": "SLPS488B",
+      "used": "RDSon 3.3 mOhm max at 4.5V gate, 25C; constant boundary value, not hot resistance"
+    },
+    {
+      "part": "SRP1245A-100M",
+      "url": "https://www.bourns.com/docs/product-datasheets/srp1245a.pdf",
+      "used": "10uH +/-20%, DCR21.4mOhm typical /25.5mOhm max, Irms9A, Isat16A"
+    },
+    {
+      "part": "TPS54302",
+      "url": "https://www.ti.com/lit/ds/symlink/tps54302.pdf",
+      "revision": "SLVSDG6C",
+      "used": "118.9C/W reference-board thetaJA, 5V application circuit and +/-5% load-step design target"
+    },
+    {
+      "part": "SMBJ12A",
+      "url": "https://www.littelfuse.com/products/overvoltage-protection/tvs-diodes/surface-mount/smbj",
+      "used": "12V standoff, 13.3..14.7V breakdown, 19.9V at30.2A. Straight-line fit between points is an assumption, not guaranteed curve."
+    },
+    {
+      "part": "DRV8871",
+      "url": "https://www.ti.com/lit/ds/symlink/drv8871.pdf",
+      "used": "0.565Ohm typical bridge and41.1C/W reference PCB. 1.13Ohm and60/80C/W are sensitivity parameters, not vendor limits."
+    },
+    {
+      "part": "TLV75533PDBVR",
+      "url": "https://www.ti.com/lit/ds/symlink/tlv755p.pdf",
+      "used": "231.1C/W DBV reference board; thermal estimate, not FEM."
+    }
+  ],
+  "vendor_model_completed_cases": 0,
+  "vendor_model_passed_cases": 0
 }

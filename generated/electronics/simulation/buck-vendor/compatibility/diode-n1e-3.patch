@@ -1,0 +1,11 @@
+--- TI-original
++++ numerical-experiment
+@@ -467,7 +467,7 @@
+ *$
+ .model D_D d
+ + is=1e-015
+-+ n=1e-005
+++ n=1e-003
+ + tt=1e-011
+ *$
+ .model D_D1 d

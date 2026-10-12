@@ -1,5 +1,7 @@
 # 独立复核：四臂 PCB A1（板载 RP2040）
 
+> 历史证据：以下为KiCad 9迁移前对象的独立审查，保留原始哈希与结论。KiCad 10.0.7迁移后的文件哈希已经改变，本报告不代表重新独立审查；当前ERC/DRC、契约和几何对照见 `kicad10-migration.json`、`release-status.json` 及新导出的检查报告。
+
 复核日期：2026-10-12。对象为 `electronics/quadcuber.kicad_pcb`，SHA-256：
 
 `c33afa92c1e76d124cc7d846db8a845486d428d554f05d406cef071aeb02e43b`

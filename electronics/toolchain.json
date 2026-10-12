@@ -1,6 +1,8 @@
 {
-  "kicad": "9.0.2",
-  "python_pcbnew": "system Python 3.13.5",
+  "kicad": "10.0.7",
+  "python_pcbnew": "KiCad 10.0.7 pcbnew (official Lite AppImage: Python 3.11)",
+  "configuration": "KICAD_APP_RUN or KICAD_CLI plus KICAD_PYTHON; existing XDG paths are respected",
+  "three_d_models": "Lite installation: full standard 3D model library is not installed",
   "java": "OpenJDK 21.0.12.1",
   "freerouting": {
     "version": "2.1.0",

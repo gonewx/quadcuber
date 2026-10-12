@@ -1,6 +1,17 @@
 [
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
+      "kicad-cli",
+      "version"
+    ],
+    "returncode": 0,
+    "stdout": "10.0.7\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "sch",
       "erc",
@@ -9,11 +20,12 @@
       "/workspace/quadcuber/electronics/quadcuber.kicad_sch"
     ],
     "returncode": 0,
-    "stdout": "Checking sheet names...\nChecking bus conflicts...\nChecking conflicts...\nChecking units...\nChecking footprints...\nChecking pins...\nChecking similar labels...\nChecking local and global labels...\nChecking for unresolved variables...\nChecking no connect pins for connections...\nChecking for library symbol issues...\nChecking for footprint link issues...\nChecking for off grid pins and wires...\nChecking for labels on more than one wire...\nChecking for undefined netclasses...\nFound 0 violations\nSaved ERC Report to /workspace/quadcuber/generated/electronics/erc.rpt\n",
+    "stdout": "Found 0 violations\nSaved ERC Report to /workspace/quadcuber/generated/electronics/erc.rpt\n",
     "stderr": ""
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "sch",
       "export",
@@ -30,6 +42,7 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "sch",
       "export",
@@ -44,6 +57,7 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "sch",
       "export",
@@ -58,6 +72,7 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "pcb",
       "drc",
@@ -72,6 +87,7 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "pcb",
       "export",
@@ -91,6 +107,7 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "pcb",
       "export",
@@ -110,6 +127,7 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "pcb",
       "export",
@@ -129,6 +147,7 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "pcb",
       "export",
@@ -148,6 +167,7 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "pcb",
       "export",
@@ -167,6 +187,7 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "pcb",
       "export",
@@ -194,7 +215,7 @@
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:20741): WARNING **: 02:34:37.178: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:20741): WARNING **: 02:34:37.431: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:2666): WARNING **: 03:42:15.313: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:2666): WARNING **: 03:42:15.800: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [
@@ -206,7 +227,7 @@
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:20750): WARNING **: 02:34:37.738: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:20750): WARNING **: 02:34:37.882: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:2673): WARNING **: 03:42:16.113: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:2673): WARNING **: 03:42:16.248: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [
@@ -218,7 +239,7 @@
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:20757): WARNING **: 02:34:38.081: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:20757): WARNING **: 02:34:38.406: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:2680): WARNING **: 03:42:16.445: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:2680): WARNING **: 03:42:16.758: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [
@@ -230,10 +251,11 @@
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:20768): WARNING **: 02:34:38.724: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:20768): WARNING **: 02:34:38.818: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:2687): WARNING **: 03:42:17.058: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:2687): WARNING **: 03:42:17.158: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "pcb",
       "export",
@@ -251,6 +273,7 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "pcb",
       "export",
@@ -269,6 +292,7 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "pcb",
       "export",
@@ -289,7 +313,8 @@
   },
   {
     "command": [
-      "/usr/bin/python3",
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
+      "python3.11",
       "/workspace/quadcuber/electronics/check.py"
     ],
     "returncode": 0,
@@ -298,11 +323,12 @@
   },
   {
     "command": [
+      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
       "kicad-cli",
       "version"
     ],
     "returncode": 0,
-    "stdout": "9.0.2\n",
+    "stdout": "10.0.7\n",
     "stderr": ""
   }
 ]

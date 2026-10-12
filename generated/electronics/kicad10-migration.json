@@ -1,0 +1,40 @@
+{
+  "tool_version": "10.0.7",
+  "baseline_commit": "e34395e68b175cf9a279664fd4a13fd6573d95db",
+  "baseline_pcb_sha256": "c33afa92c1e76d124cc7d846db8a845486d428d554f05d406cef071aeb02e43b",
+  "migrated_pcb_sha256": "9e55fcbee01241fc6ec3682fde79daaacd6bc623ecfc311809600e001099350a",
+  "geometry_comparison": {
+    "footprints_and_pads": {
+      "identical": true,
+      "baseline_digest": "187feb929e010a36fa3c91f1454a79bf8613b87b250551b6e58287df26bcdc87",
+      "migrated_digest": "187feb929e010a36fa3c91f1454a79bf8613b87b250551b6e58287df26bcdc87"
+    },
+    "tracks_and_vias": {
+      "identical": true,
+      "baseline_digest": "d9c74502523044b08102962bbc394aa7a25028db59b8e1ab37a3f15a41625275",
+      "migrated_digest": "d9c74502523044b08102962bbc394aa7a25028db59b8e1ab37a3f15a41625275"
+    },
+    "zone_outlines_and_filled_copper": {
+      "identical": true,
+      "baseline_digest": "333c15912484aa21887ec33d35850c199a1a3c1b831c004885292546cb518ba9",
+      "migrated_digest": "333c15912484aa21887ec33d35850c199a1a3c1b831c004885292546cb518ba9"
+    },
+    "board_outline": {
+      "identical": true,
+      "baseline_digest": "177f997c7058713d82544a673e176fddab8168f2256fd3c221dad221b84eeea7",
+      "migrated_digest": "177f997c7058713d82544a673e176fddab8168f2256fd3c221dad221b84eeea7"
+    },
+    "copper_layer_count": {
+      "identical": true,
+      "baseline_digest": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "migrated_digest": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    }
+  },
+  "connected_symbol_pins": {
+    "identical": true,
+    "baseline_count": 543,
+    "migrated_count": 543
+  },
+  "native_normalization": "J5 two unnumbered 0.65 mm NPTH holes: KiCad 10 resave expands copper layer mask to *.Cu; unchanged position, drill, pad dimensions. NPTH layer masks are normalized to through-board in this physical geometry comparison.",
+  "limits": "Geometry comparison and current EDA checks only; not a replacement for independent review or hardware/thermal/3D validation."
+}

@@ -1,0 +1,20 @@
+--- TI-original
++++ smooth-discarded.patch
+@@ -231,7 +231,7 @@
+ +  LIMIT((V(U5_N16755015)-V(U5_N16739044))*66u , -V(U5_GM), V(U5_GM) )    }
+ R_U5_R274         U5_N16739044 U5_N16755015  1.875Meg  
+ E_U5_ABM8         U5_N7406885 0 VALUE { {IF(V(N16888001) > 1.75,5,0)}    }
+-E_U5_ABM9         U5_LOW_CLMP 0 VALUE { {IF(V(SDWN) > 0.5,0,0.439)}    }
++E_U5_ABM9         U5_LOW_CLMP 0 VALUE { {0.439*LIMIT((0.5001-V(SDWN))/0.0002,0,1)}    }
+ G_U5_ABM2I1         0 N16888001 VALUE { {LIMIT((V(VREF_GM) -
+ +  V(VSENSE_INT))*200u, -V(U5_TAIL_CUR),V(U5_TAIL_CUR))}    }
+ E_U5_ABM169         U5_GM 0 VALUE { {IF(V(ULQ_MODE) > 0.5 , 0 , 20u)}    }
+@@ -661,7 +661,7 @@
+ RIN YA 0 1e11
+ EABM1 YTD 0 VALUE={IF(V(YA)> {PW*1000}, 0, 1)}
+ RYTD YTD 0 1e11
+-EXOR P 0 VALUE={IF(V(YTD) > 0.5 ^ V(IN) > .5, 1, 0)}
++EXOR P 0 VALUE={IF(((V(YTD) > 0.5) != (V(IN) > .5)), 1, 0)}
+ ROUTpp2 P 0 1e11
+ EAND1 Q1 0 VALUE={ IF(V(P)>0.5 & V(YTD)>0.5, 1, 0)}
+ Ro1 Q1 Q 1m
