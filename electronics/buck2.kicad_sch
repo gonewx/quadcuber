@@ -1273,145 +1273,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Quadcuber:R30"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R30"
-				(at 0 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1 1)
-					)
-				)
-			)
-			(property "Value" "49.9"
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1 1)
-					)
-				)
-			)
-			(property "Footprint" "Quadcuber:R_0603_1608Metric"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1 1)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R30_0_1"
-				(polyline
-					(pts
-						(xy -7.62 0) (xy -3.81 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -3.81 1.27)
-					(end 3.81 -1.27)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 0) (xy 7.62 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R30_1_1"
-				(pin passive line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0.75 0.75)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0.75 0.75)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0.75 0.75)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0.75 0.75)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
+
 		(symbol "Quadcuber:R31"
 			(pin_names
 				(hide yes)
@@ -2183,16 +2045,7 @@
 		)
 		(uuid "1759e077-9957-5a55-9a55-d3daa3afb4b1")
 	)
-	(wire
-		(pts
-			(xy 236.22 38.1) (xy 241.3 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "19407b6d-d03a-5cbf-b533-fdd626e269f0")
-	)
+
 	(wire
 		(pts
 			(xy 88.9 119.38) (xy 83.82 119.38)
@@ -2343,16 +2196,7 @@
 		)
 		(uuid "9d2219a6-224d-51a0-9661-d9ee22e77557")
 	)
-	(wire
-		(pts
-			(xy 215.9 38.1) (xy 210.82 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a41f4cec-3a51-5d7a-b093-f26f798d1b73")
-	)
+
 	(wire
 		(pts
 			(xy 109.22 38.1) (xy 114.3 38.1)
@@ -2599,27 +2443,7 @@
 			)
 		)
 	)
-	(global_label "B2_BOOT_CAP"
-		(shape bidirectional)
-		(at 241.3 38.1 0)
-		(effects
-			(font
-				(size 0.8 0.8)
-			)
-		)
-		(uuid "3c646420-32bf-5220-826b-730860708528")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 241.3 38.1 180)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-			)
-		)
-	)
+
 	(global_label "5V_B"
 		(shape bidirectional)
 		(at 83.82 78.74 0)
@@ -2830,27 +2654,7 @@
 			)
 		)
 	)
-	(global_label "B2_BOOT"
-		(shape bidirectional)
-		(at 210.82 38.1 0)
-		(effects
-			(font
-				(size 0.8 0.8)
-			)
-		)
-		(uuid "a9e7a599-c379-5b5f-9217-4ec1a25e2197")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 210.82 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-			)
-		)
-	)
+
 	(global_label "GND"
 		(shape bidirectional)
 		(at 50.8 119.38 0)
@@ -2935,7 +2739,7 @@
 			)
 		)
 	)
-	(global_label "B2_BOOT_CAP"
+	(global_label "B2_BOOT"
 		(shape bidirectional)
 		(at 274.32 38.1 0)
 		(effects
@@ -3801,7 +3605,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-0713K3L"
+		(property "MPN" "RT0603BRD0713K3L"
 			(at 226.06 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -4197,7 +4001,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "RT0603BRD07100KL"
 			(at 162.56 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -4444,103 +4248,5 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Quadcuber:R30")
-		(at 226.06 38.1 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f4b93f73-2c4b-5d1e-909c-ac1269b5d33c")
-		(property "Reference" "R30"
-			(at 226.06 30.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "49.9"
-			(at 226.06 45.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Quadcuber:R_0603_1608Metric"
-			(at 226.06 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 226.06 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 226.06 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0603FR-0749R9L"
-			(at 226.06 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Yageo"
-			(at 226.06 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e99cf678-5acc-54da-9ff0-262f3b8dfeb6")
-		)
-		(pin "2"
-			(uuid "52b4e24d-3be3-5793-8ce5-45796c8834cb")
-		)
-		(instances
-			(project "quadcuber"
-				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/e8b2a047-8402-5099-87d9-9604c9e31a0c"
-					(reference "R30")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 )

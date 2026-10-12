@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-12T06:45:14.726047+00:00",
+  "source_commit": "2d01805e8ac628a21c66806affd03b1b632a0859",
+  "parts_checked": 28,
+  "checks": {
+    "circuit_vs_generated_value_mpn_pins_notes": "PASS",
+    "circuit_vs_bom_value_mpn": "PASS",
+    "circuit_vs_netlist_value_and_pin_nets": "PASS",
+    "dnp_exactly_C26_C36": "PASS"
+  },
+  "source_sha256": {
+    "electronics/circuit.py": "e90767906205461e028785313fd5f1c17ea48440ee5bd65a107c31c6d903ade2",
+    "electronics/quadcuber.kicad_pcb": "9e55fcbee01241fc6ec3682fde79daaacd6bc623ecfc311809600e001099350a",
+    "electronics/quadcuber.kicad_sch": "5aace6a2ca53fb36f6b5fc7948c173f784a674ef56fdc5b231ec28dcf25afdba",
+    "generated/electronics/circuit.json": "9776a9b74d081593578573b8f93ef979eb8cc192eea9e9b7f67e02a9c597ca85",
+    "generated/electronics/bom.csv": "3123e9551900b78450ab60f664b96a5a5b09613147829a2ba548d0cf20312954",
+    "generated/electronics/netlist.xml": "f08a82700c35434dfb3442962665e31b3b5cc387b04cce19593f3bd6d6429814",
+    "electronics/simulation/pspice-handoff/VIN9_C0.8.cir": "bbc50644d6cb8873031d63a2b0e9f744328cbec94da40cf637a4405a7fcb91f9",
+    "electronics/simulation/pspice-handoff/README.md": "a0c1af9e1f8353da6ae5b25e42ac4e0a3abc909a75565a1c325704c1dd53d0ff",
+    "electronics/README.md": "6b0d0339b652913cb868bf81939922f8b2ade510f15678b0bccc4813c4e579db"
+  },
+  "limits": "Static document/source consistency only. WEBENCH actual A1 customization and simulation not run; no hardware acceptance."
+}

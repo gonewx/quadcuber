@@ -4,6 +4,10 @@
 
 **不得把当前 Gerber 下单。** `EV3_UserDrawing_PINMAP_HOLD` 已采用用户上传尺寸图：六个Ø0.79信号孔、1.02横向投影节距、2.54排距、两个Ø2.3定位孔及12 mm孔距；旧占位孔位已移除。详见[图纸及独立尺寸审查](sources/ev3-user-drawing-review.md)。图只有最右上孔明确标为6，其余1～5和元件面视向暂按相关视图推定。实际可采购料号、与图纸的对应关系、接点电流及固定耳完整外廓仍待核验，不能把本图认定为Adafruit4434，也不能用普通RJ12或DEC反向偏扣插座替代。ERC/DRC不能解除这些制造HOLD。
 
+## 已批准的BOOT与反馈修订
+
+当前修订删除R20/R30，使100nF C22/C32直接跨接各自BOOT–SW；反馈保持100k/13.3k，改为RT0603BRD07100KL/RT0603BRD0713K3L（0.1%）。这是实物源电路、原理图、PCB、BOM和仿真输入的同步修改，旧49.9Ω仿真记录仅作为历史证据。[实施和验证记录](../generated/electronics/boot-direct-revision/README.md)保存布局改进、实际测试结果及未覆盖风险。制造仍不放行；精度升级不等于已证明温漂及瞬态全程满足5.25V。
+
 ## KiCad版本与显示
 
 已使用用户批准的官方 **KiCad 10.0.7 Lite** 完成PCB与全部12张原理图的原生 `upgrade --force` 重存，以及ERC、含schematic parity的DRC和引脚契约复验。通过原生pcbnew API把原理图已有的MPN/Manufacturer同步为PCB隐藏字段，解决10版新增的198个缺失MPN一致性告警；未屏蔽检查。Lite安装缺少完整标准3D模型库，不能称为完整3D验证。

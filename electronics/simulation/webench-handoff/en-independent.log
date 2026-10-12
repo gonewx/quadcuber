@@ -1,0 +1,12 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: a1 en resistor/current-source branch verification only - not tps54302 macro model
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 1001
+ngspice-44.2 done

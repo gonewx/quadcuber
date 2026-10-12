@@ -1,0 +1,103 @@
+{
+  "source": "https://www.ti.com/lit/ds/symlink/tps54302.pdf Rev C sections 5.5,6.3.5,7.2.3; Yageo F resistors \u00b11%",
+  "pcb_sha256": "9e55fcbee01241fc6ec3682fde79daaacd6bc623ecfc311809600e001099350a",
+  "EN": {
+    "start_typ_V": 6.858299999999999,
+    "stop_typ_V": 5.6555833333333325,
+    "hysteresis_typ_V": 1.2027166666666664,
+    "start_resistor_only_corners_V": [
+      6.743342346534654,
+      6.975652292929293
+    ],
+    "stop_resistor_only_corners_V": [
+      5.555292054455445,
+      5.758132971380471
+    ],
+    "startup_upper_conditional_ignore_positive_pullup_V": 7.635178451178452,
+    "ramp_1ms_9V_start_typ_ms": 0.7620333333333332,
+    "points": [
+      {
+        "vin_V": 8.82,
+        "en_typ_current_resistor_corner_V": [
+          1.6733069019530369,
+          1.7257781443033633
+        ]
+      },
+      {
+        "vin_V": 9,
+        "en_typ_current_resistor_corner_V": [
+          1.7034830139421993,
+          1.756972379032258
+        ]
+      },
+      {
+        "vin_V": 9.18,
+        "en_typ_current_resistor_corner_V": [
+          1.7336591259313616,
+          1.7881666137611532
+        ]
+      },
+      {
+        "vin_V": 12,
+        "en_typ_current_resistor_corner_V": [
+          2.2064182137615718,
+          2.276876291180508
+        ]
+      },
+      {
+        "vin_V": 28,
+        "en_typ_current_resistor_corner_V": [
+          4.88873927946489,
+          5.049697155971173
+        ]
+      }
+    ],
+    "limits": "Ip/Ih have typical values only; resistor corners are not guaranteed total PVT bounds. Upper conditional assumes no negative net EN current."
+  },
+  "feedback": {
+    "typ_V": 5.077203007518797,
+    "independent_vref_resistor_corners_V": [
+      4.862917665450755,
+      5.2977927394243185
+    ],
+    "above_5V25_by_V": 0.0477927394243185,
+    "limits": "Conservative static independent corners, excludes FB input current, line/load regulation, dynamics; no measured failure claim."
+  },
+  "BOOT": {
+    "series_R_ohm": 49.9,
+    "C_F": 1e-07,
+    "RC_s": 4.99e-06,
+    "switch_period_typ_s": 2.5e-06,
+    "limits": "RC only, not effective gate-drive model; gate charge and driver current unavailable. Reference 49.9 ohm is feedback loop injection, not BOOT."
+  },
+  "output_cap_rule": {
+    "minimum_C_at_typ_V_for_f0_below40k_uF": 25.11225172820273,
+    "cases": [
+      {
+        "factor": 0.4,
+        "total_C_uF": 17.6,
+        "f0_est_Hz": 57073.29938227892,
+        "Cff_rule_pF": 27.88605964864061
+      },
+      {
+        "factor": 0.8,
+        "total_C_uF": 35.2,
+        "f0_est_Hz": 28536.64969113946,
+        "Cff_rule_pF": 55.77211929728122
+      },
+      {
+        "factor": 1,
+        "total_C_uF": 44,
+        "f0_est_Hz": 22829.319752911568,
+        "Cff_rule_pF": 69.71514912160154
+      },
+      {
+        "factor": 1.2,
+        "total_C_uF": 52.8,
+        "f0_est_Hz": 19024.43312742631,
+        "Cff_rule_pF": 83.65817894592183
+      }
+    ],
+    "limits": "TI rough crossover estimate before Cff, not phase-margin proof; factors are assumptions, not manufacturer DC-bias evidence."
+  }
+}

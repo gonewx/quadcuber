@@ -1,0 +1,141 @@
+{
+  "circuit_sha256": "7a9c1efa78a20b625537c039264d4b7d18260798ffccf299d9e3b760f7603cea",
+  "pcb_sha256": "aa17fa9b22cc113f423552e96b39004e5b6b77cb64c0e49f54233de939642a5a",
+  "vm_bulk_refs": [
+    "C2",
+    "C3",
+    "C102",
+    "C122",
+    "C142",
+    "C162"
+  ],
+  "vm_bulk_nominal_F": 0.00282,
+  "parts": {
+    "U2": "TPS54302DDCR",
+    "U3": "TPS54302DDCR",
+    "Q1": "CSD18540Q5B",
+    "U4": "LM74700QDBVRQ1",
+    "D3": "SMBJ12A",
+    "D2": "SS14-E3/61T",
+    "D5": "SS14-E3/61T"
+  },
+  "revision": "direct-boot-precision-v1",
+  "bootstrap": "100n directly BOOT-SW; no series resistor",
+  "feedback_tolerance": 0.001,
+  "dynamic_validation": "PENDING",
+  "state": "STATIC_CONTRACT_PASS_DYNAMIC_NOT_RUN",
+  "cases": [
+    {
+      "case": "VIN8.82_C0.4",
+      "vin_V": 8.82,
+      "cap_factor": 0.4,
+      "state": "NOT_RUN",
+      "deck_sha256": "79d7283f63d8f0901d4d214acd0c40abf6f38abdf6da86dcf450f338a8ccf325"
+    },
+    {
+      "case": "VIN8.82_C0.8",
+      "vin_V": 8.82,
+      "cap_factor": 0.8,
+      "state": "NOT_RUN",
+      "deck_sha256": "0924ccad0b8030c98ee7044c67d71e86e6705bba03acc91f8dd6a5370ba1c1aa"
+    },
+    {
+      "case": "VIN8.82_C1.2",
+      "vin_V": 8.82,
+      "cap_factor": 1.2,
+      "state": "NOT_RUN",
+      "deck_sha256": "1f776c0bab9c2f0d1861e76cdfcb981d8e4395c815c7a14d21a3f3d946add103"
+    },
+    {
+      "case": "VIN9_C0.4",
+      "vin_V": 9,
+      "cap_factor": 0.4,
+      "state": "NOT_RUN",
+      "deck_sha256": "237275acc1d568443149382d5e2dcea6cff133e22da81e14286b11d90727d9e0"
+    },
+    {
+      "case": "VIN9_C0.8",
+      "vin_V": 9,
+      "cap_factor": 0.8,
+      "state": "NOT_RUN",
+      "deck_sha256": "b4b12e0e02db2ac9ef1fdf545f66eb3faa39e9a7741cbb1f6228f061a1953e3c"
+    },
+    {
+      "case": "VIN9_C1.2",
+      "vin_V": 9,
+      "cap_factor": 1.2,
+      "state": "NOT_RUN",
+      "deck_sha256": "80b58e15bbc2cdcfe5aaa939f4c3d7d23b6def9d1db5878cd192a9c739e81f00"
+    },
+    {
+      "case": "VIN9.18_C0.4",
+      "vin_V": 9.18,
+      "cap_factor": 0.4,
+      "state": "NOT_RUN",
+      "deck_sha256": "74c15bae9f263845666f1c68b3ea8ea5d406acb3be41a80c383264faec5f09ce"
+    },
+    {
+      "case": "VIN9.18_C0.8",
+      "vin_V": 9.18,
+      "cap_factor": 0.8,
+      "state": "NOT_RUN",
+      "deck_sha256": "33f1d41c94f7bafae0db3b128aa84755e2a4c0bd6b98b737ccdb4860ec76b186"
+    },
+    {
+      "case": "VIN9.18_C1.2",
+      "vin_V": 9.18,
+      "cap_factor": 1.2,
+      "state": "NOT_RUN",
+      "deck_sha256": "266d6803d6d5d0814ea8b8f9cc3e82271492b188b10363e744e1b0136b99a183"
+    }
+  ],
+  "manufacturing_released": false,
+  "hardware_validated": false,
+  "original_model_sha256": "52a568f08f1eed44961238a1ff10b68c2ce1faa1cdf2c24659b17b1f820f0026",
+  "source": "https://www.ti.com/lit/zip/slvmbl9",
+  "feedback_parts": {
+    "R21": {
+      "value": "100k",
+      "mpn": "RT0603BRD07100KL",
+      "pins": {
+        "1": "5V_A",
+        "2": "B1_FB"
+      }
+    },
+    "R22": {
+      "value": "13.3k",
+      "mpn": "RT0603BRD0713K3L",
+      "pins": {
+        "1": "B1_FB",
+        "2": "GND"
+      }
+    },
+    "R31": {
+      "value": "100k",
+      "mpn": "RT0603BRD07100KL",
+      "pins": {
+        "1": "5V_B",
+        "2": "B2_FB"
+      }
+    },
+    "R32": {
+      "value": "13.3k",
+      "mpn": "RT0603BRD0713K3L",
+      "pins": {
+        "1": "B2_FB",
+        "2": "GND"
+      }
+    }
+  },
+  "static_feedback_range_V": [
+    4.940692938640306,
+    5.214182129497917
+  ],
+  "limitations": [
+    "Static feedback range includes Vref and initial resistor tolerance only; excludes TCR, aging, line/load, FB bias and transients.",
+    "Nominal SPICE resistors do not implement a tolerance sweep.",
+    "Output ESR 3mOhm and capacity factors are assumptions, not measured Murata DC-bias data.",
+    "Ideal input source excludes input impedance/ripple validation.",
+    "Historical 49.9-ohm BOOT simulations are not results for this revision."
+  ]
+}

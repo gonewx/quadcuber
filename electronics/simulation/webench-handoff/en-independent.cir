@@ -1,0 +1,16 @@
+A1 EN resistor/current-source branch verification only - NOT TPS54302 macro model
+Vvin vin 0 0
+Rtopoff vin enoff 511k
+Rbotoff enoff 0 105k
+Ipoff 0 enoff 0.7u
+Rtopon vin enon 511k
+Rboton enon 0 105k
+Ipon 0 enon 2.25u
+.control
+set wr_vecnames
+set wr_singlescale
+dc Vvin 0 10 0.01
+wrdata en-independent.txt v(enoff) v(enon)
+quit
+.endc
+.end

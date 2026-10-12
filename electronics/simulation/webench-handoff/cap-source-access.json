@@ -1,0 +1,17 @@
+[
+  {
+    "part": "cin",
+    "url": "https://pim.murata.com/en-us/pim/details/?partNum=GRM32DR71E106KA12L",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "part": "cout",
+    "url": "https://pim.murata.com/en-us/pim/details/?partNum=GRM32ER71E226KE15L",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "part": "simsurfing",
+    "url": "https://ds.murata.com/simsurfing/mlcc.html?oripartnumbers=%5B%22GRM32ER71E226KE15L%22%5D&partnumbers=%5B%22GRM32ER71E226KE15%22%5D",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  }
+]

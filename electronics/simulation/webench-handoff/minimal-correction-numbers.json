@@ -1,0 +1,52 @@
+{
+  "scope": "Independent static corners only; not full system PVT or transient guarantee",
+  "rows": [
+    {
+      "top_kohm": 100,
+      "bottom_kohm": 13.3,
+      "initial_tolerance": 0.01,
+      "min_V": 4.862917665450754,
+      "typ_V": 5.077203007518797,
+      "max_V": 5.2977927394243185
+    },
+    {
+      "top_kohm": 100,
+      "bottom_kohm": 13.3,
+      "initial_tolerance": 0.001,
+      "min_V": 4.940692938640306,
+      "typ_V": 5.077203007518797,
+      "max_V": 5.214182129497917
+    },
+    {
+      "top_kohm": 100,
+      "bottom_kohm": 13.7,
+      "initial_tolerance": 0.01,
+      "min_V": 4.7378981715689825,
+      "typ_V": 4.94636496350365,
+      "max_V": 5.16095207549952
+    },
+    {
+      "top_kohm": 100,
+      "bottom_kohm": 13.7,
+      "initial_tolerance": 0.001,
+      "min_V": 4.813402633862488,
+      "typ_V": 4.94636496350365,
+      "max_V": 5.079782651264402
+    },
+    {
+      "top_kohm": 100,
+      "bottom_kohm": 13.5,
+      "initial_tolerance": 0.001,
+      "min_V": 4.876104895104896,
+      "typ_V": 5.0108148148148155,
+      "max_V": 5.145986838690542
+    }
+  ],
+  "same_ratio_0p1_temperature_example": {
+    "delta_C": 100,
+    "each_TCR_ppm_C": 25,
+    "min_V": 4.918948834208186,
+    "max_V": 5.237255724131992
+  },
+  "Cmin_uF_at_4p75V": 26.842105263157894
+}

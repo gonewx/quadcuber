@@ -1,0 +1,44 @@
+FFF
+======================================================================
+FAIL: test_cap_bridges_boot_sw_not_short (test_buck_source.BuckSourceContract.test_cap_bridges_boot_sw_not_short)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quadcuber/electronics/test_buck_source.py", line 12, in test_cap_bridges_boot_sw_not_short
+    self.assertEqual(C[ref]['pins'],{'1':f'B{i}_BOOT','2':f'B{i}_SW'})
+AssertionError: {'1': 'B1_BOOT_CAP', '2': 'B1_SW'} != {'1': 'B1_BOOT', '2': 'B1_SW'}
+- {'1': 'B1_BOOT_CAP', '2': 'B1_SW'}
+?               ----
+
++ {'1': 'B1_BOOT', '2': 'B1_SW'}
+
+======================================================================
+FAIL: test_no_series_boot_resistor_or_intermediate_net (test_buck_source.BuckSourceContract.test_no_series_boot_resistor_or_intermediate_net)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quadcuber/electronics/test_buck_source.py", line 7, in test_no_series_boot_resistor_or_intermediate_net
+    self.assertTrue({'R20','R30'}.isdisjoint(C))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_precision_feedback_exact_mpn_same_values (test_buck_source.BuckSourceContract.test_precision_feedback_exact_mpn_same_values)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quadcuber/electronics/test_buck_source.py", line 18, in test_precision_feedback_exact_mpn_same_values
+    self.assertEqual((C[ref]['value'],C[ref]['mpn']),(value,mpn))
+AssertionError: Tuples differ: ('100k', 'RC0603FR-07100KL') != ('100k', 'RT0603BRD07100KL')
+
+First differing element 1:
+'RC0603FR-07100KL'
+'RT0603BRD07100KL'
+
+- ('100k', 'RC0603FR-07100KL')
+?            ^    ^ ^
+
++ ('100k', 'RT0603BRD07100KL')
+?            ^    ^ ^
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=3)

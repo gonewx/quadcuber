@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Render completed or failed vendor-model evidence without changing pass/fail."""
+"""HISTORICAL ONLY: render pre-direct-BOOT nine failed runs.
+Do not use for direct-boot-precision-v1; its dynamics remain pending.
+"""
 import csv, gzip, json, os, re
 from pathlib import Path
 os.environ.setdefault('XDG_CACHE_HOME','/tmp/quadcuber-cache')

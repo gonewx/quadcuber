@@ -1,0 +1,77 @@
+{
+  "circuit_sha256": "7a9c1efa78a20b625537c039264d4b7d18260798ffccf299d9e3b760f7603cea",
+  "pcb_sha256": "aa17fa9b22cc113f423552e96b39004e5b6b77cb64c0e49f54233de939642a5a",
+  "vm_bulk_refs": [
+    "C2",
+    "C3",
+    "C102",
+    "C122",
+    "C142",
+    "C162"
+  ],
+  "vm_bulk_nominal_F": 0.00282,
+  "parts": {
+    "U2": "TPS54302DDCR",
+    "U3": "TPS54302DDCR",
+    "Q1": "CSD18540Q5B",
+    "U4": "LM74700QDBVRQ1",
+    "D3": "SMBJ12A",
+    "D2": "SS14-E3/61T",
+    "D5": "SS14-E3/61T"
+  },
+  "revision": "direct-boot-precision-v1",
+  "bootstrap": "100n directly BOOT-SW; no series resistor",
+  "feedback_tolerance": 0.001,
+  "dynamic_validation": "PENDING",
+  "original_model_sha256": "52a568f08f1eed44961238a1ff10b68c2ce1faa1cdf2c24659b17b1f820f0026",
+  "model_sha256": "34d6bd4e29009f06b95d75fb82b91d3c0d4d783ea3ba92be318467bfa51790f8",
+  "model_source": "https://www.ti.com/lit/zip/slvmbl9",
+  "subckt": "TPS54302_TRANS",
+  "pins": [
+    "BOOT",
+    "EN",
+    "GND",
+    "PH",
+    "VIN",
+    "VSENSE"
+  ],
+  "simulator": "******\n** ngspice-44.2 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2024, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Sun Jan 12 08:19:15 UTC 2025\n******\n",
+  "cases": [
+    {
+      "completed": false,
+      "passed": false,
+      "returncode": 0,
+      "log_error": "Timestep too small",
+      "last_time_s": 0.000761902267,
+      "points": 9091,
+      "case": "VIN9_C0.8",
+      "elapsed_s": 3.092
+    }
+  ],
+  "state": "INCOMPLETE_NUMERICAL_FAILURE",
+  "pin_mapping": {
+    "PH": "SW",
+    "VSENSE": "FB"
+  },
+  "model_transformations": [
+    "CRLF to LF during text serialization",
+    "MONONEG_PS: PSpice boolean XOR ^ -> parenthesized boolean !=; truth table independently checked"
+  ],
+  "compatibility": "ngbehavior=ps; analog.cm and xtradev.cm required",
+  "method": "trap",
+  "timeout_s": 20.0,
+  "baseline_git": "2d01805e8ac628a21c66806affd03b1b632a0859",
+  "working_tree_revision": "direct-boot-precision-v1",
+  "thresholds": {
+    "settled_min_V": 4.75,
+    "all_time_max_V": 5.25,
+    "startup_deadline_s": 0.01,
+    "inductor_peak_A": 6,
+    "stop_s": 0.025
+  },
+  "manufacturing_released": false,
+  "vendor_model_cases_attempted": 1,
+  "vendor_model_cases_completed": 0,
+  "vendor_model_cases_passed": 0,
+  "error": "One or more acceptance criteria failed."
+}

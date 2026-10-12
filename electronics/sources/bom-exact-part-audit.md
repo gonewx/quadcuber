@@ -1,5 +1,8 @@
 # A1 exact-MPN / package / rating independent audit
 
+2026-10-12 direct-boot-precision-v1更新：R20/R30已从装配BOM删除；R21/R31改为[RT0603BRD07100KL](https://yageogroup.com/component-documentation/download/specsheet/RT0603BRD07100KL)，R22/R32改为[RT0603BRD0713K3L](https://yageogroup.com/component-documentation/download/specsheet/RT0603BRD0713K3L)。两者分别100k/13.3k、0.1%、±25ppm/°C、0603，0.1W@70°C、75V。下文RC系列49.9Ω/反馈1%编码审查属于修订前记录，不再代表这六个位号的当前装配。当前实物匹配见新版BOM和boot-direct-revision/cross-check.json；未作库存或量产资格承诺。
+
+
 2026-10-12. Read-only design audit by the independent review agent, with separate capacitor and connector/passive reviews. No PCB, netlist, purchasing record or simulation was changed by this audit. This is a component-evidence review, **not manufacturing release or a physical qualification**.
 
 Reviewed snapshot: `electronics/circuit.py` SHA-256 `ddf27f40ea126ae153b21c24ad23e0e14e27026af6315bbed6588c31c7b12a10`; `generated/electronics/bom-grouped.csv` SHA-256 `f278c39bfe609cdc7e4491662a55bae05b9145589acc3009f5d54fa8e877af60`. The implementation owner may revise these files in response; findings below refer to these exact inputs, not an assumed later build.

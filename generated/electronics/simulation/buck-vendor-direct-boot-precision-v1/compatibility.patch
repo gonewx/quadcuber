@@ -1,0 +1,11 @@
+--- TI-original
++++ ngspice-adapted
+@@ -661,7 +661,7 @@
+ RIN YA 0 1e11
+ EABM1 YTD 0 VALUE={IF(V(YA)> {PW*1000}, 0, 1)}
+ RYTD YTD 0 1e11
+-EXOR P 0 VALUE={IF(V(YTD) > 0.5 ^ V(IN) > .5, 1, 0)}
++EXOR P 0 VALUE={IF(((V(YTD) > 0.5) != (V(IN) > .5)), 1, 0)}
+ ROUTpp2 P 0 1e11
+ EAND1 Q1 0 VALUE={ IF(V(P)>0.5 & V(YTD)>0.5, 1, 0)}
+ Ro1 Q1 Q 1m

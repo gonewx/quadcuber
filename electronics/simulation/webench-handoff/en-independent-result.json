@@ -1,0 +1,8 @@
+{
+  "solver": "ngspice 44.2",
+  "points": 1001,
+  "max_abs_error_V": 4.545454901361268e-09,
+  "scope": "Independent static resistor/current-source branches only; no switching converter, EN comparator dynamics or full PVT simulation",
+  "Vstart_typ_V": 6.858299999999999,
+  "Vstop_typ_V": 5.6555833333333325
+}

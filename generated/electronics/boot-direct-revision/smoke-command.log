@@ -1,0 +1,2 @@
+{"completed": false, "passed": false, "returncode": 0, "log_error": "Timestep too small", "last_time_s": 0.000761902267, "points": 9091, "case": "VIN9_C0.8", "elapsed_s": 3.092}
+One or more acceptance criteria failed.

@@ -1609,37 +1609,16 @@
     "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
-    "ref": "R20",
-    "value": "49.9",
-    "fp": "Quadcuber:R_0603_1608Metric",
-    "pins": {
-      "1": "B1_BOOT",
-      "2": "B1_BOOT_CAP"
-    },
-    "xy": [
-      42.5,
-      34
-    ],
-    "mpn": "RC0603FR-0749R9L",
-    "mfr": "Yageo",
-    "section": "buck1",
-    "names": {},
-    "types": {},
-    "note": "",
-    "rot": 0,
-    "source_fp": "Resistor_SMD:R_0603_1608Metric"
-  },
-  {
     "ref": "C22",
     "value": "100n",
     "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
-      "1": "B1_BOOT_CAP",
+      "1": "B1_BOOT",
       "2": "B1_SW"
     },
     "xy": [
-      47,
-      34
+      48,
+      41.9
     ],
     "mpn": "GRM21BR71H104KA01L",
     "mfr": "Murata",
@@ -1734,7 +1713,7 @@
       44,
       45
     ],
-    "mpn": "RC0603FR-07100KL",
+    "mpn": "RT0603BRD07100KL",
     "mfr": "Yageo",
     "section": "buck1",
     "names": {},
@@ -1755,7 +1734,7 @@
       44,
       41
     ],
-    "mpn": "RC0603FR-0713K3L",
+    "mpn": "RT0603BRD0713K3L",
     "mfr": "Yageo",
     "section": "buck1",
     "names": {},
@@ -1943,37 +1922,16 @@
     "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
-    "ref": "R30",
-    "value": "49.9",
-    "fp": "Quadcuber:R_0603_1608Metric",
-    "pins": {
-      "1": "B2_BOOT",
-      "2": "B2_BOOT_CAP"
-    },
-    "xy": [
-      91.5,
-      34
-    ],
-    "mpn": "RC0603FR-0749R9L",
-    "mfr": "Yageo",
-    "section": "buck2",
-    "names": {},
-    "types": {},
-    "note": "",
-    "rot": 0,
-    "source_fp": "Resistor_SMD:R_0603_1608Metric"
-  },
-  {
     "ref": "C32",
     "value": "100n",
     "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
-      "1": "B2_BOOT_CAP",
+      "1": "B2_BOOT",
       "2": "B2_SW"
     },
     "xy": [
-      96,
-      34
+      97,
+      41.9
     ],
     "mpn": "GRM21BR71H104KA01L",
     "mfr": "Murata",
@@ -2068,7 +2026,7 @@
       93,
       45
     ],
-    "mpn": "RC0603FR-07100KL",
+    "mpn": "RT0603BRD07100KL",
     "mfr": "Yageo",
     "section": "buck2",
     "names": {},
@@ -2089,7 +2047,7 @@
       93,
       41
     ],
-    "mpn": "RC0603FR-0713K3L",
+    "mpn": "RT0603BRD0713K3L",
     "mfr": "Yageo",
     "section": "buck2",
     "names": {},

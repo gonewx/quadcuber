@@ -1,0 +1,32 @@
+{
+  "state": "PASS",
+  "scope": "Source + generated circuit JSON + assembly BOM + KiCad-exported netlist; geometry/ERC/DRC separate",
+  "removed": [
+    "R20",
+    "R30"
+  ],
+  "feedback": {
+    "R21": {
+      "value": "100k",
+      "mpn": "RT0603BRD07100KL"
+    },
+    "R22": {
+      "value": "13.3k",
+      "mpn": "RT0603BRD0713K3L"
+    },
+    "R31": {
+      "value": "100k",
+      "mpn": "RT0603BRD07100KL"
+    },
+    "R32": {
+      "value": "13.3k",
+      "mpn": "RT0603BRD0713K3L"
+    }
+  },
+  "hashes": {
+    "electronics/circuit.py": "7a9c1efa78a20b625537c039264d4b7d18260798ffccf299d9e3b760f7603cea",
+    "electronics/quadcuber.kicad_pcb": "aa17fa9b22cc113f423552e96b39004e5b6b77cb64c0e49f54233de939642a5a",
+    "generated/electronics/bom.csv": "1ddd6eb9967414952ba391555c7e8fdbfd042f5155f91776ae2a5d50134e4446",
+    "generated/electronics/netlist.xml": "cba0705f442e9ad56a7f84b2fc3056416b4b22ba30d3b0273f1c5b1ef4c99d10"
+  }
+}

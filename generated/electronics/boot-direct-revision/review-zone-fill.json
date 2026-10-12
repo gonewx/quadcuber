@@ -1,0 +1,185 @@
+{
+  "kicad_version": "10.0.7",
+  "baseline_sha256": "9e55fcbee01241fc6ec3682fde79daaacd6bc623ecfc311809600e001099350a",
+  "current_sha256": "aa17fa9b22cc113f423552e96b39004e5b6b77cb64c0e49f54233de939642a5a",
+  "method": "Refill baseline in memory, BooleanSubtract each filled zone in both directions, measure each outer polygon using integer-coordinate shoelace area. Holes are not subtracted; area is an upper bound per outer polygon.",
+  "local_windows_mm": [
+    [
+      90,
+      80,
+      104,
+      96
+    ],
+    [
+      139,
+      80,
+      153,
+      96
+    ]
+  ],
+  "threshold_mm2_per_polygon": 1e-06,
+  "rows": [
+    {
+      "net": "VIN",
+      "layer": "F.Cu",
+      "operation": "removed",
+      "polygon_count": 0,
+      "sum_outer_area_mm2": 0,
+      "outside_polygon_count": 0,
+      "outside_max_outer_area_mm2": 0,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "VIN",
+      "layer": "F.Cu",
+      "operation": "added",
+      "polygon_count": 0,
+      "sum_outer_area_mm2": 0,
+      "outside_polygon_count": 0,
+      "outside_max_outer_area_mm2": 0,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "GND",
+      "layer": "F.Cu",
+      "operation": "removed",
+      "polygon_count": 59,
+      "sum_outer_area_mm2": 15.526819164831,
+      "outside_polygon_count": 32,
+      "outside_max_outer_area_mm2": 1.630275e-07,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "GND",
+      "layer": "F.Cu",
+      "operation": "added",
+      "polygon_count": 73,
+      "sum_outer_area_mm2": 46.383318359395986,
+      "outside_polygon_count": 29,
+      "outside_max_outer_area_mm2": 2.2018e-07,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "VIN_FUSED",
+      "layer": "F.Cu",
+      "operation": "removed",
+      "polygon_count": 0,
+      "sum_outer_area_mm2": 0,
+      "outside_polygon_count": 0,
+      "outside_max_outer_area_mm2": 0,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "VIN_FUSED",
+      "layer": "F.Cu",
+      "operation": "added",
+      "polygon_count": 0,
+      "sum_outer_area_mm2": 0,
+      "outside_polygon_count": 0,
+      "outside_max_outer_area_mm2": 0,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "VM",
+      "layer": "F.Cu",
+      "operation": "removed",
+      "polygon_count": 0,
+      "sum_outer_area_mm2": 0,
+      "outside_polygon_count": 0,
+      "outside_max_outer_area_mm2": 0,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "VM",
+      "layer": "F.Cu",
+      "operation": "added",
+      "polygon_count": 0,
+      "sum_outer_area_mm2": 0,
+      "outside_polygon_count": 0,
+      "outside_max_outer_area_mm2": 0,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "operation": "removed",
+      "polygon_count": 10,
+      "sum_outer_area_mm2": 6.195971823259499,
+      "outside_polygon_count": 7,
+      "outside_max_outer_area_mm2": 3.3203e-08,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "operation": "added",
+      "polygon_count": 14,
+      "sum_outer_area_mm2": 5.6607318994765,
+      "outside_polygon_count": 8,
+      "outside_max_outer_area_mm2": 9.685e-08,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "GND",
+      "layer": "In1.Cu",
+      "operation": "removed",
+      "polygon_count": 12,
+      "sum_outer_area_mm2": 1.9150720562829997,
+      "outside_polygon_count": 5,
+      "outside_max_outer_area_mm2": 2.7098e-08,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "GND",
+      "layer": "In1.Cu",
+      "operation": "added",
+      "polygon_count": 11,
+      "sum_outer_area_mm2": 1.9150719300890002,
+      "outside_polygon_count": 4,
+      "outside_max_outer_area_mm2": 1.89525e-08,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "3V3",
+      "layer": "In2.Cu",
+      "operation": "removed",
+      "polygon_count": 0,
+      "sum_outer_area_mm2": 0,
+      "outside_polygon_count": 0,
+      "outside_max_outer_area_mm2": 0,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "3V3",
+      "layer": "In2.Cu",
+      "operation": "added",
+      "polygon_count": 0,
+      "sum_outer_area_mm2": 0,
+      "outside_polygon_count": 0,
+      "outside_max_outer_area_mm2": 0,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "VM",
+      "layer": "In2.Cu",
+      "operation": "removed",
+      "polygon_count": 34,
+      "sum_outer_area_mm2": 3.6290280296789996,
+      "outside_polygon_count": 10,
+      "outside_max_outer_area_mm2": 5.5822e-08,
+      "outside_above_threshold": []
+    },
+    {
+      "net": "VM",
+      "layer": "In2.Cu",
+      "operation": "added",
+      "polygon_count": 27,
+      "sum_outer_area_mm2": 3.6982628447085,
+      "outside_polygon_count": 6,
+      "outside_max_outer_area_mm2": 4.544e-08,
+      "outside_above_threshold": []
+    }
+  ],
+  "pass": true,
+  "limits": "Not byte equality; tiny slivers are inferred numerical residuals. Per-polygon threshold, not a bound on total residual area. No board saved; not an EMI/thermal/hardware proof."
+}

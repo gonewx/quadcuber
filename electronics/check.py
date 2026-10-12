@@ -87,6 +87,17 @@ for t in b.GetTracks():
 for i in [2,3]:
     check(f'U{i}',1,'GND');check(f'U{i}',3,'VM')
     check(f'U{i}',2,f'B{i-1}_SW');check(f'L{i-1}',1,f'B{i-1}_SW')
+# Approved direct bootstrap: independent of source generator and shared mistakes.
+for ch,cap,top,bottom in [(1,'C22','R21','R22'),(2,'C32','R31','R32')]:
+    check(f'U{ch+1}',6,f'B{ch}_BOOT');check(cap,1,f'B{ch}_BOOT');check(cap,2,f'B{ch}_SW')
+    for ref,mpn in [(top,'RT0603BRD07100KL'),(bottom,'RT0603BRD0713K3L')]:
+        node=tree.find(f'./components/comp[@ref="{ref}"]/fields/field[@name="MPN"]')
+        if node is None or node.text!=mpn:errors.append(f'{ref}: precision feedback MPN mismatch')
+for ref in ['R20','R30']:
+    if tree.find(f'./components/comp[@ref="{ref}"]') is not None or any(k[0]==ref for k in pads):errors.append(f'{ref}: obsolete bootstrap resistor remains')
+if any(n.endswith('_BOOT_CAP') for n in [*xmlnets.values(),*pads.values()]):errors.append('Obsolete BOOT_CAP net remains')
+for t in b.GetTracks():
+    if t.GetNetname().endswith('_BOOT_CAP'):errors.append('Obsolete BOOT_CAP copper remains')
 # Inspect geometry / current routes without claiming simulation or thermal proof.
 widths={}
 for t in b.GetTracks():

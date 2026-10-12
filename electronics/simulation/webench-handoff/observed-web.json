@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-12",
+  "scope": "Actual pre-login UI observation; not A1 simulation results",
+  "form": {
+    "vinmin_V": 8.82,
+    "vinmax_V": 9.18,
+    "vout_V": 5,
+    "iout_A": 1.5,
+    "temperature_default_C": 30
+  },
+  "candidate_generation_status": 200,
+  "matching_before_filter": 730,
+  "filter": "TPS54302 + Enter",
+  "matching_after_prefix_filter": 2,
+  "candidate_text": "TPS54302DDC\nGND\nSW\nVIN\nFB\nEN\nBOOT\nCbst\n100nF\n280mOhm\nCin\n10uF\n0Ohm\nL1\n11uH\n15.8mOhm\nRfbb\n13.7kOhm\nRfbt\n100kOhm\nU1\nCff\n100pF\n1mOhm\nCout\n47uF\n3.037mOhm\nQty=2\nVin\nRload\nTPS54302\nHIGH LIGHT LOAD EFFICIENCY, Synchronous Step Down Converter,4.5 to 28V Input, 3A Output\nCompare\nmore_vert\nEfficiency: \n95%\nBOM Cost: \n$3.28\nFootprint: \n208 mm²\nBOM Count: \n9\nTopology: \nBuck\nFrequency: \n400 kHz\nIC Cost: \n$0.45 | 1ku\nCUSTOMIZE\nSIMULATE\nEXPORT\n",
+  "action": "CUSTOMIZE on exact TPS54302DDC card",
+  "result_url_without_query": "https://login.ti.com/as/authorization.oauth2",
+  "post_login_UI_observed": false,
+  "simulations_completed": 0,
+  "raw_evidence_sha256": {
+    "specs-filled.json": "eaf2fe4035484fb809af602024db97401ad4b11b16ce7a3968c7e36856ed020e",
+    "generation-result.json": "314946b8eec623366dd8c68c702f221b32144d85dbca5751d008134d73f2633c",
+    "exact-filter.json": "db70de8c34bd1022f1d442171afb203dce191b02b56458b39119e849c103bcd6",
+    "customize-result.json": "907378fc6c4dc7ba23ec19b7b4dd5fcbec7351a422dc2250416cda82b8b398f4"
+  }
+}

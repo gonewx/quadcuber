@@ -91,13 +91,12 @@ for idx,(x,y) in enumerate([(49,38),(98,38)]):
     add(f'U{u}','TPS54302DDCR','Package_TO_SOT_SMD:SOT-23-6',{1:'GND',2:pre+'SW',3:'VM',4:pre+'FB',5:pre+'EN',6:pre+'BOOT'},(x,y),'TPS54302DDCR','Texas Instruments',sec,names={'1':'GND','2':'SW','3':'VIN','4':'FB','5':'EN','6':'BOOT'},types={'1':'power_in','2':'output','3':'power_in','4':'input','5':'input','6':'passive'})
     c(f'C{10+n*10}','10u/25V','VM','GND',(x-5,y-2),sec)
     c(f'C{11+n*10}','100n','VM','GND',(x-5,y+2),sec)
-    r(f'R{10+n*10}','49.9',pre+'BOOT',pre+'BOOT_CAP',(x-3,y-7),sec)
-    c(f'C{12+n*10}','100n',pre+'BOOT_CAP',pre+'SW',(x+1,y-4),sec)
+    c(f'C{12+n*10}','100n',pre+'BOOT',pre+'SW',(x-1,y+3.9),sec)
     add(f'L{n}','10uH 9A Isat16A','Inductor_SMD:L_Bourns_SRP1245A',{1:pre+'SW',2:rail},(x+12,y),'SRP1245A-100M','Bourns',sec)
     c(f'C{13+n*10}','22u/25V',rail,'GND',(x+22,y-3),sec)
     c(f'C{14+n*10}','22u/25V',rail,'GND',(x+22,y+2),sec)
-    r(f'R{11+n*10}','100k',rail,pre+'FB',(x+8,y+10),sec)
-    r(f'R{12+n*10}','13.3k',pre+'FB','GND',(x+3,y+10),sec)
+    r(f'R{11+n*10}','100k',rail,pre+'FB',(x+8,y+10),sec,mpn='RT0603BRD07100KL')
+    r(f'R{12+n*10}','13.3k',pre+'FB','GND',(x+3,y+10),sec,mpn='RT0603BRD0713K3L')
     c(f'C{15+n*10}','75p',rail,pre+'FB',(x+8,y+14),sec)
     r(f'R{13+n*10}','511k','VM',pre+'EN',(x-7,y+10),sec)
     r(f'R{14+n*10}','105k',pre+'EN','GND',(x-2,y+14),sec)
@@ -143,7 +142,7 @@ for comp in C:
         comp['note']='DNP by default. Populate only after loop/step-response verification with added 470uF.'
 # Buck placement follows the switching loop, with SW facing the inductor.
 for i,x in [(1,49),(2,98)]:
-    loc={f'U{i+1}':(x,38,180),f'C{10+i*10}':(x+3,46.5,270),f'C{11+i*10}':(x+3.5,41.5,270),f'R{10+i*10}':(x-6.5,34,0),f'C{12+i*10}':(x-2,34,0),f'R{11+i*10}':(x-5,45,0),f'R{12+i*10}':(x-5,41,0),f'C{15+i*10}':(x-9,45,0),f'R{13+i*10}':(x-8,29,0),f'R{14+i*10}':(x-10,35,0)}
+    loc={f'U{i+1}':(x,38,180),f'C{10+i*10}':(x+3,46.5,270),f'C{11+i*10}':(x+3.5,41.5,270),f'C{12+i*10}':(x-1,41.9,0),f'R{11+i*10}':(x-5,45,0),f'R{12+i*10}':(x-5,41,0),f'C{15+i*10}':(x-9,45,0),f'R{13+i*10}':(x-8,29,0),f'R{14+i*10}':(x-10,35,0)}
     for comp in C:
         if comp['ref'] in loc:
             xx,yy,rr=loc[comp['ref']];comp['xy']=(xx,yy);comp['rot']=rr

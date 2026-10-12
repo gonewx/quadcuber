@@ -1,0 +1,2529 @@
+{
+  "schema": "quadcuber.boot-local-revision.v1",
+  "kicad_version": "10.0.7",
+  "baseline_sha256": "9e55fcbee01241fc6ec3682fde79daaacd6bc623ecfc311809600e001099350a",
+  "output_sha256": "aa17fa9b22cc113f423552e96b39004e5b6b77cb64c0e49f54233de939642a5a",
+  "unchanged_tracks_and_vias": 2557,
+  "unchanged_footprints": 194,
+  "changed_footprints": {
+    "C22": {
+      "before": {
+        "position_mm": [
+          97.0,
+          84.0
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "C_0805_2012Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "B1_BOOT_CAP",
+            "position_mm": [
+              96.05,
+              84.0
+            ],
+            "size_mm": [
+              1.0,
+              1.45
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "B1_SW",
+            "position_mm": [
+              97.95,
+              84.0
+            ],
+            "size_mm": [
+              1.0,
+              1.45
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              97.0,
+              84.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              97.0,
+              84.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "GRM21BR71H104KA01L",
+            "position_mm": [
+              97.0,
+              84.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Murata",
+            "position_mm": [
+              97.0,
+              84.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "C22",
+            "position_mm": [
+              97.0,
+              80.5
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "100n",
+            "position_mm": [
+              97.0,
+              85.68
+            ],
+            "visible": false
+          }
+        ]
+      },
+      "after": {
+        "position_mm": [
+          98.0,
+          91.9
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "C_0805_2012Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "B1_BOOT",
+            "position_mm": [
+              97.05,
+              91.9
+            ],
+            "size_mm": [
+              1.0,
+              1.45
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "B1_SW",
+            "position_mm": [
+              98.95,
+              91.9
+            ],
+            "size_mm": [
+              1.0,
+              1.45
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              98.0,
+              91.9
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              98.0,
+              91.9
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "GRM21BR71H104KA01L",
+            "position_mm": [
+              98.0,
+              91.9
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Murata",
+            "position_mm": [
+              98.0,
+              91.9
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "C22",
+            "position_mm": [
+              98.0,
+              88.4
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "100n",
+            "position_mm": [
+              98.0,
+              93.58
+            ],
+            "visible": false
+          }
+        ]
+      }
+    },
+    "C32": {
+      "before": {
+        "position_mm": [
+          146.0,
+          84.0
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "C_0805_2012Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "B2_BOOT_CAP",
+            "position_mm": [
+              145.05,
+              84.0
+            ],
+            "size_mm": [
+              1.0,
+              1.45
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "B2_SW",
+            "position_mm": [
+              146.95,
+              84.0
+            ],
+            "size_mm": [
+              1.0,
+              1.45
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              146.0,
+              84.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              146.0,
+              84.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "GRM21BR71H104KA01L",
+            "position_mm": [
+              146.0,
+              84.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Murata",
+            "position_mm": [
+              146.0,
+              84.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "C32",
+            "position_mm": [
+              146.0,
+              80.5
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "100n",
+            "position_mm": [
+              146.0,
+              85.68
+            ],
+            "visible": false
+          }
+        ]
+      },
+      "after": {
+        "position_mm": [
+          147.0,
+          91.9
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "C_0805_2012Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "B2_BOOT",
+            "position_mm": [
+              146.05,
+              91.9
+            ],
+            "size_mm": [
+              1.0,
+              1.45
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "B2_SW",
+            "position_mm": [
+              147.95,
+              91.9
+            ],
+            "size_mm": [
+              1.0,
+              1.45
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              147.0,
+              91.9
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              147.0,
+              91.9
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "GRM21BR71H104KA01L",
+            "position_mm": [
+              147.0,
+              91.9
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Murata",
+            "position_mm": [
+              147.0,
+              91.9
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "C32",
+            "position_mm": [
+              147.0,
+              88.4
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "100n",
+            "position_mm": [
+              147.0,
+              93.58
+            ],
+            "visible": false
+          }
+        ]
+      }
+    },
+    "R21": {
+      "before": {
+        "position_mm": [
+          94.0,
+          95.0
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "R_0603_1608Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "5V_A",
+            "position_mm": [
+              93.175,
+              95.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "B1_FB",
+            "position_mm": [
+              94.825,
+              95.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              94.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              94.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "RC0603FR-07100KL",
+            "position_mm": [
+              94.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Yageo",
+            "position_mm": [
+              94.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "R21",
+            "position_mm": [
+              94.0,
+              91.5
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "100k",
+            "position_mm": [
+              94.0,
+              96.43
+            ],
+            "visible": false
+          }
+        ]
+      },
+      "after": {
+        "position_mm": [
+          94.0,
+          95.0
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "R_0603_1608Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "5V_A",
+            "position_mm": [
+              93.175,
+              95.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "B1_FB",
+            "position_mm": [
+              94.825,
+              95.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              94.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              94.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "RT0603BRD07100KL",
+            "position_mm": [
+              94.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Yageo",
+            "position_mm": [
+              94.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "R21",
+            "position_mm": [
+              94.0,
+              91.5
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "100k",
+            "position_mm": [
+              94.0,
+              96.43
+            ],
+            "visible": false
+          }
+        ]
+      }
+    },
+    "R22": {
+      "before": {
+        "position_mm": [
+          94.0,
+          91.0
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "R_0603_1608Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "B1_FB",
+            "position_mm": [
+              93.175,
+              91.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "GND",
+            "position_mm": [
+              94.825,
+              91.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              94.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              94.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "RC0603FR-0713K3L",
+            "position_mm": [
+              94.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Yageo",
+            "position_mm": [
+              94.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "R22",
+            "position_mm": [
+              94.0,
+              87.5
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "13.3k",
+            "position_mm": [
+              94.0,
+              92.43
+            ],
+            "visible": false
+          }
+        ]
+      },
+      "after": {
+        "position_mm": [
+          94.0,
+          91.0
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "R_0603_1608Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "B1_FB",
+            "position_mm": [
+              93.175,
+              91.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "GND",
+            "position_mm": [
+              94.825,
+              91.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              94.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              94.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "RT0603BRD0713K3L",
+            "position_mm": [
+              94.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Yageo",
+            "position_mm": [
+              94.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "R22",
+            "position_mm": [
+              94.0,
+              87.5
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "13.3k",
+            "position_mm": [
+              94.0,
+              92.43
+            ],
+            "visible": false
+          }
+        ]
+      }
+    },
+    "R31": {
+      "before": {
+        "position_mm": [
+          143.0,
+          95.0
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "R_0603_1608Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "5V_B",
+            "position_mm": [
+              142.175,
+              95.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "B2_FB",
+            "position_mm": [
+              143.825,
+              95.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              143.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              143.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "RC0603FR-07100KL",
+            "position_mm": [
+              143.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Yageo",
+            "position_mm": [
+              143.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "R31",
+            "position_mm": [
+              143.0,
+              91.5
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "100k",
+            "position_mm": [
+              143.0,
+              96.43
+            ],
+            "visible": false
+          }
+        ]
+      },
+      "after": {
+        "position_mm": [
+          143.0,
+          95.0
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "R_0603_1608Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "5V_B",
+            "position_mm": [
+              142.175,
+              95.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "B2_FB",
+            "position_mm": [
+              143.825,
+              95.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              143.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              143.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "RT0603BRD07100KL",
+            "position_mm": [
+              143.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Yageo",
+            "position_mm": [
+              143.0,
+              95.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "R31",
+            "position_mm": [
+              143.0,
+              91.5
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "100k",
+            "position_mm": [
+              143.0,
+              96.43
+            ],
+            "visible": false
+          }
+        ]
+      }
+    },
+    "R32": {
+      "before": {
+        "position_mm": [
+          143.0,
+          91.0
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "R_0603_1608Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "B2_FB",
+            "position_mm": [
+              142.175,
+              91.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "GND",
+            "position_mm": [
+              143.825,
+              91.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              143.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              143.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "RC0603FR-0713K3L",
+            "position_mm": [
+              143.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Yageo",
+            "position_mm": [
+              143.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "R32",
+            "position_mm": [
+              143.0,
+              87.5
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "13.3k",
+            "position_mm": [
+              143.0,
+              92.43
+            ],
+            "visible": false
+          }
+        ]
+      },
+      "after": {
+        "position_mm": [
+          143.0,
+          91.0
+        ],
+        "rotation": 0.0,
+        "layer": 0,
+        "footprint": "R_0603_1608Metric",
+        "pads": [
+          {
+            "number": "1",
+            "net": "B2_FB",
+            "position_mm": [
+              142.175,
+              91.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          },
+          {
+            "number": "2",
+            "net": "GND",
+            "position_mm": [
+              143.825,
+              91.0
+            ],
+            "size_mm": [
+              0.8,
+              0.95
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "rotation": 0.0,
+            "layers": [
+              0,
+              1,
+              13
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "name": "Datasheet",
+            "text": "",
+            "position_mm": [
+              143.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Description",
+            "text": "",
+            "position_mm": [
+              143.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "MPN",
+            "text": "RT0603BRD0713K3L",
+            "position_mm": [
+              143.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Manufacturer",
+            "text": "Yageo",
+            "position_mm": [
+              143.0,
+              91.0
+            ],
+            "visible": false
+          },
+          {
+            "name": "Reference",
+            "text": "R32",
+            "position_mm": [
+              143.0,
+              87.5
+            ],
+            "visible": true
+          },
+          {
+            "name": "Value",
+            "text": "13.3k",
+            "position_mm": [
+              143.0,
+              92.43
+            ],
+            "visible": false
+          }
+        ]
+      }
+    }
+  },
+  "removed_footprints": [
+    "R20",
+    "R30"
+  ],
+  "changed_tracks_and_vias": [
+    {
+      "uuid": "7890b4cf-bb54-40a6-adb1-9f11510cebbc",
+      "before": {
+        "type": "PCB_TRACK",
+        "net": "GND",
+        "a_mm": [
+          149.138,
+          88.95
+        ],
+        "b_mm": [
+          148.296,
+          90.9825
+        ],
+        "layer": "F.Cu",
+        "width_mm": 0.45
+      },
+      "after": {
+        "type": "PCB_TRACK",
+        "net": "GND",
+        "a_mm": [
+          149.138,
+          88.95
+        ],
+        "b_mm": [
+          148.3597,
+          90.1141
+        ],
+        "layer": "F.Cu",
+        "width_mm": 0.45
+      }
+    },
+    {
+      "uuid": "8d9212dc-b842-4e90-aa7f-5aed61612a59",
+      "before": {
+        "type": "PCB_VIA",
+        "net": "GND",
+        "a_mm": [
+          148.296,
+          90.9825
+        ],
+        "b_mm": [
+          148.296,
+          90.9825
+        ],
+        "layer": "F.Cu",
+        "width_mm": 0.8,
+        "drill_mm": 0.4,
+        "layer_pair": [
+          0,
+          2
+        ]
+      },
+      "after": {
+        "type": "PCB_VIA",
+        "net": "GND",
+        "a_mm": [
+          148.3597,
+          90.1141
+        ],
+        "b_mm": [
+          148.3597,
+          90.1141
+        ],
+        "layer": "F.Cu",
+        "width_mm": 0.8,
+        "drill_mm": 0.4,
+        "layer_pair": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "uuid": "90d581c7-6c3b-4e19-adbf-4c97f533405d",
+      "before": {
+        "type": "PCB_TRACK",
+        "net": "GND",
+        "a_mm": [
+          149.138,
+          88.95
+        ],
+        "b_mm": [
+          149.138,
+          91.15
+        ],
+        "layer": "F.Cu",
+        "width_mm": 0.45
+      },
+      "after": {
+        "type": "PCB_TRACK",
+        "net": "GND",
+        "a_mm": [
+          149.138,
+          88.95
+        ],
+        "b_mm": [
+          149.411,
+          90.3231
+        ],
+        "layer": "F.Cu",
+        "width_mm": 0.45
+      }
+    },
+    {
+      "uuid": "b0e4707d-9df5-4a5b-86a5-5a887cbe44e9",
+      "before": {
+        "type": "PCB_VIA",
+        "net": "GND",
+        "a_mm": [
+          149.138,
+          91.15
+        ],
+        "b_mm": [
+          149.138,
+          91.15
+        ],
+        "layer": "F.Cu",
+        "width_mm": 0.8,
+        "drill_mm": 0.4,
+        "layer_pair": [
+          0,
+          2
+        ]
+      },
+      "after": {
+        "type": "PCB_VIA",
+        "net": "GND",
+        "a_mm": [
+          149.411,
+          90.3231
+        ],
+        "b_mm": [
+          149.411,
+          90.3231
+        ],
+        "layer": "F.Cu",
+        "width_mm": 0.8,
+        "drill_mm": 0.4,
+        "layer_pair": [
+          0,
+          2
+        ]
+      }
+    }
+  ],
+  "removed_tracks_and_vias": [
+    {
+      "uuid": "02131b2f-b060-4bff-bf0a-a08e666e4da6",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        102.571,
+        86.8543
+      ],
+      "b_mm": [
+        102.571,
+        86.6119
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0
+    },
+    {
+      "uuid": "032dd7f3-6613-4d39-9fb5-afc234046203",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        151.929,
+        88.0
+      ],
+      "b_mm": [
+        149.138,
+        88.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.601
+    },
+    {
+      "uuid": "05615aae-4e8a-4a80-957e-ab1db2b828ca",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        146.8167,
+        88.9958
+      ],
+      "b_mm": [
+        146.8625,
+        88.95
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "077223c4-79dd-4089-a0e0-8cc8850a10a1",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        101.005,
+        88.0
+      ],
+      "b_mm": [
+        100.138,
+        88.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.601
+    },
+    {
+      "uuid": "2437a127-1896-4dbd-9e47-dafc4289ee14",
+      "type": "PCB_VIA",
+      "net": "B2_BOOT",
+      "a_mm": [
+        141.571,
+        84.8587
+      ],
+      "b_mm": [
+        141.571,
+        84.8587
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.6,
+      "drill_mm": 0.3,
+      "layer_pair": [
+        0,
+        2
+      ]
+    },
+    {
+      "uuid": "2a09cc02-18d4-408d-b2d4-c741656bec2a",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        153.263,
+        88.0
+      ],
+      "b_mm": [
+        152.596,
+        87.333
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0
+    },
+    {
+      "uuid": "2c7843ed-8b07-4a0e-a761-0f5b4df458f8",
+      "type": "PCB_TRACK",
+      "net": "B1_BOOT",
+      "a_mm": [
+        96.3487,
+        88.95
+      ],
+      "b_mm": [
+        97.8625,
+        88.95
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "2dc7c415-d013-4072-b19b-fd2f408e0c4d",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        102.929,
+        88.0
+      ],
+      "b_mm": [
+        101.005,
+        88.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.601
+    },
+    {
+      "uuid": "3945b04f-b5f3-431f-b418-ef453d15d5c9",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        141.534,
+        84.8587
+      ],
+      "b_mm": [
+        141.571,
+        84.8587
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "3f44ee14-b8a1-4159-a29e-dff6ea24243d",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        149.263,
+        84.0
+      ],
+      "b_mm": [
+        146.95,
+        84.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0
+    },
+    {
+      "uuid": "4357cc2a-8831-4190-8603-3aaa0cfc1974",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        141.571,
+        85.5926
+      ],
+      "b_mm": [
+        145.295,
+        89.3166
+      ],
+      "layer": "B.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "4e85bf49-ba73-4531-af1d-feb7cf6ca166",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        99.9592,
+        84.0
+      ],
+      "b_mm": [
+        102.571,
+        86.6119
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0
+    },
+    {
+      "uuid": "5676fcb1-917e-4aac-9f49-70fbcac2dcbf",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        146.679,
+        89.1333
+      ],
+      "b_mm": [
+        146.77,
+        89.0416
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "5d9f4b61-7154-441e-a3c3-2e1b90148b97",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        101.93,
+        87.495
+      ],
+      "b_mm": [
+        101.51,
+        87.495
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.601
+    },
+    {
+      "uuid": "601cd75c-3de7-486a-8ea8-03e1e9cf1367",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        146.496,
+        89.3166
+      ],
+      "b_mm": [
+        146.679,
+        89.1333
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "60804289-96bf-4508-9847-2b7ebd52f9b2",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        101.348,
+        88.0
+      ],
+      "b_mm": [
+        101.005,
+        88.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.601
+    },
+    {
+      "uuid": "627b71d8-9a42-4900-b176-ee26eef97ac6",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        141.571,
+        84.8587
+      ],
+      "b_mm": [
+        141.571,
+        85.5926
+      ],
+      "layer": "B.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "7796d777-3eeb-497b-9e5e-39e0533ed847",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        102.571,
+        86.6119
+      ],
+      "b_mm": [
+        103.178,
+        87.2191
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0
+    },
+    {
+      "uuid": "821058b3-6896-4c1b-86f9-34e65fc76e32",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT_CAP",
+      "a_mm": [
+        142.325,
+        84.0
+      ],
+      "b_mm": [
+        145.05,
+        84.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "9f18540e-06ec-442e-a50c-68576449f6ea",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        140.675,
+        84.0
+      ],
+      "b_mm": [
+        141.534,
+        84.8587
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "a069c24d-6a15-4206-bb57-6ee81ffd5aad",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        146.816,
+        88.9958
+      ],
+      "b_mm": [
+        146.8167,
+        88.9958
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "ab5c5365-0833-4de3-a593-5b23559a7a0a",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        101.51,
+        87.495
+      ],
+      "b_mm": [
+        101.005,
+        88.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.601
+    },
+    {
+      "uuid": "b625529f-9cc1-4fcd-b97a-573b01fdb3c3",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        153.263,
+        88.0
+      ],
+      "b_mm": [
+        149.1375,
+        88.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.601
+    },
+    {
+      "uuid": "b632ab71-ab2f-407a-ae9d-a6e6715c046c",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        101.005,
+        88.0
+      ],
+      "b_mm": [
+        100.1375,
+        88.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.601
+    },
+    {
+      "uuid": "b9a0de74-3f2e-42d7-81b5-640b424a9bb1",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        97.95,
+        84.0
+      ],
+      "b_mm": [
+        99.9592,
+        84.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0
+    },
+    {
+      "uuid": "ba0fd1f2-a814-4f37-829d-e13ac4d6bb35",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        145.295,
+        89.3166
+      ],
+      "b_mm": [
+        146.496,
+        89.3166
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "bcc4a76c-3d03-44eb-a5d9-d627a1379380",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        153.263,
+        88.0
+      ],
+      "b_mm": [
+        151.929,
+        88.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.601
+    },
+    {
+      "uuid": "ccd92ddc-a9bf-4f3e-911e-492fc9ce6b77",
+      "type": "PCB_TRACK",
+      "net": "B1_FB",
+      "a_mm": [
+        98.3204,
+        87.05
+      ],
+      "b_mm": [
+        98.8681,
+        87.5977
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "db7a1c30-da12-4996-a5ee-e985d5c9b9b2",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        103.178,
+        87.2191
+      ],
+      "b_mm": [
+        103.178,
+        88.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0
+    },
+    {
+      "uuid": "dcc01c2f-838b-4b7a-9e7a-d98b6754701f",
+      "type": "PCB_VIA",
+      "net": "B2_BOOT",
+      "a_mm": [
+        145.295,
+        89.3166
+      ],
+      "b_mm": [
+        145.295,
+        89.3166
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.6,
+      "drill_mm": 0.3,
+      "layer_pair": [
+        0,
+        2
+      ]
+    },
+    {
+      "uuid": "dce610aa-6360-4d6a-a367-e4def8b91aa7",
+      "type": "PCB_TRACK",
+      "net": "B1_FB",
+      "a_mm": [
+        97.8625,
+        87.05
+      ],
+      "b_mm": [
+        98.3204,
+        87.05
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "dee16c69-1160-4cde-9cfb-d4d95c1c585b",
+      "type": "PCB_TRACK",
+      "net": "B1_FB",
+      "a_mm": [
+        98.8681,
+        87.5977
+      ],
+      "b_mm": [
+        98.8681,
+        89.3567
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "dfd032bb-9efa-43d5-bff1-cc4f94d7db68",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        146.816,
+        88.9958
+      ],
+      "b_mm": [
+        146.77,
+        89.0416
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "e102952c-4e74-45be-9a51-75eb6a675f9e",
+      "type": "PCB_TRACK",
+      "net": "B1_FB",
+      "a_mm": [
+        98.8681,
+        89.3567
+      ],
+      "b_mm": [
+        95.5748,
+        92.65
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "e11d4942-8262-4438-bffc-b64b59b9fddf",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        151.929,
+        88.0
+      ],
+      "b_mm": [
+        152.596,
+        87.333
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0
+    },
+    {
+      "uuid": "e20dae5e-5d59-4cc4-ae2a-9c773963c3ea",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        101.93,
+        87.495
+      ],
+      "b_mm": [
+        102.571,
+        86.8543
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0
+    },
+    {
+      "uuid": "f0056189-a61a-4983-b26b-70d118808c6e",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        152.596,
+        87.333
+      ],
+      "b_mm": [
+        149.263,
+        84.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0
+    },
+    {
+      "uuid": "f124971a-7489-4ea7-b46d-ac6c6c5d7f39",
+      "type": "PCB_TRACK",
+      "net": "B1_BOOT",
+      "a_mm": [
+        91.675,
+        84.2763
+      ],
+      "b_mm": [
+        96.3487,
+        88.95
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "f3174eae-9e1a-4a8e-9faa-abab0ca39e90",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        146.862,
+        88.95
+      ],
+      "b_mm": [
+        146.816,
+        88.9958
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "f7c9932f-2fd9-4f53-83d0-d81426d20953",
+      "type": "PCB_TRACK",
+      "net": "B1_BOOT",
+      "a_mm": [
+        91.675,
+        84.0
+      ],
+      "b_mm": [
+        91.675,
+        84.2763
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "fee644e4-30dc-407e-9ce5-ca836db6b37c",
+      "type": "PCB_TRACK",
+      "net": "B1_BOOT_CAP",
+      "a_mm": [
+        93.325,
+        84.0
+      ],
+      "b_mm": [
+        96.05,
+        84.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    }
+  ],
+  "added_tracks_and_vias": [
+    {
+      "uuid": "05092c5d-33db-548c-902b-eb5318355bb9",
+      "type": "PCB_TRACK",
+      "net": "B1_FB",
+      "a_mm": [
+        97.2,
+        86.55
+      ],
+      "b_mm": [
+        96.7,
+        87.05
+      ],
+      "layer": "B.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "0ff960b8-22e8-5d73-bd5d-01bcb9220a1f",
+      "type": "PCB_TRACK",
+      "net": "B1_BOOT",
+      "a_mm": [
+        97.05,
+        89.7625
+      ],
+      "b_mm": [
+        97.05,
+        91.9
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "100b7cf6-1082-5377-a06d-39a1e6b7d9b9",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        147.55,
+        91.9
+      ],
+      "b_mm": [
+        147.95,
+        91.9
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "335ddd95-acea-5de7-b653-4b546edb2bfd",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        98.55,
+        91.9
+      ],
+      "b_mm": [
+        98.95,
+        91.9
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "37c7ba64-2667-5141-8399-899902ceaea1",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        100.1375,
+        88.0
+      ],
+      "b_mm": [
+        99.05,
+        88.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "54b8562f-e9eb-54ce-ba40-b905b2e7b6e3",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        98.55,
+        89.6
+      ],
+      "b_mm": [
+        98.55,
+        91.9
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "5b699ff3-af02-5662-905a-b2aaf8c96106",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        148.05,
+        88.0
+      ],
+      "b_mm": [
+        148.05,
+        89.1
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "64303150-2978-5bb9-81fa-b2ac279a7aa2",
+      "type": "PCB_TRACK",
+      "net": "B1_FB",
+      "a_mm": [
+        96.7,
+        91.3
+      ],
+      "b_mm": [
+        95.5748,
+        92.65
+      ],
+      "layer": "B.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "65b840f9-f0cc-5543-a188-3a673add5d10",
+      "type": "PCB_VIA",
+      "net": "B1_FB",
+      "a_mm": [
+        95.5748,
+        92.65
+      ],
+      "b_mm": [
+        95.5748,
+        92.65
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.6,
+      "drill_mm": 0.3,
+      "layer_pair": [
+        0,
+        2
+      ]
+    },
+    {
+      "uuid": "7003a224-5c9e-5090-8769-a292c19a23af",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        146.8625,
+        88.95
+      ],
+      "b_mm": [
+        146.05,
+        89.7625
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "96c09781-dadb-5754-b6bf-c40a45096947",
+      "type": "PCB_TRACK",
+      "net": "B1_FB",
+      "a_mm": [
+        96.7,
+        87.05
+      ],
+      "b_mm": [
+        96.7,
+        91.3
+      ],
+      "layer": "B.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "9c1523a1-e5f4-56b5-b25e-e34d97da1d29",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        99.05,
+        89.1
+      ],
+      "b_mm": [
+        98.55,
+        89.6
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "a44c8748-b67b-5013-9504-77a92deb9207",
+      "type": "PCB_TRACK",
+      "net": "B1_SW",
+      "a_mm": [
+        99.05,
+        88.0
+      ],
+      "b_mm": [
+        99.05,
+        89.1
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "ae25ac1f-1736-5cf1-9adf-40b409d8c44f",
+      "type": "PCB_VIA",
+      "net": "B1_FB",
+      "a_mm": [
+        97.2,
+        86.55
+      ],
+      "b_mm": [
+        97.2,
+        86.55
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.6,
+      "drill_mm": 0.3,
+      "layer_pair": [
+        0,
+        2
+      ]
+    },
+    {
+      "uuid": "be801145-20b2-5d64-b2c0-69bd825147da",
+      "type": "PCB_TRACK",
+      "net": "B1_BOOT",
+      "a_mm": [
+        97.8625,
+        88.95
+      ],
+      "b_mm": [
+        97.05,
+        89.7625
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "c6d1529b-ffdc-5805-bad6-c0df48b8519e",
+      "type": "PCB_TRACK",
+      "net": "B2_BOOT",
+      "a_mm": [
+        146.05,
+        89.7625
+      ],
+      "b_mm": [
+        146.05,
+        91.9
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "cd5960f0-11b2-59d8-b734-cd93b9059d78",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        148.05,
+        89.1
+      ],
+      "b_mm": [
+        147.55,
+        89.6
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "d7f21ec0-040f-589f-8dc2-5c59a38bbce3",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        147.55,
+        89.6
+      ],
+      "b_mm": [
+        147.55,
+        91.9
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "ea84df39-dd2b-5f78-a965-7363a565b102",
+      "type": "PCB_TRACK",
+      "net": "B1_FB",
+      "a_mm": [
+        97.8625,
+        87.05
+      ],
+      "b_mm": [
+        97.2,
+        86.55
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "ee0c3780-b23d-5843-a2f6-d64f45f5e6ce",
+      "type": "PCB_TRACK",
+      "net": "B1_FB",
+      "a_mm": [
+        95.5748,
+        92.65
+      ],
+      "b_mm": [
+        94.825,
+        92.65
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "uuid": "f2f6405e-45e2-5b9a-bc7c-5dc471c1d15e",
+      "type": "PCB_TRACK",
+      "net": "B2_SW",
+      "a_mm": [
+        149.1375,
+        88.0
+      ],
+      "b_mm": [
+        148.05,
+        88.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    }
+  ],
+  "zone_outlines_board_outline_copper_layers_identical": true,
+  "zone_fill_policy": "All zones refilled with KiCad 10.0.7. Filled copper polygons are not claimed identical outside the edits; outlines/settings retained. See independent review for old-cache versus fresh-fill comparison.",
+  "metrics": [
+    {
+      "channel": 1,
+      "before": {
+        "boot_lead_copper_sum_plus_resistor_pad_span_mm": 12.774709926463133,
+        "boot_vias": 0,
+        "sw_return_shortest_centerline_mm": 8.852614567398081,
+        "sum_leads_mm": 21.627324493861217
+      },
+      "after": {
+        "boot_lead_centerline_mm": 3.2865485194281425,
+        "boot_vias": 0,
+        "sw_return_centerline_mm": 5.594606781186565,
+        "sw_return_vias": 0,
+        "sum_leads_mm": 8.881155300614708,
+        "capacitor_position_mm": [
+          98,
+          91.9
+        ],
+        "capacitor_rotation_degrees": 0
+      }
+    },
+    {
+      "channel": 2,
+      "before": {
+        "boot_lead_copper_sum_plus_resistor_pad_span_mm": 13.411527395099474,
+        "boot_vias": 2,
+        "sw_return_shortest_centerline_mm": 10.761854249492398,
+        "sum_leads_mm": 24.17338164459187
+      },
+      "after": {
+        "boot_lead_centerline_mm": 3.2865485194281425,
+        "boot_vias": 0,
+        "sw_return_centerline_mm": 5.594606781186508,
+        "sw_return_vias": 0,
+        "sum_leads_mm": 8.881155300614651,
+        "capacitor_position_mm": [
+          147,
+          91.9
+        ],
+        "capacitor_rotation_degrees": 0
+      }
+    }
+  ],
+  "limits": "Geometry/centreline lengths only. SVG omits filled planes for clarity. Local FB route on B.Cu is separated from top SW copper by internal planes. DRC and schematic parity are separate checks; stability/EMI/hardware validation still required. Before BOOT count uses copper sum plus the 1.65 mm resistor pad span; excludes via barrel lengths and includes sub-micron duplicate old segments."
+}

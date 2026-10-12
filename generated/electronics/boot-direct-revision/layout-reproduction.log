@@ -1,0 +1,98 @@
+10:32:46: Debug: Adding duplicate image handler for 'PNG file'
+10:32:46: Debug: Adding duplicate image handler for 'JPEG file'
+10:32:46: Debug: Adding duplicate image handler for 'TIFF file'
+10:32:46: Debug: Adding duplicate image handler for 'GIF file'
+10:32:46: Debug: Adding duplicate image handler for 'PNM file'
+10:32:46: Debug: Adding duplicate image handler for 'PCX file'
+10:32:46: Debug: Adding duplicate image handler for 'IFF file'
+10:32:46: Debug: Adding duplicate image handler for 'Windows icon file'
+10:32:46: Debug: Adding duplicate image handler for 'Windows cursor file'
+10:32:46: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+10:32:46: Debug: Adding duplicate image handler for 'TGA file'
+10:32:46: Debug: Adding duplicate image handler for 'XPM file'
+10:32:46: Debug: Adding duplicate image handler for 'WebP file'
+10:32:46: Debug: Adding duplicate image handler for 'PNG file'
+10:32:46: Debug: Adding duplicate image handler for 'JPEG file'
+10:32:46: Debug: Adding duplicate image handler for 'TIFF file'
+10:32:46: Debug: Adding duplicate image handler for 'GIF file'
+10:32:46: Debug: Adding duplicate image handler for 'PNM file'
+10:32:46: Debug: Adding duplicate image handler for 'PCX file'
+10:32:46: Debug: Adding duplicate image handler for 'IFF file'
+10:32:46: Debug: Adding duplicate image handler for 'Windows icon file'
+10:32:46: Debug: Adding duplicate image handler for 'Windows cursor file'
+10:32:46: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+10:32:46: Debug: Adding duplicate image handler for 'TGA file'
+10:32:46: Debug: Adding duplicate image handler for 'XPM file'
+10:32:46: Debug: Adding duplicate image handler for 'WebP file'
+{
+  "output": "/tmp/boot-reproduced.kicad_pcb",
+  "metrics": [
+    {
+      "channel": 1,
+      "before": {
+        "boot_lead_copper_sum_plus_resistor_pad_span_mm": 12.774709926463133,
+        "boot_vias": 0,
+        "sw_return_shortest_centerline_mm": 8.852614567398081,
+        "sum_leads_mm": 21.627324493861217
+      },
+      "after": {
+        "boot_lead_centerline_mm": 3.2865485194281425,
+        "boot_vias": 0,
+        "sw_return_centerline_mm": 5.594606781186565,
+        "sw_return_vias": 0,
+        "sum_leads_mm": 8.881155300614708,
+        "capacitor_position_mm": [
+          98,
+          91.9
+        ],
+        "capacitor_rotation_degrees": 0
+      }
+    },
+    {
+      "channel": 2,
+      "before": {
+        "boot_lead_copper_sum_plus_resistor_pad_span_mm": 13.411527395099474,
+        "boot_vias": 2,
+        "sw_return_shortest_centerline_mm": 10.761854249492398,
+        "sum_leads_mm": 24.17338164459187
+      },
+      "after": {
+        "boot_lead_centerline_mm": 3.2865485194281425,
+        "boot_vias": 0,
+        "sw_return_centerline_mm": 5.594606781186508,
+        "sw_return_vias": 0,
+        "sum_leads_mm": 8.881155300614651,
+        "capacitor_position_mm": [
+          147,
+          91.9
+        ],
+        "capacitor_rotation_degrees": 0
+      }
+    }
+  ],
+  "unrelated_geometry_preserved": true
+}
+swig/python detected a memory leak of type 'FOOTPRINT *', no destructor found.
+swig/python detected a memory leak of type 'NETINFO_ITEM *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'FOOTPRINT *', no destructor found.
+swig/python detected a memory leak of type 'NETINFO_ITEM *', no destructor found.

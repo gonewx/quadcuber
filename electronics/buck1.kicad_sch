@@ -1273,145 +1273,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Quadcuber:R20"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R20"
-				(at 0 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1 1)
-					)
-				)
-			)
-			(property "Value" "49.9"
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1 1)
-					)
-				)
-			)
-			(property "Footprint" "Quadcuber:R_0603_1608Metric"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1 1)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R20_0_1"
-				(polyline
-					(pts
-						(xy -7.62 0) (xy -3.81 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -3.81 1.27)
-					(end 3.81 -1.27)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 0) (xy 7.62 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R20_1_1"
-				(pin passive line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0.75 0.75)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0.75 0.75)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0.75 0.75)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0.75 0.75)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
+
 		(symbol "Quadcuber:R21"
 			(pin_names
 				(hide yes)
@@ -2293,16 +2155,7 @@
 		)
 		(uuid "81eb79b6-f5c1-5b7d-a9f8-97277991c57e")
 	)
-	(wire
-		(pts
-			(xy 215.9 38.1) (xy 210.82 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "843e7109-2aa6-5ca2-88e8-5efdb5b23a18")
-	)
+
 	(wire
 		(pts
 			(xy 279.4 78.74) (xy 274.32 78.74)
@@ -2363,16 +2216,7 @@
 		)
 		(uuid "9cb53921-a624-5658-ad99-f4eed4bc8590")
 	)
-	(wire
-		(pts
-			(xy 236.22 38.1) (xy 241.3 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5d715e3-41c8-5a3b-90ae-2d8d16ac656f")
-	)
+
 	(wire
 		(pts
 			(xy 109.22 38.1) (xy 114.3 38.1)
@@ -2515,27 +2359,7 @@
 			)
 		)
 	)
-	(global_label "B1_BOOT_CAP"
-		(shape bidirectional)
-		(at 241.3 38.1 0)
-		(effects
-			(font
-				(size 0.8 0.8)
-			)
-		)
-		(uuid "1457760d-e0a0-5e18-bac2-9b55932f6310")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 241.3 38.1 180)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-			)
-		)
-	)
+
 	(global_label "B1_EN"
 		(shape bidirectional)
 		(at 368.3 78.74 0)
@@ -2662,27 +2486,7 @@
 			)
 		)
 	)
-	(global_label "B1_BOOT"
-		(shape bidirectional)
-		(at 210.82 38.1 0)
-		(effects
-			(font
-				(size 0.8 0.8)
-			)
-		)
-		(uuid "43eff064-d6b5-5bfd-91dc-6dbe9b071b2b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 210.82 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-			)
-		)
-	)
+
 	(global_label "5V_A"
 		(shape bidirectional)
 		(at 83.82 78.74 0)
@@ -2809,7 +2613,7 @@
 			)
 		)
 	)
-	(global_label "B1_BOOT_CAP"
+	(global_label "B1_BOOT"
 		(shape bidirectional)
 		(at 274.32 38.1 0)
 		(effects
@@ -3900,7 +3704,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "RT0603BRD07100KL"
 			(at 162.56 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -3937,105 +3741,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Quadcuber:R20")
-		(at 226.06 38.1 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a3aca58a-7e42-548d-b804-6f9f9aea6909")
-		(property "Reference" "R20"
-			(at 226.06 30.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "49.9"
-			(at 226.06 45.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Quadcuber:R_0603_1608Metric"
-			(at 226.06 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 226.06 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 226.06 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0603FR-0749R9L"
-			(at 226.06 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Yageo"
-			(at 226.06 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9289b1ae-cfdc-5aac-b261-0808faaa9bd5")
-		)
-		(pin "2"
-			(uuid "eba07f50-1cdd-5abd-a182-a63e8432f649")
-		)
-		(instances
-			(project "quadcuber"
-				(path "/822f0fe2-7874-52bf-b949-33e1d201f157/4b61397d-34d2-574d-ac4b-37e872fca1f8"
-					(reference "R20")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(symbol
 		(lib_id "Quadcuber:C26")
 		(at 99.06 119.38 0)
@@ -4197,7 +3903,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-0713K3L"
+		(property "MPN" "RT0603BRD0713K3L"
 			(at 226.06 78.74 0)
 			(hide yes)
 			(show_name no)

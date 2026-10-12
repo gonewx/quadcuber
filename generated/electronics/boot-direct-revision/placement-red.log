@@ -1,0 +1,20 @@
+.F..
+======================================================================
+FAIL: test_cap_placement_matches_reviewed_local_board (test_buck_source.BuckSourceContract.test_cap_placement_matches_reviewed_local_board)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quadcuber/electronics/test_buck_source.py", line 17, in test_cap_placement_matches_reviewed_local_board
+    self.assertEqual(tuple(C[ref]['xy']),xy)
+AssertionError: Tuples differ: (47, 34) != (48, 41.9)
+
+First differing element 0:
+47
+48
+
+- (47, 34)
++ (48, 41.9)
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1)
