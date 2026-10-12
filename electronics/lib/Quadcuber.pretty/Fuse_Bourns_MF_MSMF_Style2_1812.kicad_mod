@@ -1,0 +1,190 @@
+(footprint "Fuse_Bourns_MF_MSMF_Style2_1812"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Bourns MF-MSMF Style2:1.5x3.2mm pads,gap2.7mm. Text dimensions reconstructed; no claimed visual-arrow certification.")
+	(tags "fuse")
+	(property "Reference" "REF**"
+		(at 0 -2.65 0)
+		(layer "F.SilkS")
+		(uuid "bd298bf5-a488-47db-bf65-bff83621039a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MF-MSMF110/16X-2"
+		(at 0 2.65 0)
+		(layer "F.Fab")
+		(uuid "1d63a57c-802c-44af-8467-153e510385b6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f5d26fd2-7b9f-417b-9b66-b2f59f01fcba")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "49b28c1c-369f-439d-b0ca-62f0935f2b37")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.386252 -1.71)
+		(end 1.386252 -1.71)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ff8823b5-fc74-4be3-ba01-fc0251f553d3")
+	)
+	(fp_line
+		(start -1.386252 1.71)
+		(end 1.386252 1.71)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5eed02ea-ac9b-49f7-a067-7d441338279b")
+	)
+	(fp_line
+		(start -2.95 -1.95)
+		(end 2.95 -1.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d1639484-2533-4711-be34-a43fe202d756")
+	)
+	(fp_line
+		(start -2.95 1.95)
+		(end -2.95 -1.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "64df3568-be80-406b-96cb-153bee53dfce")
+	)
+	(fp_line
+		(start 2.95 -1.95)
+		(end 2.95 1.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "09a90433-8961-4f6f-b769-2ceec26e0c56")
+	)
+	(fp_line
+		(start 2.95 1.95)
+		(end -2.95 1.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "63e49533-fd0e-4ae2-ad7a-a1632b514176")
+	)
+	(fp_line
+		(start -2.25 -1.6)
+		(end 2.25 -1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "418cfbdd-93fb-49af-9921-6bbbedb7cc96")
+	)
+	(fp_line
+		(start -2.25 1.6)
+		(end -2.25 -1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4f9704f0-8e3a-4c2e-8dc5-d57e7b48bf56")
+	)
+	(fp_line
+		(start 2.25 -1.6)
+		(end 2.25 1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "36eb9c23-e2b8-4ed3-a027-3883ed93ce42")
+	)
+	(fp_line
+		(start 2.25 1.6)
+		(end -2.25 1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bd7f2187-1ab2-4970-84cf-716a0192f2f2")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "7bce9836-689d-484d-b624-7906f3b41c29")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.1 0)
+		(size 1.5 3.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2a099e18-4638-4ba6-85e4-0c4db0bfe176")
+	)
+	(pad "2" smd rect
+		(at 2.1 0)
+		(size 1.5 3.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7f95e976-e3d1-4360-9a72-1550947d793a")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Fuse.3dshapes/Fuse_1812_4532Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

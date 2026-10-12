@@ -1,0 +1,29 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: quadcuber a1 boundary analysis: input_v9.18_r0.06_l2e-06_cs0.0022_cm0.002256
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+psu                                       9.18
+ctl                                          0
+wire                                      0.02
+wl                                        0.02
+anode                                     0.02
+vm                                           0
+bulk                                         0
+lwire#branch                          9.16e-09
+venable#branch                               0
+
+
+No. of Data Rows : 10049
+ngspice-44.2 done
+Warning: can't find the initialization file spinit.

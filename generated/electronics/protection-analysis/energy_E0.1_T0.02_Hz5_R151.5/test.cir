@@ -1,0 +1,19 @@
+Quadcuber A1 boundary analysis: energy_E0.1_T0.02_Hz5_R151.5
+* Original simplified model; NOT a manufacturer macro-model.
+Vpower power 0 PWL(0 0 0.001 0 0.011 10 0.021 0 0.201 0 0.211 10 0.221 0 0.401 0 0.411 10 0.421 0 0.601 0 0.611 10 0.621 0 0.801 0 0.811 10 0.821 0)
+Bregen 0 vm I=v(power)/max(v(vm),1)
+Cbulk vm 0 0.002256 ic=9.18
+BTVS vm 0 I=max((v(vm)-14.7)/0.172185,0)
+Rbleed vm 0 151.5
+Bhold 0 vm I=min(max((9.18-v(vm))/0.1,0),6.5)
+.ic v(vm)=9.18
+.options reltol=1e-5 abstol=1e-9 vntol=1e-7 method=gear
+.control
+set wr_vecnames
+set wr_singlescale
+save all @btvs[i] @bhold[i]
+tran 0.0002 0.83 0 0.0002
+wrdata waveform.txt v(vm) @btvs[i] v(power) @bhold[i]
+quit
+.endc
+.end

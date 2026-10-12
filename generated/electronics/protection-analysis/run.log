@@ -1,0 +1,30 @@
+{
+  "circuit_sha256": "e90767906205461e028785313fd5f1c17ea48440ee5bd65a107c31c6d903ade2",
+  "pcb_sha256": "c33afa92c1e76d124cc7d846db8a845486d428d554f05d406cef071aeb02e43b",
+  "vm_bulk_refs": [
+    "C2",
+    "C3",
+    "C102",
+    "C122",
+    "C142",
+    "C162"
+  ],
+  "vm_bulk_nominal_F": 0.00282,
+  "parts": {
+    "U2": "TPS54302DDCR",
+    "U3": "TPS54302DDCR",
+    "Q1": "CSD18540Q5B",
+    "U4": "LM74700QDBVRQ1",
+    "D3": "SMBJ12A",
+    "D2": "SS14-E3/61T",
+    "D5": "SS14-E3/61T"
+  },
+  "state": "COMPLETED_BOUNDARY_ONLY",
+  "vendor_model_cases": 0,
+  "ngspice_cases": 108,
+  "input_cases": 48,
+  "regen_cases": 60,
+  "mechanical_energy_rows": 36,
+  "hardware_tested": false,
+  "manufacturing_release": false
+}

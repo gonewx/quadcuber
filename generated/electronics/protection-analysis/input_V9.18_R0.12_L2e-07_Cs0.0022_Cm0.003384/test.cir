@@ -1,0 +1,27 @@
+Quadcuber A1 boundary analysis: input_V9.18_R0.12_L2e-07_Cs0.0022_Cm0.003384
+* Original simplified model; NOT a manufacturer macro-model.
+* PSU ideal current limit 6.5A; physical output reservoir can still cause surge.
+Bpsu 0 psu I=min(max((9.18-v(psu))/0.03,0),6.5)
+Cpsu psu 0 0.0022 ic=9.18
+Venable ctl 0 PWL(0 0 100u 0 101u 1)
+Bplug psu wire I=v(psu,wire)*(v(ctl)/0.005+1e-9)
+Rwire wire wl 0.12
+Lwire wl anode 2e-07
+Cpar anode 0 100p
+Bideal anode vm I=max((v(anode,vm)-0.02)/0.0033,0)
+Resr vm bulk 0.010
+Cbulk bulk 0 0.003384 ic=0
+Bload vm 0 I=4*min(max(v(vm)/6.5,0),1)*(time>0.004)
+R500 vm 0 300
+R501 vm 0 300
+.ic v(psu)=9.18 v(bulk)=0 v(vm)=0
+.options reltol=1e-5 abstol=1e-9 vntol=1e-7 method=gear
+.control
+set wr_vecnames
+set wr_singlescale
+save all @bpsu[i]
+tran 1e-06 0.01 0 1e-06
+wrdata waveform.txt v(vm) i(Lwire) v(psu) @bpsu[i]
+quit
+.endc
+.end

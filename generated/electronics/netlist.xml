@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/quadcuber/electronics/quadcuber.kicad_sch</source>
-    <date>2026-10-12T01:38:20+0000</date>
+    <date>2026-10-12T02:34:32+0000</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -773,14 +773,14 @@
       <value>1u</value>
       <footprint>Quadcuber:C_0402_1005Metric</footprint>
       <fields>
-        <field name="MPN">GRM155R61A105KE15D</field>
+        <field name="MPN">GRM155R61C105KA12D</field>
         <field name="Manufacturer">Murata</field>
         <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="C420" description=""/>
-      <property name="MPN" value="GRM155R61A105KE15D"/>
+      <property name="MPN" value="GRM155R61C105KA12D"/>
       <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="controller_power"/>
       <property name="Sheetfile" value="controller_power.kicad_sch"/>
@@ -791,14 +791,14 @@
       <value>1u</value>
       <footprint>Quadcuber:C_0402_1005Metric</footprint>
       <fields>
-        <field name="MPN">GRM155R61A105KE15D</field>
+        <field name="MPN">GRM155R61C105KA12D</field>
         <field name="Manufacturer">Murata</field>
         <field name="Footprint">Quadcuber:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="C421" description=""/>
-      <property name="MPN" value="GRM155R61A105KE15D"/>
+      <property name="MPN" value="GRM155R61C105KA12D"/>
       <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="controller_power"/>
       <property name="Sheetfile" value="controller_power.kicad_sch"/>
@@ -806,18 +806,18 @@
       <tstamps>f31c8cfa-d033-5358-b7c6-f82d4b4fdadd</tstamps>
     </comp>
     <comp ref="C422">
-      <value>4.7u/10V</value>
+      <value>4.7u/16V</value>
       <footprint>Quadcuber:C_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">GRM21BR61A475KA73L</field>
-        <field name="Manufacturer">Murata</field>
+        <field name="MPN">C0805C475K4PACTU</field>
+        <field name="Manufacturer">KEMET</field>
         <field name="Footprint">Quadcuber:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="C422" description=""/>
-      <property name="MPN" value="GRM21BR61A475KA73L"/>
-      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="C0805C475K4PACTU"/>
+      <property name="Manufacturer" value="KEMET"/>
       <property name="Sheetname" value="controller_power"/>
       <property name="Sheetfile" value="controller_power.kicad_sch"/>
       <sheetpath names="/controller_power/" tstamps="/08ae648e-004f-5dce-960b-b473ad0b2397/"/>
@@ -1310,17 +1310,17 @@
       <tstamps>34f3da71-a6e8-5a26-98fc-bad9e41e8608</tstamps>
     </comp>
     <comp ref="F1">
-      <value>8A 32V fuse</value>
-      <footprint>Quadcuber:Fuse_1206_3216Metric</footprint>
+      <value>8A 24V time-lag fuse</value>
+      <footprint>Quadcuber:Fuse_Littelfuse_407_1206</footprint>
       <fields>
-        <field name="MPN">0467008.NR</field>
+        <field name="MPN">0407008.WR</field>
         <field name="Manufacturer">Littelfuse</field>
-        <field name="Footprint">Quadcuber:Fuse_1206_3216Metric</field>
+        <field name="Footprint">Quadcuber:Fuse_Littelfuse_407_1206</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="F1" description=""/>
-      <property name="MPN" value="0467008.NR"/>
+      <property name="MPN" value="0407008.WR"/>
       <property name="Manufacturer" value="Littelfuse"/>
       <property name="Sheetname" value="power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
@@ -1363,6 +1363,42 @@
       <sheetpath names="/power/" tstamps="/aa82877a-e39c-5600-906d-cd639555cb3d/"/>
       <tstamps>6d548891-af0f-5fcb-9ec2-a3deb75e7940</tstamps>
     </comp>
+    <comp ref="R500">
+      <value>300R 1W VM bleed</value>
+      <footprint>Quadcuber:R_2512_6332Metric</footprint>
+      <fields>
+        <field name="MPN">CRCW2512300RFKEG</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Quadcuber:R_2512_6332Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R500" description=""/>
+      <property name="MPN" value="CRCW2512300RFKEG"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/aa82877a-e39c-5600-906d-cd639555cb3d/"/>
+      <tstamps>eaeaedeb-ffcf-54c3-b63d-ceaf7f797e25</tstamps>
+    </comp>
+    <comp ref="R501">
+      <value>300R 1W VM bleed</value>
+      <footprint>Quadcuber:R_2512_6332Metric</footprint>
+      <fields>
+        <field name="MPN">CRCW2512300RFKEG</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Quadcuber:R_2512_6332Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Quadcuber" part="R501" description=""/>
+      <property name="MPN" value="CRCW2512300RFKEG"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/power/" tstamps="/aa82877a-e39c-5600-906d-cd639555cb3d/"/>
+      <tstamps>3f9d7f51-7eb6-5c51-bc89-f9ee43ed455d</tstamps>
+    </comp>
     <comp ref="U4">
       <value>LM74700QDBVRQ1</value>
       <footprint>Quadcuber:SOT-23-6</footprint>
@@ -1385,14 +1421,14 @@
       <value>10u/25V</value>
       <footprint>Quadcuber:C_1210_3225Metric</footprint>
       <fields>
-        <field name="MPN">GRM32ER71E106KA12L</field>
+        <field name="MPN">GRM32DR71E106KA12L</field>
         <field name="Manufacturer">Murata</field>
         <field name="Footprint">Quadcuber:C_1210_3225Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="C20" description=""/>
-      <property name="MPN" value="GRM32ER71E106KA12L"/>
+      <property name="MPN" value="GRM32DR71E106KA12L"/>
       <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="buck1"/>
       <property name="Sheetfile" value="buck1.kicad_sch"/>
@@ -1475,15 +1511,15 @@
       <value>75p</value>
       <footprint>Quadcuber:C_0603_1608Metric</footprint>
       <fields>
-        <field name="MPN">GRM1885C1H750JA01D</field>
-        <field name="Manufacturer">Murata</field>
+        <field name="MPN">C0603C750J5GACTU</field>
+        <field name="Manufacturer">KEMET</field>
         <field name="Footprint">Quadcuber:C_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="C25" description=""/>
-      <property name="MPN" value="GRM1885C1H750JA01D"/>
-      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="C0603C750J5GACTU"/>
+      <property name="Manufacturer" value="KEMET"/>
       <property name="Sheetname" value="buck1"/>
       <property name="Sheetfile" value="buck1.kicad_sch"/>
       <sheetpath names="/buck1/" tstamps="/4b61397d-34d2-574d-ac4b-37e872fca1f8/"/>
@@ -1638,14 +1674,14 @@
       <value>10u/25V</value>
       <footprint>Quadcuber:C_1210_3225Metric</footprint>
       <fields>
-        <field name="MPN">GRM32ER71E106KA12L</field>
+        <field name="MPN">GRM32DR71E106KA12L</field>
         <field name="Manufacturer">Murata</field>
         <field name="Footprint">Quadcuber:C_1210_3225Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="C30" description=""/>
-      <property name="MPN" value="GRM32ER71E106KA12L"/>
+      <property name="MPN" value="GRM32DR71E106KA12L"/>
       <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="buck2"/>
       <property name="Sheetfile" value="buck2.kicad_sch"/>
@@ -1728,15 +1764,15 @@
       <value>75p</value>
       <footprint>Quadcuber:C_0603_1608Metric</footprint>
       <fields>
-        <field name="MPN">GRM1885C1H750JA01D</field>
-        <field name="Manufacturer">Murata</field>
+        <field name="MPN">C0603C750J5GACTU</field>
+        <field name="Manufacturer">KEMET</field>
         <field name="Footprint">Quadcuber:C_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="C35" description=""/>
-      <property name="MPN" value="GRM1885C1H750JA01D"/>
-      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="C0603C750J5GACTU"/>
+      <property name="Manufacturer" value="KEMET"/>
       <property name="Sheetname" value="buck2"/>
       <property name="Sheetfile" value="buck2.kicad_sch"/>
       <sheetpath names="/buck2/" tstamps="/e8b2a047-8402-5099-87d9-9604c9e31a0c/"/>
@@ -1909,14 +1945,14 @@
       <value>10u/25V</value>
       <footprint>Quadcuber:C_1210_3225Metric</footprint>
       <fields>
-        <field name="MPN">GRM32ER71E106KA12L</field>
+        <field name="MPN">GRM32DR71E106KA12L</field>
         <field name="Manufacturer">Murata</field>
         <field name="Footprint">Quadcuber:C_1210_3225Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="C101" description=""/>
-      <property name="MPN" value="GRM32ER71E106KA12L"/>
+      <property name="MPN" value="GRM32DR71E106KA12L"/>
       <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="arm_R"/>
       <property name="Sheetfile" value="arm_R.kicad_sch"/>
@@ -1997,16 +2033,16 @@
     </comp>
     <comp ref="F10">
       <value>1.1A servo PTC</value>
-      <footprint>Quadcuber:Fuse_1812_4532Metric</footprint>
+      <footprint>Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</footprint>
       <fields>
-        <field name="MPN">MF-MSMF110-2</field>
+        <field name="MPN">MF-MSMF110/16X-2</field>
         <field name="Manufacturer">Bourns</field>
-        <field name="Footprint">Quadcuber:Fuse_1812_4532Metric</field>
+        <field name="Footprint">Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="F10" description=""/>
-      <property name="MPN" value="MF-MSMF110-2"/>
+      <property name="MPN" value="MF-MSMF110/16X-2"/>
       <property name="Manufacturer" value="Bourns"/>
       <property name="Sheetname" value="arm_R"/>
       <property name="Sheetfile" value="arm_R.kicad_sch"/>
@@ -2381,14 +2417,14 @@
       <value>10u/25V</value>
       <footprint>Quadcuber:C_1210_3225Metric</footprint>
       <fields>
-        <field name="MPN">GRM32ER71E106KA12L</field>
+        <field name="MPN">GRM32DR71E106KA12L</field>
         <field name="Manufacturer">Murata</field>
         <field name="Footprint">Quadcuber:C_1210_3225Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="C121" description=""/>
-      <property name="MPN" value="GRM32ER71E106KA12L"/>
+      <property name="MPN" value="GRM32DR71E106KA12L"/>
       <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="arm_L"/>
       <property name="Sheetfile" value="arm_L.kicad_sch"/>
@@ -2469,16 +2505,16 @@
     </comp>
     <comp ref="F11">
       <value>1.1A servo PTC</value>
-      <footprint>Quadcuber:Fuse_1812_4532Metric</footprint>
+      <footprint>Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</footprint>
       <fields>
-        <field name="MPN">MF-MSMF110-2</field>
+        <field name="MPN">MF-MSMF110/16X-2</field>
         <field name="Manufacturer">Bourns</field>
-        <field name="Footprint">Quadcuber:Fuse_1812_4532Metric</field>
+        <field name="Footprint">Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="F11" description=""/>
-      <property name="MPN" value="MF-MSMF110-2"/>
+      <property name="MPN" value="MF-MSMF110/16X-2"/>
       <property name="Manufacturer" value="Bourns"/>
       <property name="Sheetname" value="arm_L"/>
       <property name="Sheetfile" value="arm_L.kicad_sch"/>
@@ -2853,14 +2889,14 @@
       <value>10u/25V</value>
       <footprint>Quadcuber:C_1210_3225Metric</footprint>
       <fields>
-        <field name="MPN">GRM32ER71E106KA12L</field>
+        <field name="MPN">GRM32DR71E106KA12L</field>
         <field name="Manufacturer">Murata</field>
         <field name="Footprint">Quadcuber:C_1210_3225Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="C141" description=""/>
-      <property name="MPN" value="GRM32ER71E106KA12L"/>
+      <property name="MPN" value="GRM32DR71E106KA12L"/>
       <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="arm_F"/>
       <property name="Sheetfile" value="arm_F.kicad_sch"/>
@@ -2941,16 +2977,16 @@
     </comp>
     <comp ref="F12">
       <value>1.1A servo PTC</value>
-      <footprint>Quadcuber:Fuse_1812_4532Metric</footprint>
+      <footprint>Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</footprint>
       <fields>
-        <field name="MPN">MF-MSMF110-2</field>
+        <field name="MPN">MF-MSMF110/16X-2</field>
         <field name="Manufacturer">Bourns</field>
-        <field name="Footprint">Quadcuber:Fuse_1812_4532Metric</field>
+        <field name="Footprint">Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="F12" description=""/>
-      <property name="MPN" value="MF-MSMF110-2"/>
+      <property name="MPN" value="MF-MSMF110/16X-2"/>
       <property name="Manufacturer" value="Bourns"/>
       <property name="Sheetname" value="arm_F"/>
       <property name="Sheetfile" value="arm_F.kicad_sch"/>
@@ -3325,14 +3361,14 @@
       <value>10u/25V</value>
       <footprint>Quadcuber:C_1210_3225Metric</footprint>
       <fields>
-        <field name="MPN">GRM32ER71E106KA12L</field>
+        <field name="MPN">GRM32DR71E106KA12L</field>
         <field name="Manufacturer">Murata</field>
         <field name="Footprint">Quadcuber:C_1210_3225Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="C161" description=""/>
-      <property name="MPN" value="GRM32ER71E106KA12L"/>
+      <property name="MPN" value="GRM32DR71E106KA12L"/>
       <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="arm_B"/>
       <property name="Sheetfile" value="arm_B.kicad_sch"/>
@@ -3413,16 +3449,16 @@
     </comp>
     <comp ref="F13">
       <value>1.1A servo PTC</value>
-      <footprint>Quadcuber:Fuse_1812_4532Metric</footprint>
+      <footprint>Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</footprint>
       <fields>
-        <field name="MPN">MF-MSMF110-2</field>
+        <field name="MPN">MF-MSMF110/16X-2</field>
         <field name="Manufacturer">Bourns</field>
-        <field name="Footprint">Quadcuber:Fuse_1812_4532Metric</field>
+        <field name="Footprint">Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="F13" description=""/>
-      <property name="MPN" value="MF-MSMF110-2"/>
+      <property name="MPN" value="MF-MSMF110/16X-2"/>
       <property name="Manufacturer" value="Bourns"/>
       <property name="Sheetname" value="arm_B"/>
       <property name="Sheetfile" value="arm_B.kicad_sch"/>
@@ -4495,7 +4531,7 @@
     <libpart lib="Quadcuber" part="C422">
       <fields>
         <field name="Reference">C422</field>
-        <field name="Value">4.7u/10V</field>
+        <field name="Value">4.7u/16V</field>
         <field name="Footprint">Quadcuber:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -4651,8 +4687,8 @@
     <libpart lib="Quadcuber" part="F1">
       <fields>
         <field name="Reference">F1</field>
-        <field name="Value">8A 32V fuse</field>
-        <field name="Footprint">Quadcuber:Fuse_1206_3216Metric</field>
+        <field name="Value">8A 24V time-lag fuse</field>
+        <field name="Footprint">Quadcuber:Fuse_Littelfuse_407_1206</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -4665,7 +4701,7 @@
       <fields>
         <field name="Reference">F10</field>
         <field name="Value">1.1A servo PTC</field>
-        <field name="Footprint">Quadcuber:Fuse_1812_4532Metric</field>
+        <field name="Footprint">Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -4678,7 +4714,7 @@
       <fields>
         <field name="Reference">F11</field>
         <field name="Value">1.1A servo PTC</field>
-        <field name="Footprint">Quadcuber:Fuse_1812_4532Metric</field>
+        <field name="Footprint">Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -4691,7 +4727,7 @@
       <fields>
         <field name="Reference">F12</field>
         <field name="Value">1.1A servo PTC</field>
-        <field name="Footprint">Quadcuber:Fuse_1812_4532Metric</field>
+        <field name="Footprint">Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -4704,7 +4740,7 @@
       <fields>
         <field name="Reference">F13</field>
         <field name="Value">1.1A servo PTC</field>
-        <field name="Footprint">Quadcuber:Fuse_1812_4532Metric</field>
+        <field name="Footprint">Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -5781,6 +5817,32 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Quadcuber" part="R500">
+      <fields>
+        <field name="Reference">R500</field>
+        <field name="Value">300R 1W VM bleed</field>
+        <field name="Footprint">Quadcuber:R_2512_6332Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Quadcuber" part="R501">
+      <fields>
+        <field name="Reference">R501</field>
+        <field name="Value">300R 1W VM bleed</field>
+        <field name="Footprint">Quadcuber:R_2512_6332Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Quadcuber" part="S1">
       <fields>
         <field name="Reference">S1</field>
@@ -6827,6 +6889,8 @@
       <node ref="R401" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R402" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R406" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R500" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R501" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="S1" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="S2" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
@@ -7210,6 +7274,8 @@
       <node ref="Q1" pin="5" pinfunction="D_EP" pintype="passive"/>
       <node ref="R23" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R33" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R500" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R501" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP2" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U10" pin="5" pinfunction="VM" pintype="power_in"/>
       <node ref="U11" pin="5" pinfunction="VM" pintype="power_in"/>

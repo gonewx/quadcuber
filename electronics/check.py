@@ -23,6 +23,22 @@ for i,(arm,(motor,enc,servo,sm)) in enumerate(arms.items()):
     check(f'U{20+i}',6,f'GP{enc[0]}');check(f'U{20+i}',4,f'GP{enc[1]}');check(f'U{20+i}',5,'3V3')
     check(f'U{30+i}',2,f'GP{servo[0]}');check(f'U{30+i}',5,arm+'_SERVO_5V')
     check(f'J{20+i}',1,'GND');check(f'J{20+i}',2,arm+'_SERVO_5V');check(f'J{20+i}',3,arm+'_SERVO_PWM')
+# Exact protection-part check; ERC cannot detect nonexistent MPNs or wrong lands.
+for ref,pins in {'F1':{1:'VIN',2:'VIN_FUSED'},'R500':{1:'VM',2:'GND'},'R501':{1:'VM',2:'GND'}}.items():
+    for pin,net in pins.items():check(ref,pin,net)
+verified_mpn={'F1':'0407008.WR','R500':'CRCW2512300RFKEG','R501':'CRCW2512300RFKEG'}
+for refs,mpn in [(['F10','F11','F12','F13'],'MF-MSMF110/16X-2'),(['C20','C30','C101','C121','C141','C161'],'GRM32DR71E106KA12L'),(['C420','C421'],'GRM155R61C105KA12D'),(['C422'],'C0805C475K4PACTU'),(['C25','C35'],'C0603C750J5GACTU')]:
+    verified_mpn.update(dict.fromkeys(refs,mpn))
+for ref,mpn in verified_mpn.items():
+    field=tree.find(f'./components/comp[@ref="{ref}"]/fields/field[@name="MPN"]')
+    if field is None or field.text!=mpn:errors.append(f'{ref}: exact MPN mismatch')
+fuse=next(f for f in b.GetFootprints() if f.GetReference()=='F1')
+if str(fuse.GetFPID().GetLibItemName())!='Fuse_Littelfuse_407_1206':errors.append('F1: wrong land pattern')
+for pad in fuse.Pads():
+    delta=pad.GetPosition()-fuse.GetPosition()
+    want=-1.25 if pad.GetNumber()=='1' else 1.25
+    if abs(p.ToMM(delta.x)-want)>.001 or abs(p.ToMM(delta.y))>.001 or abs(p.ToMM(pad.GetSize().x)-1)>.001 or abs(p.ToMM(pad.GetSize().y)-1.8)>.001:
+        errors.append('F1: 407 land geometry mismatch')
 # Independent RP2040 datasheet mapping: package pad number != GPIO number.
 gpio_pads={**{i:i+2 for i in range(8)},**{i:i+3 for i in range(8,16)},**{i:i+11 for i in range(16,22)},24:36,25:37}
 for gpio,pin in gpio_pads.items():check('U1',pin,f'GP{gpio}')

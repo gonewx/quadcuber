@@ -16,7 +16,7 @@
 |SRP1245A-100M|https://www.bourns.com/docs/product-datasheets/srp1245a.pdf |10µH±20%，Irms9A、Isat16A，14.2×5mm推荐焊盘外廓、8mm间隙；KiCad L_Bourns_SRP1245A|
 |MF-MSMF|https://www.bourns.com/docs/product-datasheets/mf-msmf.pdf |各支路PTC保持/动作额定及温度降额，不能作为精密电子限流|
 |SMBJ系列|https://www.littelfuse.com/products/overvoltage-protection/tvs-diodes/surface-mount/smbj |SMBJ12A/CA，12V反向工作、13.3V最小击穿、19.9V额定脉冲钳位；600W波形额定不等于持续功率|
-|入口保险467系列|https://www.littelfuse.com/products/fuses-overcurrent-protection/fuses/surface-mount-fuses/nano2-fuses/467 |0467008.NR，1206、8A；温度/浪涌与实际电源仍须核验|
+|入口保险407系列|https://www.littelfuse.com/assetdocs/littelfuse-fuse-407-datasheet?assetguid=b3bb718b-1fde-4cdc-9cb1-a6465c126ec4 |0407008.WR，1206、8A/24VDC时滞，60A分断；名义I²t24.12A²s。纠正原0467008.NR无依据料号|
 
 封装独立审查已核TI主要芯片针号及RP2040/GCT USB封装。电阻使用Yageo具体可订购编码（如RC0603FR-0743K2L），不是把四位阻值标码错误拼接成MPN。实际可采购状态、替代品额定及来料尺寸仍以采购时官方料页和样品为准。
 
@@ -37,3 +37,5 @@
 ## 用户EV3尺寸图
 
 [原图](sources/ev3-connector-user-drawing.png)与[独立审查](sources/ev3-user-drawing-review.md)记录来源、SHA-256、孔位和观察面解释。封装已落实图示名义几何，原厂身份/型号、电气针号和载流不由该图自动证明。
+
+母线泄放R500/R501：Vishay CRCW2512300RFKEG，300Ω±1%，1W@70°C，2512；[原厂20035](https://www.vishay.com/docs/20035/dcrcwe3.pdf)，散热后膜温仍须≤155°C。

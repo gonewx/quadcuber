@@ -1,8 +1,8 @@
 {
   "contract_errors": [],
-  "connected_pad_count": 539,
-  "footprints": 200,
-  "tracks_and_vias": 2594,
+  "connected_pad_count": 543,
+  "footprints": 202,
+  "tracks_and_vias": 2602,
   "copper_layers": 4,
   "outline_mm": [
     144,

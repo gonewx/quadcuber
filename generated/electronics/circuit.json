@@ -2,7 +2,7 @@
   {
     "ref": "U1",
     "value": "RP2040",
-    "fp": "Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm_ThermalVias",
+    "fp": "Quadcuber:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm_ThermalVias",
     "pins": {
       "1": "3V3",
       "2": "GP0",
@@ -180,12 +180,13 @@
       "41": "bidirectional"
     },
     "note": "Bare RP2040, not a Pico module. EP57 and TESTEN19 ground; DVDD23/50 supplied only by VREG_OUT45.",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm_ThermalVias"
   },
   {
     "ref": "J2",
     "value": "UART GND TX RX",
-    "fp": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "fp": "Quadcuber:PinHeader_1x03_P2.54mm_Vertical",
     "pins": {
       "1": "GND",
       "2": "GP0",
@@ -201,12 +202,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
   },
   {
     "ref": "J3",
     "value": "RESET",
-    "fp": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+    "fp": "Quadcuber:PinHeader_1x02_P2.54mm_Vertical",
     "pins": {
       "1": "RUN",
       "2": "GND"
@@ -221,12 +223,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
   },
   {
     "ref": "J4",
     "value": "SWD VREF D G C",
-    "fp": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "fp": "Quadcuber:PinHeader_1x04_P2.54mm_Vertical",
     "pins": {
       "1": "3V3",
       "2": "SWDIO",
@@ -243,12 +246,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 90
+    "rot": 90,
+    "source_fp": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
   },
   {
     "ref": "R400",
     "value": "10k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "3V3",
       "2": "RUN"
@@ -263,12 +267,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "S2",
     "value": "RUN RESET",
-    "fp": "Button_Switch_SMD:SW_SPST_TL3342",
+    "fp": "Quadcuber:SW_SPST_TL3342",
     "pins": {
       "1": "RUN",
       "2": "GND"
@@ -283,12 +288,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Button_Switch_SMD:SW_SPST_TL3342"
   },
   {
     "ref": "C400",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "RUN",
       "2": "GND"
@@ -303,12 +309,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C410",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -325,12 +332,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 1,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C411",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -347,12 +355,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 10,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C412",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -369,12 +378,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 22,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C413",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -391,12 +401,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 33,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C414",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -413,12 +424,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 42,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C415",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -435,12 +447,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 43,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C416",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -457,12 +470,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 48,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C417",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -479,12 +493,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 49,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C418",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "1V1",
       "2": "GND"
@@ -501,12 +516,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 23,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C419",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "1V1",
       "2": "GND"
@@ -523,12 +539,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 50,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C420",
     "value": "1u",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -537,7 +554,7 @@
       28,
       20
     ],
-    "mpn": "GRM155R61A105KE15D",
+    "mpn": "GRM155R61C105KA12D",
     "mfr": "Murata",
     "section": "controller_power",
     "names": {},
@@ -545,12 +562,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 44,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C421",
     "value": "1u",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "1V1",
       "2": "GND"
@@ -559,7 +577,7 @@
       28,
       20
     ],
-    "mpn": "GRM155R61A105KE15D",
+    "mpn": "GRM155R61C105KA12D",
     "mfr": "Murata",
     "section": "controller_power",
     "names": {},
@@ -567,12 +585,13 @@
     "note": "",
     "rot": 0,
     "decouple_pin": 45,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "D2",
     "value": "SS14 external logic isolation",
-    "fp": "Diode_SMD:D_SMA",
+    "fp": "Quadcuber:D_SMA",
     "pins": {
       "1": "VSYS",
       "2": "5V_A"
@@ -590,12 +609,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Diode_SMD:D_SMA"
   },
   {
     "ref": "D5",
     "value": "SS14 USB isolation",
-    "fp": "Diode_SMD:D_SMA",
+    "fp": "Quadcuber:D_SMA",
     "pins": {
       "1": "VSYS",
       "2": "USB_FUSED"
@@ -614,12 +634,13 @@
     "types": {},
     "note": "",
     "rot": 0,
-    "side": "B.Cu"
+    "side": "B.Cu",
+    "source_fp": "Diode_SMD:D_SMA"
   },
   {
     "ref": "C1",
     "value": "1u/16V",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "VSYS",
       "2": "GND"
@@ -634,12 +655,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 180
+    "rot": 180,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "U5",
     "value": "TLV75533PDBVR",
-    "fp": "Package_TO_SOT_SMD:SOT-23-5",
+    "fp": "Quadcuber:SOT-23-5",
     "pins": {
       "1": "VSYS",
       "2": "GND",
@@ -668,12 +690,13 @@
       "5": "power_out"
     },
     "note": "3.3V/500mA IC rating; controller continuous design target <=150mA; no external 3V3 injection.",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-5"
   },
   {
     "ref": "C422",
-    "value": "4.7u/10V",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "value": "4.7u/16V",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -682,18 +705,19 @@
       35,
       20
     ],
-    "mpn": "GRM21BR61A475KA73L",
-    "mfr": "Murata",
+    "mpn": "C0805C475K4PACTU",
+    "mfr": "KEMET",
     "section": "controller_power",
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "J5",
     "value": "USB-C data / BOOTSEL",
-    "fp": "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+    "fp": "Quadcuber:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
     "pins": {
       "A1": "GND",
       "A4": "USB_VBUS",
@@ -723,12 +747,13 @@
     "names": {},
     "types": {},
     "note": "USB2 device only. CC1/CC2 each 5.1k to ground. Shell ground. No PD.",
-    "rot": 180
+    "rot": 180,
+    "source_fp": "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
   },
   {
     "ref": "R401",
     "value": "5.1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "USB_CC1",
       "2": "GND"
@@ -743,12 +768,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R402",
     "value": "5.1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "USB_CC2",
       "2": "GND"
@@ -763,12 +789,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "F3",
     "value": "0.5A USB PTC",
-    "fp": "Fuse:Fuse_1812_4532Metric",
+    "fp": "Quadcuber:Fuse_1812_4532Metric",
     "pins": {
       "1": "USB_VBUS",
       "2": "USB_FUSED"
@@ -783,12 +810,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Fuse:Fuse_1812_4532Metric"
   },
   {
     "ref": "C423",
     "value": "1u/16V",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "USB_VBUS",
       "2": "GND"
@@ -803,12 +831,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "U6",
     "value": "USBLC6-2SC6",
-    "fp": "Package_TO_SOT_SMD:SOT-23-6",
+    "fp": "Quadcuber:SOT-23-6",
     "pins": {
       "1": "USB_DP",
       "2": "GND",
@@ -834,12 +863,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 90
+    "rot": 90,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-6"
   },
   {
     "ref": "R403",
     "value": "27",
-    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "fp": "Quadcuber:R_0402_1005Metric",
     "pins": {
       "1": "USB_DM",
       "2": "USB_DM_MCU"
@@ -854,12 +884,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 270
+    "rot": 270,
+    "source_fp": "Resistor_SMD:R_0402_1005Metric"
   },
   {
     "ref": "R404",
     "value": "27",
-    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "fp": "Quadcuber:R_0402_1005Metric",
     "pins": {
       "1": "USB_DP",
       "2": "USB_DP_MCU"
@@ -874,12 +905,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 270
+    "rot": 270,
+    "source_fp": "Resistor_SMD:R_0402_1005Metric"
   },
   {
     "ref": "C427",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "VSYS",
       "2": "GND"
@@ -894,12 +926,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "R405",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "USB_VBUS",
       "2": "GP24"
@@ -914,12 +947,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R406",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP24",
       "2": "GND"
@@ -934,12 +968,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "U7",
     "value": "W25Q16RVCNJQ 2MiB",
-    "fp": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+    "fp": "Quadcuber:SOIC-8_3.9x4.9mm_P1.27mm",
     "pins": {
       "1": "QSPI_SS",
       "2": "QSPI_SD1",
@@ -969,12 +1004,13 @@
     },
     "types": {},
     "note": "Current-production RV successor per Winbond PCN DM202601-03-A / AN0000070. CN 150mil SOP8; use QUADCUBER_A1 MicroPython boot2 QE-mask adaptation.",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
   },
   {
     "ref": "C424",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -989,12 +1025,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "R407",
     "value": "10k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "3V3",
       "2": "QSPI_SS"
@@ -1009,12 +1046,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R408",
     "value": "1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "QSPI_SS",
       "2": "BOOT_BUTTON"
@@ -1029,12 +1067,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "S1",
     "value": "BOOTSEL",
-    "fp": "Button_Switch_SMD:SW_SPST_TL3342",
+    "fp": "Quadcuber:SW_SPST_TL3342",
     "pins": {
       "1": "BOOT_BUTTON",
       "2": "GND"
@@ -1049,12 +1088,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Button_Switch_SMD:SW_SPST_TL3342"
   },
   {
     "ref": "Y1",
     "value": "12MHz CL10pF",
-    "fp": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "fp": "Quadcuber:Crystal_SMD_3225-4Pin_3.2x2.5mm",
     "pins": {
       "1": "XIN",
       "2": "GND",
@@ -1071,12 +1111,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
   },
   {
     "ref": "R409",
     "value": "1k",
-    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "fp": "Quadcuber:R_0402_1005Metric",
     "pins": {
       "1": "XOUT",
       "2": "XOUT_DAMPED"
@@ -1091,12 +1132,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0402_1005Metric"
   },
   {
     "ref": "C425",
     "value": "15p",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "XIN",
       "2": "GND"
@@ -1111,12 +1153,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 180
+    "rot": 180,
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "C426",
     "value": "15p",
-    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "fp": "Quadcuber:C_0402_1005Metric",
     "pins": {
       "1": "XOUT_DAMPED",
       "2": "GND"
@@ -1131,12 +1174,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0402_1005Metric"
   },
   {
     "ref": "D7",
     "value": "USER LED GP25",
-    "fp": "LED_SMD:LED_0603_1608Metric",
+    "fp": "Quadcuber:LED_0603_1608Metric",
     "pins": {
       "1": "GND",
       "2": "LED_ANODE"
@@ -1154,12 +1198,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "LED_SMD:LED_0603_1608Metric"
   },
   {
     "ref": "R410",
     "value": "1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP25",
       "2": "LED_ANODE"
@@ -1174,12 +1219,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "J1",
     "value": "9V regulated input",
-    "fp": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+    "fp": "Quadcuber:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
     "pins": {
       "1": "VIN",
       "2": "GND"
@@ -1197,12 +1243,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
   },
   {
     "ref": "F1",
-    "value": "8A 32V fuse",
-    "fp": "Fuse:Fuse_1206_3216Metric",
+    "value": "8A 24V time-lag fuse",
+    "fp": "Quadcuber:Fuse_Littelfuse_407_1206",
     "pins": {
       "1": "VIN",
       "2": "VIN_FUSED"
@@ -1211,18 +1258,18 @@
       57,
       9
     ],
-    "mpn": "0467008.NR",
+    "mpn": "0407008.WR",
     "mfr": "Littelfuse",
     "section": "power",
     "names": {},
     "types": {},
-    "note": "",
+    "note": "407 time-lag; 24VDC, 60A interrupt, nominal melting I2t24.12A2s; not fast semiconductor protection. Continuous input design budget <=5A; current-limited 9V source required.",
     "rot": 0
   },
   {
     "ref": "U4",
     "value": "LM74700QDBVRQ1",
-    "fp": "Package_TO_SOT_SMD:SOT-23-6",
+    "fp": "Quadcuber:SOT-23-6",
     "pins": {
       "1": "IDEAL_VCAP",
       "2": "GND",
@@ -1255,12 +1302,13 @@
       "6": "power_in"
     },
     "note": "Ideal diode / reverse polarity. EN is NOT a power disconnect.",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-6"
   },
   {
     "ref": "Q1",
     "value": "CSD18540Q5B",
-    "fp": "Package_TO_SOT_SMD:TDSON-8-1",
+    "fp": "Quadcuber:TDSON-8-1",
     "pins": {
       "1": "VIN_FUSED",
       "2": "VIN_FUSED",
@@ -1284,12 +1332,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:TDSON-8-1"
   },
   {
     "ref": "C4",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "IDEAL_VCAP",
       "2": "VIN_FUSED"
@@ -1307,12 +1356,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "C5",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "VIN_FUSED",
       "2": "GND"
@@ -1330,12 +1380,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "D4",
     "value": "SMBJ12CA input transient",
-    "fp": "Diode_SMD:D_SMB",
+    "fp": "Quadcuber:D_SMB",
     "pins": {
       "1": "VIN_FUSED",
       "2": "GND"
@@ -1353,12 +1404,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Diode_SMD:D_SMB"
   },
   {
     "ref": "D3",
     "value": "SMBJ12A transient clamp",
-    "fp": "Diode_SMD:D_SMB",
+    "fp": "Quadcuber:D_SMB",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -1376,12 +1428,13 @@
     },
     "types": {},
     "note": "12V stand-off, 19.9V rated pulse clamp. Pulse-only; never sustained 12V input.",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Diode_SMD:D_SMB"
   },
   {
     "ref": "C2",
     "value": "470u/25V",
-    "fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "fp": "Quadcuber:CP_Radial_D10.0mm_P5.00mm",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -1399,12 +1452,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
   },
   {
     "ref": "C3",
     "value": "470u/25V",
-    "fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "fp": "Quadcuber:CP_Radial_D10.0mm_P5.00mm",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -1422,12 +1476,55 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
+  },
+  {
+    "ref": "R500",
+    "value": "300R 1W VM bleed",
+    "fp": "Quadcuber:R_2512_6332Metric",
+    "pins": {
+      "1": "VM",
+      "2": "GND"
+    },
+    "xy": [
+      125,
+      9
+    ],
+    "mpn": "CRCW2512300RFKEG",
+    "mfr": "Vishay",
+    "section": "power",
+    "names": {},
+    "types": {},
+    "note": "Two 300R/1% in parallel:150R VM bleed, 0.562W total at9.18V. Operating envelope total regen <=0.05J/event and <=5Hz; verify actual energy and resistor film temperature. Not a full-power brake.",
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_2512_6332Metric"
+  },
+  {
+    "ref": "R501",
+    "value": "300R 1W VM bleed",
+    "fp": "Quadcuber:R_2512_6332Metric",
+    "pins": {
+      "1": "VM",
+      "2": "GND"
+    },
+    "xy": [
+      125,
+      24
+    ],
+    "mpn": "CRCW2512300RFKEG",
+    "mfr": "Vishay",
+    "section": "power",
+    "names": {},
+    "types": {},
+    "note": "Two 300R/1% in parallel:150R VM bleed, 0.562W total at9.18V. Operating envelope total regen <=0.05J/event and <=5Hz; verify actual energy and resistor film temperature. Not a full-power brake.",
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_2512_6332Metric"
   },
   {
     "ref": "U2",
     "value": "TPS54302DDCR",
-    "fp": "Package_TO_SOT_SMD:SOT-23-6",
+    "fp": "Quadcuber:SOT-23-6",
     "pins": {
       "1": "GND",
       "2": "B1_SW",
@@ -1460,12 +1557,13 @@
       "6": "passive"
     },
     "note": "",
-    "rot": 180
+    "rot": 180,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-6"
   },
   {
     "ref": "C20",
     "value": "10u/25V",
-    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "fp": "Quadcuber:C_1210_3225Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -1474,7 +1572,7 @@
       52,
       46.5
     ],
-    "mpn": "GRM32ER71E106KA12L",
+    "mpn": "GRM32DR71E106KA12L",
     "mfr": "Murata",
     "section": "buck1",
     "names": {
@@ -1483,12 +1581,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 270
+    "rot": 270,
+    "source_fp": "Capacitor_SMD:C_1210_3225Metric"
   },
   {
     "ref": "C21",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -1506,12 +1605,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 270
+    "rot": 270,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "R20",
     "value": "49.9",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B1_BOOT",
       "2": "B1_BOOT_CAP"
@@ -1526,12 +1626,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C22",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "B1_BOOT_CAP",
       "2": "B1_SW"
@@ -1549,12 +1650,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "L1",
     "value": "10uH 9A Isat16A",
-    "fp": "Inductor_SMD:L_Bourns_SRP1245A",
+    "fp": "Quadcuber:L_Bourns_SRP1245A",
     "pins": {
       "1": "B1_SW",
       "2": "5V_A"
@@ -1569,12 +1671,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Inductor_SMD:L_Bourns_SRP1245A"
   },
   {
     "ref": "C23",
     "value": "22u/25V",
-    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "fp": "Quadcuber:C_1210_3225Metric",
     "pins": {
       "1": "5V_A",
       "2": "GND"
@@ -1592,12 +1695,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_1210_3225Metric"
   },
   {
     "ref": "C24",
     "value": "22u/25V",
-    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "fp": "Quadcuber:C_1210_3225Metric",
     "pins": {
       "1": "5V_A",
       "2": "GND"
@@ -1615,12 +1719,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_1210_3225Metric"
   },
   {
     "ref": "R21",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "5V_A",
       "2": "B1_FB"
@@ -1635,12 +1740,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R22",
     "value": "13.3k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B1_FB",
       "2": "GND"
@@ -1655,12 +1761,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C25",
     "value": "75p",
-    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "fp": "Quadcuber:C_0603_1608Metric",
     "pins": {
       "1": "5V_A",
       "2": "B1_FB"
@@ -1669,8 +1776,8 @@
       40,
       45
     ],
-    "mpn": "GRM1885C1H750JA01D",
-    "mfr": "Murata",
+    "mpn": "C0603C750J5GACTU",
+    "mfr": "KEMET",
     "section": "buck1",
     "names": {
       "1": "1",
@@ -1678,12 +1785,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0603_1608Metric"
   },
   {
     "ref": "R23",
     "value": "511k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "VM",
       "2": "B1_EN"
@@ -1698,12 +1806,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R24",
     "value": "105k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B1_EN",
       "2": "GND"
@@ -1718,12 +1827,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C26",
     "value": "470u/10V",
-    "fp": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+    "fp": "Quadcuber:CP_Radial_D8.0mm_P3.50mm",
     "pins": {
       "1": "5V_A",
       "2": "GND"
@@ -1742,12 +1852,13 @@
     "types": {},
     "note": "DNP by default. Populate only after loop/step-response verification with added 470uF.",
     "rot": 0,
-    "dnp": true
+    "dnp": true,
+    "source_fp": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
   },
   {
     "ref": "U3",
     "value": "TPS54302DDCR",
-    "fp": "Package_TO_SOT_SMD:SOT-23-6",
+    "fp": "Quadcuber:SOT-23-6",
     "pins": {
       "1": "GND",
       "2": "B2_SW",
@@ -1780,12 +1891,13 @@
       "6": "passive"
     },
     "note": "",
-    "rot": 180
+    "rot": 180,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-6"
   },
   {
     "ref": "C30",
     "value": "10u/25V",
-    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "fp": "Quadcuber:C_1210_3225Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -1794,7 +1906,7 @@
       101,
       46.5
     ],
-    "mpn": "GRM32ER71E106KA12L",
+    "mpn": "GRM32DR71E106KA12L",
     "mfr": "Murata",
     "section": "buck2",
     "names": {
@@ -1803,12 +1915,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 270
+    "rot": 270,
+    "source_fp": "Capacitor_SMD:C_1210_3225Metric"
   },
   {
     "ref": "C31",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -1826,12 +1939,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 270
+    "rot": 270,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "R30",
     "value": "49.9",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B2_BOOT",
       "2": "B2_BOOT_CAP"
@@ -1846,12 +1960,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C32",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "B2_BOOT_CAP",
       "2": "B2_SW"
@@ -1869,12 +1984,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "L2",
     "value": "10uH 9A Isat16A",
-    "fp": "Inductor_SMD:L_Bourns_SRP1245A",
+    "fp": "Quadcuber:L_Bourns_SRP1245A",
     "pins": {
       "1": "B2_SW",
       "2": "5V_B"
@@ -1889,12 +2005,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Inductor_SMD:L_Bourns_SRP1245A"
   },
   {
     "ref": "C33",
     "value": "22u/25V",
-    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "fp": "Quadcuber:C_1210_3225Metric",
     "pins": {
       "1": "5V_B",
       "2": "GND"
@@ -1912,12 +2029,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_1210_3225Metric"
   },
   {
     "ref": "C34",
     "value": "22u/25V",
-    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "fp": "Quadcuber:C_1210_3225Metric",
     "pins": {
       "1": "5V_B",
       "2": "GND"
@@ -1935,12 +2053,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_1210_3225Metric"
   },
   {
     "ref": "R31",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "5V_B",
       "2": "B2_FB"
@@ -1955,12 +2074,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R32",
     "value": "13.3k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B2_FB",
       "2": "GND"
@@ -1975,12 +2095,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C35",
     "value": "75p",
-    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "fp": "Quadcuber:C_0603_1608Metric",
     "pins": {
       "1": "5V_B",
       "2": "B2_FB"
@@ -1989,8 +2110,8 @@
       89,
       45
     ],
-    "mpn": "GRM1885C1H750JA01D",
-    "mfr": "Murata",
+    "mpn": "C0603C750J5GACTU",
+    "mfr": "KEMET",
     "section": "buck2",
     "names": {
       "1": "1",
@@ -1998,12 +2119,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0603_1608Metric"
   },
   {
     "ref": "R33",
     "value": "511k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "VM",
       "2": "B2_EN"
@@ -2018,12 +2140,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R34",
     "value": "105k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B2_EN",
       "2": "GND"
@@ -2038,12 +2161,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C36",
     "value": "470u/10V",
-    "fp": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+    "fp": "Quadcuber:CP_Radial_D8.0mm_P3.50mm",
     "pins": {
       "1": "5V_B",
       "2": "GND"
@@ -2062,12 +2186,13 @@
     "types": {},
     "note": "DNP by default. Populate only after loop/step-response verification with added 470uF.",
     "rot": 0,
-    "dnp": true
+    "dnp": true,
+    "source_fp": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
   },
   {
     "ref": "F2",
     "value": "0.5A encoder PTC",
-    "fp": "Fuse:Fuse_1812_4532Metric",
+    "fp": "Quadcuber:Fuse_1812_4532Metric",
     "pins": {
       "1": "5V_A",
       "2": "5V_ENC"
@@ -2082,12 +2207,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Fuse:Fuse_1812_4532Metric"
   },
   {
     "ref": "U10",
     "value": "DRV8871DDAR",
-    "fp": "Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
+    "fp": "Quadcuber:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
     "pins": {
       "1": "GND",
       "2": "GP3",
@@ -2129,12 +2255,13 @@
       "9": "power_in"
     },
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias"
   },
   {
     "ref": "R100",
     "value": "43.2k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "R_ILIM",
       "2": "GND"
@@ -2149,12 +2276,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R101",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP2",
       "2": "GND"
@@ -2169,12 +2297,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R102",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP3",
       "2": "GND"
@@ -2189,12 +2318,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C100",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -2212,12 +2342,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "C101",
     "value": "10u/25V",
-    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "fp": "Quadcuber:C_1210_3225Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -2226,7 +2357,7 @@
       23,
       81
     ],
-    "mpn": "GRM32ER71E106KA12L",
+    "mpn": "GRM32DR71E106KA12L",
     "mfr": "Murata",
     "section": "arm_R",
     "names": {
@@ -2235,12 +2366,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_1210_3225Metric"
   },
   {
     "ref": "C102",
     "value": "470u/25V",
-    "fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "fp": "Quadcuber:CP_Radial_D10.0mm_P5.00mm",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -2258,7 +2390,8 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
   },
   {
     "ref": "J10",
@@ -2294,7 +2427,7 @@
   {
     "ref": "U20",
     "value": "SN74LVC2G17DBVR",
-    "fp": "Package_TO_SOT_SMD:SOT-23-6",
+    "fp": "Quadcuber:SOT-23-6",
     "pins": {
       "1": "R_ENC_A_F",
       "2": "GND",
@@ -2327,12 +2460,13 @@
       "6": "output"
     },
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-6"
   },
   {
     "ref": "R103",
     "value": "1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "R_ENC_A_RAW",
       "2": "R_ENC_A_F"
@@ -2347,12 +2481,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R105",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "R_ENC_A_F",
       "2": "GND"
@@ -2367,12 +2502,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R104",
     "value": "1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "R_ENC_B_RAW",
       "2": "R_ENC_B_F"
@@ -2387,12 +2523,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R106",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "R_ENC_B_F",
       "2": "GND"
@@ -2407,12 +2544,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C103",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -2430,12 +2568,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "C104",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "5V_ENC",
       "2": "GND"
@@ -2453,12 +2592,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "F10",
     "value": "1.1A servo PTC",
-    "fp": "Fuse:Fuse_1812_4532Metric",
+    "fp": "Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812",
     "pins": {
       "1": "5V_A",
       "2": "R_SERVO_5V"
@@ -2467,7 +2607,7 @@
       29,
       87
     ],
-    "mpn": "MF-MSMF110-2",
+    "mpn": "MF-MSMF110/16X-2",
     "mfr": "Bourns",
     "section": "arm_R",
     "names": {},
@@ -2478,7 +2618,7 @@
   {
     "ref": "J20",
     "value": "R SERVO G + S",
-    "fp": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "fp": "Quadcuber:PinHeader_1x03_P2.54mm_Vertical",
     "pins": {
       "1": "GND",
       "2": "R_SERVO_5V",
@@ -2494,12 +2634,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
   },
   {
     "ref": "U30",
     "value": "SN74AHCT1G125DBVR",
-    "fp": "Package_TO_SOT_SMD:SOT-23-5",
+    "fp": "Quadcuber:SOT-23-5",
     "pins": {
       "1": "GND",
       "2": "GP8",
@@ -2529,12 +2670,13 @@
       "5": "power_in"
     },
     "note": "Input leakage specified at VCC=0; prevents USB-only GPIO phantom servo supply.",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-5"
   },
   {
     "ref": "C105",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "R_SERVO_5V",
       "2": "GND"
@@ -2552,12 +2694,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "R109",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP8",
       "2": "GND"
@@ -2572,12 +2715,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R107",
     "value": "220",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "R_SERVO_BUF",
       "2": "R_SERVO_PWM"
@@ -2592,12 +2736,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R108",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "R_SERVO_PWM",
       "2": "GND"
@@ -2612,12 +2757,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "U11",
     "value": "DRV8871DDAR",
-    "fp": "Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
+    "fp": "Quadcuber:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
     "pins": {
       "1": "GND",
       "2": "GP7",
@@ -2659,12 +2805,13 @@
       "9": "power_in"
     },
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias"
   },
   {
     "ref": "R120",
     "value": "43.2k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "L_ILIM",
       "2": "GND"
@@ -2679,12 +2826,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R121",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP6",
       "2": "GND"
@@ -2699,12 +2847,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R122",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP7",
       "2": "GND"
@@ -2719,12 +2868,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C120",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -2742,12 +2892,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "C121",
     "value": "10u/25V",
-    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "fp": "Quadcuber:C_1210_3225Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -2756,7 +2907,7 @@
       57,
       81
     ],
-    "mpn": "GRM32ER71E106KA12L",
+    "mpn": "GRM32DR71E106KA12L",
     "mfr": "Murata",
     "section": "arm_L",
     "names": {
@@ -2765,12 +2916,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_1210_3225Metric"
   },
   {
     "ref": "C122",
     "value": "470u/25V",
-    "fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "fp": "Quadcuber:CP_Radial_D10.0mm_P5.00mm",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -2788,7 +2940,8 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
   },
   {
     "ref": "J11",
@@ -2824,7 +2977,7 @@
   {
     "ref": "U21",
     "value": "SN74LVC2G17DBVR",
-    "fp": "Package_TO_SOT_SMD:SOT-23-6",
+    "fp": "Quadcuber:SOT-23-6",
     "pins": {
       "1": "L_ENC_A_F",
       "2": "GND",
@@ -2857,12 +3010,13 @@
       "6": "output"
     },
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-6"
   },
   {
     "ref": "R123",
     "value": "1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "L_ENC_A_RAW",
       "2": "L_ENC_A_F"
@@ -2877,12 +3031,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R125",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "L_ENC_A_F",
       "2": "GND"
@@ -2897,12 +3052,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R124",
     "value": "1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "L_ENC_B_RAW",
       "2": "L_ENC_B_F"
@@ -2917,12 +3073,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R126",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "L_ENC_B_F",
       "2": "GND"
@@ -2937,12 +3094,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C123",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -2960,12 +3118,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "C124",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "5V_ENC",
       "2": "GND"
@@ -2983,12 +3142,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "F11",
     "value": "1.1A servo PTC",
-    "fp": "Fuse:Fuse_1812_4532Metric",
+    "fp": "Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812",
     "pins": {
       "1": "5V_A",
       "2": "L_SERVO_5V"
@@ -2997,7 +3157,7 @@
       63,
       87
     ],
-    "mpn": "MF-MSMF110-2",
+    "mpn": "MF-MSMF110/16X-2",
     "mfr": "Bourns",
     "section": "arm_L",
     "names": {},
@@ -3008,7 +3168,7 @@
   {
     "ref": "J21",
     "value": "L SERVO G + S",
-    "fp": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "fp": "Quadcuber:PinHeader_1x03_P2.54mm_Vertical",
     "pins": {
       "1": "GND",
       "2": "L_SERVO_5V",
@@ -3024,12 +3184,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
   },
   {
     "ref": "U31",
     "value": "SN74AHCT1G125DBVR",
-    "fp": "Package_TO_SOT_SMD:SOT-23-5",
+    "fp": "Quadcuber:SOT-23-5",
     "pins": {
       "1": "GND",
       "2": "GP9",
@@ -3059,12 +3220,13 @@
       "5": "power_in"
     },
     "note": "Input leakage specified at VCC=0; prevents USB-only GPIO phantom servo supply.",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-5"
   },
   {
     "ref": "C125",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "L_SERVO_5V",
       "2": "GND"
@@ -3082,12 +3244,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "R129",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP9",
       "2": "GND"
@@ -3102,12 +3265,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R127",
     "value": "220",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "L_SERVO_BUF",
       "2": "L_SERVO_PWM"
@@ -3122,12 +3286,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R128",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "L_SERVO_PWM",
       "2": "GND"
@@ -3142,12 +3307,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "U12",
     "value": "DRV8871DDAR",
-    "fp": "Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
+    "fp": "Quadcuber:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
     "pins": {
       "1": "GND",
       "2": "GP11",
@@ -3189,12 +3355,13 @@
       "9": "power_in"
     },
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias"
   },
   {
     "ref": "R140",
     "value": "43.2k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "F_ILIM",
       "2": "GND"
@@ -3209,12 +3376,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R141",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP10",
       "2": "GND"
@@ -3229,12 +3397,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R142",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP11",
       "2": "GND"
@@ -3249,12 +3418,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C140",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -3272,12 +3442,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "C141",
     "value": "10u/25V",
-    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "fp": "Quadcuber:C_1210_3225Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -3286,7 +3457,7 @@
       91,
       81
     ],
-    "mpn": "GRM32ER71E106KA12L",
+    "mpn": "GRM32DR71E106KA12L",
     "mfr": "Murata",
     "section": "arm_F",
     "names": {
@@ -3295,12 +3466,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_1210_3225Metric"
   },
   {
     "ref": "C142",
     "value": "470u/25V",
-    "fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "fp": "Quadcuber:CP_Radial_D10.0mm_P5.00mm",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -3318,7 +3490,8 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
   },
   {
     "ref": "J12",
@@ -3354,7 +3527,7 @@
   {
     "ref": "U22",
     "value": "SN74LVC2G17DBVR",
-    "fp": "Package_TO_SOT_SMD:SOT-23-6",
+    "fp": "Quadcuber:SOT-23-6",
     "pins": {
       "1": "F_ENC_A_F",
       "2": "GND",
@@ -3387,12 +3560,13 @@
       "6": "output"
     },
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-6"
   },
   {
     "ref": "R143",
     "value": "1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "F_ENC_A_RAW",
       "2": "F_ENC_A_F"
@@ -3407,12 +3581,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R145",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "F_ENC_A_F",
       "2": "GND"
@@ -3427,12 +3602,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R144",
     "value": "1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "F_ENC_B_RAW",
       "2": "F_ENC_B_F"
@@ -3447,12 +3623,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R146",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "F_ENC_B_F",
       "2": "GND"
@@ -3467,12 +3644,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C143",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -3490,12 +3668,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "C144",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "5V_ENC",
       "2": "GND"
@@ -3513,12 +3692,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "F12",
     "value": "1.1A servo PTC",
-    "fp": "Fuse:Fuse_1812_4532Metric",
+    "fp": "Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812",
     "pins": {
       "1": "5V_B",
       "2": "F_SERVO_5V"
@@ -3527,7 +3707,7 @@
       97,
       87
     ],
-    "mpn": "MF-MSMF110-2",
+    "mpn": "MF-MSMF110/16X-2",
     "mfr": "Bourns",
     "section": "arm_F",
     "names": {},
@@ -3538,7 +3718,7 @@
   {
     "ref": "J22",
     "value": "F SERVO G + S",
-    "fp": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "fp": "Quadcuber:PinHeader_1x03_P2.54mm_Vertical",
     "pins": {
       "1": "GND",
       "2": "F_SERVO_5V",
@@ -3554,12 +3734,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
   },
   {
     "ref": "U32",
     "value": "SN74AHCT1G125DBVR",
-    "fp": "Package_TO_SOT_SMD:SOT-23-5",
+    "fp": "Quadcuber:SOT-23-5",
     "pins": {
       "1": "GND",
       "2": "GP20",
@@ -3589,12 +3770,13 @@
       "5": "power_in"
     },
     "note": "Input leakage specified at VCC=0; prevents USB-only GPIO phantom servo supply.",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-5"
   },
   {
     "ref": "C145",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "F_SERVO_5V",
       "2": "GND"
@@ -3612,12 +3794,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "R149",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP20",
       "2": "GND"
@@ -3632,12 +3815,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R147",
     "value": "220",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "F_SERVO_BUF",
       "2": "F_SERVO_PWM"
@@ -3652,12 +3836,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R148",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "F_SERVO_PWM",
       "2": "GND"
@@ -3672,12 +3857,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "U13",
     "value": "DRV8871DDAR",
-    "fp": "Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
+    "fp": "Quadcuber:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
     "pins": {
       "1": "GND",
       "2": "GP15",
@@ -3719,12 +3905,13 @@
       "9": "power_in"
     },
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias"
   },
   {
     "ref": "R160",
     "value": "43.2k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B_ILIM",
       "2": "GND"
@@ -3739,12 +3926,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R161",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP14",
       "2": "GND"
@@ -3759,12 +3947,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R162",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP15",
       "2": "GND"
@@ -3779,12 +3968,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C160",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -3802,12 +3992,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "C161",
     "value": "10u/25V",
-    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "fp": "Quadcuber:C_1210_3225Metric",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -3816,7 +4007,7 @@
       125,
       81
     ],
-    "mpn": "GRM32ER71E106KA12L",
+    "mpn": "GRM32DR71E106KA12L",
     "mfr": "Murata",
     "section": "arm_B",
     "names": {
@@ -3825,12 +4016,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_1210_3225Metric"
   },
   {
     "ref": "C162",
     "value": "470u/25V",
-    "fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "fp": "Quadcuber:CP_Radial_D10.0mm_P5.00mm",
     "pins": {
       "1": "VM",
       "2": "GND"
@@ -3848,7 +4040,8 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
   },
   {
     "ref": "J13",
@@ -3884,7 +4077,7 @@
   {
     "ref": "U23",
     "value": "SN74LVC2G17DBVR",
-    "fp": "Package_TO_SOT_SMD:SOT-23-6",
+    "fp": "Quadcuber:SOT-23-6",
     "pins": {
       "1": "B_ENC_A_F",
       "2": "GND",
@@ -3917,12 +4110,13 @@
       "6": "output"
     },
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-6"
   },
   {
     "ref": "R163",
     "value": "1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B_ENC_A_RAW",
       "2": "B_ENC_A_F"
@@ -3937,12 +4131,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R165",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B_ENC_A_F",
       "2": "GND"
@@ -3957,12 +4152,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R164",
     "value": "1k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B_ENC_B_RAW",
       "2": "B_ENC_B_F"
@@ -3977,12 +4173,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R166",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B_ENC_B_F",
       "2": "GND"
@@ -3997,12 +4194,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "C163",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "3V3",
       "2": "GND"
@@ -4020,12 +4218,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "C164",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "5V_ENC",
       "2": "GND"
@@ -4043,12 +4242,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "F13",
     "value": "1.1A servo PTC",
-    "fp": "Fuse:Fuse_1812_4532Metric",
+    "fp": "Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812",
     "pins": {
       "1": "5V_B",
       "2": "B_SERVO_5V"
@@ -4057,7 +4257,7 @@
       131,
       87
     ],
-    "mpn": "MF-MSMF110-2",
+    "mpn": "MF-MSMF110/16X-2",
     "mfr": "Bourns",
     "section": "arm_B",
     "names": {},
@@ -4068,7 +4268,7 @@
   {
     "ref": "J23",
     "value": "B SERVO G + S",
-    "fp": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "fp": "Quadcuber:PinHeader_1x03_P2.54mm_Vertical",
     "pins": {
       "1": "GND",
       "2": "B_SERVO_5V",
@@ -4084,12 +4284,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
   },
   {
     "ref": "U33",
     "value": "SN74AHCT1G125DBVR",
-    "fp": "Package_TO_SOT_SMD:SOT-23-5",
+    "fp": "Quadcuber:SOT-23-5",
     "pins": {
       "1": "GND",
       "2": "GP21",
@@ -4119,12 +4320,13 @@
       "5": "power_in"
     },
     "note": "Input leakage specified at VCC=0; prevents USB-only GPIO phantom servo supply.",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Package_TO_SOT_SMD:SOT-23-5"
   },
   {
     "ref": "C165",
     "value": "100n",
-    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "fp": "Quadcuber:C_0805_2012Metric",
     "pins": {
       "1": "B_SERVO_5V",
       "2": "GND"
@@ -4142,12 +4344,13 @@
     },
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Capacitor_SMD:C_0805_2012Metric"
   },
   {
     "ref": "R169",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "GP21",
       "2": "GND"
@@ -4162,12 +4365,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R167",
     "value": "220",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B_SERVO_BUF",
       "2": "B_SERVO_PWM"
@@ -4182,12 +4386,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "R168",
     "value": "100k",
-    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "fp": "Quadcuber:R_0603_1608Metric",
     "pins": {
       "1": "B_SERVO_PWM",
       "2": "GND"
@@ -4202,12 +4407,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "Resistor_SMD:R_0603_1608Metric"
   },
   {
     "ref": "TP1",
     "value": "GND",
-    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "fp": "Quadcuber:TestPoint_Pad_D2.0mm",
     "pins": {
       "1": "GND"
     },
@@ -4221,12 +4427,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D2.0mm"
   },
   {
     "ref": "TP2",
     "value": "VM",
-    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "fp": "Quadcuber:TestPoint_Pad_D2.0mm",
     "pins": {
       "1": "VM"
     },
@@ -4240,12 +4447,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D2.0mm"
   },
   {
     "ref": "TP3",
     "value": "5V_A",
-    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "fp": "Quadcuber:TestPoint_Pad_D2.0mm",
     "pins": {
       "1": "5V_A"
     },
@@ -4259,12 +4467,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D2.0mm"
   },
   {
     "ref": "TP4",
     "value": "5V_B",
-    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "fp": "Quadcuber:TestPoint_Pad_D2.0mm",
     "pins": {
       "1": "5V_B"
     },
@@ -4278,12 +4487,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D2.0mm"
   },
   {
     "ref": "TP5",
     "value": "5V_ENC",
-    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "fp": "Quadcuber:TestPoint_Pad_D2.0mm",
     "pins": {
       "1": "5V_ENC"
     },
@@ -4297,12 +4507,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D2.0mm"
   },
   {
     "ref": "TP6",
     "value": "3V3",
-    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "fp": "Quadcuber:TestPoint_Pad_D2.0mm",
     "pins": {
       "1": "3V3"
     },
@@ -4316,12 +4527,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D2.0mm"
   },
   {
     "ref": "TP7",
     "value": "VSYS",
-    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "fp": "Quadcuber:TestPoint_Pad_D2.0mm",
     "pins": {
       "1": "VSYS"
     },
@@ -4335,12 +4547,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D2.0mm"
   },
   {
     "ref": "TP10",
     "value": "R_M1",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "R_M1"
     },
@@ -4354,12 +4567,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP11",
     "value": "R_M2",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "R_M2"
     },
@@ -4373,12 +4587,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP12",
     "value": "GP4",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "GP4"
     },
@@ -4392,12 +4607,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP13",
     "value": "GP5",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "GP5"
     },
@@ -4411,12 +4627,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP14",
     "value": "L_M1",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "L_M1"
     },
@@ -4430,12 +4647,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP15",
     "value": "L_M2",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "L_M2"
     },
@@ -4449,12 +4667,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP16",
     "value": "GP12",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "GP12"
     },
@@ -4468,12 +4687,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP17",
     "value": "GP13",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "GP13"
     },
@@ -4487,12 +4707,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP18",
     "value": "F_M1",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "F_M1"
     },
@@ -4506,12 +4727,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP19",
     "value": "F_M2",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "F_M2"
     },
@@ -4525,12 +4747,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP20",
     "value": "GP16",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "GP16"
     },
@@ -4544,12 +4767,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP21",
     "value": "GP17",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "GP17"
     },
@@ -4563,12 +4787,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP22",
     "value": "B_M1",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "B_M1"
     },
@@ -4582,12 +4807,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP23",
     "value": "B_M2",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "B_M2"
     },
@@ -4601,12 +4827,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP24",
     "value": "GP18",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "GP18"
     },
@@ -4620,12 +4847,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "TP25",
     "value": "GP19",
-    "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fp": "Quadcuber:TestPoint_Pad_D1.5mm",
     "pins": {
       "1": "GP19"
     },
@@ -4639,12 +4867,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "TestPoint:TestPoint_Pad_D1.5mm"
   },
   {
     "ref": "H1",
     "value": "M3 insulated standoff",
-    "fp": "MountingHole:MountingHole_3.2mm_M3",
+    "fp": "Quadcuber:MountingHole_3.2mm_M3",
     "pins": {},
     "xy": [
       4,
@@ -4656,12 +4885,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "MountingHole:MountingHole_3.2mm_M3"
   },
   {
     "ref": "H2",
     "value": "M3 insulated standoff",
-    "fp": "MountingHole:MountingHole_3.2mm_M3",
+    "fp": "Quadcuber:MountingHole_3.2mm_M3",
     "pins": {},
     "xy": [
       140,
@@ -4673,12 +4903,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "MountingHole:MountingHole_3.2mm_M3"
   },
   {
     "ref": "H3",
     "value": "M3 insulated standoff",
-    "fp": "MountingHole:MountingHole_3.2mm_M3",
+    "fp": "Quadcuber:MountingHole_3.2mm_M3",
     "pins": {},
     "xy": [
       4,
@@ -4690,12 +4921,13 @@
     "names": {},
     "types": {},
     "note": "",
-    "rot": 0
+    "rot": 0,
+    "source_fp": "MountingHole:MountingHole_3.2mm_M3"
   },
   {
     "ref": "H4",
     "value": "M3 insulated standoff",
-    "fp": "MountingHole:MountingHole_3.2mm_M3",
+    "fp": "Quadcuber:MountingHole_3.2mm_M3",
     "pins": {},
     "xy": [
       140,
@@ -4706,6 +4938,214 @@
     "section": "mechanical",
     "names": {},
     "types": {},
+    "note": "",
+    "rot": 0,
+    "source_fp": "MountingHole:MountingHole_3.2mm_M3"
+  },
+  {
+    "ref": "#FLG1",
+    "pins": {
+      "1": "GND"
+    },
+    "names": {
+      "1": "SUPPLIED_GND"
+    },
+    "types": {
+      "1": "power_out"
+    },
+    "value": "PWR_FLAG",
+    "fp": "",
+    "xy": [
+      0,
+      0
+    ],
+    "mpn": "",
+    "mfr": "",
+    "section": "power",
+    "note": "",
+    "rot": 0
+  },
+  {
+    "ref": "#FLG2",
+    "pins": {
+      "1": "VM"
+    },
+    "names": {
+      "1": "SUPPLIED_VM"
+    },
+    "types": {
+      "1": "power_out"
+    },
+    "value": "PWR_FLAG",
+    "fp": "",
+    "xy": [
+      0,
+      0
+    ],
+    "mpn": "",
+    "mfr": "",
+    "section": "power",
+    "note": "",
+    "rot": 0
+  },
+  {
+    "ref": "#FLG3",
+    "pins": {
+      "1": "VIN_FUSED"
+    },
+    "names": {
+      "1": "SUPPLIED_VIN_FUSED"
+    },
+    "types": {
+      "1": "power_out"
+    },
+    "value": "PWR_FLAG",
+    "fp": "",
+    "xy": [
+      0,
+      0
+    ],
+    "mpn": "",
+    "mfr": "",
+    "section": "power",
+    "note": "",
+    "rot": 0
+  },
+  {
+    "ref": "#FLG4",
+    "pins": {
+      "1": "VSYS"
+    },
+    "names": {
+      "1": "SUPPLIED_VSYS"
+    },
+    "types": {
+      "1": "power_out"
+    },
+    "value": "PWR_FLAG",
+    "fp": "",
+    "xy": [
+      0,
+      0
+    ],
+    "mpn": "",
+    "mfr": "",
+    "section": "power",
+    "note": "",
+    "rot": 0
+  },
+  {
+    "ref": "#FLG5",
+    "pins": {
+      "1": "USB_VBUS"
+    },
+    "names": {
+      "1": "SUPPLIED_USB_VBUS"
+    },
+    "types": {
+      "1": "power_out"
+    },
+    "value": "PWR_FLAG",
+    "fp": "",
+    "xy": [
+      0,
+      0
+    ],
+    "mpn": "",
+    "mfr": "",
+    "section": "power",
+    "note": "",
+    "rot": 0
+  },
+  {
+    "ref": "#FLG6",
+    "pins": {
+      "1": "R_SERVO_5V"
+    },
+    "names": {
+      "1": "SUPPLIED_R_SERVO_5V"
+    },
+    "types": {
+      "1": "power_out"
+    },
+    "value": "PWR_FLAG",
+    "fp": "",
+    "xy": [
+      0,
+      0
+    ],
+    "mpn": "",
+    "mfr": "",
+    "section": "power",
+    "note": "",
+    "rot": 0
+  },
+  {
+    "ref": "#FLG7",
+    "pins": {
+      "1": "L_SERVO_5V"
+    },
+    "names": {
+      "1": "SUPPLIED_L_SERVO_5V"
+    },
+    "types": {
+      "1": "power_out"
+    },
+    "value": "PWR_FLAG",
+    "fp": "",
+    "xy": [
+      0,
+      0
+    ],
+    "mpn": "",
+    "mfr": "",
+    "section": "power",
+    "note": "",
+    "rot": 0
+  },
+  {
+    "ref": "#FLG8",
+    "pins": {
+      "1": "F_SERVO_5V"
+    },
+    "names": {
+      "1": "SUPPLIED_F_SERVO_5V"
+    },
+    "types": {
+      "1": "power_out"
+    },
+    "value": "PWR_FLAG",
+    "fp": "",
+    "xy": [
+      0,
+      0
+    ],
+    "mpn": "",
+    "mfr": "",
+    "section": "power",
+    "note": "",
+    "rot": 0
+  },
+  {
+    "ref": "#FLG9",
+    "pins": {
+      "1": "B_SERVO_5V"
+    },
+    "names": {
+      "1": "SUPPLIED_B_SERVO_5V"
+    },
+    "types": {
+      "1": "power_out"
+    },
+    "value": "PWR_FLAG",
+    "fp": "",
+    "xy": [
+      0,
+      0
+    ],
+    "mpn": "",
+    "mfr": "",
+    "section": "power",
     "note": "",
     "rot": 0
   }

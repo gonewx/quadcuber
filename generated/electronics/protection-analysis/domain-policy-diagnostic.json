@@ -1,0 +1,4 @@
+{
+  "www.littelfuse.com": "HTTP/1.1 403 Forbidden\r\ncontent-length: 16\r\ncontent-type: text/plain\r\ndate: Mon, 12 Oct 2026 02:28:10 GMT\r\nserver: envoy\r\nconnection: close\r\n\r\nDomain forbidden",
+  "www.bourns.com": "HTTP/1.1 403 Forbidden\r\ncontent-length: 16\r\ncontent-type: text/plain\r\ndate: Mon, 12 Oct 2026 02:28:11 GMT\r\nserver: envoy\r\nconnection: close\r\n\r\nDomain forbidden"
+}

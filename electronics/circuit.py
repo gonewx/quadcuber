@@ -11,8 +11,8 @@ def r(ref,v,a,b,xy,sec,mpn=None):
     codes={'100k':'100K','10k':'10K','100':'100R','220':'220R','43.2k':'43K2','100k 0.1%':'100K','13.3k':'13K3','511k':'511K','105k':'105K','49.9':'49R9','1k':'1K','5.1k':'5K1'}
     add(ref,v,RFP,{1:a,2:b},xy,mpn or 'RC0603FR-07'+codes[v]+'L','Yageo',sec)
 def c(ref,v,a,b,xy,sec):
-    spec={'100n':('GRM21BR71H104KA01L',CFP),'10u/25V':('GRM32ER71E106KA12L','Capacitor_SMD:C_1210_3225Metric'),'22u/25V':('GRM32ER71E226KE15L','Capacitor_SMD:C_1210_3225Metric'),'75p':('GRM1885C1H750JA01D','Capacitor_SMD:C_0603_1608Metric'),'470u/25V':('EEU-FR1E471','Capacitor_THT:CP_Radial_D10.0mm_P5.00mm'),'470u/10V':('EEU-FR1A471','Capacitor_THT:CP_Radial_D8.0mm_P3.50mm')}
-    mpn,fp=spec[v];add(ref,v,fp,{1:a,2:b},xy,mpn,'Panasonic' if v.startswith('470') else 'Murata',sec,names={'1':'+' if v.startswith('470') else '1','2':'-' if v.startswith('470') else '2'})
+    spec={'100n':('GRM21BR71H104KA01L',CFP),'10u/25V':('GRM32DR71E106KA12L','Capacitor_SMD:C_1210_3225Metric'),'22u/25V':('GRM32ER71E226KE15L','Capacitor_SMD:C_1210_3225Metric'),'75p':('C0603C750J5GACTU','Capacitor_SMD:C_0603_1608Metric'),'470u/25V':('EEU-FR1E471','Capacitor_THT:CP_Radial_D10.0mm_P5.00mm'),'470u/10V':('EEU-FR1A471','Capacitor_THT:CP_Radial_D8.0mm_P3.50mm')}
+    mpn,fp=spec[v];add(ref,v,fp,{1:a,2:b},xy,mpn,'Panasonic' if v.startswith('470') else ('KEMET' if v=='75p' else 'Murata'),sec,names={'1':'+' if v.startswith('470') else '1','2':'-' if v.startswith('470') else '2'})
 def header(ref,nets,xy,sec,desc):
     n=len(nets);add(ref,desc,f'Connector_PinHeader_2.54mm:PinHeader_1x{n:02d}_P2.54mm_Vertical',dict(enumerate(nets,1)),xy,f'6130{n:02d}11121','Wurth Elektronik',sec)
 # Direct RP2040: official pin identities, 12MHz/2MiB Pico-compatible boot hardware.
@@ -34,8 +34,8 @@ C[-1]['rot']=90
 r('R400','10k','3V3','RUN',(8,37),'controller')
 add('S2','RUN RESET','Button_Switch_SMD:SW_SPST_TL3342',{1:'RUN',2:'GND'},(7,43),'TL3342F160QG','E-Switch','controller')
 def cc(ref,value,a,b,xy,sec,rot=0):
- specs={'100n':('GRM155R71C104KA88D','Capacitor_SMD:C_0402_1005Metric'),'1u':('GRM155R61A105KE15D','Capacitor_SMD:C_0402_1005Metric'),'15p':('GRM1555C1H150JA01D','Capacitor_SMD:C_0402_1005Metric'),'1u/16V':('GRM21BR71C105KA01L','Capacitor_SMD:C_0805_2012Metric'),'4.7u/10V':('GRM21BR61A475KA73L','Capacitor_SMD:C_0805_2012Metric')}
- mpn,fp=specs[value];add(ref,value,fp,{1:a,2:b},xy,mpn,'Murata',sec,rot=rot)
+ specs={'100n':('GRM155R71C104KA88D','Capacitor_SMD:C_0402_1005Metric'),'1u':('GRM155R61C105KA12D','Capacitor_SMD:C_0402_1005Metric'),'15p':('GRM1555C1H150JA01D','Capacitor_SMD:C_0402_1005Metric'),'1u/16V':('GRM21BR71C105KA01L','Capacitor_SMD:C_0805_2012Metric'),'4.7u/16V':('C0805C475K4PACTU','Capacitor_SMD:C_0805_2012Metric')}
+ mpn,fp=specs[value];add(ref,value,fp,{1:a,2:b},xy,mpn,'KEMET' if value=='4.7u/16V' else 'Murata',sec,rot=rot)
 cc('C400','100n','RUN','GND',(11,37),'controller')
 # One local 100n per supply pin; internal LDO in/out each additionally has 1uF.
 for i,pin in enumerate([1,10,22,33,42,43,48,49,23,50]):
@@ -49,7 +49,7 @@ add('D5','SS14 USB isolation','Diode_SMD:D_SMA',{1:'VSYS',2:'USB_FUSED'},(32,13)
 C[-1]['side']='B.Cu'
 cc('C1','1u/16V','VSYS','GND',(27.2,20),'controller_power',rot=180)
 add('U5','TLV75533PDBVR','Package_TO_SOT_SMD:SOT-23-5',{1:'VSYS',2:'GND',3:'VSYS',4:None,5:'3V3'},(31,22),'TLV75533PDBVR','Texas Instruments','controller_power',names={'1':'IN','2':'GND','3':'EN','4':'NC','5':'OUT'},types={'1':'power_in','2':'power_in','3':'input','5':'power_out'},note='3.3V/500mA IC rating; controller continuous design target <=150mA; no external 3V3 injection.')
-cc('C422','4.7u/10V','3V3','GND',(35,20),'controller_power')
+cc('C422','4.7u/16V','3V3','GND',(35,20),'controller_power')
 # USB-C USB2 UFP only: independent 5.1k CC resistors, no PD and no host power sourcing.
 up={'A1':'GND','A4':'USB_VBUS','A5':'USB_CC1','A6':'USB_DP','A7':'USB_DM','A8':None,'A9':'USB_VBUS','A12':'GND','B1':'GND','B4':'USB_VBUS','B5':'USB_CC2','B6':'USB_DP','B7':'USB_DM','B8':None,'B9':'USB_VBUS','B12':'GND','S1':'GND'}
 add('J5','USB-C data / BOOTSEL','Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal',up,(20,3.675),'USB4105-GF-A','GCT','usb',rot=180,note='USB2 device only. CC1/CC2 each 5.1k to ground. Shell ground. No PD.')
@@ -73,7 +73,7 @@ add('D7','USER LED GP25','LED_SMD:LED_0603_1608Metric',{1:'GND',2:'LED_ANODE'},(
 r('R410','1k','GP25','LED_ANODE',(25,16),'controller')
 # Main 9V path: fuse + ideal diode; external physical disconnect is still required.
 add('J1','9V regulated input','TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal',{1:'VIN',2:'GND'},(45,8),'1715721','Phoenix Contact','power',names={'1':'+9V','2':'GND'})
-add('F1','8A 32V fuse','Fuse:Fuse_1206_3216Metric',{1:'VIN',2:'VIN_FUSED'},(57,9),'0467008.NR','Littelfuse','power')
+add('F1','8A 24V time-lag fuse','Quadcuber:Fuse_Littelfuse_407_1206',{1:'VIN',2:'VIN_FUSED'},(57,9),'0407008.WR','Littelfuse','power',note='407 time-lag; 24VDC, 60A interrupt, nominal melting I2t24.12A2s; not fast semiconductor protection. Continuous input design budget <=5A; current-limited 9V source required.')
 add('U4','LM74700QDBVRQ1','Package_TO_SOT_SMD:SOT-23-6',{1:'IDEAL_VCAP',2:'GND',3:'VIN_FUSED',4:'VM',5:'IDEAL_GATE',6:'VIN_FUSED'},(67,22),'LM74700QDBVRQ1','Texas Instruments','power',names={'1':'VCAP','2':'GND','3':'EN','4':'CATHODE','5':'GATE','6':'ANODE'},types={'1':'passive','2':'power_in','3':'input','4':'input','5':'output','6':'power_in'},note='Ideal diode / reverse polarity. EN is NOT a power disconnect.')
 add('Q1','CSD18540Q5B','Package_TO_SOT_SMD:TDSON-8-1',{1:'VIN_FUSED',2:'VIN_FUSED',3:'VIN_FUSED',4:'IDEAL_GATE',5:'VM'},(67,13),'CSD18540Q5B','Texas Instruments','power',names={'1':'S','2':'S','3':'S','4':'G','5':'D_EP'})
 c('C4','100n','IDEAL_VCAP','VIN_FUSED',(62,25),'power')
@@ -82,6 +82,9 @@ add('D4','SMBJ12CA input transient','Diode_SMD:D_SMB',{1:'VIN_FUSED',2:'GND'},(5
 add('D3','SMBJ12A transient clamp','Diode_SMD:D_SMB',{1:'VM',2:'GND'},(84,13),'SMBJ12A','Littelfuse','power',names={'1':'K','2':'A'},note='12V stand-off, 19.9V rated pulse clamp. Pulse-only; never sustained 12V input.')
 c('C2','470u/25V','VM','GND',(91,10),'power')
 c('C3','470u/25V','VM','GND',(107,10),'power')
+# Defined minimum VM load: prevents repeated small regen events accumulating on bulk caps.
+for ref,xy in [('R500',(125,9)),('R501',(125,24))]:
+    add(ref,'300R 1W VM bleed','Resistor_SMD:R_2512_6332Metric',{1:'VM',2:'GND'},xy,'CRCW2512300RFKEG','Vishay','power',note='Two 300R/1% in parallel:150R VM bleed, 0.562W total at9.18V. Operating envelope total regen <=0.05J/event and <=5Hz; verify actual energy and resistor film temperature. Not a full-power brake.')
 # Independent TPS54302 converters: each feeds two servos; A also powers encoder/logic.
 for idx,(x,y) in enumerate([(49,38),(98,38)]):
     n=idx+1; sec=f'buck{n}'; rail='5V_'+('A' if idx==0 else 'B'); pre=f'B{n}_'; u=2+idx
@@ -117,7 +120,7 @@ for idx,(arm,(motor,enc,servo,sm)) in enumerate(ARMS.items()):
         r(f'R{base+5+j}','100k',en+f'ENC_{ab}_F','GND',(x-1,88+j*4),sec)
     c(f'C{base+3}','100n','3V3','GND',(x-6,86),sec)
     c(f'C{base+4}','100n','5V_ENC','GND',(x+5,89),sec)
-    add(f'F{10+idx}','1.1A servo PTC','Fuse:Fuse_1812_4532Metric',{1:rail,2:en+'SERVO_5V'},(x+14,87),'MF-MSMF110-2','Bourns',sec)
+    add(f'F{10+idx}','1.1A servo PTC','Quadcuber:Fuse_Bourns_MF_MSMF_Style2_1812',{1:rail,2:en+'SERVO_5V'},(x+14,87),'MF-MSMF110/16X-2','Bourns',sec)
     header(f'J{20+idx}',['GND',en+'SERVO_5V',en+'SERVO_PWM'],(x+13,97),sec,f'{arm} SERVO G + S')
     add(f'U{30+idx}','SN74AHCT1G125DBVR','Package_TO_SOT_SMD:SOT-23-5',{1:'GND',2:f'GP{servo[0]}',3:'GND',4:en+'SERVO_BUF',5:en+'SERVO_5V'},(x+20,97),'SN74AHCT1G125DBVR','Texas Instruments',sec,names={'1':'OE_N','2':'A','3':'GND','4':'Y','5':'VCC'},types={'1':'input','2':'input','3':'power_in','4':'output','5':'power_in'},note='Input leakage specified at VCC=0; prevents USB-only GPIO phantom servo supply.')
     c(f'C{base+5}','100n',en+'SERVO_5V','GND',(x+24,97),sec)
