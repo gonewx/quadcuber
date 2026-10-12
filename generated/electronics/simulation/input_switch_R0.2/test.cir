@@ -1,0 +1,18 @@
+Quadcuber A1 boundary analysis: input_switch_R0.2
+* Original simplified model; NOT a manufacturer macro-model.
+Vinput src 0 PWL(0 0 100u 9 20m 9 20.001m 0)
+Rsource src fused 0.2
+Bideal fused vm I=max(v(fused,vm)/0.0033,0)
+Cbulk vm 0 0.00282
+Bload vm 0 I=4*min(max(v(vm)/6.5,0),1)
+Rbleed vm 0 1e9
+.options reltol=1e-5 abstol=1e-9 vntol=1e-7 method=gear
+.control
+set wr_vecnames
+set wr_singlescale
+save all @bideal[i]
+tran 2e-06 0.03 0 2e-06
+wrdata waveform.txt v(vm) @bideal[i] i(Vinput)
+quit
+.endc
+.end

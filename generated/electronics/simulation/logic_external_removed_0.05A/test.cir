@@ -1,0 +1,19 @@
+Quadcuber A1 boundary analysis: logic_external_removed_0.05A
+* Original simplified model; NOT a manufacturer macro-model.
+Vusb usb 0 5
+Vext ext 0 PWL(0 5 2m 5 2.001m 0)
+BD5 usb vsys I=max((v(usb,vsys)-0.35)/0.2,0)
+BD2 ext vsys I=max((v(ext,vsys)-0.35)/0.2,0)
+C1 vsys 0 1.1u
+Bload vsys 0 I=0.05*min(max(v(vsys)/3.5,0),1)
+Rleak vsys 0 1e9
+.options reltol=1e-5 abstol=1e-9 vntol=1e-7 method=gear
+.control
+set wr_vecnames
+set wr_singlescale
+save all @bd5[i] @bd2[i]
+tran 1e-06 0.005 0 1e-06
+wrdata waveform.txt v(vsys) @bd5[i] @bd2[i]
+quit
+.endc
+.end

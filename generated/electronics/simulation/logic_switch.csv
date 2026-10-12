@@ -1,0 +1,9 @@
+case,load_A,min_VSYS_after_1ms,max_VSYS,headroom_3V3_V,usb_reverse_A,external_reverse_A
+logic_usb_only_0.05A,0.05,4.64,4.64,1.3399999999999999,0.0,0.0
+logic_usb_only_0.15A,0.15,4.62,4.62,1.3200000000000003,0.0,0.0
+logic_external_only_0.05A,0.05,4.64,4.64,1.3399999999999999,0.0,0.0
+logic_external_only_0.15A,0.15,4.62,4.62,1.3200000000000003,0.0,0.0
+logic_external_removed_0.05A,0.05,4.63977645,4.645,1.3397764500000005,0.0,0.0
+logic_external_removed_0.15A,0.15,4.61951815,4.635,1.3195181500000004,0.0,0.0
+logic_usb_removed_0.05A,0.05,4.63977645,4.645,1.3397764500000005,0.0,0.0
+logic_usb_removed_0.15A,0.15,4.61951815,4.635,1.3195181500000004,0.0,0.0

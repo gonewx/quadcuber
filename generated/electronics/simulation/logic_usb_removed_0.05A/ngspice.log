@@ -1,0 +1,25 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: quadcuber a1 boundary analysis: logic_usb_removed_0.05a
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+usb                                          5
+ext                                          5
+vsys                                     4.645
+vext#branch                             -0.025
+vusb#branch                             -0.025
+
+
+No. of Data Rows : 5015
+ngspice-44.2 done
+Warning: can't find the initialization file spinit.

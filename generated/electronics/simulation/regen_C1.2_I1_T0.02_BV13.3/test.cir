@@ -1,0 +1,20 @@
+Quadcuber A1 boundary analysis: regen_C1.2_I1_T0.02_BV13.3
+* Original simplified model; NOT a manufacturer macro-model.
+* VM precharged to 9V. Supply disconnected; no other loads (conservative for charge).
+* Constant injected BUS current is a test parameter, not a motor current prediction.
+Cbulk vm 0 0.003384 ic=9
+Rleak vm 0 1e9
+Vregen regen vm 0
+Iregen 0 regen PWL(0 0 1m 0 1.001m 1 0.021 1 0.021001 0)
+BTVS vm 0 I=max((v(vm)-13.3)/0.218543,0)
+.ic v(vm)=9
+.options reltol=1e-5 abstol=1e-9 vntol=1e-7 method=gear
+.control
+set wr_vecnames
+set wr_singlescale
+save all @btvs[i]
+tran 2e-05 0.025 0 2e-05
+wrdata waveform.txt v(vm) @btvs[i] i(Vregen)
+quit
+.endc
+.end

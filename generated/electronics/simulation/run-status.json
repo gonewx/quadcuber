@@ -1,0 +1,31 @@
+{
+  "circuit_sha256": "812039beec0ed76716601be5580485456867fac9958c5e304c20b2e335c1a04e",
+  "pcb_sha256": "6744d5985d91ce30513bbd1519a60979390d3df1fe49eee5f9bb2e0b84a96c2d",
+  "vm_bulk_refs": [
+    "C2",
+    "C3",
+    "C102",
+    "C122",
+    "C142",
+    "C162"
+  ],
+  "vm_bulk_nominal_F": 0.00282,
+  "parts": {
+    "U2": "TPS54302DDCR",
+    "U3": "TPS54302DDCR",
+    "Q1": "CSD18540Q5B",
+    "U4": "LM74700QDBVRQ1",
+    "D3": "SMBJ12A",
+    "D2": "SS14-E3/61T",
+    "D5": "SS14-E3/61T"
+  },
+  "ngspice": "******\n** ngspice-44.2 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2024, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Sun Jan 12 08:19:15 UTC 2025\n******\n",
+  "state": "COMPLETED",
+  "vendor_model_cases": 0,
+  "ngspice_cases": 65,
+  "vendor_model_status": "BLOCKED_DOWNLOAD_HTTP_403",
+  "model_class": "original boundary surrogate, no vendor protection dynamics",
+  "max_energy_balance_residual_J": 2.196977047397297e-05,
+  "hardware_validated": false,
+  "manufacturing_released": false
+}

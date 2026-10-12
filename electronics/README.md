@@ -16,6 +16,10 @@
 
 TP测试焊盘和安装孔是PCB内建特征，采购数量记为0；可选电容的DNP原因单独列在BOM备注中。
 
+## 电源仿真状态
+
+已完成[65个ngspice边界工况及热敏感性计算](simulation/README.md)，结果见[报告](../generated/electronics/simulation/report.md)。它们使用明确标注的简化模型；TPS54302原厂模型下载遇HTTP403，实际原厂模型运行次数仍为0。不能据此宣称降压环路或PCB通过验证，制造HOLD保持。
+
 ## 架构与器件
 
 - **控制器：裸RP2040 QFN56+EP**。保留GPIO0～21、8个PIO状态机、12MHz时钟、2MiB Flash以及GP25指示灯，使用基于RPI_PICO的QUADCUBER_A1 MicroPython UF2，无需迁移MCU平台。GP22/23/26～29未用；GP24为USB VBUS分压检测。ROM BOOTSEL、RUN复位、UART和SWD均直接引出；SWD口3V3为参考电压，禁止外部注入供电。
