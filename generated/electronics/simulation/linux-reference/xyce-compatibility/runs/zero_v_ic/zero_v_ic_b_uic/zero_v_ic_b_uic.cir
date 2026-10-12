@@ -1,0 +1,10 @@
+Zero voltage source IC target B, mode uic
+VS IN 0 1
+R1 IN A 1k
+C1 A 0 1u
+VZERO A B 0Vdc
+EOBS OUT 0 VALUE={V(B)}
+.IC V(B)=0.25
+.TRAN 1u 1m 0 1u UIC
+.PRINT TRAN FORMAT=CSV V(A) V(B) V(OUT) I(VZERO)
+.END

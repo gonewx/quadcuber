@@ -1,0 +1,8 @@
+xor_parenthesized: four boolean combinations plus threshold boundaries
+VYTD YTD 0 0
+VIN IN 0 0
+EXOR P 0 VALUE={IF((V(YTD) > 0.5) ^ (V(IN) > .5), 1, 0)}
+RLOAD P 0 1k
+.DC VYTD 0 1 0.5 VIN 0 1 0.5
+.PRINT DC FORMAT=CSV V(YTD) V(IN) V(P)
+.END

@@ -1,0 +1,15 @@
+{
+  "official_source_files_hash_verified": 18,
+  "official_commit": "0616634034fa1a8c92c141c293342cbef2f68dff",
+  "original_library_hash_verified": true,
+  "parser_run_exit_code": 0,
+  "export_audit_exit_code": 0,
+  "parser_warning_bytes": 0,
+  "outputs": {
+    "Startup-recovered.cir": "65e34ab8dba697ec82ecc138faf1dbe0c00558f7f77c3f144a119ff3d38499b2",
+    "Steady_State-recovered.cir": "f56d19d422f8f0f9fb730945f260a1431664ee37bcf6f77c941495cd2acfe8db",
+    "pin-connectivity.csv": "35e0f9a5b30c4d3ac5772ffceb72a883403ab4d8656cbdc7400919b45a3bd0bd",
+    "recovery-audit.json": "624945f82009f8b4ac2ffa78bc70133eca3e9f5619448d3a1aa3327fe405ec2d"
+  },
+  "direct_execution_blocker": "Original DSN model name TPS54302DDC_TRANS differs from original LIB TPS54302_TRANS; external adapter required."
+}

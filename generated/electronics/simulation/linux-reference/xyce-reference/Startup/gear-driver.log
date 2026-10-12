@@ -1,0 +1,201 @@
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version Xyce Release 7.10.0-opensource
+***** Date: Mon Oct 12 05:21:09 UTC 2026
+
+
+***** Executing netlist gear-driver.cir
+
+***** Reading and parsing netlist...
+Netlist warning in file gear-driver.cir at or near line 39
+ No options parameter PRECISION found, parameter will be ignored.
+***** Setting up topology...
+
+Netlist warning: Voltage Node (X_U1:XCORE:OCLOW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:ISW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_N16766365) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U12_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_N16779415) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U11_N16642234) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16864680) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16878597) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17027150) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U10_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16855026) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U647:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U5_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ISWF) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ICTRL) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17026579) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17162707) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U3_ULQ_CLK) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U5_TAIL_CUR) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ISLOPE) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U603:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_SLEEP_N) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ISLOPE_INT) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_N16779389) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U11_N166402810) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17026548) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17096138) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:VREF_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17027443) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U3_N16813790) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16864604) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U3_N16692390) connected to only 1
+ device Terminal
+***** Device Count Summary ...
+       B level 1 (Expression Based Voltage or Current Source) 152
+       C level 1 (Capacitor)                                  141
+       D level 1,2 (Diode)                                     31
+       E level 1 (Linear Voltage Controlled Voltage Source)    10
+       G level 1 (Linear Voltage Controlled Current Source)     3
+       I level 1 (Independent Current Source)                   1
+       L level 1 (Inductor)                                     1
+       R level 1 (Resistor)                                   172
+       S level 1 (Controlled Switch)                           14
+       V level 1 (Independent Voltage Source)                  48
+       ----------------------------------------------------------
+       Total Devices                                          573
+***** Setting up matrix structure...
+***** Number of Unknowns = 560
+***** Initializing...
+
+***** Beginning DC Operating Point Calculation...
+
+***** Beginning Transient Calculation...
+
+***** Percent complete: 1.00004 %
+***** Current system time: Mon Oct 12 05:21:10 2026
+***** Estimated time to completion:  1 min., 0 sec.
+
+ *** Transient failure history: 
+Time        Time      Step   EstErr       Non-Linear Solver       node     node
+(sec)       Step     Status  OverTol    Status    Iters  ||F||    index    name
+ 1.081e-04  2.143e-13  pass  1.253e-02  P:normal   2  8.295e-11    282    X_U1:XCORE:U10_N16864691
+ 1.081e-04  4.287e-13  pass  2.348e-02  P:normal   1  1.958e-09    344    X_U1:XCORE:U8_N16881733
+ 1.081e-04  8.574e-13  fail  1.171e+02  P:normal  11  2.918e-10    361    BOOT
+ 1.081e-04  2.143e-13  fail  1.634e+02  P:normal  11  7.182e-10     17    SW
+ 1.081e-04  5.359e-14  pass  5.493e-03  P:normal   1  5.357e-07    344    X_U1:XCORE:U8_N16881733
+ 1.081e-04  1.072e-13  fail  2.963e+02  P:normal  12  8.209e-10     17    SW
+ 1.081e-04  2.679e-14  fail  2.736e+02  P:normal  13  4.226e-09    361    BOOT
+ 1.081e-04  6.698e-15  pass  8.806e-05  P:normal   1  7.129e-07    362    VIN
+ 1.081e-04  1.340e-14  fail  2.356e+03  P:normal  13  9.983e-09    361    BOOT
+ 1.081e-04  3.349e-15  pass  3.016e-08  P:normal   1  9.505e-07    362    VIN
+ 1.081e-04  6.698e-15  pass  5.451e-07  P:normal   1  8.351e-07    362    VIN
+ 1.081e-04  1.340e-14  fail  7.405e+03  P:normal  13  5.131e-09     17    SW
+ 1.081e-04  3.349e-15  fail  1.033e+04  P:normal  15  2.338e-08    282    X_U1:XCORE:U10_N16864691
+ 1.081e-04  8.373e-16  fail  1.373e+04  P:normal  13  8.226e-08     17    SW
+ 1.081e-04  2.093e-16  pass  3.889e-07  P:normal   1  2.097e-05    362    VIN
+ 1.081e-04  4.186e-16  pass  2.851e-06  P:normal   1  1.336e-05    362    VIN
+ 1.081e-04  8.373e-16  fail  1.175e+05  P:normal  13  3.844e-08    361    BOOT
+ 1.081e-04  2.093e-16  fail  1.640e+05  P:normal  13  6.438e-07    282    X_U1:XCORE:U10_N16864691
+ 1.081e-04  5.233e-17  fail  2.179e+05  P:normal  14  1.335e-06    361    BOOT
+ 1.081e-04  1.308e-17  pass  8.057e-06  P:normal   1  3.650e-04    362    VIN
+ 1.081e-04  2.616e-17  pass  8.559e-05  P:normal   1  1.399e-04    362    VIN
+ 1.081e-04  5.233e-17  fail  1.865e+06  P:normal  14  2.428e-06     17    SW
+ 1.081e-04  1.308e-17  fail  2.602e+06  P:normal  16  1.213e-05    361    BOOT
+ 1.081e-04  3.271e-18  pass  2.424e-04  P:normal   1  2.920e-03    362    VIN
+ 1.081e-04  6.541e-18  fail  4.718e+06  P:normal  14  2.816e-05    361    BOOT
+Time step too small near step number: 5552  Exiting transient loop.
+
+
+***** Solution Summary *****
+	Number Successful Steps Taken:		5553
+	Number Failed Steps Attempted:		28
+	Number Jacobians Evaluated:		6172
+	Number Linear Solves:			6172
+	Number Failed Linear Solves:		0
+	Number Residual Evaluations:		11753
+	Number Nonlinear Convergence Failures:	3
+	Total Residual Load Time:		0.493 seconds
+	Total Jacobian Load Time:		0.116 seconds
+	Total Linear Solution Time:		0.194 seconds
+
+
+***** Total Simulation Solvers Run Time: 1.031 seconds
+***** Total Elapsed Run Time:            1.053 seconds
+*****
+***** End of Xyce(TM) Simulation
+*****
+
+Timing summary of 1 processor
+                 Stats                   Count       CPU Time              Wall Time
+---------------------------------------- ----- --------------------- ---------------------
+Xyce                                         1        1.048 (100.0%)        1.053 (100.0%)
+  Analysis                                   1        1.026 (97.88%)        1.031 (97.89%)
+    Transient                                1        1.026 (97.88%)        1.031 (97.89%)
+      Nonlinear Solve                     5581        0.884 (84.33%)        0.888 (84.35%)
+        Residual                         11753        0.496 (47.30%)        0.499 (47.38%)
+        Jacobian                          6172        0.118 (11.21%)        0.118 (11.21%)
+        Linear Solve                      6172        0.196 (18.67%)        0.197 (18.69%)
+      Successful DCOP Steps                  1        0.000 ( 0.01%)        0.000 ( 0.01%)
+      Successful Step                     5552        0.081 ( 7.76%)        0.082 ( 7.78%)
+      Failed Steps                          28        0.000 (<0.01%)        0.000 (<0.01%)
+        Nonlinear Failure                    3        0.000 (<0.01%)        0.000 (<0.01%)
+  Netlist Import                             1        0.018 ( 1.67%)        0.018 ( 1.67%)
+    Parse Context                            1        0.002 ( 0.15%)        0.002 ( 0.15%)
+    Distribute Devices                       1        0.012 ( 1.15%)        0.012 ( 1.15%)
+    Verify Devices                           1        0.000 (<0.01%)        0.000 (<0.01%)
+    Instantiate                              1        0.004 ( 0.35%)        0.004 ( 0.34%)
+  Late Initialization                        1        0.002 ( 0.23%)        0.002 ( 0.23%)
+    Global Indices                           1        0.001 ( 0.12%)        0.001 ( 0.12%)
+  Setup Matrix Structure                     1        0.001 ( 0.05%)        0.001 ( 0.05%)
+

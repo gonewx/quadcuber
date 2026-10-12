@@ -43,3 +43,5 @@
 - Final review ruling: 理想VM源使输入电容动态影响不可辨识，已补明确模型限制；未擅自加入未知源阻抗。代价：输入源阻抗/输入电容动态验证也仍未完成。
 - Final review: 无Critical/未处理Important；10单测通过，原厂模型/源SHA/9波形/EDA证据独立复核一致。Minor deferred：诊断报告生成器的文字专门针对本次Timestep too small，未来不同失败类型应同步修改/加强输入约束。
 - 用户追加要求：保存阶段提交后继续合法模型兼容/参考testbench诊断；不以失败记录充当仿真任务完成。
+
+- Linux后续：官方Xyce7.10源码构建成功；官方KiCad上游解析器恢复TI两参考DSN并审计69引脚/107连线。记录四处IC等号及同电位节点初值候选适配，稳态参考完整800us；冷启动默认/Gear/阻尼Newton/有界无LTE/一阶Gear均失败（最远0.648ms/要求6.5ms）。未进入Xyce A1九工况，动态验收仍阻塞。证据见 generated/electronics/simulation/linux-reference/README.md。

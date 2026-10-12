@@ -1,0 +1,600 @@
+{
+  "validated_at_utc": "2026-10-12T05:14:47.256468+00:00",
+  "solver": "Xyce Release 7.10.0-opensource",
+  "run_count": 18,
+  "exit_codes": {
+    "default/ic_alias_compact.cir": 0,
+    "default/ic_alias_space.cir": 0,
+    "default/ic_no_equals.cir": 1,
+    "default/ic_with_equals.cir": 0,
+    "default/logic_value.cir": 0,
+    "default/rc_noop_ic.cir": 0,
+    "default/rc_noop_noic.cir": 0,
+    "default/rc_op_ic.cir": 0,
+    "default/rc_op_noic.cir": 0,
+    "default/rc_uic_ic.cir": 0,
+    "default/rc_uic_noic.cir": 0,
+    "default/switch_transfer.cir": 0,
+    "default/xor_adapted.cir": 0,
+    "hspice_math/xor_adapted.cir": 0,
+    "default/xor_exact.cir": 0,
+    "hspice_math/xor_exact.cir": 0,
+    "default/xor_parenthesized.cir": 0,
+    "hspice_math/xor_parenthesized.cir": 0
+  },
+  "numeric_checks": {
+    "default/xor_exact": {
+      "rows": 9,
+      "xor_mismatches": [],
+      "xor_correct": true,
+      "negative_control": false,
+      "pass": true
+    },
+    "default/xor_parenthesized": {
+      "rows": 9,
+      "xor_mismatches": [],
+      "xor_correct": true,
+      "negative_control": false,
+      "pass": true
+    },
+    "default/xor_adapted": {
+      "rows": 9,
+      "xor_mismatches": [],
+      "xor_correct": true,
+      "negative_control": false,
+      "pass": true
+    },
+    "hspice_math/xor_exact": {
+      "rows": 9,
+      "xor_mismatches": [
+        {
+          "input_ytd": 0.0,
+          "input_in": 0.0,
+          "actual": 1.0,
+          "expected": 0.0
+        },
+        {
+          "input_ytd": 0.5,
+          "input_in": 0.0,
+          "actual": 1.0,
+          "expected": 0.0
+        },
+        {
+          "input_ytd": 0.0,
+          "input_in": 0.5,
+          "actual": 1.0,
+          "expected": 0.0
+        },
+        {
+          "input_ytd": 0.5,
+          "input_in": 0.5,
+          "actual": 1.0,
+          "expected": 0.0
+        },
+        {
+          "input_ytd": 0.0,
+          "input_in": 1.0,
+          "actual": 0.0,
+          "expected": 1.0
+        },
+        {
+          "input_ytd": 0.5,
+          "input_in": 1.0,
+          "actual": 0.0,
+          "expected": 1.0
+        },
+        {
+          "input_ytd": 1.0,
+          "input_in": 1.0,
+          "actual": 1.0,
+          "expected": 0.0
+        }
+      ],
+      "xor_correct": false,
+      "negative_control": true,
+      "pass": true
+    },
+    "hspice_math/xor_parenthesized": {
+      "rows": 9,
+      "xor_mismatches": [
+        {
+          "input_ytd": 0.0,
+          "input_in": 0.0,
+          "actual": 1.0,
+          "expected": 0.0
+        },
+        {
+          "input_ytd": 0.5,
+          "input_in": 0.0,
+          "actual": 1.0,
+          "expected": 0.0
+        },
+        {
+          "input_ytd": 0.0,
+          "input_in": 0.5,
+          "actual": 1.0,
+          "expected": 0.0
+        },
+        {
+          "input_ytd": 0.5,
+          "input_in": 0.5,
+          "actual": 1.0,
+          "expected": 0.0
+        },
+        {
+          "input_ytd": 0.0,
+          "input_in": 1.0,
+          "actual": 0.0,
+          "expected": 1.0
+        },
+        {
+          "input_ytd": 0.5,
+          "input_in": 1.0,
+          "actual": 0.0,
+          "expected": 1.0
+        },
+        {
+          "input_ytd": 1.0,
+          "input_in": 1.0,
+          "actual": 1.0,
+          "expected": 0.0
+        }
+      ],
+      "xor_correct": false,
+      "negative_control": true,
+      "pass": true
+    },
+    "hspice_math/xor_adapted": {
+      "rows": 9,
+      "xor_mismatches": [],
+      "xor_correct": true,
+      "negative_control": false,
+      "pass": true
+    },
+    "equality_default_xor_exact_vs_xor_parenthesized": {
+      "same_rows": true,
+      "max_abs_difference": 0.0,
+      "exact_numeric_equality": true
+    },
+    "equality_default_xor_exact_vs_xor_adapted": {
+      "same_rows": true,
+      "max_abs_difference": 0.0,
+      "exact_numeric_equality": true
+    },
+    "equality_hspice_original_vs_parenthesized": {
+      "same_rows": true,
+      "max_abs_difference": 0.0,
+      "exact_numeric_equality": true
+    },
+    "logic_value": {
+      "rows": 9,
+      "max_abs_error": 0,
+      "pass": true
+    },
+    "switch_transfer": {
+      "rows": 19,
+      "max_relative_error": 3.2574290172824525e-09,
+      "pass": true,
+      "points": [
+        {
+          "control_V": 0.3,
+          "actual_I_A": -1e-07,
+          "expected_I_A": -1e-07,
+          "relative_error": 0.0
+        },
+        {
+          "control_V": 0.35,
+          "actual_I_A": -1e-07,
+          "expected_I_A": -1e-07,
+          "relative_error": 0.0
+        },
+        {
+          "control_V": 0.4,
+          "actual_I_A": -1e-07,
+          "expected_I_A": -1e-07,
+          "relative_error": 0.0
+        },
+        {
+          "control_V": 0.45,
+          "actual_I_A": -1.3256197e-07,
+          "expected_I_A": -1.3256197032521488e-07,
+          "relative_error": 2.4533045540803963e-09
+        },
+        {
+          "control_V": 0.5,
+          "actual_I_A": -2.91871716e-07,
+          "expected_I_A": -2.9187171645490636e-07,
+          "relative_error": 1.5585831868446023e-09
+        },
+        {
+          "control_V": 0.55,
+          "actual_I_A": -9.80829455e-07,
+          "expected_I_A": -9.808294550600638e-07,
+          "relative_error": 6.123770167652104e-11
+        },
+        {
+          "control_V": 0.6,
+          "actual_I_A": -4.62272148e-06,
+          "expected_I_A": -4.622721477656401e-06,
+          "relative_error": 5.069738079350177e-10
+        },
+        {
+          "control_V": 0.65,
+          "actual_I_A": -2.80788302e-05,
+          "expected_I_A": -2.8078830245509876e-05,
+          "relative_error": 1.6207895301597976e-09
+        },
+        {
+          "control_V": 0.7,
+          "actual_I_A": -0.000201981534,
+          "expected_I_A": -0.00020198153352770474,
+          "relative_error": 2.3383091672763095e-09
+        },
+        {
+          "control_V": 0.75,
+          "actual_I_A": -0.00158113883,
+          "expected_I_A": -0.0015811388300841893,
+          "relative_error": 5.324590380893667e-11
+        },
+        {
+          "control_V": 0.8,
+          "actual_I_A": -0.0123773691,
+          "expected_I_A": -0.012377369140318402,
+          "relative_error": 3.2574290172824525e-09
+        },
+        {
+          "control_V": 0.85,
+          "actual_I_A": -0.089035048,
+          "expected_I_A": -0.08903504804655377,
+          "relative_error": 5.228700592370998e-10
+        },
+        {
+          "control_V": 0.9,
+          "actual_I_A": -0.540806971,
+          "expected_I_A": -0.5408069709766359,
+          "relative_error": 4.320226937816874e-11
+        },
+        {
+          "control_V": 0.95,
+          "actual_I_A": -2.54886309,
+          "expected_I_A": -2.5488630944988375,
+          "relative_error": 1.7650368560009467e-09
+        },
+        {
+          "control_V": 1.0,
+          "actual_I_A": -8.56540685,
+          "expected_I_A": -8.565406851904557,
+          "relative_error": 2.2235447135547096e-10
+        },
+        {
+          "control_V": 1.05,
+          "actual_I_A": -18.8591041,
+          "expected_I_A": -18.859104114601955,
+          "relative_error": 7.742655807932555e-10
+        },
+        {
+          "control_V": 1.1,
+          "actual_I_A": -25.0,
+          "expected_I_A": -25.0,
+          "relative_error": 0.0
+        },
+        {
+          "control_V": 1.15,
+          "actual_I_A": -25.0,
+          "expected_I_A": -25.0,
+          "relative_error": 0.0
+        },
+        {
+          "control_V": 1.2,
+          "actual_I_A": -25.0,
+          "expected_I_A": -25.0,
+          "relative_error": 0.0
+        }
+      ]
+    },
+    "rc_op_ic": {
+      "rows": 1001,
+      "first": {
+        "TIME": 0.0,
+        "V(OUT)": 0.25
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(OUT)": 0.724090166
+      },
+      "max_abs_error_V": 7.479995002279693e-07,
+      "max_error_time_s": 2e-06,
+      "pass": true
+    },
+    "rc_op_noic": {
+      "rows": 1001,
+      "first": {
+        "TIME": 0.0,
+        "V(OUT)": 1.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(OUT)": 1.0
+      },
+      "max_abs_error_V": 0.0,
+      "max_error_time_s": 0.0,
+      "pass": true
+    },
+    "rc_uic_ic": {
+      "rows": 1009,
+      "first": {
+        "TIME": 0.0,
+        "V(OUT)": 0.25
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(OUT)": 0.724090304
+      },
+      "max_abs_error_V": 3.748333424757888e-07,
+      "max_error_time_s": 1.03125e-06,
+      "pass": true
+    },
+    "rc_uic_noic": {
+      "rows": 1009,
+      "first": {
+        "TIME": 0.0,
+        "V(OUT)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(OUT)": 0.632120406
+      },
+      "max_abs_error_V": 4.992774872817924e-07,
+      "max_error_time_s": 1.015625e-06,
+      "pass": true
+    },
+    "rc_noop_ic": {
+      "rows": 1009,
+      "first": {
+        "TIME": 0.0,
+        "V(OUT)": 0.25
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(OUT)": 0.724090304
+      },
+      "max_abs_error_V": 3.748333424757888e-07,
+      "max_error_time_s": 1.03125e-06,
+      "pass": true
+    },
+    "rc_noop_noic": {
+      "rows": 1009,
+      "first": {
+        "TIME": 0.0,
+        "V(OUT)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(OUT)": 0.632120406
+      },
+      "max_abs_error_V": 4.992774872817924e-07,
+      "max_error_time_s": 1.015625e-06,
+      "pass": true
+    },
+    "equality_uic_vs_noop_ic": {
+      "same_rows": true,
+      "max_abs_difference": 0.0,
+      "exact_numeric_equality": true
+    },
+    "equality_uic_vs_noop_noic": {
+      "same_rows": true,
+      "max_abs_difference": 0.0,
+      "exact_numeric_equality": true
+    },
+    "ic_alias_space_EN": {
+      "rows": 1008,
+      "first": {
+        "TIME": 0.0,
+        "V(ACTUAL_EN)": 0.0,
+        "V(ACTUAL_COMP)": 1.3695
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(ACTUAL_EN)": 0.632120406,
+        "V(ACTUAL_COMP)": 0.503811105
+      },
+      "max_abs_error_V": 4.992774872817924e-07,
+      "max_error_time_s": 1.015625e-06,
+      "pass": true
+    },
+    "ic_alias_space_COMP": {
+      "rows": 1008,
+      "first": {
+        "TIME": 0.0,
+        "V(ACTUAL_EN)": 0.0,
+        "V(ACTUAL_COMP)": 1.3695
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(ACTUAL_EN)": 0.632120406,
+        "V(ACTUAL_COMP)": 0.503811105
+      },
+      "max_abs_error_V": 6.870629847277598e-07,
+      "max_error_time_s": 1.265625e-06,
+      "pass": true
+    },
+    "ic_alias_compact_EN": {
+      "rows": 1008,
+      "first": {
+        "TIME": 0.0,
+        "V(ACTUAL_EN)": 0.0,
+        "V(ACTUAL_COMP)": 1.3695
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(ACTUAL_EN)": 0.632120406,
+        "V(ACTUAL_COMP)": 0.503811105
+      },
+      "max_abs_error_V": 4.992774872817924e-07,
+      "max_error_time_s": 1.015625e-06,
+      "pass": true
+    },
+    "ic_alias_compact_COMP": {
+      "rows": 1008,
+      "first": {
+        "TIME": 0.0,
+        "V(ACTUAL_EN)": 0.0,
+        "V(ACTUAL_COMP)": 1.3695
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(ACTUAL_EN)": 0.632120406,
+        "V(ACTUAL_COMP)": 0.503811105
+      },
+      "max_abs_error_V": 6.870629847277598e-07,
+      "max_error_time_s": 1.265625e-06,
+      "pass": true
+    },
+    "equality_alias_whitespace": {
+      "same_rows": true,
+      "max_abs_difference": 0.0,
+      "exact_numeric_equality": true
+    },
+    "ic_with_equals": {
+      "rows": 1009,
+      "first": {
+        "TIME": 0.0,
+        "V(OUT)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(OUT)": 0.0919698986
+      },
+      "max_abs_error_V": 0.25,
+      "max_error_time_s": 0.0,
+      "pass": false
+    },
+    "ic_no_equals_expected_failure": {
+      "returncode": 1,
+      "errors": [
+        "Netlist error: Cannot convert '(' to double for expression VALUE",
+        "Netlist error: Cannot convert ')' to double for expression VALUE",
+        "Netlist error: Cannot convert '' to double for expression VALUE"
+      ],
+      "pass": true
+    },
+    "ic_with_equals_observed_storage_node": {
+      "rows": 1009,
+      "first": {
+        "TIME": 0.0,
+        "V(OUT)": 0.0,
+        "V(X1:QINT)": 0.25
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(OUT)": 0.0919698986,
+        "V(X1:QINT)": 0.0919698986
+      },
+      "max_abs_error_V": 1.251757211218063e-07,
+      "max_error_time_s": 1.45446192e-06,
+      "pass": true
+    },
+    "ic_with_equals_observed_output": {
+      "t0_OUT_V": 0.0,
+      "t0_Qint_V": 0.25,
+      "t0_algebraic_mismatch_V": -0.25,
+      "positive_time_rows": 1008,
+      "positive_time_max_OUT_minus_Qint_V": 0.0,
+      "positive_time_max_error_vs_analytic_V": 1.251757211218063e-07
+    }
+  },
+  "source_integrity": {
+    "default/ic_alias_compact.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "fc8eb42cef1bf8cfecf705b0fc3765bfe5415f827f679f5d16c5b9376740828f"
+    },
+    "default/ic_alias_space.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "8505ad75e38ad00ac3a1a39746564f932ca48e5e21d975cd86937934f930e9ff"
+    },
+    "default/ic_no_equals.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "6664e04ec3fe42df0be8dddef16f280400b17540c8a021ab2337403c6df4a013"
+    },
+    "default/ic_with_equals.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "0414582e56ff231c83d882839d92ef80fedbf760bcc152ed6bf1a85dea550702"
+    },
+    "default/logic_value.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "b7264d8804ff7ca13f41bf1ade75619e0b1bbaafa7e176785e830df0669c18bd"
+    },
+    "default/rc_noop_ic.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "24308b0f5f924857602c82629db5aa8ea207ded9d07c6402b22c0ab88e87d03b"
+    },
+    "default/rc_noop_noic.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "a8fd506bdca3d78877ebd54809242de2d3b4779cda6dcc1df2dd2ef6f12adeaf"
+    },
+    "default/rc_op_ic.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "cfb04f28e5bdbe397059344e997af51bed9394fe48b2f791187a25152cefddb1"
+    },
+    "default/rc_op_noic.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "7d99d2d60ad4bb2b31a880eb706b60d3d43afb5942ae92be3b3e35a1129d5558"
+    },
+    "default/rc_uic_ic.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "c605d76134ef12c73d2fc240acccd223585c476aec3ad43a0e39425c26fbde5e"
+    },
+    "default/rc_uic_noic.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "c70e029cc79eaf7f912bea4bf803a1e5cbe911cc5ad0a91f4f83a7d5a3a60fcf"
+    },
+    "default/switch_transfer.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "4b031b73beddffa4934b34b888dbc61e7a0535eb4a7da5ac35d972300e71c4cd"
+    },
+    "default/xor_adapted.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "7362396fc136a769e056256d90ee199820b46602e7dc581b41d9a66258868f55"
+    },
+    "hspice_math/xor_adapted.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "7362396fc136a769e056256d90ee199820b46602e7dc581b41d9a66258868f55"
+    },
+    "default/xor_exact.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "b7958e2815a3829b38cbd4af30953940dc265a761d71a74f228f66aa9d126c00"
+    },
+    "hspice_math/xor_exact.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "b7958e2815a3829b38cbd4af30953940dc265a761d71a74f228f66aa9d126c00"
+    },
+    "default/xor_parenthesized.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "58d60101a32b64066fb01652b00d9a4e0527a772d1374017dfba75d20941f48c"
+    },
+    "hspice_math/xor_parenthesized.cir": {
+      "matches_prepared_netlist": true,
+      "sha256": "58d60101a32b64066fb01652b00d9a4e0527a772d1374017dfba75d20941f48c"
+    }
+  },
+  "all_expected_checks_pass": false,
+  "caveats": [
+    "Xyce runs are not independent PSpice solver validation.",
+    "No full TI model convergence or device physical validation is established by these probes.",
+    "One-terminal voltage-node warnings occur in ideal-source test fixtures; only ic_no_equals reports ignored initial-condition nodes or fatal parsing errors.",
+    "CSV outputs include t=0 despite older source comments suggesting otherwise; numerical checks use actual timestamps.",
+    "Original ic_with_equals output-only all-sample check fails at t=0; direct storage-node follow-up resolves intended IC semantics without erasing that failure."
+  ],
+  "followup_observation": {
+    "netlist": "runs/default/ic_with_equals_observe/ic_with_equals_observe.cir",
+    "log": "runs/default/ic_with_equals_observe/stdout.log",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "ic_with_equals_observe.cir"
+    ],
+    "returncode": 0,
+    "only_change_add_PRINT_Qint": true,
+    "purpose": "Disambiguate derived E-source OUT t=0 versus explicitly initialized storage node Qint."
+  },
+  "conclusion": "Original no-equals IC syntax fails. Adding only equals preserves specified capacitor-node IC exactly. Original output-only expectation fails at t=0 because OUT is not initialized there; this discrepancy remains explicitly recorded. Qint matches the analytic curve at all samples, and OUT equals Qint at every positive-time sample. Native XOR, logic, continuous switch, RC and aliases pass."
+}

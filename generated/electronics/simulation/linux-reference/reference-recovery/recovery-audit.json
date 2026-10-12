@@ -1,0 +1,2706 @@
+{
+  "summary": {
+    "Startup": {
+      "instances": 15,
+      "pins": 34,
+      "wires": 53,
+      "nets_including_unnamed": 8,
+      "profile_analysis": {
+        "0": "6.5m",
+        "1": "",
+        "2": "0",
+        "3": "20n",
+        "4": "",
+        "5": "",
+        "6": ""
+      }
+    },
+    "Steady_State": {
+      "instances": 16,
+      "pins": 35,
+      "wires": 54,
+      "nets_including_unnamed": 8,
+      "profile_analysis": {
+        "0": "800u",
+        "1": "",
+        "2": "750u",
+        "3": "20n",
+        "4": "",
+        "5": "",
+        "6": ""
+      }
+    }
+  },
+  "symbols": {
+    "0": {
+      "props": {
+        "NODENAME": "0",
+        "PSpiceOnly": "TRUE"
+      },
+      "pins": {
+        "0": "GND"
+      },
+      "variants": []
+    },
+    "C.Normal": {
+      "props": {
+        "CURRENT": "CIMAX",
+        "DIST": "FLAT",
+        "IC": "",
+        "KNEE": "CBMAX",
+        "MAX_TEMP": "CTMAX",
+        "PSpiceTemplate": "C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|",
+        "SLOPE": "CSMAX",
+        "TOLERANCE": "",
+        "VOLTAGE": "CMAX"
+      },
+      "pins": {
+        "0": "1",
+        "1": "2"
+      },
+      "variants": [
+        {
+          "props": {
+            "CURRENT": "CIMAX",
+            "DIST": "FLAT",
+            "IC": "",
+            "KNEE": "CBMAX",
+            "MAX_TEMP": "CTMAX",
+            "PSpiceTemplate": "C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|",
+            "SLOPE": "CSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "CMAX"
+          },
+          "pins": {
+            "0": "1",
+            "1": "2"
+          }
+        }
+      ]
+    },
+    "CESR_1.Normal": {
+      "props": {
+        "C": "10U",
+        "ESR": "2M",
+        "IC": "0",
+        "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=1N|"
+      },
+      "pins": {
+        "0": "1",
+        "1": "2"
+      },
+      "variants": []
+    },
+    "IC1.Normal": {
+      "props": {
+        "PSpiceOnly": "TRUE",
+        "PSpiceTemplate": ".IC V(%+ )=@Value",
+        "TEXT": "IC="
+      },
+      "pins": {
+        "0": "+"
+      },
+      "variants": []
+    },
+    "IDC.Normal": {
+      "props": {
+        "DC": "0Adc",
+        "PSpiceOnly": "TRUE",
+        "PSpiceTemplate": "I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| ?TRAN|@TRAN|"
+      },
+      "pins": {
+        "0": "+",
+        "1": "-"
+      },
+      "variants": []
+    },
+    "LDCR.Normal": {
+      "props": {
+        "DCR": "20M",
+        "L": "10U",
+        "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?L|L=@L||L=10U| ?DCR|DCR=@DCR||DCR=20M|"
+      },
+      "pins": {
+        "0": "1",
+        "1": "2"
+      },
+      "variants": []
+    },
+    "R.Normal": {
+      "props": {
+        "DIST": "FLAT",
+        "MAX_TEMP": "RTMAX",
+        "POWER": "RMAX",
+        "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+        "SLOPE": "RSMAX",
+        "TOLERANCE": "",
+        "VOLTAGE": "RVMAX"
+      },
+      "pins": {
+        "0": "2",
+        "1": "1"
+      },
+      "variants": []
+    },
+    "TPS54302DDC_TRANS.Normal": {
+      "props": {
+        "< Value >": "TPS54302DDCR",
+        "DeviceDesignator": "A",
+        "DeviceNumbering": "Alpha",
+        "DevicesInPackage": "1",
+        "DevicesInView": "1",
+        "IsHeterogeneous": "False",
+        "Manufacturer": "Texas Instruments",
+        "OriginalSymbolOrigin": "(-50000,60000)",
+        "PCB Footprint": "DDC0006A_N",
+        "PSpiceTemplate": "X^@REFDES %BOOT %EN %GND %SW %VIN %FB @MODEL PARAMS: ?STEADY_STATE|STEADY_STATE=@STEADY_STATE||STEADY_STATE=0|",
+        "PackageName": "TPS54302DDCR",
+        "PartNumber": "TPS54302DDC",
+        "STEADY_STATE": "0"
+      },
+      "pins": {
+        "0": "GND",
+        "1": "SW",
+        "2": "VIN",
+        "3": "FB",
+        "4": "EN",
+        "5": "BOOT"
+      },
+      "variants": []
+    },
+    "TitleBlock0": {
+      "props": {
+        "Doc": "",
+        "Page Count": "1",
+        "Page Create Date": "    March  8, 1995",
+        "Page Number": "1",
+        "Page Size": "A",
+        "RevCode": "?",
+        "Title": ""
+      },
+      "pins": {},
+      "variants": []
+    },
+    "VDC.Normal": {
+      "props": {
+        "DC": "0Vdc",
+        "PSpiceOnly": "TRUE",
+        "PSpiceTemplate": "V^@REFDES %+ %- @DC"
+      },
+      "pins": {
+        "0": "+",
+        "1": "-"
+      },
+      "variants": []
+    },
+    "VPULSE.Normal": {
+      "props": {
+        "AC": "",
+        "DC": "",
+        "PER": "",
+        "PSpiceOnly": "TRUE",
+        "PSpiceTemplate": "V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\\n+PULSE @V1 @V2 ?TD/@TD/~TD/0/ #TR/@TR/ #TF/@TF/ #PW/@PW/ #PER/@PER/",
+        "PW": "",
+        "TD": "",
+        "TF": "",
+        "TR": "",
+        "V1": "",
+        "V2": ""
+      },
+      "pins": {
+        "0": "+",
+        "1": "-"
+      },
+      "variants": []
+    }
+  },
+  "packages": {
+    "C": {
+      "props": {},
+      "devices": [
+        [
+          "1",
+          "2"
+        ]
+      ],
+      "variants": [
+        {
+          "props": {},
+          "devices": [
+            [
+              "1",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    "CESR_1": {
+      "props": {},
+      "devices": [
+        [
+          "",
+          ""
+        ]
+      ],
+      "variants": []
+    },
+    "IC1": {
+      "props": {},
+      "devices": [
+        [
+          "0"
+        ]
+      ],
+      "variants": []
+    },
+    "IDC": {
+      "props": {},
+      "devices": [
+        [
+          "1",
+          "2"
+        ]
+      ],
+      "variants": []
+    },
+    "LDCR": {
+      "props": {},
+      "devices": [
+        [
+          "",
+          ""
+        ]
+      ],
+      "variants": []
+    },
+    "R": {
+      "props": {},
+      "devices": [
+        [
+          "2",
+          "1"
+        ]
+      ],
+      "variants": []
+    },
+    "TPS54302DDC_TRANS": {
+      "props": {},
+      "devices": [
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      ],
+      "variants": []
+    },
+    "VDC": {
+      "props": {},
+      "devices": [
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "variants": []
+    },
+    "VPULSE": {
+      "props": {},
+      "devices": [
+        [
+          "1",
+          "2"
+        ]
+      ],
+      "variants": []
+    }
+  },
+  "pages": {
+    "Startup": {
+      "nets": {
+        "16776592": "VFB",
+        "16776604": "EN",
+        "16776606": "SW",
+        "16776619": "VIN",
+        "16776627": "0",
+        "16776633": "BOOT",
+        "16776637": "VOUT",
+        "16776600": "N16776600"
+      },
+      "wires": [
+        [
+          16776627,
+          980,
+          430,
+          980,
+          420
+        ],
+        [
+          16776592,
+          980,
+          380,
+          980,
+          370
+        ],
+        [
+          16776604,
+          310,
+          310,
+          310,
+          300
+        ],
+        [
+          16776627,
+          310,
+          360,
+          310,
+          350
+        ],
+        [
+          16776604,
+          310,
+          300,
+          310,
+          280
+        ],
+        [
+          16776604,
+          360,
+          300,
+          310,
+          300
+        ],
+        [
+          16776606,
+          640,
+          250,
+          620,
+          250
+        ],
+        [
+          16776606,
+          620,
+          220,
+          610,
+          220
+        ],
+        [
+          16776606,
+          620,
+          250,
+          620,
+          220
+        ],
+        [
+          16776633,
+          580,
+          220,
+          540,
+          220
+        ],
+        [
+          16776637,
+          760,
+          250,
+          720,
+          250
+        ],
+        [
+          16776637,
+          760,
+          270,
+          760,
+          250
+        ],
+        [
+          16776637,
+          820,
+          250,
+          760,
+          250
+        ],
+        [
+          16776637,
+          820,
+          270,
+          820,
+          250
+        ],
+        [
+          16776637,
+          980,
+          250,
+          820,
+          250
+        ],
+        [
+          16776637,
+          1070,
+          250,
+          980,
+          250
+        ],
+        [
+          16776627,
+          760,
+          340,
+          760,
+          300
+        ],
+        [
+          16776627,
+          820,
+          350,
+          820,
+          340
+        ],
+        [
+          16776619,
+          400,
+          220,
+          310,
+          220
+        ],
+        [
+          16776619,
+          180,
+          240,
+          180,
+          220
+        ],
+        [
+          16776619,
+          180,
+          220,
+          120,
+          220
+        ],
+        [
+          16776619,
+          240,
+          240,
+          240,
+          220
+        ],
+        [
+          16776619,
+          240,
+          220,
+          180,
+          220
+        ],
+        [
+          16776627,
+          180,
+          310,
+          180,
+          270
+        ],
+        [
+          16776627,
+          240,
+          310,
+          210,
+          310
+        ],
+        [
+          16776627,
+          240,
+          310,
+          240,
+          270
+        ],
+        [
+          16776619,
+          310,
+          240,
+          310,
+          220
+        ],
+        [
+          16776619,
+          310,
+          220,
+          240,
+          220
+        ],
+        [
+          16776604,
+          400,
+          250,
+          360,
+          250
+        ],
+        [
+          16776604,
+          360,
+          300,
+          360,
+          250
+        ],
+        [
+          16776627,
+          210,
+          320,
+          210,
+          310
+        ],
+        [
+          16776627,
+          210,
+          310,
+          180,
+          310
+        ],
+        [
+          16776592,
+          980,
+          370,
+          930,
+          370
+        ],
+        [
+          16776592,
+          980,
+          370,
+          980,
+          360
+        ],
+        [
+          16776592,
+          640,
+          370,
+          640,
+          290
+        ],
+        [
+          16776592,
+          640,
+          290,
+          540,
+          290
+        ],
+        [
+          16776627,
+          550,
+          350,
+          550,
+          310
+        ],
+        [
+          16776627,
+          550,
+          310,
+          540,
+          310
+        ],
+        [
+          16776637,
+          980,
+          260,
+          980,
+          250
+        ],
+        [
+          16776637,
+          1070,
+          310,
+          1070,
+          250
+        ],
+        [
+          16776627,
+          1070,
+          430,
+          1070,
+          350
+        ],
+        [
+          16776627,
+          120,
+          310,
+          120,
+          290
+        ],
+        [
+          16776619,
+          120,
+          250,
+          120,
+          220
+        ],
+        [
+          16776627,
+          820,
+          340,
+          760,
+          340
+        ],
+        [
+          16776627,
+          820,
+          340,
+          820,
+          300
+        ],
+        [
+          16776627,
+          180,
+          310,
+          120,
+          310
+        ],
+        [
+          16776606,
+          620,
+          250,
+          540,
+          250
+        ],
+        [
+          16776600,
+          980,
+          320,
+          980,
+          310
+        ],
+        [
+          16776600,
+          930,
+          330,
+          930,
+          310
+        ],
+        [
+          16776600,
+          930,
+          310,
+          980,
+          310
+        ],
+        [
+          16776600,
+          980,
+          310,
+          980,
+          300
+        ],
+        [
+          16776592,
+          930,
+          360,
+          930,
+          370
+        ],
+        [
+          16776592,
+          930,
+          370,
+          640,
+          370
+        ]
+      ],
+      "instances": [
+        {
+          "dbid": 16766235,
+          "ref": "R2",
+          "value": "100k",
+          "symbol": "R.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "AX/RC05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 980,
+              "y": 320,
+              "wordA": 16758216,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16776600,
+              "net": "N16776600"
+            },
+            {
+              "index": 2,
+              "x": 980,
+              "y": 360,
+              "wordA": 16741619,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16776592,
+              "net": "VFB"
+            }
+          ],
+          "effective_props": {
+            "DIST": "FLAT",
+            "MAX_TEMP": "RTMAX",
+            "POWER": "RMAX",
+            "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+            "SLOPE": "RSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "RVMAX",
+            "PCB Footprint": "AX/RC05"
+          }
+        },
+        {
+          "dbid": 16766049,
+          "ref": "L1",
+          "value": "LDCR",
+          "symbol": "LDCR.Normal",
+          "unit": 0,
+          "props": {
+            "DCR": "10m",
+            "IC": "0",
+            "L": "10u",
+            "PCB Footprint": "",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?L|L=@L||L=10U| ?DCR|DCR=@DCR||DCR=20M| ?IC|IC=@IC||IC=0|"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 640,
+              "y": 250,
+              "wordA": 16734718,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "",
+              "net_id": 16776606,
+              "net": "SW"
+            },
+            {
+              "index": 2,
+              "x": 720,
+              "y": 250,
+              "wordA": 16735597,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "",
+              "net_id": 16776637,
+              "net": "VOUT"
+            }
+          ],
+          "effective_props": {
+            "DCR": "10m",
+            "L": "10u",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?L|L=@L||L=10U| ?DCR|DCR=@DCR||DCR=20M| ?IC|IC=@IC||IC=0|",
+            "IC": "0",
+            "PCB Footprint": ""
+          }
+        },
+        {
+          "dbid": 16766901,
+          "ref": "C4",
+          "value": "0.1u",
+          "symbol": "C.Normal",
+          "unit": 0,
+          "props": {
+            "IC": "0",
+            "PCB Footprint": "RAD/CK05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 580,
+              "y": 220,
+              "wordA": 16734991,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16776633,
+              "net": "BOOT"
+            },
+            {
+              "index": 2,
+              "x": 610,
+              "y": 220,
+              "wordA": 16734850,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16776606,
+              "net": "SW"
+            }
+          ],
+          "effective_props": {
+            "CURRENT": "CIMAX",
+            "DIST": "FLAT",
+            "IC": "0",
+            "KNEE": "CBMAX",
+            "MAX_TEMP": "CTMAX",
+            "PSpiceTemplate": "C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|",
+            "SLOPE": "CSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "CMAX",
+            "PCB Footprint": "RAD/CK05"
+          }
+        },
+        {
+          "dbid": 16766935,
+          "ref": "R1",
+          "value": "49.9",
+          "symbol": "R.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "AX/RC05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 980,
+              "y": 260,
+              "wordA": 16746113,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16776637,
+              "net": "VOUT"
+            },
+            {
+              "index": 2,
+              "x": 980,
+              "y": 300,
+              "wordA": 16758456,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16776600,
+              "net": "N16776600"
+            }
+          ],
+          "effective_props": {
+            "DIST": "FLAT",
+            "MAX_TEMP": "RTMAX",
+            "POWER": "RMAX",
+            "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+            "SLOPE": "RSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "RVMAX",
+            "PCB Footprint": "AX/RC05"
+          }
+        },
+        {
+          "dbid": 16766885,
+          "ref": "C2",
+          "value": "10u",
+          "symbol": "C.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "RAD/CK05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 240,
+              "y": 240,
+              "wordA": 16739265,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16776619,
+              "net": "VIN"
+            },
+            {
+              "index": 2,
+              "x": 240,
+              "y": 270,
+              "wordA": 16739736,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16776627,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "CURRENT": "CIMAX",
+            "DIST": "FLAT",
+            "IC": "",
+            "KNEE": "CBMAX",
+            "MAX_TEMP": "CTMAX",
+            "PSpiceTemplate": "C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|",
+            "SLOPE": "CSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "CMAX",
+            "PCB Footprint": "RAD/CK05"
+          }
+        },
+        {
+          "dbid": 16766919,
+          "ref": "C1",
+          "value": "0.1u",
+          "symbol": "C.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "RAD/CK05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 180,
+              "y": 240,
+              "wordA": 16739109,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16776619,
+              "net": "VIN"
+            },
+            {
+              "index": 2,
+              "x": 180,
+              "y": 270,
+              "wordA": 16739423,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16776627,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "CURRENT": "CIMAX",
+            "DIST": "FLAT",
+            "IC": "",
+            "KNEE": "CBMAX",
+            "MAX_TEMP": "CTMAX",
+            "PSpiceTemplate": "C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|",
+            "SLOPE": "CSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "CMAX",
+            "PCB Footprint": "RAD/CK05"
+          }
+        },
+        {
+          "dbid": 16773958,
+          "ref": "U1",
+          "value": "TPS54302DDC_TRANS",
+          "symbol": "TPS54302DDC_TRANS.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "DDC0006A_N"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 540,
+              "y": 310,
+              "wordA": 16742346,
+              "wordB": 0,
+              "symbol_name": "GND",
+              "package_number": "1",
+              "net_id": 16776627,
+              "net": "0"
+            },
+            {
+              "index": 2,
+              "x": 540,
+              "y": 250,
+              "wordA": 16754969,
+              "wordB": 0,
+              "symbol_name": "SW",
+              "package_number": "2",
+              "net_id": 16776606,
+              "net": "SW"
+            },
+            {
+              "index": 3,
+              "x": 400,
+              "y": 220,
+              "wordA": 16738811,
+              "wordB": 0,
+              "symbol_name": "VIN",
+              "package_number": "3",
+              "net_id": 16776619,
+              "net": "VIN"
+            },
+            {
+              "index": 4,
+              "x": 540,
+              "y": 290,
+              "wordA": 16741948,
+              "wordB": 0,
+              "symbol_name": "FB",
+              "package_number": "4",
+              "net_id": 16776592,
+              "net": "VFB"
+            },
+            {
+              "index": 5,
+              "x": 400,
+              "y": 250,
+              "wordA": 16740220,
+              "wordB": 0,
+              "symbol_name": "EN",
+              "package_number": "5",
+              "net_id": 16776604,
+              "net": "EN"
+            },
+            {
+              "index": 6,
+              "x": 540,
+              "y": 220,
+              "wordA": 16734991,
+              "wordB": 0,
+              "symbol_name": "BOOT",
+              "package_number": "6",
+              "net_id": 16776633,
+              "net": "BOOT"
+            }
+          ],
+          "effective_props": {
+            "< Value >": "TPS54302DDCR",
+            "DeviceDesignator": "A",
+            "DeviceNumbering": "Alpha",
+            "DevicesInPackage": "1",
+            "DevicesInView": "1",
+            "IsHeterogeneous": "False",
+            "Manufacturer": "Texas Instruments",
+            "OriginalSymbolOrigin": "(-50000,60000)",
+            "PCB Footprint": "DDC0006A_N",
+            "PSpiceTemplate": "X^@REFDES %BOOT %EN %GND %SW %VIN %FB @MODEL PARAMS: ?STEADY_STATE|STEADY_STATE=@STEADY_STATE||STEADY_STATE=0|",
+            "PackageName": "TPS54302DDCR",
+            "PartNumber": "TPS54302DDC",
+            "STEADY_STATE": "0"
+          }
+        },
+        {
+          "dbid": 16766191,
+          "ref": "RLoad",
+          "value": "{5/3}",
+          "symbol": "R.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "AX/RC05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 1070,
+              "y": 350,
+              "wordA": 16747209,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16776627,
+              "net": "0"
+            },
+            {
+              "index": 2,
+              "x": 1070,
+              "y": 310,
+              "wordA": 16747035,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16776637,
+              "net": "VOUT"
+            }
+          ],
+          "effective_props": {
+            "DIST": "FLAT",
+            "MAX_TEMP": "RTMAX",
+            "POWER": "RMAX",
+            "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+            "SLOPE": "RSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "RVMAX",
+            "PCB Footprint": "AX/RC05"
+          }
+        },
+        {
+          "dbid": 16758575,
+          "ref": "R3",
+          "value": "13.3k",
+          "symbol": "R.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "AX/RC05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 980,
+              "y": 380,
+              "wordA": 16733431,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16776592,
+              "net": "VFB"
+            },
+            {
+              "index": 2,
+              "x": 980,
+              "y": 420,
+              "wordA": 16733425,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16776627,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "DIST": "FLAT",
+            "MAX_TEMP": "RTMAX",
+            "POWER": "RMAX",
+            "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+            "SLOPE": "RSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "RVMAX",
+            "PCB Footprint": "AX/RC05"
+          }
+        },
+        {
+          "dbid": 16766091,
+          "ref": "R4",
+          "value": "510k",
+          "symbol": "R.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "AX/RC05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 310,
+              "y": 240,
+              "wordA": 16740056,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16776619,
+              "net": "VIN"
+            },
+            {
+              "index": 2,
+              "x": 310,
+              "y": 280,
+              "wordA": 16734310,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16776604,
+              "net": "EN"
+            }
+          ],
+          "effective_props": {
+            "DIST": "FLAT",
+            "MAX_TEMP": "RTMAX",
+            "POWER": "RMAX",
+            "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+            "SLOPE": "RSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "RVMAX",
+            "PCB Footprint": "AX/RC05"
+          }
+        },
+        {
+          "dbid": 16766125,
+          "ref": "Vin",
+          "value": "VPULSE",
+          "symbol": "VPULSE.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "",
+            "PER": "2",
+            "PW": "1",
+            "TD": "100u",
+            "TF": "10u",
+            "TR": "10u",
+            "V1": "0",
+            "V2": "12"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 120,
+              "y": 250,
+              "wordA": 16749234,
+              "wordB": 0,
+              "symbol_name": "+",
+              "package_number": "1",
+              "net_id": 16776619,
+              "net": "VIN"
+            },
+            {
+              "index": 2,
+              "x": 120,
+              "y": 290,
+              "wordA": 16749060,
+              "wordB": 0,
+              "symbol_name": "-",
+              "package_number": "2",
+              "net_id": 16776627,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "AC": "",
+            "DC": "",
+            "PER": "2",
+            "PSpiceOnly": "TRUE",
+            "PSpiceTemplate": "V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\\n+PULSE @V1 @V2 ?TD/@TD/~TD/0/ #TR/@TR/ #TF/@TF/ #PW/@PW/ #PER/@PER/",
+            "PW": "1",
+            "TD": "100u",
+            "TF": "10u",
+            "TR": "10u",
+            "V1": "0",
+            "V2": "12",
+            "PCB Footprint": ""
+          }
+        },
+        {
+          "dbid": 16766075,
+          "ref": "C8",
+          "value": "75p",
+          "symbol": "C.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "RAD/CK05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 930,
+              "y": 330,
+              "wordA": 16758450,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16776600,
+              "net": "N16776600"
+            },
+            {
+              "index": 2,
+              "x": 930,
+              "y": 360,
+              "wordA": 16758517,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16776592,
+              "net": "VFB"
+            }
+          ],
+          "effective_props": {
+            "CURRENT": "CIMAX",
+            "DIST": "FLAT",
+            "IC": "",
+            "KNEE": "CBMAX",
+            "MAX_TEMP": "CTMAX",
+            "PSpiceTemplate": "C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|",
+            "SLOPE": "CSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "CMAX",
+            "PCB Footprint": "RAD/CK05"
+          }
+        },
+        {
+          "dbid": 16766857,
+          "ref": "C6",
+          "value": "CESR",
+          "symbol": "CESR_1.Normal",
+          "unit": 0,
+          "props": {
+            "C": "22u",
+            "ESL": "",
+            "ESR": "2m",
+            "IC": "",
+            "PCB Footprint": "",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|",
+            "X": "1"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 820,
+              "y": 270,
+              "wordA": 16735877,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "",
+              "net_id": 16776637,
+              "net": "VOUT"
+            },
+            {
+              "index": 2,
+              "x": 820,
+              "y": 300,
+              "wordA": 16754953,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "",
+              "net_id": 16776627,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "C": "22u",
+            "ESR": "2m",
+            "IC": "",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|",
+            "ESL": "",
+            "PCB Footprint": "",
+            "X": "1"
+          }
+        },
+        {
+          "dbid": 16766213,
+          "ref": "R5",
+          "value": "105k",
+          "symbol": "R.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "AX/RC05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 310,
+              "y": 310,
+              "wordA": 16734300,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16776604,
+              "net": "EN"
+            },
+            {
+              "index": 2,
+              "x": 310,
+              "y": 350,
+              "wordA": 16734304,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16776627,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "DIST": "FLAT",
+            "MAX_TEMP": "RTMAX",
+            "POWER": "RMAX",
+            "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+            "SLOPE": "RSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "RVMAX",
+            "PCB Footprint": "AX/RC05"
+          }
+        },
+        {
+          "dbid": 16766163,
+          "ref": "C5",
+          "value": "CESR",
+          "symbol": "CESR_1.Normal",
+          "unit": 0,
+          "props": {
+            "C": "22u",
+            "ESL": "",
+            "ESR": "2m",
+            "IC": "",
+            "PCB Footprint": "",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|",
+            "X": "1"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 760,
+              "y": 270,
+              "wordA": 16735734,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "",
+              "net_id": 16776637,
+              "net": "VOUT"
+            },
+            {
+              "index": 2,
+              "x": 760,
+              "y": 300,
+              "wordA": 16736173,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "",
+              "net_id": 16776627,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "C": "22u",
+            "ESR": "2m",
+            "IC": "",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|",
+            "ESL": "",
+            "PCB Footprint": "",
+            "X": "1"
+          }
+        }
+      ],
+      "globals": [
+        [
+          "0",
+          "970",
+          "430"
+        ],
+        [
+          "0",
+          "300",
+          "360"
+        ],
+        [
+          "0",
+          "810",
+          "350"
+        ],
+        [
+          "0",
+          "200",
+          "320"
+        ],
+        [
+          "0",
+          "540",
+          "350"
+        ],
+        [
+          "0",
+          "1060",
+          "430"
+        ]
+      ]
+    },
+    "Steady_State": {
+      "nets": {
+        "16785491": "0",
+        "16785498": "EN",
+        "16785509": "BOOT",
+        "16785512": "VOUT",
+        "16785513": "VFB",
+        "16785519": "VIN",
+        "16785538": "SW",
+        "16785508": "N16785508"
+      },
+      "wires": [
+        [
+          16785513,
+          990,
+          370,
+          990,
+          360
+        ],
+        [
+          16785491,
+          830,
+          350,
+          830,
+          340
+        ],
+        [
+          16785508,
+          990,
+          320,
+          990,
+          310
+        ],
+        [
+          16785491,
+          830,
+          340,
+          830,
+          300
+        ],
+        [
+          16785491,
+          830,
+          340,
+          770,
+          340
+        ],
+        [
+          16785513,
+          940,
+          370,
+          940,
+          360
+        ],
+        [
+          16785508,
+          990,
+          310,
+          940,
+          310
+        ],
+        [
+          16785508,
+          940,
+          330,
+          940,
+          310
+        ],
+        [
+          16785513,
+          990,
+          380,
+          990,
+          370
+        ],
+        [
+          16785491,
+          990,
+          430,
+          990,
+          420
+        ],
+        [
+          16785512,
+          990,
+          260,
+          990,
+          250
+        ],
+        [
+          16785512,
+          770,
+          270,
+          770,
+          250
+        ],
+        [
+          16785512,
+          770,
+          250,
+          730,
+          250
+        ],
+        [
+          16785491,
+          1080,
+          430,
+          1080,
+          350
+        ],
+        [
+          16785512,
+          1080,
+          310,
+          1080,
+          250
+        ],
+        [
+          16785512,
+          1080,
+          250,
+          990,
+          250
+        ],
+        [
+          16785512,
+          990,
+          250,
+          830,
+          250
+        ],
+        [
+          16785512,
+          830,
+          270,
+          830,
+          250
+        ],
+        [
+          16785519,
+          410,
+          220,
+          320,
+          220
+        ],
+        [
+          16785513,
+          940,
+          370,
+          630,
+          370
+        ],
+        [
+          16785491,
+          770,
+          340,
+          770,
+          300
+        ],
+        [
+          16785519,
+          250,
+          240,
+          250,
+          220
+        ],
+        [
+          16785519,
+          190,
+          220,
+          130,
+          220
+        ],
+        [
+          16785519,
+          190,
+          240,
+          190,
+          220
+        ],
+        [
+          16785491,
+          250,
+          310,
+          250,
+          270
+        ],
+        [
+          16785491,
+          250,
+          310,
+          220,
+          310
+        ],
+        [
+          16785491,
+          190,
+          310,
+          190,
+          270
+        ],
+        [
+          16785519,
+          250,
+          220,
+          190,
+          220
+        ],
+        [
+          16785498,
+          370,
+          300,
+          370,
+          250
+        ],
+        [
+          16785498,
+          410,
+          250,
+          370,
+          250
+        ],
+        [
+          16785519,
+          320,
+          220,
+          250,
+          220
+        ],
+        [
+          16785519,
+          320,
+          240,
+          320,
+          220
+        ],
+        [
+          16785513,
+          990,
+          370,
+          940,
+          370
+        ],
+        [
+          16785491,
+          220,
+          310,
+          190,
+          310
+        ],
+        [
+          16785491,
+          220,
+          320,
+          220,
+          310
+        ],
+        [
+          16785513,
+          630,
+          290,
+          550,
+          290
+        ],
+        [
+          16785513,
+          630,
+          370,
+          630,
+          290
+        ],
+        [
+          16785491,
+          560,
+          350,
+          560,
+          310
+        ],
+        [
+          16785538,
+          630,
+          250,
+          550,
+          250
+        ],
+        [
+          16785491,
+          190,
+          310,
+          130,
+          310
+        ],
+        [
+          16785512,
+          830,
+          250,
+          800,
+          250
+        ],
+        [
+          16785491,
+          560,
+          310,
+          550,
+          310
+        ],
+        [
+          16785498,
+          320,
+          300,
+          320,
+          280
+        ],
+        [
+          16785491,
+          320,
+          360,
+          320,
+          350
+        ],
+        [
+          16785498,
+          320,
+          310,
+          320,
+          300
+        ],
+        [
+          16785538,
+          630,
+          250,
+          630,
+          220
+        ],
+        [
+          16785538,
+          630,
+          220,
+          620,
+          220
+        ],
+        [
+          16785538,
+          650,
+          250,
+          630,
+          250
+        ],
+        [
+          16785498,
+          370,
+          300,
+          320,
+          300
+        ],
+        [
+          16785519,
+          130,
+          250,
+          130,
+          220
+        ],
+        [
+          16785491,
+          130,
+          310,
+          130,
+          290
+        ],
+        [
+          16785509,
+          590,
+          220,
+          550,
+          220
+        ],
+        [
+          16785508,
+          990,
+          310,
+          990,
+          300
+        ],
+        [
+          16785512,
+          800,
+          250,
+          770,
+          250
+        ]
+      ],
+      "instances": [
+        {
+          "dbid": 16782995,
+          "ref": "C2",
+          "value": "10u",
+          "symbol": "C.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "RAD/CK05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 250,
+              "y": 240,
+              "wordA": 16782873,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16785519,
+              "net": "VIN"
+            },
+            {
+              "index": 2,
+              "x": 250,
+              "y": 270,
+              "wordA": 16782879,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16785491,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "CURRENT": "CIMAX",
+            "DIST": "FLAT",
+            "IC": "",
+            "KNEE": "CBMAX",
+            "MAX_TEMP": "CTMAX",
+            "PSpiceTemplate": "C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|",
+            "SLOPE": "CSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "CMAX",
+            "PCB Footprint": "RAD/CK05"
+          }
+        },
+        {
+          "dbid": 16783013,
+          "ref": "C4",
+          "value": "0.1u",
+          "symbol": "C.Normal",
+          "unit": 0,
+          "props": {
+            "IC": "12",
+            "PCB Footprint": "RAD/CK05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 590,
+              "y": 220,
+              "wordA": 16783124,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16785509,
+              "net": "BOOT"
+            },
+            {
+              "index": 2,
+              "x": 620,
+              "y": 220,
+              "wordA": 16783113,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16785538,
+              "net": "SW"
+            }
+          ],
+          "effective_props": {
+            "CURRENT": "CIMAX",
+            "DIST": "FLAT",
+            "IC": "12",
+            "KNEE": "CBMAX",
+            "MAX_TEMP": "CTMAX",
+            "PSpiceTemplate": "C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|",
+            "SLOPE": "CSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "CMAX",
+            "PCB Footprint": "RAD/CK05"
+          }
+        },
+        {
+          "dbid": 16782929,
+          "ref": "R5",
+          "value": "105k",
+          "symbol": "R.Normal",
+          "unit": 0,
+          "props": {
+            "BiasValue Power": "22.42e-21W",
+            "PCB Footprint": "AX/RC05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 320,
+              "y": 310,
+              "wordA": 16783109,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16785498,
+              "net": "EN"
+            },
+            {
+              "index": 2,
+              "x": 320,
+              "y": 350,
+              "wordA": 16783106,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16785491,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "DIST": "FLAT",
+            "MAX_TEMP": "RTMAX",
+            "POWER": "RMAX",
+            "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+            "SLOPE": "RSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "RVMAX",
+            "BiasValue Power": "22.42e-21W",
+            "PCB Footprint": "AX/RC05"
+          }
+        },
+        {
+          "dbid": 16777949,
+          "ref": "U1",
+          "value": "TPS54302DDC_TRANS",
+          "symbol": "TPS54302DDC_TRANS.Normal",
+          "unit": 0,
+          "props": {
+            "BiasValue Power": "2.584W",
+            "PCB Footprint": "DDC0006A_N",
+            "STEADY_STATE": "1"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 550,
+              "y": 310,
+              "wordA": 16782923,
+              "wordB": 0,
+              "symbol_name": "GND",
+              "package_number": "1",
+              "net_id": 16785491,
+              "net": "0"
+            },
+            {
+              "index": 2,
+              "x": 550,
+              "y": 250,
+              "wordA": 16782914,
+              "wordB": 0,
+              "symbol_name": "SW",
+              "package_number": "2",
+              "net_id": 16785538,
+              "net": "SW"
+            },
+            {
+              "index": 3,
+              "x": 410,
+              "y": 220,
+              "wordA": 16782864,
+              "wordB": 0,
+              "symbol_name": "VIN",
+              "package_number": "3",
+              "net_id": 16785519,
+              "net": "VIN"
+            },
+            {
+              "index": 4,
+              "x": 550,
+              "y": 290,
+              "wordA": 16782906,
+              "wordB": 0,
+              "symbol_name": "FB",
+              "package_number": "4",
+              "net_id": 16785513,
+              "net": "VFB"
+            },
+            {
+              "index": 5,
+              "x": 410,
+              "y": 250,
+              "wordA": 16782890,
+              "wordB": 0,
+              "symbol_name": "EN",
+              "package_number": "5",
+              "net_id": 16785498,
+              "net": "EN"
+            },
+            {
+              "index": 6,
+              "x": 550,
+              "y": 220,
+              "wordA": 16783124,
+              "wordB": 0,
+              "symbol_name": "BOOT",
+              "package_number": "6",
+              "net_id": 16785509,
+              "net": "BOOT"
+            }
+          ],
+          "effective_props": {
+            "< Value >": "TPS54302DDCR",
+            "DeviceDesignator": "A",
+            "DeviceNumbering": "Alpha",
+            "DevicesInPackage": "1",
+            "DevicesInView": "1",
+            "IsHeterogeneous": "False",
+            "Manufacturer": "Texas Instruments",
+            "OriginalSymbolOrigin": "(-50000,60000)",
+            "PCB Footprint": "DDC0006A_N",
+            "PSpiceTemplate": "X^@REFDES %BOOT %EN %GND %SW %VIN %FB @MODEL PARAMS: ?STEADY_STATE|STEADY_STATE=@STEADY_STATE||STEADY_STATE=0|",
+            "PackageName": "TPS54302DDCR",
+            "PartNumber": "TPS54302DDC",
+            "STEADY_STATE": "1",
+            "BiasValue Power": "2.584W"
+          }
+        },
+        {
+          "dbid": 16783033,
+          "ref": "C8",
+          "value": "75p",
+          "symbol": "C.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "RAD/CK05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 940,
+              "y": 330,
+              "wordA": 16782838,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16785508,
+              "net": "N16785508"
+            },
+            {
+              "index": 2,
+              "x": 940,
+              "y": 360,
+              "wordA": 16782831,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16785513,
+              "net": "VFB"
+            }
+          ],
+          "effective_props": {
+            "CURRENT": "CIMAX",
+            "DIST": "FLAT",
+            "IC": "",
+            "KNEE": "CBMAX",
+            "MAX_TEMP": "CTMAX",
+            "PSpiceTemplate": "C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|",
+            "SLOPE": "CSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "CMAX",
+            "PCB Footprint": "RAD/CK05"
+          }
+        },
+        {
+          "dbid": 16782982,
+          "ref": "L1",
+          "value": "LDCR",
+          "symbol": "LDCR.Normal",
+          "unit": 0,
+          "props": {
+            "BiasValue Power": "-17.58W",
+            "DCR": "10m",
+            "IC": "3",
+            "L": "10u",
+            "PCB Footprint": "",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?L|L=@L||L=10U| ?DCR|DCR=@DCR||DCR=20M| ?IC|IC=@IC||IC=0|"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 650,
+              "y": 250,
+              "wordA": 16783115,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "",
+              "net_id": 16785538,
+              "net": "SW"
+            },
+            {
+              "index": 2,
+              "x": 730,
+              "y": 250,
+              "wordA": 16782849,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "",
+              "net_id": 16785512,
+              "net": "VOUT"
+            }
+          ],
+          "effective_props": {
+            "DCR": "10m",
+            "L": "10u",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?L|L=@L||L=10U| ?DCR|DCR=@DCR||DCR=20M| ?IC|IC=@IC||IC=0|",
+            "BiasValue Power": "-17.58W",
+            "IC": "3",
+            "PCB Footprint": ""
+          }
+        },
+        {
+          "dbid": 16782951,
+          "ref": "C1",
+          "value": "0.1u",
+          "symbol": "C.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": "RAD/CK05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 190,
+              "y": 240,
+              "wordA": 16782877,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16785519,
+              "net": "VIN"
+            },
+            {
+              "index": 2,
+              "x": 190,
+              "y": 270,
+              "wordA": 16782883,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16785491,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "CURRENT": "CIMAX",
+            "DIST": "FLAT",
+            "IC": "",
+            "KNEE": "CBMAX",
+            "MAX_TEMP": "CTMAX",
+            "PSpiceTemplate": "C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|",
+            "SLOPE": "CSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "CMAX",
+            "PCB Footprint": "RAD/CK05"
+          }
+        },
+        {
+          "dbid": 16783070,
+          "ref": "C5",
+          "value": "CESR",
+          "symbol": "CESR_1.Normal",
+          "unit": 0,
+          "props": {
+            "BiasValue Power": "0W",
+            "C": "22u",
+            "ESL": "",
+            "ESR": "2m",
+            "IC": "5",
+            "PCB Footprint": "",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|",
+            "X": "1"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 770,
+              "y": 270,
+              "wordA": 16782847,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "",
+              "net_id": 16785512,
+              "net": "VOUT"
+            },
+            {
+              "index": 2,
+              "x": 770,
+              "y": 300,
+              "wordA": 16782871,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "",
+              "net_id": 16785491,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "C": "22u",
+            "ESR": "2m",
+            "IC": "5",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|",
+            "BiasValue Power": "0W",
+            "ESL": "",
+            "PCB Footprint": "",
+            "X": "1"
+          }
+        },
+        {
+          "dbid": 16783003,
+          "ref": "Iload",
+          "value": "IDC",
+          "symbol": "IDC.Normal",
+          "unit": 0,
+          "props": {
+            "BiasValue Power": "15.00W",
+            "DC": "3",
+            "PCB Footprint": ""
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 1080,
+              "y": 310,
+              "wordA": 16782854,
+              "wordB": 0,
+              "symbol_name": "+",
+              "package_number": "1",
+              "net_id": 16785512,
+              "net": "VOUT"
+            },
+            {
+              "index": 2,
+              "x": 1080,
+              "y": 350,
+              "wordA": 16782851,
+              "wordB": 0,
+              "symbol_name": "-",
+              "package_number": "2",
+              "net_id": 16785491,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "DC": "3",
+            "PSpiceOnly": "TRUE",
+            "PSpiceTemplate": "I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| ?TRAN|@TRAN|",
+            "BiasValue Power": "15.00W",
+            "PCB Footprint": ""
+          }
+        },
+        {
+          "dbid": 16782970,
+          "ref": "Vin",
+          "value": "VDC",
+          "symbol": "VDC.Normal",
+          "unit": 0,
+          "props": {
+            "BiasValue Power": "-306.2uW",
+            "DC": "12",
+            "PCB Footprint": ""
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 130,
+              "y": 250,
+              "wordA": 16783120,
+              "wordB": 0,
+              "symbol_name": "+",
+              "package_number": "0",
+              "net_id": 16785519,
+              "net": "VIN"
+            },
+            {
+              "index": 2,
+              "x": 130,
+              "y": 290,
+              "wordA": 16783122,
+              "wordB": 0,
+              "symbol_name": "-",
+              "package_number": "1",
+              "net_id": 16785491,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "DC": "12",
+            "PSpiceOnly": "TRUE",
+            "PSpiceTemplate": "V^@REFDES %+ %- @DC",
+            "BiasValue Power": "-306.2uW",
+            "PCB Footprint": ""
+          }
+        },
+        {
+          "dbid": 16783022,
+          "ref": "R1",
+          "value": "49.9",
+          "symbol": "R.Normal",
+          "unit": 0,
+          "props": {
+            "BiasValue Power": "97.10nW",
+            "PCB Footprint": "AX/RC05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 990,
+              "y": 260,
+              "wordA": 16782845,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16785512,
+              "net": "VOUT"
+            },
+            {
+              "index": 2,
+              "x": 990,
+              "y": 300,
+              "wordA": 16783464,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16785508,
+              "net": "N16785508"
+            }
+          ],
+          "effective_props": {
+            "DIST": "FLAT",
+            "MAX_TEMP": "RTMAX",
+            "POWER": "RMAX",
+            "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+            "SLOPE": "RSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "RVMAX",
+            "BiasValue Power": "97.10nW",
+            "PCB Footprint": "AX/RC05"
+          }
+        },
+        {
+          "dbid": 16783057,
+          "ref": "R3",
+          "value": "13.3k",
+          "symbol": "R.Normal",
+          "unit": 0,
+          "props": {
+            "BiasValue Power": "25.88uW",
+            "PCB Footprint": "AX/RC05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 990,
+              "y": 380,
+              "wordA": 16782840,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16785513,
+              "net": "VFB"
+            },
+            {
+              "index": 2,
+              "x": 990,
+              "y": 420,
+              "wordA": 16782842,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16785491,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "DIST": "FLAT",
+            "MAX_TEMP": "RTMAX",
+            "POWER": "RMAX",
+            "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+            "SLOPE": "RSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "RVMAX",
+            "BiasValue Power": "25.88uW",
+            "PCB Footprint": "AX/RC05"
+          }
+        },
+        {
+          "dbid": 16784060,
+          "ref": "IC1",
+          "value": "5",
+          "symbol": "IC1.Normal",
+          "unit": 0,
+          "props": {
+            "PCB Footprint": ""
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 800,
+              "y": 250,
+              "wordA": 16784064,
+              "wordB": 0,
+              "symbol_name": "+",
+              "package_number": "0",
+              "net_id": 16785512,
+              "net": "VOUT"
+            }
+          ],
+          "effective_props": {
+            "PSpiceOnly": "TRUE",
+            "PSpiceTemplate": ".IC V(%+ )=@Value",
+            "TEXT": "IC=",
+            "PCB Footprint": ""
+          }
+        },
+        {
+          "dbid": 16782940,
+          "ref": "R4",
+          "value": "510k",
+          "symbol": "R.Normal",
+          "unit": 0,
+          "props": {
+            "BiasValue Power": "282.4uW",
+            "PCB Footprint": "AX/RC05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 320,
+              "y": 240,
+              "wordA": 16782895,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16785519,
+              "net": "VIN"
+            },
+            {
+              "index": 2,
+              "x": 320,
+              "y": 280,
+              "wordA": 16783104,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16785498,
+              "net": "EN"
+            }
+          ],
+          "effective_props": {
+            "DIST": "FLAT",
+            "MAX_TEMP": "RTMAX",
+            "POWER": "RMAX",
+            "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+            "SLOPE": "RSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "RVMAX",
+            "BiasValue Power": "282.4uW",
+            "PCB Footprint": "AX/RC05"
+          }
+        },
+        {
+          "dbid": 16783043,
+          "ref": "C6",
+          "value": "CESR",
+          "symbol": "CESR_1.Normal",
+          "unit": 0,
+          "props": {
+            "BiasValue Power": "0W",
+            "C": "22u",
+            "ESL": "",
+            "ESR": "2m",
+            "IC": "5",
+            "PCB Footprint": "",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|",
+            "X": "1"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 830,
+              "y": 270,
+              "wordA": 16782862,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "",
+              "net_id": 16785512,
+              "net": "VOUT"
+            },
+            {
+              "index": 2,
+              "x": 830,
+              "y": 300,
+              "wordA": 16782826,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "",
+              "net_id": 16785491,
+              "net": "0"
+            }
+          ],
+          "effective_props": {
+            "C": "22u",
+            "ESR": "2m",
+            "IC": "5",
+            "PSpiceTemplate": "X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|",
+            "BiasValue Power": "0W",
+            "ESL": "",
+            "PCB Footprint": "",
+            "X": "1"
+          }
+        },
+        {
+          "dbid": 16782959,
+          "ref": "R2",
+          "value": "100k",
+          "symbol": "R.Normal",
+          "unit": 0,
+          "props": {
+            "BiasValue Power": "194.6uW",
+            "PCB Footprint": "AX/RC05"
+          },
+          "pins": [
+            {
+              "index": 1,
+              "x": 990,
+              "y": 320,
+              "wordA": 16782824,
+              "wordB": 0,
+              "symbol_name": "2",
+              "package_number": "2",
+              "net_id": 16785508,
+              "net": "N16785508"
+            },
+            {
+              "index": 2,
+              "x": 990,
+              "y": 360,
+              "wordA": 16782819,
+              "wordB": 0,
+              "symbol_name": "1",
+              "package_number": "1",
+              "net_id": 16785513,
+              "net": "VFB"
+            }
+          ],
+          "effective_props": {
+            "DIST": "FLAT",
+            "MAX_TEMP": "RTMAX",
+            "POWER": "RMAX",
+            "PSpiceTemplate": "R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|",
+            "SLOPE": "RSMAX",
+            "TOLERANCE": "",
+            "VOLTAGE": "RVMAX",
+            "BiasValue Power": "194.6uW",
+            "PCB Footprint": "AX/RC05"
+          }
+        }
+      ],
+      "globals": [
+        [
+          "0",
+          "210",
+          "320"
+        ],
+        [
+          "0",
+          "310",
+          "360"
+        ],
+        [
+          "0",
+          "820",
+          "350"
+        ],
+        [
+          "0",
+          "550",
+          "350"
+        ],
+        [
+          "0",
+          "1070",
+          "430"
+        ],
+        [
+          "0",
+          "980",
+          "430"
+        ]
+      ]
+    }
+  },
+  "official_library_sha256": "52a568f08f1eed44961238a1ff10b68c2ce1faa1cdf2c24659b17b1f820f0026",
+  "direct_execution_blocker": {
+    "dsn_model_name": "TPS54302DDC_TRANS",
+    "available_library_subcircuit": "TPS54302_TRANS",
+    "dsn_template_order": [
+      "BOOT",
+      "EN",
+      "GND",
+      "SW",
+      "VIN",
+      "FB"
+    ],
+    "library_declaration_order": [
+      "BOOT",
+      "EN",
+      "GND",
+      "PH",
+      "VIN",
+      "VSENSE"
+    ],
+    "resolution": "Separate transparent alias wrapper required; original DSN-derived circuit and original LIB are intentionally unchanged."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "original_sha256": "52a568f08f1eed44961238a1ff10b68c2ce1faa1cdf2c24659b17b1f820f0026",
+  "derived_sha256": "72a5e421d0504f82c4f256f2220b0b775c473920f58d865ec4b77334de378439",
+  "model_changes": [
+    "Exactly four .IC V(Qint) {VSS} -> .IC V(Qint)={VSS}; original CRLF bytes otherwise unchanged"
+  ],
+  "driver_changes": [
+    ".LIB one-file directive -> .INCLUDE of same model contents before model syntax fix",
+    "Add external name-only six-pin alias wrapper",
+    "Positive .TRAN print interval20ns; original stop/start/maxstep retained",
+    "Remove unsupported PSpice .OPTIONS and .PROBE; native Xyce numerical defaults and explicit .PRINT used"
+  ],
+  "physical_changes": [],
+  "native_smoothing_enabled": false,
+  "status": "EXECUTED_STEADY_COMPLETE_STARTUP_INCOMPLETE",
+  "candidate_initialization": {
+    "sha256": "47f1df44d7467c19c63eedf896bb61e2061eb455c65938f05a43e12819f812e7",
+    "change": ".IC V(COMP)={STEADY_STATE*1.3695} -> .IC V(N16888001)={STEADY_STATE*1.3695}",
+    "reason": "COMP and N16888001 joined by original ideal 0V source V_V1; same intended initial voltage. Default OP only, preserving two-level alias. Missing structural diagonal at COMP confirmed from matrix; two-level unit reproduces failure and remap applies intended RC initial voltage.",
+    "not_claimed": "Not equivalent to buggy Xyce behavior across all hierarchy depths or UIC; UIC counterexample retained",
+    "unit_evidence": "../xyce-compatibility/zero-v-ic-detailed-validation.json"
+  }
+}

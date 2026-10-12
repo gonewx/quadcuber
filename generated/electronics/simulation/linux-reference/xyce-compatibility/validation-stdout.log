@@ -1,0 +1,362 @@
+{
+  "default/xor_exact": {
+    "rows": 9,
+    "xor_mismatches": [],
+    "xor_correct": true,
+    "negative_control": false,
+    "pass": true
+  },
+  "default/xor_parenthesized": {
+    "rows": 9,
+    "xor_mismatches": [],
+    "xor_correct": true,
+    "negative_control": false,
+    "pass": true
+  },
+  "default/xor_adapted": {
+    "rows": 9,
+    "xor_mismatches": [],
+    "xor_correct": true,
+    "negative_control": false,
+    "pass": true
+  },
+  "hspice_math/xor_exact": {
+    "rows": 9,
+    "xor_mismatches": [
+      {
+        "input_ytd": 0.0,
+        "input_in": 0.0,
+        "actual": 1.0,
+        "expected": 0.0
+      },
+      {
+        "input_ytd": 0.5,
+        "input_in": 0.0,
+        "actual": 1.0,
+        "expected": 0.0
+      },
+      {
+        "input_ytd": 0.0,
+        "input_in": 0.5,
+        "actual": 1.0,
+        "expected": 0.0
+      },
+      {
+        "input_ytd": 0.5,
+        "input_in": 0.5,
+        "actual": 1.0,
+        "expected": 0.0
+      },
+      {
+        "input_ytd": 0.0,
+        "input_in": 1.0,
+        "actual": 0.0,
+        "expected": 1.0
+      },
+      {
+        "input_ytd": 0.5,
+        "input_in": 1.0,
+        "actual": 0.0,
+        "expected": 1.0
+      },
+      {
+        "input_ytd": 1.0,
+        "input_in": 1.0,
+        "actual": 1.0,
+        "expected": 0.0
+      }
+    ],
+    "xor_correct": false,
+    "negative_control": true,
+    "pass": true
+  },
+  "hspice_math/xor_parenthesized": {
+    "rows": 9,
+    "xor_mismatches": [
+      {
+        "input_ytd": 0.0,
+        "input_in": 0.0,
+        "actual": 1.0,
+        "expected": 0.0
+      },
+      {
+        "input_ytd": 0.5,
+        "input_in": 0.0,
+        "actual": 1.0,
+        "expected": 0.0
+      },
+      {
+        "input_ytd": 0.0,
+        "input_in": 0.5,
+        "actual": 1.0,
+        "expected": 0.0
+      },
+      {
+        "input_ytd": 0.5,
+        "input_in": 0.5,
+        "actual": 1.0,
+        "expected": 0.0
+      },
+      {
+        "input_ytd": 0.0,
+        "input_in": 1.0,
+        "actual": 0.0,
+        "expected": 1.0
+      },
+      {
+        "input_ytd": 0.5,
+        "input_in": 1.0,
+        "actual": 0.0,
+        "expected": 1.0
+      },
+      {
+        "input_ytd": 1.0,
+        "input_in": 1.0,
+        "actual": 1.0,
+        "expected": 0.0
+      }
+    ],
+    "xor_correct": false,
+    "negative_control": true,
+    "pass": true
+  },
+  "hspice_math/xor_adapted": {
+    "rows": 9,
+    "xor_mismatches": [],
+    "xor_correct": true,
+    "negative_control": false,
+    "pass": true
+  },
+  "equality_default_xor_exact_vs_xor_parenthesized": {
+    "same_rows": true,
+    "max_abs_difference": 0.0,
+    "exact_numeric_equality": true
+  },
+  "equality_default_xor_exact_vs_xor_adapted": {
+    "same_rows": true,
+    "max_abs_difference": 0.0,
+    "exact_numeric_equality": true
+  },
+  "equality_hspice_original_vs_parenthesized": {
+    "same_rows": true,
+    "max_abs_difference": 0.0,
+    "exact_numeric_equality": true
+  },
+  "logic_value": {
+    "rows": 9,
+    "max_abs_error": 0,
+    "pass": true
+  },
+  "rc_op_ic": {
+    "rows": 1001,
+    "first": {
+      "TIME": 0.0,
+      "V(OUT)": 0.25
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(OUT)": 0.724090166
+    },
+    "max_abs_error_V": 7.479995002279693e-07,
+    "max_error_time_s": 2e-06,
+    "pass": true
+  },
+  "rc_op_noic": {
+    "rows": 1001,
+    "first": {
+      "TIME": 0.0,
+      "V(OUT)": 1.0
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(OUT)": 1.0
+    },
+    "max_abs_error_V": 0.0,
+    "max_error_time_s": 0.0,
+    "pass": true
+  },
+  "rc_uic_ic": {
+    "rows": 1009,
+    "first": {
+      "TIME": 0.0,
+      "V(OUT)": 0.25
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(OUT)": 0.724090304
+    },
+    "max_abs_error_V": 3.748333424757888e-07,
+    "max_error_time_s": 1.03125e-06,
+    "pass": true
+  },
+  "rc_uic_noic": {
+    "rows": 1009,
+    "first": {
+      "TIME": 0.0,
+      "V(OUT)": 0.0
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(OUT)": 0.632120406
+    },
+    "max_abs_error_V": 4.992774872817924e-07,
+    "max_error_time_s": 1.015625e-06,
+    "pass": true
+  },
+  "rc_noop_ic": {
+    "rows": 1009,
+    "first": {
+      "TIME": 0.0,
+      "V(OUT)": 0.25
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(OUT)": 0.724090304
+    },
+    "max_abs_error_V": 3.748333424757888e-07,
+    "max_error_time_s": 1.03125e-06,
+    "pass": true
+  },
+  "rc_noop_noic": {
+    "rows": 1009,
+    "first": {
+      "TIME": 0.0,
+      "V(OUT)": 0.0
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(OUT)": 0.632120406
+    },
+    "max_abs_error_V": 4.992774872817924e-07,
+    "max_error_time_s": 1.015625e-06,
+    "pass": true
+  },
+  "equality_uic_vs_noop_ic": {
+    "same_rows": true,
+    "max_abs_difference": 0.0,
+    "exact_numeric_equality": true
+  },
+  "equality_uic_vs_noop_noic": {
+    "same_rows": true,
+    "max_abs_difference": 0.0,
+    "exact_numeric_equality": true
+  },
+  "ic_alias_space_EN": {
+    "rows": 1008,
+    "first": {
+      "TIME": 0.0,
+      "V(ACTUAL_EN)": 0.0,
+      "V(ACTUAL_COMP)": 1.3695
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(ACTUAL_EN)": 0.632120406,
+      "V(ACTUAL_COMP)": 0.503811105
+    },
+    "max_abs_error_V": 4.992774872817924e-07,
+    "max_error_time_s": 1.015625e-06,
+    "pass": true
+  },
+  "ic_alias_space_COMP": {
+    "rows": 1008,
+    "first": {
+      "TIME": 0.0,
+      "V(ACTUAL_EN)": 0.0,
+      "V(ACTUAL_COMP)": 1.3695
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(ACTUAL_EN)": 0.632120406,
+      "V(ACTUAL_COMP)": 0.503811105
+    },
+    "max_abs_error_V": 6.870629847277598e-07,
+    "max_error_time_s": 1.265625e-06,
+    "pass": true
+  },
+  "ic_alias_compact_EN": {
+    "rows": 1008,
+    "first": {
+      "TIME": 0.0,
+      "V(ACTUAL_EN)": 0.0,
+      "V(ACTUAL_COMP)": 1.3695
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(ACTUAL_EN)": 0.632120406,
+      "V(ACTUAL_COMP)": 0.503811105
+    },
+    "max_abs_error_V": 4.992774872817924e-07,
+    "max_error_time_s": 1.015625e-06,
+    "pass": true
+  },
+  "ic_alias_compact_COMP": {
+    "rows": 1008,
+    "first": {
+      "TIME": 0.0,
+      "V(ACTUAL_EN)": 0.0,
+      "V(ACTUAL_COMP)": 1.3695
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(ACTUAL_EN)": 0.632120406,
+      "V(ACTUAL_COMP)": 0.503811105
+    },
+    "max_abs_error_V": 6.870629847277598e-07,
+    "max_error_time_s": 1.265625e-06,
+    "pass": true
+  },
+  "equality_alias_whitespace": {
+    "same_rows": true,
+    "max_abs_difference": 0.0,
+    "exact_numeric_equality": true
+  },
+  "ic_with_equals": {
+    "rows": 1009,
+    "first": {
+      "TIME": 0.0,
+      "V(OUT)": 0.0
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(OUT)": 0.0919698986
+    },
+    "max_abs_error_V": 0.25,
+    "max_error_time_s": 0.0,
+    "pass": false
+  },
+  "ic_no_equals_expected_failure": {
+    "returncode": 1,
+    "errors": [
+      "Netlist error: Cannot convert '(' to double for expression VALUE",
+      "Netlist error: Cannot convert ')' to double for expression VALUE",
+      "Netlist error: Cannot convert '' to double for expression VALUE"
+    ],
+    "pass": true
+  },
+  "ic_with_equals_observed_storage_node": {
+    "rows": 1009,
+    "first": {
+      "TIME": 0.0,
+      "V(OUT)": 0.0,
+      "V(X1:QINT)": 0.25
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(OUT)": 0.0919698986,
+      "V(X1:QINT)": 0.0919698986
+    },
+    "max_abs_error_V": 1.251757211218063e-07,
+    "max_error_time_s": 1.45446192e-06,
+    "pass": true
+  },
+  "ic_with_equals_observed_output": {
+    "t0_OUT_V": 0.0,
+    "t0_Qint_V": 0.25,
+    "t0_algebraic_mismatch_V": -0.25,
+    "positive_time_rows": 1008,
+    "positive_time_max_OUT_minus_Qint_V": 0.0,
+    "positive_time_max_error_vs_analytic_V": 1.251757211218063e-07
+  }
+}
+SWITCH 3.2574290172824525e-09
+ALL_EXPECTED_CHECKS_PASS False

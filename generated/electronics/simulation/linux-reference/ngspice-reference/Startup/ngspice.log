@@ -1,0 +1,864 @@
+Warning : IC on non-existent node - x_u1.xcore.en, ignored
+   Please check line .ic v(x_u1.xcore.en )=0
+
+Note: gnd in a subcircuit is not set to 0 automatically
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: * dsn-derived ti tps54302 startup reference testbench
+
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vfb                               -2.52914e-20
+n16776600                         -2.15452e-19
+sw                                 -2.1684e-19
+x_l1.1                             -2.1684e-19
+vout                              -2.15547e-19
+boot                                         0
+vin                                          0
+x_u1.xcore.ldrv                    4.99999e-06
+x_u1.xcore.u8_n16881733                      0
+x_u1.xcore.u8_n16882064                      1
+x_u1.xcore.e_u8_abm170_int1                  1
+x_u1.xcore.u8_n16881752                      1
+x_u1.xcore.x_u8_u621.yint                    1
+x_u1.xcore.x_u8_u621.e_abmgate_int1               1
+x_u1.xcore.pwm_final                         0
+x_u1.xcore.u8_n16881765                      1
+x_u1.xcore.ldrvin                            0
+x_u1.xcore.u8_n16881594                      5
+x_u1.xcore.x_u8_u619.yint                    0
+x_u1.xcore.x_u8_u619.e_abmgate_int1               0
+x_u1.xcore.u8_sdwn_n                         0
+x_u1.xcore.u8_n16882062                      1
+x_u1.xcore.hdrvin                            0
+x_u1.xcore.u8_n16881756                      1
+x_u1.xcore.e_u8_abm79_int1                   1
+x_u1.xcore.hdrv                    -2.1684e-19
+x_u1.xcore.x_u8_u613.yint                    0
+x_u1.xcore.x_u8_u613.e_abmgate_int1               0
+x_u1.xcore.sdwn                              1
+x_u1.xcore.u8_n16881411                      1
+x_u1.xcore.x_u8_u622.yint                    0
+x_u1.xcore.x_u8_u622.e_abmgate_int1               0
+x_u1.xcore.oclowlimit                        0
+x_u1.xcore.u8_boot_on                        0
+x_u1.xcore.oclow                   -1.3942e-15
+x_u1.xcore.x_u8_d15.3                   -0.001
+x_u1.xcore.u8_n16881320                      0
+x_u1.xcore.x_u8_u827.yint                    0
+x_u1.xcore.x_u8_u827.e_abmgate_int1               0
+x_u1.xcore.pbias                             1
+x_u1.xcore.u8_n16881692                      0
+x_u1.xcore.e_u8_abm167_int1                  0
+x_u1.xcore.boot_uvlo                         0
+x_u1.xcore.x_u8_u617.yint                    1
+x_u1.xcore.x_u8_u617.e_abmgate_int1               1
+x_u1.xcore.u8_n16881438                      1
+x_u1.xcore.isw                     -1.3942e-15
+x_u1.xcore.x_u8_d16.3                   -0.001
+x_u1.xcore.x_u8_u616.yint                    1
+x_u1.xcore.x_u8_u616.e_abmgate_int1               1
+x_u1.xcore.x_u12_u613.yint                   1
+x_u1.xcore.x_u12_u613.e_abmgate_int1               1
+x_u1.xcore.u12_n16779597                     1
+x_u1.xcore.u12_valley_ilimit                 1
+x_u1.xcore.u12_n16766365                     1
+x_u1.xcore.e_u12_abm154_int1                 1
+x_u1.xcore.ss_tr                  -9.99939e-05
+x_u1.xcore.x_u12_u646.x1.yint1               0
+x_u1.xcore.x_u12_u646.x1.e_abmgate1_int1               0
+x_u1.xcore.u12_n16760925                     0
+x_u1.xcore.x_u12_u646.x1.yint2               0
+x_u1.xcore.x_u12_u646.x1.yint3               1
+x_u1.xcore.x_u12_u646.x1.e_abmgate2_int1               1
+x_u1.xcore.x_u12_u646.clkdel                 1
+x_u1.xcore.x_u12_u646.x2.yint                0
+x_u1.xcore.x_u12_u646.x2.e_abmgate_int1               0
+x_u1.xcore.x_u12_u646.clkint                 0
+x_u1.xcore.x_u12_u646.qint                   0
+x_u1.xcore.x_u12_u646.gq_int1                0
+x_u1.xcore.u12_n16760761                     0
+x_u1.xcore.u12_set1                          1
+x_u1.xcore.x_u12_u646.my5                    1
+x_u1.xcore.x_u12_u646.myvss                  0
+x_u1.xcore.x_u12_u646.qqq                    0
+x_u1.xcore.x_u12_u646.x3.yint1               0
+x_u1.xcore.x_u12_u646.x3.e_abmgate1_int1               0
+x_u1.xcore.x_u12_u646.x3.yint2               0
+x_u1.xcore.x_u12_u646.x3.yint3               0
+x_u1.xcore.x_u12_u646.x3.e_abmgate2_int1               0
+x_u1.xcore.x_u12_u646.qbr                    1
+x_u1.xcore.x_u12_u646.eqb_int1               1
+x_u1.xcore.u12_n16760921                0.9999
+x_u1.xcore.x_u12_u647.yint                   0
+x_u1.xcore.x_u12_u647.e_abmgate_int1               0
+x_u1.xcore.sysclk                            0
+x_u1.xcore.x_u12_u605.yint                   1
+x_u1.xcore.x_u12_u605.e_abm_int1               1
+x_u1.xcore.u12_n16779389                     5
+x_u1.xcore.u12_cbc_ilimit                    1
+x_u1.xcore.u12_n16775618                     0
+x_u1.xcore.e_u12_abm153_int1                 0
+x_u1.xcore.x_u12_u621.yint                   1
+x_u1.xcore.x_u12_u621.e_abmgate_int1               1
+x_u1.xcore.u12_n16779301                     1
+x_u1.xcore.ilim                              1
+x_u1.xcore.x_u12_u611.yint                   1
+x_u1.xcore.x_u12_u611.e_abm_int1               1
+x_u1.xcore.u12_n16779415                  -4.5
+x_u1.xcore.x_u12_u620.yint                   1
+x_u1.xcore.x_u12_u620.e_abmgate_int1               1
+x_u1.xcore.hiccup                            0
+x_u1.xcore.x_u11_u136.yint                   1
+x_u1.xcore.x_u11_u136.e_abmgate_int1               1
+x_u1.xcore.u11_n16496294                     1
+x_u1.xcore.u11_n6045102                      1
+en                                   0.0470538
+x_u1.xcore.u11_n16640447                     0
+x_u1.xcore.x_u11_u2.inp1                     0
+x_u1.xcore.x_u11_u2.inm1               1.18295
+x_u1.xcore.u11_n16640225                  1.23
+x_u1.xcore.x_u11_u2.inp2                     0
+x_u1.xcore.x_u11_u2.ehys_int1                0
+x_u1.xcore.x_u11_u2.1                        0
+x_u1.xcore.u11_n166402810                 0.04
+x_u1.xcore.u11_enab                          0
+x_u1.xcore.x_u11_u2.eout_int1                0
+x_u1.xcore.u11_n16643745                   4.2
+x_u1.xcore.g_u11_abmii1_int1             7e-07
+x_u1.xcore.u11_n16642234                   0.5
+x_u1.xcore.x_u11_u605.yint                   1
+x_u1.xcore.x_u11_u605.e_abmgate_int1               1
+x_u1.xcore.u11_n16656493                     0
+x_u1.xcore.e_u11_abm174_int1                 0
+x_u1.xcore.x_u11_u604.yint                   1
+x_u1.xcore.x_u11_u604.e_abmgate_int1               1
+x_u1.xcore.x_u11_u3.inp1                     0
+x_u1.xcore.x_u11_u3.inm1                   4.2
+x_u1.xcore.x_u11_u3.inp2                     0
+x_u1.xcore.x_u11_u3.ehys_int1                0
+x_u1.xcore.x_u11_u3.1                        0
+x_u1.xcore.x_u11_u3.eout_int1                0
+x_u1.xcore.u10_n16878554             5.001e-15
+x_u1.xcore.u10_500n                          0
+x_u1.xcore.u10_n16864691              0.000515
+x_u1.xcore.u10_out2                          0
+x_u1.xcore.x_u10_u652.yint                   1
+x_u1.xcore.x_u10_u652.e_abmgate_int1               1
+x_u1.xcore.u10_n16864713                     0
+x_u1.xcore.u10_n16864533                     1
+x_u1.xcore.u10_n16878651                     1
+x_u1.xcore.u10_n16854825                    12
+x_u1.xcore.x_u10_u614.yint                   0
+x_u1.xcore.x_u10_u614.e_abmgate_int1               0
+x_u1.xcore.u10_hiccup_n                      1
+x_u1.xcore.u10_out1                          0
+x_u1.xcore.u10_h_check             5.00001e-09
+x_u1.xcore.x_u10_u650.vsup                   1
+x_u1.xcore.x_u10_u650.ya                100000
+x_u1.xcore.x_u10_u650.gin_int1           1e-06
+x_u1.xcore.x_u10_u650.gdis_int1               0
+x_u1.xcore.x_u10_u650.ytd                    0
+x_u1.xcore.x_u10_u650.eabm1_int1               0
+x_u1.xcore.x_u10_u650.p                      0
+x_u1.xcore.x_u10_u650.exor_int1               0
+x_u1.xcore.x_u10_u650.q1                     0
+x_u1.xcore.x_u10_u650.eand1_int1               0
+x_u1.xcore.x_u10_u650.qn1                    1
+x_u1.xcore.x_u10_u650.eand2_int1               1
+x_u1.xcore.n16878734                         1
+x_u1.xcore.u10_n16864770                     0
+x_u1.xcore.x_u10_u615.yint                   0
+x_u1.xcore.x_u10_u615.e_abmgate_int1               0
+x_u1.xcore.u10_n16864543                     0
+x_u1.xcore.u10_n16864560                     0
+x_u1.xcore.x_u10_u622.yint                   0
+x_u1.xcore.x_u10_u622.e_abmgate_int1               0
+x_u1.xcore.u10_clr_hiccup                    0
+x_u1.xcore.u10_n16880073                     0
+x_u1.xcore.x_u10_u607.yint1                  0
+x_u1.xcore.x_u10_u607.e_abmgate1_int1               0
+x_u1.xcore.x_u10_u607.yint2                  0
+x_u1.xcore.x_u10_u607.yint3                  1
+x_u1.xcore.x_u10_u607.e_abmgate2_int1               1
+x_u1.xcore.u10_n16864664                     1
+x_u1.xcore.x_u10_u613.yint                   1
+x_u1.xcore.x_u10_u613.e_abmgate_int1               1
+x_u1.xcore.u10_h_end                         0
+x_u1.xcore.u10_n16864651                     1
+x_u1.xcore.u10_n16854816                     1
+x_u1.xcore.x_u10_u608.yint                   0
+x_u1.xcore.x_u10_u608.e_abmgate_int1               0
+x_u1.xcore.u10_n16864552                     0
+x_u1.xcore.x_u10_u617.yint                   0
+x_u1.xcore.x_u10_u617.e_abmgate_int1               0
+x_u1.xcore.u10_n16864604                     0
+x_u1.xcore.u10_n16864680                   512
+x_u1.xcore.u10_n16864539                     0
+x_u1.xcore.x_u10_u625.yint                   0
+x_u1.xcore.x_u10_u625.e_abm_int1               0
+x_u1.xcore.u10_n16878597                  3.98
+x_u1.xcore.x_u10_u618.yint1                  0
+x_u1.xcore.x_u10_u618.e_abmgate1_int1               0
+x_u1.xcore.x_u10_u618.yint2                  0
+x_u1.xcore.x_u10_u618.yint3                  1
+x_u1.xcore.x_u10_u618.e_abmgate2_int1               1
+x_u1.xcore.x_u10_u609.yint                   0
+x_u1.xcore.x_u10_u609.e_abm_int1               0
+x_u1.xcore.u10_n16864671                     0
+x_u1.xcore.e_u10_abm171_int1                 1
+x_u1.xcore.x_u10_u616.yint                   0
+x_u1.xcore.x_u10_u616.e_abmgate_int1               0
+x_u1.xcore.u10_n16878590                     5
+x_u1.xcore.u10_n16864688                   515
+x_u1.xcore.x_u10_u619.yint                   0
+x_u1.xcore.x_u10_u619.e_abm_int1               0
+x_u1.xcore.u10_n16855026                    10
+x_u1.xcore.u10_n16854953                     0
+x_u1.xcore.x_u10_u30.x_nor1.yint               0
+x_u1.xcore.x_u10_u30.x_nor1.e_abmgate_int1               0
+x_u1.xcore.x_u10_u30.x_nor2.yint               1
+x_u1.xcore.x_u10_u30.x_nor2.e_abmgate_int1               1
+x_u1.xcore.x_u10_u30.s1                      0
+x_u1.xcore.x_u10_u30.e_rhp_int1               0
+x_u1.xcore.e_u10_abm1_int1                   0
+x_u1.xcore.ocb                               0
+x_u1.xcore.x_u10_u620.yint                   0
+x_u1.xcore.x_u10_u620.e_abmgate_int1               0
+x_u1.xcore.u10_n16854955                     1
+x_u1.xcore.x_u10_u621.yint1                  0
+x_u1.xcore.x_u10_u621.e_abmgate1_int1               0
+x_u1.xcore.x_u10_u621.yint2                  0
+x_u1.xcore.x_u10_u621.yint3                  1
+x_u1.xcore.x_u10_u621.e_abmgate2_int1               1
+x_u1.xcore.x_u10_u648.vsup                   1
+x_u1.xcore.x_u10_u648.ya                100000
+x_u1.xcore.x_u10_u648.gin_int1           1e-06
+x_u1.xcore.x_u10_u648.gdis_int1               0
+x_u1.xcore.x_u10_u648.ytd                    0
+x_u1.xcore.x_u10_u648.eabm1_int1               0
+x_u1.xcore.x_u10_u648.p                      0
+x_u1.xcore.x_u10_u648.exor_int1               0
+x_u1.xcore.x_u10_u648.q1                     0
+x_u1.xcore.x_u10_u648.eand1_int1               0
+x_u1.xcore.x_u10_u648.qn1                    1
+x_u1.xcore.x_u10_u648.eand2_int1               1
+x_u1.xcore.n16864942                         1
+x_u1.xcore.vsense_int             -2.52914e-20
+x_u1.xcore.x_u3_u137.yint                    0
+x_u1.xcore.x_u3_u137.e_abmgate_int1               0
+x_u1.xcore.ulq_mode                          0
+x_u1.xcore.u3_ulq_clk                        0
+x_u1.xcore.u3_clk_500k                       0
+x_u1.xcore.ramp                    5.30001e-07
+x_u1.xcore.u3_n16804971                      5
+x_u1.xcore.u3_blank                          0
+x_u1.xcore.u3_n16692390                   1.75
+x_u1.xcore.x_u3_u135.yint1                   0
+x_u1.xcore.x_u3_u135.e_abmgate1_int1               0
+x_u1.xcore.x_u3_u135.yint2                   0
+x_u1.xcore.x_u3_u135.yint3                   0
+x_u1.xcore.x_u3_u135.e_abmgate2_int1               0
+x_u1.xcore.u3_n16810628                      0
+x_u1.xcore.x_u3_u131.yint                    0
+x_u1.xcore.x_u3_u131.e_abm_int1               0
+x_u1.xcore.u3_n16817384                      0
+x_u1.xcore.u3_n16813790                  3e-07
+x_u1.xcore.u3_n16807586                      1
+x_u1.xcore.g_u3_abmii1_int1            5.3e-06
+x_u1.xcore.x_u3_u136.yint                    1
+x_u1.xcore.x_u3_u136.e_abmgate_int1               1
+x_u1.xcore.n16888001                         0
+x_u1.xcore.u5_n16755015            7.67713e-78
+x_u1.xcore.u5_n16757488                    2.3
+x_u1.xcore.u5_n16739044            1.53697e-77
+x_u1.xcore.u5_tail_cur                   4e-05
+x_u1.xcore.e_u5_abm10_int1               4e-05
+x_u1.xcore.u5_low_clmp                       0
+x_u1.xcore.u5_n7406885                       0
+x_u1.xcore.g_u5_abm2i3_int1       -5.07706e-82
+x_u1.xcore.u5_gm                         2e-05
+x_u1.xcore.e_u5_abm8_int1                    0
+x_u1.xcore.e_u5_abm9_int1                    0
+x_u1.xcore.g_u5_abm2i1_int1       -1.99988e-08
+x_u1.xcore.vref_gm                -9.99939e-05
+x_u1.xcore.e_u5_abm169_int1              2e-05
+x_u1.xcore.x_u4_u825.yint                    1
+x_u1.xcore.x_u4_u825.e_abmgate_int1               1
+x_u1.xcore.u4_n16681297                      1
+x_u1.xcore.u4_n7397984                     1.7
+x_u1.xcore.g_u4_abmii1_int1                  0
+x_u1.xcore.u4_n16678220                      0
+x_u1.xcore.u4_n16681349                      1
+x_u1.xcore.u4_n16681263                -0.0001
+x_u1.xcore.x_u4_u827.yint                    0
+x_u1.xcore.x_u4_u827.e_abmgate_int1               0
+x_u1.xcore.u4_hiccup_n                       1
+x_u1.xcore.u4_n16661855                      0
+x_u1.xcore.e_u4_abm174_int1       -9.99939e-05
+x_u1.xcore.x_u4_u1.yint                      0
+x_u1.xcore.x_u4_u1.e_abmgate_int1               0
+x_u1.xcore.x_u4_u2.yint                      1
+x_u1.xcore.x_u4_u2.e_abmgate_int1               1
+x_u1.xcore.comp                   -1.99965e-18
+x_u1.xcore.x_u6_u823.yint                    0
+x_u1.xcore.x_u6_u823.e_abmgate_int1               0
+x_u1.xcore.u6_n17090706                      1
+x_u1.xcore.u6_pwm_clk                        0
+x_u1.xcore.u6_n17026806                      0
+x_u1.xcore.u6_disable              3.92859e-70
+x_u1.xcore.u6_n17027128                      0
+x_u1.xcore.u6_n17027150                   0.01
+x_u1.xcore.x_u6_u828.yint                    0
+x_u1.xcore.x_u6_u828.e_abmgate_int1               0
+x_u1.xcore.u6_n17096258                      1
+x_u1.xcore.u6_n17108478           1.33061e-110
+x_u1.xcore.x_u6_u630.yint                    0
+x_u1.xcore.x_u6_u630.e_abm_int1               0
+x_u1.xcore.u6_n17162707                   0.45
+x_u1.xcore.u6_n17152306                      0
+x_u1.xcore.x_u6_u612.yint                    1
+x_u1.xcore.x_u6_u612.e_abm_int1               1
+x_u1.xcore.u6_n17026579                 0.0199
+x_u1.xcore.u6_n17027029          -1.01769e-191
+x_u1.xcore.ulq_mode_pre           3.60663e-130
+x_u1.xcore.u6_n17140876           5.44599e-111
+x_u1.xcore.x_u6_u623.yint                    0
+x_u1.xcore.x_u6_u623.e_abm_int1               0
+x_u1.xcore.u6_n17096095              5.001e-15
+x_u1.xcore.u6_n17096138                   3.98
+x_u1.xcore.u6_n17026611                      0
+x_u1.xcore.u6_n17026643           2.10467e-168
+x_u1.xcore.x_u6_u632.yint                    0
+x_u1.xcore.x_u6_u632.e_abmgate_int1               0
+x_u1.xcore.u6_s_high                         0
+x_u1.xcore.u6_2                              0
+x_u1.xcore.u6_n17027085                      0
+x_u1.xcore.x_u6_u829.yint                    0
+x_u1.xcore.x_u6_u829.e_abmgate_int1               0
+x_u1.xcore.e_u6_abm151_int1                  0
+x_u1.xcore.u6_n17096275            3.50442e-92
+x_u1.xcore.u6_n17096122                      5
+x_u1.xcore.x_u6_u629.yint                    0
+x_u1.xcore.x_u6_u629.e_abm_int1               0
+x_u1.xcore.u6_n17096178                      1
+x_u1.xcore.e_u6_abm171_int1                  1
+x_u1.xcore.u6_skip_modeb                     0
+x_u1.xcore.u6_n17152274                      0
+x_u1.xcore.u6_iswf                         -50
+x_u1.xcore.e_u6_abm152_int1                -50
+x_u1.xcore.u6_set1                           1
+x_u1.xcore.x_u6_u2.inp1                      0
+x_u1.xcore.x_u6_u2.inm1                   0.45
+x_u1.xcore.u6_n17027502                   0.45
+x_u1.xcore.x_u6_u2.inp2                      0
+x_u1.xcore.x_u6_u2.ehys_int1                 0
+x_u1.xcore.x_u6_u2.1                         0
+x_u1.xcore.u6_n17027443                   0.01
+x_u1.xcore.x_u6_u2.eout_int1                 0
+x_u1.xcore.x_u6_u634.yint                    0
+x_u1.xcore.x_u6_u634.e_abmgate_int1               0
+x_u1.xcore.u6_ctrl                           1
+x_u1.xcore.u6_sleep_n                        0
+x_u1.xcore.u6_skip_n                         0
+x_u1.xcore.x_u6_u603.x1.yint1                0
+x_u1.xcore.x_u6_u603.x1.e_abmgate1_int1               0
+x_u1.xcore.x_u6_u603.x1.yint2                0
+x_u1.xcore.x_u6_u603.x1.yint3                1
+x_u1.xcore.x_u6_u603.x1.e_abmgate2_int1               1
+x_u1.xcore.x_u6_u603.clkdel                  1
+x_u1.xcore.x_u6_u603.x2.yint                 0
+x_u1.xcore.x_u6_u603.x2.e_abmgate_int1               0
+x_u1.xcore.x_u6_u603.clkint                  0
+x_u1.xcore.x_u6_u603.qint                    0
+x_u1.xcore.x_u6_u603.gq_int1                -5
+x_u1.xcore.u6_clk_low                        0
+x_u1.xcore.x_u6_u603.my5                     5
+x_u1.xcore.x_u6_u603.qqq                     0
+x_u1.xcore.x_u6_u603.x3.yint1                0
+x_u1.xcore.x_u6_u603.x3.e_abmgate1_int1               0
+x_u1.xcore.x_u6_u603.x3.yint2                0
+x_u1.xcore.x_u6_u603.x3.yint3                0
+x_u1.xcore.x_u6_u603.x3.e_abmgate2_int1               0
+x_u1.xcore.x_u6_u603.qbr                     1
+x_u1.xcore.x_u6_u603.eqb_int1                1
+x_u1.xcore.n17026674                         1
+x_u1.xcore.u6_ictrl                     -3.458
+x_u1.xcore.e_u6_abm153_int1             -3.458
+x_u1.xcore.u6_islope                         0
+x_u1.xcore.x_u6_u628.yint                    0
+x_u1.xcore.x_u6_u628.e_abm_int1               0
+x_u1.xcore.u6_high                           0
+x_u1.xcore.u6_n17152310          -2.11295e-133
+x_u1.xcore.u6_n17027461                      0
+x_u1.xcore.u6_n17027477                      0
+x_u1.xcore.x_u6_u609.yint                    0
+x_u1.xcore.x_u6_u609.e_abmgate_int1               0
+x_u1.xcore.u6_ovp                            1
+x_u1.xcore.u6_clk1                           0
+x_u1.xcore.e_u6_abm165_int1                  0
+x_u1.xcore.u6_islope_int              3.71e-12
+x_u1.xcore.e_u6_abm5_int1             3.71e-12
+x_u1.xcore.u6_n17026546                  0.648
+x_u1.xcore.x_u6_u631.yint                    0
+x_u1.xcore.x_u6_u631.e_abmgate_int1               0
+x_u1.xcore.u6_n17027498                      1
+x_u1.xcore.u6_n17027087                      0
+x_u1.xcore.x_u6_u648.vsup                    1
+x_u1.xcore.x_u6_u648.ya                 100000
+x_u1.xcore.x_u6_u648.gin_int1            1e-06
+x_u1.xcore.x_u6_u648.gdis_int1               0
+x_u1.xcore.x_u6_u648.ytd                     0
+x_u1.xcore.x_u6_u648.eabm1_int1               0
+x_u1.xcore.x_u6_u648.p                       0
+x_u1.xcore.x_u6_u648.exor_int1               0
+x_u1.xcore.x_u6_u648.q1                      0
+x_u1.xcore.x_u6_u648.eand1_int1               0
+x_u1.xcore.u6_clk                            0
+x_u1.xcore.x_u6_u648.qn1                     1
+x_u1.xcore.x_u6_u648.eand2_int1               1
+x_u1.xcore.n17027239                         1
+x_u1.xcore.x_u6_u3.inp1                      0
+x_u1.xcore.x_u6_u3.inm1                 -0.648
+x_u1.xcore.x_u6_u3.inp2                  0.024
+x_u1.xcore.x_u6_u3.ehys_int1            -0.024
+x_u1.xcore.x_u6_u3.1                         1
+x_u1.xcore.u6_n17026548                  0.024
+x_u1.xcore.x_u6_u3.eout_int1                 1
+x_u1.xcore.x_u6_u646.x1.yint1                0
+x_u1.xcore.x_u6_u646.x1.e_abmgate1_int1               0
+x_u1.xcore.x_u6_u646.x1.yint2                0
+x_u1.xcore.x_u6_u646.x1.yint3                1
+x_u1.xcore.x_u6_u646.x1.e_abmgate2_int1               1
+x_u1.xcore.x_u6_u646.clkdel                  1
+x_u1.xcore.x_u6_u646.x2.yint                 0
+x_u1.xcore.x_u6_u646.x2.e_abmgate_int1               0
+x_u1.xcore.x_u6_u646.clkint                  0
+x_u1.xcore.x_u6_u646.qint                    0
+x_u1.xcore.x_u6_u646.gq_int1                -5
+x_u1.xcore.x_u6_u646.my5                     1
+x_u1.xcore.x_u6_u646.myvss                   0
+x_u1.xcore.x_u6_u646.qqq                     0
+x_u1.xcore.x_u6_u646.x3.yint1                0
+x_u1.xcore.x_u6_u646.x3.e_abmgate1_int1               0
+x_u1.xcore.x_u6_u646.x3.yint2                0
+x_u1.xcore.x_u6_u646.x3.yint3                0
+x_u1.xcore.x_u6_u646.x3.e_abmgate2_int1               0
+x_u1.xcore.u6_n17027351                      0
+x_u1.xcore.x_u6_u646.qbr                     1
+x_u1.xcore.x_u6_u646.eqb_int1                1
+x_u1.xcore.n17027164                         1
+x_u1.xcore.u6_500n                           0
+x_u1.xcore.u6_n17027268                      0
+x_u1.xcore.x_u6_u30.x_nor1.yint               0
+x_u1.xcore.x_u6_u30.x_nor1.e_abmgate_int1               0
+x_u1.xcore.n17027039                         1
+x_u1.xcore.u6_slope_en                       0
+x_u1.xcore.x_u6_u30.x_nor2.yint               1
+x_u1.xcore.x_u6_u30.x_nor2.e_abmgate_int1               1
+x_u1.xcore.x_u6_u30.s1           -1.01769e-191
+x_u1.xcore.x_u6_u30.e_rhp_int1   -1.01769e-191
+x_u1.xcore.x_u6_u831.yint                    0
+x_u1.xcore.x_u6_u831.e_abmgate_int1               0
+x_u1.xcore.u6_indelayed1         -1.61116e-152
+x_u1.xcore.x_u6_u643.yint                    0
+x_u1.xcore.x_u6_u643.e_abmgate_int1               0
+x_u1.xcore.u6_n17027096                      0
+x_u1.xcore.e_u6_abm170_int1                  0
+x_u1.xcore.x_u6_u822.yint1                   0
+x_u1.xcore.x_u6_u822.e_abmgate1_int1               0
+x_u1.xcore.x_u6_u822.yint2                   0
+x_u1.xcore.x_u6_u822.yint3                   1
+x_u1.xcore.x_u6_u822.e_abmgate2_int1               1
+x_u1.xcore.e_u6_abm6_int1                    0
+x_u1.xcore.x_u6_u600.yint                    1
+x_u1.xcore.x_u6_u600.e_abm_int1               1
+x_u1.xcore.x_u6_u824.yint                    0
+x_u1.xcore.x_u6_u824.e_abmgate_int1               0
+x_u1.xcore.x_u6_u647.x1.yint1                0
+x_u1.xcore.x_u6_u647.x1.e_abmgate1_int1               0
+x_u1.xcore.x_u6_u647.x1.yint2                0
+x_u1.xcore.x_u6_u647.x1.yint3                1
+x_u1.xcore.x_u6_u647.x1.e_abmgate2_int1               1
+x_u1.xcore.x_u6_u647.clkdel                  1
+x_u1.xcore.x_u6_u647.x2.yint                 0
+x_u1.xcore.x_u6_u647.x2.e_abmgate_int1               0
+x_u1.xcore.x_u6_u647.clkint                  0
+x_u1.xcore.x_u6_u647.qint                    0
+x_u1.xcore.x_u6_u647.gq_int1                -5
+x_u1.xcore.x_u6_u647.my5                     1
+x_u1.xcore.x_u6_u647.myvss                   0
+x_u1.xcore.x_u6_u647.qqq                     0
+x_u1.xcore.x_u6_u647.x3.yint1                0
+x_u1.xcore.x_u6_u647.x3.e_abmgate1_int1               0
+x_u1.xcore.x_u6_u647.x3.yint2                0
+x_u1.xcore.x_u6_u647.x3.yint3                0
+x_u1.xcore.x_u6_u647.x3.e_abmgate2_int1               0
+x_u1.xcore.x_u6_u647.qbr                     1
+x_u1.xcore.x_u6_u647.eqb_int1                1
+x_u1.xcore.e_u6_abm169_int1                  0
+x_u1.xcore.x_u6_u827.yint1                   0
+x_u1.xcore.x_u6_u827.e_abmgate1_int1               0
+x_u1.xcore.x_u6_u827.yint2                   0
+x_u1.xcore.x_u6_u827.yint3                   1
+x_u1.xcore.x_u6_u827.e_abmgate2_int1               1
+x_c6.1                                       0
+x_c5.1                                       0
+b.x_u1.xcore.x_u6_u827.be_abmgate2#branch               0
+b.x_u1.xcore.x_u6_u827.be_abmgate1#branch               0
+b.x_u1.xcore.be_u6_abm169#branch               0
+b.x_u1.xcore.x_u6_u647.beqb#branch               0
+b.x_u1.xcore.x_u6_u647.x3.be_abmgate2#branch               0
+b.x_u1.xcore.x_u6_u647.x3.be_abmgate1#branch               0
+b.x_u1.xcore.x_u6_u647.bgq#branch               0
+b.x_u1.xcore.x_u6_u647.x2.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u647.x1.be_abmgate2#branch               0
+b.x_u1.xcore.x_u6_u647.x1.be_abmgate1#branch               0
+b.x_u1.xcore.x_u6_u824.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u600.be_abm#branch               0
+b.x_u1.xcore.be_u6_abm6#branch               0
+b.x_u1.xcore.x_u6_u822.be_abmgate2#branch               0
+b.x_u1.xcore.x_u6_u822.be_abmgate1#branch               0
+b.x_u1.xcore.be_u6_abm170#branch               0
+b.x_u1.xcore.x_u6_u643.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u831.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u30.be_rhp#branch               0
+b.x_u1.xcore.x_u6_u30.x_nor2.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u30.x_nor1.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u646.beqb#branch               0
+b.x_u1.xcore.x_u6_u646.x3.be_abmgate2#branch               0
+b.x_u1.xcore.x_u6_u646.x3.be_abmgate1#branch               0
+b.x_u1.xcore.x_u6_u646.bgq#branch               0
+b.x_u1.xcore.x_u6_u646.x2.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u646.x1.be_abmgate2#branch               0
+b.x_u1.xcore.x_u6_u646.x1.be_abmgate1#branch               0
+b.x_u1.xcore.x_u6_u3.beout#branch               0
+b.x_u1.xcore.x_u6_u3.behys#branch               0
+b.x_u1.xcore.x_u6_u648.beand2#branch               0
+b.x_u1.xcore.x_u6_u648.beand1#branch               0
+b.x_u1.xcore.x_u6_u648.bexor#branch               0
+b.x_u1.xcore.x_u6_u648.beabm1#branch               0
+b.x_u1.xcore.x_u6_u648.bgdis#branch               0
+b.x_u1.xcore.x_u6_u648.bgin#branch               0
+b.x_u1.xcore.x_u6_u631.be_abmgate#branch               0
+b.x_u1.xcore.be_u6_abm5#branch               0
+b.x_u1.xcore.be_u6_abm165#branch               0
+b.x_u1.xcore.x_u6_u609.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u628.be_abm#branch               0
+b.x_u1.xcore.be_u6_abm153#branch               0
+b.x_u1.xcore.x_u6_u603.beqb#branch               0
+b.x_u1.xcore.x_u6_u603.x3.be_abmgate2#branch               0
+b.x_u1.xcore.x_u6_u603.x3.be_abmgate1#branch               0
+b.x_u1.xcore.x_u6_u603.bgq#branch               0
+b.x_u1.xcore.x_u6_u603.x2.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u603.x1.be_abmgate2#branch               0
+b.x_u1.xcore.x_u6_u603.x1.be_abmgate1#branch               0
+b.x_u1.xcore.x_u6_u634.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u2.beout#branch               0
+b.x_u1.xcore.x_u6_u2.behys#branch               0
+b.x_u1.xcore.be_u6_abm152#branch               0
+b.x_u1.xcore.be_u6_abm171#branch               0
+b.x_u1.xcore.x_u6_u629.be_abm#branch               0
+b.x_u1.xcore.be_u6_abm151#branch               0
+b.x_u1.xcore.x_u6_u829.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u632.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u623.be_abm#branch               0
+b.x_u1.xcore.x_u6_u612.be_abm#branch               0
+b.x_u1.xcore.x_u6_u630.be_abm#branch               0
+b.x_u1.xcore.x_u6_u828.be_abmgate#branch               0
+b.x_u1.xcore.x_u6_u823.be_abmgate#branch               0
+b.x_u1.xcore.x_u4_u2.be_abmgate#branch               0
+b.x_u1.xcore.x_u4_u1.be_abmgate#branch               0
+b.x_u1.xcore.be_u4_abm174#branch               0
+b.x_u1.xcore.x_u4_u827.be_abmgate#branch               0
+b.x_u1.xcore.bg_u4_abmii1#branch               0
+b.x_u1.xcore.x_u4_u825.be_abmgate#branch               0
+b.x_u1.xcore.be_u5_abm169#branch               0
+b.x_u1.xcore.bg_u5_abm2i1#branch               0
+b.x_u1.xcore.be_u5_abm9#branch               0
+b.x_u1.xcore.be_u5_abm8#branch               0
+b.x_u1.xcore.bg_u5_abm2i3#branch               0
+b.x_u1.xcore.be_u5_abm10#branch               0
+b.x_u1.xcore.x_u3_u136.be_abmgate#branch               0
+b.x_u1.xcore.bg_u3_abmii1#branch               0
+b.x_u1.xcore.x_u3_u131.be_abm#branch               0
+b.x_u1.xcore.x_u3_u135.be_abmgate2#branch               0
+b.x_u1.xcore.x_u3_u135.be_abmgate1#branch               0
+b.x_u1.xcore.x_u3_u137.be_abmgate#branch               0
+b.x_u1.xcore.x_u10_u648.beand2#branch               0
+b.x_u1.xcore.x_u10_u648.beand1#branch               0
+b.x_u1.xcore.x_u10_u648.bexor#branch               0
+b.x_u1.xcore.x_u10_u648.beabm1#branch               0
+b.x_u1.xcore.x_u10_u648.bgdis#branch               0
+b.x_u1.xcore.x_u10_u648.bgin#branch               0
+b.x_u1.xcore.x_u10_u621.be_abmgate2#branch               0
+b.x_u1.xcore.x_u10_u621.be_abmgate1#branch               0
+b.x_u1.xcore.x_u10_u620.be_abmgate#branch               0
+b.x_u1.xcore.be_u10_abm1#branch               0
+b.x_u1.xcore.x_u10_u30.be_rhp#branch               0
+b.x_u1.xcore.x_u10_u30.x_nor2.be_abmgate#branch               0
+b.x_u1.xcore.x_u10_u30.x_nor1.be_abmgate#branch               0
+b.x_u1.xcore.x_u10_u619.be_abm#branch               0
+b.x_u1.xcore.x_u10_u616.be_abmgate#branch               0
+b.x_u1.xcore.be_u10_abm171#branch               0
+b.x_u1.xcore.x_u10_u609.be_abm#branch               0
+b.x_u1.xcore.x_u10_u618.be_abmgate2#branch               0
+b.x_u1.xcore.x_u10_u618.be_abmgate1#branch               0
+b.x_u1.xcore.x_u10_u625.be_abm#branch               0
+b.x_u1.xcore.x_u10_u617.be_abmgate#branch               0
+b.x_u1.xcore.x_u10_u608.be_abmgate#branch               0
+b.x_u1.xcore.x_u10_u613.be_abmgate#branch               0
+b.x_u1.xcore.x_u10_u607.be_abmgate2#branch               0
+b.x_u1.xcore.x_u10_u607.be_abmgate1#branch               0
+b.x_u1.xcore.x_u10_u622.be_abmgate#branch               0
+b.x_u1.xcore.x_u10_u615.be_abmgate#branch               0
+b.x_u1.xcore.x_u10_u650.beand2#branch               0
+b.x_u1.xcore.x_u10_u650.beand1#branch               0
+b.x_u1.xcore.x_u10_u650.bexor#branch               0
+b.x_u1.xcore.x_u10_u650.beabm1#branch               0
+b.x_u1.xcore.x_u10_u650.bgdis#branch               0
+b.x_u1.xcore.x_u10_u650.bgin#branch               0
+b.x_u1.xcore.x_u10_u614.be_abmgate#branch               0
+b.x_u1.xcore.x_u10_u652.be_abmgate#branch               0
+b.x_u1.xcore.x_u11_u3.beout#branch               0
+b.x_u1.xcore.x_u11_u3.behys#branch               0
+b.x_u1.xcore.x_u11_u604.be_abmgate#branch               0
+b.x_u1.xcore.be_u11_abm174#branch               0
+b.x_u1.xcore.x_u11_u605.be_abmgate#branch               0
+b.x_u1.xcore.bg_u11_abmii1#branch               0
+b.x_u1.xcore.x_u11_u2.beout#branch               0
+b.x_u1.xcore.x_u11_u2.behys#branch               0
+b.x_u1.xcore.x_u11_u136.be_abmgate#branch               0
+b.x_u1.xcore.x_u12_u620.be_abmgate#branch               0
+b.x_u1.xcore.x_u12_u611.be_abm#branch               0
+b.x_u1.xcore.x_u12_u621.be_abmgate#branch               0
+b.x_u1.xcore.be_u12_abm153#branch               0
+b.x_u1.xcore.x_u12_u605.be_abm#branch               0
+b.x_u1.xcore.x_u12_u647.be_abmgate#branch               0
+b.x_u1.xcore.x_u12_u646.beqb#branch               0
+b.x_u1.xcore.x_u12_u646.x3.be_abmgate2#branch               0
+b.x_u1.xcore.x_u12_u646.x3.be_abmgate1#branch               0
+b.x_u1.xcore.x_u12_u646.bgq#branch               0
+b.x_u1.xcore.x_u12_u646.x2.be_abmgate#branch               0
+b.x_u1.xcore.x_u12_u646.x1.be_abmgate2#branch               0
+b.x_u1.xcore.x_u12_u646.x1.be_abmgate1#branch               0
+b.x_u1.xcore.be_u12_abm154#branch               0
+b.x_u1.xcore.x_u12_u613.be_abmgate#branch               0
+b.x_u1.xcore.x_u8_u616.be_abmgate#branch               0
+b.x_u1.xcore.x_u8_u617.be_abmgate#branch               0
+b.x_u1.xcore.be_u8_abm167#branch               0
+b.x_u1.xcore.x_u8_u827.be_abmgate#branch               0
+b.x_u1.xcore.x_u8_u622.be_abmgate#branch               0
+b.x_u1.xcore.x_u8_u613.be_abmgate#branch               0
+b.x_u1.xcore.be_u8_abm79#branch               0
+b.x_u1.xcore.x_u8_u619.be_abmgate#branch               0
+b.x_u1.xcore.x_u8_u621.be_abmgate#branch               0
+b.x_u1.xcore.be_u8_abm170#branch               0
+h.x_u1.xcore.x_u8_h1.h_u8_h1#branch               0
+v.x_u1.xcore.x_u8_h1.vh_u8_h1#branch     -1.3942e-15
+h.x_u1.xcore.x_u8_h2.h_u8_h2#branch               0
+v.x_u1.xcore.x_u8_h2.vh_u8_h2#branch     -1.3942e-15
+l.x_l1.l#branch                    -1.2933e-19
+e.x_u1.xcore.x_u6_u827.e_abmgate2#branch               0
+e.x_u1.xcore.x_u6_u827.e_abmgate1#branch               0
+e.x_u1.xcore.e_u6_abm169#branch               0
+e.x_u1.xcore.x_u6_u647.eqb#branch               0
+e.x_u1.xcore.x_u6_u647.x3.e_abmgate2#branch               0
+e.x_u1.xcore.x_u6_u647.x3.e_abmgate1#branch               0
+e.x_u1.xcore.x_u6_u647.eq#branch               0
+e.x_u1.xcore.x_u6_u647.x2.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u647.x1.e_abmgate2#branch               0
+e.x_u1.xcore.x_u6_u647.x1.e_abmgate1#branch               0
+e.x_u1.xcore.x_u6_u824.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u600.e_abm#branch               0
+e.x_u1.xcore.e_u6_abm6#branch                0
+e.x_u1.xcore.x_u6_u822.e_abmgate2#branch               0
+e.x_u1.xcore.x_u6_u822.e_abmgate1#branch               0
+e.x_u1.xcore.e_u6_abm170#branch               0
+e.x_u1.xcore.x_u6_u643.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u831.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u30.e_rhp#branch               0
+e.x_u1.xcore.x_u6_u30.x_nor2.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u30.x_nor1.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u646.eqb#branch               0
+e.x_u1.xcore.x_u6_u646.x3.e_abmgate2#branch               0
+e.x_u1.xcore.x_u6_u646.x3.e_abmgate1#branch               0
+e.x_u1.xcore.x_u6_u646.eq#branch               0
+e.x_u1.xcore.x_u6_u646.x2.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u646.x1.e_abmgate2#branch               0
+e.x_u1.xcore.x_u6_u646.x1.e_abmgate1#branch               0
+e.x_u1.xcore.x_u6_u3.eout#branch               0
+e.x_u1.xcore.x_u6_u3.ehys#branch               0
+e.x_u1.xcore.x_u6_u3.ein#branch               0
+e.x_u1.xcore.x_u6_u648.eand2#branch    -1.00044e-11
+e.x_u1.xcore.x_u6_u648.eand1#branch               0
+e.x_u1.xcore.x_u6_u648.exor#branch               0
+e.x_u1.xcore.x_u6_u648.eabm1#branch               0
+e.x_u1.xcore.x_u6_u631.e_abmgate#branch               0
+e.x_u1.xcore.e_u6_abm5#branch                0
+e.x_u1.xcore.e_u6_abm165#branch               0
+e.x_u1.xcore.x_u6_u609.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u628.e_abm#branch               0
+e.x_u1.xcore.e_u6_abm153#branch               0
+e.x_u1.xcore.x_u6_u603.eqb#branch               0
+e.x_u1.xcore.x_u6_u603.x3.e_abmgate2#branch               0
+e.x_u1.xcore.x_u6_u603.x3.e_abmgate1#branch               0
+e.x_u1.xcore.x_u6_u603.eq#branch               0
+e.x_u1.xcore.x_u6_u603.x2.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u603.x1.e_abmgate2#branch               0
+e.x_u1.xcore.x_u6_u603.x1.e_abmgate1#branch               0
+e.x_u1.xcore.x_u6_u634.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u2.eout#branch               0
+e.x_u1.xcore.x_u6_u2.ehys#branch               0
+e.x_u1.xcore.x_u6_u2.ein#branch               0
+e.x_u1.xcore.e_u6_abm152#branch               0
+e.x_u1.xcore.e_u6_e1#branch                  0
+e.x_u1.xcore.e_u6_abm171#branch      -1.001e-09
+e.x_u1.xcore.x_u6_u629.e_abm#branch               0
+e.x_u1.xcore.e_u6_abm151#branch   -1.41574e-183
+e.x_u1.xcore.x_u6_u829.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u632.e_abmgate#branch               0
+e.x_u1.xcore.x_u6_u623.e_abm#branch    3.60663e-130
+e.x_u1.xcore.x_u6_u612.e_abm#branch               0
+e.x_u1.xcore.x_u6_u630.e_abm#branch               0
+e.x_u1.xcore.x_u6_u828.e_abmgate#branch    1.33061e-110
+e.x_u1.xcore.x_u6_u823.e_abmgate#branch               0
+e.x_u1.xcore.x_u4_u2.e_abmgate#branch               0
+e.x_u1.xcore.x_u4_u1.e_abmgate#branch               0
+e.x_u1.xcore.e_u4_abm174#branch               0
+e.x_u1.xcore.x_u4_u827.e_abmgate#branch               0
+e.x_u1.xcore.x_u4_u825.e_abmgate#branch      -1.001e-09
+e.x_u1.xcore.e_u5_abm169#branch               0
+e.x_u1.xcore.e_u5_abm9#branch                0
+e.x_u1.xcore.e_u5_abm8#branch                0
+e.x_u1.xcore.e_u5_abm10#branch               0
+e.x_u1.xcore.x_u3_u136.e_abmgate#branch      -1.001e-09
+e.x_u1.xcore.e_u3_e1#branch                  0
+e.x_u1.xcore.x_u3_u131.e_abm#branch               0
+e.x_u1.xcore.x_u3_u135.e_abmgate2#branch               0
+e.x_u1.xcore.x_u3_u135.e_abmgate1#branch               0
+e.x_u1.xcore.x_u3_u137.e_abmgate#branch               0
+e.x_u1.xcore.x_u10_u648.eand2#branch    -1.00044e-11
+e.x_u1.xcore.x_u10_u648.eand1#branch               0
+e.x_u1.xcore.x_u10_u648.exor#branch               0
+e.x_u1.xcore.x_u10_u648.eabm1#branch               0
+e.x_u1.xcore.x_u10_u621.e_abmgate2#branch               0
+e.x_u1.xcore.x_u10_u621.e_abmgate1#branch               0
+e.x_u1.xcore.x_u10_u620.e_abmgate#branch               0
+e.x_u1.xcore.e_u10_abm1#branch               0
+e.x_u1.xcore.x_u10_u30.e_rhp#branch               0
+e.x_u1.xcore.x_u10_u30.x_nor2.e_abmgate#branch               0
+e.x_u1.xcore.x_u10_u30.x_nor1.e_abmgate#branch               0
+e.x_u1.xcore.x_u10_u619.e_abm#branch               0
+e.x_u1.xcore.x_u10_u616.e_abmgate#branch               0
+e.x_u1.xcore.e_u10_abm171#branch      -1.001e-09
+e.x_u1.xcore.x_u10_u609.e_abm#branch               0
+e.x_u1.xcore.x_u10_u618.e_abmgate2#branch      -1.001e-09
+e.x_u1.xcore.x_u10_u618.e_abmgate1#branch               0
+e.x_u1.xcore.x_u10_u625.e_abm#branch               0
+e.x_u1.xcore.x_u10_u617.e_abmgate#branch               0
+e.x_u1.xcore.x_u10_u608.e_abmgate#branch               0
+e.x_u1.xcore.x_u10_u613.e_abmgate#branch               0
+e.x_u1.xcore.x_u10_u607.e_abmgate2#branch               0
+e.x_u1.xcore.x_u10_u607.e_abmgate1#branch               0
+e.x_u1.xcore.x_u10_u622.e_abmgate#branch               0
+e.x_u1.xcore.x_u10_u615.e_abmgate#branch               0
+e.x_u1.xcore.x_u10_u650.eand2#branch    -1.00044e-11
+e.x_u1.xcore.x_u10_u650.eand1#branch               0
+e.x_u1.xcore.x_u10_u650.exor#branch               0
+e.x_u1.xcore.x_u10_u650.eabm1#branch               0
+e.x_u1.xcore.x_u10_u614.e_abmgate#branch               0
+e.x_u1.xcore.x_u10_u652.e_abmgate#branch               0
+e.x_u1.xcore.x_u11_u3.eout#branch               0
+e.x_u1.xcore.x_u11_u3.ehys#branch               0
+e.x_u1.xcore.x_u11_u3.ein#branch               0
+e.x_u1.xcore.x_u11_u604.e_abmgate#branch               0
+e.x_u1.xcore.e_u11_abm174#branch     8.00385e-08
+e.x_u1.xcore.x_u11_u605.e_abmgate#branch               0
+e.x_u1.xcore.x_u11_u2.eout#branch               0
+e.x_u1.xcore.x_u11_u2.ehys#branch               0
+e.x_u1.xcore.x_u11_u2.ein#branch               0
+e.x_u1.xcore.x_u11_u136.e_abmgate#branch               0
+e.x_u1.xcore.x_u12_u620.e_abmgate#branch               0
+e.x_u1.xcore.x_u12_u611.e_abm#branch               0
+e.x_u1.xcore.x_u12_u621.e_abmgate#branch               0
+e.x_u1.xcore.e_u12_abm153#branch               0
+e.x_u1.xcore.x_u12_u605.e_abm#branch               0
+e.x_u1.xcore.x_u12_u647.e_abmgate#branch               0
+e.x_u1.xcore.x_u12_u646.eqb#branch      -9.999e-05
+e.x_u1.xcore.x_u12_u646.x3.e_abmgate2#branch               0
+e.x_u1.xcore.x_u12_u646.x3.e_abmgate1#branch               0
+e.x_u1.xcore.x_u12_u646.eq#branch               0
+e.x_u1.xcore.x_u12_u646.x2.e_abmgate#branch               0
+e.x_u1.xcore.x_u12_u646.x1.e_abmgate2#branch               0
+e.x_u1.xcore.x_u12_u646.x1.e_abmgate1#branch               0
+e.x_u1.xcore.e_u12_abm154#branch               0
+e.x_u1.xcore.x_u12_u613.e_abmgate#branch               0
+e.x_u1.xcore.x_u8_u616.e_abmgate#branch      -1.001e-09
+e.x_u1.xcore.x_u8_u617.e_abmgate#branch      -1.001e-09
+e.x_u1.xcore.e_u8_abm167#branch               0
+e.x_u1.xcore.x_u8_u827.e_abmgate#branch               0
+e.x_u1.xcore.x_u8_u622.e_abmgate#branch               0
+e.x_u1.xcore.x_u8_u613.e_abmgate#branch               0
+e.x_u1.xcore.e_u8_abm79#branch               0
+e.x_u1.xcore.x_u8_u619.e_abmgate#branch               0
+e.x_u1.xcore.x_u8_u621.e_abmgate#branch               0
+e.x_u1.xcore.e_u8_abm170#branch               0
+v_vin#branch                       -5.2817e-07
+v.x_u1.xcore.x_u6_u647.v2#branch               0
+v.x_u1.xcore.x_u6_u647.v1#branch      -1.001e-12
+v.x_u1.xcore.v_u6_v86#branch                 0
+v.x_u1.xcore.v_u6_v88#branch                 0
+v.x_u1.xcore.v_u6_vovp_hys#branch               0
+v.x_u1.xcore.x_u6_u646.v2#branch               0
+v.x_u1.xcore.x_u6_u646.v1#branch      -1.001e-12
+v.x_u1.xcore.x_u6_u648.vs#branch          -1e-06
+v.x_u1.xcore.v_u6_vovp_thresh#branch               0
+v.x_u1.xcore.v_u6_v89#branch                 0
+v.x_u1.xcore.v_u6_v87#branch                 0
+v.x_u1.xcore.v_u6_v8#branch                  0
+v.x_u1.xcore.x_u6_u603.v1#branch      -5.001e-12
+v.x_u1.xcore.v_u6_v46#branch                 0
+v.x_u1.xcore.v_u6_v7#branch         -5.001e-12
+v.x_u1.xcore.v_u6_v85#branch                 0
+v.x_u1.xcore.v_v1#branch          -1.99965e-08
+v.x_u1.xcore.v_u4_v72#branch       1.70124e-12
+v.x_u1.xcore.v_u4_v70#branch       -1.7011e-12
+v.x_u1.xcore.v_u5_vupper_clmp#branch      -2.301e-12
+v.x_u1.xcore.v_u3_v46#branch                 0
+v.x_u1.xcore.v_u3_vramp_max#branch               0
+v.x_u1.xcore.v_u3_v47#branch                 0
+v.x_u1.xcore.v_u3_v45#branch      -5.30001e-06
+v.x_u1.xcore.x_u10_u648.vs#branch          -1e-06
+v.x_u1.xcore.v_u10_v6#branch                 0
+v.x_u1.xcore.v_u10_v10#branch                0
+v.x_u1.xcore.v_u10_v1#branch         -5.15e-10
+v.x_u1.xcore.v_u10_v9#branch        -5.001e-12
+v.x_u1.xcore.v_u10_v5#branch                 0
+v.x_u1.xcore.v_u10_v2#branch                 0
+v.x_u1.xcore.x_u10_u650.vs#branch          -1e-06
+v.x_u1.xcore.v_u10_v48#branch     -5.00001e-06
+v.x_u1.xcore.v_u11_v2#branch                 0
+v.x_u1.xcore.v_u11_v1#branch                 0
+v.x_u1.xcore.v_u11_v65#branch                0
+v.x_u1.xcore.v_u11_v64#branch                0
+v.x_u1.xcore.v_u12_vochlm#branch               0
+v.x_u1.xcore.v_u12_vocllm#branch               0
+v.x_u1.xcore.v_u12_v84#branch                0
+v.x_u1.xcore.x_u12_u646.v2#branch               0
+v.x_u1.xcore.x_u12_u646.v1#branch      -1.001e-12
+v.x_u1.xcore.x_u8_d16.vdc#branch    -1.39418e-15
+v.x_u1.xcore.x_u8_d15.vdc#branch     -1.3942e-15
+v.x_u1.xcore.v_u8_v49#branch            -5e-06
+
+ Reference value :  2.84968e-05 Reference value :  6.37978e-05 Reference value :  1.03882e-04 Reference value :  1.08377e-04 Reference value :  1.10969e-04 Reference value :  1.15459e-04 Reference value :  1.17911e-04 Reference value :  1.20341e-04 Reference value :  1.22796e-04 Reference value :  1.25248e-04 Reference value :  1.27703e-04 Reference value :  1.30158e-04 Reference value :  1.30299e-04 Reference value :  1.32925e-04 Reference value :  1.35218e-04 Reference value :  1.37719e-04 Reference value :  1.42477e-04 Reference value :  1.46852e-04 Reference value :  1.50056e-04 Reference value :  1.55069e-04 Reference value :  1.59739e-04 Reference value :  1.62499e-04 Reference value :  1.64857e-04 Reference value :  1.69659e-04 Reference value :  1.72121e-04 Reference value :  1.74602e-04 Reference value :  1.77103e-04 Reference value :  1.79587e-04 Reference value :  1.82073e-04 Reference value :  1.84690e-04 Reference value :  1.87303e-04 Reference value :  1.89682e-04 Reference value :  1.92402e-04 Reference value :  1.96989e-04 Reference value :  1.99505e-04 Reference value :  2.01997e-04 Reference value :  2.04496e-04 Reference value :  2.07132e-04 Reference value :  2.09661e-04 Reference value :  2.14481e-04 Reference value :  2.17513e-04 Reference value :  2.22025e-04 Reference value :  2.24843e-04 Reference value :  2.27048e-04 Reference value :  2.29558e-04 Reference value :  2.32184e-04 Reference value :  2.34714e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04 Reference value :  2.37095e-04

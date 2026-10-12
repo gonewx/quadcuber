@@ -1,0 +1,19 @@
+{
+  "xyce_version": "7.10",
+  "xyce_source": "https://github.com/Xyce/Xyce.git",
+  "xyce_tag": "Release-7.10.0",
+  "xyce_commit": "a592a42ae7472151d1c8e3bca0ca62d27476f2f3",
+  "trilinos_source": "https://github.com/trilinos/Trilinos.git",
+  "trilinos_branch": "trilinos-release-14-4-branch",
+  "trilinos_commit": "975307431d60d0859ebaa27c9169cbb1d4287513",
+  "cmake": "3.31.10 via PyPI cmake wheel",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "trilinos_config": "Official Xyce trilinos-base.cmake; Fortran OFF; serial; system BLAS/LAPACK; Debian AMD",
+  "xyce_config": "Release serial; ADMS/Neuron/FFT OFF (not required for this primitive-device transient model); CURL usage tracking OFF",
+  "state": "INSTALLED_AND_REFERENCE_RUN",
+  "trilinos_c_flags": "-Wno-error=implicit-function-declaration (documented Xyce build recommendation for modern C compilers)",
+  "tracking": "Xyce_USE_CURL=OFF; Xyce_TRACKING_URL empty",
+  "binary": "/workspace/tools/xyce-7.10/bin/Xyce",
+  "binary_sha256": "7b64848a20ff24b8033acb04606e50880e55309c70f03c98d147f404e70cbfd3",
+  "version_output": "Xyce Release 7.10.0-opensource"
+}

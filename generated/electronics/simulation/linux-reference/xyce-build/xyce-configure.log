@@ -1,0 +1,118 @@
+-- The CXX compiler identification is GNU 14.2.0
+-- The C compiler identification is GNU 14.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- NOT including the /workspace/tools/src/xyce-7.10/src/DeviceModelPKG/ADMS model directory
+-- NOT including the /workspace/tools/src/xyce-7.10/src/DeviceModelPKG/NeuronModels model directory
+CMake Warning (dev) at cmake/feature_modes.cmake:202 (file):
+  Given path:
+
+    /workspace/tools/src/xyce-7.10/Xyce_Regression
+
+  does not refer to an existing path on disk.
+Call Stack (most recent call first):
+  cmake/config.cmake:6 (include)
+  CMakeLists.txt:56 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- NOT including the /workspace/tools/src/xyce-7.10/src/DeviceModelPKG/SandiaModels/ATHENA model directory
+        (Xyce_RAD_MODELS must be enabled to include ATHENA)
+-- Looking for Trilinos
+   Required packages:
+        Amesos Epetra EpetraExt Ifpack NOX Teuchos Sacado
+        Triutils AztecOO Belos TrilinosCouplings
+   Optional packages:
+        Isorropia Zoltan ShyLU ShyLU_DDCore Amesos2 Stokhos ROL MKL
+-- Enabled Kokkos devices: SERIAL
+-- Looking for Trilinos - found
+-- Checking if MPI is enabled in Trilinos
+-- Checking if MPI is enabled in Trilinos - MPI not enabled
+-- Looking for BLAS via Trilinos
+-- Looking for BLAS via Trilinos - found
+-- Looking for LAPACK via Trilinos
+-- Looking for LAPACK via Trilinos - found
+-- Looking for HAVE_AMESOS_KLU
+-- Looking for HAVE_AMESOS_KLU - found
+-- Looking for HAVE_BTF
+-- Looking for HAVE_BTF - found
+-- Looking for HAVE_EXPERIMENTAL
+-- Looking for HAVE_EXPERIMENTAL - found
+-- Looking for HAVE_GRAPH_REORDERINGS
+-- Looking for HAVE_GRAPH_REORDERINGS - found
+-- Looking for HAVE_TEUCHOS_COMPLEX
+-- Looking for HAVE_TEUCHOS_COMPLEX - found
+-- Looking for C++ include Teuchos_SerialDenseMatrix.hpp
+-- Looking for C++ include Teuchos_SerialDenseMatrix.hpp - found
+-- Looking for ShyLU in Trilinos
+-- Looking for ShyLU in Trilinos - not found
+-- Looking for Amesos2 in Trilinos
+-- Looking for Amesos2 in Trilinos - found
+-- Looking for HAVE_AMESOS2_KLU2
+-- Looking for HAVE_AMESOS2_KLU2 - found
+-- Looking for HAVE_AMESOS2_BASKER
+-- Looking for HAVE_AMESOS2_BASKER - found
+-- Looking for HAVE_AMESOS2_SHYLUBASKER
+-- Looking for HAVE_AMESOS2_SHYLUBASKER - not found
+-- Looking for HAVE_AMESOS2_SHYLU_NODEBASKER
+-- Looking for HAVE_AMESOS2_SHYLU_NODEBASKER - not found
+-- Looking for Stokhos in Trilinos
+-- Looking for Stokhos in Trilinos - found
+-- Looking for ROL in Trilinos
+-- Looking for ROL in Trilinos - found
+-- Looking for ParMETIS via Trilinos
+-- Looking for ParMETIS via Trilinos - not found
+-- Looking for AMD via Trilinos
+-- Looking for AMD via Trilinos - found
+-- Looking for PARDISO_MKL via Trilinos
+-- Looking for PARDISO_MKL via Trilinos - not found
+-- Looking for SuperLU via Trilinos
+-- Looking for SuperLU via Trilinos - not found
+-- Looking for SuperLUDist via Trilinos
+-- Looking for SuperLUDist via Trilinos - not found
+-- Looking for flex and Bison
+-- Found FLEX: /workspace/tools/xyce-deps/usr/bin/flex (found suitable version "2.6.4", minimum required is "2.6")
+-- Found BISON: /workspace/tools/xyce-deps/usr/bin/bison (found suitable version "3.8.2", minimum required is "3.3")
+-- Usage tracking is not enabled
+-- Found Git: /usr/local/bin/git (found version "2.52.0")
+-- Looking for C++ include dlfcn.h
+-- Looking for C++ include dlfcn.h - found
+-- Looking for C++ include unistd.h
+-- Looking for C++ include unistd.h - found
+-- Looking for drand48
+-- Looking for drand48 - found
+-- Looking for C++ include sys/resource.h
+-- Looking for C++ include sys/resource.h - found
+-- Looking for C++ include sys/stat.h
+-- Looking for C++ include sys/stat.h - found
+-- Looking for C++ include malloc.h
+-- Looking for C++ include malloc.h - found
+-- Looking for C++ include pwd.h
+-- Looking for C++ include pwd.h - found
+-- Looking for C++ include sys/utsname.h
+-- Looking for C++ include sys/utsname.h - found
+-- Looking for mallinfo
+-- Looking for mallinfo - found
+-- Looking for getpwuid
+-- Looking for getpwuid - found
+-- Looking for gethostname
+-- Looking for gethostname - found
+-- Looking for getdomainname
+-- Looking for getdomainname - found
+-- Looking for uname
+-- Looking for uname - found
+-- Looking for C++ include Windows.h
+-- Looking for C++ include Windows.h - not found
+-- Looking for C++ include direct.h
+-- Looking for C++ include direct.h - not found
+-- Plugin compatibility not enabled
+-- Configuring done (2.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /workspace/tools/build/xyce-7.10

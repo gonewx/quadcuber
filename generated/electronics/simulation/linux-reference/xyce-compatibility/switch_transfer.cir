@@ -1,0 +1,8 @@
+Continuous VSWITCH transfer using unchanged TI Driver_U8_S31 model values
+VCTRL CTRL 0 0
+VTEST P 0 1
+S1 P 0 CTRL 0 _U8_S31
+.MODEL _U8_S31 VSWITCH Roff=10e6 Ron=40m Voff=0.4 Von=1.1
+.DC VCTRL 0.3 1.2 0.05
+.PRINT DC FORMAT=CSV V(CTRL) I(VTEST)
+.END

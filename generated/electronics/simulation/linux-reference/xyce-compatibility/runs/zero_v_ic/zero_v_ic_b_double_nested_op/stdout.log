@@ -1,0 +1,75 @@
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version Xyce Release 7.10.0-opensource
+***** Date: Mon Oct 12 05:18:35 UTC 2026
+
+
+***** Executing netlist zero_v_ic_b_double_nested_op.cir
+
+***** Reading and parsing netlist...
+***** Setting up topology...
+
+Netlist warning: Voltage Node (OUT) connected to only 1 device Terminal
+Netlist warning: Voltage Node (B) connected to only 1 device Terminal
+***** Device Count Summary ...
+       B level 1 (Expression Based Voltage or Current Source) 1
+       C level 1 (Capacitor)                                  1
+       R level 1 (Resistor)                                   1
+       V level 1 (Independent Voltage Source)                 2
+       --------------------------------------------------------
+       Total Devices                                          5
+***** Setting up matrix structure...
+***** Number of Unknowns = 7
+***** Initializing...
+
+***** Beginning DC Operating Point Calculation...
+
+Netlist warning: Numerically singular matrix found by Amesos, returning zero
+ solution to nonlinear solver!
+Netlist warning: Numerically singular matrix found by Amesos, returning zero
+ solution to nonlinear solver!
+Netlist warning: Numerically singular matrix found by Amesos, returning zero
+ solution to nonlinear solver!
+DC Operating Point Failed.  Exiting transient loop
+
+***** Solution Summary *****
+	Number Successful Steps Taken:		0
+	Number Failed Steps Attempted:		1
+	Number Jacobians Evaluated:		3
+	Number Linear Solves:			3
+	Number Failed Linear Solves:		3
+	Number Residual Evaluations:		12
+	Number Nonlinear Convergence Failures:	1
+	Total Residual Load Time:		3.93391e-05 seconds
+	Total Jacobian Load Time:		5.96046e-06 seconds
+	Total Linear Solution Time:		4.88758e-05 seconds
+
+
+***** Total Simulation Solvers Run Time: 0.000725985 seconds
+***** Total Elapsed Run Time:            0.0022831 seconds
+*****
+***** End of Xyce(TM) Simulation
+*****
+
+Timing summary of 1 processor
+                 Stats                   Count       CPU Time              Wall Time
+---------------------------------------- ----- --------------------- ---------------------
+Xyce                                         1        0.000 ( 0.00%)        0.002 (100.0%)
+  Analysis                                   1        0.000 ( 0.00%)        0.001 (29.05%)
+    Transient                                1        0.000 ( 0.00%)        0.001 (28.90%)
+      Nonlinear Solve                        1        0.000 ( 0.00%)        0.001 (27.70%)
+        Residual                            12        0.000 ( 0.00%)        0.000 ( 1.78%)
+        Jacobian                             3        0.000 ( 0.00%)        0.000 ( 0.24%)
+        Linear Solve                         3        0.000 ( 0.00%)        0.000 ( 2.01%)
+      Failed DCOP Steps                      1        0.000 ( 0.00%)        0.000 ( 0.04%)
+  Netlist Import                             1        0.000 ( 0.00%)        0.001 (25.89%)
+    Parse Context                            1        0.000 ( 0.00%)        0.000 ( 5.96%)
+    Distribute Devices                       1        0.000 ( 0.00%)        0.000 ( 8.52%)
+    Verify Devices                           1        0.000 ( 0.00%)        0.000 ( 0.09%)
+    Instantiate                              1        0.000 ( 0.00%)        0.000 ( 2.88%)
+  Late Initialization                        1        0.000 ( 0.00%)        0.000 (14.46%)
+    Global Indices                           1        0.000 ( 0.00%)        0.000 ( 1.19%)
+  Setup Matrix Structure                     1        0.000 ( 0.00%)        0.000 ( 2.43%)
+

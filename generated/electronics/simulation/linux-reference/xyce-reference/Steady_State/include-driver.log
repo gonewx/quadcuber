@@ -1,0 +1,157 @@
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version Xyce Release 7.10.0-opensource
+***** Date: Mon Oct 12 05:13:39 UTC 2026
+
+
+***** Executing netlist include-driver.cir
+
+***** Reading and parsing netlist...
+Netlist warning in file include-driver.cir at or near line 40
+ Option name missing, or SPICE-style option not supported in Xyce
+Netlist warning in file include-driver.cir at or near line 40
+ Unrecognized dot line will be ignored
+Netlist warning in file include-driver.cir at or near line 42
+ Unrecognized dot line will be ignored
+Netlist warning: No print specified
+***** Setting up topology...
+
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17027150) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:OCLOW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:ISW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_N16766365) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U12_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_N16779415) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U11_N16642234) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16864680) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16878597) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ICTRL) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ISLOPE) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ISWF) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U5_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17026579) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_SLEEP_N) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U603:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17162707) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U10_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ISLOPE_INT) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_N16779389) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U11_N166402810) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17026548) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17096138) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:VREF_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17027443) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U3_N16813790) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16864604) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U3_N16692390) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U5_TAIL_CUR) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U3_ULQ_CLK) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U647:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16855026) connected to only 1
+ device Terminal
+***** Device Count Summary ...
+       B level 1 (Expression Based Voltage or Current Source) 152
+       C level 1 (Capacitor)                                  141
+       D level 1,2 (Diode)                                     31
+       E level 1 (Linear Voltage Controlled Voltage Source)    10
+       G level 1 (Linear Voltage Controlled Current Source)     3
+       I level 1 (Independent Current Source)                   2
+       L level 1 (Inductor)                                     1
+       R level 1 (Resistor)                                   171
+       S level 1 (Controlled Switch)                           14
+       V level 1 (Independent Voltage Source)                  48
+       ----------------------------------------------------------
+       Total Devices                                          573
+***** Setting up matrix structure...
+***** Number of Unknowns = 560
+***** Initializing...
+
+Netlist error: Cannot convert '(' to double for expression VALUE
+Netlist error: Cannot convert ')' to double for expression VALUE
+Netlist error: Cannot convert '=' to double for expression VALUE
+Netlist error: Cannot convert '(' to double for expression VALUE
+Netlist error: Cannot convert ')' to double for expression VALUE
+Netlist error: Cannot convert '=' to double for expression VALUE
+Netlist error: Cannot convert '(' to double for expression VALUE
+Netlist error: Cannot convert ')' to double for expression VALUE
+Netlist error: Cannot convert '=' to double for expression VALUE
+Netlist error: Cannot convert '(' to double for expression VALUE
+Netlist error: Cannot convert ')' to double for expression VALUE
+Netlist error: Cannot convert '=' to double for expression VALUE
+Netlist warning: Initial conditions specified at nodes not present in circuit.
+May be error in .IC or .NODESET line. Ignoring nodes:
+X_U1:XCORE:X_U12_U646:V
+X_U1:XCORE:X_U12_U646:{VSS}
+X_U1:XCORE:X_U6_U603:V
+X_U1:XCORE:X_U6_U603:{VSS}
+X_U1:XCORE:X_U6_U646:V
+X_U1:XCORE:X_U6_U646:{VSS}
+X_U1:XCORE:X_U6_U647:V
+X_U1:XCORE:X_U6_U647:{VSS}
+***** Beginning DC Operating Point Calculation...
+
+Simulation aborted due to error.  There are 0 MSG_FATAL errors and 12
+ MSG_ERROR errors
+*** Xyce Abort ***
+Simulation aborted due to error.  There are 0 MSG_FATAL errors and 12
+ MSG_ERROR errors
+
+
+*** Xyce Abort ***

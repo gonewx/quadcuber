@@ -1,0 +1,11 @@
+--- Xyce-four-equals-only
++++ Xyce-OP-IC-target-compatible
+@@ -363,7 +363,7 @@
+ +  VTHRESH=0.5 DELAY=30n
+ C_U6_C172         0 U6_INDELAYED1  1.443n  
+ .IC         V(EN )=0
+-.IC V(COMP)={STEADY_STATE*1.3695}
++.IC V(N16888001)={STEADY_STATE*1.3695}
+ .ENDS  TPS54302_TRANS
+ *$
+ .subckt Driver_U8_S31 1 2 3 4  

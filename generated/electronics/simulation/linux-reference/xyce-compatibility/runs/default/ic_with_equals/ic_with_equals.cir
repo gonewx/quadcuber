@@ -1,0 +1,11 @@
+ic_with_equals: exact TI latch IC syntax versus equals-only repair
+X1 OUT TESTIC PARAMS: VSS=0.25
+.SUBCKT TESTIC OUT PARAMS: VSS=0
+RQ Qint 0 1k
+CQ Qint 0 1u
+EOUT OUT 0 VALUE={V(Qint)}
+.IC V(Qint)={VSS}
+.ENDS TESTIC
+.TRAN 1u 1m 0 1u UIC
+.PRINT TRAN FORMAT=CSV V(OUT)
+.END

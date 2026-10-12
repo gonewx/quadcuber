@@ -1,0 +1,13 @@
+{
+  "state": "INITIAL_TIMEPOINT_ABORT",
+  "returncode": 0,
+  "completed": false,
+  "reference_source": "TI DSN recovered with official KiCad parser, reviewed pin table",
+  "model": "Existing XOR-only ngspice adaptation; original model is not overwritten",
+  "driver_changes": [
+    "name-only wrapper",
+    "ngspice control/output syntax",
+    "positive 20ns print increment; original stop/start/max-step retained"
+  ],
+  "model_or_circuit_passed": false
+}

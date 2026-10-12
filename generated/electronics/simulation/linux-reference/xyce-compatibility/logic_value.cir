@@ -1,0 +1,14 @@
+Logic spellings, nested braces, IF and E/G VALUE optional equals
+VA A 0 0
+VB B 0 0
+EAND1 AS 0 VALUE {{IF(V(A)>0.5 & V(B)>0.5,1,0)}}
+EAND2 AD 0 VALUE={IF(V(A)>0.5 && V(B)>0.5,1,0)}
+EOR1 OS 0 VALUE {{IF(V(A)>0.5 | V(B)>0.5,1,0)}}
+EOR2 OD 0 VALUE={IF(V(A)>0.5 || V(B)>0.5,1,0)}
+G1 0 GS VALUE {IF(V(A)>0.5,2m,-1m)}
+G2 0 GE VALUE = {{IF(V(A)>0.5,2m,-1m)}}
+RGS GS 0 1k
+RGE GE 0 1k
+.DC VA 0 1 0.5 VB 0 1 0.5
+.PRINT DC FORMAT=CSV V(A) V(B) V(AS) V(AD) V(OS) V(OD) V(GS) V(GE)
+.END

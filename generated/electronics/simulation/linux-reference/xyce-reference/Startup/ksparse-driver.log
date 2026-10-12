@@ -1,0 +1,170 @@
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version Xyce Release 7.10.0-opensource
+***** Date: Mon Oct 12 05:15:20 UTC 2026
+
+
+***** Executing netlist ksparse-driver.cir
+
+***** Reading and parsing netlist...
+***** Setting up topology...
+
+Netlist warning: Voltage Node (X_U1:XCORE:OCLOW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:ISW) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_N16766365) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U12_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_N16779415) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U11_N16642234) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16864680) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16878597) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17027150) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U10_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U2:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16855026) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U647:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U5_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ISWF) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U30:S1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ICTRL) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17026579) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U646:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17162707) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U2:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_SET1) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U3_ULQ_CLK) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U5_TAIL_CUR) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U11_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ISLOPE) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U3:INP2) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U603:QQQ) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_SLEEP_N) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:X_U6_U3:INM1) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_ISLOPE_INT) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U12_N16779389) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U11_N166402810) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17026548) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17096138) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:VREF_GM) connected to only 1 device
+ Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U6_N17027443) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U3_N16813790) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U10_N16864604) connected to only 1
+ device Terminal
+Netlist warning: Voltage Node (X_U1:XCORE:U3_N16692390) connected to only 1
+ device Terminal
+***** Device Count Summary ...
+       B level 1 (Expression Based Voltage or Current Source) 152
+       C level 1 (Capacitor)                                  141
+       D level 1,2 (Diode)                                     31
+       E level 1 (Linear Voltage Controlled Voltage Source)    10
+       G level 1 (Linear Voltage Controlled Current Source)     3
+       I level 1 (Independent Current Source)                   1
+       L level 1 (Inductor)                                     1
+       R level 1 (Resistor)                                   172
+       S level 1 (Controlled Switch)                           14
+       V level 1 (Independent Voltage Source)                  48
+       ----------------------------------------------------------
+       Total Devices                                          573
+***** Setting up matrix structure...
+***** Number of Unknowns = 560
+***** Initializing...
+
+***** Beginning DC Operating Point Calculation...
+
+zero Row found in scaling
+Netlist warning: Numerically singular matrix found by KSparse (err = 204),
+ returning zero solution to nonlinear solver!
+zero Row found in scaling
+Netlist warning: Numerically singular matrix found by KSparse (err = 204),
+ returning zero solution to nonlinear solver!
+zero Row found in scaling
+Netlist warning: Numerically singular matrix found by KSparse (err = 204),
+ returning zero solution to nonlinear solver!
+DC Operating Point Failed.  Exiting transient loop
+
+***** Solution Summary *****
+	Number Successful Steps Taken:		0
+	Number Failed Steps Attempted:		1
+	Number Jacobians Evaluated:		3
+	Number Linear Solves:			3
+	Number Failed Linear Solves:		3
+	Number Residual Evaluations:		10
+	Number Nonlinear Convergence Failures:	1
+	Total Residual Load Time:		0.000989437 seconds
+	Total Jacobian Load Time:		0.000111818 seconds
+	Total Linear Solution Time:		0.000966072 seconds
+
+
+***** Total Simulation Solvers Run Time: 0.00336385 seconds
+***** Total Elapsed Run Time:            0.0224612 seconds
+*****
+***** End of Xyce(TM) Simulation
+*****
+
+Timing summary of 1 processor
+                 Stats                   Count       CPU Time              Wall Time
+---------------------------------------- ----- --------------------- ---------------------
+Xyce                                         1        0.023 (100.0%)        0.023 (100.0%)
+  Analysis                                   1        0.003 (14.78%)        0.003 (14.78%)
+    Transient                                1        0.003 (14.75%)        0.003 (14.76%)
+      Nonlinear Solve                        1        0.003 (14.26%)        0.003 (14.25%)
+        Residual                            10        0.001 ( 4.41%)        0.001 ( 4.40%)
+        Jacobian                             3        0.000 ( 0.50%)        0.000 ( 0.50%)
+        Linear Solve                         3        0.001 ( 4.27%)        0.001 ( 4.28%)
+      Failed DCOP Steps                      1        0.000 ( 0.01%)        0.000 ( 0.01%)
+  Netlist Import                             1        0.015 (68.28%)        0.015 (68.29%)
+    Parse Context                            1        0.001 ( 6.24%)        0.001 ( 6.24%)
+    Distribute Devices                       1        0.011 (49.58%)        0.011 (49.59%)
+    Verify Devices                           1        0.000 (<0.01%)        0.000 ( 0.01%)
+    Instantiate                              1        0.002 (11.06%)        0.003 (11.07%)
+  Late Initialization                        1        0.003 (12.61%)        0.003 (12.62%)
+    Global Indices                           1        0.001 ( 5.78%)        0.001 ( 5.78%)
+  Setup Matrix Structure                     1        0.001 ( 2.98%)        0.001 ( 2.98%)
+

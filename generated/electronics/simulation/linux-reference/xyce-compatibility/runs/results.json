@@ -1,0 +1,188 @@
+[
+  {
+    "netlist": "ic_alias_compact.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "ic_alias_compact.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/ic_alias_compact/stdout.log"
+  },
+  {
+    "netlist": "ic_alias_space.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "ic_alias_space.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/ic_alias_space/stdout.log"
+  },
+  {
+    "netlist": "ic_no_equals.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "ic_no_equals.cir"
+    ],
+    "returncode": 1,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/ic_no_equals/stdout.log"
+  },
+  {
+    "netlist": "ic_with_equals.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "ic_with_equals.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/ic_with_equals/stdout.log"
+  },
+  {
+    "netlist": "logic_value.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "logic_value.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/logic_value/stdout.log"
+  },
+  {
+    "netlist": "rc_noop_ic.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "rc_noop_ic.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/rc_noop_ic/stdout.log"
+  },
+  {
+    "netlist": "rc_noop_noic.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "rc_noop_noic.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/rc_noop_noic/stdout.log"
+  },
+  {
+    "netlist": "rc_op_ic.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "rc_op_ic.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/rc_op_ic/stdout.log"
+  },
+  {
+    "netlist": "rc_op_noic.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "rc_op_noic.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/rc_op_noic/stdout.log"
+  },
+  {
+    "netlist": "rc_uic_ic.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "rc_uic_ic.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/rc_uic_ic/stdout.log"
+  },
+  {
+    "netlist": "rc_uic_noic.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "rc_uic_noic.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/rc_uic_noic/stdout.log"
+  },
+  {
+    "netlist": "switch_transfer.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "switch_transfer.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/switch_transfer/stdout.log"
+  },
+  {
+    "netlist": "xor_adapted.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "xor_adapted.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/xor_adapted/stdout.log"
+  },
+  {
+    "netlist": "xor_adapted.cir",
+    "mode": "hspice_math",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "-hspice-ext",
+      "math",
+      "xor_adapted.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/hspice_math/xor_adapted/stdout.log"
+  },
+  {
+    "netlist": "xor_exact.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "xor_exact.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/xor_exact/stdout.log"
+  },
+  {
+    "netlist": "xor_exact.cir",
+    "mode": "hspice_math",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "-hspice-ext",
+      "math",
+      "xor_exact.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/hspice_math/xor_exact/stdout.log"
+  },
+  {
+    "netlist": "xor_parenthesized.cir",
+    "mode": "default",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "xor_parenthesized.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/default/xor_parenthesized/stdout.log"
+  },
+  {
+    "netlist": "xor_parenthesized.cir",
+    "mode": "hspice_math",
+    "command": [
+      "/workspace/tools/xyce-7.10/bin/Xyce",
+      "-hspice-ext",
+      "math",
+      "xor_parenthesized.cir"
+    ],
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/hspice_math/xor_parenthesized/stdout.log"
+  }
+]

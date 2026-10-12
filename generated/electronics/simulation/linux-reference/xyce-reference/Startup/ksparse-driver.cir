@@ -1,0 +1,42 @@
+* DSN-derived TI TPS54302 Startup reference testbench
+* Locally reconstructed from original DSN by official KiCad parser;
+* not an export made by Cadence. See pin-connectivity.csv and recovery-audit.json.
+* Archived annotation corrected after run: includes candidate-adapted TI model.
+* See ../adaptation.json; only this comment differs from the executed driver.
+.INCLUDE "/workspace/tool-verification/xyce-reference/TPS54302_TRANS.xyce-ic.LIB"
+.INCLUDE "../ti-name-alias.lib"
+* DSN instance 16766235: R2; template: R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|
+R_R2 VFB N16776600 100k
+* DSN instance 16766049: L1; template: X^@REFDES %1 %2 @MODEL PARAMS: ?L|L=@L||L=10U| ?DCR|DCR=@DCR||DCR=20M| ?IC|IC=@IC||IC=0|
+X_L1 SW VOUT LDCR PARAMS: L=10u DCR=10m IC=0
+* DSN instance 16766901: C4; template: C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|
+C_C4 BOOT SW 0.1u IC=0
+* DSN instance 16766935: R1; template: R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|
+R_R1 N16776600 VOUT 49.9
+* DSN instance 16766885: C2; template: C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|
+C_C2 VIN 0 10u
+* DSN instance 16766919: C1; template: C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|
+C_C1 VIN 0 0.1u
+* DSN instance 16773958: U1; template: X^@REFDES %BOOT %EN %GND %SW %VIN %FB @MODEL PARAMS: ?STEADY_STATE|STEADY_STATE=@STEADY_STATE||STEADY_STATE=0|
+X_U1 BOOT EN 0 SW VIN VFB TPS54302DDC_TRANS PARAMS: STEADY_STATE=0
+* DSN instance 16766191: RLoad; template: R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|
+R_RLoad VOUT 0 {5/3}
+* DSN instance 16758575: R3; template: R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|
+R_R3 0 VFB 13.3k
+* DSN instance 16766091: R4; template: R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|
+R_R4 EN VIN 510k
+* DSN instance 16766125: Vin; template: V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+PULSE @V1 @V2 ?TD/@TD/~TD/0/ #TR/@TR/ #TF/@TF/ #PW/@PW/ #PER/@PER/
+V_Vin VIN 0 PULSE(0 12 100u 10u 10u 1 2)
+* DSN instance 16766075: C8; template: C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|
+C_C8 N16776600 VFB 75p
+* DSN instance 16766857: C6; template: X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|
+X_C6 VOUT 0 CESR PARAMS: C=22u ESR=2m IC=0 X=1
+* DSN instance 16766213: R5; template: R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|
+R_R5 0 EN 105k
+* DSN instance 16766163: C5; template: X^@REFDES %1 %2 @MODEL PARAMS: ?C|C=@C||C=10U| ?ESR|ESR=@ESR||ESR=2M| ?IC|IC=@IC||IC=0| ?X|X=@X||X=0|
+X_C5 VOUT 0 CESR PARAMS: C=22u ESR=2m IC=0 X=1
+* Analysis restored from original trans.sim; no UIC requested.
+.OPTIONS LINSOL TYPE=KSPARSE
+.TRAN 20n 6.5m 0 20n
+.PRINT TRAN FORMAT=CSV V(VIN) V(VOUT) V(EN) V(SW) I(X_L1:L) V(X_U1:XCORE:SDWN) V(X_U1:XCORE:COMP)
+.END

@@ -1,0 +1,95 @@
+{
+  "commit": "0616634034fa1a8c92c141c293342cbef2f68dff",
+  "files": [
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_library.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_library.h",
+      "sha256": "79896e1f7ca6b31a89d9c42f9d702fc4d39679194cb8e8987fe4ce74345118c1"
+    },
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_library.cpp",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_library.cpp",
+      "sha256": "00616921549bf985b74e892297fa9b14e56cf98eb95aaab9253e9dad38349451"
+    },
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_page.cpp",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_page.cpp",
+      "sha256": "51c6cacffcee999639c933f4909897db71b5724354e9c2b4ee726da2142d12f1"
+    },
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_structures.cpp",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_structures.cpp",
+      "sha256": "36c0101f76baaa5b4c7962122f9591ae3140bcda9263dd8574ca48cdf70e7b60"
+    },
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_cache.cpp",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_cache.cpp",
+      "sha256": "ec15a8c511ce6cc8340b3f1b61aa450588ee2392c7b85d23e8bba520583e930b"
+    },
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_structures.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_structures.h",
+      "sha256": "194de1193c9b8927bd0be7fb7a3cfe7b0edc632eb8d5f587ac2cefcc88834a5c"
+    },
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_cache.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_cache.h",
+      "sha256": "ecaa0cf963cf1adabe9521a935ca471c499bd18bd062e08785c527858392e3d2"
+    },
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_orient.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_orient.h",
+      "sha256": "60d3041e7e482aa1e93e1f2584ccdb1ec25729c5c110b689a763a3439f4fd522"
+    },
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_stream.cpp",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_stream.cpp",
+      "sha256": "620c699df157c12e7540219152db168a6e6507ef763dadc0d42f0053b24487b7"
+    },
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_page.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_page.h",
+      "sha256": "746d07408896de3337655b1289f44afa36379552e4ff5517c302cf2e59162bc5"
+    },
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_records.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_records.h",
+      "sha256": "6066472c0607f3481db35f453f2f16f4da153b4d02f40dc0dedf5a3e3bc5a28c"
+    },
+    {
+      "local_path": "parser-source/sch_io/orcad/orcad_stream.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad/orcad_stream.h",
+      "sha256": "9e9d272f6fae9db5e310631f06ca5bbe20f2303cb094f39fc1208fa95564b11f"
+    },
+    {
+      "local_path": "parser-source/ki_exception.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/include/ki_exception.h",
+      "sha256": "e98b801a6763b44b5955f49b8ba592169cfa30be85db213f2956da068f874b96"
+    },
+    {
+      "local_path": "parser-source/kicommon.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/include/kicommon.h",
+      "sha256": "6effecbf3cf64e43672e1a0ecc6cf39ff058011ab3798df3f827ccd440100eeb"
+    },
+    {
+      "local_path": "parser-source/import_export.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/include/import_export.h",
+      "sha256": "5cfa0dc25776a7bcfa5ecc685d8f894b8ee5a90a547737e9942fe5e16a899fc7"
+    },
+    {
+      "local_path": "parser-source/exceptions.cpp",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/common/exceptions.cpp",
+      "sha256": "3b7e4ec70070d67bed5adee71d5b7648f3cbb07a6c3d8c45b2a6135daa3db9ed"
+    },
+    {
+      "local_path": "parser-source/math/vector2d.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/libs/kimath/include/math/vector2d.h",
+      "sha256": "987e5b8bda0d5045d65211853e66aa5efe46ccc5279fd2de27761c96a60c0ccd"
+    },
+    {
+      "local_path": "parser-source/math/util.h",
+      "source_url": "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/0616634034fa1a8c92c141c293342cbef2f68dff/libs/kimath/include/math/util.h",
+      "sha256": "130108bf8917d55507a9754aa0d2f8a1b2ed334ba68bb05c44814c1b00af04ab"
+    }
+  ]
+}

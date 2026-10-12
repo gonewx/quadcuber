@@ -1,0 +1,38 @@
+--- TI-original
++++ Xyce-four-equals-only
+@@ -591,7 +591,7 @@
+ RQb Qbr QB 1
+ Cdummy1 Q 0 1n
+ Cdummy2 QB 0 1n
+-.IC V(Qint) {VSS}
++.IC V(Qint)={VSS}
+ .ENDS SRLATCHRHP_BASIC_GEN
+ *$
+ .SUBCKT SRLATCHRHP S R Q QB PARAMS: VDD=1 VSS=0 VTHRESH=0.5
+@@ -629,7 +629,7 @@
+ EQb Qbr 0 VALUE = {IF( V(Q) > {VTHRESH}, {VSS},{VDD})}
+ RQb Qbr Qb 1
+ Cdummy2 QB 0 1nF
+-.IC V(Qint) {VSS}
++.IC V(Qint)={VSS}
+ .ENDS DFFSBRB_RHPBASIC_GEN
+ *$
+ .SUBCKT DFFSR_RHPBASIC_GEN Q QB CLK D R S PARAMS: VDD=1 VSS=0 VTHRESH=0.5
+@@ -650,7 +650,7 @@
+ RQb Qbr Qb 1
+ Cdummy1 Q 0 1nF
+ Cdummy2 QB 0 1nF
+-.IC V(Qint) {VSS}
++.IC V(Qint)={VSS}
+ .ENDS DFFSR_RHPBASIC_GEN
+ *$
+ .SUBCKT MONONEG_PS in Q Qn PARAMS: PW=1u
+@@ -689,7 +689,7 @@
+ EQb Qbr 0 VALUE = {IF( V(Q) > {VTHRESH}, {VSS},{VDD})}
+ RQb Qbr Qb 1
+ Cdummy2 QB 0 1nF
+-.IC V(Qint) {VSS}
++.IC V(Qint)={VSS}
+ .ENDS DFF_R
+ *$
+ .SUBCKT AND4_BASIC_GEN A B C D Y PARAMS: VDD=1 VSS=0 VTHRESH=0.5 

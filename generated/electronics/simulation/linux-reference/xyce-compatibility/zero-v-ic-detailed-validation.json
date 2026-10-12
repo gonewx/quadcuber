@@ -1,0 +1,256 @@
+{
+  "runs": [
+    {
+      "name": "zero_v_ic_a_double_nested_op",
+      "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_a_double_nested_op/stdout.log",
+      "singular_warning": false,
+      "dcop_failed": false,
+      "rows": 1001,
+      "first": {
+        "TIME": 0.0,
+        "V(A)": 0.25,
+        "V(B)": 0.25,
+        "V(OUT)": 0.0625,
+        "I(XTEST:XCORE:VZERO)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(A)": 0.724090166,
+        "V(B)": 0.724090166,
+        "V(OUT)": 0.524306569,
+        "I(XTEST:XCORE:VZERO)": 0.0
+      },
+      "max_A_B_difference": 0.0,
+      "max_A_B_positive_time_difference": 0.0,
+      "max_analytic_error_A": 7.479995002279693e-07,
+      "max_analytic_error_B": 7.479995002279693e-07
+    },
+    {
+      "name": "zero_v_ic_a_nested_op",
+      "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_a_nested_op/stdout.log",
+      "singular_warning": false,
+      "dcop_failed": false,
+      "rows": 1001,
+      "first": {
+        "TIME": 0.0,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(XTEST:VZERO)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(XTEST:VZERO)": 0.0
+      },
+      "max_A_B_difference": 0.0,
+      "max_A_B_positive_time_difference": 0.0,
+      "max_analytic_error_A": 0.75,
+      "max_analytic_error_B": 0.75
+    },
+    {
+      "name": "zero_v_ic_a_op",
+      "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_a_op/stdout.log",
+      "singular_warning": false,
+      "dcop_failed": false,
+      "rows": 1001,
+      "first": {
+        "TIME": 0.0,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(VZERO)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(VZERO)": 0.0
+      },
+      "max_A_B_difference": 0.0,
+      "max_A_B_positive_time_difference": 0.0,
+      "max_analytic_error_A": 0.75,
+      "max_analytic_error_B": 0.75
+    },
+    {
+      "name": "zero_v_ic_a_op_nonlinear",
+      "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_a_op_nonlinear/stdout.log",
+      "singular_warning": false,
+      "dcop_failed": false,
+      "rows": 1001,
+      "first": {
+        "TIME": 0.0,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(VZERO)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(VZERO)": 0.0
+      },
+      "max_A_B_difference": 0.0,
+      "max_A_B_positive_time_difference": 0.0,
+      "max_analytic_error_A": 0.75,
+      "max_analytic_error_B": 0.75
+    },
+    {
+      "name": "zero_v_ic_a_uic",
+      "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_a_uic/stdout.log",
+      "singular_warning": false,
+      "dcop_failed": false,
+      "rows": 1009,
+      "first": {
+        "TIME": 0.0,
+        "V(A)": 0.25,
+        "V(B)": 0.0,
+        "V(OUT)": 0.0,
+        "I(VZERO)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(A)": 0.724090304,
+        "V(B)": 0.724090304,
+        "V(OUT)": 0.724090304,
+        "I(VZERO)": 0.0
+      },
+      "max_A_B_difference": 0.25,
+      "max_A_B_positive_time_difference": 0.0,
+      "max_analytic_error_A": 3.748333424757888e-07,
+      "max_analytic_error_B": 0.25
+    },
+    {
+      "name": "zero_v_ic_b_double_nested_op",
+      "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_b_double_nested_op/stdout.log",
+      "singular_warning": true,
+      "dcop_failed": true
+    },
+    {
+      "name": "zero_v_ic_b_nested_op",
+      "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_b_nested_op/stdout.log",
+      "singular_warning": false,
+      "dcop_failed": false,
+      "rows": 1001,
+      "first": {
+        "TIME": 0.0,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(XTEST:VZERO)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(XTEST:VZERO)": 0.0
+      },
+      "max_A_B_difference": 0.0,
+      "max_A_B_positive_time_difference": 0.0,
+      "max_analytic_error_A": 0.75,
+      "max_analytic_error_B": 0.75
+    },
+    {
+      "name": "zero_v_ic_b_op",
+      "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_b_op/stdout.log",
+      "singular_warning": false,
+      "dcop_failed": false,
+      "rows": 1001,
+      "first": {
+        "TIME": 0.0,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(VZERO)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(VZERO)": 0.0
+      },
+      "max_A_B_difference": 0.0,
+      "max_A_B_positive_time_difference": 0.0,
+      "max_analytic_error_A": 0.75,
+      "max_analytic_error_B": 0.75
+    },
+    {
+      "name": "zero_v_ic_b_op_nonlinear",
+      "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_b_op_nonlinear/stdout.log",
+      "singular_warning": false,
+      "dcop_failed": false,
+      "rows": 1001,
+      "first": {
+        "TIME": 0.0,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(VZERO)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(A)": 1.0,
+        "V(B)": 1.0,
+        "V(OUT)": 1.0,
+        "I(VZERO)": 0.0
+      },
+      "max_A_B_difference": 0.0,
+      "max_A_B_positive_time_difference": 0.0,
+      "max_analytic_error_A": 0.75,
+      "max_analytic_error_B": 0.75
+    },
+    {
+      "name": "zero_v_ic_b_uic",
+      "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_b_uic/stdout.log",
+      "singular_warning": false,
+      "dcop_failed": false,
+      "rows": 1009,
+      "first": {
+        "TIME": 0.0,
+        "V(A)": 0.0,
+        "V(B)": 0.25,
+        "V(OUT)": 0.0,
+        "I(VZERO)": 0.0
+      },
+      "last": {
+        "TIME": 0.001,
+        "V(A)": 0.632120406,
+        "V(B)": 0.632120406,
+        "V(OUT)": 0.632120406,
+        "I(VZERO)": 0.0
+      },
+      "max_A_B_difference": 0.25,
+      "max_A_B_positive_time_difference": 0.0,
+      "max_analytic_error_A": 0.25,
+      "max_analytic_error_B": 0.2497506241259688
+    }
+  ],
+  "matrix": {
+    "path": "/workspace/tool-verification/xyce-reference/Startup/Failed_Matrix1.mm",
+    "shape": [
+      560,
+      560
+    ],
+    "stored_entries": 1383,
+    "zero_rows_0based": [
+      9
+    ],
+    "row9_entries_0based": [
+      [
+        28,
+        0.0
+      ]
+    ],
+    "row9_has_structural_diagonal": false,
+    "node9": "x_u1:xcore:comp"
+  },
+  "scope": "Normal-OP reference only; UIC remapping is numerically nonequivalent.",
+  "recommendation": "Accept only normal-OP intended-constraint compatibility remap COMP to zero-source-connected N16888001 with same value and documented reason; no claim of UIC equivalence or byte-identical original model. Prefer this small audited model adaptation to an unvalidated custom solver graph patch for the immediate reference run."
+}

@@ -1,0 +1,6 @@
+* Name-only bridge between TI's DSN symbol and the unencrypted LIB in the same package.
+* DSN: BOOT EN GND SW VIN FB; LIB: BOOT EN GND PH VIN VSENSE.
+* Both pin sequences were independently checked; no chip parameters are changed.
+.SUBCKT TPS54302DDC_TRANS BOOT EN GND SW VIN FB PARAMS: STEADY_STATE=0
+XCORE BOOT EN GND SW VIN FB TPS54302_TRANS PARAMS: STEADY_STATE={STEADY_STATE}
+.ENDS TPS54302DDC_TRANS

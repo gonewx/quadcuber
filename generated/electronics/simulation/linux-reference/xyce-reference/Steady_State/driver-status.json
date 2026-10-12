@@ -1,0 +1,63 @@
+{
+  "state": "REFERENCE_COMPLETE_WITH_ADAPTATION",
+  "full_reference_passed": false,
+  "note": "Completion is distinct from independently validated waveform equivalence to PSpice.",
+  "runs": [
+    {
+      "view": "Steady_State",
+      "run": "raw-driver",
+      "log": "Steady_State/raw-driver.log",
+      "requested_stop_s": 0.0008,
+      "returncode": 1,
+      "completed": false,
+      "acceptance_passed": false
+    },
+    {
+      "view": "Steady_State",
+      "run": "include-driver",
+      "log": "Steady_State/include-driver.log",
+      "requested_stop_s": 0.0008,
+      "returncode": 1,
+      "completed": false,
+      "acceptance_passed": false
+    },
+    {
+      "view": "Steady_State",
+      "run": "native-driver",
+      "log": "Steady_State/native-driver.log",
+      "requested_stop_s": 0.0008,
+      "returncode": 1,
+      "completed": false,
+      "acceptance_passed": false
+    },
+    {
+      "view": "Steady_State",
+      "run": "ksparse-driver",
+      "log": "Steady_State/ksparse-driver.log",
+      "requested_stop_s": 0.0008,
+      "returncode": 1,
+      "completed": false,
+      "acceptance_passed": false
+    },
+    {
+      "view": "Steady_State",
+      "run": "init-compatible-driver",
+      "log": "Steady_State/init-compatible-driver.log",
+      "requested_stop_s": 0.0008,
+      "returncode": 0,
+      "completed": true,
+      "acceptance_passed": false,
+      "waveform": "Steady_State/init-compatible-driver.cir.csv.gz",
+      "rows": 5842,
+      "first_time_s": 0.0007500001,
+      "last_time_s": 0.0008,
+      "finite": true,
+      "strictly_increasing_printed_time": true,
+      "min_V": 5.09295553,
+      "max_V": 5.09980521,
+      "min_inductor_A": 2.74948226,
+      "max_inductor_A": 3.25186809,
+      "waveform_compression": "gzip"
+    }
+  ]
+}

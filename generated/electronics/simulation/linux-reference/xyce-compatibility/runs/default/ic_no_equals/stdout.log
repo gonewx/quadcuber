@@ -1,0 +1,39 @@
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version Xyce Release 7.10.0-opensource
+***** Date: Mon Oct 12 05:12:59 UTC 2026
+
+
+***** Executing netlist ic_no_equals.cir
+
+***** Reading and parsing netlist...
+***** Setting up topology...
+
+Netlist warning: Voltage Node (OUT) connected to only 1 device Terminal
+***** Device Count Summary ...
+       B level 1 (Expression Based Voltage or Current Source) 1
+       C level 1 (Capacitor)                                  1
+       R level 1 (Resistor)                                   1
+       --------------------------------------------------------
+       Total Devices                                          3
+***** Setting up matrix structure...
+***** Number of Unknowns = 3
+***** Initializing...
+
+Netlist error: Cannot convert '(' to double for expression VALUE
+Netlist error: Cannot convert ')' to double for expression VALUE
+Netlist error: Cannot convert '' to double for expression VALUE
+Netlist warning: Initial conditions specified at nodes not present in circuit.
+May be error in .IC or .NODESET line. Ignoring nodes:
+X1:V
+X1:{VSS}
+Simulation aborted due to error.  There are 0 MSG_FATAL errors and 3 MSG_ERROR
+ errors
+*** Xyce Abort ***
+Simulation aborted due to error.  There are 0 MSG_FATAL errors and 3 MSG_ERROR
+ errors
+
+
+*** Xyce Abort ***

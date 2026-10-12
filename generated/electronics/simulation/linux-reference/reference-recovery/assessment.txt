@@ -1,0 +1,48 @@
+TPS54302 original reference DSN recovery (2026-10-12)
+
+RESULT
+Both original testbench views have now been locally parsed and reconstructed into auditable SPICE circuits. These are DSN-derived reconstructions, NOT Cadence-generated original exports and NOT newly designed substitute testbenches. No solver has been run by this recovery task. Cross-simulator behavior remains to be verified by the parent task.
+
+DELIVERABLES
+Startup-recovered.cir: all 15 original component instances, 34 component pins, 53 wire records, eight nets (seven named + one unnamed).
+Steady_State-recovered.cir: all 16 original component instances, 35 component pins, 54 wire records, eight nets.
+pin-connectivity.csv: every placed pin index, cached symbol pin name, package pin number, x/y coordinate, authoritative wire net database ID/name and touching wire indices.
+recovery-audit.json: all parsed symbols/packages, properties and variants, all placed components/pins, all wire segments, merged effective properties, and original LIB SHA256.
+parsed-reference.txt: raw structured parser output including source PSpiceTemplate strings and occurrence results.
+parser-warnings.log: empty on successful parse.
+build.log: successful independent compiler output (empty).
+parser-source-provenance.json: 18 unchanged KiCad source files, pinned URLs and SHA256; each was fetched a second time at pinned commit and byte-compared.
+
+PARSER PROVENANCE AND MINIMAL DEPENDENCIES
+Official KiCad commit 0616634034fa1a8c92c141c293342cbef2f68dff, independently read via git ls-remote on official source mirror.
+https://github.com/KiCad/kicad-source-mirror/tree/0616634034fa1a8c92c141c293342cbef2f68dff/eeschema/sch_io/orcad
+Parser units: orcad_stream.cpp, orcad_structures.cpp, orcad_library.cpp, orcad_cache.cpp, orcad_page.cpp. Official exceptions.cpp and header-only vector2d/util/orient complete the dependency set. No parsing logic was edited.
+A small local read-only harness (parser-source/recover.cpp) invokes these functions and emits auditable data.
+C++20 compiler g++; system libwx_baseu-3.2.so.0 (Debian 3.2.8+dfsg-2); official Debian wx3.2-headers and libwxgtk3.2-dev 3.2.8+dfsg-2 packages extracted to wx-dev, without root/system installation. No GUI, full KiCad build, Windows, or CFB C++ dependency required. Python olefile extracts exact OLE stream bytes locally. A local empty config.h only omits optional compiler diagnostic pragmas in math/util.h.
+Build reproducibly with sh build-parser.sh. Run recover-dsn streams > parsed-reference.txt 2> parser-warnings.log. Run python export_reference.py.
+
+AUDIT CHECKS
+Every instance pin resolves to exactly one wire-net database ID; no unsupported or missing instance pins. Every wire belongs to a net touched by a component. All non-ground net segments form connected geometric networks, and ground uses the original named 0 net. All 107 wire records are checked. Symbol pin identity follows abs(placed pinIndex)-1, confirmed in official orcad_converter_symbols.cpp, rather than guessing pin order from coordinates or package names. Device template pin ordering is BOOT EN GND SW VIN FB. The LIB uses BOOT EN GND PH VIN VSENSE: same six functional positions, but different local names for switching and feedback nodes.
+C.Normal and package C each contain a second cached variant: both versions have exactly identical PSpice properties and pin mappings. All other cached symbols/packages have no variant.
+DSN Library version is 2.0. The official occurrence reader explicitly treats these pre-preamble hierarchy streams as instance-annotated references and returns an empty override tree. Both views follow that documented path. No external Packages streams exist in the source DSN.
+Startup and Steady_State retain all placed property overrides over cached symbol/package defaults; the raw templates appear beside each reconstructed SPICE line.
+The original LIB is referenced with an absolute path, read-only, and never modified.
+
+IMPORTANT ORIGINAL DETAILS
+Startup: VPULSE 0 to 12 V, TD=100u, TR=10u, TF=10u, PW=1, PER=2; resistive load {5/3}; STEADY_STATE=0; inductor IC=0; bootstrap capacitor IC=0. Transient stop=6.5m, save start=0, maxstep=20n.
+Steady_State: VDC=12, IDC=3 (VOUT to GND); STEADY_STATE=1; inductor IC=3; bootstrap capacitor IC=12; both CESR instances IC=5; explicit .IC V(VOUT)=5. Transient stop=800u, save start=750u, maxstep=20n. Do not substitute startup's 6.5m profile here.
+Both: L=10u DCR=10m; C5/C6 are separate CESR subcircuits each C=22u ESR=2m X=1; C1=0.1u, C2=10u, C4=0.1u, C8=75p; R1=49.9, R2=100k, R3=13.3k, R4=510k (not 511k from a newer datasheet), R5=105k.
+The original CESR model has C IN 1 {C*X} ;IC={IC}, so its IC parameter is commented out at the internal capacitor. This exact original behavior is preserved, not repaired or enabled for convergence.
+Both trans.sim profiles specify ABSTOL=10n,VNTOL=10u,ITL1=1500,ITL2=400,ITL4=100. Cadence-style .TRAN 0, .OPTIONS and .PROBE are kept; a separate simulator adapter may need syntax changes while preserving circuit/model semantics.
+
+DIRECT EXECUTION BLOCKER: OFFICIAL PACKAGE NAME MISMATCH
+The 2016 DSN's device value/model name is TPS54302DDC_TRANS, while the present official LIB line53 declares .SUBCKT TPS54302_TRANS BOOT EN GND PH VIN VSENSE PARAMS: STEADY_STATE=0. There is no TPS54302DDC_TRANS subcircuit in that LIB. The recovered files intentionally retain the original DSN model name; the LIB remains untouched. They require an external transparent six-pin alias wrapper before simulation. The parent task is handling that separate adapter. Positional mapping is BOOT->BOOT, EN->EN, GND->GND, SW->PH, VIN->VIN, FB->VSENSE. PH is the switching node in LIB lines55/80/88; VSENSE feeds the feedback RC/input at lines194/195/236. Pass STEADY_STATE through unchanged. Do not present the unadapted recovered circuit as directly runnable.
+
+LIMITATIONS
+No Cadence netlister output was available for an independent comparison. Consequently report the provenance as reconstructed from the original DSN with pin-level audit, not vendor-certified or Cadence-exported. The supported PSpice templates in this specific file were explicitly rendered by the local exporter; it is not a general Capture PSpiceTemplate implementation.
+Simulation runtime and numerical compatibility are separate from connectivity recovery. Neither successful parsing nor recovery proves physical accuracy or convergence.
+
+INITIAL AVENUES AND ACCESS BOUNDARIES
+TI's current product page only listed the existing SLVMBL9A model ZIP (https://www.ti.com/lit/zip/SLVMBL9); no public standalone original exported netlist was located. Public search absence is not proof an attachment does not exist.
+KiCad10.0.7 direct DSN netlist export failed with exit3; logged in kicad10-import-attempt.log. Official master contains the new importer. Official Linux downloads page https://www.kicad.org/download/linux/ links nightly AppImages, but download directory access returned403 and was stopped. GitHub API directory access likewise returned403 and was stopped; public exact source files were independently readable. No proxy/header/credential/path trick was used to bypass restrictions.
+All actual recovery computation was local. No project/model/BOM/parameters uploaded, account created, explicit new license accepted, message sent externally, or repository design modified.

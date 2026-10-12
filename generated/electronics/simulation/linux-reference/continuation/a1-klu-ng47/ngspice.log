@@ -1,0 +1,25 @@
+Warning : IC on non-existent node - x1.en, ignored
+   Please check line .ic v(x1.en )=0
+
+Warning : IC on non-existent node - x2.en, ignored
+   Please check line .ic v(x2.en )=0
+
+doAnalyses: out of memory
+
+tran simulation(s) aborted
+
+Error: no such function as i,
+    or i(L1) is not available.
+Note: gnd in a subcircuit is not set to 0 automatically
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: quadcuber actual dual tps54302 bom, official model required
+
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using KLU as Direct Linear Solver
+Warning: The needed element doesn't exist in the matrix, but KLU mode cannot create a new element. Please specify an existing element for .ic
+ngspice-47 done

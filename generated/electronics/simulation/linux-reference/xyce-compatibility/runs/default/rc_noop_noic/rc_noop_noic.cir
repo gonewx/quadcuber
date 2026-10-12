@@ -1,0 +1,8 @@
+Tiny RC noop _noic: 1 V source, tau=1 ms
+VS IN 0 1
+R1 IN OUT 1k
+C1 OUT 0 1u
+
+.TRAN 1u 1m 0 1u NOOP
+.PRINT TRAN FORMAT=CSV V(OUT)
+.END

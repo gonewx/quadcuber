@@ -1,0 +1,10 @@
+{
+  "zero_rows": [
+    {
+      "index0": 9,
+      "node": "x_u1:xcore:comp"
+    }
+  ],
+  "model_constraint": "V_V1 N16888001 COMP 0Vdc",
+  "hypothesis": "IC augmentation zeros COMP row but its diagonal is structurally absent. An identical voltage IC at N16888001 should avoid this without changing the algebraic zero-volt constraint. Pending isolated test."
+}

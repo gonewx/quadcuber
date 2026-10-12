@@ -1,0 +1,117 @@
+[
+  {
+    "stream": "AdminData",
+    "size": 6,
+    "sha256": "b0f66adc83641586656866813fd9dd0b8ebb63796075661ba45d1aa8089e1d44"
+  },
+  {
+    "stream": "CIS/CISSchematicStore/CISSchematicStream",
+    "size": 4,
+    "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+  },
+  {
+    "stream": "CIS/VariantStore/BOM/BOMDataStream",
+    "size": 5,
+    "sha256": "0885cd88b6431eb10b428b578e5e3ecd3d53ac2ee3f7bb3a7630ed9fe372b513"
+  },
+  {
+    "stream": "CIS/VariantStore/Groups/GroupsDataStream",
+    "size": 4,
+    "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+  },
+  {
+    "stream": "CIS/VariantStore/VariantNames",
+    "size": 11,
+    "sha256": "d88551b34b5997a8b8a4aeac6a51f71558ea2b3ce1affa62469176d8f1e23011"
+  },
+  {
+    "stream": "Cache",
+    "size": 14457,
+    "sha256": "97549ce69f1bc08ac7692162ad4f2a5eb1ffee609a29df1aa16c505d49540002"
+  },
+  {
+    "stream": "Cells Directory",
+    "size": 6,
+    "sha256": "6d01b8de5f5008141405434750bf9262cc7ff7f9e9e9786be41faf8aff2551ba"
+  },
+  {
+    "stream": "ExportBlocks Directory",
+    "size": 6,
+    "sha256": "6d01b8de5f5008141405434750bf9262cc7ff7f9e9e9786be41faf8aff2551ba"
+  },
+  {
+    "stream": "Graphics/$Types$",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "stream": "Graphics Directory",
+    "size": 6,
+    "sha256": "6d01b8de5f5008141405434750bf9262cc7ff7f9e9e9786be41faf8aff2551ba"
+  },
+  {
+    "stream": "HSObjects",
+    "size": 16,
+    "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+  },
+  {
+    "stream": "Library",
+    "size": 8797,
+    "sha256": "aa8fbda0017cf6c3ef4822801a5e08475301f752298c334fb4e20fb16705c2d2"
+  },
+  {
+    "stream": "Packages Directory",
+    "size": 6,
+    "sha256": "6d01b8de5f5008141405434750bf9262cc7ff7f9e9e9786be41faf8aff2551ba"
+  },
+  {
+    "stream": "Parts Directory",
+    "size": 6,
+    "sha256": "6d01b8de5f5008141405434750bf9262cc7ff7f9e9e9786be41faf8aff2551ba"
+  },
+  {
+    "stream": "Symbols/$Types$",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "stream": "Symbols Directory",
+    "size": 6,
+    "sha256": "6d01b8de5f5008141405434750bf9262cc7ff7f9e9e9786be41faf8aff2551ba"
+  },
+  {
+    "stream": "Views/Startup/Hierarchy/Hierarchy",
+    "size": 853,
+    "sha256": "fcce486a948ff4316d6c1826da4994218a34dc1b99a28b69f442eb7b3dce8627"
+  },
+  {
+    "stream": "Views/Startup/Pages/PAGE1",
+    "size": 3320775,
+    "sha256": "06a8e6706d4292c5f84cbc60f4210967ccbdca77b26360d17252fe3247ac1314"
+  },
+  {
+    "stream": "Views/Startup/Schematic",
+    "size": 988,
+    "sha256": "b6d5aec88b02eaa430b7223c4418063f30b193066bfaa9f1ce9e55df9607c392"
+  },
+  {
+    "stream": "Views/Steady_State/Hierarchy/Hierarchy",
+    "size": 894,
+    "sha256": "68d5783b517a7122c568efcc2d229d3910bdd33fd80ea3d3704b13633cc6d3b5"
+  },
+  {
+    "stream": "Views/Steady_State/Pages/PAGE1",
+    "size": 3346160,
+    "sha256": "91577094e0dd29e763d10e786c626b846878d58171471e10b563482782eb8d57"
+  },
+  {
+    "stream": "Views/Steady_State/Schematic",
+    "size": 1000,
+    "sha256": "b03f14b01babf0b0ad45b6bb0b849160716ee89a1e09d6bae078bd23bd0444db"
+  },
+  {
+    "stream": "Views Directory",
+    "size": 75,
+    "sha256": "5ce1c295b595cd0fd04b5363c9c413691ab9d74516ca0cc7c33437af419cb21d"
+  }
+]

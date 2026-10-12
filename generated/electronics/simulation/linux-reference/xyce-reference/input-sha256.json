@@ -1,0 +1,9 @@
+{
+  "ti-model/TPS54302_PSPICE_TRANS/TPS54302_TRANS.DSN": "5f4c2c64f087f981c837bef4bb3f8294eab80a1731ea90afcd15d464342d9777",
+  "ti-model/TPS54302_PSPICE_TRANS/TPS54302_TRANS.LIB": "52a568f08f1eed44961238a1ff10b68c2ce1faa1cdf2c24659b17b1f820f0026",
+  "ti-model/TPS54302_PSPICE_TRANS/TPS54302_TRANS.OPJ": "00a4fc0b26e76c8decf9f961b6191249588c68946c4078def25808ebf5eb94a3",
+  "ti-model/TPS54302_PSPICE_TRANS/TPS54302_TRANS-PSpiceFiles/Startup/trans.sim": "30879e4908a2f663606aac05283e57019cbb96a51043e378453bf2cc0b9d333f",
+  "ti-model/TPS54302_PSPICE_TRANS/TPS54302_TRANS-PSpiceFiles/Steady_State/trans.sim": "c8509179fbda3ae2676145ded0e9f5416e7ad0e360b56a5404e1c1bef5c2687a",
+  "reference-recovery/export_reference.py": "ccd364006e07fde61f64c46cff2045a4d3d6f2007a1cefee04d29acac593eaea",
+  "xyce-reference/ti-name-alias.lib": "de8cc57e8f0dc8092dfe7b527ce3c3937ac32b66b53ce60bf1b5af19b997de38"
+}

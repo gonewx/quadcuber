@@ -1,0 +1,114 @@
+[
+  {
+    "name": "zero_v_ic_a_op",
+    "target": "A",
+    "mode": "op",
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_a_op/stdout.log",
+    "rows": 1001,
+    "first": {
+      "TIME": 0.0,
+      "V(A)": 1.0,
+      "V(B)": 1.0,
+      "V(OUT)": 1.0,
+      "I(VZERO)": 0.0
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(A)": 1.0,
+      "V(B)": 1.0,
+      "V(OUT)": 1.0,
+      "I(VZERO)": 0.0
+    },
+    "max_AB_error_all": 0.0,
+    "max_AB_error_positive_time": 0.0,
+    "max_analytic_error_A": 0.75,
+    "max_analytic_error_positive_time_A": 0.7492503748750312,
+    "max_analytic_error_B": 0.75,
+    "max_analytic_error_positive_time_B": 0.7492503748750312
+  },
+  {
+    "name": "zero_v_ic_a_uic",
+    "target": "A",
+    "mode": "uic",
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_a_uic/stdout.log",
+    "rows": 1009,
+    "first": {
+      "TIME": 0.0,
+      "V(A)": 0.25,
+      "V(B)": 0.0,
+      "V(OUT)": 0.0,
+      "I(VZERO)": 0.0
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(A)": 0.724090304,
+      "V(B)": 0.724090304,
+      "V(OUT)": 0.724090304,
+      "I(VZERO)": 0.0
+    },
+    "max_AB_error_all": 0.25,
+    "max_AB_error_positive_time": 0.0,
+    "max_analytic_error_A": 3.748333424757888e-07,
+    "max_analytic_error_positive_time_A": 3.748333424757888e-07,
+    "max_analytic_error_B": 0.25,
+    "max_analytic_error_positive_time_B": 3.748333424757888e-07
+  },
+  {
+    "name": "zero_v_ic_b_op",
+    "target": "B",
+    "mode": "op",
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_b_op/stdout.log",
+    "rows": 1001,
+    "first": {
+      "TIME": 0.0,
+      "V(A)": 1.0,
+      "V(B)": 1.0,
+      "V(OUT)": 1.0,
+      "I(VZERO)": 0.0
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(A)": 1.0,
+      "V(B)": 1.0,
+      "V(OUT)": 1.0,
+      "I(VZERO)": 0.0
+    },
+    "max_AB_error_all": 0.0,
+    "max_AB_error_positive_time": 0.0,
+    "max_analytic_error_A": 0.75,
+    "max_analytic_error_positive_time_A": 0.7492503748750312,
+    "max_analytic_error_B": 0.75,
+    "max_analytic_error_positive_time_B": 0.7492503748750312
+  },
+  {
+    "name": "zero_v_ic_b_uic",
+    "target": "B",
+    "mode": "uic",
+    "returncode": 0,
+    "log": "/workspace/tool-verification/xyce-compatibility/runs/zero_v_ic/zero_v_ic_b_uic/stdout.log",
+    "rows": 1009,
+    "first": {
+      "TIME": 0.0,
+      "V(A)": 0.0,
+      "V(B)": 0.25,
+      "V(OUT)": 0.0,
+      "I(VZERO)": 0.0
+    },
+    "last": {
+      "TIME": 0.001,
+      "V(A)": 0.632120406,
+      "V(B)": 0.632120406,
+      "V(OUT)": 0.632120406,
+      "I(VZERO)": 0.0
+    },
+    "max_AB_error_all": 0.25,
+    "max_AB_error_positive_time": 0.0,
+    "max_analytic_error_A": 0.25,
+    "max_analytic_error_positive_time_A": 0.2497506241259688,
+    "max_analytic_error_B": 0.2497506241259688,
+    "max_analytic_error_positive_time_B": 0.2497506241259688
+  }
+]
