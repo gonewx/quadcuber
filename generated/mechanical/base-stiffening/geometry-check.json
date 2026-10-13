@@ -1,0 +1,5738 @@
+{
+  "status": "GEOMETRY_VERIFIED_NOT_PHYSICALLY_VALIDATED",
+  "baseline_main_commit": "d6bda1d7c7be800161ae366a072e22fdf10a1728",
+  "added_instances": 72,
+  "remove_original_pins": [
+    24,
+    25,
+    26,
+    27,
+    40,
+    41,
+    42,
+    43,
+    56,
+    57,
+    58,
+    59,
+    61,
+    62,
+    63,
+    64
+  ],
+  "net_instance_increase": 56,
+  "new_assembly_bom": {
+    "32278.dat": 8,
+    "32526.dat": 4,
+    "40490.dat": 8,
+    "6558.dat": 40,
+    "32523.dat": 4,
+    "2780.dat": 8
+  },
+  "reuse_2780_from_removed": 8,
+  "connections": [
+    {
+      "id": "OUT-2-120",
+      "xz_mm": [
+        120.0,
+        -32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B02",
+        "M02",
+        "D02"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          120.0,
+          124.0,
+          -32.0
+        ],
+        [
+          120.0,
+          108.0,
+          -32.0
+        ],
+        [
+          120.0,
+          132.0,
+          -32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B02",
+          "hole_center_mm": [
+            120.0,
+            112.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "D02",
+          "hole_center_mm": [
+            120.0,
+            128.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "M02",
+          "hole_center_mm": [
+            120.0,
+            120.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-2-152",
+      "xz_mm": [
+        152.0,
+        -32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B02",
+        "M02",
+        "D02"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          152.0,
+          124.0,
+          -32.0
+        ],
+        [
+          152.0,
+          108.0,
+          -32.0
+        ],
+        [
+          152.0,
+          132.0,
+          -32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B02",
+          "hole_center_mm": [
+            152.0,
+            112.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "D02",
+          "hole_center_mm": [
+            152.0,
+            128.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "M02",
+          "hole_center_mm": [
+            152.0,
+            120.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-7-120",
+      "xz_mm": [
+        48.0,
+        -120.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B07",
+        "M07",
+        "D07"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          48.0,
+          124.0,
+          -120.0
+        ],
+        [
+          48.0,
+          108.0,
+          -120.0
+        ],
+        [
+          48.0,
+          132.0,
+          -120.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B07",
+          "hole_center_mm": [
+            48.0,
+            112.0,
+            -120.0
+          ]
+        },
+        {
+          "host": "D07",
+          "hole_center_mm": [
+            48.0,
+            128.0,
+            -120.0
+          ]
+        },
+        {
+          "host": "M07",
+          "hole_center_mm": [
+            48.0,
+            120.0,
+            -120.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-7-152",
+      "xz_mm": [
+        48.0,
+        -152.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B07",
+        "M07",
+        "D07"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          48.0,
+          124.0,
+          -152.0
+        ],
+        [
+          48.0,
+          108.0,
+          -152.0
+        ],
+        [
+          48.0,
+          132.0,
+          -152.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B07",
+          "hole_center_mm": [
+            48.0,
+            112.0,
+            -152.0
+          ]
+        },
+        {
+          "host": "D07",
+          "hole_center_mm": [
+            48.0,
+            128.0,
+            -152.0
+          ]
+        },
+        {
+          "host": "M07",
+          "hole_center_mm": [
+            48.0,
+            120.0,
+            -152.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-13-120",
+      "xz_mm": [
+        -120.0,
+        32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B13",
+        "M13",
+        "D13"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -120.0,
+          124.0,
+          32.0
+        ],
+        [
+          -120.0,
+          108.0,
+          32.0
+        ],
+        [
+          -120.0,
+          132.0,
+          32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B13",
+          "hole_center_mm": [
+            -120.0,
+            112.0,
+            32.0
+          ]
+        },
+        {
+          "host": "D13",
+          "hole_center_mm": [
+            -120.0,
+            128.0,
+            32.0
+          ]
+        },
+        {
+          "host": "M13",
+          "hole_center_mm": [
+            -120.0,
+            120.0,
+            32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-13-152",
+      "xz_mm": [
+        -152.0,
+        32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B13",
+        "M13",
+        "D13"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -152.0,
+          124.0,
+          32.0
+        ],
+        [
+          -152.0,
+          108.0,
+          32.0
+        ],
+        [
+          -152.0,
+          132.0,
+          32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B13",
+          "hole_center_mm": [
+            -152.0,
+            112.0,
+            32.0
+          ]
+        },
+        {
+          "host": "D13",
+          "hole_center_mm": [
+            -152.0,
+            128.0,
+            32.0
+          ]
+        },
+        {
+          "host": "M13",
+          "hole_center_mm": [
+            -152.0,
+            120.0,
+            32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-18-120",
+      "xz_mm": [
+        -48.0,
+        120.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B18",
+        "M18",
+        "D18"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -48.0,
+          124.0,
+          120.0
+        ],
+        [
+          -48.0,
+          108.0,
+          120.0
+        ],
+        [
+          -48.0,
+          132.0,
+          120.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B18",
+          "hole_center_mm": [
+            -48.0,
+            112.0,
+            120.0
+          ]
+        },
+        {
+          "host": "D18",
+          "hole_center_mm": [
+            -48.0,
+            128.0,
+            120.0
+          ]
+        },
+        {
+          "host": "M18",
+          "hole_center_mm": [
+            -48.0,
+            120.0,
+            120.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-18-152",
+      "xz_mm": [
+        -48.0,
+        152.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B18",
+        "M18",
+        "D18"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -48.0,
+          124.0,
+          152.0
+        ],
+        [
+          -48.0,
+          108.0,
+          152.0
+        ],
+        [
+          -48.0,
+          132.0,
+          152.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B18",
+          "hole_center_mm": [
+            -48.0,
+            112.0,
+            152.0
+          ]
+        },
+        {
+          "host": "D18",
+          "hole_center_mm": [
+            -48.0,
+            128.0,
+            152.0
+          ]
+        },
+        {
+          "host": "M18",
+          "hole_center_mm": [
+            -48.0,
+            120.0,
+            152.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-29-120",
+      "xz_mm": [
+        32.0,
+        120.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B29",
+        "M29",
+        "D29"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          32.0,
+          124.0,
+          120.0
+        ],
+        [
+          32.0,
+          108.0,
+          120.0
+        ],
+        [
+          32.0,
+          132.0,
+          120.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B29",
+          "hole_center_mm": [
+            32.0,
+            112.0,
+            120.0
+          ]
+        },
+        {
+          "host": "D29",
+          "hole_center_mm": [
+            32.0,
+            128.0,
+            120.0
+          ]
+        },
+        {
+          "host": "M29",
+          "hole_center_mm": [
+            32.0,
+            120.0,
+            120.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-29-152",
+      "xz_mm": [
+        32.0,
+        152.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B29",
+        "M29",
+        "D29"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          32.0,
+          124.0,
+          152.0
+        ],
+        [
+          32.0,
+          108.0,
+          152.0
+        ],
+        [
+          32.0,
+          132.0,
+          152.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B29",
+          "hole_center_mm": [
+            32.0,
+            112.0,
+            152.0
+          ]
+        },
+        {
+          "host": "D29",
+          "hole_center_mm": [
+            32.0,
+            128.0,
+            152.0
+          ]
+        },
+        {
+          "host": "M29",
+          "hole_center_mm": [
+            32.0,
+            120.0,
+            152.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-34-120",
+      "xz_mm": [
+        120.0,
+        48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B34",
+        "M34",
+        "D34"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          120.0,
+          124.0,
+          48.0
+        ],
+        [
+          120.0,
+          108.0,
+          48.0
+        ],
+        [
+          120.0,
+          132.0,
+          48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B34",
+          "hole_center_mm": [
+            120.0,
+            112.0,
+            48.0
+          ]
+        },
+        {
+          "host": "D34",
+          "hole_center_mm": [
+            120.0,
+            128.0,
+            48.0
+          ]
+        },
+        {
+          "host": "M34",
+          "hole_center_mm": [
+            120.0,
+            120.0,
+            48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-34-152",
+      "xz_mm": [
+        152.0,
+        48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B34",
+        "M34",
+        "D34"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          152.0,
+          124.0,
+          48.0
+        ],
+        [
+          152.0,
+          108.0,
+          48.0
+        ],
+        [
+          152.0,
+          132.0,
+          48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B34",
+          "hole_center_mm": [
+            152.0,
+            112.0,
+            48.0
+          ]
+        },
+        {
+          "host": "D34",
+          "hole_center_mm": [
+            152.0,
+            128.0,
+            48.0
+          ]
+        },
+        {
+          "host": "M34",
+          "hole_center_mm": [
+            152.0,
+            120.0,
+            48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-45-120",
+      "xz_mm": [
+        -32.0,
+        -120.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B45",
+        "M45",
+        "D45"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -32.0,
+          124.0,
+          -120.0
+        ],
+        [
+          -32.0,
+          108.0,
+          -120.0
+        ],
+        [
+          -32.0,
+          132.0,
+          -120.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B45",
+          "hole_center_mm": [
+            -32.0,
+            112.0,
+            -120.0
+          ]
+        },
+        {
+          "host": "D45",
+          "hole_center_mm": [
+            -32.0,
+            128.0,
+            -120.0
+          ]
+        },
+        {
+          "host": "M45",
+          "hole_center_mm": [
+            -32.0,
+            120.0,
+            -120.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-45-152",
+      "xz_mm": [
+        -32.0,
+        -152.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B45",
+        "M45",
+        "D45"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -32.0,
+          124.0,
+          -152.0
+        ],
+        [
+          -32.0,
+          108.0,
+          -152.0
+        ],
+        [
+          -32.0,
+          132.0,
+          -152.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B45",
+          "hole_center_mm": [
+            -32.0,
+            112.0,
+            -152.0
+          ]
+        },
+        {
+          "host": "D45",
+          "hole_center_mm": [
+            -32.0,
+            128.0,
+            -152.0
+          ]
+        },
+        {
+          "host": "M45",
+          "hole_center_mm": [
+            -32.0,
+            120.0,
+            -152.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-50-120",
+      "xz_mm": [
+        -120.0,
+        -48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B50",
+        "M50",
+        "D50"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -120.0,
+          124.0,
+          -48.0
+        ],
+        [
+          -120.0,
+          108.0,
+          -48.0
+        ],
+        [
+          -120.0,
+          132.0,
+          -48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B50",
+          "hole_center_mm": [
+            -120.0,
+            112.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "D50",
+          "hole_center_mm": [
+            -120.0,
+            128.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "M50",
+          "hole_center_mm": [
+            -120.0,
+            120.0,
+            -48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT-50-152",
+      "xz_mm": [
+        -152.0,
+        -48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [
+        "B50",
+        "M50",
+        "D50"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -152.0,
+          124.0,
+          -48.0
+        ],
+        [
+          -152.0,
+          108.0,
+          -48.0
+        ],
+        [
+          -152.0,
+          132.0,
+          -48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B50",
+          "hole_center_mm": [
+            -152.0,
+            112.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "D50",
+          "hole_center_mm": [
+            -152.0,
+            128.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "M50",
+          "hole_center_mm": [
+            -152.0,
+            120.0,
+            -48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B24",
+      "xz_mm": [
+        -48.0,
+        32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -48.0,
+          116.0,
+          32.0
+        ],
+        [
+          -48.0,
+          100.0,
+          32.0
+        ],
+        [
+          -48.0,
+          124.0,
+          32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B13",
+          "hole_center_mm": [
+            -48.0,
+            112.0,
+            32.0
+          ]
+        },
+        {
+          "host": "B23",
+          "hole_center_mm": [
+            -48.0,
+            104.0,
+            32.0
+          ]
+        },
+        {
+          "host": "C23",
+          "hole_center_mm": [
+            -48.0,
+            120.0,
+            32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B25",
+      "xz_mm": [
+        -64.0,
+        32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -64.0,
+          116.0,
+          32.0
+        ],
+        [
+          -64.0,
+          100.0,
+          32.0
+        ],
+        [
+          -64.0,
+          124.0,
+          32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B13",
+          "hole_center_mm": [
+            -64.0,
+            112.0,
+            32.0
+          ]
+        },
+        {
+          "host": "B23",
+          "hole_center_mm": [
+            -64.0,
+            104.0,
+            32.0
+          ]
+        },
+        {
+          "host": "C23",
+          "hole_center_mm": [
+            -64.0,
+            120.0,
+            32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B26",
+      "xz_mm": [
+        -48.0,
+        64.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -48.0,
+          116.0,
+          64.0
+        ],
+        [
+          -48.0,
+          100.0,
+          64.0
+        ],
+        [
+          -48.0,
+          124.0,
+          64.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B18",
+          "hole_center_mm": [
+            -48.0,
+            112.0,
+            64.0
+          ]
+        },
+        {
+          "host": "B23",
+          "hole_center_mm": [
+            -48.0,
+            104.0,
+            64.0
+          ]
+        },
+        {
+          "host": "C23",
+          "hole_center_mm": [
+            -48.0,
+            120.0,
+            64.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B27",
+      "xz_mm": [
+        -48.0,
+        48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -48.0,
+          116.0,
+          48.0
+        ],
+        [
+          -48.0,
+          100.0,
+          48.0
+        ],
+        [
+          -48.0,
+          124.0,
+          48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B18",
+          "hole_center_mm": [
+            -48.0,
+            112.0,
+            48.0
+          ]
+        },
+        {
+          "host": "B23",
+          "hole_center_mm": [
+            -48.0,
+            104.0,
+            48.0
+          ]
+        },
+        {
+          "host": "C23",
+          "hole_center_mm": [
+            -48.0,
+            120.0,
+            48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B40",
+      "xz_mm": [
+        32.0,
+        48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          32.0,
+          116.0,
+          48.0
+        ],
+        [
+          32.0,
+          100.0,
+          48.0
+        ],
+        [
+          32.0,
+          124.0,
+          48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B29",
+          "hole_center_mm": [
+            32.0,
+            112.0,
+            48.0
+          ]
+        },
+        {
+          "host": "B39",
+          "hole_center_mm": [
+            32.0,
+            104.0,
+            48.0
+          ]
+        },
+        {
+          "host": "C39",
+          "hole_center_mm": [
+            32.0,
+            120.0,
+            48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B41",
+      "xz_mm": [
+        32.0,
+        64.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          32.0,
+          116.0,
+          64.0
+        ],
+        [
+          32.0,
+          100.0,
+          64.0
+        ],
+        [
+          32.0,
+          124.0,
+          64.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B29",
+          "hole_center_mm": [
+            32.0,
+            112.0,
+            64.0
+          ]
+        },
+        {
+          "host": "B39",
+          "hole_center_mm": [
+            32.0,
+            104.0,
+            64.0
+          ]
+        },
+        {
+          "host": "C39",
+          "hole_center_mm": [
+            32.0,
+            120.0,
+            64.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B42",
+      "xz_mm": [
+        64.0,
+        48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          64.0,
+          116.0,
+          48.0
+        ],
+        [
+          64.0,
+          100.0,
+          48.0
+        ],
+        [
+          64.0,
+          124.0,
+          48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B34",
+          "hole_center_mm": [
+            64.0,
+            112.0,
+            48.0
+          ]
+        },
+        {
+          "host": "B39",
+          "hole_center_mm": [
+            64.0,
+            104.0,
+            48.0
+          ]
+        },
+        {
+          "host": "C39",
+          "hole_center_mm": [
+            64.0,
+            120.0,
+            48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B43",
+      "xz_mm": [
+        48.0,
+        48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          48.0,
+          116.0,
+          48.0
+        ],
+        [
+          48.0,
+          100.0,
+          48.0
+        ],
+        [
+          48.0,
+          124.0,
+          48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B34",
+          "hole_center_mm": [
+            48.0,
+            112.0,
+            48.0
+          ]
+        },
+        {
+          "host": "B39",
+          "hole_center_mm": [
+            48.0,
+            104.0,
+            48.0
+          ]
+        },
+        {
+          "host": "C39",
+          "hole_center_mm": [
+            48.0,
+            120.0,
+            48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B56",
+      "xz_mm": [
+        -32.0,
+        -48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -32.0,
+          116.0,
+          -48.0
+        ],
+        [
+          -32.0,
+          100.0,
+          -48.0
+        ],
+        [
+          -32.0,
+          124.0,
+          -48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B45",
+          "hole_center_mm": [
+            -32.0,
+            112.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "B55",
+          "hole_center_mm": [
+            -32.0,
+            104.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "C55",
+          "hole_center_mm": [
+            -32.0,
+            120.0,
+            -48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B57",
+      "xz_mm": [
+        -32.0,
+        -64.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -32.0,
+          116.0,
+          -64.0
+        ],
+        [
+          -32.0,
+          100.0,
+          -64.0
+        ],
+        [
+          -32.0,
+          124.0,
+          -64.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B45",
+          "hole_center_mm": [
+            -32.0,
+            112.0,
+            -64.0
+          ]
+        },
+        {
+          "host": "B55",
+          "hole_center_mm": [
+            -32.0,
+            104.0,
+            -64.0
+          ]
+        },
+        {
+          "host": "C55",
+          "hole_center_mm": [
+            -32.0,
+            120.0,
+            -64.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B58",
+      "xz_mm": [
+        -64.0,
+        -48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -64.0,
+          116.0,
+          -48.0
+        ],
+        [
+          -64.0,
+          100.0,
+          -48.0
+        ],
+        [
+          -64.0,
+          124.0,
+          -48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B50",
+          "hole_center_mm": [
+            -64.0,
+            112.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "B55",
+          "hole_center_mm": [
+            -64.0,
+            104.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "C55",
+          "hole_center_mm": [
+            -64.0,
+            120.0,
+            -48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B59",
+      "xz_mm": [
+        -48.0,
+        -48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -48.0,
+          116.0,
+          -48.0
+        ],
+        [
+          -48.0,
+          100.0,
+          -48.0
+        ],
+        [
+          -48.0,
+          124.0,
+          -48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B50",
+          "hole_center_mm": [
+            -48.0,
+            112.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "B55",
+          "hole_center_mm": [
+            -48.0,
+            104.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "C55",
+          "hole_center_mm": [
+            -48.0,
+            120.0,
+            -48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B61",
+      "xz_mm": [
+        48.0,
+        -32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          48.0,
+          116.0,
+          -32.0
+        ],
+        [
+          48.0,
+          100.0,
+          -32.0
+        ],
+        [
+          48.0,
+          124.0,
+          -32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B02",
+          "hole_center_mm": [
+            48.0,
+            112.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "B60",
+          "hole_center_mm": [
+            48.0,
+            104.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "C60",
+          "hole_center_mm": [
+            48.0,
+            120.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B62",
+      "xz_mm": [
+        64.0,
+        -32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          64.0,
+          116.0,
+          -32.0
+        ],
+        [
+          64.0,
+          100.0,
+          -32.0
+        ],
+        [
+          64.0,
+          124.0,
+          -32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B02",
+          "hole_center_mm": [
+            64.0,
+            112.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "B60",
+          "hole_center_mm": [
+            64.0,
+            104.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "C60",
+          "hole_center_mm": [
+            64.0,
+            120.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B63",
+      "xz_mm": [
+        48.0,
+        -64.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          48.0,
+          116.0,
+          -64.0
+        ],
+        [
+          48.0,
+          100.0,
+          -64.0
+        ],
+        [
+          48.0,
+          124.0,
+          -64.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B07",
+          "hole_center_mm": [
+            48.0,
+            112.0,
+            -64.0
+          ]
+        },
+        {
+          "host": "B60",
+          "hole_center_mm": [
+            48.0,
+            104.0,
+            -64.0
+          ]
+        },
+        {
+          "host": "C60",
+          "hole_center_mm": [
+            48.0,
+            120.0,
+            -64.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REPLACE-B64",
+      "xz_mm": [
+        48.0,
+        -48.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 116,
+      "long_end_interval_y_mm": [
+        100,
+        116
+      ],
+      "short_end_interval_y_mm": [
+        116,
+        124
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          48.0,
+          116.0,
+          -48.0
+        ],
+        [
+          48.0,
+          100.0,
+          -48.0
+        ],
+        [
+          48.0,
+          124.0,
+          -48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B07",
+          "hole_center_mm": [
+            48.0,
+            112.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "B60",
+          "hole_center_mm": [
+            48.0,
+            104.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "C60",
+          "hole_center_mm": [
+            48.0,
+            120.0,
+            -48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INNER-0-56",
+      "xz_mm": [
+        56,
+        -32
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          56.0,
+          124.0,
+          -32.0
+        ],
+        [
+          56.0,
+          108.0,
+          -32.0
+        ],
+        [
+          56.0,
+          132.0,
+          -32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B02",
+          "hole_center_mm": [
+            56.0,
+            112.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "D02",
+          "hole_center_mm": [
+            56.0,
+            128.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "C60",
+          "hole_center_mm": [
+            56.0,
+            120.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INNER-0-48",
+      "xz_mm": [
+        48,
+        -56
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          48.0,
+          124.0,
+          -56.0
+        ],
+        [
+          48.0,
+          108.0,
+          -56.0
+        ],
+        [
+          48.0,
+          132.0,
+          -56.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B07",
+          "hole_center_mm": [
+            48.0,
+            112.0,
+            -56.0
+          ]
+        },
+        {
+          "host": "D07",
+          "hole_center_mm": [
+            48.0,
+            128.0,
+            -56.0
+          ]
+        },
+        {
+          "host": "C60",
+          "hole_center_mm": [
+            48.0,
+            120.0,
+            -56.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INNER-1-56",
+      "xz_mm": [
+        32,
+        56
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          32.0,
+          124.0,
+          56.0
+        ],
+        [
+          32.0,
+          108.0,
+          56.0
+        ],
+        [
+          32.0,
+          132.0,
+          56.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B29",
+          "hole_center_mm": [
+            32.0,
+            112.0,
+            56.0
+          ]
+        },
+        {
+          "host": "D29",
+          "hole_center_mm": [
+            32.0,
+            128.0,
+            56.0
+          ]
+        },
+        {
+          "host": "C39",
+          "hole_center_mm": [
+            32.0,
+            120.0,
+            56.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INNER-1-48",
+      "xz_mm": [
+        56,
+        48
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          56.0,
+          124.0,
+          48.0
+        ],
+        [
+          56.0,
+          108.0,
+          48.0
+        ],
+        [
+          56.0,
+          132.0,
+          48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B34",
+          "hole_center_mm": [
+            56.0,
+            112.0,
+            48.0
+          ]
+        },
+        {
+          "host": "D34",
+          "hole_center_mm": [
+            56.0,
+            128.0,
+            48.0
+          ]
+        },
+        {
+          "host": "C39",
+          "hole_center_mm": [
+            56.0,
+            120.0,
+            48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INNER-2-56",
+      "xz_mm": [
+        -56,
+        32
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -56.0,
+          124.0,
+          32.0
+        ],
+        [
+          -56.0,
+          108.0,
+          32.0
+        ],
+        [
+          -56.0,
+          132.0,
+          32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B13",
+          "hole_center_mm": [
+            -56.0,
+            112.0,
+            32.0
+          ]
+        },
+        {
+          "host": "D13",
+          "hole_center_mm": [
+            -56.0,
+            128.0,
+            32.0
+          ]
+        },
+        {
+          "host": "C23",
+          "hole_center_mm": [
+            -56.0,
+            120.0,
+            32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INNER-2-48",
+      "xz_mm": [
+        -48,
+        56
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -48.0,
+          124.0,
+          56.0
+        ],
+        [
+          -48.0,
+          108.0,
+          56.0
+        ],
+        [
+          -48.0,
+          132.0,
+          56.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B18",
+          "hole_center_mm": [
+            -48.0,
+            112.0,
+            56.0
+          ]
+        },
+        {
+          "host": "D18",
+          "hole_center_mm": [
+            -48.0,
+            128.0,
+            56.0
+          ]
+        },
+        {
+          "host": "C23",
+          "hole_center_mm": [
+            -48.0,
+            120.0,
+            56.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INNER-3-56",
+      "xz_mm": [
+        -32,
+        -56
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -32.0,
+          124.0,
+          -56.0
+        ],
+        [
+          -32.0,
+          108.0,
+          -56.0
+        ],
+        [
+          -32.0,
+          132.0,
+          -56.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B45",
+          "hole_center_mm": [
+            -32.0,
+            112.0,
+            -56.0
+          ]
+        },
+        {
+          "host": "D45",
+          "hole_center_mm": [
+            -32.0,
+            128.0,
+            -56.0
+          ]
+        },
+        {
+          "host": "C55",
+          "hole_center_mm": [
+            -32.0,
+            120.0,
+            -56.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INNER-3-48",
+      "xz_mm": [
+        -56,
+        -48
+      ],
+      "axis": "Y",
+      "collar_y_mm": 124,
+      "long_end_interval_y_mm": [
+        108,
+        124
+      ],
+      "short_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "host_ids": [],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -56.0,
+          124.0,
+          -48.0
+        ],
+        [
+          -56.0,
+          108.0,
+          -48.0
+        ],
+        [
+          -56.0,
+          132.0,
+          -48.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "B50",
+          "hole_center_mm": [
+            -56.0,
+            112.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "D50",
+          "hole_center_mm": [
+            -56.0,
+            128.0,
+            -48.0
+          ]
+        },
+        {
+          "host": "C55",
+          "hole_center_mm": [
+            -56.0,
+            120.0,
+            -48.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-2-144",
+      "xz_mm": [
+        144.0,
+        -32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 132,
+      "long_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "short_end_interval_y_mm": [
+        132,
+        140
+      ],
+      "host_ids": [
+        "D02",
+        "FOOT-2"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          144.0,
+          132.0,
+          -32.0
+        ],
+        [
+          144.0,
+          124.0,
+          -32.0
+        ],
+        [
+          144.0,
+          140.0,
+          -32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "D02",
+          "hole_center_mm": [
+            144.0,
+            128.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "FOOT-2",
+          "hole_center_mm": [
+            144.0,
+            136.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-2-160",
+      "xz_mm": [
+        160.0,
+        -32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 132,
+      "long_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "short_end_interval_y_mm": [
+        132,
+        140
+      ],
+      "host_ids": [
+        "D02",
+        "FOOT-2"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          160.0,
+          132.0,
+          -32.0
+        ],
+        [
+          160.0,
+          124.0,
+          -32.0
+        ],
+        [
+          160.0,
+          140.0,
+          -32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "D02",
+          "hole_center_mm": [
+            160.0,
+            128.0,
+            -32.0
+          ]
+        },
+        {
+          "host": "FOOT-2",
+          "hole_center_mm": [
+            160.0,
+            136.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-29-144",
+      "xz_mm": [
+        32.0,
+        144.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 132,
+      "long_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "short_end_interval_y_mm": [
+        132,
+        140
+      ],
+      "host_ids": [
+        "D29",
+        "FOOT-29"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          32.0,
+          132.0,
+          144.0
+        ],
+        [
+          32.0,
+          124.0,
+          144.0
+        ],
+        [
+          32.0,
+          140.0,
+          144.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "D29",
+          "hole_center_mm": [
+            32.0,
+            128.0,
+            144.0
+          ]
+        },
+        {
+          "host": "FOOT-29",
+          "hole_center_mm": [
+            32.0,
+            136.0,
+            144.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-29-160",
+      "xz_mm": [
+        32.0,
+        160.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 132,
+      "long_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "short_end_interval_y_mm": [
+        132,
+        140
+      ],
+      "host_ids": [
+        "D29",
+        "FOOT-29"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          32.0,
+          132.0,
+          160.0
+        ],
+        [
+          32.0,
+          124.0,
+          160.0
+        ],
+        [
+          32.0,
+          140.0,
+          160.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "D29",
+          "hole_center_mm": [
+            32.0,
+            128.0,
+            160.0
+          ]
+        },
+        {
+          "host": "FOOT-29",
+          "hole_center_mm": [
+            32.0,
+            136.0,
+            160.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-13-144",
+      "xz_mm": [
+        -144.0,
+        32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 132,
+      "long_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "short_end_interval_y_mm": [
+        132,
+        140
+      ],
+      "host_ids": [
+        "D13",
+        "FOOT-13"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -144.0,
+          132.0,
+          32.0
+        ],
+        [
+          -144.0,
+          124.0,
+          32.0
+        ],
+        [
+          -144.0,
+          140.0,
+          32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "D13",
+          "hole_center_mm": [
+            -144.0,
+            128.0,
+            32.0
+          ]
+        },
+        {
+          "host": "FOOT-13",
+          "hole_center_mm": [
+            -144.0,
+            136.0,
+            32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-13-160",
+      "xz_mm": [
+        -160.0,
+        32.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 132,
+      "long_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "short_end_interval_y_mm": [
+        132,
+        140
+      ],
+      "host_ids": [
+        "D13",
+        "FOOT-13"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -160.0,
+          132.0,
+          32.0
+        ],
+        [
+          -160.0,
+          124.0,
+          32.0
+        ],
+        [
+          -160.0,
+          140.0,
+          32.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "D13",
+          "hole_center_mm": [
+            -160.0,
+            128.0,
+            32.0
+          ]
+        },
+        {
+          "host": "FOOT-13",
+          "hole_center_mm": [
+            -160.0,
+            136.0,
+            32.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-45-144",
+      "xz_mm": [
+        -32.0,
+        -144.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 132,
+      "long_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "short_end_interval_y_mm": [
+        132,
+        140
+      ],
+      "host_ids": [
+        "D45",
+        "FOOT-45"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -32.0,
+          132.0,
+          -144.0
+        ],
+        [
+          -32.0,
+          124.0,
+          -144.0
+        ],
+        [
+          -32.0,
+          140.0,
+          -144.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "D45",
+          "hole_center_mm": [
+            -32.0,
+            128.0,
+            -144.0
+          ]
+        },
+        {
+          "host": "FOOT-45",
+          "hole_center_mm": [
+            -32.0,
+            136.0,
+            -144.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-45-160",
+      "xz_mm": [
+        -32.0,
+        -160.0
+      ],
+      "axis": "Y",
+      "collar_y_mm": 132,
+      "long_end_interval_y_mm": [
+        124,
+        132
+      ],
+      "short_end_interval_y_mm": [
+        132,
+        140
+      ],
+      "host_ids": [
+        "D45",
+        "FOOT-45"
+      ],
+      "actual_pin_shoulder_and_endpoints_mm": [
+        [
+          -32.0,
+          132.0,
+          -160.0
+        ],
+        [
+          -32.0,
+          124.0,
+          -160.0
+        ],
+        [
+          -32.0,
+          140.0,
+          -160.0
+        ]
+      ],
+      "verified_hosts": [
+        {
+          "host": "D45",
+          "hole_center_mm": [
+            -32.0,
+            128.0,
+            -160.0
+          ]
+        },
+        {
+          "host": "FOOT-45",
+          "hole_center_mm": [
+            -32.0,
+            136.0,
+            -160.0
+          ]
+        }
+      ]
+    }
+  ],
+  "new_solid_aabb_overlap_pairs": [],
+  "new_pin_old_pin_aabb_overlap_pairs": [],
+  "tray_max_y_mm_sampled": 108.4,
+  "lever_max_y_mm_sampled": 107.01226036510332,
+  "outer_handle_max_y_mm_sampled": 107.01226036510332,
+  "clearance_to_new_solids_y116_mm": 8.987739634896684,
+  "clearance_to_old_table_y116_mm": 8.987739634896684,
+  "clearance_to_new_table_y140_mm": 32.987739634896684,
+  "samples": {
+    "tray": 409,
+    "lever": 425
+  },
+  "limits": "Native faceted geometry and primitive hole centers. Axial engagement verified; insertion force, continuous whole-machine motion, real pin friction, deflection, tolerances, stiffness, stability and tipping not certified. Four feet need non-rocking contact; not self-leveling.",
+  "parts": [
+    {
+      "id": "D02",
+      "name": "32278.dat",
+      "position_mm": [
+        104.0,
+        128.0,
+        -32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.400000000000006,
+          124.0,
+          -35.6
+        ],
+        [
+          163.60000000000002,
+          132.0,
+          -28.400000000000002
+        ]
+      ]
+    },
+    {
+      "id": "D07",
+      "name": "32278.dat",
+      "position_mm": [
+        48.0,
+        128.0,
+        -104.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.400000000000006,
+          124.0,
+          -163.60000000000002
+        ],
+        [
+          51.6,
+          132.0,
+          -44.400000000000006
+        ]
+      ]
+    },
+    {
+      "id": "D13",
+      "name": "32278.dat",
+      "position_mm": [
+        -104.0,
+        128.0,
+        32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -163.60000000000002,
+          124.0,
+          28.400000000000002
+        ],
+        [
+          -44.400000000000006,
+          132.0,
+          35.6
+        ]
+      ]
+    },
+    {
+      "id": "D18",
+      "name": "32278.dat",
+      "position_mm": [
+        -48.0,
+        128.0,
+        104.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -51.6,
+          124.0,
+          44.400000000000006
+        ],
+        [
+          -44.400000000000006,
+          132.0,
+          163.60000000000002
+        ]
+      ]
+    },
+    {
+      "id": "D29",
+      "name": "32278.dat",
+      "position_mm": [
+        32.0,
+        128.0,
+        104.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          28.400000000000002,
+          124.0,
+          44.400000000000006
+        ],
+        [
+          35.6,
+          132.0,
+          163.60000000000002
+        ]
+      ]
+    },
+    {
+      "id": "D34",
+      "name": "32278.dat",
+      "position_mm": [
+        104.0,
+        128.0,
+        48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.400000000000006,
+          124.0,
+          44.400000000000006
+        ],
+        [
+          163.60000000000002,
+          132.0,
+          51.6
+        ]
+      ]
+    },
+    {
+      "id": "D45",
+      "name": "32278.dat",
+      "position_mm": [
+        -32.0,
+        128.0,
+        -104.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.6,
+          124.0,
+          -163.60000000000002
+        ],
+        [
+          -28.400000000000002,
+          132.0,
+          -44.400000000000006
+        ]
+      ]
+    },
+    {
+      "id": "D50",
+      "name": "32278.dat",
+      "position_mm": [
+        -104.0,
+        128.0,
+        -48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -163.60000000000002,
+          124.0,
+          -51.6
+        ],
+        [
+          -44.400000000000006,
+          132.0,
+          -44.400000000000006
+        ]
+      ]
+    },
+    {
+      "id": "C23",
+      "name": "32526.dat",
+      "position_mm": [
+        -48.0,
+        120.0,
+        64.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -67.60000000000001,
+          116.0,
+          28.400000000000002
+        ],
+        [
+          -44.400000000000006,
+          124.0,
+          67.60000000000001
+        ]
+      ]
+    },
+    {
+      "id": "C39",
+      "name": "32526.dat",
+      "position_mm": [
+        64.0,
+        120.0,
+        48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          28.400000000000002,
+          116.0,
+          44.400000000000006
+        ],
+        [
+          67.60000000000001,
+          124.0,
+          67.60000000000001
+        ]
+      ]
+    },
+    {
+      "id": "C55",
+      "name": "32526.dat",
+      "position_mm": [
+        -64.0,
+        120.0,
+        -48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -67.60000000000001,
+          116.0,
+          -67.60000000000001
+        ],
+        [
+          -28.400000000000002,
+          124.0,
+          -44.400000000000006
+        ]
+      ]
+    },
+    {
+      "id": "C60",
+      "name": "32526.dat",
+      "position_mm": [
+        48.0,
+        120.0,
+        -64.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.400000000000006,
+          116.0,
+          -67.60000000000001
+        ],
+        [
+          67.60000000000001,
+          124.0,
+          -28.400000000000002
+        ]
+      ]
+    },
+    {
+      "id": "M02",
+      "name": "40490.dat",
+      "position_mm": [
+        120.0,
+        120.0,
+        -32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          84.4,
+          116.0,
+          -35.6
+        ],
+        [
+          155.60000000000002,
+          124.0,
+          -28.400000000000002
+        ]
+      ]
+    },
+    {
+      "id": "OUT-2-120",
+      "name": "6558.dat",
+      "position_mm": [
+        120.0,
+        120.0,
+        -32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          116.87960000000001,
+          108.0,
+          -35.200212320000006
+        ],
+        [
+          123.1204,
+          132.0,
+          -28.799787679999998
+        ]
+      ]
+    },
+    {
+      "id": "OUT-2-152",
+      "name": "6558.dat",
+      "position_mm": [
+        152.0,
+        120.0,
+        -32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          148.8796,
+          108.0,
+          -35.200212320000006
+        ],
+        [
+          155.12040000000002,
+          132.0,
+          -28.799787679999998
+        ]
+      ]
+    },
+    {
+      "id": "M07",
+      "name": "40490.dat",
+      "position_mm": [
+        48.0,
+        120.0,
+        -120.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.400000000000006,
+          116.0,
+          -155.60000000000002
+        ],
+        [
+          51.6,
+          124.0,
+          -84.4
+        ]
+      ]
+    },
+    {
+      "id": "OUT-7-120",
+      "name": "6558.dat",
+      "position_mm": [
+        48.0,
+        120.0,
+        -120.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.8796,
+          108.0,
+          -123.20021231999999
+        ],
+        [
+          51.120400000000004,
+          132.0,
+          -116.79978768000001
+        ]
+      ]
+    },
+    {
+      "id": "OUT-7-152",
+      "name": "6558.dat",
+      "position_mm": [
+        48.0,
+        120.0,
+        -152.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.8796,
+          108.0,
+          -155.20021232
+        ],
+        [
+          51.120400000000004,
+          132.0,
+          -148.79978768
+        ]
+      ]
+    },
+    {
+      "id": "M13",
+      "name": "40490.dat",
+      "position_mm": [
+        -120.0,
+        120.0,
+        32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -155.60000000000002,
+          116.0,
+          28.400000000000002
+        ],
+        [
+          -84.4,
+          124.0,
+          35.6
+        ]
+      ]
+    },
+    {
+      "id": "OUT-13-120",
+      "name": "6558.dat",
+      "position_mm": [
+        -120.0,
+        120.0,
+        32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -123.1204,
+          108.0,
+          28.799787679999998
+        ],
+        [
+          -116.87960000000001,
+          132.0,
+          35.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "OUT-13-152",
+      "name": "6558.dat",
+      "position_mm": [
+        -152.0,
+        120.0,
+        32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -155.12040000000002,
+          108.0,
+          28.799787679999998
+        ],
+        [
+          -148.8796,
+          132.0,
+          35.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "M18",
+      "name": "40490.dat",
+      "position_mm": [
+        -48.0,
+        120.0,
+        120.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -51.6,
+          116.0,
+          84.4
+        ],
+        [
+          -44.400000000000006,
+          124.0,
+          155.60000000000002
+        ]
+      ]
+    },
+    {
+      "id": "OUT-18-120",
+      "name": "6558.dat",
+      "position_mm": [
+        -48.0,
+        120.0,
+        120.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -51.120400000000004,
+          108.0,
+          116.79978768000001
+        ],
+        [
+          -44.8796,
+          132.0,
+          123.20021231999999
+        ]
+      ]
+    },
+    {
+      "id": "OUT-18-152",
+      "name": "6558.dat",
+      "position_mm": [
+        -48.0,
+        120.0,
+        152.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -51.120400000000004,
+          108.0,
+          148.79978768
+        ],
+        [
+          -44.8796,
+          132.0,
+          155.20021232
+        ]
+      ]
+    },
+    {
+      "id": "M29",
+      "name": "40490.dat",
+      "position_mm": [
+        32.0,
+        120.0,
+        120.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          28.400000000000002,
+          116.0,
+          84.4
+        ],
+        [
+          35.6,
+          124.0,
+          155.60000000000002
+        ]
+      ]
+    },
+    {
+      "id": "OUT-29-120",
+      "name": "6558.dat",
+      "position_mm": [
+        32.0,
+        120.0,
+        120.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          28.8796,
+          108.0,
+          116.79978768000001
+        ],
+        [
+          35.120400000000004,
+          132.0,
+          123.20021231999999
+        ]
+      ]
+    },
+    {
+      "id": "OUT-29-152",
+      "name": "6558.dat",
+      "position_mm": [
+        32.0,
+        120.0,
+        152.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          28.8796,
+          108.0,
+          148.79978768
+        ],
+        [
+          35.120400000000004,
+          132.0,
+          155.20021232
+        ]
+      ]
+    },
+    {
+      "id": "M34",
+      "name": "40490.dat",
+      "position_mm": [
+        120.0,
+        120.0,
+        48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          84.4,
+          116.0,
+          44.400000000000006
+        ],
+        [
+          155.60000000000002,
+          124.0,
+          51.6
+        ]
+      ]
+    },
+    {
+      "id": "OUT-34-120",
+      "name": "6558.dat",
+      "position_mm": [
+        120.0,
+        120.0,
+        48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          116.87960000000001,
+          108.0,
+          44.79978768
+        ],
+        [
+          123.1204,
+          132.0,
+          51.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "OUT-34-152",
+      "name": "6558.dat",
+      "position_mm": [
+        152.0,
+        120.0,
+        48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          148.8796,
+          108.0,
+          44.79978768
+        ],
+        [
+          155.12040000000002,
+          132.0,
+          51.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "M45",
+      "name": "40490.dat",
+      "position_mm": [
+        -32.0,
+        120.0,
+        -120.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.6,
+          116.0,
+          -155.60000000000002
+        ],
+        [
+          -28.400000000000002,
+          124.0,
+          -84.4
+        ]
+      ]
+    },
+    {
+      "id": "OUT-45-120",
+      "name": "6558.dat",
+      "position_mm": [
+        -32.0,
+        120.0,
+        -120.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.120400000000004,
+          108.0,
+          -123.20021231999999
+        ],
+        [
+          -28.8796,
+          132.0,
+          -116.79978768000001
+        ]
+      ]
+    },
+    {
+      "id": "OUT-45-152",
+      "name": "6558.dat",
+      "position_mm": [
+        -32.0,
+        120.0,
+        -152.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.120400000000004,
+          108.0,
+          -155.20021232
+        ],
+        [
+          -28.8796,
+          132.0,
+          -148.79978768
+        ]
+      ]
+    },
+    {
+      "id": "M50",
+      "name": "40490.dat",
+      "position_mm": [
+        -120.0,
+        120.0,
+        -48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -155.60000000000002,
+          116.0,
+          -51.6
+        ],
+        [
+          -84.4,
+          124.0,
+          -44.400000000000006
+        ]
+      ]
+    },
+    {
+      "id": "OUT-50-120",
+      "name": "6558.dat",
+      "position_mm": [
+        -120.0,
+        120.0,
+        -48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -123.1204,
+          108.0,
+          -51.200212320000006
+        ],
+        [
+          -116.87960000000001,
+          132.0,
+          -44.79978768
+        ]
+      ]
+    },
+    {
+      "id": "OUT-50-152",
+      "name": "6558.dat",
+      "position_mm": [
+        -152.0,
+        120.0,
+        -48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -155.12040000000002,
+          108.0,
+          -51.200212320000006
+        ],
+        [
+          -148.8796,
+          132.0,
+          -44.79978768
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B24",
+      "name": "6558.dat",
+      "position_mm": [
+        -48.0,
+        112.0,
+        32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -51.120400000000004,
+          100.0,
+          28.799787679999998
+        ],
+        [
+          -44.8796,
+          124.0,
+          35.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B25",
+      "name": "6558.dat",
+      "position_mm": [
+        -64.0,
+        112.0,
+        32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -67.1204,
+          100.0,
+          28.799787679999998
+        ],
+        [
+          -60.87960000000001,
+          124.0,
+          35.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B26",
+      "name": "6558.dat",
+      "position_mm": [
+        -48.0,
+        112.0,
+        64.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -51.120400000000004,
+          100.0,
+          60.79978768
+        ],
+        [
+          -44.8796,
+          124.0,
+          67.20021232
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B27",
+      "name": "6558.dat",
+      "position_mm": [
+        -48.0,
+        112.0,
+        48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -51.120400000000004,
+          100.0,
+          44.79978768
+        ],
+        [
+          -44.8796,
+          124.0,
+          51.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B40",
+      "name": "6558.dat",
+      "position_mm": [
+        32.0,
+        112.0,
+        48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          28.8796,
+          100.0,
+          44.79978768
+        ],
+        [
+          35.120400000000004,
+          124.0,
+          51.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B41",
+      "name": "6558.dat",
+      "position_mm": [
+        32.0,
+        112.0,
+        64.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          28.8796,
+          100.0,
+          60.79978768
+        ],
+        [
+          35.120400000000004,
+          124.0,
+          67.20021232
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B42",
+      "name": "6558.dat",
+      "position_mm": [
+        64.0,
+        112.0,
+        48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          60.87960000000001,
+          100.0,
+          44.79978768
+        ],
+        [
+          67.1204,
+          124.0,
+          51.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B43",
+      "name": "6558.dat",
+      "position_mm": [
+        48.0,
+        112.0,
+        48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.8796,
+          100.0,
+          44.79978768
+        ],
+        [
+          51.120400000000004,
+          124.0,
+          51.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B56",
+      "name": "6558.dat",
+      "position_mm": [
+        -32.0,
+        112.0,
+        -48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.120400000000004,
+          100.0,
+          -51.200212320000006
+        ],
+        [
+          -28.8796,
+          124.0,
+          -44.79978768
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B57",
+      "name": "6558.dat",
+      "position_mm": [
+        -32.0,
+        112.0,
+        -64.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.120400000000004,
+          100.0,
+          -67.20021232
+        ],
+        [
+          -28.8796,
+          124.0,
+          -60.79978768
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B58",
+      "name": "6558.dat",
+      "position_mm": [
+        -64.0,
+        112.0,
+        -48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -67.1204,
+          100.0,
+          -51.200212320000006
+        ],
+        [
+          -60.87960000000001,
+          124.0,
+          -44.79978768
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B59",
+      "name": "6558.dat",
+      "position_mm": [
+        -48.0,
+        112.0,
+        -48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -51.120400000000004,
+          100.0,
+          -51.200212320000006
+        ],
+        [
+          -44.8796,
+          124.0,
+          -44.79978768
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B61",
+      "name": "6558.dat",
+      "position_mm": [
+        48.0,
+        112.0,
+        -32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.8796,
+          100.0,
+          -35.200212320000006
+        ],
+        [
+          51.120400000000004,
+          124.0,
+          -28.799787679999998
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B62",
+      "name": "6558.dat",
+      "position_mm": [
+        64.0,
+        112.0,
+        -32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          60.87960000000001,
+          100.0,
+          -35.200212320000006
+        ],
+        [
+          67.1204,
+          124.0,
+          -28.799787679999998
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B63",
+      "name": "6558.dat",
+      "position_mm": [
+        48.0,
+        112.0,
+        -64.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.8796,
+          100.0,
+          -67.20021232
+        ],
+        [
+          51.120400000000004,
+          124.0,
+          -60.79978768
+        ]
+      ]
+    },
+    {
+      "id": "REPLACE-B64",
+      "name": "6558.dat",
+      "position_mm": [
+        48.0,
+        112.0,
+        -48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.8796,
+          100.0,
+          -51.200212320000006
+        ],
+        [
+          51.120400000000004,
+          124.0,
+          -44.79978768
+        ]
+      ]
+    },
+    {
+      "id": "INNER-0-56",
+      "name": "6558.dat",
+      "position_mm": [
+        56.0,
+        120.0,
+        -32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          52.87960000000001,
+          108.0,
+          -35.200212320000006
+        ],
+        [
+          59.1204,
+          132.0,
+          -28.799787679999998
+        ]
+      ]
+    },
+    {
+      "id": "INNER-0-48",
+      "name": "6558.dat",
+      "position_mm": [
+        48.0,
+        120.0,
+        -56.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          44.8796,
+          108.0,
+          -59.200212320000006
+        ],
+        [
+          51.120400000000004,
+          132.0,
+          -52.79978768
+        ]
+      ]
+    },
+    {
+      "id": "INNER-1-56",
+      "name": "6558.dat",
+      "position_mm": [
+        32.0,
+        120.0,
+        56.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          28.8796,
+          108.0,
+          52.79978768
+        ],
+        [
+          35.120400000000004,
+          132.0,
+          59.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "INNER-1-48",
+      "name": "6558.dat",
+      "position_mm": [
+        56.0,
+        120.0,
+        48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          52.87960000000001,
+          108.0,
+          44.79978768
+        ],
+        [
+          59.1204,
+          132.0,
+          51.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "INNER-2-56",
+      "name": "6558.dat",
+      "position_mm": [
+        -56.0,
+        120.0,
+        32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -59.1204,
+          108.0,
+          28.799787679999998
+        ],
+        [
+          -52.87960000000001,
+          132.0,
+          35.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "INNER-2-48",
+      "name": "6558.dat",
+      "position_mm": [
+        -48.0,
+        120.0,
+        56.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -51.120400000000004,
+          108.0,
+          52.79978768
+        ],
+        [
+          -44.8796,
+          132.0,
+          59.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "INNER-3-56",
+      "name": "6558.dat",
+      "position_mm": [
+        -32.0,
+        120.0,
+        -56.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.120400000000004,
+          108.0,
+          -59.200212320000006
+        ],
+        [
+          -28.8796,
+          132.0,
+          -52.79978768
+        ]
+      ]
+    },
+    {
+      "id": "INNER-3-48",
+      "name": "6558.dat",
+      "position_mm": [
+        -56.0,
+        120.0,
+        -48.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -59.1204,
+          108.0,
+          -51.200212320000006
+        ],
+        [
+          -52.87960000000001,
+          132.0,
+          -44.79978768
+        ]
+      ]
+    },
+    {
+      "id": "FOOT-2",
+      "name": "32523.dat",
+      "position_mm": [
+        152.0,
+        136.0,
+        -32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          140.4,
+          132.0,
+          -35.6
+        ],
+        [
+          163.60000000000002,
+          140.0,
+          -28.400000000000002
+        ]
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-2-144",
+      "name": "2780.dat",
+      "position_mm": [
+        144.0,
+        132.0,
+        -32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          140.8796,
+          124.0,
+          -35.200212320000006
+        ],
+        [
+          147.1204,
+          140.0,
+          -28.799787679999998
+        ]
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-2-160",
+      "name": "2780.dat",
+      "position_mm": [
+        160.0,
+        132.0,
+        -32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          156.8796,
+          124.0,
+          -35.200212320000006
+        ],
+        [
+          163.12040000000002,
+          140.0,
+          -28.799787679999998
+        ]
+      ]
+    },
+    {
+      "id": "FOOT-29",
+      "name": "32523.dat",
+      "position_mm": [
+        32.0,
+        136.0,
+        152.0
+      ],
+      "rotation": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          28.400000000000002,
+          132.0,
+          140.4
+        ],
+        [
+          35.6,
+          140.0,
+          163.60000000000002
+        ]
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-29-144",
+      "name": "2780.dat",
+      "position_mm": [
+        32.0,
+        132.0,
+        144.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          28.8796,
+          124.0,
+          140.79978768
+        ],
+        [
+          35.120400000000004,
+          140.0,
+          147.20021232
+        ]
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-29-160",
+      "name": "2780.dat",
+      "position_mm": [
+        32.0,
+        132.0,
+        160.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          28.8796,
+          124.0,
+          156.79978768
+        ],
+        [
+          35.120400000000004,
+          140.0,
+          163.20021232
+        ]
+      ]
+    },
+    {
+      "id": "FOOT-13",
+      "name": "32523.dat",
+      "position_mm": [
+        -152.0,
+        136.0,
+        32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -163.60000000000002,
+          132.0,
+          28.400000000000002
+        ],
+        [
+          -140.4,
+          140.0,
+          35.6
+        ]
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-13-144",
+      "name": "2780.dat",
+      "position_mm": [
+        -144.0,
+        132.0,
+        32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -147.1204,
+          124.0,
+          28.799787679999998
+        ],
+        [
+          -140.8796,
+          140.0,
+          35.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-13-160",
+      "name": "2780.dat",
+      "position_mm": [
+        -160.0,
+        132.0,
+        32.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -163.12040000000002,
+          124.0,
+          28.799787679999998
+        ],
+        [
+          -156.8796,
+          140.0,
+          35.200212320000006
+        ]
+      ]
+    },
+    {
+      "id": "FOOT-45",
+      "name": "32523.dat",
+      "position_mm": [
+        -32.0,
+        136.0,
+        -152.0
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.6,
+          132.0,
+          -163.60000000000002
+        ],
+        [
+          -28.400000000000002,
+          140.0,
+          -140.4
+        ]
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-45-144",
+      "name": "2780.dat",
+      "position_mm": [
+        -32.0,
+        132.0,
+        -144.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.120400000000004,
+          124.0,
+          -147.20021232
+        ],
+        [
+          -28.8796,
+          140.0,
+          -140.79978768
+        ]
+      ]
+    },
+    {
+      "id": "REUSED-FOOT-PIN-45-160",
+      "name": "2780.dat",
+      "position_mm": [
+        -32.0,
+        132.0,
+        -160.0
+      ],
+      "rotation": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.120400000000004,
+          124.0,
+          -163.20021232
+        ],
+        [
+          -28.8796,
+          140.0,
+          -156.79978768
+        ]
+      ]
+    }
+  ]
+}

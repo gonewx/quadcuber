@@ -1,0 +1,37 @@
+{
+  "method": "Per native lever-mesh vertex y=a+b*sin(phi)+c*cos(phi), interval endpoints and stationary points. Formula checked at two independent interior angles. Tray is exact +40.8mm translation. No elastic deformation included.",
+  "phi_interval_degrees": [
+    -17.02908666502962,
+    4.917100335528812
+  ],
+  "independent_fit_residual_mm": 4.263256414560601e-14,
+  "part_max_y_mm": {
+    "inner_arm_z-32": 93.1867511306849,
+    "inner_arm_z32": 93.1867511306849,
+    "outer_handle": 107.01226036510332,
+    "root_overlap_pin_16": 84.49182857142857,
+    "root_overlap_pin_32": 85.86325714285715,
+    "root_12L_axle": 82.4,
+    "root_retainer_-46": 83.60000000000001,
+    "root_retainer_38": 83.60000000000001,
+    "end_11L_axle": 92.0,
+    "end_retainer_-38": 93.19999999999999,
+    "end_retainer_38": 93.19999999999999,
+    "end_spacer2L_-20": 93.6,
+    "end_spacer2L_20": 93.6,
+    "end_spacer1L_-8": 93.19999999999999,
+    "end_spacer1L_8": 93.19999999999999,
+    "center_roller_bush": 93.19999999999999,
+    "stop_4L_axle": 98.80000000000001,
+    "stop_bush": 100.0,
+    "stop_outer_retainer": 100.0,
+    "stop_inner_retainer": 100.0
+  },
+  "all_lever_max_y_mm": 107.01226036510332,
+  "moving_tray_max_y_mm": 108.4,
+  "new_structure_min_y_mm": 116,
+  "lever_to_new_structure_vertical_separation_mm": 8.987739634896684,
+  "tray_to_new_structure_vertical_separation_mm": 7.599999999999994,
+  "table_y_mm": 140,
+  "outer_handle_to_table_mm": 32.987739634896684
+}

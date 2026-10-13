@@ -25,7 +25,7 @@
   "horizontal_reinforcement_added": 0,
   "gravity_lever_added": 20,
   "working_lock_pins_removed": 2,
-  "revision": "INTEGRATED-GRAVITY-R4-2026-10-08",
+  "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13",
   "reference_support_baseline": "source/assembly-integrated-R1.json",
   "horizontal_R2_explicitly_excluded": true,
   "changed_support_ids": [
@@ -55,7 +55,8 @@
     "L_working_key"
   ],
   "preserved_base59": false,
-  "closed_base64": true,
+  "closed_base64": false,
+  "reinforced_base120": true,
   "base_changes": {
     "replaced_32524_with_32278": 2,
     "added_32526": 1,
@@ -65,5 +66,16 @@
   "original_8_wall_pin_authorized_correction": "Y+4mm physical down;8pins; nominal mating verified",
   "all_7_state_unmodified_retained_parts_exact": true,
   "root_axles_bushes_fixing_pins": "all retained exactly",
-  "notes": "Integrated support bridge plus60483 head candidate changes no source constraints/firmware. Natural endpoint is analysis only; powered overtravel not authorized."
+  "notes": "Integrated support bridge plus60483 head candidate changes no source constraints/firmware. Natural endpoint is analysis only; powered overtravel not authorized.",
+  "base_stiffening": {
+    "final_base_parts": 120,
+    "baseline_r4_parts": 64,
+    "net_addition": 56,
+    "new_stock": 64,
+    "removed_old_2780": 16,
+    "reused_2780": 8,
+    "new_floor_y_mm": 140,
+    "lift_mm": 24,
+    "physical_stiffness_validated": false
+  }
 }

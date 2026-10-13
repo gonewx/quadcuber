@@ -73,7 +73,7 @@ original_rows=json.loads((HERE/'inputs/assembly132.json').read_text())
 r1_rows=json.loads((HERE/'inputs/assembly-integrated-R1.json').read_text())
 removed_ids=[r['id'] for r in r1_rows if r['role']=='key']
 rows=[copy.deepcopy(r) for r in r1_rows if r['role']!='key']
-REVISION='INTEGRATED-GRAVITY-R4-2026-10-08'
+REVISION='INTEGRATED-GRAVITY-R5-BASE64-2026-10-13'
 TRAVEL_MM=40.8
 AZ=np.array([[0,0,-1],[0,1,0],[1,0,0]])
 BYZ=np.array([[1,0,0],[0,0,-1],[0,1,0]])
@@ -116,7 +116,7 @@ def original_retained_base():
  for line in [l for l in files['machine_working-899.ldr']if l.startswith('1 ')][132:191]:
   s=line.split();v=np.array(s[2:14],float);out.append(m.Part(s[14],int(s[1]),v[:3],v[3:].reshape(3,3),0,'retained59'))
  return out
-def retained_base():
+def retained_base_r4():
  # Approved R4: close missing R-B corner; frozen support/lever untouched.
  out=original_retained_base()
  for i,pos,rot in [(1,[260,280,-80],[[0,0,-1],[0,1,0],[1,0,0]]),(6,[120,280,-260],[[-1,0,0],[0,1,0],[0,0,-1]])]:
@@ -128,4 +128,8 @@ def retained_base():
   out.append(m.Part('2780.dat',0,np.array(pos,dtype=float),pinrot.copy(),0,'closed_RB_corner_pin'))
  assert len(out)==64
  return out
+def retained_base():
+ from base_stiffening import reinforce
+ return reinforce(m,retained_base_r4())[0]
+
 def full_machine(state,drop_mm=0,locks=True):return core_parts(drop_mm,locks)+retained_base()+state_parts(state)

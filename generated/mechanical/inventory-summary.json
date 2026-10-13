@@ -1,13 +1,13 @@
 {
   "counts": {
     "support": 150,
-    "base": 64,
+    "base": 120,
     "arm_R": 167,
     "arm_L": 167,
     "arm_F": 167,
     "arm_B": 167
   },
-  "whole_all_states": 882,
+  "whole_all_states": 938,
   "working_locks": "R_working_key and L_working_key permanently removed during supported retrofit",
   "support130_plus_lever20": 150,
   "color_ids": "LDraw rendering identifiers; added20 use14yellow from approved source, not verified retail color availability",

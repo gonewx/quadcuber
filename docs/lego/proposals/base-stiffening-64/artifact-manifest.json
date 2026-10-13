@@ -1,0 +1,48 @@
+{
+  "proposal": "64件闭合下层框独立说明",
+  "standard_source_commit": "1205c918de4908b7a156859f565424dce133ba53",
+  "status": "NOMINAL_GEOMETRY_ONLY_NOT_STANDARD_ASSEMBLY",
+  "pdf_page_count": 7,
+  "files": [
+    {
+      "path": "base-stiffening-64-illustrated.pdf",
+      "bytes": 1296029,
+      "sha256": "8f1a2151cc1635660383558aa69d2da2b3015d477083053893392f7fb1d9b45b"
+    },
+    {
+      "path": "images/01-overview.png",
+      "bytes": 428664,
+      "sha256": "d73563afcc2f8e56bac5ce153bc19858423584f118a1b4f60cceb2af5e7793b5"
+    },
+    {
+      "path": "images/02-exploded-layers.png",
+      "bytes": 241906,
+      "sha256": "25dd8867f0e4dae2a4349e3f25b145ec1c7de06518e85b9a55174eaf49590cfe"
+    },
+    {
+      "path": "images/03-wing-holes-and-pins.png",
+      "bytes": 181800,
+      "sha256": "2fca20d9f0bd17ae5bd5d9e8c2ce3c3933d5e280caa6d4948a82753616b7618c"
+    },
+    {
+      "path": "images/04-corner-joints.png",
+      "bytes": 211323,
+      "sha256": "753f1da683387d018f646469121483eebf2a75fac2ccd1edeaf80f40fff37b16"
+    },
+    {
+      "path": "images/05-feet-and-table.png",
+      "bytes": 191573,
+      "sha256": "16dc915be843666d4c0a69352f64be54f3b121f521295b95cd9b167b9f325b84"
+    },
+    {
+      "path": "images/06-parts-inventory.png",
+      "bytes": 174787,
+      "sha256": "0f221014c5a7045159bc71fd3837820c86e9ac471ef668d34acb8d763b232a8e"
+    },
+    {
+      "path": "images/07-installation-order.png",
+      "bytes": 221309,
+      "sha256": "c1068c43712fd189bc912b141236824888bbf0c78f2dc26e593fdef7c586f036"
+    }
+  ]
+}

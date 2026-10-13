@@ -1,0 +1,22 @@
+{
+  "id": "BAS-RB-02",
+  "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-RB-02.png",
+  "width": 1800,
+  "height": 1350,
+  "visible_part_ids": [
+    2,
+    7,
+    60,
+    61,
+    62,
+    63,
+    64
+  ],
+  "added_part_ids": [
+    60
+  ],
+  "sha256": "c197bd247eecdc6dd8900eb8f52b5b5d96a7e2792657eddbe841b43bad1bec19",
+  "step_sha256": "4240a3b5e6fe3fbed3ea20c4689e00e5990b293c3b82967f1f961e5fe2985b74",
+  "geometry_source": "candidate.retained_base",
+  "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+}

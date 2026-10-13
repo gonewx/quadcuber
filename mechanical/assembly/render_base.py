@@ -16,4 +16,7 @@ for st in book['steps']:
  generated=r.render_step(st);src=H/'images'/f"{st['id']}.png";dst=H/st['image_relative'];src.replace(dst)
  generated['image_path']=str(dst);generated['step_sha256']=hashlib.sha256(json.dumps(st,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest();generated['geometry_source']='candidate.retained_base';generated['revision']=C.REVISION
  dst.with_suffix('.json').write_text(json.dumps(generated,ensure_ascii=False,indent=2));report.append(generated);print(st['id'],flush=True)
+if selected and (H/'base-r4-render.json').exists():
+ previous=json.loads((H/'base-r4-render.json').read_text());updated={r.get('step_id',r.get('id')):r for r in previous}
+ updated.update({r.get('step_id',r.get('id')):r for r in report});report=list(updated.values())
 (H/'base-r4-render.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))

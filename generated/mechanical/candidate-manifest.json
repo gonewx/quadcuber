@@ -1,8 +1,8 @@
 {
   "loading-all50": {
     "file": "models/loading-all50.mpd",
-    "parts": 882,
-    "sha256": "1bc59b1c4ec3be91c53e812a01e853c11e939887d3223d1de4ffd0cb9d215046",
+    "parts": 938,
+    "sha256": "8cbcb97ee69f96b2bc9406cf7ebcbb50054db09c9a29bd0c287bc3ca83f869a6",
     "drop_mm": 0,
     "locks": false,
     "lever_parameter_mm": 0,
@@ -38,8 +38,8 @@
   },
   "FB0-open": {
     "file": "models/FB0-open.mpd",
-    "parts": 882,
-    "sha256": "c441578ef62a750e743402c7c01fce5d4a303c680e52770efa5a2e1c32ab0ff2",
+    "parts": 938,
+    "sha256": "b2b43f6f2525a4807291f8db5ac3e19638dbf94e6dba52b42f4e5e1b90e991af",
     "drop_mm": 0,
     "locks": false,
     "lever_parameter_mm": 0,
@@ -75,8 +75,8 @@
   },
   "FB0-held": {
     "file": "models/FB0-held.mpd",
-    "parts": 882,
-    "sha256": "ab3e86fbcc83fba6a4389795fb5d851b249f7ffec6d83e22e119ba564451e81e",
+    "parts": 938,
+    "sha256": "993717d1f542e594083c352dfeb914d58b0dd81e539f743df2aeda197abca78a",
     "drop_mm": 0,
     "locks": false,
     "lever_parameter_mm": 0,
@@ -112,8 +112,8 @@
   },
   "support-held": {
     "file": "models/support-held.mpd",
-    "parts": 882,
-    "sha256": "2e596e5aad61854cda8897936725df568ec2c1cc6fb5594448127ac9fa442cdf",
+    "parts": 938,
+    "sha256": "8e6359f9dd3e5c153b6fa38850cea58edbf9f2fb95468a7f7622cd3f8b330419",
     "drop_mm": 0,
     "locks": false,
     "lever_parameter_mm": 0,
@@ -149,8 +149,8 @@
   },
   "support-down40_8": {
     "file": "models/support-down40_8.mpd",
-    "parts": 882,
-    "sha256": "4c65d5c3084f0e5b745bf686d397fc469ef9a95646ebe036cf4c90a67eaf6c6a",
+    "parts": 938,
+    "sha256": "957f36e1009a691b6676f6513b2f0841a07bda0cb14d2403cc56eab18bf5497a",
     "drop_mm": 40.8,
     "locks": false,
     "lever_parameter_mm": 42.4,
@@ -186,8 +186,8 @@
   },
   "LR90-open": {
     "file": "models/LR90-open.mpd",
-    "parts": 882,
-    "sha256": "de0e327c9bfeeb8b598bfe8d87116160ed1f3fea74a4baf7579cd2448e8b642b",
+    "parts": 938,
+    "sha256": "808282df55afa75ceaec2464f40f0f76c7dfbc6db0ea0fecf8fe644efac4a245",
     "drop_mm": 40.8,
     "locks": false,
     "lever_parameter_mm": 42.4,
@@ -223,8 +223,8 @@
   },
   "both-held": {
     "file": "models/both-held.mpd",
-    "parts": 882,
-    "sha256": "f1a85439604487ebbb2890af89065b129a9ece9ea4aea59f0aff32bfed41e6a0",
+    "parts": 938,
+    "sha256": "90572d78f4651c8bdeb0a77e46f2480ddcd2cae138b484513a54cd61db21014a",
     "drop_mm": 40.8,
     "locks": false,
     "lever_parameter_mm": 42.4,
@@ -261,21 +261,21 @@
   "head-open25": {
     "file": "models/head-open25.mpd",
     "parts": 167,
-    "sha256": "871f53a27e704b261afb4ae9c494267e8f67ae6267973f8b87db60b1a2a33fb9"
+    "sha256": "ecfead3a2f73b8d2e1f71d895cd6ea44d4362f527f27c36aaf84be71a589cb2d"
   },
   "head-closed": {
     "file": "models/head-closed.mpd",
     "parts": 167,
-    "sha256": "48a12976b3532747b6a7d6e705bf13feb4b1fb7207d0c518bbe57491d4149ba7"
+    "sha256": "1a025775cc880bddbdf83183d4fdb487883b6abb0237090590431fca4da14d84"
   },
   "support-raised": {
     "file": "models/support-raised.mpd",
     "parts": 150,
-    "sha256": "4b33aedabad790a9c929600d30ef1b74761721d0c1d8d6568db6ca5c8f94b8c1"
+    "sha256": "aeceeedfc35f1829f12020d14dd632fb1da6545bcfc8d654aa533d3db64bbe75"
   },
   "support-only-down40_8": {
     "file": "models/support-only-down40_8.mpd",
     "parts": 150,
-    "sha256": "6590b47e01e851c557631619f7608818b71eb23c650f7d9082dd43d7287e9f38"
+    "sha256": "f2742af9864e26e5b61769ba196ddc09ebeba034f67185be8e9a8e4452d6ab66"
   }
 }

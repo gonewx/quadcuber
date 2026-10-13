@@ -1,0 +1,1862 @@
+[
+  {
+    "id": "BAS-01",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-01.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      2
+    ],
+    "added_part_ids": [
+      2
+    ],
+    "sha256": "55c30aecea47a70be788cf4ec36dd7e1f7df88004e6ab31361b2252ff7ccaca8",
+    "step_sha256": "9bca5e903fb324ad37044c309f0811a0a5c3ec3d1b816141c70e3b6b9a16003e",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-02",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-02.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "added_part_ids": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "sha256": "be78e8f8bedcd0226db4ee7e3bba41663fef3af75e38173576befb9c7c7f5b25",
+    "step_sha256": "6e8993c956bec03a011f6b91ebf8691167289f7b4fd1bc336d8d1aeb82e9186f",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-03",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-03.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      34
+    ],
+    "added_part_ids": [
+      34
+    ],
+    "sha256": "3d9a68a3f9083a4958bb4ce3cbb97e6fd2242980b6b72558ea3c9b809dd1947b",
+    "step_sha256": "697a70b35ef572b943cd3e08c94ab6e40fc868fdf1ad065c629e7f6bcbf761bc",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-04",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-04.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      34,
+      35,
+      36
+    ],
+    "added_part_ids": [
+      35,
+      36
+    ],
+    "sha256": "a7c64829a55404c7ef5eddc8adbadcfc65aecb754db8729d6cc74438d04220c1",
+    "step_sha256": "5dfc7360782cc842a4a87534fdbf79536b290a386c6f826892b5a953d971b4f5",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-05",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-05.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "added_part_ids": [
+      37,
+      38
+    ],
+    "sha256": "4236bc663e833878957e024d38a83ea14aa0ea9901c51071e66118616a88e426",
+    "step_sha256": "9ea511524efe6fa977d5fe034a8f0561cfff78efac7169eec8dab5e742c0eb16",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-06",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-06.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      42,
+      43
+    ],
+    "added_part_ids": [
+      42,
+      43
+    ],
+    "sha256": "ce7a1ed2fbf25c802af7432966094f54680ed53b48b455a8f9f9a21ad28a9be5",
+    "step_sha256": "6a4890761b2776e393e7172f4d77892874b9628195c0d3a5185852e7a474cbff",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-07",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-07.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      34,
+      35,
+      36,
+      37,
+      38,
+      42,
+      43
+    ],
+    "added_part_ids": [
+      1
+    ],
+    "sha256": "5ccd714fb34ebba8c91be4343ce156621f6bf4b3ca449f93a8bdabfc1269df4e",
+    "step_sha256": "b00d17dad7a382c8e555137c65f6c4e280a48d195237fb2818a6633de97e062f",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-08",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-08.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      29
+    ],
+    "added_part_ids": [
+      29
+    ],
+    "sha256": "ac5478fb4db7affb7732eda053134b98eb48abf725b2accd411104c8ca73337b",
+    "step_sha256": "a7b30c963bebfa1fcee9b2831d3d52ad441929d1da44382bf04384a28fd002c1",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-09",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-09.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "added_part_ids": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "sha256": "6a4afb7502f2dda6d37a16b8105cb847698155b8588b90aabfdc2eca73fa2b78",
+    "step_sha256": "d9c3548f2f618f188b19a0bade9fe871576a72940145205bc2452fc571e8e020",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-10",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-10.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      40,
+      41
+    ],
+    "added_part_ids": [
+      40,
+      41
+    ],
+    "sha256": "7ad5cfe1476b9554b67fc9cfa82ddd295ea5f886dbfe9f65121b5ac1fb1a2e67",
+    "step_sha256": "40e8abceb23cc50a22769d0f3e621882951b01389cdf0e72842e47f066d26fde",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-11",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-11.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18
+    ],
+    "added_part_ids": [
+      18
+    ],
+    "sha256": "516d763e48667fdb6a8cd339358f396191e2a79882c6e4e1b115f3d582de37e5",
+    "step_sha256": "5280a77865a481dc6f3a34b61a2acd322b6e90673d45e9eab1376c99da177a3f",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-12",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-12.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18,
+      19,
+      20
+    ],
+    "added_part_ids": [
+      19,
+      20
+    ],
+    "sha256": "3ea347f46df463ffad7307eb58fc8814b883b7af4674b5d276298b2053218302",
+    "step_sha256": "7b263b2a7b88b7aa7e61a02f5e2fca125aa7e8b4ba41f8de706753b58b245bf4",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-13",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-13.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "added_part_ids": [
+      21,
+      22
+    ],
+    "sha256": "c8044b9956c3dc3fdfda45311b9caaa41b9fe2bbde5a84cd637ca1b412cb4e29",
+    "step_sha256": "0bbf0623898693104f99cc9abdf069e0a6f9c10c6870f5b4362a5a6087da2f64",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-14",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-14.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      26,
+      27
+    ],
+    "added_part_ids": [
+      26,
+      27
+    ],
+    "sha256": "d008271f01b1debcf44c6e55996cc8a8a35f68ee84b798fca0f7ade07d7889d6",
+    "step_sha256": "404e46a6822178aa28121fb079d358cd577f64a3b23b1a956bfeb818884f4fd8",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-15",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-15.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      40,
+      41
+    ],
+    "added_part_ids": [
+      28
+    ],
+    "sha256": "cfeb4c3041c4749d9512b5dbbee61b74f03f224940e28aed0d1aedb037e546fd",
+    "step_sha256": "ea0750ecec24440e3b0bd4245a151edca8c67f7669d5e5995cc36108c2aeedcd",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-16",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-16.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      13
+    ],
+    "added_part_ids": [
+      13
+    ],
+    "sha256": "e048be4c202a56f5bda3da898fa46540f6cd2399c9148a93d5eac4c402ad1b2c",
+    "step_sha256": "aafb0c13e2bdd0f4d47d546efc85ba7b738e608a787910dbff80bc1e82fab880",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-17",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-17.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "added_part_ids": [
+      14,
+      15,
+      16,
+      17
+    ],
+    "sha256": "de009b850a028a0bfb3d80696905f98fa5bb916b65ed55a3d907ca72c8995fb5",
+    "step_sha256": "141592d3c6a54231bf2461a7c8bddc826374c0d039877af6f553673ffc578ca5",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-18",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-18.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      24,
+      25
+    ],
+    "added_part_ids": [
+      24,
+      25
+    ],
+    "sha256": "482247bbf76217f754c2a2f1667ab74db958be86dcf8baed0e3dd5f441ce48ce",
+    "step_sha256": "1790bd5f5bab27947f2ba292cb691214369895d40277f1f4152f32f501dc1aeb",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-19",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-19.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      50
+    ],
+    "added_part_ids": [
+      50
+    ],
+    "sha256": "23dd6c6318542c2c92844f1a0f28d4d44a7817ff1ee59796b80b7e7f8b67622d",
+    "step_sha256": "5e539ef9f9c4d8c08772a96c2ae45aea4af40034d44d247b6dc123bb507142c4",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-20",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-20.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      50,
+      51,
+      52
+    ],
+    "added_part_ids": [
+      51,
+      52
+    ],
+    "sha256": "0ed088d032a6d80891acc6a6e4c616f3e56600ac53de7728bb43b4d7d0c87fd1",
+    "step_sha256": "5f014c90d2635e2e50b44df2ac39333bb19240800c425d6ca750ec797a7d6225",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-21",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-21.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      50,
+      51,
+      52,
+      53,
+      54
+    ],
+    "added_part_ids": [
+      53,
+      54
+    ],
+    "sha256": "97b33688e53c7f9bfac1d49bcf8b50768e4a9c73056cbcad33cff22e9ce1172d",
+    "step_sha256": "2a952d0f0c882b69b7e356c19075095095019cb228fda27a6e7134dc46fb8556",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-22",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-22.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      50,
+      51,
+      52,
+      53,
+      54,
+      58,
+      59
+    ],
+    "added_part_ids": [
+      58,
+      59
+    ],
+    "sha256": "cf7af4ac7c6f4c4d7f0efcfd227053fa00cd631525d9e03ef4a17da8bcc3de43",
+    "step_sha256": "bc4a80f09b1c71ba178b09b96f8b959dbb97ec313218e30b5fcd5eb4d1bb5839",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-23",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-23.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      24,
+      25,
+      50,
+      51,
+      52,
+      53,
+      54,
+      58,
+      59
+    ],
+    "added_part_ids": [
+      12
+    ],
+    "sha256": "40eda06be6ee1d757938c03d531a68e6244eadd09d7adde23acc149b4942c928",
+    "step_sha256": "07582097970db2cd89ea8bda08acdf66e67a95ce8cd0587a20233879d9e9a206",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-24",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-24.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      45
+    ],
+    "added_part_ids": [
+      45
+    ],
+    "sha256": "497d948d845be317bf97caa1aede17a210a60fc59cc15f35040031c8323ec71f",
+    "step_sha256": "9deb2e0a5fcb574d9299d2a49da6a76237b458d2d20131a173ea7889730e96b1",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-25",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-25.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "added_part_ids": [
+      46,
+      47,
+      48,
+      49
+    ],
+    "sha256": "16b4b8491a6826e9f9762a1f82b59f5a06ac8c96afb7d38f6aed32404f570a8a",
+    "step_sha256": "4f1e9f272fe9367181487b9ceb1b3433c73ab755464a26d81b1705c036bf6422",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-26",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-26.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      45,
+      46,
+      47,
+      48,
+      49,
+      56,
+      57
+    ],
+    "added_part_ids": [
+      56,
+      57
+    ],
+    "sha256": "4adf39b24a3230a8e0b5f5eea704c33aac645e1c2f25b1ed2cde97ac209f1776",
+    "step_sha256": "ef32d8ed794543c8a01c301b372f6c71653bc2ecb41c78ea1348bba496e8133e",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-27",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-27.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      7
+    ],
+    "added_part_ids": [
+      7
+    ],
+    "sha256": "478285d8c5950b811d9d027c810c750344e64a0822fcde92a0b5d3c882a27172",
+    "step_sha256": "b76c391d6c27f2ef5232b214baf2502a5714313697f44d19f0c53d6fe1afbac3",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-28",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-28.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      7,
+      8,
+      9
+    ],
+    "added_part_ids": [
+      8,
+      9
+    ],
+    "sha256": "5dc5056852392ab66c80547308ed7bd25336cfca3ccafd19eb6ee338bdaa897b",
+    "step_sha256": "899b158e5dba9be3c875152f2d7e54bf43158aee4f2df673ccdaaacaddbdd5b9",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-29",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-29.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "added_part_ids": [
+      10,
+      11
+    ],
+    "sha256": "e57014d7cae2dc7ada5ea8bc57f4b8f50d3d4f5e0eff097c6f38ba0b2e4b5623",
+    "step_sha256": "c041eb72e2bb180a8de1d9e412b4d8eb788f918a889776e0c168495d378aa28c",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-30",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-30.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      56,
+      57
+    ],
+    "added_part_ids": [
+      44
+    ],
+    "sha256": "ecb45c279135a16a9b46179e8ad91ef62afb833594274de094d5299eed70d262",
+    "step_sha256": "98be219f1c724ca878a46d202749caeaae4928972852b977db8e166dbbdeb108",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-32",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-32.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      18,
+      19,
+      20,
+      21,
+      22,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "added_part_ids": [
+      39
+    ],
+    "sha256": "0238d32a9bc33286f9fcf633fa5078c64476dd401a61cc4dafa05694f1b24a1e",
+    "step_sha256": "428d4affbf5c788a9f1e6034503b656e367c4d24e49d3e075ab6e7853ea09edf",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-34",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-34.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      50,
+      51,
+      52,
+      53,
+      54,
+      58,
+      59
+    ],
+    "added_part_ids": [
+      23
+    ],
+    "sha256": "886b506965fbbd70f67b1d8d30308fb94386a936731e8e099adaec55a15dd09b",
+    "step_sha256": "2e2ecc0bf23ff7cd55b0134381fdb34dee89abc6e84b6d7a848e6c7ee72d4c85",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-36",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-36.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "added_part_ids": [
+      55
+    ],
+    "sha256": "925cfafaf7ed665ef5a7fdb75c1735ee0437f8c60c197c5ef0ee49cfd1a0e43a",
+    "step_sha256": "2668ed3b89b598301e0914e0f51876012135a3390c350baa32e44b4134751e5e",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-RB-01",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-RB-01.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      2,
+      7,
+      61,
+      62,
+      63,
+      64
+    ],
+    "added_part_ids": [
+      61,
+      62,
+      63,
+      64
+    ],
+    "sha256": "db47c02defebec70d51eabbf6defedb15686afbcc8a7cb227d865959638d79b2",
+    "step_sha256": "bf3c50ed336a2e2cb06d7cc8a9bac7c9a9b9bebffb4b2aa82654eb792d519e08",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-RB-02",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-RB-02.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      2,
+      7,
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "added_part_ids": [
+      60
+    ],
+    "sha256": "c197bd247eecdc6dd8900eb8f52b5b5d96a7e2792657eddbe841b43bad1bec19",
+    "step_sha256": "4240a3b5e6fe3fbed3ea20c4689e00e5990b293c3b82967f1f961e5fe2985b74",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BAS-RB-03",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BAS-RB-03.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "added_part_ids": [],
+    "sha256": "64726b27f5f08bcbf41891c192a5a791eff515761ffcb7076691827243aa05fa",
+    "step_sha256": "ec00efcc9bdb906bd40d39432dfc58def60b7fbc8f8149dd1a9c8867a38c2fc9",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-37",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-37.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      13,
+      18,
+      23,
+      24,
+      25,
+      26,
+      27,
+      73
+    ],
+    "added_part_ids": [
+      73
+    ],
+    "sha256": "5bb3a666fb1f3482ca87062a493301b9024a21f8b8e2848049501da927e4d474",
+    "step_sha256": "f8df8cd451ddd9e6da561c518758ce13583d7e040220a052114499f99881ad20",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-38",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-38.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      29,
+      34,
+      39,
+      40,
+      41,
+      42,
+      43,
+      74
+    ],
+    "added_part_ids": [
+      74
+    ],
+    "sha256": "774d708abd921ab5d38eaf2773b30933c8f55aebf67bf7ec25abfe33706c99e9",
+    "step_sha256": "68052c0c3255f0574cf5126f3e7663df0fe92b600f986ed1174e6d0d27111efe",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-39",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-39.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      45,
+      50,
+      55,
+      56,
+      57,
+      58,
+      59,
+      75
+    ],
+    "added_part_ids": [
+      75
+    ],
+    "sha256": "eaef5ba669f1b43ff4796d38705972c7082d648ad867eb6558119ff64b9302f1",
+    "step_sha256": "848e789f090e140349fe258d56e2bfbe7f44716fa1b2c565b3478485b7d28cba",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-40",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-40.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      2,
+      7,
+      60,
+      61,
+      62,
+      63,
+      64,
+      76
+    ],
+    "added_part_ids": [
+      76
+    ],
+    "sha256": "20d031819609a7c2a71f4303ebc62fc44d813df5c579e1ab591858653e19c5e9",
+    "step_sha256": "92841bf47dfb0b4667067b3a14c362750564e2570cdb836877dd9d1a4f255fc6",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-41",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-41.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      2,
+      7,
+      76,
+      101,
+      102
+    ],
+    "added_part_ids": [
+      101,
+      102
+    ],
+    "sha256": "ceb0941452833923947d09192f5c711e22d3391171cbba11b18d452814b11fe1",
+    "step_sha256": "c150d24a940a3e015708e35498d8e620f39031bcec831ca96f7f1503ce070e5c",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-42",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-42.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      29,
+      34,
+      74,
+      103,
+      104
+    ],
+    "added_part_ids": [
+      103,
+      104
+    ],
+    "sha256": "62e3ea3462bac305d3818eaa5f27b9ac913d0a18c06fc9d9e73693176488006b",
+    "step_sha256": "c835bbf354c993d4a726837b00b74281addc777408826681116043a971f43656",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-43",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-43.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      13,
+      18,
+      73,
+      105,
+      106
+    ],
+    "added_part_ids": [
+      105,
+      106
+    ],
+    "sha256": "61d88f114d39daa001f67e52124b594046623c8ac14b82a5714dfab497a1f36c",
+    "step_sha256": "8607241fb33d023d03188961ffc6f773f5633b79fed8bceb634cdc850150aa26",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-44",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-44.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      45,
+      50,
+      75,
+      107,
+      108
+    ],
+    "added_part_ids": [
+      107,
+      108
+    ],
+    "sha256": "bc3166bd420c6d28424e1ac420868545e4dc98852538ddfacd261cfd49008fc2",
+    "step_sha256": "060416d75a3b3f7b2d26e08719c393c4dd60bb58c644fa63819a4ed36faa25a6",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-45",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-45.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      2,
+      77
+    ],
+    "added_part_ids": [
+      77
+    ],
+    "sha256": "3c4a810212402c759d14b5172e787aaa345d249b55835767155649de8e38d6d1",
+    "step_sha256": "f178e1f29f4b355ea0136d48c34722feb0211b978fd27a3266a172e999ce6915",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-46",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-46.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      2,
+      77,
+      78,
+      79
+    ],
+    "added_part_ids": [
+      78,
+      79
+    ],
+    "sha256": "b99f4b3a9d308b7da7886d9887b48ea01800f9bb3cd5e09935cbe953ce3bc784",
+    "step_sha256": "9f6e6f4ecabf90c97844756b08b5a604250013f0eb36921b599b780fca7bfd6b",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-47",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-47.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      2,
+      65,
+      77,
+      78,
+      79,
+      101
+    ],
+    "added_part_ids": [
+      65
+    ],
+    "sha256": "0599049db4163318d846dba5d1816be1dea7397566506e67c9bc9c3ffc0cb36a",
+    "step_sha256": "1a06b9680cdd2c0783289dacc0ae0bab5eb1d45e6eba18b8b2c74c4be060dbab",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-48",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-48.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      7,
+      80
+    ],
+    "added_part_ids": [
+      80
+    ],
+    "sha256": "e7173a5a10c3a8ffeacbeadcaf65499243d67715b5d1e08a8e417720f0848a78",
+    "step_sha256": "2df3108c52191631f64a847bfa46179ec47b1748df81c8b9498e54486277894a",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-49",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-49.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      7,
+      80,
+      81,
+      82
+    ],
+    "added_part_ids": [
+      81,
+      82
+    ],
+    "sha256": "d2ecd7b3ac1c88cb34737eff703c2bba841efb9ae9a78e3478e4a97872102b84",
+    "step_sha256": "cdec3eb0baa72a3bc649fe4b654bc186cc643443b987f71e9e22d8bcfe9054b0",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-50",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-50.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      7,
+      66,
+      80,
+      81,
+      82,
+      102
+    ],
+    "added_part_ids": [
+      66
+    ],
+    "sha256": "bb88f71beb182146f613f25869e1b0b261ce9f6498dd2c14b003d7c39386f0de",
+    "step_sha256": "6d9a9a2824a8166bca07165e8b70c89f3c405c3faa4b149808c5ef667675a4ab",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-51",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-51.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      13,
+      83
+    ],
+    "added_part_ids": [
+      83
+    ],
+    "sha256": "b4d74280f1a298adcba357b8177b4af2f1190014c9b0173191115c85989c6a12",
+    "step_sha256": "73ad709434aee3b808406b0280a6c7b421b5a6a510ec8650a94b6c7002b97489",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-52",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-52.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      13,
+      83,
+      84,
+      85
+    ],
+    "added_part_ids": [
+      84,
+      85
+    ],
+    "sha256": "26813b0b68219a034725288e30d91baeb265b13aa22229637bdca8a7354f4534",
+    "step_sha256": "b129b1d5ccd90871567da9c43bbd433673fcf2a95abbdebbc3a983b943c676ec",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-53",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-53.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      13,
+      67,
+      83,
+      84,
+      85,
+      105
+    ],
+    "added_part_ids": [
+      67
+    ],
+    "sha256": "c0e08b1839fa87efd2a4142ef823d1b193c217bed50307c055aaf69bd73b4c42",
+    "step_sha256": "97d505972785476d84ac6ed6d3872521602ddb619ff5a73ed6902340c11897f9",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-54",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-54.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18,
+      86
+    ],
+    "added_part_ids": [
+      86
+    ],
+    "sha256": "6f940836f06deaeb45f606615ac99e30e10e7fe1e65f8019d3bae427696a5f20",
+    "step_sha256": "041887568504dbfd0b541305b4efc0e52a0e96c431ff6e4effd471bc7614d472",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-55",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-55.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18,
+      86,
+      87,
+      88
+    ],
+    "added_part_ids": [
+      87,
+      88
+    ],
+    "sha256": "d589fdf518f6fc394a2e72c342aee8cc5b5f88c4c5405c7f725703d6219c42dc",
+    "step_sha256": "24c1edf96ff22e094efead2c95d0248dbb5a09977100a2f382e600167a58cefb",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-56",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-56.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      18,
+      68,
+      86,
+      87,
+      88,
+      106
+    ],
+    "added_part_ids": [
+      68
+    ],
+    "sha256": "8c41752329552d48711bf3389824996a6e63157ca0b367b90d8eb0df14f8b615",
+    "step_sha256": "f004c2b89fb828d6987f7509d9881882a493fbb9e6044f41530f99bf0b55b0ba",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-57",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-57.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      29,
+      89
+    ],
+    "added_part_ids": [
+      89
+    ],
+    "sha256": "c20b1693a537c4f9fd2558c789367a155dd08ab358a487216c6f01f01ad661cf",
+    "step_sha256": "f8c31a87ae120f2afcaf77b23674ac35f75b9eae515b8846cde4785aa900dc92",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-58",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-58.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      29,
+      89,
+      90,
+      91
+    ],
+    "added_part_ids": [
+      90,
+      91
+    ],
+    "sha256": "460e762e49e79cd90c1692ea70f01730b146a858aa2f4172cea153c8888c3fd9",
+    "step_sha256": "8d1501e726e9d4cacfd32c4e456545c1503bf70d97bb6c01778b7ea7cfe736d4",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-59",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-59.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      29,
+      69,
+      89,
+      90,
+      91,
+      103
+    ],
+    "added_part_ids": [
+      69
+    ],
+    "sha256": "226dcc0a02040f3b181c120f97d1a55683f577b2b683c3cb56437ff9762de16c",
+    "step_sha256": "e37fafa1cbf2210fb265415e7759365a151d18d5f774eccccd60cb7d3056ade0",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-60",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-60.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      34,
+      92
+    ],
+    "added_part_ids": [
+      92
+    ],
+    "sha256": "8b57e63258cd35ee482378e794f010c3be6eec3187e9bd7613abb169d66457c2",
+    "step_sha256": "39b3fa53ef4022afab7da929172247ceab659fefc68d903ab42e9174d8262a0a",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-61",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-61.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      34,
+      92,
+      93,
+      94
+    ],
+    "added_part_ids": [
+      93,
+      94
+    ],
+    "sha256": "5eaa9e4f6d439f966333570ede97efa4302df67a80be5160b10ef7d4b774c3e7",
+    "step_sha256": "644580e9609c4914fe0af3fc791c8d4cc5fd030f44a31b64ed2d79cf863f27cb",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-62",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-62.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      34,
+      70,
+      92,
+      93,
+      94,
+      104
+    ],
+    "added_part_ids": [
+      70
+    ],
+    "sha256": "59458655c144390348137458f13e48efb560527f4e190520a454a84dbbbbf841",
+    "step_sha256": "2844c08fdda25f90243dac71563b8282d0cd2efd68873e012bfcc171de665f0c",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-63",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-63.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      45,
+      95
+    ],
+    "added_part_ids": [
+      95
+    ],
+    "sha256": "8ec741718e4d365b7486beabe8e1dbe086e00357e575cead3735f91e35e23563",
+    "step_sha256": "45196a221bb05d24e5a91f5cc69221af29cfde128b2577f8e91ceb45d0bf6b2a",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-64",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-64.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      45,
+      95,
+      96,
+      97
+    ],
+    "added_part_ids": [
+      96,
+      97
+    ],
+    "sha256": "1c3d9eb006c96fb49dd14df08002779eef88d9a5e5629c65193257848800a924",
+    "step_sha256": "a57ff4df7d0bd68923fbebe88ccf791edd35d86e89d0e9a5d343c3e9dc4a1323",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-65",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-65.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      45,
+      71,
+      95,
+      96,
+      97,
+      107
+    ],
+    "added_part_ids": [
+      71
+    ],
+    "sha256": "7630724ee92fef868242bb69278e46177fcc40fe84c9f9196bb613701b3ab76c",
+    "step_sha256": "f2b49ea82bf4baa1688f13ce3a9ec62dcef8a140009b35d5a1decd5805cc7ab9",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-66",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-66.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      50,
+      98
+    ],
+    "added_part_ids": [
+      98
+    ],
+    "sha256": "b599679c34453b9a20e4585c8f9a3aded1c83f9841fd0e03e8e2147dc6110676",
+    "step_sha256": "3f1374e58a97a34f6decb30b4a804a9efae834bb632c95c2e481a5c017a1aaea",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-67",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-67.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      50,
+      98,
+      99,
+      100
+    ],
+    "added_part_ids": [
+      99,
+      100
+    ],
+    "sha256": "9cefe26640b806e0beecc81bccf874307bebe2ecfc5caebc4138e57f25d9522f",
+    "step_sha256": "87537139e4deacf9dfc9a0f59c29d2d076eac97404b278aa8a75ce4146725a2c",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-68",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-68.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      50,
+      72,
+      98,
+      99,
+      100,
+      108
+    ],
+    "added_part_ids": [
+      72
+    ],
+    "sha256": "9049f9f8e8a6f432b63a6583b6f3cb49e09fe0c519da39e9223083d1230dd1ea",
+    "step_sha256": "415fd756b62c2c09ffe8160c01af09d4c911fd56b3f9969b1781fa478d2d5c13",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-69",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-69.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      65,
+      110,
+      111
+    ],
+    "added_part_ids": [
+      110,
+      111
+    ],
+    "sha256": "97c5105b44658e7278456198a1786eb6f9a0b1045765ba3477bf01f697e57f1f",
+    "step_sha256": "90236cd1e961b629e31ff28618676c8c33c680a98261fac13f7326c0a19bf1ef",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-70",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-70.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      65,
+      109,
+      110,
+      111
+    ],
+    "added_part_ids": [
+      109
+    ],
+    "sha256": "eac704147a31517cf7d698e524cec70b418d094ae170ff67d3173ccb5c477f27",
+    "step_sha256": "8ba43ce97cf017cc17306ee2df6ec77424d2f67728dd6d08e394f71334261985",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-71",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-71.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      69,
+      113,
+      114
+    ],
+    "added_part_ids": [
+      113,
+      114
+    ],
+    "sha256": "7465b99152fa432c8bcf61c94bc56eb21db68cd07fc20f021596af59fe3201dc",
+    "step_sha256": "bfd9094efc44d4971b079d7fc43423e2767efe844067f63daa6c26487be8218e",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-72",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-72.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      69,
+      112,
+      113,
+      114
+    ],
+    "added_part_ids": [
+      112
+    ],
+    "sha256": "569aef4eb06a87c4e1dad097ba5fa0d70cbad6c79e4f5b8e94f389c340e87391",
+    "step_sha256": "afc38da6622fc418026a077196eb7e14aa3f9caa392b537a44692bd4d53e8a3f",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-73",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-73.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      67,
+      116,
+      117
+    ],
+    "added_part_ids": [
+      116,
+      117
+    ],
+    "sha256": "e7aa2d42f1bb3dccc52396cb5245016b743a00ad66abe0aecfa7155aa5db3d47",
+    "step_sha256": "11a34493009f06a2a0b7d022fa10947812e2e6cde70b510369e76afc7aea6c74",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-74",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-74.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      67,
+      115,
+      116,
+      117
+    ],
+    "added_part_ids": [
+      115
+    ],
+    "sha256": "378b8e14002b03e07923331ba432ddf89aa6e9920a857032f2aca032b1956e2c",
+    "step_sha256": "2d0b37ce45e906a2b54351c77f9f0f2e3aba8af9bfc9dd54f85ccdaa14a6436b",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-75",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-75.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      71,
+      119,
+      120
+    ],
+    "added_part_ids": [
+      119,
+      120
+    ],
+    "sha256": "290fdb0146801962b768218a6d809928f41cfb230c2a425cf4768860bde1aeac",
+    "step_sha256": "fd392016e7ecd613a158493721f1c4e1306e36d1f87a38ff580719c4a7104802",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-76",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-76.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      71,
+      118,
+      119,
+      120
+    ],
+    "added_part_ids": [
+      118
+    ],
+    "sha256": "9619b79c1d93389e1c060e9c0aa98a63d9b3975993dc8ce2c8e95ed24242fbee",
+    "step_sha256": "47ea14a94324ca2ca946015aeb46cb6f79e9b6fee421879f411b73ee2804fc48",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  },
+  {
+    "id": "BASE64-77",
+    "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-77.png",
+    "width": 1800,
+    "height": 1350,
+    "visible_part_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "added_part_ids": [],
+    "sha256": "12c917b84fa224eaab77913e5fcd30031e8c297be48641100a4d9766f345e3bd",
+    "step_sha256": "2698f8fb31e9a78ed81b88bc927d43341be2557e385ee4ea2cb577a9db6741bd",
+    "geometry_source": "candidate.retained_base",
+    "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+  }
+]

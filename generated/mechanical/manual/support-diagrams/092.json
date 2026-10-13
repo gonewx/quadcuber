@@ -1,0 +1,8 @@
+{
+  "step_id": "D132-080",
+  "step_number": 92,
+  "step_sha256": "09136a03c80f441992813ac3cf9aeeeaa50b05543578208153bcb2f092a5ad53",
+  "image_sha256": "fa3abed7ae293312663b67dc8c41635b3560f9bb5516d178a16fcdc92c27c16e",
+  "revision": "INTEGRATED-GRAVITY-R4-2026-10-08",
+  "geometry_snapshot_used": true
+}

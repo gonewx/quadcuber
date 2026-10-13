@@ -30,7 +30,7 @@
   },
   "external_host_requirement": {
     "stage": 0,
-    "retained_foundation_count": 64,
+    "retained_foundation_count": 120,
     "original_walls_required": true,
     "common_chassis_required": true,
     "core132_standalone_load_fixture": false
@@ -69823,7 +69823,7 @@
         "D132-078"
       ],
       "instructions_zh": [
-        "确认墙体、64件四角闭合底盘及130件支承的固定接口全部到位；整个移动托盘仍由独立夹具可靠托住。",
+        "确认墙体、120件双层闭合底盘及130件支承的固定接口全部到位；整个移动托盘仍由独立夹具可靠托住。",
         "不要放魔方；20件杠杆已在R臂与支承搭建前分阶段装好，再核对三根15L梁、12L支点轴、11L横轴及4件上止挡。",
         "支承按130件清单搭建，杠杆按20件清单搭建，合计150件。上位须持续按住把手或由独立夹具托稳。",
         "整机安装接近路径、摩擦、保持力、强度及寿命尚未实测。不得在完整整机中强塞U组件；U组件已经在孤立R臂阶段提前接入。"

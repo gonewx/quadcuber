@@ -20,8 +20,8 @@ class TurntableFix(unittest.TestCase):
    if s['number']<at[86]:self.assertNotIn(86,s['visible_part_ids'])
   self.assertEqual([s['id']for s in ss if s['id'].startswith('HEAD-FINAL-')],[f'HEAD-FINAL-{i:02d}'for i in range(1,31)])
  def test_four_arms_and_global_accounting(self):
-  g=json.loads((H/'guide.json').read_text());self.assertEqual(len(g['steps']),501);self.assertEqual(g['coverage']['prebuilt_core_total_parts'],0);self.assertEqual(g['coverage']['direct_assembly_parts'],882)
-  self.assertEqual(g['coverage']['model_count_working'],882);self.assertTrue(g['coverage']['original_arm_from_scratch'])
+  g=json.loads((H/'guide.json').read_text());self.assertEqual(len(g['steps']),542);self.assertEqual(g['coverage']['prebuilt_core_total_parts'],0);self.assertEqual(g['coverage']['direct_assembly_parts'],938)
+  self.assertEqual(g['coverage']['model_count_working'],938);self.assertTrue(g['coverage']['original_arm_from_scratch'])
   for arm in ['R','L','F','B']:
    seq=[s for s in g['steps']if s.get('arm')==arm and s.get('source_step_id','').startswith('HEAD-')];self.assertEqual(len(seq),88);self.assertEqual(len([s for s in seq if '-HEAD-TT-'in s['source_step_id']]),9)
 if __name__=='__main__':unittest.main()

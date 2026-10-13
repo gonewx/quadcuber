@@ -83,6 +83,7 @@ class RepositoryLayout(unittest.TestCase):
         self.assertEqual(hashlib.sha256(json.dumps(r, sort_keys=True,
                          separators=(',', ':')).encode()).hexdigest(),
                          '94e758d94e6b13dd9996fae86726cb6be0f0d906430f62aa862fec98e80dd24a')
+        release=json.loads((ROOT/'generated/mechanical/release.json').read_text())
         for row in baseline['files']:
             if row['new_path'] in evolved_firmware:
                 continue
@@ -90,7 +91,10 @@ class RepositoryLayout(unittest.TestCase):
                 continue
             path = ROOT / row['new_path']
             self.assertTrue(path.is_file(), row['new_path'])
-            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), row['sha256'], row['new_path'])
+            expected=release['updated_assets'].get(row['new_path'],row['sha256'])
+            if row['role'] in {'frozen','protected'}:
+                self.assertEqual(expected,row['sha256'],row['new_path'])
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), expected, row['new_path'])
 
 
 if __name__ == '__main__':

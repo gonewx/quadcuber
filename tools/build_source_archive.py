@@ -3,7 +3,7 @@ from pathlib import Path
 import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 DIRECTORIES = ('mechanical/inputs', 'mechanical/assembly', 'mechanical/parts', 'web', 'generated/mechanical')
-FILES = ('tools/build_source_archive.py', 'tools/build_distribution.py',
+FILES = ('tools/build_source_archive.py', 'tools/build_distribution.py', 'tools/record_mechanical_release.py',
          'tools/check_rebuild.py', 'README.md', 'LICENSE', 'docs/history.md')
 
 def build(root=ROOT, output=None, *, complete=False):

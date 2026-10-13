@@ -26,6 +26,9 @@ jobs:
           python -m unittest discover -s mechanical/assembly -p 'test_*.py' -v
           python web/test_final_presentation.py
           python web/test_integrated_bundle.py
+          python mechanical/assembly/check_base_stiffening.py
+          python mechanical/assembly/check_base_continuous.py
+          python mechanical/assembly/check_base_integration.py
           python tools/check_rebuild.py
       - name: Check readers and native models
         working-directory: web

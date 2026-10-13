@@ -9,7 +9,7 @@ This package describes direct assembly of the final 60483 head, repeated indepen
 - 88 local steps explicitly introduce 165 instances once. The two deferred interface parts are #84 (2780) then #81 (40490), introduced once after the arm seats on the base.
 - The wall/motor/platform assembly is fully described using stable CORE-01…49 IDs. HEAD-FINAL-01 now introduces just the lower wall frame; the remaining original HEAD-FINAL IDs are preserved. HEAD-TT-01…09 remain lower-turntable steps.
 - Wall foot pins #49/#50 are inserted into the wall before seating. Bottom connector #77 is first attached horizontally to vertical beam #78 off the base; its downward pins later enter the base along with the arm. Do not install a duplicate #77 on the base.
-- The guide ledger namespaces base, support and the four arms, and assigns every one of the 882 instances a unique introduction page. Reference or whole-model views do not count as introductions.
+- The guide ledger namespaces base, support and the four arms, and assigns every one of the 938 instances a unique introduction page. Reference or whole-model views do not count as introductions.
 
 ## Assembly order
 

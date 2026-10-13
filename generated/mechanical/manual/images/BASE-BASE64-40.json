@@ -1,0 +1,23 @@
+{
+  "id": "BASE64-40",
+  "image_path": "/workspace/quadcuber-tray-registration/generated/mechanical/manual/images/BASE-BASE64-40.png",
+  "width": 1800,
+  "height": 1350,
+  "visible_part_ids": [
+    2,
+    7,
+    60,
+    61,
+    62,
+    63,
+    64,
+    76
+  ],
+  "added_part_ids": [
+    76
+  ],
+  "sha256": "20d031819609a7c2a71f4303ebc62fc44d813df5c579e1ab591858653e19c5e9",
+  "step_sha256": "92841bf47dfb0b4667067b3a14c362750564e2570cdb836877dd9d1a4f255fc6",
+  "geometry_source": "candidate.retained_base",
+  "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13"
+}
