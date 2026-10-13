@@ -1,0 +1,577 @@
+{
+  "status": "LOCAL_GEOMETRY_PROBE_NOT_PHYSICAL_APPROVAL",
+  "tool": [
+    {
+      "id": "low_corner_pusher",
+      "part": "32526.dat",
+      "position_mm": [
+        -31.6,
+        24.0,
+        0.4
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.2,
+          20.0,
+          -35.2
+        ],
+        [
+          -12.0,
+          28.0,
+          4.0
+        ]
+      ]
+    },
+    {
+      "id": "handle_7L",
+      "part": "32524.dat",
+      "position_mm": [
+        -31.6,
+        32.0,
+        -47.6
+      ],
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -35.2,
+          28.0,
+          -75.2
+        ],
+        [
+          -28.0,
+          36.0,
+          -20.0
+        ]
+      ]
+    },
+    {
+      "id": "handle_pin_-31.6",
+      "part": "2780.dat",
+      "position_mm": [
+        -31.6,
+        28.0,
+        -31.6
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -34.720400000000005,
+          20.0,
+          -34.80021232000001
+        ],
+        [
+          -28.4796,
+          36.0,
+          -28.39978768
+        ]
+      ]
+    },
+    {
+      "id": "handle_pin_-23.6",
+      "part": "2780.dat",
+      "position_mm": [
+        -31.6,
+        28.0,
+        -23.6
+      ],
+      "rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bbox_mm": [
+        [
+          -34.720400000000005,
+          20.0,
+          -26.800212320000004
+        ],
+        [
+          -28.4796,
+          36.0,
+          -20.399787680000003
+        ]
+      ]
+    }
+  ],
+  "tool_up_core_aabb_pairs": [],
+  "tool_horizontal_LR_all_parts_aabb_pairs": [],
+  "tool_withdraw_two_stage_continuous_aabb_pairs": [],
+  "tool_withdraw_y_plusminus2_aabb_pairs": [
+    [
+      "None/32526.dat/low_corner_pusher",
+      "None/32524.dat/seat_deck_-8"
+    ],
+    [
+      "None/32526.dat/low_corner_pusher",
+      "None/32524.dat/seat_deck_0"
+    ],
+    [
+      "None/32526.dat/low_corner_pusher",
+      "None/6558.dat/seat_corner_longpin_-16_-8"
+    ],
+    [
+      "None/32526.dat/low_corner_pusher",
+      "None/2780.dat/seat_middle_deck_pin_-16"
+    ],
+    [
+      "None/32526.dat/low_corner_pusher",
+      "None/32524.dat/seat_deck_-8"
+    ],
+    [
+      "None/32526.dat/low_corner_pusher",
+      "None/32524.dat/seat_deck_0"
+    ],
+    [
+      "None/32526.dat/low_corner_pusher",
+      "None/6558.dat/seat_corner_longpin_-16_-8"
+    ],
+    [
+      "None/32526.dat/low_corner_pusher",
+      "None/2780.dat/seat_middle_deck_pin_-16"
+    ]
+  ],
+  "tool_withdraw_path_mm": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      -2,
+      0,
+      -2
+    ],
+    [
+      -2,
+      0,
+      -82
+    ]
+  ],
+  "tool_withdraw_y_plusminus2_triangle_sweep_candidates": [],
+  "tool_cube_triangle_bbox_candidates": [],
+  "tool_cube_strict_interior_vertices": [],
+  "attachment_hole_checks": [
+    {
+      "part": "low_corner_pusher",
+      "target_mm": [
+        -31.6,
+        24.0,
+        -31.6
+      ],
+      "matched": true
+    },
+    {
+      "part": "low_corner_pusher",
+      "target_mm": [
+        -31.6,
+        24.0,
+        -23.6
+      ],
+      "matched": true
+    },
+    {
+      "part": "handle_7L",
+      "target_mm": [
+        -31.6,
+        32.0,
+        -31.6
+      ],
+      "matched": true
+    },
+    {
+      "part": "handle_7L",
+      "target_mm": [
+        -31.6,
+        32.0,
+        -23.6
+      ],
+      "matched": true
+    }
+  ],
+  "opening65_tool_aabb_pairs": [],
+  "opening65_original_core_vs_heads_aabb_pairs": [],
+  "tray_full_drop_moving_continuous_envelope_vs_LR": [],
+  "lever_drop65_vs_horizontal_LR_heads_aabb_pairs": [],
+  "vertical_original_confirmed_surface_crossings": [
+    {
+      "arm": "R",
+      "core": "seat_H",
+      "point_mm": [
+        19.56983647922392,
+        36.0,
+        -0.374964
+      ]
+    },
+    {
+      "arm": "R",
+      "core": "seat_deck_0",
+      "point_mm": [
+        27.5254383057225,
+        31.425235061250472,
+        -0.374964
+      ]
+    },
+    {
+      "arm": "R",
+      "core": "seat_middle_deck_pin_16",
+      "point_mm": [
+        18.54150557571939,
+        35.2,
+        -1.124888
+      ]
+    },
+    {
+      "arm": "L",
+      "core": "seat_H",
+      "point_mm": [
+        -19.56983647922392,
+        36.0,
+        0.374964
+      ]
+    },
+    {
+      "arm": "L",
+      "core": "seat_deck_0",
+      "point_mm": [
+        -27.5254383057225,
+        31.425235061250472,
+        0.374964
+      ]
+    },
+    {
+      "arm": "L",
+      "core": "seat_middle_deck_pin_-16",
+      "point_mm": [
+        -18.54150557571939,
+        35.2,
+        1.124888
+      ]
+    }
+  ],
+  "vertical_original_full_heads_aabb_pairs": [
+    [
+      "R/32524.dat/",
+      "None/32140.dat/x_locator_native32140"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/32524.dat/seat_deck_8"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/32523.dat/x_locator_post_8"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/15100.dat/x_locator_deck_root_8"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/6558.dat/x_locator_root_pin_8"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/2780.dat/x_locator_left_lower_longpin"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/18654.dat/x_locator_root_spacer_8"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/32140.dat/x_locator_native32140"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/32524.dat/seat_deck_-8"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/32523.dat/x_locator_post_-8"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/15100.dat/x_locator_deck_root_-8"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/6558.dat/x_locator_root_pin_-8"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/18654.dat/x_locator_root_spacer_-8"
+    ],
+    [
+      "R/32449.dat/压头支承薄梁",
+      "None/32140.dat/x_locator_native32140"
+    ],
+    [
+      "R/4519.dat/薄梁固定轴",
+      "None/2780.dat/x_locator_left_lower_longpin"
+    ],
+    [
+      "R/4519.dat/薄梁固定轴",
+      "None/32140.dat/x_locator_native32140"
+    ],
+    [
+      "R/32123a.dat/薄梁固定轴限位",
+      "None/2780.dat/x_locator_left_lower_longpin"
+    ],
+    [
+      "R/32123a.dat/薄梁固定轴限位",
+      "None/32140.dat/x_locator_native32140"
+    ],
+    [
+      "R/32123a.dat/薄梁固定轴限位",
+      "None/32140.dat/x_locator_native32140"
+    ],
+    [
+      "R/32054.dat/薄梁固定挡套销",
+      "None/32523.dat/x_locator_post_-8"
+    ],
+    [
+      "R/32054.dat/薄梁固定挡套销",
+      "None/6558.dat/x_locator_root_pin_-8"
+    ],
+    [
+      "R/32054.dat/薄梁固定挡套销",
+      "None/32523.dat/x_locator_post_8"
+    ],
+    [
+      "R/32054.dat/薄梁固定挡套销",
+      "None/6558.dat/x_locator_root_pin_8"
+    ],
+    [
+      "R/32054.dat/薄梁固定挡套销",
+      "None/2780.dat/x_locator_left_lower_longpin"
+    ],
+    [
+      "R/32062.dat/轮毂贯穿轴",
+      "None/32524.dat/seat_deck_-8"
+    ],
+    [
+      "R/32062.dat/轮毂贯穿轴",
+      "None/32524.dat/seat_deck_0"
+    ],
+    [
+      "R/32062.dat/轮毂贯穿轴",
+      "None/32524.dat/seat_deck_8"
+    ],
+    [
+      "R/32062.dat/轮毂贯穿轴",
+      "None/15100.dat/x_locator_deck_root_-8"
+    ],
+    [
+      "R/32062.dat/轮毂贯穿轴",
+      "None/6558.dat/x_locator_root_pin_-8"
+    ],
+    [
+      "R/32062.dat/轮毂贯穿轴",
+      "None/15100.dat/x_locator_deck_root_8"
+    ],
+    [
+      "R/32062.dat/轮毂贯穿轴",
+      "None/6558.dat/x_locator_root_pin_8"
+    ],
+    [
+      "R/42610.dat/轮毂",
+      "None/14720.dat/seat_H"
+    ],
+    [
+      "R/42610.dat/轮毂",
+      "None/32524.dat/seat_deck_0"
+    ],
+    [
+      "R/42610.dat/轮毂",
+      "None/2780.dat/seat_middle_deck_pin_16"
+    ],
+    [
+      "R/50945_nominal.dat/橡胶胎",
+      "None/14720.dat/seat_H"
+    ],
+    [
+      "R/50945_nominal.dat/橡胶胎",
+      "None/32524.dat/seat_deck_0"
+    ],
+    [
+      "R/50945_nominal.dat/橡胶胎",
+      "None/2780.dat/seat_middle_deck_pin_16"
+    ],
+    [
+      "L/32449.dat/压头支承薄梁",
+      "None/32524.dat/seat_deck_-8"
+    ],
+    [
+      "L/32449.dat/压头支承薄梁",
+      "None/32524.dat/seat_deck_8"
+    ],
+    [
+      "L/32062.dat/轮毂贯穿轴",
+      "None/32524.dat/seat_deck_-8"
+    ],
+    [
+      "L/32062.dat/轮毂贯穿轴",
+      "None/32524.dat/seat_deck_0"
+    ],
+    [
+      "L/32062.dat/轮毂贯穿轴",
+      "None/32524.dat/seat_deck_8"
+    ],
+    [
+      "L/42610.dat/轮毂",
+      "None/14720.dat/seat_H"
+    ],
+    [
+      "L/42610.dat/轮毂",
+      "None/32524.dat/seat_deck_0"
+    ],
+    [
+      "L/42610.dat/轮毂",
+      "None/2780.dat/seat_middle_deck_pin_-16"
+    ],
+    [
+      "L/50945_nominal.dat/橡胶胎",
+      "None/14720.dat/seat_H"
+    ],
+    [
+      "L/50945_nominal.dat/橡胶胎",
+      "None/32524.dat/seat_deck_0"
+    ],
+    [
+      "L/50945_nominal.dat/橡胶胎",
+      "None/2780.dat/seat_middle_deck_pin_-16"
+    ]
+  ],
+  "hand_box_assumption_mm": [
+    [
+      -46.6,
+      17,
+      -91.6
+    ],
+    [
+      -16.6,
+      47,
+      -51.6
+    ]
+  ],
+  "hand_box_vs_horizontal_LR_core_aabb_pairs": [],
+  "unchanged_core_vs_fixed_arm_aabb_candidates": [
+    [
+      "R/64179.dat/",
+      "None/55615.dat/R_wall55615"
+    ],
+    [
+      "R/64179.dat/",
+      "None/3708.dat/root_12L_axle"
+    ],
+    [
+      "R/2780.dat/",
+      "None/55615.dat/R_wall55615"
+    ],
+    [
+      "R/2780.dat/",
+      "None/55615.dat/R_wall55615"
+    ],
+    [
+      "R/40490.dat/竖墙侧梁",
+      "None/32278.dat/inner_arm_z-32"
+    ],
+    [
+      "R/6558.dat/竖墙侧梁销",
+      "None/32278.dat/inner_arm_z-32"
+    ],
+    [
+      "R/40490.dat/竖墙侧梁",
+      "None/32278.dat/inner_arm_z32"
+    ],
+    [
+      "R/2780.dat/竖墙侧梁销",
+      "None/32278.dat/inner_arm_z32"
+    ],
+    [
+      "L/64179.dat/",
+      "None/55615.dat/L_wall55615"
+    ],
+    [
+      "L/2780.dat/",
+      "None/55615.dat/L_wall55615"
+    ],
+    [
+      "L/2780.dat/",
+      "None/55615.dat/L_wall55615"
+    ]
+  ],
+  "scope_limits": [
+    "AABB non-overlap certifies nominal geometric separation only. Positive pairs are candidates, not proven collisions.",
+    "Opening and lever movement are samples, not continuous certification.",
+    "No holding load, friction, backlash, actual cube bevel or operator hand envelope verified.",
+    "Pusher is manually biased and removable, not a self-centering clamp or load-bearing support."
+  ],
+  "source_sha256": {
+    "mechanical/candidate.py": "baf5e297204ca7de2b6621e18612da60790d041573e4c79bf4d5e8a8117115d0",
+    "mechanical/inputs/baseline_model.py": "ed1b9d8d71aed8f34e93dce32fcb35a33a16203360bfdbd1064282600c72d7fc",
+    "mechanical/inputs/assembly-integrated-R1.json": "85e0c7326d37d602ca37c2a5a175bf0fe74f9b414c353ba326e6fac4d2370cb2",
+    "mechanical/inputs/baseline-machine-899.mpd": "5cca7bad1c805721a38065e0834d7741e020ada15a6ab960021b82d7b8fb6d56"
+  }
+}
