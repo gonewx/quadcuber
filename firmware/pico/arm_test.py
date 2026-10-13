@@ -1,7 +1,7 @@
 """单臂原型测试程序 (MicroPython, 树莓派 Pico)。
 
 用法 (详见 docs/single_arm.md):
-    mpremote cp arm_profiles.py control.py encoder.py motor.py static_pair.py arm_test.py :
+    mpremote cp arm_profiles.py control.py encoder.py motor.py arm_test.py :
     # 升级先按文档备份、迁移并验证设备 config.py，禁止覆盖真实 R 参数。
     mpremote repl --capture arm.log
     >>> import arm_test; arm_test.main()
@@ -21,7 +21,6 @@ from machine import Pin
 from arm_profiles import get_profile, OUTPUTS
 
 import config
-import static_pair
 from control import DONE, FAILED, Gains, MoveController
 from encoder import Encoder
 from motor import Motor, Servo
@@ -554,16 +553,7 @@ def cmd_off(arm, args):
     print("马达输出和舵机 PWM 已关闭，测试授权已清除；5V 并未切断")
 
 
-def cmd_static(arm, args):
-    # Preserve normal selection's stop semantics, including invalid entry.
-    arm.close()
-    if args != ['supported']:
-        raise ValueError('static supported：必须由托盘或独立支承全程承重')
-    static_pair.run_console('supported')
-
-
 COMMANDS = {
-    "static": cmd_static,
     "arm": cmd_arm,
     "help": cmd_help,
     "enc": cmd_enc,
@@ -590,7 +580,6 @@ COMMANDS = {
 }
 
 HELP = """命令:
-  static supported     支承承重下两舵机静态定位；停马达/PIO，无翻转或降盘
   arm [R|L]             查看选臂/引脚；选臂先停两臂并撤销授权，单臂逐个调试
   motor_test unloaded   显式空载测试授权；无魔方、先核实机构自由行程；入口不运动
   check [占空比]        短暂正转, 检查马达/编码器方向 (须已标定或进入空载模式)
@@ -634,7 +623,7 @@ def main():
                 print("未知命令, 输入 help 查看")
                 continue
             try:
-                if name not in ("help", "arm", "off", "static"):
+                if name not in ("help", "arm", "off"):
                     arm.require_ready()
                 fn(arm, args)
             except KeyboardInterrupt:
