@@ -291,7 +291,7 @@ def load_firmware(*names):
             sleep_ms=world.sleep_ms,
         ),
     }
-    fw_names = ("config", "arm_profiles", "control", "encoder", "motor", "arm_test")
+    fw_names = ("config", "arm_profiles", "control", "encoder", "motor", "static_pair", "arm_test")
     saved = {k: sys.modules.get(k) for k in list(fake) + list(fw_names)}
     sys.path.insert(0, FIRMWARE)
     try:
