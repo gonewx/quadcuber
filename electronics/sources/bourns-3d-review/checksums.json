@@ -1,0 +1,26 @@
+{
+  "SRP1245A series.stp": {
+    "bytes": 508375,
+    "sha256": "c5243bd31fc971e1420a34de5cd4c4fef5749d898cf52bc5b9f32b42a7b80c28"
+  },
+  "mf-msmf050.stp": {
+    "bytes": 57243,
+    "sha256": "bebf5de1466713bbccc8324af1763901ee8aef589ad6794fa7fd6f7af00fdee6"
+  },
+  "SRP1245A.pdf": {
+    "bytes": 185567,
+    "sha256": "a3c02c7d4c2c45e81c3d66d06420a5a8f84b115d1890a3754b74d99df0091f4b"
+  },
+  "mf-msmf.pdf": {
+    "bytes": 1327051,
+    "sha256": "50d80228581842471d563e28ba0f1b67ab095ee95dfac4079f4a49f7f7bbf3c8"
+  },
+  "geometry-check.json": {
+    "bytes": 569,
+    "sha256": "a5f7c2a4393cf168bcd3d386a4b845ee6e78a28e9405c4a950dfa1f75c3ba996"
+  },
+  "model-results.json": {
+    "bytes": 1484,
+    "sha256": "412ee9923e84f424638e2a4b957f4024eee6d35171c11d37b7bd89a09f691bf9"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kicad": "10.0.7",
+  "output": "electronics/quadcuber.kicad_pcb",
+  "baseline_sha256": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e",
+  "output_sha256": "1280859648d76987e4c71d3a8eb24b89558e4267120ae9d4e19b1ca452087df8",
+  "vin_track_width_mm": 1.8,
+  "vin_route_mm": [
+    [
+      95.5,
+      63.7414
+    ],
+    [
+      101.0086,
+      63.7414
+    ],
+    [
+      105.75,
+      59
+    ]
+  ],
+  "shunt_net": "unconnected-(J1-SLEEVE_SHUNT_NC-Pad3)"
+}

@@ -1991,7 +1991,7 @@
 					)
 				)
 			)
-			(property "Value" "9V regulated input"
+			(property "Value" "9V DC center-positive"
 				(at 0 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2001,7 +2001,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Quadcuber:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+			(property "Footprint" "Quadcuber:Jack_DC_Switchcraft_RASPC722X"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2051,7 +2051,7 @@
 				(pin passive line
 					(at -10.16 0 0)
 					(length 2.54)
-					(name "+9V"
+					(name "CENTER_9V"
 						(effects
 							(font
 								(size 0.75 0.75)
@@ -2069,7 +2069,7 @@
 				(pin passive line
 					(at 10.16 0 180)
 					(length 2.54)
-					(name "GND"
+					(name "SLEEVE_GND"
 						(effects
 							(font
 								(size 0.75 0.75)
@@ -2084,7 +2084,7 @@
 						)
 					)
 				)
-			)
+			(pin passive line (at 10.16 -2.54 180) (length 2.54) (name "SLEEVE_SHUNT_NC" (effects (font (size 0.75 0.75)))) (number "3" (effects (font (size 0.75 0.75))))))
 			(embedded_fonts no)
 		)
 		(symbol "Quadcuber:Q1"
@@ -3977,7 +3977,7 @@
 				)
 			)
 		)
-		(property "Value" "9V regulated input"
+		(property "Value" "9V DC center-positive"
 			(at 35.56 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3987,7 +3987,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Quadcuber:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+		(property "Footprint" "Quadcuber:Jack_DC_Switchcraft_RASPC722X"
 			(at 35.56 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -4018,7 +4018,7 @@
 				)
 			)
 		)
-		(property "MPN" "1715721"
+		(property "MPN" "RASPC722X"
 			(at 35.56 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -4029,7 +4029,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Phoenix Contact"
+		(property "Manufacturer" "Switchcraft"
 			(at 35.56 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -4054,7 +4054,7 @@
 				)
 			)
 		)
-	)
+	(pin "3" (uuid "385b2105-580b-40c4-94f0-3fd6dfda0a98")))
 	(symbol
 		(lib_id "Quadcuber:#FLG1")
 		(at 35.56 119.38 0)
@@ -6029,4 +6029,6 @@
 			)
 		)
 	)
+
+(no_connect (at 45.72 40.64) (uuid "eb8403a7-c1fa-4793-8ff2-d555db3dd366"))
 )

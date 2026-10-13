@@ -11,7 +11,7 @@ for idx in range(4):
  for j,n in enumerate(['G','+','S']):labels.append((n,x+15.5,97+j*2.54,1.0))
  for j,n in enumerate(['M1','M2','A','B']):labels.append((n,6+idx*34+j*5,64.7,1.0))
 for j,n in enumerate(['GND','VM','5A','5B','ENC','3V3','VSYS']):labels.append((n,84+j*7,63.3,1.0))
-labels.extend([('+9V',45,16,1.0),('GND',50.08,16,1.0),('G',3.8,57,1.0),('TX',3.8,59.54,1.0),('RX',3.8,62.08,1.0),('RUN',28.5,61,1.0)])
+labels.extend([('9V CENTER +',45.5,17,1.0),('G',3.8,57,1.0),('TX',3.8,59.54,1.0),('RX',3.8,62.08,1.0),('RUN',28.5,61,1.0)])
 labels.extend([('BOOT',7,6,1.0),('RESET',7,48.5,1.0),('USB',27,2,1.0),('SWD',18.8,50.8,1.0),('3V3',15,52.8,1.0),('IO',17.54,52.8,1.0),('G',20.08,52.8,1.0),('CLK',22.62,52.8,1.0),('GP25',28,18.3,1.0)])
 for text,x,y,size in labels:
  pos=p.VECTOR2I(p.FromMM(50+x),p.FromMM(50+y))

@@ -1,0 +1,35 @@
+[
+  {
+    "file": "MF-MSMF110_16X.stp",
+    "solids": 1,
+    "valid": true,
+    "bounding_box_mm": [
+      3.24,
+      0.7,
+      4.55
+    ],
+    "volume_mm3": 9.744811104512555
+  },
+  {
+    "file": "mf-msmf050.stp",
+    "solids": 1,
+    "valid": true,
+    "bounding_box_mm": [
+      3.24,
+      0.7,
+      4.55
+    ],
+    "volume_mm3": 9.744811104512555
+  },
+  {
+    "file": "SRP1245A series.stp",
+    "solids": 8,
+    "valid": true,
+    "bounding_box_mm": [
+      12.89999999999998,
+      12.5,
+      5.005000100000001
+    ],
+    "volume_mm3": 926.6292273227464
+  }
+]

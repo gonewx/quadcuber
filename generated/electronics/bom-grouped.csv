@@ -25,7 +25,7 @@ Y1,12MHz CL10pF,Abracon,ABM8-272-T3,Quadcuber:Crystal_SMD_3225-4Pin_3.2x2.5mm,1,
 R409,1k,Yageo,RC0402FR-071KL,Quadcuber:R_0402_1005Metric,1,
 C425; C426,15p,Murata,GRM1555C1H150JA01D,Quadcuber:C_0402_1005Metric,2,
 D7,USER LED GP25,Lite-On,LTST-C190KGKT,Quadcuber:LED_0603_1608Metric,1,
-J1,9V regulated input,Phoenix Contact,1715721,"Quadcuber:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",1,
+J1,9V DC center-positive,Switchcraft,RASPC722X,Quadcuber:Jack_DC_Switchcraft_RASPC722X,1,"5.5/2.1 mm mating plug 762/762Z, 9.5 mm barrel; 5A carrying rating, regulated 9V continuous input budget <=5A. Project pins 1=center, 2=sleeve, 3=sleeve shunt NC. Drawing visually verified by parent thread; original PDF pending local archive. See sources/raspc722x-review.md."
 F1,8A 24V time-lag fuse,Littelfuse,0407008.WR,Quadcuber:Fuse_Littelfuse_407_1206,1,"407 time-lag; 24VDC, 60A interrupt, nominal melting I2t24.12A2s; not fast semiconductor protection. Continuous input design budget <=5A; current-limited 9V source required."
 U4,LM74700QDBVRQ1,Texas Instruments,LM74700QDBVRQ1,Quadcuber:SOT-23-6,1,Ideal diode / reverse polarity. EN is NOT a power disconnect.
 Q1,CSD18540Q5B,Texas Instruments,CSD18540Q5B,Quadcuber:TDSON-8-1,1,

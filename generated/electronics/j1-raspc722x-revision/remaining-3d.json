@@ -1,0 +1,117 @@
+{
+  "scope": "Requested missing/exact-model review; inherited generic references are not a claim of verified exact part models",
+  "models": [
+    {
+      "ref": "C26",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D8.0mm_P3.50mm.step"
+      ],
+      "dnp": true
+    },
+    {
+      "ref": "C36",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D8.0mm_P3.50mm.step"
+      ],
+      "dnp": true
+    },
+    {
+      "ref": "F1",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Fuse.3dshapes/Fuse_1206_3216Metric.step"
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "F10",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Fuse.3dshapes/Fuse_1812_4532Metric.step"
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "F11",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Fuse.3dshapes/Fuse_1812_4532Metric.step"
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "F12",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Fuse.3dshapes/Fuse_1812_4532Metric.step"
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "F13",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Fuse.3dshapes/Fuse_1812_4532Metric.step"
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "F2",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Fuse.3dshapes/Fuse_1812_4532Metric.step"
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "F3",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Fuse.3dshapes/Fuse_1812_4532Metric.step"
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "J1",
+      "model_references": [],
+      "dnp": false
+    },
+    {
+      "ref": "J10",
+      "model_references": [],
+      "dnp": false
+    },
+    {
+      "ref": "J11",
+      "model_references": [],
+      "dnp": false
+    },
+    {
+      "ref": "J12",
+      "model_references": [],
+      "dnp": false
+    },
+    {
+      "ref": "J13",
+      "model_references": [],
+      "dnp": false
+    },
+    {
+      "ref": "L1",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Bourns_SRP1245A.step"
+      ],
+      "dnp": false
+    },
+    {
+      "ref": "L2",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Bourns_SRP1245A.step"
+      ],
+      "dnp": false
+    }
+  ],
+  "full_board_3d_complete": false,
+  "exact_110_model_published": false,
+  "J1_original_pdf_archived_here": false,
+  "notes": [
+    "F2/F3 exact base050 source downloaded and checked, not aligned/integrated",
+    "L1/L2 official series STEP dimensions need manufacturer clarification",
+    "F10-F13 exact URL returned050 bytes; wrongSTEP excluded from commit",
+    "F1 Littelfuse remains outside Bourns review; inherited1206 model is not exact0407008.WR proof",
+    "J1 and EV3 J10-J13 have no models; C26/C36 areDNP"
+  ]
+}

@@ -1,8 +1,7 @@
 [
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "version"
     ],
     "returncode": 0,
@@ -11,30 +10,28 @@
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "sch",
       "erc",
       "-o",
-      "/workspace/quadcuber/generated/electronics/erc.rpt",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_sch"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/erc.rpt",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_sch"
     ],
     "returncode": 0,
-    "stdout": "Found 0 violations\nSaved ERC Report to /workspace/quadcuber/generated/electronics/erc.rpt\n",
+    "stdout": "Found 0 violations\nSaved ERC Report to /workspace/quadcuber-pcb-raspc722x-review/generated/electronics/erc.rpt\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "sch",
       "export",
       "netlist",
       "--format",
       "kicadxml",
       "-o",
-      "/workspace/quadcuber/generated/electronics/netlist.xml",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_sch"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/netlist.xml",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_sch"
     ],
     "returncode": 0,
     "stdout": "",
@@ -42,53 +39,49 @@
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "sch",
       "export",
       "pdf",
       "-o",
-      "/workspace/quadcuber/generated/electronics/schematic.pdf",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_sch"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic.pdf",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_sch"
     ],
     "returncode": 0,
-    "stdout": "Plotted to '/workspace/quadcuber/generated/electronics/schematic.pdf'.\nDone.\n",
+    "stdout": "Plotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic.pdf'.\nDone.\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "sch",
       "export",
       "svg",
       "-o",
-      "/workspace/quadcuber/generated/electronics/schematic/",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_sch"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_sch"
     ],
     "returncode": 0,
-    "stdout": "Plotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber.svg'.\nPlotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber-controller.svg'.\nPlotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber-controller_power.svg'.\nPlotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber-usb.svg'.\nPlotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber-flash_clock.svg'.\nPlotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber-power.svg'.\nPlotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber-buck1.svg'.\nPlotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber-buck2.svg'.\nPlotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber-arm_R.svg'.\nPlotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber-arm_L.svg'.\nPlotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber-arm_F.svg'.\nPlotted to '/workspace/quadcuber/generated/electronics/schematic/quadcuber-arm_B.svg'.\nDone.\n",
+    "stdout": "Plotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber.svg'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber-controller.svg'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber-controller_power.svg'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber-usb.svg'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber-flash_clock.svg'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber-power.svg'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber-buck1.svg'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber-buck2.svg'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber-arm_R.svg'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber-arm_L.svg'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber-arm_F.svg'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/schematic/quadcuber-arm_B.svg'.\nDone.\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "pcb",
       "drc",
       "--schematic-parity",
       "-o",
-      "/workspace/quadcuber/generated/electronics/drc.rpt",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_pcb"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/drc.rpt",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_pcb"
     ],
     "returncode": 0,
-    "stdout": "Found 0 violations\nFound 0 unconnected items\nFound 0 schematic parity issues\nSaved DRC Report to /workspace/quadcuber/generated/electronics/drc.rpt\n",
+    "stdout": "Found 0 violations\nFound 0 unconnected items\nFound 0 schematic parity issues\nSaved DRC Report to /workspace/quadcuber-pcb-raspc722x-review/generated/electronics/drc.rpt\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "pcb",
       "export",
       "svg",
@@ -98,17 +91,16 @@
       "--layers",
       "F.Cu,F.Silkscreen,Edge.Cuts",
       "-o",
-      "/workspace/quadcuber/generated/electronics/pcb-top.svg",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_pcb"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/pcb-top.svg",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_pcb"
     ],
     "returncode": 0,
-    "stdout": "Plotted to '/workspace/quadcuber/generated/electronics/pcb-top.svg'.\nDone.\n",
+    "stdout": "Plotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/pcb-top.svg'.\nDone.\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "pcb",
       "export",
       "svg",
@@ -118,17 +110,16 @@
       "--layers",
       "B.Cu,B.Silkscreen,Edge.Cuts",
       "-o",
-      "/workspace/quadcuber/generated/electronics/pcb-bottom.svg",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_pcb"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/pcb-bottom.svg",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_pcb"
     ],
     "returncode": 0,
-    "stdout": "Plotted to '/workspace/quadcuber/generated/electronics/pcb-bottom.svg'.\nDone.\n",
+    "stdout": "Plotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/pcb-bottom.svg'.\nDone.\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "pcb",
       "export",
       "svg",
@@ -138,17 +129,16 @@
       "--layers",
       "F.Fab,Edge.Cuts",
       "-o",
-      "/workspace/quadcuber/generated/electronics/assembly.svg",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_pcb"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/assembly.svg",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_pcb"
     ],
     "returncode": 0,
-    "stdout": "Plotted to '/workspace/quadcuber/generated/electronics/assembly.svg'.\nDone.\n",
+    "stdout": "Plotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/assembly.svg'.\nDone.\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "pcb",
       "export",
       "svg",
@@ -158,17 +148,16 @@
       "--layers",
       "B.Fab,Edge.Cuts",
       "-o",
-      "/workspace/quadcuber/generated/electronics/assembly-bottom.svg",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_pcb"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/assembly-bottom.svg",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_pcb"
     ],
     "returncode": 0,
-    "stdout": "Plotted to '/workspace/quadcuber/generated/electronics/assembly-bottom.svg'.\nDone.\n",
+    "stdout": "Plotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/assembly-bottom.svg'.\nDone.\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "pcb",
       "export",
       "svg",
@@ -178,17 +167,16 @@
       "--layers",
       "In1.Cu,Edge.Cuts",
       "-o",
-      "/workspace/quadcuber/generated/electronics/ground-plane.svg",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_pcb"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/ground-plane.svg",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_pcb"
     ],
     "returncode": 0,
-    "stdout": "Plotted to '/workspace/quadcuber/generated/electronics/ground-plane.svg'.\nDone.\n",
+    "stdout": "Plotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/ground-plane.svg'.\nDone.\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "pcb",
       "export",
       "svg",
@@ -198,65 +186,64 @@
       "--layers",
       "In2.Cu,Edge.Cuts",
       "-o",
-      "/workspace/quadcuber/generated/electronics/vm-plane.svg",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_pcb"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/vm-plane.svg",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_pcb"
     ],
     "returncode": 0,
-    "stdout": "Plotted to '/workspace/quadcuber/generated/electronics/vm-plane.svg'.\nDone.\n",
+    "stdout": "Plotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/vm-plane.svg'.\nDone.\n",
     "stderr": ""
   },
   {
     "command": [
       "inkscape",
-      "/workspace/quadcuber/generated/electronics/pcb-top.svg",
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/pcb-top.svg",
       "--export-type=png",
-      "--export-filename=/workspace/quadcuber/generated/electronics/pcb-top.png",
+      "--export-filename=/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/pcb-top.png",
       "--export-width=1440"
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:34459): WARNING **: 12:13:06.660: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:34459): WARNING **: 12:13:06.915: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:3453): WARNING **: 11:09:10.854: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:3453): WARNING **: 11:09:11.074: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [
       "inkscape",
-      "/workspace/quadcuber/generated/electronics/pcb-bottom.svg",
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/pcb-bottom.svg",
       "--export-type=png",
-      "--export-filename=/workspace/quadcuber/generated/electronics/pcb-bottom.png",
+      "--export-filename=/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/pcb-bottom.png",
       "--export-width=1440"
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:34466): WARNING **: 12:13:07.235: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:34466): WARNING **: 12:13:07.370: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:3460): WARNING **: 11:09:11.336: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:3460): WARNING **: 11:09:11.446: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [
       "inkscape",
-      "/workspace/quadcuber/generated/electronics/assembly.svg",
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/assembly.svg",
       "--export-type=png",
-      "--export-filename=/workspace/quadcuber/generated/electronics/assembly.png",
+      "--export-filename=/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/assembly.png",
       "--export-width=1440"
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:34473): WARNING **: 12:13:07.581: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:34473): WARNING **: 12:13:08.042: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:3467): WARNING **: 11:09:11.621: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:3467): WARNING **: 11:09:11.913: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [
       "inkscape",
-      "/workspace/quadcuber/generated/electronics/assembly-bottom.svg",
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/assembly-bottom.svg",
       "--export-type=png",
-      "--export-filename=/workspace/quadcuber/generated/electronics/assembly-bottom.png",
+      "--export-filename=/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/assembly-bottom.png",
       "--export-width=1440"
     ],
     "returncode": 0,
     "stdout": "",
-    "stderr": "\n** (inkscape:34480): WARNING **: 12:13:08.434: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:34480): WARNING **: 12:13:08.561: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+    "stderr": "\n** (inkscape:3475): WARNING **: 11:09:12.186: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:3475): WARNING **: 11:09:12.272: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "pcb",
       "export",
       "gerbers",
@@ -264,17 +251,16 @@
       "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Silkscreen,B.Silkscreen,F.Paste,B.Paste,Edge.Cuts",
       "--subtract-soldermask",
       "-o",
-      "/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_pcb"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_pcb"
     ],
     "returncode": 0,
-    "stdout": "Plotted to '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Cu.gtl'.\nPlotted to '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-In1_Cu.g1'.\nPlotted to '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-In2_Cu.g2'.\nPlotted to '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Cu.gbl'.\nPlotted to '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Paste.gtp'.\nPlotted to '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Paste.gbp'.\nPlotted to '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Silkscreen.gto'.\nPlotted to '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Silkscreen.gbo'.\nPlotted to '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Mask.gts'.\nPlotted to '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Mask.gbs'.\nPlotted to '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-Edge_Cuts.gm1'.\n",
+    "stdout": "Plotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Cu.gtl'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-In1_Cu.g1'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-In2_Cu.g2'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Cu.gbl'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Paste.gtp'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Paste.gbp'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Silkscreen.gto'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Silkscreen.gbo'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Mask.gts'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Mask.gbs'.\nPlotted to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-Edge_Cuts.gm1'.\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "pcb",
       "export",
       "drill",
@@ -283,17 +269,16 @@
       "--map-format",
       "svg",
       "-o",
-      "/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_pcb"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_pcb"
     ],
     "returncode": 0,
-    "stdout": "Created file '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-PTH.drl'\nCreated file '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-NPTH.drl'\nCreated file '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-PTH-drl_map.svg'.\nCreated file '/workspace/quadcuber/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-NPTH-drl_map.svg'.\nDone.\n",
+    "stdout": "Created file '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-PTH.drl'\nCreated file '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-NPTH.drl'\nCreated file '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-PTH-drl_map.svg'.\nCreated file '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-NPTH-drl_map.svg'.\nDone.\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "pcb",
       "export",
       "pos",
@@ -305,18 +290,17 @@
       "both",
       "--exclude-dnp",
       "-o",
-      "/workspace/quadcuber/generated/electronics/positions.csv",
-      "/workspace/quadcuber/electronics/quadcuber.kicad_pcb"
+      "/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/positions.csv",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/quadcuber.kicad_pcb"
     ],
     "returncode": 0,
-    "stdout": "Wrote position data to '/workspace/quadcuber/generated/electronics/positions.csv'.\n",
+    "stdout": "Wrote position data to '/workspace/quadcuber-pcb-raspc722x-review/generated/electronics/positions.csv'.\n",
     "stderr": ""
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "python3.11",
-      "/workspace/quadcuber/electronics/check.py"
+      "/workspace/tools/bin/kicad-python-10",
+      "/workspace/quadcuber-pcb-raspc722x-review/electronics/check.py"
     ],
     "returncode": 0,
     "stdout": "Contract checks: 0 errors; 539 connected symbol pins compared with PCB\n",
@@ -324,8 +308,7 @@
   },
   {
     "command": [
-      "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
-      "kicad-cli",
+      "/workspace/tools/bin/kicad-cli-10",
       "version"
     ],
     "returncode": 0,

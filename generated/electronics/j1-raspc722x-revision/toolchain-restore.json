@@ -1,0 +1,12 @@
+{
+  "source_page": "https://www.kicad.org/download/linux/",
+  "download_url": "https://kicad-downloads.s3.cern.ch/appimage/stable/kicad-10.0.7-x86_64-lite.AppImage.tar",
+  "bytes": 307956224,
+  "sha256": "3c6067b03e2e6eb7b3e17f63f6d57c2937a19c39d585edd0c0a8d0bebaec8969",
+  "MD5_matches_server_metadata": "a410f8e9924b38d1ba8380616ecd8530",
+  "verification_scope": "HTTPS official linked mirror, observed archive bytes, server MD5 metadata, independent prior download SHA match; not a detached-signature claim",
+  "cli_version": "10.0.7",
+  "pcbnew_version": "10.0.7",
+  "install": "/workspace/tools/kicad-10.0.7/squashfs-root/AppRun",
+  "full_standard_3d_library": false
+}

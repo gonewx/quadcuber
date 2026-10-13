@@ -33,6 +33,7 @@ for ref,pins in {'F1':{1:'VIN',2:'VIN_FUSED'},'R500':{1:'VM',2:'GND'},'R501':{1:
     for pin,net in pins.items():check(ref,pin,net)
 verified_mpn={'F1':'0407008.WR','R500':'CRCW2512300RFKEG','R501':'CRCW2512300RFKEG'}
 verified_mpn['U7']='W25Q16RVCNJQ'
+verified_mpn['J1']='RASPC722X'
 for refs,mpn in [(['F10','F11','F12','F13'],'MF-MSMF110/16X-2'),(['C20','C30','C101','C121','C141','C161'],'GRM32DR71E106KA12L'),(['C420','C421'],'GRM155R61C105KA12D'),(['C422'],'C0805C475K4PACTU'),(['C25','C35'],'C0603C750J5GACTU')]:
     verified_mpn.update(dict.fromkeys(refs,mpn))
 for ref,mpn in verified_mpn.items():
@@ -45,6 +46,24 @@ for pad in fuse.Pads():
     want=-1.25 if pad.GetNumber()=='1' else 1.25
     if abs(p.ToMM(delta.x)-want)>.001 or abs(p.ToMM(delta.y))>.001 or abs(p.ToMM(pad.GetSize().x)-1)>.001 or abs(p.ToMM(pad.GetSize().y)-1.8)>.001:
         errors.append('F1: 407 land geometry mismatch')
+# Parent visually checked Switchcraft component-side drawing; inches control.
+# Project pad numbers: center=1, sleeve=2, sleeve shunt=3 (unused).
+check('J1',1,'VIN');check('J1',2,'GND')
+jack=next(f for f in b.GetFootprints() if f.GetReference()=='J1')
+if str(jack.GetFPID().GetLibItemName())!='Jack_DC_Switchcraft_RASPC722X':errors.append('J1: wrong DC jack footprint')
+if jack.GetOrientationDegrees()!=0 or jack.GetPosition()!=p.VECTOR2I(95500000,50000000):errors.append('J1: mating face no longer on approved top board edge')
+slot_inches={'1':(0,.541,.140,.040),'2':(0,.295,.120,.030),'3':(.189,.423,.030,.120)}
+if len(jack.Pads())!=3:errors.append('J1: expected three PTH slots')
+for pad in jack.Pads():
+    if pad.GetNumber() not in slot_inches:errors.append('J1: unexpected pad');continue
+    x,y,dx,dy=[round(a*25.4,6) for a in slot_inches[pad.GetNumber()]]
+    pos=pad.GetPosition()-jack.GetPosition()
+    if any(abs(a-b)>.00001 for a,b in zip([p.ToMM(pos.x),p.ToMM(pos.y),p.ToMM(pad.GetDrillSize().x),p.ToMM(pad.GetDrillSize().y)],[x,y,dx,dy])):errors.append('J1: reference drawing slot geometry mismatch')
+    if pad.GetAttribute()!=p.PAD_ATTRIB_PTH or pad.GetDrillShape()!=p.PAD_DRILL_SHAPE_OBLONG:errors.append('J1: expected plated oblong slot')
+    if min(p.ToMM(pad.GetSize().x)-dx,p.ToMM(pad.GetSize().y)-dy)<.50799:errors.append('J1: slot annular ring below 0.254 mm')
+    if pad.GetNumber()=='3' and pad.GetNetname()!='unconnected-(J1-SLEEVE_SHUNT_NC-Pad3)':errors.append('J1: sleeve shunt must remain NC')
+for t in b.GetTracks():
+    if t.GetNetname()=='VIN' and (isinstance(t,p.PCB_VIA) or t.GetLayer()!=p.F_Cu or t.GetWidth()<1800000):errors.append('J1: VIN route must retain >=1.8 mm on top copper without vias')
 # Independent RP2040 datasheet mapping: package pad number != GPIO number.
 gpio_pads={**{i:i+2 for i in range(8)},**{i:i+3 for i in range(8,16)},**{i:i+11 for i in range(16,22)},24:36,25:37}
 for gpio,pin in gpio_pads.items():check('U1',pin,f'GP{gpio}')

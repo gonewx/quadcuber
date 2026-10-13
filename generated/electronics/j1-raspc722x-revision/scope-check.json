@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "kicad": "10.0.7",
+  "baseline_commit": "cf614f3de777b39048b341b3983abcfe7e7962f3",
+  "baseline_sha256": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e",
+  "candidate_sha256": "1280859648d76987e4c71d3a8eb24b89558e4267120ae9d4e19b1ca452087df8",
+  "changed_footprints": [
+    "J1"
+  ],
+  "unchanged_footprints": 199,
+  "unchanged_tracks_and_vias": 2579,
+  "removed_VIN_segments": 3,
+  "added_VIN_segments": 2,
+  "only_VIN_zone_definition_changed": true,
+  "board_outline_and_project_rules_unchanged": true,
+  "all_existing_pin_networks_unchanged": true,
+  "new_pin": "J1.3 NC",
+  "zone_fill_note": "Zones refilled natively. This scope comparison excludes fill caches.",
+  "original_Switchcraft_PDF_viewed_in_this_executor": false
+}

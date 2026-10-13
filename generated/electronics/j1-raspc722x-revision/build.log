@@ -1,0 +1,47 @@
+{
+  "revision": "A1",
+  "manufacturing_release": false,
+  "hardware_tested": false,
+  "erc_errors": 0,
+  "erc_warnings": 0,
+  "drc_violations": 0,
+  "footprint_errors": 0,
+  "unconnected_pads": 0,
+  "release_blockers": [
+    "TPS54302 vendor-model ngspice startup aborted numerically; load-step/tolerance dynamic validation remains unresolved",
+    "EV3 drawing explicitly labels 1 and 6; full-EV3 prototype needs one same-lot six-way continuity check; no additional vendor documents requested",
+    "New mounting bracket/feet and cable-motion clearance not finalized",
+    "Prototype concurrent-load, regenerative transient, thermal and power-combination tests outstanding",
+    "First-board RP2040 UF2 boot and USB host-off data-pin backfeed tests outstanding; USB impedance stackup requires fabricator approval",
+    "RASPC722X J1 candidate: original parent-verified drawing pending local archive; plated-slot fabrication acceptance, physical plug fit and <=5A loaded thermal validation outstanding"
+  ],
+  "source_sha256": {
+    "arm_B.kicad_sch": "9e085a81b5baa399afc8f1ded511d053f491f9df72feb3b5029c13a32e46e1a0",
+    "arm_F.kicad_sch": "f88d87e4fc1114646cee4dbca68fdd20cad0f88d192a0407585b971d8b6b442d",
+    "arm_L.kicad_sch": "4a3459c85ece39d284aa1e7891f6acf7c8e85fb7b5d6f4b55d8f7fc93ac0cd30",
+    "arm_R.kicad_sch": "352edb9d795ae64d9f7a269aa0c3d4fb400dfabbc9e07b04d2144b798b43990d",
+    "buck1.kicad_sch": "ef4867ffebc2387f122ca9bc31d18480eb38872d4b717bb1db2a7e8bf26321c6",
+    "buck2.kicad_sch": "2415941eb250b2a3951def3dafe06c60e385350ad0eb5e260cc139cb62a51b8e",
+    "controller.kicad_sch": "c05fbae3f5d75cd91fc7b7985f059139b5746fb57bb326744ab103fef46e218f",
+    "controller_power.kicad_sch": "16c1684cd088aa5e092b401c6851c873c0a354601865b9dd908acfd451aa9266",
+    "flash_clock.kicad_sch": "0f0cdaa82e78ae9f24b46be02ead3a127b85f0638b94a8d28f5b36e1619cc54b",
+    "power.kicad_sch": "c2748f0f71ae16ca57fa7d5a4ceb6354f15516243c4af6ecfba0171b4cef6686",
+    "quadcuber.kicad_dru": "13c20282ff1d0ecae15ad773debb06a556564dcbee91617d1f616ba47f197fcb",
+    "quadcuber.kicad_pcb": "1280859648d76987e4c71d3a8eb24b89558e4267120ae9d4e19b1ca452087df8",
+    "quadcuber.kicad_pro": "ac152eda29668a9e3d24a2b0b9e71fe127afb965978503afcaabbe787b566dbd",
+    "quadcuber.kicad_sch": "5aace6a2ca53fb36f6b5fc7948c173f784a674ef56fdc5b231ec28dcf25afdba",
+    "usb.kicad_sch": "ec9b6ff8ea6e54a50779f389608066f1ee478bd4437e5b8b8d0dae8a1cc4f1fe"
+  },
+  "tool_version": "10.0.7",
+  "prototype_preconditions": [
+    "Select full-EV3 or explicitly marked NO-EV3 assembly candidate; full-EV3 requires six-way continuity before board fabrication",
+    "JLC CAM/assembly acceptance: narrow QFN lands, thermal-hole process, important silkscreen readability, removable tooling rails/fiducials and chosen stackup",
+    "Known current-limited 9V bench source and staged no-external-load startup plan"
+  ],
+  "qualification_pending": [
+    "Actual MLCC capacitance/ESR and 5V transients/PVT",
+    "Concurrent input-current budget, regenerative energy and thermal testing",
+    "RP2040 first boot and supported USB power combinations",
+    "Robot mounting/cable clearance and endurance"
+  ]
+}

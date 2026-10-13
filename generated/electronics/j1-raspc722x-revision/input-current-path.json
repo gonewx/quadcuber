@@ -1,0 +1,14 @@
+{
+  "method": "20C bulk copper resistivity, isolated track cross-section; excludes parallel zone, pads, contact, barrel and solder resistance; not ampacity/temperature proof",
+  "trace_length_mm": 12.213952184635792,
+  "width_mm": 1.8,
+  "project_F_Cu_thickness_mm": 0.07,
+  "R_ohm_20C": 0.0016711788544692147,
+  "drop_at_5A_V": 0.008355894272346074,
+  "loss_at_5A_W": 0.041779471361730366,
+  "limitations": [
+    "Contact carrying rating is parent-verified manufacturer5A; no loaded thermal test",
+    "8A time-lag fuse is unchanged and does not enforce5A limit",
+    "Current-limited9V source and <=5A systembudget remain required"
+  ]
+}

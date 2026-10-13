@@ -1224,27 +1224,28 @@
   },
   {
     "ref": "J1",
-    "value": "9V regulated input",
-    "fp": "Quadcuber:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+    "value": "9V DC center-positive",
+    "fp": "Quadcuber:Jack_DC_Switchcraft_RASPC722X",
     "pins": {
       "1": "VIN",
-      "2": "GND"
+      "2": "GND",
+      "3": null
     },
     "xy": [
-      45,
-      8
+      45.5,
+      0
     ],
-    "mpn": "1715721",
-    "mfr": "Phoenix Contact",
+    "mpn": "RASPC722X",
+    "mfr": "Switchcraft",
     "section": "power",
     "names": {
-      "1": "+9V",
-      "2": "GND"
+      "1": "CENTER_9V",
+      "2": "SLEEVE_GND",
+      "3": "SLEEVE_SHUNT_NC"
     },
     "types": {},
-    "note": "",
-    "rot": 0,
-    "source_fp": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+    "note": "5.5/2.1 mm mating plug 762/762Z, 9.5 mm barrel; 5A carrying rating, regulated 9V continuous input budget <=5A. Project pins 1=center, 2=sleeve, 3=sleeve shunt NC. Drawing visually verified by parent thread; original PDF pending local archive. See sources/raspc722x-review.md.",
+    "rot": 0
   },
   {
     "ref": "F1",

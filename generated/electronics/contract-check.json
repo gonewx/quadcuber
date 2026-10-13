@@ -2,7 +2,7 @@
   "contract_errors": [],
   "connected_pad_count": 539,
   "footprints": 200,
-  "tracks_and_vias": 2582,
+  "tracks_and_vias": 2581,
   "copper_layers": 4,
   "outline_mm": [
     144,
@@ -96,7 +96,7 @@
     "F_ILIM": 0.25,
     "L_ILIM": 0.25,
     "L_SERVO_PWM": 0.25,
-    "VIN": 1.0,
+    "VIN": 1.8,
     "GP8": 0.15,
     "R_SERVO_BUF": 0.25,
     "SWDIO": 0.15,
