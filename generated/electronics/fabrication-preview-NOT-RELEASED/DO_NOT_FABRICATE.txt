@@ -29,7 +29,7 @@ EV3 geometry follows user drawing; six-way physical pin mapping remains unchecke
     "flash_clock.kicad_sch": "0f0cdaa82e78ae9f24b46be02ead3a127b85f0638b94a8d28f5b36e1619cc54b",
     "power.kicad_sch": "c2748f0f71ae16ca57fa7d5a4ceb6354f15516243c4af6ecfba0171b4cef6686",
     "quadcuber.kicad_dru": "13c20282ff1d0ecae15ad773debb06a556564dcbee91617d1f616ba47f197fcb",
-    "quadcuber.kicad_pcb": "1280859648d76987e4c71d3a8eb24b89558e4267120ae9d4e19b1ca452087df8",
+    "quadcuber.kicad_pcb": "14e9ef467cd5d361c3fb4175c51b00bcbc23b3e32632b039bfbe1385d9fc29df",
     "quadcuber.kicad_pro": "ac152eda29668a9e3d24a2b0b9e71fe127afb965978503afcaabbe787b566dbd",
     "quadcuber.kicad_sch": "5aace6a2ca53fb36f6b5fc7948c173f784a674ef56fdc5b231ec28dcf25afdba",
     "usb.kicad_sch": "ec9b6ff8ea6e54a50779f389608066f1ee478bd4437e5b8b8d0dae8a1cc4f1fe"

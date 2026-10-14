@@ -10,7 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SRC=ROOT/'electronics/quadcuber.kicad_pcb'
 FAB=ROOT/'generated/electronics/fabrication-preview-NOT-RELEASED'
 OUT=ROOT/'generated/electronics/release-preflight'; OUT.mkdir(parents=True,exist_ok=True)
-APP=Path('/workspace/tools/kicad-10.0.7/squashfs-root/AppRun')
+APP=Path(os.environ.get('KICAD_APP_RUN','/workspace/tools/kicad-10.0.7/squashfs-root/AppRun'))
 sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest()
 before=sha(SRC); b=p.LoadBoard(str(SRC)); mm=lambda n:round(p.ToMM(n),6)
 v=lambda q:[mm(q.x),mm(q.y)]

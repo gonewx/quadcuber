@@ -61896,7 +61896,7 @@
 			)
 		)
 	)
-	(gr_text "EV3 PINMAP/CURRENT UNVERIFIED - DO NOT FABRICATE"
+	(gr_text "VERIFY EV3 PINMAP BEFORE MOTOR USE"
 		(at 145 108 0)
 		(layer "F.SilkS")
 		(uuid "84381ea4-fd1e-4e5f-8b9b-1ae40a08e1cc")
@@ -61907,7 +61907,7 @@
 			)
 		)
 	)
-	(gr_text "QUADCUBER A1  /  ENGINEERING HOLD"
+	(gr_text "QUADCUBER A1  /  PROTOTYPE"
 		(at 155 70 0)
 		(layer "F.SilkS")
 		(uuid "d7b06a60-642d-4df6-ade1-04bea43dd172")

@@ -8,7 +8,7 @@ import sys,os,json,hashlib,tempfile,subprocess,math
 from pathlib import Path
 from collections import Counter,defaultdict
 ROOT=Path(__file__).resolve().parents[1];PCB=ROOT/'electronics/quadcuber.kicad_pcb';OUT=ROOT/'generated/electronics/release-preflight'
-APP='/workspace/tools/kicad-10.0.7/squashfs-root/AppRun'
+APP=os.environ.get('KICAD_APP_RUN','/workspace/tools/kicad-10.0.7/squashfs-root/AppRun')
 sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest()
 if '--extract' in sys.argv:
  import pcbnew as p

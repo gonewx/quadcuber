@@ -1,6 +1,6 @@
 import csv,hashlib,json,runpy,re,struct,xml.etree.ElementTree as E
 from pathlib import Path
-R=Path('/workspace/quadcuber'); O=R/'generated/electronics/release-preflight/controller'
+R=Path(__file__).resolve().parents[4]; O=R/'generated/electronics/release-preflight/controller'
 C={p['ref']:p for p in runpy.run_path(str(R/'electronics/circuit.py'))['C']}
 J={p['ref']:p for p in json.loads((R/'generated/electronics/circuit.json').read_text())}
 B={p['Reference']:p for p in csv.DictReader((R/'generated/electronics/bom.csv').open())}
