@@ -1,0 +1,401 @@
+{
+  "tool": "10.0.7",
+  "source_sha256": "be9144f06f8801287043d763554065c89d31856c81c60f32e374e4530be8e95b",
+  "checks": [
+    {
+      "check": "BOM unique references",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "CPL unique references",
+      "pass": true,
+      "detail": 171
+    },
+    {
+      "check": "BOM/native reference set",
+      "pass": true,
+      "detail": {
+        "bom_only": [],
+        "board_only": []
+      }
+    },
+    {
+      "check": "Grouped BOM matches individual BOM",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "CPL/native XY rotation side package",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "BOM/native value footprint",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Native DNP has BOM quantity zero",
+      "pass": true,
+      "detail": [
+        "C26",
+        "C36"
+      ]
+    },
+    {
+      "check": "Default CPL excludes every zero-quantity/DNP reference",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Positive BOM references present in CPL",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "PTH Excellon geometry/diameter/slot/count equals native",
+      "pass": true,
+      "detail": {
+        "native_count": 395,
+        "export_count": 395,
+        "coordinate_tolerance_mm": 0.000501,
+        "max_coordinate_quantization_mm": 0.0005,
+        "native_only": [],
+        "export_only": [],
+        "diameter_histogram": {
+          "0.3": 134,
+          "0.33": 24,
+          "0.35": 42,
+          "0.4": 127,
+          "0.6": 4,
+          "0.762": 2,
+          "0.79": 24,
+          "0.8": 4,
+          "1.0": 33,
+          "1.016": 1
+        }
+      }
+    },
+    {
+      "check": "NPTH Excellon geometry/diameter/slot/count equals native",
+      "pass": true,
+      "detail": {
+        "native_count": 14,
+        "export_count": 14,
+        "coordinate_tolerance_mm": 0.000501,
+        "max_coordinate_quantization_mm": 0.0,
+        "native_only": [],
+        "export_only": [],
+        "diameter_histogram": {
+          "0.65": 2,
+          "2.3": 8,
+          "3.2": 4
+        }
+      }
+    },
+    {
+      "check": "Fresh export gerbers",
+      "pass": true,
+      "detail": "Plotted to '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-F_Cu.gtl'.\nPlotted to '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-In1_Cu.g1'.\nPlotted to '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-In2_Cu.g2'.\nPlotted to '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-B_Cu.gbl'.\nPlotted to '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-F_Paste.gtp'.\nPlotted to '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-B_Paste.gbp'.\nPlotted to '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-F_Silkscreen.gto'.\nPlotted to '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-B_Silkscreen.gbo'.\nPlotted to '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-F_Mask.gts'.\nPlotted to '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-B_Mask.gbs'.\nPlotted to '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-Edge_Cuts.gm1'.\n"
+    },
+    {
+      "check": "Fresh export drill",
+      "pass": true,
+      "detail": "Created file '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-PTH.drl'\nCreated file '/tmp/quadcuber-fabrication-je7hja8a/quadcuber-NPTH.drl'\nDone.\n"
+    },
+    {
+      "check": "Gerber job native stackup/specs/rules fresh export",
+      "pass": true,
+      "detail": "CreationDate only excluded from job comparison"
+    },
+    {
+      "check": "Export freshness quadcuber-B_Cu.gbl",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-B_Mask.gbs",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-B_Paste.gbp",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-B_Silkscreen.gbo",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-Edge_Cuts.gm1",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-F_Cu.gtl",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-F_Mask.gts",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-F_Paste.gtp",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-F_Silkscreen.gto",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-In1_Cu.g1",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-In2_Cu.g2",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-NPTH.drl",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Export freshness quadcuber-PTH.drl",
+      "pass": true,
+      "detail": "Only creation timestamps ignored"
+    },
+    {
+      "check": "Copper layers/job/native",
+      "pass": true,
+      "detail": [
+        {
+          "Path": "quadcuber-F_Cu.gtl",
+          "FileFunction": "Copper,L1,Top",
+          "FilePolarity": "Positive"
+        },
+        {
+          "Path": "quadcuber-In1_Cu.g1",
+          "FileFunction": "Copper,L2,Inr",
+          "FilePolarity": "Positive"
+        },
+        {
+          "Path": "quadcuber-In2_Cu.g2",
+          "FileFunction": "Copper,L3,Inr",
+          "FilePolarity": "Positive"
+        },
+        {
+          "Path": "quadcuber-B_Cu.gbl",
+          "FileFunction": "Copper,L4,Bot",
+          "FilePolarity": "Positive"
+        }
+      ]
+    },
+    {
+      "check": "Stack total nominal thickness",
+      "pass": true,
+      "detail": 1.6
+    },
+    {
+      "check": "Native source unchanged",
+      "pass": true,
+      "detail": "be9144f06f8801287043d763554065c89d31856c81c60f32e374e4530be8e95b"
+    }
+  ],
+  "all_automatic_checks_pass": true,
+  "native_footprints": 200,
+  "bom_rows": 200,
+  "cpl_rows": 171,
+  "populated_quantity": 171,
+  "dnp": [
+    "C26",
+    "C36"
+  ],
+  "zero_quantity_in_original_cpl": [],
+  "native_edge_centerline_bounds_mm": [
+    50.0,
+    50.0,
+    194.0,
+    162.0
+  ],
+  "native_edge_centerline_size_mm": [
+    144.0,
+    112.0
+  ],
+  "gerber_job_stroke_bounding_size_mm": {
+    "X": 144.05,
+    "Y": 112.05
+  },
+  "stackup": [
+    {
+      "Type": "Legend",
+      "Name": "Top Silk Screen"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Top Solder Paste"
+    },
+    {
+      "Type": "SolderMask",
+      "Thickness": 0.01,
+      "Name": "Top Solder Mask"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.07,
+      "Name": "F.Cu"
+    },
+    {
+      "Type": "Dielectric",
+      "Thickness": 0.18,
+      "Material": "FR4",
+      "Name": "F.Cu/In1.Cu",
+      "Notes": "Type: dielectric layer 1 (from F.Cu to In1.Cu)"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "In1.Cu"
+    },
+    {
+      "Type": "Dielectric",
+      "Thickness": 1.01,
+      "Material": "FR4",
+      "Name": "In1.Cu/In2.Cu",
+      "Notes": "Type: dielectric layer 2 (from In1.Cu to In2.Cu)"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "In2.Cu"
+    },
+    {
+      "Type": "Dielectric",
+      "Thickness": 0.18,
+      "Material": "FR4",
+      "Name": "In2.Cu/B.Cu",
+      "Notes": "Type: dielectric layer 3 (from In2.Cu to B.Cu)"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.07,
+      "Name": "B.Cu"
+    },
+    {
+      "Type": "SolderMask",
+      "Thickness": 0.01,
+      "Name": "Bottom Solder Mask"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Bottom Solder Paste"
+    },
+    {
+      "Type": "Legend",
+      "Name": "Bottom Silk Screen"
+    }
+  ],
+  "design_rules": {
+    "max_error": 0.005,
+    "min_clearance": 0.15,
+    "min_connection": 0.0,
+    "min_copper_edge_clearance": 0.3,
+    "min_groove_width": 0.0,
+    "min_hole_clearance": 0.25,
+    "min_hole_to_hole": 0.25,
+    "min_microvia_diameter": 0.2,
+    "min_microvia_drill": 0.1,
+    "min_resolved_spokes": 2,
+    "min_silk_clearance": 0.0,
+    "min_text_height": 0.8,
+    "min_text_thickness": 0.08,
+    "min_through_hole_diameter": 0.3,
+    "min_track_width": 0.15,
+    "min_via_annular_width": 0.1,
+    "min_via_diameter": 0.6,
+    "solder_mask_to_copper_clearance": 0.0,
+    "use_height_for_length_calcs": true
+  },
+  "mask_setup": {
+    "expansion_mm": 0.0,
+    "min_web_mm": 0.0,
+    "allow_bridges_in_footprints": false
+  },
+  "minimum_track_width_mm": 0.15,
+  "track_count": 2282,
+  "via_count": 299,
+  "dnp_cpl_risk": "Default export excludes DNP; positive BOM/CPL equality is checked. These outputs retain through-hole populated parts, not an SMT-only job; machine rotation and process still require assembly review.",
+  "annular_min_by_class": {
+    "via": {
+      "class": "via",
+      "reference": "8961f878-ee42-485f-be68-d4dd536c16ca",
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "annular_mm": 0.15
+    },
+    "component_pad": {
+      "class": "component_pad",
+      "reference": "U13.9",
+      "diameter_mm": [
+        0.63,
+        0.63
+      ],
+      "drill_mm": [
+        0.33,
+        0.33
+      ],
+      "annular_mm": 0.15,
+      "offset_mm": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "annular_distribution": {
+    "0.15": 154,
+    "0.2": 131,
+    "0.175": 42,
+    "0.305": 24,
+    "0.35": 21,
+    "0.5": 12,
+    "0.254": 7,
+    "0.4": 4
+  },
+  "plated_pad_offset_nonzero": [],
+  "via_types": {
+    "4": 299
+  },
+  "original_files_sha256": {
+    "electronics/quadcuber.kicad_pcb": "be9144f06f8801287043d763554065c89d31856c81c60f32e374e4530be8e95b",
+    "electronics/quadcuber.kicad_pro": "ac152eda29668a9e3d24a2b0b9e71fe127afb965978503afcaabbe787b566dbd",
+    "generated/electronics/bom.csv": "02021a65feb08fd04bfacd0f0bd0a9ba86d2cf1b3b48cdea8ca86e3e796021f6",
+    "generated/electronics/positions.csv": "bbcd72ec9dbca9738f00957f580ed60aa2faf24f1c2cdc0644a17bdd57a8b22b",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/DO_NOT_FABRICATE.txt": "425538bf67d3e7da1b421e747a92010ef263e94afa6a0dc934caff0ef3e1bb59",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Cu.gbl": "702cc07622a86ef6c74bf99b5cf186d7cf33f3df0b75c4535e67504224de9acc",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Mask.gbs": "511aac54d89604bce1387cb3b29130d926c0c306042ad7cdf7e2bf7f4a291a52",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Paste.gbp": "e6a9e89ada1fd549363caa758298155d14eabcab2f5347df4a9fc5c81340db3b",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-B_Silkscreen.gbo": "d71616c12fcc944322fa16763d4b11bb680b09af8398711467cfb14677f66887",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-Edge_Cuts.gm1": "2662ed416aba86a6c8c04a29b61603d27a7c8023208efadaa9c13fb578c814ca",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Cu.gtl": "c667dfe8b2e832fd2d513147192f60b4a259ef411ed15c9c74e3b543384996b8",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Mask.gts": "bff0a5d2a1c8996b8caec8a25278e0e3f912efbaeed85506246ee4e8a40cbebd",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Paste.gtp": "68134c64d93781d252df962b59a2af4b020306c158b82219aca7238436393e1d",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-F_Silkscreen.gto": "6becb4a61328695633bb6f2f7b83b5f0d07bf9d2c6c5eb98f107300b09e0945d",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-In1_Cu.g1": "75a5114d39a14460f27468e24015d9ba744d8732974223227476ba51d45afb59",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-In2_Cu.g2": "8fd265a5beb5aeb57faf582ba63a27931e72de43a7b7652999edecc985ec6eac",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-NPTH-drl_map.svg": "337bf95eb9b31a101c8ea603ed10cd4a071cf8c8707d8d85591fc4e678cae661",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-NPTH.drl": "3ad243e19b68efa33944372df0f4601d0b94bda29b2c5b450b941276ba386b95",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-PTH-drl_map.svg": "82173af5578037009416976e24210e69ce2989311b33d018144cb9e97462368d",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-PTH.drl": "419e3a0fefda8c0a873668ac8f51d3bf2f71247e05bc87a9c56d68914fdd94d4",
+    "generated/electronics/fabrication-preview-NOT-RELEASED/quadcuber-job.gbrjob": "ea8b57a3f678e7b09a6437c7695bd9f2fb20e444b6f08ad77536b596baac4cd2"
+  },
+  "polarity_limit": "Pad/net/position table is a static assembly aid, not independent MPN pin-1 or feeder rotation validation; connector user drawing still needs physical orientation and pin mapping verification."
+}

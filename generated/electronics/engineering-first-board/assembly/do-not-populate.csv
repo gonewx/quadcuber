@@ -1,0 +1,3 @@
+Reference,Value,Manufacturer,MPN,Footprint,Quantity,Notes
+C26,470u/10V,Panasonic,EEU-FR1A471,Quadcuber:CP_Radial_D8.0mm_P3.50mm,0,DNP by default. Populate only after loop/step-response verification with added 470uF.
+C36,470u/10V,Panasonic,EEU-FR1A471,Quadcuber:CP_Radial_D8.0mm_P3.50mm,0,DNP by default. Populate only after loop/step-response verification with added 470uF.

@@ -1,6 +1,6 @@
 {
   "variant": "ENG-FULL-EV3-v2-JLC",
-  "status": "CANDIDATE_NOT_RELEASED_NOT_ORDERED",
+  "status": "SUPERSEDED_DO_NOT_USE_FOR_ORDER",
   "pcb_sha256": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
   "populated_ref_count": 171,
   "do_not_populate": [
@@ -14,5 +14,7 @@
   "output_sha256": {
     "ENG-FULL-EV3-v2-JLC-bom.csv": "894bfe86f7357be6e193289ee27ecd4baa5e93f7ebcd7f82d76afdb3df63d214",
     "ENG-FULL-EV3-v2-JLC-positions.csv": "08ec6b43a34179f566a1c90ecbefed33751cc75b26cc31c8778e51b3a63620f7"
-  }
+  },
+  "historical_status": "CANDIDATE_NOT_RELEASED_NOT_ORDERED",
+  "superseded_by": "generated/electronics/engineering-first-board/manifest.json"
 }

@@ -20,6 +20,7 @@ jobs:
       - name: Run unit tests and check wiring documents
         run: |
           python -m unittest -v
+          python -m unittest discover -s electronics -p 'test_*.py' -v
           python wiring/build.py --check
       - name: Check assembly and reproducible models and pages
         run: |

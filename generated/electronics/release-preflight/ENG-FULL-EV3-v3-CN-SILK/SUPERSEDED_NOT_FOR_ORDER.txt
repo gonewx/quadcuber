@@ -1,0 +1,5 @@
+SUPERSEDED — DO NOT USE FOR ORDER / 已废止，不得送厂
+
+此历史变体含旧 Phoenix 1715721 J1，不能用于当前 RASPC722X DC5521 首板。
+唯一当前入口：generated/electronics/engineering-first-board/README.md
+不得混用此处Gerber/钻孔/BOM/CPL。保留仅供历史审查。

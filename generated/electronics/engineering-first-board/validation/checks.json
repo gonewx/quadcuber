@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "component_count": 54,
+  "pin_crosschecks": 180,
+  "uf2_blocks": 1318,
+  "crc": "0x9a195ca8",
+  "QE_branch_target": "0x64",
+  "sha256": {
+    "electronics/quadcuber.kicad_pcb": "be9144f06f8801287043d763554065c89d31856c81c60f32e374e4530be8e95b",
+    "electronics/circuit.py": "9a966008ce2c7ce09d68fb8031c252d260cc4aad983c5322d3e9d0bfb167b673",
+    "generated/electronics/bom.csv": "02021a65feb08fd04bfacd0f0bd0a9ba86d2cf1b3b48cdea8ca86e3e796021f6",
+    "generated/electronics/firmware/quadcuber-a1-micropython-v1.27.0.uf2": "ce965d9bd597be5377bd1bbb1f83bb69894be7ad3f3dac80cdbe60615d143eb9"
+  },
+  "limits": "No hardware executed; fixed upstream build tree absent; UF2 integrity and QE instructions independently checked without rebuilding."
+}

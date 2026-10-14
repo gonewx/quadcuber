@@ -1,3 +1,5 @@
+> **本页以下均为历史评审记录，不是当前送厂入口。** 所有 `ENG-FULL-*` / `ENG-POWER-CONTROLLER-*` 变体含旧Phoenix J1，现已废止，不得下单或混用。当前仅用[唯一工程首板包](../engineering-first-board/README.md)：设计 `db20b98`，RASPC722X DC5521，153件厂商双面装配+18件用户自焊。原风险丝印保持，CAM确认见新包。
+
 > 最新国内丝印修正：52处可见文字改为1mm，其他PCB字节不变。当前PCB `11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e`；当前完整EV3候选为 `ENG-FULL-EV3-v3-CN-SILK`，旧v2/NO-EV3候选绑定旧板，禁止混用。详见 [丝印报告](../silkscreen-revision/README.md)。新增修改仅本地提交，未上传审核。
 
 # A1 制造放行评估：受控原型条件

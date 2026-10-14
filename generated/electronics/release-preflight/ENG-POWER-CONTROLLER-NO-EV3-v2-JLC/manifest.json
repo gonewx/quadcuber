@@ -1,6 +1,6 @@
 {
   "variant": "ENG-POWER-CONTROLLER-NO-EV3-v2-JLC",
-  "status": "CANDIDATE_NOT_RELEASED_NOT_ORDERED",
+  "status": "SUPERSEDED_DO_NOT_USE_FOR_ORDER",
   "design_baseline_commit": "da5fc42b5e0c6352c827f9ae905eb891fe0dd12b",
   "pcb_sha256": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
   "populated_ref_count": 167,
@@ -30,5 +30,7 @@
   "output_sha256": {
     "ENG-POWER-CONTROLLER-NO-EV3-v2-JLC-bom.csv": "dbef2836d122c2eb5cd8d4fe00cc101f2295adbdc7424723dfc0a2f9188875f0",
     "ENG-POWER-CONTROLLER-NO-EV3-v2-JLC-positions.csv": "76889d9502ffffc7bf95dd03789df159078490c83f788a7df67c24df0d30e553"
-  }
+  },
+  "historical_status": "CANDIDATE_NOT_RELEASED_NOT_ORDERED",
+  "superseded_by": "generated/electronics/engineering-first-board/manifest.json"
 }

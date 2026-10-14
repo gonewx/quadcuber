@@ -1,3 +1,5 @@
+> **历史变体已废止，不得送厂。** 旧Phoenix J1与当前DC5521不一致；请用[唯一首板入口](../../engineering-first-board/README.md)。以下仅保留历史记录。
+
 # ENG-POWER-CONTROLLER-NO-EV3-v1
 
 **仅用于电源/控制器台架验证的候选装配变体，未制造放行、未下单。**

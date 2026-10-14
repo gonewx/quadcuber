@@ -2,11 +2,13 @@
 
 本目录是唯一电子源目录。打开 `quadcuber.kicad_pro`，包含原生可编辑原理图和四层 PCB、本地符号/封装库。本设计为**单块PCB，RP2040、QSPI Flash、晶振、USB-C、驱动和电源均直接焊接在板上**；A0的Pico H插装已移除。马达使用EV3裸插座。接线定义仍从 `../wiring/spec.py` 导入，固件未改动，也没有把 R/L 固件描述成已支持四臂控制。
 
-**不得把当前 Gerber 下单。** `EV3_UserDrawing_PINMAP_HOLD` 已采用用户上传尺寸图：六个Ø0.79信号孔、1.02横向投影节距、2.54排距、两个Ø2.3定位孔及12 mm孔距；旧占位孔位已移除。详见[图纸及独立尺寸审查](sources/ev3-user-drawing-review.md)。二次放大复核确认图上左下孔明确标1、右上孔明确标6；中间2～5连续编号和元件面视向由相关视图支持推导。用户确认没有更多插座资料，现图作为封装依据，不再索要完整MPN文件；完整EV3板制板前以一次六路断电通断确认针序，触点载流和机械安装通过受控首板测试建立项目边界，不能冒充厂家额定。不能把本图认定为Adafruit4434，也不能用普通RJ12或DEC反向偏扣插座替代。嘉立创制造预检与不装EV3的候选变体见`generated/electronics/release-preflight/`；当前仍不得下单。
+**当前唯一工程首板入口：[送厂包与分工](../generated/electronics/engineering-first-board/README.md)。** 设计基线 `db20b98`、J1为RASPC722X DC5521；嘉立创双面SMT共153件（J5含4个PTH屏蔽脚补焊待厂商确认），用户自焊18件通孔器件。本包供受控首板CAM审核，未宣称厂商已接受或量产/实板性能通过。板上 HOLD / DO NOT FABRICATE 保留，提交时须附用途解释及CAM确认单。旧Phoenix与所有 `ENG-FULL-*` / `ENG-POWER-CONTROLLER-*` 文件只供历史审查，不得下单混用。
+
+EV3仍以用户尺寸图及同批实物为依据，不索取不存在的完整MPN文件，不替换普通RJ12。首板承担孔位/主体适配返工风险；连接电机前必须做六路断电通断及机械试配，触点电流能力由受控实验建立。C26/C36不装。首次上电与逐级扩大负载条件见首板包，不要求首板尚未制出时已有实板动态测试结果。
 
 ## 已批准的BOOT与反馈修订
 
-当前修订删除R20/R30，使100nF C22/C32直接跨接各自BOOT–SW；反馈保持100k/13.3k，改为RT0603BRD07100KL/RT0603BRD0713K3L（0.1%）。这是实物源电路、原理图、PCB、BOM和仿真输入的同步修改，旧49.9Ω仿真记录仅作为历史证据。[实施和验证记录](../generated/electronics/boot-direct-revision/README.md)保存布局改进、实际测试结果及未覆盖风险。制造仍不放行；精度升级不等于已证明温漂及瞬态全程满足5.25V。
+当前修订删除R20/R30，使100nF C22/C32直接跨接各自BOOT–SW；反馈保持100k/13.3k，改为RT0603BRD07100KL/RT0603BRD0713K3L（0.1%）。这是实物源电路、原理图、PCB、BOM和仿真输入的同步修改，旧49.9Ω仿真记录仅作为历史证据。[实施和验证记录](../generated/electronics/boot-direct-revision/README.md)保存布局改进、实际测试结果及未覆盖风险。未作量产性能放行；精度升级不等于已证明温漂及瞬态全程满足5.25V。工程首板的CAM入口与试验边界以上述唯一包为准。
 
 ## KiCad版本与显示
 
@@ -21,7 +23,7 @@
 - [正面板图](../generated/electronics/pcb-top.png)、[反面铜图（顶视透视）](../generated/electronics/pcb-bottom.png)、[正面装配图](../generated/electronics/assembly.png)、[反面装配图（顶视透视）](../generated/electronics/assembly-bottom.png)
 - [汇总电子BOM](../generated/electronics/bom-grouped.csv)、[逐件BOM](../generated/electronics/bom.csv)、[贴装坐标](../generated/electronics/positions.csv)
 - [ERC](../generated/electronics/erc.rpt)、[DRC](../generated/electronics/drc.rpt)、[状态与源哈希](../generated/electronics/release-status.json)、[独立复核](../generated/electronics/independent-review.md)
-- [仅供检查的Gerber/钻孔](../generated/electronics/fabrication-preview-NOT-RELEASED/DO_NOT_FABRICATE.txt)，不具备下单放行状态。
+- [唯一工程首板Gerber/钻孔、SMT BOM/CPL、自焊清单与CAM单](../generated/electronics/engineering-first-board/README.md)。旧 `fabrication-preview-NOT-RELEASED` 为原始审核输出，不单独作为订单交付。
 
 正反面SVG/PNG沿同一KiCad顶视坐标系绘制，便于对照；实际从板底观察时需镜像，不可用透视图推断插座针序。
 
@@ -132,4 +134,4 @@ python -m unittest tests.test_wiring tests.test_arm_selection tests.test_firmwar
 
 详细依据见 `sources.md`。本地拷贝KiCad标准封装来自本环境KiCad9库，遵守[KiCad Libraries License](https://www.kicad.org/libraries/license/)的CC-BY-SA4.0及PCB设计例外；RP2040封装保留原厂焊盘并将EP热孔改为Ø0.30/焊盘Ø0.60 mm，以匹配板厂工艺；EV3自建封装明确标注未核部分。不把公开资料的缺失字段编造成制造商规格。
 
-工程评审附件由`python electronics/package_review.py`生成到被忽略的`output/electronics/`，含原生工程、BOM、说明、报告与明确标注不可制造的Gerber预览；同时输出两张独立PNG及SHA-256清单。包内manifest绑定当前完整Git提交。
+旧 `python electronics/package_review.py` 仅生成历史审查汇总到 `output/electronics/`，会包含历史变体，不能用作当前送厂资料。当前首板只能使用 [engineering-first-board 唯一入口](../generated/electronics/engineering-first-board/README.md)，由 `electronics/package_first_board.py` 生成并校验源哈希。
