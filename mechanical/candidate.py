@@ -1,14 +1,16 @@
 """Integrated reversible support plus 60483 head candidate. Frozen originals remain unchanged."""
 from pathlib import Path
-import importlib.util,functools,numpy as np,math
+import importlib.util,functools,numpy as np,math,sys
 HERE=Path(__file__).resolve().parent
+sys.path.insert(0,str(HERE))
+import tyre_rot90,gripper_wheel
 spec=importlib.util.spec_from_file_location('baseline60483',HERE/'inputs/baseline_model.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 files={};n=None
 for line in (HERE/'inputs/baseline-machine-899.mpd').read_text().splitlines():
  if line.startswith('0 FILE '):n=line[7:].replace('\\','/').lower();files[n]=[]
  elif n:files[n].append(line)
 for p in (HERE/'parts').glob('*.dat'):
- name=('s/'if p.name in ['60483s01.dat','6538s01.dat']else'')+p.name;files[name]=p.read_text().splitlines()
+ name=('s/'if p.name in ['60483s01.dat','6538s01.dat']else'')+p.name.replace('__','/');files[name]=p.read_text().splitlines()  # a__b.dat 表示子目录 a/b.dat
 def resolve(n):
  n=n.replace('\\','/').lower()
  for k in [n,'p/'+n,'parts/'+n,'s/'+n]:
@@ -48,17 +50,21 @@ def replace_module(pp):
  return out
 BASE_MODULE=m.module
 
-def module(open_s=0.,angle=0.,steps=False,on_base=True):
+def module(open_s=0.,angle=0.,steps=False,on_base=True,front="rot90"):
  pp=replace_module(BASE_MODULE(open_s,angle,steps,on_base))
  # Authorized wall-foot correction. LDraw +Y is physical down.
  for i in ([48,49] if on_base else []):
   p=pp[i];assert p.name=='2780.dat'and not p.head
   pp[i]=p.moved(np.eye(3),[0,10,0])
+ # 2026-10-14 轮胎转 90° 压头（第 2 版，32123＋59895 十字孔锁死）为当前设计；front='previous' 为双侧薄梁版，'wheel' 为已否决的外偏大轮方案，均仅供对比核算。
+ if front=='rot90':pp=tyre_rot90.apply(m,pp,open_s,angle)
+ elif front=='wheel':pp=gripper_wheel.apply(m,pp,open_s,angle)
+ else:assert front=='previous',front
  return pp
-def state_parts(state,candidate=True):
+def state_parts(state,candidate=True,front='rot90'):
  pp=[]
  for arm in m.ARMS:
-  s,a=state.get(arm,(0.,0.));mm=module(s,a)if candidate else BASE_MODULE(s,a,False,True)
+  s,a=state.get(arm,(0.,0.));mm=module(s,a,front=front)if candidate else BASE_MODULE(s,a,False,True)
   for p in mm:q=p.moved(m.ARM_ROT[arm]);q.arm=arm;pp.append(q)
  return pp
 
@@ -73,7 +79,7 @@ original_rows=json.loads((HERE/'inputs/assembly132.json').read_text())
 r1_rows=json.loads((HERE/'inputs/assembly-integrated-R1.json').read_text())
 removed_ids=[r['id'] for r in r1_rows if r['role']=='key']
 rows=[copy.deepcopy(r) for r in r1_rows if r['role']!='key']
-REVISION='INTEGRATED-GRAVITY-R5-BASE64-2026-10-13'
+REVISION='INTEGRATED-GRAVITY-R6-TYRE90-2026-10-14'
 TRAVEL_MM=40.8
 AZ=np.array([[0,0,-1],[0,1,0],[1,0,0]])
 BYZ=np.array([[1,0,0],[0,0,-1],[0,1,0]])

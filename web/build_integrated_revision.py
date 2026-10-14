@@ -41,12 +41,12 @@ from gravity_operation import update as update_gravity_operation
 g=update_gravity_operation(g)
 (I/'operation-guide.json').write_text(json.dumps(g,ensure_ascii=False,indent=2))
 native=json.loads((R/'native-presentation.json').read_text());library=native['library']
-body=(R/'operation-guide.html').read_text();body=body.replace('<h1>整机关系与放入／退出</h1>','<h1>整合版 · 整机与动作关系</h1>');body=body.replace('132件小样怎样接在原四臂之间，以及魔方放入、夹持交接、托座下移与退出的设计关系','120件闭环底盘、四个60483机械头、150件支承总成。整机与装配说明采用同一938件最终结构。')
+body=(R/'operation-guide.html').read_text();body=body.replace('<h1>整机关系与放入／退出</h1>','<h1>整合版 · 整机与动作关系</h1>');body=body.replace('132件小样怎样接在原四臂之间，以及魔方放入、夹持交接、托座下移与退出的设计关系','120件闭环底盘、四个60483机械头、150件支承总成。整机与装配说明采用同一946件最终结构。')
 body=body.replace('RELATIONSHIP_CONTENT','<ul>'+''.join('<li>'+x+'</li>'for x in g['relationship_zh'])+'</ul>').replace('WARNING_CONTENT',warning)
 body=body.replace('href="index.html">回到132件／80步逐步审阅','href="integrated-assembly.html">打开完整装配说明').replace(' · <a href="history-219.html">219版实物失败记录</a>','')
-body=body.replace('132件小样怎样接在原四臂之间，以及魔方放入、夹持交接、托座下移与退出的设计关系','938件整机与20件重力回落杠杆：按住抬起，夹头可靠接管后缓松回落').replace('<dt>两枚锁件</dt>','<dt>上位保持</dt>').replace('先让手、工具完全离开四臂与托座的运动区域，再讨论电机动作。不得一边伸手托扶，一边驱动电机。','按压手只在外柄末端三孔上方；放取魔方的手和工具须完全离开四臂及托座运动区域。外柄手部隔离和控制联锁尚待实体验证，验证前不带电执行。')
+body=body.replace('132件小样怎样接在原四臂之间，以及魔方放入、夹持交接、托座下移与退出的设计关系','946件整机与20件重力回落杠杆：按住抬起，夹头可靠接管后缓松回落').replace('<dt>两枚锁件</dt>','<dt>上位保持</dt>').replace('先让手、工具完全离开四臂与托座的运动区域，再讨论电机动作。不得一边伸手托扶，一边驱动电机。','按压手只在外柄末端三孔上方；放取魔方的手和工具须完全离开四臂及托座运动区域。外柄手部隔离和控制联锁尚待实体验证，验证前不带电执行。')
 rows=list(csv.DictReader((C/'integrated-BOM.csv').open()))
-bom='<section class="panel" id="bom"><h2>最终整机零件表</h2><p>与938件整机模型逐实例一致。仅列最终结构所用零件；颜色见分组件BOM。</p><table class="bom"><thead><tr><th>设计号</th><th>数量</th></tr></thead><tbody>'+''.join('<tr><td>'+r['part']+'</td><td>'+r['quantity']+'</td></tr>'for r in rows if int(r['quantity'])>0)+'</tbody></table></section>'
+bom='<section class="panel" id="bom"><h2>最终整机零件表</h2><p>与946件整机模型逐实例一致。仅列最终结构所用零件；颜色见分组件BOM。</p><table class="bom"><thead><tr><th>设计号</th><th>数量</th></tr></thead><tbody>'+''.join('<tr><td>'+r['part']+'</td><td>'+r['quantity']+'</td></tr>'for r in rows if int(r['quantity'])>0)+'</tbody></table></section>'
 # Public download is the final inventory; comparison provenance stays in the source archive.
 with (I/'final-BOM.csv').open('w') as f:
  w=csv.DictWriter(f,lineterminator='\n',fieldnames=['part','quantity']);w.writeheader();w.writerows({k:r[k] for k in ['part','quantity']}for r in rows if int(r['quantity'])>0)
@@ -55,7 +55,7 @@ js='window.OPERATION_GUIDE='+json.dumps(g,ensure_ascii=False).replace('<','\\u00
 for f in ['candidate-source-adapter.js','operation-guide-core.js','operation-viewer-app.js','operation-guide-ui.js']:js+=(R/f).read_text()+'\n'
 (D/'index.html').write_text(page('Quadcuber整合版 · 设计候选','<div class="integrated-shell">'+nav+downloads+body+bom+'<footer>版本 '+html.escape(revision)+' · 整机SHA256 <code>'+manifest['loading-all50']['sha256']+'</code></footer></div>','<script>'+library+js+'</script>',(R/'operation-guide.css').read_text()))
 # The full illustrated sequence is a single continuous document.
-content='<header>'+nav+'<h1>整合版 · 完整装配说明</h1>'+warning+downloads+'<p>'+'本说明连续覆盖：120件闭环底盘从零装配（' + str(guide['coverage'].get('base_steps',33)) + '步）、150件支承总成（含20件杠杆）的详细装配（'+str(guide['coverage']['support_steps'])+'步）、四个机械臂组件的最终装配、墙脚接口、总装核对及按压操作。整机模型和BOM覆盖全部938件；四臂与底盘均从清单单件开始，没有预装核心。'+'</p><details><summary>完整步骤目录</summary><div class="toc">'+''.join('<a href="#step-'+str(s['id'])+'">'+str(s['id'])+' '+html.escape(s['title'])+'</a>'for s in guide['steps'])+'</div></details></header><main>'
+content='<header>'+nav+'<h1>整合版 · 完整装配说明</h1>'+warning+downloads+'<p>'+'本说明连续覆盖：120件闭环底盘从零装配（' + str(guide['coverage'].get('base_steps',33)) + '步）、150件支承总成（含20件杠杆）的详细装配（'+str(guide['coverage']['support_steps'])+'步）、四个机械臂组件的最终装配、墙脚接口、总装核对及按压操作。整机模型和BOM覆盖全部946件；四臂与底盘均从清单单件开始，没有预装核心。'+'</p><details><summary>完整步骤目录</summary><div class="toc">'+''.join('<a href="#step-'+str(s['id'])+'">'+str(s['id'])+' '+html.escape(s['title'])+'</a>'for s in guide['steps'])+'</div></details></header><main>'
 last=None
 for s in guide['steps']:
  if s.get('phase')!=last:last=s.get('phase');content+='<h2>'+html.escape(str(last or '装配'))+'</h2>'

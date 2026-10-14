@@ -11,9 +11,9 @@ import candidate as c
 class BaseStiffening(unittest.TestCase):
     def test_final_inventory_and_unchanged_head_support(self):
         self.assertEqual(len(c.retained_base()),120)
-        self.assertEqual(len(c.full_machine({})),938)
+        self.assertEqual(len(c.full_machine({})),946)
         self.assertEqual(len(c.core_parts()),150)
-        self.assertEqual(len(c.state_parts({})),668)
+        self.assertEqual(len(c.state_parts({})),676)
         counts=collections.Counter(p.name for p in c.retained_base())
         old=collections.Counter(p.name for p in c.retained_base_r4())
         self.assertEqual(dict(counts-old),{'32278.dat':8,'32526.dat':4,'40490.dat':8,'6558.dat':40,'32523.dat':4})

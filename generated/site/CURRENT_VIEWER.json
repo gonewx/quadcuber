@@ -1,14 +1,14 @@
 {
   "mode": "integrated review candidate",
-  "revision": "FINAL-ASSEMBLY-R5-BASE64-2026-10-13",
+  "revision": "FINAL-ASSEMBLY-R6-TYRE90-2026-10-14",
   "default_route": "index.html",
   "manual_route": "integrated-assembly.html",
   "support_route": "integrated-support.html",
   "manifest": {
     "loading-all50": {
       "file": "models/loading-all50.mpd",
-      "parts": 938,
-      "sha256": "8cbcb97ee69f96b2bc9406cf7ebcbb50054db09c9a29bd0c287bc3ca83f869a6",
+      "parts": 946,
+      "sha256": "01329ff6a53e7963db77c489e50922cedcd759c6144aa3963dcd9749ca98a6b3",
       "drop_mm": 0,
       "locks": false,
       "lever_parameter_mm": 0,
@@ -30,22 +30,26 @@
           50
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "FB0-open": {
       "file": "models/FB0-open.mpd",
-      "parts": 938,
-      "sha256": "b2b43f6f2525a4807291f8db5ac3e19638dbf94e6dba52b42f4e5e1b90e991af",
+      "parts": 946,
+      "sha256": "038447e0ee8f3d014296cdd6fd338cb696146e565f13529cccab21c8ab3204fa",
       "drop_mm": 0,
       "locks": false,
       "lever_parameter_mm": 0,
@@ -67,22 +71,26 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "FB0-held": {
       "file": "models/FB0-held.mpd",
-      "parts": 938,
-      "sha256": "993717d1f542e594083c352dfeb914d58b0dd81e539f743df2aeda197abca78a",
+      "parts": 946,
+      "sha256": "519b20e396481c327cb2edfaece90f6b54db945661a53e509d286d23771aa31e",
       "drop_mm": 0,
       "locks": false,
       "lever_parameter_mm": 0,
@@ -104,22 +112,26 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "support-held": {
       "file": "models/support-held.mpd",
-      "parts": 938,
-      "sha256": "8e6359f9dd3e5c153b6fa38850cea58edbf9f2fb95468a7f7622cd3f8b330419",
+      "parts": 946,
+      "sha256": "9db513df5dcc12b71bce683554c39132a445345689fdc4cd33816bc24d3b95b2",
       "drop_mm": 0,
       "locks": false,
       "lever_parameter_mm": 0,
@@ -141,22 +153,26 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "support-down40_8": {
       "file": "models/support-down40_8.mpd",
-      "parts": 938,
-      "sha256": "957f36e1009a691b6676f6513b2f0841a07bda0cb14d2403cc56eab18bf5497a",
+      "parts": 946,
+      "sha256": "e2f17ae724a23d578d8c9294ac8e85cd74115aaa2c4b65e4a4cdce344eecd67f",
       "drop_mm": 40.8,
       "locks": false,
       "lever_parameter_mm": 42.4,
@@ -178,22 +194,26 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "LR90-open": {
       "file": "models/LR90-open.mpd",
-      "parts": 938,
-      "sha256": "808282df55afa75ceaec2464f40f0f76c7dfbc6db0ea0fecf8fe644efac4a245",
+      "parts": 946,
+      "sha256": "f5f23610a9550fe496855eb3a58bf587360da95081ec8c37dfdadb14865ab5b1",
       "drop_mm": 40.8,
       "locks": false,
       "lever_parameter_mm": 42.4,
@@ -215,22 +235,26 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "both-held": {
       "file": "models/both-held.mpd",
-      "parts": 938,
-      "sha256": "90572d78f4651c8bdeb0a77e46f2480ddcd2cae138b484513a54cd61db21014a",
+      "parts": 946,
+      "sha256": "eaefa7ec9f1d924995a51d6b252963783f16f9dfe848963fc90c08584248b163",
       "drop_mm": 40.8,
       "locks": false,
       "lever_parameter_mm": 42.4,
@@ -252,37 +276,41 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "head-open25": {
       "file": "models/head-open25.mpd",
-      "parts": 167,
-      "sha256": "ecfead3a2f73b8d2e1f71d895cd6ea44d4362f527f27c36aaf84be71a589cb2d"
+      "parts": 169,
+      "sha256": "84cab9c890ed004681407ef74eaa0c43c735bad2cafa7323e9bd87310c443f62"
     },
     "head-closed": {
       "file": "models/head-closed.mpd",
-      "parts": 167,
-      "sha256": "1a025775cc880bddbdf83183d4fdb487883b6abb0237090590431fca4da14d84"
+      "parts": 169,
+      "sha256": "0c8eb6041884f0108c96082b5d5f21ec8102d9f469bbaad175261c158bba9e59"
     },
     "support-raised": {
       "file": "models/support-raised.mpd",
       "parts": 150,
-      "sha256": "aeceeedfc35f1829f12020d14dd632fb1da6545bcfc8d654aa533d3db64bbe75"
+      "sha256": "674328e065e166934007df47e71c7ac40d6def82b193b614584d6e81678edca7"
     },
     "support-only-down40_8": {
       "file": "models/support-only-down40_8.mpd",
       "parts": 150,
-      "sha256": "f2742af9864e26e5b61769ba196ddc09ebeba034f67185be8e9a8e4452d6ab66"
+      "sha256": "cb14234a04ccc71e8981d5d252a7e42f5efd755ff7074521a9e683c3eb39bf06"
     }
   },
   "review_only": true

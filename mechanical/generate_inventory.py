@@ -15,9 +15,9 @@ with(H/'instance-inventory.csv').open('w')as f:
  i=0
  for k,pp in groups.items():
   for p in pp:i+=1;w.writerow([i,k,p.name,p.color,*[round(float(v)*.4,9)for v in p.pos],p.note])
-assert sum(map(len,groups.values()))==938
-(H/'inventory-summary.json').write_text(json.dumps({'counts':{k:len(v)for k,v in groups.items()},'whole_all_states':938,'working_locks':'R_working_key and L_working_key permanently removed during supported retrofit','support130_plus_lever20':150,'color_ids':'LDraw rendering identifiers; added20 use14yellow from approved source, not verified retail color availability','coordinate_units':'millimeters; +Y physically down'},indent=2))
-print('938 instance records; all subsystem and color totals verified')
+assert sum(map(len,groups.values()))==946
+(H/'inventory-summary.json').write_text(json.dumps({'counts':{k:len(v)for k,v in groups.items()},'whole_all_states':946,'working_locks':'R_working_key and L_working_key permanently removed during supported retrofit','support130_plus_lever20':150,'color_ids':'LDraw rendering identifiers; added20 use14yellow from approved source, not verified retail color availability','coordinate_units':'millimeters; +Y physically down'},indent=2))
+print('946 instance records; all subsystem and color totals verified')
 
 with(H/'final-BOM.csv').open('w')as f:
  w=csv.writer(f,lineterminator="\n");w.writerow(['part','quantity'])

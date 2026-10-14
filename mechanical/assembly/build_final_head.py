@@ -13,7 +13,7 @@ H=MANUAL_OUTPUT
 sys.path.insert(0,str(MECHANICAL))
 import candidate as C
 P=C.module(0,0,False,True)
-assert len(P)==167
+assert len(P)==169
 ASSEMBLED_CORE=[i for i in range(1,97) if i not in [81,84,88,89,94,95]]
 TURNTABLE_MOUNT=list(range(34,49))+[86]
 DRIVE_INPUT=list(range(24,30))
@@ -21,9 +21,9 @@ FORMER_CORE=[i for i in ASSEMBLED_CORE if i not in TURNTABLE_MOUNT]
 CORE=[]
 MAIN_INPUT=[]
 DEFER=[81,84]
-ADDED=sorted(set(range(1,168))-set(CORE)-set(DEFER))
+ADDED=sorted(set(range(1,170))-set(CORE)-set(DEFER))
 ROWS=[dict(index1=i,name=p.name,color=p.color,position_ldu=p.pos.tolist(),rotation=p.rot.tolist()) for i,p in enumerate(P,1)]
-assert len(CORE)==0 and len(ADDED)==165
+assert len(CORE)==0 and len(ADDED)==167
 
 def bom(ids):
  return [dict(name=n,part_number=n.removesuffix('.dat'),count=k,instance_indices1=[i for i in ids if P[i-1].name==n]) for n,k in sorted(collections.Counter(P[i-1].name for i in ids).items())]
@@ -53,7 +53,7 @@ def arrow(ids,axis,start_mm=28):
  return dict(part_ids=ids,direction=d.tolist(),from_mm=(center-d*start_mm).tolist(),to_mm=center.tolist())
 
 step('从散件开始：放好竖墙下框',[3],[3],[
- '每臂从167个清单单件开始，包括成品电机和舵机；没有预装核心或隐藏轴组。逐项取件，81侧梁和84销留到底盘阶段。',
+ '每臂从169个清单单件开始，包括成品电机和舵机；没有预装核心或隐藏轴组。逐项取件，81侧梁和84销留到底盘阶段。',
  '取第一块64179作为最下层框架，墙面在YZ平面，长边沿Z。用夹具托住，后续向−Y上方逐层搭墙。',
  '本册覆盖全部清单件的装配顺序，不拆成品电机/舵机内部；名义几何不等于实体装配通过。'],
  '本步仅1块下框#3，孔向和编号与图一致。',focus=[3],sub='core_from_parts')
@@ -172,23 +172,35 @@ for label,pin,br,half in [('A',128,165,126),('B',136,167,134)]:
  '从−Z到+Z：半套4＋60483 8＋内梁8＋整套8＋夹指8＋整套8＋内梁8＋60483 8＋半套4＝64毫米，恰好占满8L根轴。',
  '名义轴向余量为零。自由转动和可靠防脱是否兼容必须实测；任何卡死、松脱或轴端接合不足都停止。'],
  '两端半套齐全；64毫米零名义余量已记录，未把几何吻合当作实体验收。',focus=[half],arrows=[arrow([half],[0,0,-1])],extra={'root_stack_mm':[4,8,8,8,8,8,8,8,4],'nominal_axial_reserve_mm':0})
-for label,beam0,beam1,axle,h0,h1,pin,wheelax,hub,tyre in [('A',137,138,139,140,141,142,143,144,145),('B',146,147,148,149,150,151,152,153,154)]:
- step(f'{label}轮胎与轮毂预装',[hub,tyre],[hub,tyre],[
- f'把#{tyre}轮胎套在#{hub}轮毂上，确认胎圈均匀就座。将这2件组件暂存在机外。',
- '每臂两组独立轮胎压头；轮胎网格是名义14×6毫米尺寸，实际橡胶形变和摩擦未验证。'],
- '2件组件同心，轮毂中孔保持畅通。',sub='wheel_'+label)
- MAIN += [beam0,axle,h0,pin]
- step(f'{label}压头：先装−Z薄梁与两连接点',[beam0,axle,h0,pin],MAIN,[
- f'把#{beam0}四孔薄梁贴在红色夹指−Z侧。薄梁第1十字孔对夹指第6孔，用#{axle} 3L轴贯穿，并在−Z端加#{h0}半套。',
- f'薄梁第2圆孔对夹指第7孔，从−Z侧插#{pin} 32054，挡套停在第一根薄梁外侧；露出的轴和销给另一侧薄梁使用。',
- '薄梁第3圆孔留空，第4十字孔用于轮轴；+Z侧薄梁下一步安装。'],
- '薄梁由两个连接点定位，挡套在正确外侧；轮胎组件仍单独托住。',focus=[beam0,axle,h0,pin],view=(25,132),arrows=[arrow([axle,pin],[0,0,1])])
- MAIN += [wheelax,hub,tyre,beam1,h1]
- step(f'{label}压头：轮轴、轮胎与+Z薄梁',[wheelax,beam1,h1],MAIN,[
- f'把#{wheelax} 2L轮轴穿过−Z薄梁第4十字孔，套入已准备的轮胎／轮毂组件；轮毂位于夹指中面。',
- f'把#{beam1} +Z薄梁同时对准3L轴、32054销和2L轮轴三个连接点，沿−Z平直压到位，再在3L轴+Z端套#{h1}半套。',
- '2L轮轴两端与薄梁外侧齐平，不加外轴套。检查轮毂能绕固定轴自由转动；不能靠挤压薄梁消除间隙。'],
- '本夹指轮胎压头9件齐全，两个3L轴半套和32054挡套到位。',focus=[wheelax,hub,tyre,beam1,h1],arrows=[arrow([beam1],[0,0,-1])])
+for label,pm,pp,ax3,h3m,h3p,ax1,spacer,hub,tyre,wbush in [('A',137,138,139,140,141,142,143,144,145,168),('B',146,147,148,149,150,151,152,153,154,169)]:
+ step(f'{label}轮子预装：59895轮胎套上32123半轴套',[wbush,tyre],[wbush,tyre],[
+ f'把#{tyre} 59895小轮胎（外径约14毫米、宽约4毫米）套到#{wbush} 32123半轴套的外圆上，胎圈两侧均匀就座、不扭曲。',
+ '这是乐高官方常用组合（LDraw快捷件32123ac01）。半轴套中心为十字孔，套上十字轴头后轮子不能转动；本压头靠它传递转面扭矩。'],
+ '2件组件同心；十字孔畅通，轮胎不偏出半轴套。',sub='wheel_'+label)
+ MAIN += [pm,ax1,ax3,h3m]
+ step(f'{label}压头：−Z侧薄梁接夹指第5、7孔',[pm,ax1,ax3,h3m],MAIN,[
+ f'取#{pm} 32449四孔薄梁（两端十字孔、中间两孔圆孔），贴住红色夹指−Z侧，沿夹指中心线摆放：第1孔（十字）对夹指第5孔，第3孔（圆）对夹指第7孔，第4孔（十字）伸到夹指尖前方1孔。',
+ f'从−Z侧沿+Z把#{ax1} 2号轴穿过薄梁第1孔和夹指第5孔，+Z端露出4毫米。',
+ f'在#{ax3} 3号轴−Z端先套#{h3m}半轴套，再从−Z侧穿过薄梁第3孔和夹指第7孔，+Z端露出12毫米。'],
+ '薄梁两点定位，不能绕夹指转动；薄梁第4孔在夹指尖前方空着。',focus=[pm,ax1,ax3,h3m],view=(25,132),arrows=[arrow([ax1,ax3],[0,0,1])])
+ MAIN += [hub]
+ step(f'{label}压头：10197轮座插入薄梁前端十字孔',[hub],MAIN,[
+ f'取#{hub} 10197轴销连接器（中间一个横圆孔，带两根互成90°的十字轴头）。',
+ '让一根轴头朝−Z，从+Z侧沿−Z插入薄梁第4孔（十字孔），插到连接器贴住薄梁内表面；轴头在薄梁外侧露出约3.8毫米。另一根轴头沿夹指中心线朝魔方，横圆孔朝夹指外侧（背离魔方），不使用。',
+ '连接器后缘离夹指尖约0.8毫米，不要顶住夹指。十字轴头与十字孔配合，连接器不能转动。'],
+ '朝魔方的轴头与夹指中心线同轴；连接器没有伸出夹指背离魔方的一侧。',focus=[hub],view=(25,132),arrows=[arrow([hub],[0,0,-1])])
+ MAIN += [pp,h3p]
+ step(f'{label}压头：+Z侧薄梁与半轴套',[pp,h3p],MAIN,[
+ f'把#{pp} +Z侧32449与−Z侧对称摆放，从+Z外侧沿−Z平推，同时套住#{ax1}、#{ax3}两根轴的露出段，压到贴住夹指；第4孔正好盖在10197的+Z侧（间隙约0.4毫米）。',
+ f'在#{ax3} 3号轴+Z端套#{h3p}半轴套，贴住薄梁，不要把薄梁夹紧到变形。',
+ '2号轴两端与薄梁外表面齐平；3号轴两端各有一个半轴套。10197被两片薄梁夹住，不能沿Z方向窜动。'],
+ '两片薄梁、10197与夹指构成刚性框；全部零件都在夹指中面两侧各12毫米以内，且不超出夹指背离魔方的一侧。',focus=[pp,h3p],arrows=[arrow([pp],[0,0,-1])])
+ MAIN += [spacer,wbush,tyre]
+ step(f'{label}压头：垫距半套与轮子',[spacer],MAIN,[
+ f'在10197朝魔方的轴头上先套#{spacer} 32123半轴套作垫距，推到贴住连接器。',
+ f'再套上已预装的轮子（#{wbush}半轴套＋#{tyre}轮胎），推到贴住垫距；轮子半套套进轴头约3.8毫米，外侧比轴头端部多出约0.2毫米。',
+ '轮子被十字轴头锁死，不能滚动；轮胎中心在夹指根轴前约5.25孔（42毫米），比原轮胎往魔方中心约2毫米。'],
+ '本夹指轮胎压头10件齐全；用手拨轮胎，轮胎和轮座整体不转、不晃。',focus=[spacer,wbush,tyre],arrows=[arrow([spacer,wbush,tyre],[-1,0,0])])
 MAIN += [160,162]
 step('先把无摩擦销各插入夹指半根',[160,162],MAIN,[
  '两根黄色连杆尚未接到夹指。A夹指第2孔先从+Z侧沿−Z插#160灰色3673半根；B夹指第2孔从−Z侧沿+Z插#162半根。',
@@ -224,18 +236,18 @@ step('匹配名义姿态后连接曲柄端',[94,95],MAIN,[
  '保持夹指和推杆在图示正常近闭合分支，让#96连杆端孔与曲柄末端孔自然同轴，再插#94 2L轴：外端与曲柄外面齐平；内端装#95半套贴住连杆。',
  '孔位不自然重合、需要硬拉连杆或反驱舵机时立即停止，保持分离和支承，等待专门定位／标定；不能把本页当作定位已完成的证据。'],
  '只有预先满足自然对孔条件才记录此步完成；否则整臂仍标为待验证。',focus=[93,94,95,96],sub='crank_close',extra={'conditional_step':True,'requires_independently_validated_servo_pose':True})
-step('单臂165件待接底盘，2件留待接口',[],MAIN,[
- '核对已完成的90件动力底架与75件夹头件共165件；每头4件60483、2根8L根轴、4只根轴整套、4只根轴外半套和4枚支架固定销齐全。',
- '#81 40490侧梁与#84 2780销保持散件状态，待整臂落到底盘后先装#84、再装#81，使每臂达到167件；不要提前装这两件。',
- 'R、L、F、B四臂分别在机外完成同一局部流程。各臂独立记录；四臂最终合计668件，不以一个臂通过代替其余三臂。',
+step('单臂167件待接底盘，2件留待接口',[],MAIN,[
+ '核对已完成的90件动力底架与77件夹头件共167件；每头4件60483、2根8L根轴、4只根轴整套、4只根轴外半套和4枚支架固定销齐全。',
+ '#81 40490侧梁与#84 2780销保持散件状态，待整臂落到底盘后先装#84、再装#81，使每臂达到169件；不要提前装这两件。',
+ 'R、L、F、B四臂分别在机外完成同一局部流程。各臂独立记录；四臂最终合计676件，不以一个臂通过代替其余三臂。',
  '64毫米根轴叠层零名义余量；夹指正常约3.84°～25°。装配路径、保持、载荷、控制联锁和实体开合均未放行。'],
- '165件在位＋2件专格＝167件／臂；不插电、不带魔方，仍需实体验证。',focus=[122,125,126,130,133,134,164,165,166,167],sub='staged_complete',extra={'ready_for_base_mount_part_count':165,'deferred_interface_part_ids':DEFER})
+ '167件在位＋2件专格＝169件／臂；不插电、不带魔方，仍需实体验证。',focus=[122,125,126,130,133,134,164,165,166,167],sub='staged_complete',extra={'ready_for_base_mount_part_count':167,'deferred_interface_part_ids':DEFER})
 assert all(set(s['visible_part_ids'])<=set(s['introduced_part_ids']) for s in steps)
 assert all(s['visible_part_ids']==[r['index1'] for r in s['geometry_records']] for s in steps)
-assert introduced==set(range(1,168))-set(DEFER)
+assert introduced==set(range(1,170))-set(DEFER)
 assert collections.Counter(i for s in steps for i in s['added_part_ids'])==collections.Counter(ADDED)
 assert set(steps[-1]['visible_part_ids'])==introduced
-BOOK=dict(title='60483机械头最终版直接装配',revision='FINAL-ASSEMBLY-2026-10-09-FULL-PARTS',review_only=True,units='LDraw: 1 LDU = 0.4 mm',local_frame='L module frame; A=+Y, B=-Y; each arm uses its corresponding ARM_ROT without mirroring',prerequisites=dict(prebuilt_core_count=0,prebuilt_core_part_ids=CORE,prebuilt_core_bom=bom(CORE),prebuilt_core_geometry_records=record(CORE),prebuilt_input_groups=[],turntable_mount_loose_part_ids=TURNTABLE_MOUNT,explicitly_loose_head_and_transmission_count=165,explicitly_loose_head_and_transmission_part_ids=ADDED,explicitly_loose_head_and_transmission_bom=bom(ADDED),deferred_interface_count=2,deferred_interface_part_ids=DEFER,deferred_interface_bom=bom(DEFER),deferred_interface_geometry_records=record(DEFER),total_parts_per_arm=167,arms=['R','L','F','B'],four_arms_total=668,independent_offline_assembly=True,original_core_from_scratch_covered=True,initial_crank_and_servo_link_connected=False,core_input_condition_zh='无预装输入：按步骤从清单单件搭建。成品电机和舵机作为采购件，内部不拆解。曲柄定位、真实舵机接口与实体装配须另行验证。'),rows=ROWS,steps=steps,validation=dict(step_count=len(steps),core_count=0,introduced_count=165,deferred_count=2,staged_count=165,final_arm_count=167,four_arms_count=668,added_instances_exactly_once=True,final_staged_set_exact=True,mechanical_geometry_changed=False,physical_verification=False,continuous_insertion_verification=False),reference_images={'opening':'final-head-diagrams/opening.png'},source=dict(model_file='candidate.py',model_sha256=hashlib.sha256((MECHANICAL/'candidate.py').read_bytes()).hexdigest(),native_source_file='source/baseline_model.py',native_source_sha256=hashlib.sha256((MECHANICAL/'inputs/baseline_model.py').read_bytes()).hexdigest(),native_source_steps_used=list(range(1,19)),pose=dict(open_s=0,whole_head_angle_deg=0),source_instance_numbering='candidate.module(0,0,False,True), indices 1..167',generator='manual/build_final_head.py'))
+BOOK=dict(title='60483机械头最终版直接装配',revision='FINAL-ASSEMBLY-2026-10-14-TYRE90',review_only=True,units='LDraw: 1 LDU = 0.4 mm',local_frame='L module frame; A=+Y, B=-Y; each arm uses its corresponding ARM_ROT without mirroring',prerequisites=dict(prebuilt_core_count=0,prebuilt_core_part_ids=CORE,prebuilt_core_bom=bom(CORE),prebuilt_core_geometry_records=record(CORE),prebuilt_input_groups=[],turntable_mount_loose_part_ids=TURNTABLE_MOUNT,explicitly_loose_head_and_transmission_count=167,explicitly_loose_head_and_transmission_part_ids=ADDED,explicitly_loose_head_and_transmission_bom=bom(ADDED),deferred_interface_count=2,deferred_interface_part_ids=DEFER,deferred_interface_bom=bom(DEFER),deferred_interface_geometry_records=record(DEFER),total_parts_per_arm=169,arms=['R','L','F','B'],four_arms_total=676,independent_offline_assembly=True,original_core_from_scratch_covered=True,initial_crank_and_servo_link_connected=False,core_input_condition_zh='无预装输入：按步骤从清单单件搭建。成品电机和舵机作为采购件，内部不拆解。曲柄定位、真实舵机接口与实体装配须另行验证。'),rows=ROWS,steps=steps,validation=dict(step_count=len(steps),core_count=0,introduced_count=167,deferred_count=2,staged_count=167,final_arm_count=169,four_arms_count=676,added_instances_exactly_once=True,final_staged_set_exact=True,mechanical_geometry_changed=True,physical_verification=False,continuous_insertion_verification=False),reference_images={'opening':'final-head-diagrams/opening.png'},source=dict(model_file='candidate.py',model_sha256=hashlib.sha256((MECHANICAL/'candidate.py').read_bytes()).hexdigest(),native_source_file='source/baseline_model.py',native_source_sha256=hashlib.sha256((MECHANICAL/'inputs/baseline_model.py').read_bytes()).hexdigest(),native_source_steps_used=list(range(1,19)),pose=dict(open_s=0,whole_head_angle_deg=0),source_instance_numbering='candidate.module(0,0,False,True), indices 1..173',generator='manual/build_final_head.py'))
 
 
 def render(book,select=None):
@@ -317,7 +329,7 @@ def render_references():
  fig.text(.035,.895,'仅改变夹指开角；两幅整头回转角均为0°。',fontsize=11,color='#183b4d')
  records=[]
  for k,o in enumerate([0,C.m.OPEN_S]):
-  pp=C.module(o,0,False,True);ids=list(range(97,163))+list(range(164,168))
+  pp=C.module(o,0,False,True);ids=list(range(97,163))+list(range(164,170))
   ax=fig.add_axes([.01+.5*k,.145,.49,.66],projection='3d');ax.set_facecolor('#fafbf9')
   ts=[]
   for i in ids:
@@ -341,6 +353,6 @@ if __name__=='__main__':
  ap=argparse.ArgumentParser();ap.add_argument('--data-only',action='store_true');ap.add_argument('--render-only',action='store_true');ap.add_argument('--select',type=int,nargs='*');ap.add_argument('--references-only',action='store_true');args=ap.parse_args()
  if not args.render_only:
   (ASSEMBLY/'final-head-steps.json').write_text(json.dumps(BOOK,ensure_ascii=False,indent=2))
-  print(f'Final head: {len(steps)} steps; prebuilt0 +165 =165, deferred2 =>167',flush=True)
+  print(f'Final head: {len(steps)} steps; prebuilt0 +167 =167, deferred2 =>169',flush=True)
  if not args.data_only and not args.references_only:render(BOOK,set(args.select) if args.select else None)
  if not args.data_only and (args.references_only or not args.select):render_references()

@@ -10,13 +10,13 @@
     360
   ],
   "all_four_arms_same_Y_bound": true,
-  "max_head_YZ_radius_mm": 55.959569253576966,
+  "max_head_YZ_radius_mm": 56.939358025847326,
   "worst": {
     "stroke_mm": 12.923070602083328,
-    "part": "50945_nominal.dat",
-    "note": "\u6a61\u80f6\u80ce"
+    "part": "59895.dat",
+    "note": "\u8f6e\u80ce59895"
   },
   "min_added_y_mm": 100.0,
-  "head_to_all_added_vertical_bound_mm": 44.040430746423034,
+  "head_to_all_added_vertical_bound_mm": 43.060641974152674,
   "limits": "Full rigid-head roll bound at101 sampled jaw openings; jaw interpolation, deformation, insertion force and whole-machine physical motion are not certified. Existing head/support geometry and motion are unchanged."
 }

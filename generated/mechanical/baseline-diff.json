@@ -19,13 +19,35 @@
   "added_per_head": {
     "60483.dat": 4
   },
+  "tyre90_front": {
+    "revision": "2026-10-14 v4",
+    "per_head_removed": {
+      "32054.dat": 2,
+      "42610.dat": 2,
+      "50945_nominal.dat": 2
+    },
+    "per_head_added": {
+      "10197.dat": 2,
+      "32123a.dat": 4,
+      "59895.dat": 2
+    },
+    "per_head_reused_in_new_position": {
+      "32449.dat": 4,
+      "4519.dat": 2,
+      "32123a.dat": 4,
+      "32062.dat": 2
+    },
+    "per_head_net": 2,
+    "machine_net": 8,
+    "physical_validation": false
+  },
   "preserved_support132": false,
   "integrated_support132": false,
   "integrated_support150": true,
   "horizontal_reinforcement_added": 0,
   "gravity_lever_added": 20,
   "working_lock_pins_removed": 2,
-  "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13",
+  "revision": "INTEGRATED-GRAVITY-R6-TYRE90-2026-10-14",
   "reference_support_baseline": "source/assembly-integrated-R1.json",
   "horizontal_R2_explicitly_excluded": true,
   "changed_support_ids": [

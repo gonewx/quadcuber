@@ -1,12 +1,13 @@
 {
-  "revision": "INTEGRATED-GRAVITY-R5-BASE64-2026-10-13",
+  "revision": "INTEGRATED-GRAVITY-R6-TYRE90-2026-10-14",
   "baseline_main": "d6bda1d7c7be800161ae366a072e22fdf10a1728",
-  "scope": "Approved64-new-stock lower-frame integration; heads/support/firmware/electronics unchanged. No physical stiffness or powered acceptance.",
+  "baseline_branch_commit": "db42e0c",
+  "scope": "Tyre-90 gripper front (32123+59895 cross-locked wheel on 42003 seat, 2x32056 per jaw) on the 64-part stiffened base; support/firmware/electronics unchanged. Nominal geometry review only; no physical, stiffness or powered acceptance.",
   "models": {
     "loading-all50": {
       "file": "models/loading-all50.mpd",
-      "parts": 938,
-      "sha256": "8cbcb97ee69f96b2bc9406cf7ebcbb50054db09c9a29bd0c287bc3ca83f869a6",
+      "parts": 946,
+      "sha256": "01329ff6a53e7963db77c489e50922cedcd759c6144aa3963dcd9749ca98a6b3",
       "drop_mm": 0,
       "locks": false,
       "lever_parameter_mm": 0,
@@ -28,22 +29,26 @@
           50
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "FB0-open": {
       "file": "models/FB0-open.mpd",
-      "parts": 938,
-      "sha256": "b2b43f6f2525a4807291f8db5ac3e19638dbf94e6dba52b42f4e5e1b90e991af",
+      "parts": 946,
+      "sha256": "038447e0ee8f3d014296cdd6fd338cb696146e565f13529cccab21c8ab3204fa",
       "drop_mm": 0,
       "locks": false,
       "lever_parameter_mm": 0,
@@ -65,22 +70,26 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "FB0-held": {
       "file": "models/FB0-held.mpd",
-      "parts": 938,
-      "sha256": "993717d1f542e594083c352dfeb914d58b0dd81e539f743df2aeda197abca78a",
+      "parts": 946,
+      "sha256": "519b20e396481c327cb2edfaece90f6b54db945661a53e509d286d23771aa31e",
       "drop_mm": 0,
       "locks": false,
       "lever_parameter_mm": 0,
@@ -102,22 +111,26 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "support-held": {
       "file": "models/support-held.mpd",
-      "parts": 938,
-      "sha256": "8e6359f9dd3e5c153b6fa38850cea58edbf9f2fb95468a7f7622cd3f8b330419",
+      "parts": 946,
+      "sha256": "9db513df5dcc12b71bce683554c39132a445345689fdc4cd33816bc24d3b95b2",
       "drop_mm": 0,
       "locks": false,
       "lever_parameter_mm": 0,
@@ -139,22 +152,26 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "support-down40_8": {
       "file": "models/support-down40_8.mpd",
-      "parts": 938,
-      "sha256": "957f36e1009a691b6676f6513b2f0841a07bda0cb14d2403cc56eab18bf5497a",
+      "parts": 946,
+      "sha256": "e2f17ae724a23d578d8c9294ac8e85cd74115aaa2c4b65e4a4cdce344eecd67f",
       "drop_mm": 40.8,
       "locks": false,
       "lever_parameter_mm": 42.4,
@@ -176,22 +193,26 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "LR90-open": {
       "file": "models/LR90-open.mpd",
-      "parts": 938,
-      "sha256": "808282df55afa75ceaec2464f40f0f76c7dfbc6db0ea0fecf8fe644efac4a245",
+      "parts": 946,
+      "sha256": "f5f23610a9550fe496855eb3a58bf587360da95081ec8c37dfdadb14865ab5b1",
       "drop_mm": 40.8,
       "locks": false,
       "lever_parameter_mm": 42.4,
@@ -213,22 +234,26 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "both-held": {
       "file": "models/both-held.mpd",
-      "parts": 938,
-      "sha256": "90572d78f4651c8bdeb0a77e46f2480ddcd2cae138b484513a54cd61db21014a",
+      "parts": 946,
+      "sha256": "eaefa7ec9f1d924995a51d6b252963783f16f9dfe848963fc90c08584248b163",
       "drop_mm": 40.8,
       "locks": false,
       "lever_parameter_mm": 42.4,
@@ -250,59 +275,156 @@
           0
         ]
       },
-      "unchanged_retained_parts": 644,
-      "retained_parts_including_corrected_wallpins": 652,
+      "unchanged_retained_parts": 572,
+      "retained_parts_including_corrected_wallpins": 580,
       "corrected_retained_wallpins": 8,
       "removed": {
-        "32123a.dat": 16,
         "3707.dat": 8,
-        "32056.dat": 32
+        "32056.dat": 32,
+        "32054.dat": 8,
+        "42610.dat": 8,
+        "50945_nominal.dat": 8
       },
       "added": {
+        "10197.dat": 8,
+        "59895.dat": 8,
         "60483.dat": 16
       }
     },
     "head-open25": {
       "file": "models/head-open25.mpd",
-      "parts": 167,
-      "sha256": "ecfead3a2f73b8d2e1f71d895cd6ea44d4362f527f27c36aaf84be71a589cb2d"
+      "parts": 169,
+      "sha256": "84cab9c890ed004681407ef74eaa0c43c735bad2cafa7323e9bd87310c443f62"
     },
     "head-closed": {
       "file": "models/head-closed.mpd",
-      "parts": 167,
-      "sha256": "1a025775cc880bddbdf83183d4fdb487883b6abb0237090590431fca4da14d84"
+      "parts": 169,
+      "sha256": "0c8eb6041884f0108c96082b5d5f21ec8102d9f469bbaad175261c158bba9e59"
     },
     "support-raised": {
       "file": "models/support-raised.mpd",
       "parts": 150,
-      "sha256": "aeceeedfc35f1829f12020d14dd632fb1da6545bcfc8d654aa533d3db64bbe75"
+      "sha256": "674328e065e166934007df47e71c7ac40d6def82b193b614584d6e81678edca7"
     },
     "support-only-down40_8": {
       "file": "models/support-only-down40_8.mpd",
       "parts": 150,
-      "sha256": "f2742af9864e26e5b61769ba196ddc09ebeba034f67185be8e9a8e4452d6ab66"
+      "sha256": "cb14234a04ccc71e8981d5d252a7e42f5efd755ff7074521a9e683c3eb39bf06"
     }
   },
   "pdf": {
-    "bytes": 24885536,
-    "sha256": "81ce2dd2f55ca37d1f7b351562f859ef7138f6f5303d808e63001285b1a67443",
-    "pages": 542
+    "bytes": 25263176,
+    "sha256": "7f8797266b45528aba956f696e16ce78ed451afabef5b1d4b01756254d1c6166",
+    "pages": 558
   },
   "updated_assets": {
-    "generated/mechanical/baseline-diff.json": "fdc6fe4febea3ceda094d1b4177b7bb9813673e24eb1ac428f6f58ae1a54f09f",
-    "generated/mechanical/candidate-manifest.json": "3064f2081104c406f150aee22ae0f480ea16a6cb041798fdc6894311ef79a837",
-    "generated/mechanical/final-BOM.csv": "b328de6c23b319f28616ad7fc4a6d85d16dae03023ac51846265750c9eb27c8a",
-    "generated/mechanical/instance-inventory.csv": "a4f6dd5e7859a2334bb3c495189ce4e0e09343dd5131a9b98502ded0b7343cf7",
-    "generated/mechanical/integrated-BOM.csv": "79057877ea1028576d97b058b3423bc88c2c832a9ee6bdd391e6c47525276faf",
-    "generated/mechanical/inventory-summary.json": "4722dcb5c94d394af41cdaa622d8f14fdee224136c4a01c9bf773ef146352d81",
+    "generated/mechanical/baseline-diff.json": "2b8c9e8e8529574d66afa08f47450a48bc1cdffc2bd7e49ef98199ea59aeb683",
+    "generated/mechanical/candidate-manifest.json": "501705001ec109c9f71aca2e9b092bec3f5f71699ab5fbe082efa8af1f6c0d8d",
+    "generated/mechanical/final-BOM.csv": "ef153511a57beaf5c3d3e0883992480f6fa1e286a07ef34f3cc34fe7078de41e",
+    "generated/mechanical/instance-inventory.csv": "ab9cc7ddcd4623642135c38ba78bf9de64698c626dfeca85c5b34a4cf845b9be",
+    "generated/mechanical/integrated-BOM.csv": "b2d687c4459f18ef58f284f56b0c693b28b631f8e373a8b21b9cb0175af46026",
+    "generated/mechanical/inventory-summary.json": "caf3828c37c5498ba9ab370f941192a7ad03d807ec4e2642ea0a42af35aab59c",
     "mechanical/assembly/base-steps.json": "76980cb6adea8fddc43e4078eee31618b28f631c3ca0434704cbdf5795acb703",
-    "generated/mechanical/manual/diagrams/integrated-whole.png": "985969c58fa390e3c5674b78acb39cdd41fad36e5f77f97a79c89a8e5e5bd1ec",
-    "generated/mechanical/manual/diagrams/interface-B.png": "e74582fce12a3b737f347b86180187560776e469a77381b13cc8e5ec2dc50395",
-    "generated/mechanical/manual/diagrams/interface-F.png": "802b721f24a7bf7c80a158d57d94e102541a03866bf9f4dce12c9c5b7a62a9a5",
-    "generated/mechanical/manual/diagrams/interface-L.png": "3e0817f7ef4f5ac40ea1f0f7e4b9ab04bc0ae181922d42e22982e53c750a14a5",
-    "generated/mechanical/manual/diagrams/interface-R.png": "b3d0fd3998e9af06b3dcdd93fa269e89dca5dfd6f70d414e4dc8c6ca6d234192",
+    "generated/mechanical/manual/diagrams/integrated-whole.png": "8547faca41cef6c0fb189c9723af730f4da971046bbf7f867a72c7e43445ca69",
+    "generated/mechanical/manual/diagrams/interface-B.png": "aabb237b9afb2c247d458d68fea2aab340f478164b73a5b3fdb2f03fe45d7fbd",
+    "generated/mechanical/manual/diagrams/interface-F.png": "120c7b19b1e8b70283a37afeedce9f78cd4dd2b2aeef91a4abd733d1cb610a57",
+    "generated/mechanical/manual/diagrams/interface-L.png": "fafad7ff061c2703552720236b872c255c6e936dad9c3b8c4d1c6d9fd10e1933",
+    "generated/mechanical/manual/diagrams/interface-R.png": "5e00f2a0bdf6e6e3444313cc73e7b86612868f2d7ad03c75d6b61dda8f379436",
     "generated/mechanical/manual/diagrams/support-lowered.png": "3cebd0213f85e937a4170e711bdc2b78313a009da1c1f3f7b8df0464f9f48b06",
-    "generated/mechanical/manual/guide.json": "34b9094d3b21002af60d47c7bbc1549eb16524d139047465342961a7fb65a4aa",
+    "generated/mechanical/manual/final-head-diagrams/01.png": "a74af4e2a2f19fb608fb2204233810ad4fec6a1d6392ef4b0ff6483b232fa352",
+    "generated/mechanical/manual/final-head-diagrams/02.png": "80bd1cf74d5848a9573519dc406cad5504f1ba70d82c216ca6bb46e106d87a3a",
+    "generated/mechanical/manual/final-head-diagrams/03.png": "637abe0a1ae69ebab0c7fa5ee79c01a2e7a6c12aa457b671043c22a3d174ac75",
+    "generated/mechanical/manual/final-head-diagrams/04.png": "9426d752b31723e66aa6a5dd34ab38fc4af334c3db559832945e447c5884c29d",
+    "generated/mechanical/manual/final-head-diagrams/05.png": "87a0efc6db756bb4d9267664623411c45e273c278dd029ad78a71d08e91684d2",
+    "generated/mechanical/manual/final-head-diagrams/06.png": "b506e8ee70ec1cf54208800e1f48774b531979c69f830de34bd8769b8d9db937",
+    "generated/mechanical/manual/final-head-diagrams/07.png": "01efecd8af762e8c9f36a7096fc274967ebd4af47b1f6a8e116850ba6124009d",
+    "generated/mechanical/manual/final-head-diagrams/08.png": "ac5355400d891e0a3389028f2467162334c4f2e99f777c37525b337c4ae53bf8",
+    "generated/mechanical/manual/final-head-diagrams/09.png": "ca2a51b2c7c237476c9fd000fc7e08f5af247e4dc2afc49a1d3aff5a4c4789c0",
+    "generated/mechanical/manual/final-head-diagrams/10.png": "c1d27a9f0a41c6887abd6df9d136acae420c238ddd939e4c18f85bdd4fd1050f",
+    "generated/mechanical/manual/final-head-diagrams/11.png": "b38ac2c05bfe570c61fd87a82aeed37a5d9983a5097aec189d658866949ff941",
+    "generated/mechanical/manual/final-head-diagrams/12.png": "b9eeecae940a49a1104b9a1a652a22284ca08aab59022b3dbf51530b5389f458",
+    "generated/mechanical/manual/final-head-diagrams/13.png": "e3cab6ea4bd5a404f49465050511e3c6b331e4b3eb5ca696dcb768ea74b954df",
+    "generated/mechanical/manual/final-head-diagrams/14.png": "27490eb44fb91cc3554911586ad3116ebd9284c23af954a5fd3244a1ce4ee909",
+    "generated/mechanical/manual/final-head-diagrams/15.png": "29c2be1412b239aaf34a14abc3f91c373897f6a17d4e7b59a1520ecc4dc90b9b",
+    "generated/mechanical/manual/final-head-diagrams/16.png": "e746ba284bd46b792f83777cf82017a4067b6625847436252227274e4194fbdd",
+    "generated/mechanical/manual/final-head-diagrams/17.png": "ecbf9fe3f7833a3a8c67e18a64958322487a85cd25714cab9c0d859ddc443911",
+    "generated/mechanical/manual/final-head-diagrams/18.png": "1fc07f06e0bcbcc1b7c45d3ccc4c7c4e91033068eccc2534a0054024b544616d",
+    "generated/mechanical/manual/final-head-diagrams/19.png": "9e97fa58c6dc808d1accdb95e7a6347c41e40fc1680fc3d0da97bbf595d1d247",
+    "generated/mechanical/manual/final-head-diagrams/20.png": "c745e1262424aca86f4962a7dcff2998445f24138ae490a8aefc765eaf4a68ae",
+    "generated/mechanical/manual/final-head-diagrams/21.png": "0de05cfacf819eb9ad741574370cf5e63abec938ba7f81210067e2b7af41fdc1",
+    "generated/mechanical/manual/final-head-diagrams/22.png": "78f54a956e5513dbaed4d5ce02b69232944ab9eafa7f380a3e674fa39518388d",
+    "generated/mechanical/manual/final-head-diagrams/23.png": "c54fa1277535121a050a02128ffde1b9adc7aca9692995b337e1c6c1dcc6c8a5",
+    "generated/mechanical/manual/final-head-diagrams/24.png": "338788bc21e4f045bee6c0081dd7bd1af1f9bf0bdee1abeb25be56b99189c485",
+    "generated/mechanical/manual/final-head-diagrams/25.png": "a0784d7d7f341f1bdb2a601f7d09126ce41324479d5b0d2d75d97930ff7c2259",
+    "generated/mechanical/manual/final-head-diagrams/26.png": "638fc9b997dc2893d1a605840109bb2113df8b40d2f64b2e2282137de391b7c7",
+    "generated/mechanical/manual/final-head-diagrams/27.png": "a2c764b5f0fa3c7ea09bcd88c6d8eb4f1f8d59f76003d6a627badb82e7acca00",
+    "generated/mechanical/manual/final-head-diagrams/28.png": "4b897fac24e740a373b8350d672fc1d345ce4264f347ae478dbd4fb18947d60f",
+    "generated/mechanical/manual/final-head-diagrams/29.png": "e93a96f1dd072e19c520f770ed4a3cbe0d8a79b25341a5bc1b2cdfeb90fd3c20",
+    "generated/mechanical/manual/final-head-diagrams/30.png": "1c504811141562eb9856df90f10b808b9c8745763ec2e3215b6680ea896e0a84",
+    "generated/mechanical/manual/final-head-diagrams/CORE01.png": "2f6f86673e5212e34e9a2491edbae0e207ab35d9d329a440f3a0e012ea1bb677",
+    "generated/mechanical/manual/final-head-diagrams/CORE02.png": "27a1c472749b10af1561d63201f2e9c1f5705ad9957171132d8d57bbb69ade10",
+    "generated/mechanical/manual/final-head-diagrams/CORE03.png": "ca5ce3dc8c110f754300301dbac2b42d4e9b2c3cefebb22c9b7b2fd0b9202a68",
+    "generated/mechanical/manual/final-head-diagrams/CORE04.png": "639a50f806ce1988025044c04acd3b9814e554c0db28d1280f82c1b2e70a2ce1",
+    "generated/mechanical/manual/final-head-diagrams/CORE05.png": "71333705074d2c41b4f2fccf8e59d6f016b9aa25eaaca1ec5f8a97ce30bcbb43",
+    "generated/mechanical/manual/final-head-diagrams/CORE06.png": "759f6f64a5003a14046f9a05b4c4faa84b0317bda1a6efe6e672cee996d8ff83",
+    "generated/mechanical/manual/final-head-diagrams/CORE07.png": "80298dc221b8a45876ea901eee6a61d066a4dedba858ab5ce1bc200dedb7f4a8",
+    "generated/mechanical/manual/final-head-diagrams/CORE08.png": "d5580de666af3dd7f59a803546bd76204e2abdc13e03771b68d59c81020d14fe",
+    "generated/mechanical/manual/final-head-diagrams/CORE09.png": "7b7358e6c78d5eb7472fde3be3355aa661baf25b00a9ab112dfbc84efd0fd8b5",
+    "generated/mechanical/manual/final-head-diagrams/CORE10.png": "bc72eaaf2b60e996cf5a4bf0ab305040bd2473ae81212354ae9afe257f82205e",
+    "generated/mechanical/manual/final-head-diagrams/CORE11.png": "e4ef2e6c2dad124466750f108c8803e2d614263bafa54c3af452ed5a4f6a689d",
+    "generated/mechanical/manual/final-head-diagrams/CORE12.png": "1a011adb3fe276b631ce502ffc7638b155da70c70cf2733b7a0ce49de9b81968",
+    "generated/mechanical/manual/final-head-diagrams/CORE13.png": "66f958259a02acb99764a34dbcc7145df6c737fe6899626083826316f4d2257f",
+    "generated/mechanical/manual/final-head-diagrams/CORE14.png": "bcb741dbd320cf7db7aa1eb92658d586a627555009aee8e62631c3959c57108a",
+    "generated/mechanical/manual/final-head-diagrams/CORE15.png": "bf5cb99738aaa602f9ad93d0dccd3bdf38e840c66054fb5c4e90f274cbefe24d",
+    "generated/mechanical/manual/final-head-diagrams/CORE16.png": "bfd8b693ac8bd88041e94b53e2450b05d5f70d48eb14dfb738253e0e20977c1f",
+    "generated/mechanical/manual/final-head-diagrams/CORE17.png": "6d2f13bc397f366764c9a54ad867545743566b893309118b3b0ec02c1854243f",
+    "generated/mechanical/manual/final-head-diagrams/CORE18.png": "f39595e013e3747d383339fc33987e54823d03b385bbbd9ee36090e76f81a6c8",
+    "generated/mechanical/manual/final-head-diagrams/CORE19.png": "794eabd120b310af98fc8e010fb740cab5a3985cc682d87a314391314b9d93fe",
+    "generated/mechanical/manual/final-head-diagrams/CORE20.png": "fd534605c88d0abdd2cd5aeda2b1b4641d00d652e7bcd6058628839f11bf63ed",
+    "generated/mechanical/manual/final-head-diagrams/CORE21.png": "7e9e08024205a9b7d6b283570e9d5183e0ada72b573ffb335d843c6e8cfa61e9",
+    "generated/mechanical/manual/final-head-diagrams/CORE22.png": "e74a159759f2174af293458303364812615f71dc370d2424f1ff0ff030244367",
+    "generated/mechanical/manual/final-head-diagrams/CORE23.png": "9d29bdbf273143ab87a7a108b8f2a147ea8ae01c0bcc1f80a01d678be67b2e9d",
+    "generated/mechanical/manual/final-head-diagrams/CORE24.png": "4656e796f2e3ba7fc749c40e9d041a6a89ba6da664619ef6258bd3e1b03bf6b8",
+    "generated/mechanical/manual/final-head-diagrams/CORE25.png": "d0a9a9e2f2fcdf5187b7a81646d88f8d81b3acbcd32c1c3224251e5d195da05c",
+    "generated/mechanical/manual/final-head-diagrams/CORE26.png": "0c82c7d966baf84a7bbb754a6812a11a9babe543c2aa178789912f8937ab5408",
+    "generated/mechanical/manual/final-head-diagrams/CORE27.png": "0f9bdde398a8693ebbd1e17394dfa6ebde564ffc9ebb0850e2c678004b570466",
+    "generated/mechanical/manual/final-head-diagrams/CORE28.png": "715b19906adeb667712aa42b61374c43f1ab4279f02d311313c9508203c9009e",
+    "generated/mechanical/manual/final-head-diagrams/CORE29.png": "9128e9933742123255bfa1ed8c5e3d04615313dfacb8aac42b8befb84957b501",
+    "generated/mechanical/manual/final-head-diagrams/CORE30.png": "e8dff8cc3c9259ba7e80aa07ebf637011a7021d763cd43c396aff71724a9473a",
+    "generated/mechanical/manual/final-head-diagrams/CORE31.png": "b4443fcfe808a27cf7edbe79a06040cf80712fbdedd30a97075a56d23682f988",
+    "generated/mechanical/manual/final-head-diagrams/CORE32.png": "0bc44c3065d162b40666102ee169e7aa7ba9a89a644ede5c9574d4ac3e96523b",
+    "generated/mechanical/manual/final-head-diagrams/CORE33.png": "122f32593b7464d20fd5d424c398bf85dc88a3cfb067ab30ffd0f2af8519a8af",
+    "generated/mechanical/manual/final-head-diagrams/CORE34.png": "2c27f7fb73727cb1e5e5e7de2cd8f5e02e2a492249090dcb936cd25953a91c01",
+    "generated/mechanical/manual/final-head-diagrams/CORE35.png": "c7b06cbd91b60021cbc725203e13d46e7116e3d592f759b524e1d143c7f8eff3",
+    "generated/mechanical/manual/final-head-diagrams/CORE36.png": "c4e8322b73d38278300c3b34f8cb4470579a314c67a5432b7b720bd742f16743",
+    "generated/mechanical/manual/final-head-diagrams/CORE37.png": "78761857fd0fccfa749a8c1c2ebc77b5fb8f9e05d577fd0c3765a04a1684dc7b",
+    "generated/mechanical/manual/final-head-diagrams/CORE38.png": "3a246df7222954f34ecf93f535c28ac73522d2ce742d2140fee9e0a889c34829",
+    "generated/mechanical/manual/final-head-diagrams/CORE39.png": "2a738975e70d0e7043ffd60c6f1567d604019cd2c7c03fbba017b1a31260c441",
+    "generated/mechanical/manual/final-head-diagrams/CORE40.png": "64aa21c8db58a1d15da16ef1299df8d6cd2322ce35253587023206a87ee403d1",
+    "generated/mechanical/manual/final-head-diagrams/CORE41.png": "616af6ca48c71ecb1612dbc9b05b124485b7775aaeb9700c458f9e0432c4e9c7",
+    "generated/mechanical/manual/final-head-diagrams/CORE42.png": "7427230d32114ef813cc11bff42c544146aca235b4a59edd1ea86f88a78f4eca",
+    "generated/mechanical/manual/final-head-diagrams/CORE43.png": "36f4ce7d2ee0cfcbe66e6305d657aef57a45fdef2f72e8416f42128a5ea91df7",
+    "generated/mechanical/manual/final-head-diagrams/CORE44.png": "af057a9a8649ac749e929b74f84ea1bdbe734c76161a33af876cacddeb57a1e1",
+    "generated/mechanical/manual/final-head-diagrams/CORE45.png": "f045cc086aff6a38c63fb25882ac7264125b2888e5cc7ff76b70f884ca9c1e10",
+    "generated/mechanical/manual/final-head-diagrams/CORE46.png": "2640363bb5d4490a36abf6051dfab3f7f54b8e260f8c2d660385df760b10221a",
+    "generated/mechanical/manual/final-head-diagrams/CORE47.png": "d8b0f52fe79bc0cdd2797c0534b59e75cfb5378feb7d693083a11988b03ef3fa",
+    "generated/mechanical/manual/final-head-diagrams/CORE48.png": "1b0fa4efcb806ebfd8f32e8ff5073e28e0adc4fb09493ef44ca1727c97bcb447",
+    "generated/mechanical/manual/final-head-diagrams/CORE49.png": "3b6bf466fab4ff3142fbb1b8aecdfca7044425cf2f6e42f81c58bd0c91c03577",
+    "generated/mechanical/manual/final-head-diagrams/TT01.png": "2e3a54e9252417e4dc963243cb0bcf8b457872b8a795fd9d3584680bd4180fa0",
+    "generated/mechanical/manual/final-head-diagrams/TT02.png": "ed59709f8df37665761b36d9388edaf5310313be3bbba57d0778b62167a030b7",
+    "generated/mechanical/manual/final-head-diagrams/TT03.png": "d93f26f0d08becf39f178620559cc39d6f387e31ab22df6bbe28dbaa4897cf28",
+    "generated/mechanical/manual/final-head-diagrams/TT04.png": "cd5b936d9e1a50c027425918706b932a214bffbe4b38bb7288be377cc534c092",
+    "generated/mechanical/manual/final-head-diagrams/TT05.png": "b67cc72ec509473cbc9c0cdfec590b32468485e348a9e6349560c26c818114cb",
+    "generated/mechanical/manual/final-head-diagrams/TT06.png": "56a1380541f7ceb66f0bdfdda5a2e42610114c7e03c9e14be8bd76647210aaf9",
+    "generated/mechanical/manual/final-head-diagrams/TT07.png": "bf406d80f9612aed82f7374f7c2fcc247cdc491633de1f75feedb885c568e642",
+    "generated/mechanical/manual/final-head-diagrams/TT08.png": "6c8d8cacf94fe2c40396b38bd6a7bdf759c5ebad4030fd4cd6322e7843f0734a",
+    "generated/mechanical/manual/final-head-diagrams/TT09.png": "2178234654ae6284ce958b6a9111728ef5fbdee36139b37505b3c7f188f7e1c7",
+    "generated/mechanical/manual/final-head-diagrams/opening.png": "ea09a7885c1a627e19ddaa6ccd27c809eb5df9420416df2cc5a92a07fc7ae4be",
+    "generated/mechanical/manual/final-head-opening-audit.json": "e3c2a31539ae619ba64833ca76f411f20212efc27b76f6e4d2f41cd6d5db1219",
+    "generated/mechanical/manual/final-head-render-audit.json": "41d02c45ea545198d6c8d954c66113ca787ae9fa5406c149e0e0bb8681f07554",
+    "mechanical/assembly/final-head-steps.json": "c3e47c122603aa36b23a0a0ed6631dbdb542cf2312213ddaeebcf12ba0ba7e17",
+    "generated/mechanical/manual/final-head-validation.json": "5f305f94cbff74445c27bd08d3011c8cc2d7dcfbcddb3872d531bcce5c30197d",
+    "generated/mechanical/manual/guide.json": "4fb6fd583bf7395c97f4320a158746e50570df7c83fc1f62e4077b709249dd16",
     "generated/mechanical/manual/images/BASE-BAS-01.png": "55c30aecea47a70be788cf4ec36dd7e1f7df88004e6ab31361b2252ff7ccaca8",
     "generated/mechanical/manual/images/BASE-BAS-02.png": "be78e8f8bedcd0226db4ee7e3bba41663fef3af75e38173576befb9c7c7f5b25",
     "generated/mechanical/manual/images/BASE-BAS-03.png": "3d9a68a3f9083a4958bb4ce3cbb97e6fd2242980b6b72558ea3c9b809dd1947b",
@@ -339,22 +461,22 @@
     "generated/mechanical/manual/images/BASE-BAS-RB-01.png": "db47c02defebec70d51eabbf6defedb15686afbcc8a7cb227d865959638d79b2",
     "generated/mechanical/manual/images/BASE-BAS-RB-02.png": "c197bd247eecdc6dd8900eb8f52b5b5d96a7e2792657eddbe841b43bad1bec19",
     "generated/mechanical/manual/images/BASE-BAS-RB-03.png": "64726b27f5f08bcbf41891c192a5a791eff515761ffcb7076691827243aa05fa",
-    "generated/mechanical/manual/manual.md": "9b7bbf37efef5967fc3e5860fc5439b077aee42e84809566627dd3b729fccc0d",
-    "generated/mechanical/manual/manual.pdf": "81ce2dd2f55ca37d1f7b351562f859ef7138f6f5303d808e63001285b1a67443",
-    "generated/mechanical/manual/pdf-layout-check.json": "dd9217fef45a17e11234c9eec8e450fd3c3b3e4008f8f0a4187e36ff748df735",
+    "generated/mechanical/manual/manual.md": "cc398261ceb5c1c4c2c3a2cfcc95f81a37a1e9a43caf64a61686e7704fef9a12",
+    "generated/mechanical/manual/manual.pdf": "7f8797266b45528aba956f696e16ce78ed451afabef5b1d4b01756254d1c6166",
+    "generated/mechanical/manual/pdf-layout-check.json": "cd843f6171813aace3dc52322f805a109bbc481191f77363363c3c3a8fb8ca3c",
     "generated/mechanical/manual/support-diagrams/092.png": "fa3abed7ae293312663b67dc8c41635b3560f9bb5516d178a16fcdc92c27c16e",
     "mechanical/assembly/support-steps.json": "24284b26a0cc8a13c1b2035ac0fee27534e2b2d3a240969eca684cec022a2e55",
-    "generated/mechanical/models/FB0-held.mpd": "993717d1f542e594083c352dfeb914d58b0dd81e539f743df2aeda197abca78a",
-    "generated/mechanical/models/FB0-open.mpd": "b2b43f6f2525a4807291f8db5ac3e19638dbf94e6dba52b42f4e5e1b90e991af",
-    "generated/mechanical/models/LR90-open.mpd": "808282df55afa75ceaec2464f40f0f76c7dfbc6db0ea0fecf8fe644efac4a245",
-    "generated/mechanical/models/both-held.mpd": "90572d78f4651c8bdeb0a77e46f2480ddcd2cae138b484513a54cd61db21014a",
-    "generated/mechanical/models/head-closed.mpd": "1a025775cc880bddbdf83183d4fdb487883b6abb0237090590431fca4da14d84",
-    "generated/mechanical/models/head-open25.mpd": "ecfead3a2f73b8d2e1f71d895cd6ea44d4362f527f27c36aaf84be71a589cb2d",
-    "generated/mechanical/models/loading-all50.mpd": "8cbcb97ee69f96b2bc9406cf7ebcbb50054db09c9a29bd0c287bc3ca83f869a6",
-    "generated/mechanical/models/support-down40_8.mpd": "957f36e1009a691b6676f6513b2f0841a07bda0cb14d2403cc56eab18bf5497a",
-    "generated/mechanical/models/support-held.mpd": "8e6359f9dd3e5c153b6fa38850cea58edbf9f2fb95468a7f7622cd3f8b330419",
-    "generated/mechanical/models/support-only-down40_8.mpd": "f2742af9864e26e5b61769ba196ddc09ebeba034f67185be8e9a8e4452d6ab66",
-    "generated/mechanical/models/support-raised.mpd": "aeceeedfc35f1829f12020d14dd632fb1da6545bcfc8d654aa533d3db64bbe75",
-    "generated/mechanical/subsystem-BOM.csv": "df42441dd68a5227f8c70c222585c48a8b622c18953714f6f23eb9fc45f2dbff"
+    "generated/mechanical/models/FB0-held.mpd": "519b20e396481c327cb2edfaece90f6b54db945661a53e509d286d23771aa31e",
+    "generated/mechanical/models/FB0-open.mpd": "038447e0ee8f3d014296cdd6fd338cb696146e565f13529cccab21c8ab3204fa",
+    "generated/mechanical/models/LR90-open.mpd": "f5f23610a9550fe496855eb3a58bf587360da95081ec8c37dfdadb14865ab5b1",
+    "generated/mechanical/models/both-held.mpd": "eaefa7ec9f1d924995a51d6b252963783f16f9dfe848963fc90c08584248b163",
+    "generated/mechanical/models/head-closed.mpd": "0c8eb6041884f0108c96082b5d5f21ec8102d9f469bbaad175261c158bba9e59",
+    "generated/mechanical/models/head-open25.mpd": "84cab9c890ed004681407ef74eaa0c43c735bad2cafa7323e9bd87310c443f62",
+    "generated/mechanical/models/loading-all50.mpd": "01329ff6a53e7963db77c489e50922cedcd759c6144aa3963dcd9749ca98a6b3",
+    "generated/mechanical/models/support-down40_8.mpd": "e2f17ae724a23d578d8c9294ac8e85cd74115aaa2c4b65e4a4cdce344eecd67f",
+    "generated/mechanical/models/support-held.mpd": "9db513df5dcc12b71bce683554c39132a445345689fdc4cd33816bc24d3b95b2",
+    "generated/mechanical/models/support-only-down40_8.mpd": "cb14234a04ccc71e8981d5d252a7e42f5efd755ff7074521a9e683c3eb39bf06",
+    "generated/mechanical/models/support-raised.mpd": "674328e065e166934007df47e71c7ac40d6def82b193b614584d6e81678edca7",
+    "generated/mechanical/subsystem-BOM.csv": "6ce308ba464f7fc07c3dbb826bac60fffceb7f3574aa68f2277ff05a6674d7b2"
   }
 }

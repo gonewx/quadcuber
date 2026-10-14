@@ -8,7 +8,7 @@ H=MANUAL_OUTPUT
 class TurntableFix(unittest.TestCase):
  def test_separate_prerequisites_and_exact_final_partition(self):
   b=json.loads((ASSEMBLY/'final-head-steps.json').read_text());p=b['prerequisites'];added=[i for s in b['steps']for i in s['added_part_ids']]
-  self.assertEqual(p['prebuilt_core_count'],0);self.assertEqual(len(added),165);self.assertEqual(len(set(added)),165);self.assertEqual(set(added)|set(p['deferred_interface_part_ids']),set(range(1,168)))
+  self.assertEqual(p['prebuilt_core_count'],0);self.assertEqual(len(added),167);self.assertEqual(len(set(added)),167);self.assertEqual(set(added)|set(p['deferred_interface_part_ids']),set(range(1,170)))
  def test_fixation_precedes_core_head_merge_without_closed_entry(self):
   b=json.loads((ASSEMBLY/'final-head-steps.json').read_text());ss=b['steps'];new=[s for s in ss if s['id'].startswith('HEAD-TT-')]
   self.assertEqual(len(new),9);self.assertEqual({i for s in new for i in s['added_part_ids']},set(range(34,49))|{86})
@@ -18,10 +18,10 @@ class TurntableFix(unittest.TestCase):
   for s in new[:-1]:self.assertFalse(set(range(24,30))&set(s['visible_part_ids']))
   for s in ss:
    if s['number']<at[86]:self.assertNotIn(86,s['visible_part_ids'])
-  self.assertEqual([s['id']for s in ss if s['id'].startswith('HEAD-FINAL-')],[f'HEAD-FINAL-{i:02d}'for i in range(1,31)])
+  self.assertEqual([s['id']for s in ss if s['id'].startswith('HEAD-FINAL-')],[f'HEAD-FINAL-{i:02d}'for i in range(1,35)])
  def test_four_arms_and_global_accounting(self):
-  g=json.loads((H/'guide.json').read_text());self.assertEqual(len(g['steps']),542);self.assertEqual(g['coverage']['prebuilt_core_total_parts'],0);self.assertEqual(g['coverage']['direct_assembly_parts'],938)
-  self.assertEqual(g['coverage']['model_count_working'],938);self.assertTrue(g['coverage']['original_arm_from_scratch'])
+  g=json.loads((H/'guide.json').read_text());self.assertEqual(len(g['steps']),558);self.assertEqual(g['coverage']['prebuilt_core_total_parts'],0);self.assertEqual(g['coverage']['direct_assembly_parts'],946)
+  self.assertEqual(g['coverage']['model_count_working'],946);self.assertTrue(g['coverage']['original_arm_from_scratch'])
   for arm in ['R','L','F','B']:
-   seq=[s for s in g['steps']if s.get('arm')==arm and s.get('source_step_id','').startswith('HEAD-')];self.assertEqual(len(seq),88);self.assertEqual(len([s for s in seq if '-HEAD-TT-'in s['source_step_id']]),9)
+   seq=[s for s in g['steps']if s.get('arm')==arm and s.get('source_step_id','').startswith('HEAD-')];self.assertEqual(len(seq),92);self.assertEqual(len([s for s in seq if '-HEAD-TT-'in s['source_step_id']]),9)
 if __name__=='__main__':unittest.main()

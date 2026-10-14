@@ -53,7 +53,7 @@ for arm,idx,ds in [('R',0,'从世界-Z外侧沿+Z装入'),('L',11,'从世界+Z�
   q=np.concatenate(pts);lo=q.min(0)-4;hi=q.max(0)+4;ax.set(xlim=(lo[0],hi[0]),ylim=(lo[1],hi[1]+14),zlim=(lo[2],hi[2]));ax.set_box_aspect([hi[0]-lo[0],hi[1]-lo[1]+14,hi[2]-lo[2]]);ax.set_proj_type('ortho');ax.view_init(elev=23,azim=135);ax.axis('off');arrow(ax,[-216,104 if panel==0 else 78,66],[-216,104 if panel==0 else 78,36 if panel==0 else 40])
   fig.text(.05+panel*.49,.805,'1  84号销先装入底框半根（放大）' if panel==0 else '2  81号9L梁套住三根露出销',fontsize=12,color=INK)
  fig.text(.04,.105,'销84挡圈留在底框外表面；侧梁81随后贴合该挡圈，三枚销的挡圈都不穿过宿主孔。',fontsize=10,color=INK)
- fig.text(.04,.065,'灰色为已装件的局部网格；蓝色为本小步装入的预留散件。单臂完成状态共167件。',fontsize=10,color=INK)
+ fig.text(.04,.065,'灰色为已装件的局部网格；蓝色为本小步装入的预留散件。单臂完成状态共169件。',fontsize=10,color=INK)
  fig.text(.04,.026,'真实LDraw网格；方向示意不等于手部接近、插入力、保持或承载验证。',fontsize=9,color='#65777f')
  p=H/'diagrams'/f'brace-{arm}.png';fig.savefig(p,dpi=120);plt.close(fig)
  ids=[81,84];data=dict(revision=C.REVISION,arm=arm,original_arm_indices1=ids,remaining_pin_indices1=[82,83],base_frame_id=f'B{idx+1:02d}',direction_zh=ds,part_records=[{'index1':i,'ldraw':local[i-1].moved(R).ldraw()}for i in ids],native_mesh=True,image_sha256=hashlib.sha256(p.read_bytes()).hexdigest());p.with_suffix('.json').write_text(json.dumps(data,ensure_ascii=False,indent=2));print(arm,flush=True)

@@ -1,5 +1,5 @@
-> 最终机械版：**542 步、938 件**（120 件底盘＋668 件四臂＋150 件支承与重力复位杠杆）。
-> [整机 3D](generated/site/index.html) · [542 步组装](generated/site/integrated-assembly.html) · [完整 PDF](generated/mechanical/manual/manual.pdf) · [最终 BOM](generated/mechanical/final-BOM.csv) · [生成源码与重建](mechanical/README.md)
+> 最终机械版：**558 步、946 件**（120 件底盘＋676 件四臂＋150 件支承与重力复位杠杆；夹指为轮胎转 90° 压头）。
+> [整机 3D](generated/site/index.html) · [558 步组装](generated/site/integrated-assembly.html) · [完整 PDF](generated/mechanical/manual/manual.pdf) · [最终 BOM](generated/mechanical/final-BOM.csv) · [生成源码与重建](mechanical/README.md)
 > **GitHub 仓库为主源码，Sites 仅用于发布。** 当前机械设计见 `mechanical/`；早期 v4 改装资料保留用于历史追溯。实体装配、承载、重力回落与带电联锁仍待验收。
 
 # quadcuber
@@ -123,7 +123,7 @@ python -m unittest -v
 | `docs/perfboard.md` | 可拔插洞洞板设计：逐孔安装、镜像焊接图、模块排针座及上电验收 |
 | `docs/lego/` | 库存和兼容导航；历史原件通过固定 Git 提交查阅 |
 | `mechanical/`、`web/`、`tools/` | 机械／网页源码及少量打包、重建入口 |
-| `mechanical/` | 最终机械模型、542 步图解与 PDF、生成器、离线阅读器和 Sites 页面源码 |
+| `mechanical/` | 最终机械模型、558 步图解与 PDF、生成器、离线阅读器和 Sites 页面源码 |
 | `tests/` | 控制及最终机械一致性测试 |
 
 ## Prompts

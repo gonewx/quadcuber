@@ -1,4 +1,5 @@
 part,quantity,baseline_quantity,delta
+10197.dat,8,0,8
 11478.dat,4,2,2
 14720.dat,1,1,0
 15100.dat,6,6,0
@@ -9,11 +10,11 @@ part,quantity,baseline_quantity,delta
 2780.dat,268,268,0
 32002.dat,0,2,-2
 32013.dat,4,4,0
-32054.dat,8,10,-2
+32054.dat,0,10,-10
 32056.dat,0,32,-32
 32062.dat,12,12,0
 32073.dat,5,5,0
-32123a.dat,90,100,-10
+32123a.dat,106,100,6
 32140.dat,7,7,0
 32278.dat,27,14,13
 32316.dat,33,33,0
@@ -33,12 +34,13 @@ part,quantity,baseline_quantity,delta
 39793.dat,4,4,0
 40490.dat,28,20,8
 41677.dat,4,4,0
-42610.dat,8,8,0
+42610.dat,0,8,-8
 43857.dat,5,3,2
 44294.dat,4,4,0
 4519.dat,12,12,0
-50945_nominal.dat,8,8,0
+50945_nominal.dat,0,8,-8
 55615.dat,16,16,0
+59895.dat,8,0,8
 60483.dat,16,0,16
 62462.dat,3,1,2
 64179.dat,20,20,0

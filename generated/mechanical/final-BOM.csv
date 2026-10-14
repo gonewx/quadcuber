@@ -1,4 +1,5 @@
 part,quantity
+10197.dat,8
 11478.dat,4
 14720.dat,1
 15100.dat,6
@@ -8,10 +9,9 @@ part,quantity
 23948.dat,1
 2780.dat,268
 32013.dat,4
-32054.dat,8
 32062.dat,12
 32073.dat,5
-32123a.dat,90
+32123a.dat,106
 32140.dat,7
 32278.dat,27
 32316.dat,33
@@ -31,12 +31,11 @@ part,quantity
 39793.dat,4
 40490.dat,28
 41677.dat,4
-42610.dat,8
 43857.dat,5
 44294.dat,4
 4519.dat,12
-50945_nominal.dat,8
 55615.dat,16
+59895.dat,8
 60483.dat,16
 62462.dat,3
 64179.dat,20

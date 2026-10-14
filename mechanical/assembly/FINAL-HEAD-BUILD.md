@@ -4,12 +4,12 @@ This package describes direct assembly of the final 60483 head, repeated indepen
 
 ## Coverage and inputs
 
-- Final arm inventory: 167 instances; four arms: 668.
+- Final arm inventory: 169 instances; four arms: 676 (tyre-90 gripper front, 2026-10-14).
 - No prebuilt core or shaft input. Every component is explicitly introduced from its BOM unit. Finished motors and servos are purchased units; their internals are not disassembled.
-- 88 local steps explicitly introduce 165 instances once. The two deferred interface parts are #84 (2780) then #81 (40490), introduced once after the arm seats on the base.
+- 92 local steps explicitly introduce 167 instances once. The two deferred interface parts are #84 (2780) then #81 (40490), introduced once after the arm seats on the base.
 - The wall/motor/platform assembly is fully described using stable CORE-01…49 IDs. HEAD-FINAL-01 now introduces just the lower wall frame; the remaining original HEAD-FINAL IDs are preserved. HEAD-TT-01…09 remain lower-turntable steps.
 - Wall foot pins #49/#50 are inserted into the wall before seating. Bottom connector #77 is first attached horizontally to vertical beam #78 off the base; its downward pins later enter the base along with the arm. Do not install a duplicate #77 on the base.
-- The guide ledger namespaces base, support and the four arms, and assigns every one of the 938 instances a unique introduction page. Reference or whole-model views do not count as introductions.
+- The guide ledger namespaces base, support and the four arms, and assigns every one of the 946 instances a unique introduction page. Reference or whole-model views do not count as introductions.
 
 ## Assembly order
 
@@ -19,7 +19,7 @@ Then install lower turntable #34, six long pins #35–40, five short pins #42/#4
 
 Build the two side panels separately. Preinsert the four turntable long pins, connect the −Z panel, and build each root with its −Z bracket, axle, outer half bush, inner full bush, jaw, and second full bush. The +Z side remains open until both inner stacks are threaded. Then fit the +Z panel and finish its brackets and half bushes.
 
-Build the wheel jaws with the second thin beam absent during first-side shaft/pin insertion. For the jaw linkage, preinsert each 3673 pin halfway into its jaw, fit the two links independently from opposite sides, and only then connect the central crosshead/axle/outer half bushes. No pin collar is instructed to pass through an already closed pair of host bores.
+Build each tyre-90 jaw front from one side: −Z 32449 with the hole-5 2L axle and hole-7 3L axle, then the 32039 seat on its 2L cross axle, then the +Z 32449 pressed onto all three axle ends, and finally the wheel axle, the pre-assembled 32123+59895 wheel and the outer 32123 retainer. For the jaw linkage, preinsert each 3673 pin halfway into its jaw, fit the two links independently from opposite sides, and only then connect the central crosshead/axle/outer half bushes. No pin collar is instructed to pass through an already closed pair of host bores.
 
 Mate the head to the core and insert the 12L pushrod while the crank connection remains open. Final crank closure is conditional on an independently established matching servo pose and natural hole alignment. Stop if alignment would require forced backdrive or powered positioning. The package gives no powered calibration commands.
 
@@ -56,7 +56,7 @@ Each step includes `source_step_id`, `title`, `parts`, `image`, `instructions`, 
 
 `visible_part_ids` is a local completed-state view, not the whole accumulated arm. Parts already built but outside a local view remain in their independently supported subassemblies. `introduced_part_ids` is the exact cumulative inventory. All lists are copied at step creation to preserve snapshots.
 
-`new_parts` and `added_part_ids` exclude only the two deferred interface instances. Their union is exactly the 165 instances assembled here. Prebuilt 0 + added 165 + deferred 2 is an exact, disjoint partition of all 167 final arm instances.
+`new_parts` and `added_part_ids` exclude only the two deferred interface instances. Their union is exactly the 167 instances assembled here. Prebuilt 0 + added 167 + deferred 2 is an exact, disjoint partition of all 169 final arm instances.
 
 ## Evidence limits
 
