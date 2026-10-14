@@ -7,7 +7,7 @@
   "layers": 2,
   "erc": "Errors 0",
   "drc": [
-    "Found 34 DRC violations ",
+    "Found 26 DRC violations ",
     "Found 0 unconnected pads ",
     "Found 0 Footprint errors "
   ],
@@ -24,9 +24,9 @@
     "quadcuber-b1-job.gbrjob"
   ],
   "sha256": {
-    "quadcuber-b1.kicad_pcb": "e97011cda70fe486fed595980d4792b7620caba4b8834baf6a2ac78a0c6f4cf4",
-    "quadcuber-b1.kicad_sch": "02ddf0c8326bbeac9d7b37d783d600c9f5f959872cabfe3594fb1a1395ea7306",
-    "quadcuber-b1-gerber.zip": "6d651f7ba3c9b7042619ed2bb64c7a8c08cce3cb2af4a61ccfb8f96dadefec3a",
-    "bom-hand-solder.csv": "964a53b58b9d537af2043e20ec827af6c0654a6b1dbf4d3267ebdc179fc9a0eb"
+    "quadcuber-b1.kicad_pcb": "a9af873dc9b10d807c79b568d6a53178d01b38671c0f59fc154cf47a7285da76",
+    "quadcuber-b1.kicad_sch": "5eff89e043e1f9b967718a2b0c5498951f3e3da17c63b38f7f28ca1daa65b15f",
+    "quadcuber-b1-gerber.zip": "0a5608fe2519a40677488c4a9ab9903a784940252b5de6cacf6a8e7b4276d36c",
+    "bom-hand-solder.csv": "6c89d69d9dd7cb92b6cd80db1a983f986863fb7a45385d6ea17ba20319f5fdaa"
   }
 }

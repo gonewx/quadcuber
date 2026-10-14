@@ -16,16 +16,16 @@ PCB = HERE / 'quadcuber-b1.kicad_pcb'
 JAR = sys.argv[1]
 PASSES = sys.argv[2] if len(sys.argv) > 2 else '60'
 
-# 网络类（单位 µm）与 generate.py 的 NETCLASSES 一致。VM/舵机 5V 主干由 generate.py 预先画好并锁定
-# （VM 2mm、舵机 5V 1.5mm），这里只补 1mm 支线；电机 0.8mm 才能从 DRV8871 的 1.27mm 间距引脚引出。
+# 网络类（单位 µm）：线宽与 generate.py 的 NETCLASSES 一致，间距比 KiCad 规则多 0.05mm。VM/舵机 5V 主干由 generate.py 预先画好并锁定
+# （VM 2mm、舵机 5V 1.5mm），这里只补 0.8mm 支线（每臂 ≤1.5A）；电机 0.8mm 才能从 DRV8871 的 1.27mm 间距引脚引出。
 CLASSES = [
     ('Trunk', 2000, 300, lambda n: n in ('VIN', 'VIN_F')),
     ('Branch', 1500, 300, lambda n: n == 'BUCK_SW'),
-    ('Supply', 1000, 250, lambda n: n in ('VM', 'SERVO_5V')),
+    ('Supply', 800, 300, lambda n: n in ('VM', 'SERVO_5V')),
     ('Motor', 800, 250, lambda n: re.fullmatch(r'[RLFB]_M[12]', n)),
     ('Ground', 600, 250, lambda n: n == 'GND'),
     ('Logic5V', 600, 250, lambda n: n in ('5V_LOGIC', 'VSYS')),
-    ('Signal', 300, 250, lambda n: True),
+    ('Signal', 250, 250, lambda n: True),
 ]
 
 
@@ -63,5 +63,42 @@ with tempfile.TemporaryDirectory(prefix='b1-route-') as td:
                     '--gui.enabled=false'], check=True, timeout=1800)
     assert p.ImportSpecctraSES(b, str(ses)), 'SES 导入失败'
 p.ZONE_FILLER(b).Fill(b.Zones())
+
+# 地缝合过孔：在两面地铜都已覆盖、且离其他铜足够远的格点打过孔，把两面零散地铜连成一片。
+gnd = b.GetNetcodeFromNetname('GND')
+# 每层两份：整层地铜 all，和面积最大的主地铜 main（都向内收 0.55mm，保证过孔不碰其他铜）。
+# 只在“一面是主地铜”的位置打孔：既能把另一面的碎块接回主地，又不会把两块碎块互相接成新的孤岛。
+fills = {}
+for z in b.Zones():
+    if z.GetNetCode() == gnd:
+        for layer in (p.F_Cu, p.B_Cu):
+            if z.IsOnLayer(layer):
+                poly = z.GetFilledPolysList(layer).CloneDropTriangulation()
+                main_i = max(range(poly.OutlineCount()), key=lambda i: poly.Outline(i).Area())
+                main = p.SHAPE_POLY_SET()
+                main.AddPolygon(poly.Polygon(main_i))
+                for s in (poly, main):
+                    s.Deflate(p.FromMM(0.55), p.CORNER_STRATEGY_ROUND_ALL_CORNERS, p.FromMM(0.01))
+                fills[layer] = (poly, main)
+added = 0
+holes = [v.GetPosition() for v in b.GetTracks() if v.GetClass() == 'PCB_VIA']
+holes += [q.GetPosition() for q in b.GetPads() if q.GetDrillSize().x > 0]
+bbox = b.GetBoardEdgesBoundingBox()
+step = p.FromMM(4.0)
+for x in range(bbox.GetLeft() + step // 2, bbox.GetRight(), step):
+    for y in range(bbox.GetTop() + step // 2, bbox.GetBottom(), step):
+        pt = p.VECTOR2I(x, y)
+        far = all((h.x - x) ** 2 + (h.y - y) ** 2 > p.FromMM(1.5) ** 2 for h in holes)
+        (f_all, f_main), (b_all, b_main) = fills[p.F_Cu], fills[p.B_Cu]
+        if far and ((f_main.Contains(pt) and b_all.Contains(pt)) or (b_main.Contains(pt) and f_all.Contains(pt))):
+            v = p.PCB_VIA(b)
+            v.SetPosition(pt)
+            v.SetWidth(p.FromMM(0.8))
+            v.SetDrill(p.FromMM(0.4))
+            v.SetNetCode(gnd)
+            b.Add(v)
+            added += 1
+p.ZONE_FILLER(b).Fill(b.Zones())
+print('地缝合过孔：', added)
 p.SaveBoard(str(PCB), b)
 print('布线完成：', len(b.GetTracks()), '段走线/过孔')

@@ -36,35 +36,6 @@ def effect(sz=1.27, extra=''):
     return f'(effects (font (size {sz} {sz})) {extra})'
 
 
-# ---- 自建封装：自恢复保险丝，径向引脚间距 5.1mm --------------------------------------
-fp = p.FOOTPRINT(None)
-fp.SetFPID(p.LIB_ID('B1', 'Fuse_PTC_Radial_P5.10mm'))
-fp.SetReference('REF**')
-fp.SetValue('PTC')
-ls = p.LSET.AllCuMask()
-ls.AddLayer(p.F_Mask)
-ls.AddLayer(p.B_Mask)
-for num, x in [('1', 0.0), ('2', 5.1)]:
-    pad = p.PAD(fp)
-    pad.SetNumber(num)
-    pad.SetAttribute(p.PAD_ATTRIB_PTH)
-    pad.SetShape(p.PAD_SHAPE_RECTANGLE if num == '1' else p.PAD_SHAPE_CIRCLE)
-    pad.SetSize(mm(2.0, 2.0))
-    pad.SetDrillSize(mm(1.0, 1.0))
-    pad.SetLayerSet(ls)
-    pad.SetPosition(mm(x, 0))
-    fp.Add(pad)
-for layer, (x0, y0, x1, y1) in [(p.F_SilkS, (-1.6, -2.2, 6.7, 2.2)), (p.F_CrtYd, (-1.8, -2.5, 6.9, 2.5)),
-                                 (p.F_Fab, (-1.4, -2.0, 6.5, 2.0))]:
-    sh = p.PCB_SHAPE(fp)
-    sh.SetShape(p.SHAPE_T_RECT)
-    sh.SetStart(mm(x0, y0))
-    sh.SetEnd(mm(x1, y1))
-    sh.SetLayer(layer)
-    sh.SetWidth(p.FromMM(0.12))
-    fp.Add(sh)
-p.PCB_IO_KICAD_SEXPR().FootprintSave(str(LIB), fp)
-
 (HERE / 'fp-lib-table').write_text(
     '(fp_lib_table\n  (version 7)\n  (lib (name "B1")(type "KiCad")(uri "${KIPRJMOD}/lib/B1.pretty")(options "")(descr "B1 自包含封装"))\n)\n')
 (HERE / 'sym-lib-table').write_text(
@@ -132,15 +103,16 @@ sch += '(sheet_instances (path "/" (page "1"))) (embedded_fonts no))'
 (HERE / f'{NAME}.kicad_sch').write_text(sch)
 
 # ---- 工程文件：网络类与设计规则（2 层 1oz，规则留余量） ---------------------------------
-# 与 route.py 的 DSN 网络类保持同一组线宽/间距，避免 freerouting 与 KiCad DRC 口径不一致。
-NETCLASSES = [  # (名称, 线宽, 间距, 网络匹配)
-    ('Default', 0.3, 0.25, None),
-    ('Trunk', 2.0, 0.3, ['VIN', 'VIN_F']),
-    ('Branch', 1.5, 0.3, ['BUCK_SW']),
-    ('Supply', 1.0, 0.25, ['VM', 'SERVO_5V']),
-    ('Motor', 0.8, 0.25, ['*_M?']),
-    ('Ground', 0.6, 0.25, ['GND']),
-    ('Logic5V', 0.6, 0.25, ['5V_LOGIC', 'VSYS']),
+# 与 route.py 的 DSN 网络类保持同一组线宽。
+NETCLASSES = [  # (名称, 线宽, KiCad DRC 间距, 网络匹配)；route.py 给 freerouting 的间距再加 0.05mm 余量，
+    # 避免 Pico 异形焊盘多边形近似造成 0.002mm 级别的 DRC 误差。
+    ('Default', 0.25, 0.2, None),
+    ('Trunk', 2.0, 0.25, ['VIN', 'VIN_F']),
+    ('Branch', 1.5, 0.25, ['BUCK_SW']),
+    ('Supply', 0.8, 0.2, ['VM', 'SERVO_5V']),
+    ('Motor', 0.8, 0.2, ['*_M?']),
+    ('Ground', 0.6, 0.2, ['GND']),
+    ('Logic5V', 0.6, 0.2, ['5V_LOGIC', 'VSYS']),
 ]
 classes, patterns = [], []
 for name, width, clr, members in NETCLASSES:
@@ -214,19 +186,89 @@ for layer in (p.F_Cu, p.B_Cu):
     z.SetPadConnection(p.ZONE_CONNECTION_THT_THERMAL)
     z.SetThermalReliefGap(p.FromMM(0.4))
     z.SetThermalReliefSpokeWidth(p.FromMM(0.8))
+    z.SetIslandRemovalMode(p.ISLAND_REMOVAL_MODE_ALWAYS)
     o = z.Outline()
     o.NewOutline()
     for x, y in [(0.5, 0.5), (W - 0.5, 0.5), (W - 0.5, H - 0.5), (0.5, H - 0.5)]:
         o.Append(p.FromMM(OX + x), p.FromMM(OY + y))
     b.Add(z)
+# 贴片件接地扇出：每个贴片 GND 焊盘就近打孔到底层地铜（freerouting 把地当平面，不布地线）。
+# DRV8871 的 1、7 脚直接用短线并到散热焊盘，散热焊盘本身已有过孔。
+def gnd_fanout(f):
+    pads = list(f.Pads())
+    smd = [q for q in pads if q.GetAttribute() == p.PAD_ATTRIB_SMD]
+    if not smd:
+        return
+    c = f.GetPosition()
+    for q in smd:
+        if q.GetNetname() != 'GND' or not q.GetNumber():
+            continue
+        if any(o is not q and o.GetNumber() == q.GetNumber() and o.GetSize().x > p.FromMM(4) for o in pads):
+            continue   # 与大散热焊盘同号的小脚（LM2596 的 3 脚）经散热焊盘接地
+        pos = q.GetPosition()
+        if f.GetReference().startswith('U') and f.GetValue() == 'DRV8871':
+            if q.GetNumber() in ('1', '7'):
+                ep = next(e for e in pads if e.GetNumber() == '9' and e.GetAttribute() == p.PAD_ATTRIB_SMD)
+                epp = ep.GetPosition()
+                end = p.VECTOR2I(pos.x, epp.y + (p.FromMM(1.2) if pos.y > epp.y else -p.FromMM(1.2)))
+                if abs(pos.x - epp.x) > abs(pos.y - epp.y):
+                    end = p.VECTOR2I(epp.x + (p.FromMM(1.2) if pos.x > epp.x else -p.FromMM(1.2)), pos.y)
+                t = p.PCB_TRACK(b)
+                t.SetStart(pos)
+                t.SetEnd(end)
+                t.SetWidth(p.FromMM(0.5))
+                t.SetLayer(p.F_Cu)
+                t.SetNet(nets['GND'])
+                t.SetLocked(True)
+                b.Add(t)
+            continue
+        others = [o.GetPosition() for o in smd if o is not q and o.GetNetname() != 'GND']
+        ref = others[0] if others else c
+        dx, dy = pos.x - ref.x, pos.y - ref.y
+        if dx == 0 and dy == 0:
+            dx = 1
+        n = (dx * dx + dy * dy) ** 0.5
+        size = q.GetSize()
+        reach = max(size.x, size.y) / 2 + p.FromMM(0.9)
+        via_at = p.VECTOR2I(int(pos.x + dx / n * reach), int(pos.y + dy / n * reach))
+        if q.GetSize().x > p.FromMM(4) and q.GetSize().y > p.FromMM(4):
+            via_at = pos   # 大散热焊盘（LM2596 散热片）直接在焊盘内打孔
+        t = p.PCB_TRACK(b)
+        t.SetStart(pos)
+        t.SetEnd(via_at)
+        t.SetWidth(p.FromMM(0.6))
+        t.SetLayer(p.F_Cu)
+        t.SetNet(nets['GND'])
+        t.SetLocked(True)
+        b.Add(t)
+        v = p.PCB_VIA(b)
+        v.SetPosition(via_at)
+        v.SetWidth(p.FromMM(0.8))
+        v.SetDrill(p.FromMM(0.4))
+        v.SetNet(nets['GND'])
+        v.SetLocked(True)
+        b.Add(v)
+
+
+for f in b.GetFootprints():
+    gnd_fanout(f)
+
 # 固定电源主干（锁定，自动布线器只补支线）。坐标为板框内 mm。
 TRUNKS = [
-    # VM：C2 正极 -> 板中竖线 x=60.8 -> 底层横条 y=57.7，横贯四臂上方
-    ('VM', p.B_Cu, 2.0, [(54, 7), (54, 12), (60.8, 12), (60.8, 57.7)]),
-    ('VM', p.B_Cu, 2.0, [(2.5, 57.7), (96.5, 57.7)]),
+    # VM：过孔 (36,27) -> 底层竖线 x=36 -> 底层横条 y=57.4（x 13~86，只覆盖四颗 DRV8871 的范围）。
+    # 横条两端留空，Pico 右列和左侧的信号可以在底层绕过主干下到各臂。
+    ('VM', p.B_Cu, 2.0, [(36, 27), (36, 57.4)]),
+    ('VM', p.B_Cu, 2.0, [(13, 57.4), (86, 57.4)]),
     # 舵机 5V：L1 输出端 -> 左边缘 -> 顶层横条 y=79.5，横贯四臂下方
-    ('SERVO_5V', p.F_Cu, 1.5, [(22, 45), (22, 52.5), (1.8, 52.5), (1.8, 79.5), (93, 79.5)]),
+    ('SERVO_5V', p.F_Cu, 1.5, [(4.05, 45), (4.05, 52.5), (1.8, 52.5), (1.8, 79.5), (93, 79.5)]),
 ]
+v = p.PCB_VIA(b)
+v.SetPosition(mm(OX + 36, OY + 27))
+v.SetWidth(p.FromMM(1.2))
+v.SetDrill(p.FromMM(0.6))
+v.SetNet(nets['VM'])
+v.SetLocked(True)
+b.Add(v)
 for net, layer, width, pts in TRUNKS:
     for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
         t = p.PCB_TRACK(b)

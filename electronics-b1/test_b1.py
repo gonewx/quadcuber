@@ -76,12 +76,14 @@ class B1Pinmap(unittest.TestCase):
 
     def test_power_path(self):
         p = self.pads
-        self.assertEqual([p[('Q1', k)] for k in '123'], ['GATE', 'VIN_F', 'VM'])        # G D S
+        self.assertEqual([p[('Q1', k)] for k in '12345678'], ['VM'] * 3 + ['GATE'] + ['VIN_F'] * 4)  # AO4407A: S S S G D D D D
         self.assertEqual([p[('DZ1', k)] for k in '12'], ['VM', 'GATE'])                 # 阴极接源极
-        self.assertEqual([p[('U1', k)] for k in '12345'], ['VM', 'BUCK_SW', 'GND', 'SERVO_5V', 'GND'])
-        self.assertEqual([p[('U2', k)] for k in '123'], ['VM', 'GND', '5V_LOGIC'])
+        self.assertEqual([p[('U1', k)] for k in '12345'], ['VM', 'BUCK_SW', 'GND', 'SERVO_5V', 'GND'])  # LM2596S
+        self.assertEqual([p[('U2', k)] for k in '123'], ['GND', '5V_LOGIC', 'VM'])      # AMS1117: GND OUT IN
+        self.assertEqual([p[('D2', k)] for k in '12'], ['BUCK_SW', 'GND'])
         self.assertEqual([p[('D3', k)] for k in '12'], ['VSYS', '5V_LOGIC'])
         self.assertEqual([p[('D1', k)] for k in '12'], ['VM', 'GND'])
+        self.assertEqual([p[('L1', k)] for k in '12'], ['BUCK_SW', 'SERVO_5V'])
 
     def test_netlist_matches_pcb(self):
         path = ROOT / 'generated/electronics-b1/netlist.xml'

@@ -72,29 +72,25 @@ def main():
         run('pcb', 'export', 'svg', '--mode-single', '--fit-page-to-board', '--exclude-drawing-sheet',
             '--layers', layers, *(['--mirror'] if mirror else []), '-o', OUT / f'{name}.svg', PCB)
 
-    # 手焊清单：按焊接顺序（矮的先焊），同型号合并。
-    order = ['DRV8871', '电阻', '二极管', '瓷片电容', '排针/排母', '保险丝', '电解电容', 'TO-220', '电感', '插座']
+    # 手焊清单：先贴片后通孔，贴片里先 IC（热风枪）再小件，最后焊高的通孔插座。同型号合并。
+    order = ['贴片 IC', '贴片电阻电容', '贴片二极管', '贴片保险丝', '贴片电解电容', '贴片电感', '排针/排母', '插座']
 
     def kind(c):
-        v, fp = c['value'], c['fp']
-        if c['ref'].startswith('U') and 'DRV' in v:
-            return 'DRV8871'
-        if fp.startswith('R_'):
-            return '电阻'
+        fp = c['fp']
+        if c['ref'][0] in 'UQ' and 'Pico' not in fp:
+            return '贴片 IC'
+        if fp.startswith(('R_0805', 'C_0805', 'R_2512')):
+            return '贴片电阻电容'
         if fp.startswith('D_'):
-            return '二极管'
-        if fp.startswith('C_Disc'):
-            return '瓷片电容'
+            return '贴片二极管'
+        if fp.startswith('Fuse'):
+            return '贴片保险丝'
+        if fp.startswith('CP_'):
+            return '贴片电解电容'
+        if fp.startswith('L_'):
+            return '贴片电感'
         if fp.startswith('PinHeader') or 'Pico' in fp:
             return '排针/排母'
-        if fp.startswith('Fuse'):
-            return '保险丝'
-        if fp.startswith('CP_'):
-            return '电解电容'
-        if fp.startswith('TO-220'):
-            return 'TO-220'
-        if fp.startswith('L_'):
-            return '电感'
         return '插座'
 
     groups = defaultdict(list)
