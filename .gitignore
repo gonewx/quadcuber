@@ -16,3 +16,7 @@ arm.log
 /output/
 /tmp/
 firmware/pico/arm.log
+
+# KiCad 本机文件：打开工程时的锁文件、每人各自的界面设置
+~*.lck
+*.kicad_prl
