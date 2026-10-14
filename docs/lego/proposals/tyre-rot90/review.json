@@ -1,0 +1,6813 @@
+{
+ "method": "真实 LDraw 网格名义几何。静态与部分回转：顶点＋0.3mm 棱线采样到三角形的精确距离；回转扫描每 2°；整圈回转用子午面二维距离（精确回转体）。同臂内按设计插接/贴面的零件对不计入。",
+ "not_computed": {
+  "items": [
+   "fullturn rot90 ('F', False, True, 0.0)",
+   "fullturn rot90 ('L', True, False, 0.0)",
+   "fullturn rot90 ('L', True, True, 0.0)"
+  ],
+  "reason": "托座上位时的整圈回转在工作中不会发生；同类已算项目均与托座相交，本 3 项计算进程反复退出，未取得结果"
+ },
+ "margins": {
+  "previous": {
+   "deltas_mm": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2
+   ],
+   "thetas_deg": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "margins_mm": {
+    "rubber": [
+     [
+      6.33,
+      5.71,
+      5.09,
+      4.46
+     ],
+     [
+      5.83,
+      5.21,
+      4.59,
+      3.96
+     ],
+     [
+      5.33,
+      4.71,
+      4.09,
+      3.47
+     ],
+     [
+      4.83,
+      4.21,
+      3.59,
+      2.97
+     ],
+     [
+      4.33,
+      3.71,
+      3.09,
+      2.47
+     ]
+    ],
+    "hardware": [
+     [
+      1.33,
+      0.74,
+      0.15,
+      -0.41
+     ],
+     [
+      0.83,
+      0.24,
+      -0.33,
+      -0.87
+     ],
+     [
+      0.33,
+      -0.25,
+      -0.81,
+      -1.3
+     ],
+     [
+      -0.17,
+      -0.73,
+      -1.17,
+      -1.3
+     ],
+     [
+      -0.67,
+      -1.05,
+      -1.17,
+      -1.3
+     ]
+    ]
+   }
+  },
+  "rot90": {
+   "deltas_mm": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2
+   ],
+   "thetas_deg": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "margins_mm": {
+    "rubber": [
+     [
+      2.34,
+      1.74,
+      1.13,
+      0.53
+     ],
+     [
+      1.85,
+      1.25,
+      0.65,
+      0.08
+     ],
+     [
+      1.37,
+      0.77,
+      0.18,
+      -0.34
+     ],
+     [
+      0.87,
+      0.28,
+      -0.26,
+      -0.7
+     ],
+     [
+      0.4,
+      -0.16,
+      -0.63,
+      -1.11
+     ]
+    ],
+    "hardware": [
+     [
+      3.9,
+      3.64,
+      3.45,
+      3.33
+     ],
+     [
+      3.76,
+      3.57,
+      3.45,
+      3.33
+     ],
+     [
+      3.68,
+      3.56,
+      3.45,
+      2.95
+     ],
+     [
+      3.67,
+      3.56,
+      3.07,
+      2.46
+     ],
+     [
+      3.67,
+      3.19,
+      2.58,
+      1.98
+     ]
+    ]
+   }
+  }
+ },
+ "clamp": {
+  "previous": {
+   "clamp": {
+    "tyre_to_cube_mm": -0.304,
+    "hardware_to_cube_mm": 1.093
+   },
+   "open25": {
+    "tyre_to_cube_mm": 13.911,
+    "hardware_to_cube_mm": 15.31
+   },
+   "contact_onset_jaw_deg": 4.273,
+   "contact_onset_stroke_mm": 0.449
+  },
+  "rot90": {
+   "clamp": {
+    "tyre_to_cube_mm": -0.437,
+    "hardware_to_cube_mm": 2.404
+   },
+   "open25": {
+    "tyre_to_cube_mm": 14.561,
+    "hardware_to_cube_mm": 14.84
+   },
+   "contact_onset_jaw_deg": 4.446,
+   "contact_onset_stroke_mm": 0.622
+  },
+  "common": {
+   "clamp_jaw_deg": 3.8417,
+   "open_jaw_deg": 25.0,
+   "pushrod_stroke_mm": 12.923,
+   "servo_crank_deg": [
+    149.26,
+    38.99
+   ]
+  }
+ },
+ "results": {
+  "previous": {
+   "state": {
+    "support-down40_8": [],
+    "LR90-open": [],
+    "both-held": [],
+    "loading-all50": [
+     {
+      "mm": 1.154,
+      "penetrating": false,
+      "part": "L#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 2.553,
+      "penetrating": false,
+      "part": "L#144 42610.dat 轮毂",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 2.885,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 18654.dat x_locator_middle_spacer"
+     },
+     {
+      "mm": 3.044,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32140.dat x_locator_native32140"
+     },
+     {
+      "mm": 3.1,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32316.dat x_locator_upper_bar"
+     },
+     {
+      "mm": 3.336,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 6558.dat x_locator_bar_to_thinLs_pin"
+     },
+     {
+      "mm": 3.947,
+      "penetrating": false,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 18654.dat x_locator_middle_spacer"
+     }
+    ],
+    "FB0-held": [
+     {
+      "mm": 0.729,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 1.154,
+      "penetrating": false,
+      "part": "L#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 1.96,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 1.96,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 2.553,
+      "penetrating": false,
+      "part": "L#144 42610.dat 轮毂",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 3.194,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 3.194,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 3.21,
+      "penetrating": false,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 3.21,
+      "penetrating": false,
+      "part": "B#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 3.58,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 3.58,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 23948.dat end_11L_axle"
+     }
+    ],
+    "FB0-open": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头支承薄梁",
+      "other": "support 32123a.dat end_retainer_-38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头支承薄梁",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32062.dat 轮毂贯穿轴",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#143 32062.dat 轮毂贯穿轴",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 23948.dat end_11L_axle"
+     }
+    ]
+   },
+   "fbroll": {
+    "20": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头支承薄梁",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头支承薄梁",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32062.dat 轮毂贯穿轴",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.002,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.013,
+      "penetrating": true,
+      "part": "F#143 32062.dat 轮毂贯穿轴",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.596,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.754,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 15100.dat seat_support15100_16_16"
+     },
+     {
+      "mm": 0.754,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 15100.dat seat_support15100_-16_-16"
+     }
+    ],
+    "30": [
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#143 32062.dat 轮毂贯穿轴",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.005,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头支承薄梁",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.006,
+      "penetrating": true,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.013,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.603,
+      "penetrating": false,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 1.007,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 2.652,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 3.766,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_16_16"
+     },
+     {
+      "mm": 3.766,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_-16_-16"
+     }
+    ],
+    "40": [],
+    "50": [
+     {
+      "mm": 2.885,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 18654.dat x_locator_middle_spacer"
+     },
+     {
+      "mm": 3.044,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32140.dat x_locator_native32140"
+     },
+     {
+      "mm": 3.1,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32316.dat x_locator_upper_bar"
+     },
+     {
+      "mm": 3.336,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 6558.dat x_locator_bar_to_thinLs_pin"
+     },
+     {
+      "mm": 3.947,
+      "penetrating": false,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 18654.dat x_locator_middle_spacer"
+     }
+    ],
+    "10": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头支承薄梁",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头支承薄梁",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#142 32054.dat 薄梁固定挡套销",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32062.dat 轮毂贯穿轴",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32062.dat 轮毂贯穿轴",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 32278.dat inner_arm_z32"
+     }
+    ],
+    "0": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头支承薄梁",
+      "other": "support 32123a.dat end_retainer_-38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头支承薄梁",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32062.dat 轮毂贯穿轴",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#143 32062.dat 轮毂贯穿轴",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 23948.dat end_11L_axle"
+     }
+    ]
+   },
+   "lrroll": {
+    "50": [],
+    "60": [],
+    "70": [],
+    "80": [],
+    "90": []
+   },
+   "fbclose": {
+    "0.0": [
+     {
+      "mm": 0.729,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 1.96,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 1.96,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 3.194,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 3.194,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 3.21,
+      "penetrating": false,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 3.21,
+      "penetrating": false,
+      "part": "B#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 3.58,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 3.58,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 23948.dat end_11L_axle"
+     }
+    ],
+    "0.25": [
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.634,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.777,
+      "penetrating": false,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.777,
+      "penetrating": false,
+      "part": "B#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.913,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.913,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 1.515,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 1.515,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 2.084,
+      "penetrating": false,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 2.084,
+      "penetrating": false,
+      "part": "B#144 42610.dat 轮毂",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 2.391,
+      "penetrating": false,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 23948.dat end_11L_axle"
+     }
+    ],
+    "0.5": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.004,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.007,
+      "penetrating": true,
+      "part": "B#144 42610.dat 轮毂",
+      "other": "support 32278.dat inner_arm_z-32"
+     }
+    ],
+    "0.75": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 42610.dat 轮毂",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32062.dat 轮毂贯穿轴",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#143 32062.dat 轮毂贯穿轴",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头支承薄梁",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头支承薄梁",
+      "other": "support 32123a.dat end_retainer_-38"
+     }
+    ]
+   },
+   "lrclose": {
+    "0.0": [],
+    "0.25": [],
+    "0.5": [],
+    "0.75": []
+   },
+   "drop": {
+    "10.0": [
+     {
+      "mm": 1.202,
+      "penetrating": false,
+      "part": "L#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 1.207,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 2.553,
+      "penetrating": false,
+      "part": "L#144 42610.dat 轮毂",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    ],
+    "20.0": [],
+    "0.0": [
+     {
+      "mm": 0.729,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 1.154,
+      "penetrating": false,
+      "part": "L#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 1.96,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 1.96,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 2.553,
+      "penetrating": false,
+      "part": "L#144 42610.dat 轮毂",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 3.194,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 3.194,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 3.21,
+      "penetrating": false,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 3.21,
+      "penetrating": false,
+      "part": "B#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 3.58,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 3.58,
+      "penetrating": false,
+      "part": "B#145 50945_nominal.dat 橡胶胎",
+      "other": "support 23948.dat end_11L_axle"
+     }
+    ],
+    "30.0": [],
+    "40.8": []
+   },
+   "fblever": {
+    "0": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 2.71,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    },
+    "2": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     "other": {
+      "mm": 2.652,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    },
+    "4": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 2.652,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    },
+    "6": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 2.803,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    },
+    "8": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 2.727,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_16_16"
+     }
+    },
+    "12": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32062.dat 轮毂贯穿轴",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 0.754,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_16_16"
+     }
+    },
+    "10": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     "other": {
+      "mm": 1.311,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_16_16"
+     }
+    },
+    "14": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 0.754,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_16_16"
+     }
+    },
+    "16": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.754,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_16_16"
+     }
+    },
+    "20": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头支承薄梁",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.754,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 15100.dat seat_support15100_16_16"
+     }
+    },
+    "18": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32062.dat 轮毂贯穿轴",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.754,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 15100.dat seat_support15100_16_16"
+     }
+    },
+    "28": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     "other": {
+      "mm": 2.157,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_16_16"
+     }
+    },
+    "26": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头支承薄梁",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.897,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_16_16"
+     }
+    },
+    "24": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.754,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_16_16"
+     }
+    },
+    "30": {
+     "lever": {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#143 32062.dat 轮毂贯穿轴",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 3.766,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_16_16"
+     }
+    },
+    "22": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.754,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 32523.dat seat_column_16_16"
+     }
+    }
+   },
+   "fbcloselever": {
+    "0.0": {
+     "lever": {
+      "mm": 1.96,
+      "penetrating": false,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 0.729,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    },
+    "0.25": {
+     "lever": {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#145 50945_nominal.dat 橡胶胎",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 0.634,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    },
+    "0.5": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 42610.dat 轮毂",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 1.004,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    },
+    "0.75": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头支承薄梁",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 2.095,
+      "penetrating": false,
+      "part": "F#142 32054.dat 薄梁固定挡套销",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    }
+   }
+  },
+  "rot90": {
+   "state": {
+    "loading-all50": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     }
+    ],
+    "FB0-held": [
+     {
+      "mm": 0.6,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.611,
+      "penetrating": false,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     }
+    ],
+    "support-down40_8": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     }
+    ],
+    "LR90-open": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     }
+    ],
+    "both-held": [
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     }
+    ],
+    "FB0-open": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_-38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#143 32123a.dat 轮子垫距半套",
+      "other": "support 23948.dat end_11L_axle"
+     }
+    ]
+   },
+   "fbroll": {
+    "2": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#145 59895.dat 轮胎59895",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z-32"
+     }
+    ],
+    "0": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_-38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#143 32123a.dat 轮子垫距半套",
+      "other": "support 23948.dat end_11L_axle"
+     }
+    ],
+    "4": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#139 4519.dat 夹指第7孔轴",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32123a.dat end_retainer_-38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "support 32123a.dat end_retainer_38"
+     }
+    ],
+    "6": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "support 32123a.dat end_retainer_-38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     }
+    ],
+    "8": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 62462.dat end_spacer2L_20"
+     }
+    ],
+    "10": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 23948.dat end_11L_axle"
+     }
+    ],
+    "12": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32123a.dat end_retainer_-38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     }
+    ],
+    "14": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     }
+    ],
+    "20": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#139 4519.dat 夹指第7孔轴",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.002,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.002,
+      "penetrating": true,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.009,
+      "penetrating": true,
+      "part": "F#139 4519.dat 夹指第7孔轴",
+      "other": "support 32123a.dat end_retainer_38"
+     }
+    ],
+    "18": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#139 4519.dat 夹指第7孔轴",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 23948.dat end_11L_axle"
+     }
+    ],
+    "16": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.002,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     }
+    ],
+    "22": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.002,
+      "penetrating": true,
+      "part": "F#139 4519.dat 夹指第7孔轴",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.002,
+      "penetrating": true,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.005,
+      "penetrating": true,
+      "part": "F#139 4519.dat 夹指第7孔轴",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     }
+    ],
+    "26": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.616,
+      "penetrating": false,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.684,
+      "penetrating": false,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     }
+    ],
+    "28": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.002,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.026,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 1.801,
+      "penetrating": false,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     }
+    ],
+    "24": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.003,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.005,
+      "penetrating": true,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.005,
+      "penetrating": true,
+      "part": "F#139 4519.dat 夹指第7孔轴",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.005,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.01,
+      "penetrating": true,
+      "part": "F#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.339,
+      "penetrating": false,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.539,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     }
+    ],
+    "32": [
+     {
+      "mm": 0.153,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.553,
+      "penetrating": false,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 1.845,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#151 32062.dat 夹指第5孔轴",
+      "other": "F#132 3713.dat"
+     }
+    ],
+    "34": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 1.167,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 1.841,
+      "penetrating": false,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#142 32062.dat 夹指第5孔轴",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#142 32062.dat 夹指第5孔轴",
+      "other": "B#124 3713.dat"
+     }
+    ],
+    "36": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#142 32062.dat 夹指第5孔轴",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#142 32062.dat 夹指第5孔轴",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#151 32062.dat 夹指第5孔轴",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#151 32062.dat 夹指第5孔轴",
+      "other": "B#132 3713.dat"
+     }
+    ],
+    "30": [
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.002,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.757,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#142 32062.dat 夹指第5孔轴",
+      "other": "F#124 3713.dat"
+     }
+    ],
+    "38": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#151 32062.dat 夹指第5孔轴",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#151 32062.dat 夹指第5孔轴",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#142 32062.dat 夹指第5孔轴",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#142 32062.dat 夹指第5孔轴",
+      "other": "B#124 3713.dat"
+     }
+    ],
+    "40": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#151 32062.dat 夹指第5孔轴",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#151 32062.dat 夹指第5孔轴",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#142 32062.dat 夹指第5孔轴",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#142 32062.dat 夹指第5孔轴",
+      "other": "B#124 3713.dat"
+     }
+    ],
+    "42": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#142 32062.dat 夹指第5孔轴",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#151 32062.dat 夹指第5孔轴",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#142 32062.dat 夹指第5孔轴",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#151 32062.dat 夹指第5孔轴",
+      "other": "B#132 3713.dat"
+     }
+    ],
+    "44": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#151 32062.dat 夹指第5孔轴",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#151 32062.dat 夹指第5孔轴",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#142 32062.dat 夹指第5孔轴",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#142 32062.dat 夹指第5孔轴",
+      "other": "B#124 3713.dat"
+     }
+    ],
+    "46": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#142 32062.dat 夹指第5孔轴",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#151 32062.dat 夹指第5孔轴",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#142 32062.dat 夹指第5孔轴",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#151 32062.dat 夹指第5孔轴",
+      "other": "B#132 3713.dat"
+     }
+    ],
+    "50": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#151 32062.dat 夹指第5孔轴",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#151 32062.dat 夹指第5孔轴",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#142 32062.dat 夹指第5孔轴",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#142 32062.dat 夹指第5孔轴",
+      "other": "B#124 3713.dat"
+     }
+    ],
+    "48": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#142 32062.dat 夹指第5孔轴",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "F#151 32062.dat 夹指第5孔轴",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#142 32062.dat 夹指第5孔轴",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "B#151 32062.dat 夹指第5孔轴",
+      "other": "B#132 3713.dat"
+     }
+    ]
+   },
+   "lrroll": {
+    "50": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     }
+    ],
+    "52": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     }
+    ],
+    "54": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     }
+    ],
+    "56": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     }
+    ],
+    "58": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     }
+    ],
+    "60": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     }
+    ],
+    "64": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     }
+    ],
+    "62": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     }
+    ],
+    "66": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     }
+    ],
+    "68": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     }
+    ],
+    "70": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     }
+    ],
+    "72": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     }
+    ],
+    "74": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     }
+    ],
+    "76": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     }
+    ],
+    "78": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     }
+    ],
+    "80": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     }
+    ],
+    "82": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     }
+    ],
+    "86": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     }
+    ],
+    "84": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     }
+    ],
+    "88": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     }
+    ],
+    "90": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#151 32062.dat 夹指第5孔轴",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#151 32062.dat 夹指第5孔轴",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "R#142 32062.dat 夹指第5孔轴",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 2.009,
+      "penetrating": false,
+      "part": "L#142 32062.dat 夹指第5孔轴",
+      "other": "L#124 3713.dat"
+     }
+    ]
+   },
+   "fbclose": {
+    "0.0": [
+     {
+      "mm": 0.6,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.611,
+      "penetrating": false,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     },
+     {
+      "mm": 1.707,
+      "penetrating": false,
+      "part": "F#139 4519.dat 夹指第7孔轴",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 2.012,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#122 3707.dat"
+     }
+    ],
+    "0.25": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.6,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.75,
+      "penetrating": false,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "F#146 32449.dat 压头薄梁-Z",
+      "other": "F#131 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "B#123 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "B#146 32449.dat 压头薄梁-Z",
+      "other": "B#131 3713.dat"
+     }
+    ],
+    "0.5": [
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "B#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "B#145 59895.dat 轮胎59895",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     {
+      "mm": 0.195,
+      "penetrating": false,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.195,
+      "penetrating": false,
+      "part": "B#168 32123a.dat 轮子半套",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.6,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.868,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.868,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     },
+     {
+      "mm": 0.868,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.868,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.87,
+      "penetrating": false,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "F#123 3713.dat"
+     }
+    ],
+    "0.75": [
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#137 32449.dat 压头薄梁-Z",
+      "other": "support 32123a.dat end_retainer_-38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#168 32123a.dat 轮子半套",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_-38"
+     },
+     {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "B#145 59895.dat 轮胎59895",
+      "other": "support 23948.dat end_11L_axle"
+     }
+    ]
+   },
+   "lrclose": {
+    "0.0": [
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.833,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.012,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#122 3707.dat"
+     },
+     {
+      "mm": 2.012,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#122 3707.dat"
+     },
+     {
+      "mm": 2.012,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#130 3707.dat"
+     },
+     {
+      "mm": 2.012,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#130 3707.dat"
+     }
+    ],
+    "0.25": [
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.86,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.041,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#122 3707.dat"
+     },
+     {
+      "mm": 2.041,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#130 3707.dat"
+     },
+     {
+      "mm": 2.041,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#122 3707.dat"
+     },
+     {
+      "mm": 2.041,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#130 3707.dat"
+     }
+    ],
+    "0.5": [
+     {
+      "mm": 0.868,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.868,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.868,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.868,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.87,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.87,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.87,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.87,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.046,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#122 3707.dat"
+     },
+     {
+      "mm": 2.046,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#130 3707.dat"
+     },
+     {
+      "mm": 2.046,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#122 3707.dat"
+     },
+     {
+      "mm": 2.046,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#130 3707.dat"
+     }
+    ],
+    "0.75": [
+     {
+      "mm": 0.837,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.837,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.837,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.837,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.839,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.839,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.839,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.839,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 2.022,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#122 3707.dat"
+     },
+     {
+      "mm": 2.022,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#122 3707.dat"
+     },
+     {
+      "mm": 2.022,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#130 3707.dat"
+     },
+     {
+      "mm": 2.022,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#130 3707.dat"
+     }
+    ]
+   },
+   "drop": {
+    "0.0": [
+     {
+      "mm": 0.6,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.611,
+      "penetrating": false,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     }
+    ],
+    "10.0": [
+     {
+      "mm": 0.6,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.626,
+      "penetrating": false,
+      "part": "F#140 32123a.dat 夹指第7孔轴半套",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     }
+    ],
+    "20.0": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     }
+    ],
+    "30.0": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     }
+    ],
+    "40.8": [
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#138 32449.dat 压头薄梁+Z",
+      "other": "R#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#138 32449.dat 压头薄梁+Z",
+      "other": "L#124 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "R#147 32449.dat 压头薄梁+Z",
+      "other": "R#132 3713.dat"
+     },
+     {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "L#147 32449.dat 压头薄梁+Z",
+      "other": "L#132 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#146 32449.dat 压头薄梁-Z",
+      "other": "R#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#146 32449.dat 压头薄梁-Z",
+      "other": "L#131 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "R#137 32449.dat 压头薄梁-Z",
+      "other": "R#123 3713.dat"
+     },
+     {
+      "mm": 0.82,
+      "penetrating": false,
+      "part": "L#137 32449.dat 压头薄梁-Z",
+      "other": "L#123 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#138 32449.dat 压头薄梁+Z",
+      "other": "B#124 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     },
+     {
+      "mm": 0.832,
+      "penetrating": false,
+      "part": "B#147 32449.dat 压头薄梁+Z",
+      "other": "B#132 3713.dat"
+     }
+    ]
+   },
+   "fblever": {
+    "0": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#143 32123a.dat 轮子垫距半套",
+      "other": "support 32278.dat inner_arm_z-32"
+     },
+     "other": {
+      "mm": 0.6,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    },
+    "4": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "B#139 4519.dat 夹指第7孔轴",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     }
+    },
+    "2": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     }
+    },
+    "6": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     }
+    },
+    "8": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     }
+    },
+    "12": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32123a.dat end_retainer_38"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     }
+    },
+    "10": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     }
+    },
+    "14": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     }
+    },
+    "16": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 23948.dat end_11L_axle"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     }
+    },
+    "20": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#137 32449.dat 压头薄梁-Z",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     }
+    },
+    "22": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#168 32123a.dat 轮子半套",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     }
+    },
+    "18": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     }
+    },
+    "30": {
+     "lever": {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     }
+    },
+    "28": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#138 32449.dat 压头薄梁+Z",
+      "other": "F#124 3713.dat"
+     }
+    },
+    "26": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     }
+    },
+    "24": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 32278.dat inner_arm_z32"
+     },
+     "other": {
+      "mm": 0.818,
+      "penetrating": false,
+      "part": "F#147 32449.dat 压头薄梁+Z",
+      "other": "F#132 3713.dat"
+     }
+    }
+   },
+   "fbcloselever": {
+    "0.0": {
+     "lever": {
+      "mm": 2.082,
+      "penetrating": false,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 0.6,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    },
+    "0.25": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 0.6,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    },
+    "0.5": {
+     "lever": {
+      "mm": 0.001,
+      "penetrating": true,
+      "part": "B#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_-20"
+     },
+     "other": {
+      "mm": 0.6,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    },
+    "0.75": {
+     "lever": {
+      "mm": 0.0,
+      "penetrating": true,
+      "part": "F#145 59895.dat 轮胎59895",
+      "other": "support 62462.dat end_spacer2L_20"
+     },
+     "other": {
+      "mm": 0.6,
+      "penetrating": false,
+      "part": "F#144 10197.dat 轮座10197",
+      "other": "support 32526.dat z_locator_positiveZ_L"
+     }
+    }
+   },
+   "fullturn": {
+    "('L', False, False, 40.8)": {
+     "front_sweep": [],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('L', False, True, 40.8)": {
+     "front_sweep": [],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('L', True, False, 40.8)": {
+     "front_sweep": [
+      [
+       3.580642221316919,
+       "L#154 59895.dat 轮胎59895",
+       "F#110 32524.dat 外侧连接梁"
+      ],
+      [
+       3.580642221316919,
+       "L#154 59895.dat 轮胎59895",
+       "B#101 32524.dat 外侧连接梁"
+      ],
+      [
+       3.9882551605859766,
+       "L#154 59895.dat 轮胎59895",
+       "F#106 32526.dat"
+      ],
+      [
+       3.9882551605859766,
+       "L#154 59895.dat 轮胎59895",
+       "F#107 32526.dat"
+      ]
+     ],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('L', True, True, 40.8)": {
+     "front_sweep": [
+      [
+       3.580642221316919,
+       "L#154 59895.dat 轮胎59895",
+       "F#110 32524.dat 外侧连接梁"
+      ],
+      [
+       3.580642221316919,
+       "L#154 59895.dat 轮胎59895",
+       "B#101 32524.dat 外侧连接梁"
+      ],
+      [
+       3.9882551605859766,
+       "L#154 59895.dat 轮胎59895",
+       "F#106 32526.dat"
+      ],
+      [
+       3.9882551605859766,
+       "L#154 59895.dat 轮胎59895",
+       "F#107 32526.dat"
+      ]
+     ],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('F', False, False, 40.8)": {
+     "front_sweep": [],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('F', False, True, 40.8)": {
+     "front_sweep": [],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('F', True, False, 40.8)": {
+     "front_sweep": [
+      [
+       3.580642221316919,
+       "F#154 59895.dat 轮胎59895",
+       "R#110 32524.dat 外侧连接梁"
+      ],
+      [
+       3.580642221316919,
+       "F#154 59895.dat 轮胎59895",
+       "L#101 32524.dat 外侧连接梁"
+      ],
+      [
+       3.9882551605859766,
+       "F#154 59895.dat 轮胎59895",
+       "R#106 32526.dat"
+      ],
+      [
+       3.9882551605859766,
+       "F#154 59895.dat 轮胎59895",
+       "R#107 32526.dat"
+      ]
+     ],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('F', False, False, 0.0)": {
+     "front_sweep": [
+      [
+       0.0005544030242856445,
+       "F#144 10197.dat 轮座10197",
+       "support 32526.dat z_locator_positiveZ_L"
+      ],
+      [
+       0.3931323752037378,
+       "F#145 59895.dat 轮胎59895",
+       "support 32316.dat x_locator_upper_bar"
+      ],
+      [
+       1.372968393163379,
+       "F#145 59895.dat 轮胎59895",
+       "support 18654.dat x_locator_middle_spacer"
+      ],
+      [
+       1.4185372929394102,
+       "F#145 59895.dat 轮胎59895",
+       "support 62462.dat end_spacer2L_20"
+      ]
+     ],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('L', False, True, 0.0)": {
+     "front_sweep": [
+      [
+       0.0004041543587980472,
+       "L#168 32123a.dat 轮子半套",
+       "support 32524.dat seat_deck_8"
+      ],
+      [
+       0.0007064396231278167,
+       "L#144 10197.dat 轮座10197",
+       "support 32524.dat seat_deck_0"
+      ],
+      [
+       0.0007737299589876319,
+       "L#143 32123a.dat 轮子垫距半套",
+       "support 32524.dat seat_deck_-8"
+      ],
+      [
+       0.33350809331965364,
+       "L#154 59895.dat 轮胎59895",
+       "support 14720.dat seat_H"
+      ]
+     ],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('L', False, False, 0.0)": {
+     "front_sweep": [
+      [
+       0.0004041543587980472,
+       "L#168 32123a.dat 轮子半套",
+       "support 32524.dat seat_deck_8"
+      ],
+      [
+       0.0007064396231278167,
+       "L#144 10197.dat 轮座10197",
+       "support 32524.dat seat_deck_0"
+      ],
+      [
+       0.0007737299589876319,
+       "L#143 32123a.dat 轮子垫距半套",
+       "support 32524.dat seat_deck_-8"
+      ],
+      [
+       0.33350809331965364,
+       "L#154 59895.dat 轮胎59895",
+       "support 14720.dat seat_H"
+      ]
+     ],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('F', True, True, 40.8)": {
+     "front_sweep": [
+      [
+       3.580642221316919,
+       "F#154 59895.dat 轮胎59895",
+       "R#110 32524.dat 外侧连接梁"
+      ],
+      [
+       3.580642221316919,
+       "F#154 59895.dat 轮胎59895",
+       "L#101 32524.dat 外侧连接梁"
+      ],
+      [
+       3.9882551605859766,
+       "F#154 59895.dat 轮胎59895",
+       "R#106 32526.dat"
+      ],
+      [
+       3.9882551605859766,
+       "F#154 59895.dat 轮胎59895",
+       "R#107 32526.dat"
+      ]
+     ],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('F', True, False, 0.0)": {
+     "front_sweep": [
+      [
+       0.0005670774751467669,
+       "F#153 10197.dat 轮座10197",
+       "support 32526.dat z_locator_positiveZ_L"
+      ],
+      [
+       0.0007429902206231478,
+       "F#152 32123a.dat 轮子垫距半套",
+       "support 32278.dat inner_arm_z32"
+      ],
+      [
+       0.000910927805287338,
+       "F#137 32449.dat 压头薄梁-Z",
+       "support 32123a.dat end_retainer_38"
+      ],
+      [
+       0.0009148382783266627,
+       "F#144 10197.dat 轮座10197",
+       "support 23948.dat end_11L_axle"
+      ]
+     ],
+     "head_sweep_vs_neighbour_fronts": []
+    },
+    "('F', True, True, 0.0)": {
+     "front_sweep": [
+      [
+       0.0005670774751467669,
+       "F#153 10197.dat 轮座10197",
+       "support 32526.dat z_locator_positiveZ_L"
+      ],
+      [
+       0.0007429902206231478,
+       "F#152 32123a.dat 轮子垫距半套",
+       "support 32278.dat inner_arm_z32"
+      ],
+      [
+       0.000910927805287338,
+       "F#137 32449.dat 压头薄梁-Z",
+       "support 32123a.dat end_retainer_38"
+      ],
+      [
+       0.0009148382783266627,
+       "F#144 10197.dat 轮座10197",
+       "support 23948.dat end_11L_axle"
+      ]
+     ],
+     "head_sweep_vs_neighbour_fronts": []
+    }
+   }
+  }
+ }
+}

@@ -34,7 +34,7 @@ def designed_pairs(front):
             pm, pp, ax3, h3m, h3p, ax1, spacer, hub, tyre = range(r, r + 9)
             chain(ax1, pm, jaw, pp)
             chain(ax3, h3m, pm, jaw, pp, h3p)
-            chain(hub, pm, pp, spacer, wbush, tyre)
+            chain(hub, pm, pp, spacer, wbush, tyre, jaw)
             chain(spacer, wbush, tyre)
             chain(pm, pp, jaw)
     else:
@@ -59,7 +59,7 @@ def split(mach, movers, front):
     return [it for _, _, it in A], [it for _, _, it in others], skip
 
 
-def clearance(state, drop, front, movers='LRFB', rmax=4.0, top=6):
+def clearance(state, drop, front, movers='LRFB', rmax=4.0, top=12):
     mach = machine(state, drop, front)
     A, B, skip = split(mach, movers, front)
     return [dict(mm=round(d, 3), penetrating=x, part=a, other=b) for d, x, a, b in
@@ -100,6 +100,18 @@ def task(args):
     if kind == 'drop':
         d, = rest
         return (kind, front, d, clearance(S((OS, 50.), (0., 0.)), d, front, movers='LRFB'))
+    if kind in ('fblever', 'fbcloselever'):
+        val, = rest
+        st = S((OS, 50.), (OS, float(val))) if kind == 'fblever' else S((OS, 50.), (OS * val, 0.))
+        mach = machine(st, 0, front)
+        A, B, skip = split(mach, 'FB', front)
+        lever_notes = {p.note for p in C.lever_parts()}
+        out = {}
+        for name, group in (('lever', [b for b in B if b.group == 'support' and b.part.note in lever_notes]),
+                            ('other', [b for b in B if not (b.group == 'support' and b.part.note in lever_notes)])):
+            r = front_clearance(A, group, rmax=4.0, top=1, skip=skip)
+            out[name] = dict(mm=round(r[0][0], 3), penetrating=r[0][1], part=r[0][2], other=r[0][3]) if r else None
+        return (kind, front, val, out)
     if kind == 'fullturn':
         arm, own_open, adj_open, drop = rest
         st = {}
@@ -163,15 +175,27 @@ def main(outdir):
         jobs += [('fbclose', front, f, f) for f in (0.0, 0.25, 0.5, 0.75)]
         jobs += [('lrclose', front, f, f) for f in (0.0, 0.25, 0.5, 0.75)]
         jobs += [('drop', front, d, d) for d in (0.0, 10.0, 20.0, 30.0, 40.8)]
+        jobs += [('fblever', front, a, a) for a in range(0, 32, 2)]
+        jobs += [('fbcloselever', front, f, f) for f in (0.0, 0.25, 0.5, 0.75)]
         for arm in (('L', 'F') if front == 'rot90' else ()):
             for own in (False, True):
                 for adj in (False, True):
                     for drop in (DROP, 0.0):
                         jobs.append(('fullturn', front, f'{arm}-{own}-{adj}-{drop}', arm, own, adj, drop))
     res = {}
-    with Pool(3) as pool:
+    done_file = outdir / 'partial.jsonl'
+    done = set()
+    if done_file.exists():
+        for line in done_file.read_text().splitlines():
+            kind, front, key, val = json.loads(line)
+            res.setdefault(front, {}).setdefault(kind, {})[key] = val
+            done.add((kind, front, key))
+    jobs = [j for j in jobs if (j[0], j[1], str(j[2])) not in done]
+    with Pool(4, maxtasksperchild=4) as pool, done_file.open('a') as log:
         for kind, front, key, val in pool.imap_unordered(task, jobs):
             res.setdefault(front, {}).setdefault(kind, {})[str(key)] = val
+            log.write(json.dumps([kind, front, str(key), val], ensure_ascii=False) + '\n')
+            log.flush()
             print(kind, front, key, json.dumps(val, ensure_ascii=False)[:160], flush=True)
     report = dict(method='真实 LDraw 网格名义几何。静态与部分回转：顶点＋0.3mm 棱线采样到三角形的精确距离；'
                          '回转扫描每 2°；整圈回转用子午面二维距离（精确回转体）。同臂内按设计插接/贴面的零件对不计入。',
