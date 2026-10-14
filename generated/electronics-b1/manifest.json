@@ -1,0 +1,32 @@
+{
+  "board": "quadcuber-b1",
+  "size_mm": [
+    99.0,
+    99.0
+  ],
+  "layers": 2,
+  "erc": "Errors 0",
+  "drc": [
+    "Found 34 DRC violations ",
+    "Found 0 unconnected pads ",
+    "Found 0 Footprint errors "
+  ],
+  "gerber_files": [
+    "quadcuber-b1-B_Cu.gbl",
+    "quadcuber-b1-B_Mask.gbs",
+    "quadcuber-b1-B_Silkscreen.gbo",
+    "quadcuber-b1-Edge_Cuts.gm1",
+    "quadcuber-b1-F_Cu.gtl",
+    "quadcuber-b1-F_Mask.gts",
+    "quadcuber-b1-F_Silkscreen.gto",
+    "quadcuber-b1-NPTH.drl",
+    "quadcuber-b1-PTH.drl",
+    "quadcuber-b1-job.gbrjob"
+  ],
+  "sha256": {
+    "quadcuber-b1.kicad_pcb": "e97011cda70fe486fed595980d4792b7620caba4b8834baf6a2ac78a0c6f4cf4",
+    "quadcuber-b1.kicad_sch": "02ddf0c8326bbeac9d7b37d783d600c9f5f959872cabfe3594fb1a1395ea7306",
+    "quadcuber-b1-gerber.zip": "6d651f7ba3c9b7042619ed2bb64c7a8c08cce3cb2af4a61ccfb8f96dadefec3a",
+    "bom-hand-solder.csv": "964a53b58b9d537af2043e20ec827af6c0654a6b1dbf4d3267ebdc179fc9a0eb"
+  }
+}

@@ -1,0 +1,2886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/mnt/disk0/project/cube/quadcuber/electronics-b1/quadcuber-b1.kicad_sch</source>
+    <date>2026-10-14T01:07:13</date>
+    <tool>Eeschema 10.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Quadcuber B1 底板（Pico H + 4×DRV8871）</title>
+        <company>gonewx/quadcuber</company>
+        <rev>B1</rev>
+        <date/>
+        <source>quadcuber-b1.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>470u/25V</value>
+      <footprint>B1:CP_Radial_D10.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="Footprint">B1:CP_Radial_D10.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C1" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e350a0c4-aae8-53f2-8a13-f396fb879467</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>470u/25V</value>
+      <footprint>B1:CP_Radial_D10.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="Footprint">B1:CP_Radial_D10.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C2" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f8df979e-1870-5362-ad8e-823313e94a5b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>220u/25V</value>
+      <footprint>B1:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:CP_Radial_D8.0mm_P3.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C3" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5988e53e-46cf-5b9d-b0e9-020537e3df35</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>470u/16V</value>
+      <footprint>B1:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:CP_Radial_D8.0mm_P3.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C4" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>551f0696-3236-5891-ac07-5155890eefc4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>0.33u</value>
+      <footprint>B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C5" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b5c0fd3b-83a8-513c-b9e9-4891b690e2a7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>10u/16V</value>
+      <footprint>B1:CP_Radial_D5.0mm_P2.00mm</footprint>
+      <fields>
+        <field name="Footprint">B1:CP_Radial_D5.0mm_P2.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C6" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ffb9d2ec-2e02-5a34-844f-67f73394f874</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>0.1u</value>
+      <footprint>B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C7" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bdb6a5c2-841b-5988-8f57-00640a0bf032</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>0.1u</value>
+      <footprint>B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C10" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b789d22c-7c4a-5b3f-9f62-12e90fe7e5b2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>100u/25V</value>
+      <footprint>B1:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C11" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0f394eda-2d5a-5527-b726-f6ed366eb5ec</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C20">
+      <value>0.1u</value>
+      <footprint>B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C20" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>27028646-4dc5-5465-8c27-3c2f311defde</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C21">
+      <value>100u/25V</value>
+      <footprint>B1:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C21" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>391cbcf6-7db2-5f99-8360-06f2ce8653ee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C30">
+      <value>0.1u</value>
+      <footprint>B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C30" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a9936e2e-e265-587e-a081-58975a72d401</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C31">
+      <value>100u/25V</value>
+      <footprint>B1:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C31" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1dec0ed3-3318-5b77-886f-f8b82a012496</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C40">
+      <value>0.1u</value>
+      <footprint>B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C40" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>706bb7fe-ef11-5f9e-b9de-7b8b4427f58c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C41">
+      <value>100u/25V</value>
+      <footprint>B1:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">B1:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="C41" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>53dd8949-8d83-5e18-a866-b3f30f05dc3a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>P6KE15A</value>
+      <footprint>B1:D_DO-15_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">B1:D_DO-15_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="D1" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>70eae009-63f0-57b5-a638-460e9dfceddb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>1N5822</value>
+      <footprint>B1:D_DO-201AD_P15.24mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">B1:D_DO-201AD_P15.24mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="D2" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>515c1d75-bfde-58bf-b8ec-2e5772c4b724</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D3">
+      <value>1N5819</value>
+      <footprint>B1:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">B1:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="D3" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6a98540-ba0b-58ed-8f1e-6f2cc4f46cb6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="DZ1">
+      <value>12V</value>
+      <footprint>B1:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">B1:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="DZ1" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c92e20a7-ddd1-5078-a1a4-f4bb527a716e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1">
+      <value>PTC 5A</value>
+      <footprint>B1:Fuse_PTC_Radial_P5.10mm</footprint>
+      <fields>
+        <field name="Footprint">B1:Fuse_PTC_Radial_P5.10mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="F1" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>97833bb6-8811-5288-a93b-9045de475bc9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>9V DC 中心正</value>
+      <footprint>B1:BarrelJack_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">B1:BarrelJack_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="J1" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d1ab0466-a467-584d-876f-174f3b5b243a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>UART G TX RX</value>
+      <footprint>B1:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="J2" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>366ad156-0408-5d1d-87c3-54efe5315a73</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J10">
+      <value>舵机 R S+G</value>
+      <footprint>B1:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="J10" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1586fbe8-75f5-5f32-9404-96bb69aac033</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J11">
+      <value>EV3 R</value>
+      <footprint>B1:EV3_Socket_UserDrawing</footprint>
+      <fields>
+        <field name="Footprint">B1:EV3_Socket_UserDrawing</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="J11" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>99ffb52f-aa23-5dbf-a621-a4ddaaf51f8f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J20">
+      <value>舵机 L S+G</value>
+      <footprint>B1:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="J20" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>492e5e68-87e2-5d16-aea0-a0b913f3f6c0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J21">
+      <value>EV3 L</value>
+      <footprint>B1:EV3_Socket_UserDrawing</footprint>
+      <fields>
+        <field name="Footprint">B1:EV3_Socket_UserDrawing</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="J21" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eb37a19b-936c-5b26-bec8-738c6bda35f5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J30">
+      <value>舵机 F S+G</value>
+      <footprint>B1:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="J30" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>73e77f0f-bced-5ef6-85cd-543278b97ee9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J31">
+      <value>EV3 F</value>
+      <footprint>B1:EV3_Socket_UserDrawing</footprint>
+      <fields>
+        <field name="Footprint">B1:EV3_Socket_UserDrawing</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="J31" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fd514eac-c616-5b7b-91ce-b1ef33a2d513</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J40">
+      <value>舵机 B S+G</value>
+      <footprint>B1:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="J40" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d7b791ca-8421-5215-ad08-aea6f53f8a48</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J41">
+      <value>EV3 B</value>
+      <footprint>B1:EV3_Socket_UserDrawing</footprint>
+      <fields>
+        <field name="Footprint">B1:EV3_Socket_UserDrawing</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="J41" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d0936a46-4fa2-589a-b659-bda2dd07868c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L1">
+      <value>33uH 3A</value>
+      <footprint>B1:L_Radial_D10.0mm_P5.00mm_Fastron_07M</footprint>
+      <fields>
+        <field name="Footprint">B1:L_Radial_D10.0mm_P5.00mm_Fastron_07M</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="L1" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fb18633e-cf3e-5128-a28e-216f30fe5c53</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>IRF4905</value>
+      <footprint>B1:TO-220-3_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:TO-220-3_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="Q1" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ee945d6a-9730-5497-8a98-4206f73b6d49</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R1" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dfaeb1d0-aac0-525f-903c-78a6e572c181</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>300R 1W</value>
+      <footprint>B1:R_Axial_DIN0414_L11.9mm_D4.5mm_P5.08mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0414_L11.9mm_D4.5mm_P5.08mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R2" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ac215c09-496d-5e81-b1d5-25770f6efaef</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>300R 1W</value>
+      <footprint>B1:R_Axial_DIN0414_L11.9mm_D4.5mm_P5.08mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0414_L11.9mm_D4.5mm_P5.08mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R3" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>edeff504-3141-5a82-bb6f-575172a43b60</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>43.2k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R10" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3e162f04-0ee1-52b1-9e7c-c1722cabf7bf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>10k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R11" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cd0ec97e-9a15-52b8-8a80-e696a4a51a8b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>20k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R12" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32823752-6cd5-5f17-aff1-a0178a5a5a48</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>10k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R13" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e117d509-f5cd-5ae9-ab94-d61a39bc4522</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>20k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R14" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>df026259-4746-5e35-a2be-e1c1f041be37</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>220</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R15" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ad4954d-d387-556c-b0ee-743e22b1a2b9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R20">
+      <value>43.2k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R20" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9cca3818-c9dd-520c-8316-7e328db30aac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R21">
+      <value>10k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R21" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>25b47d08-c92c-58fb-96d6-adb10c047be5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R22">
+      <value>20k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R22" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>79733e02-3242-50ca-a8ae-6c93ebe704c2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R23">
+      <value>10k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R23" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ca7caeda-6a5e-5ce8-849c-4913ed8cc8c4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R24">
+      <value>20k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R24" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>52c543ad-57a0-5b4a-a4d7-d98ac3d95f10</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R25">
+      <value>220</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R25" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9bb0361f-a61c-570f-a71c-eacedfddb279</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R30">
+      <value>43.2k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R30" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>641f3e9c-b42a-5b9b-9224-975b1897468e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R31">
+      <value>10k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R31" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>724447e2-f3bc-500b-9ea5-16b9a3f882ad</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R32">
+      <value>20k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R32" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>622941f1-145f-57db-baaa-ced54c1df3bd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R33">
+      <value>10k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R33" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ddbf475a-977d-5231-b060-f346e8e6bb12</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R34">
+      <value>20k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R34" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8ba773cb-373c-5b9d-8e35-7d76097ab146</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R35">
+      <value>220</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R35" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c97e1b52-128c-56ca-b6c2-a7569252f044</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R40">
+      <value>43.2k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R40" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9d21d97-77e7-5885-8451-2a8866d8d722</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R41">
+      <value>10k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R41" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3b8b38df-6c22-587d-8537-411cdb997aac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R42">
+      <value>20k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R42" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e3d4a8c0-66cc-54c0-aba3-660fb17529ce</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R43">
+      <value>10k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R43" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dd34c1eb-fae5-5d19-9d17-ee2bb6049d40</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R44">
+      <value>20k</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R44" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7248f414-132a-5d8e-95e4-3f8be97e7424</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R45">
+      <value>220</value>
+      <footprint>B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="R45" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3b41ae3f-146c-5680-b86e-b39ae2e50060</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>LM2596T-5.0</value>
+      <footprint>B1:TO-220-5_P3.4x3.7mm_StaggerOdd_Lead3.8mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:TO-220-5_P3.4x3.7mm_StaggerOdd_Lead3.8mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="U1" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32507821-badb-5ae7-b7ea-e485e645f192</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>7805</value>
+      <footprint>B1:TO-220-3_Vertical</footprint>
+      <fields>
+        <field name="Footprint">B1:TO-220-3_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="U2" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bbf75608-c232-537d-8a18-54a6bfd63821</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>Pico H</value>
+      <footprint>B1:RaspberryPi_Pico_Common_THT</footprint>
+      <fields>
+        <field name="Footprint">B1:RaspberryPi_Pico_Common_THT</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="U3" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3795dc12-c673-560e-b0ff-b690bc128d9b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="21"/>
+            <pin num="22"/>
+            <pin num="23"/>
+            <pin num="24"/>
+            <pin num="25"/>
+            <pin num="26"/>
+            <pin num="27"/>
+            <pin num="28"/>
+            <pin num="29"/>
+            <pin num="30"/>
+            <pin num="31"/>
+            <pin num="32"/>
+            <pin num="33"/>
+            <pin num="34"/>
+            <pin num="35"/>
+            <pin num="36"/>
+            <pin num="37"/>
+            <pin num="38"/>
+            <pin num="39"/>
+            <pin num="40"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U10">
+      <value>DRV8871</value>
+      <footprint>B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</footprint>
+      <fields>
+        <field name="Footprint">B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="U10" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9d5ea676-9768-5ab2-9840-81ccbb475686</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U20">
+      <value>DRV8871</value>
+      <footprint>B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</footprint>
+      <fields>
+        <field name="Footprint">B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="U20" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0f068150-6d1d-57a4-9e94-63dabaa66657</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U30">
+      <value>DRV8871</value>
+      <footprint>B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</footprint>
+      <fields>
+        <field name="Footprint">B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="U30" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f3e92d45-cf23-5836-8a2f-89cd4ec65ec7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U40">
+      <value>DRV8871</value>
+      <footprint>B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</footprint>
+      <fields>
+        <field name="Footprint">B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="B1" part="U40" description=""/>
+      <property name="Sheetname" value="quadcuber-b1"/>
+      <property name="Sheetfile" value="quadcuber-b1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1a47f1b8-9e44-5dda-bb2d-97f982b8f9c4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="B1" part="C1">
+      <fields>
+        <field name="Reference">C1</field>
+        <field name="Value">470u/25V</field>
+        <field name="Footprint">B1:CP_Radial_D10.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C10">
+      <fields>
+        <field name="Reference">C10</field>
+        <field name="Value">0.1u</field>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C11">
+      <fields>
+        <field name="Reference">C11</field>
+        <field name="Value">100u/25V</field>
+        <field name="Footprint">B1:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C2">
+      <fields>
+        <field name="Reference">C2</field>
+        <field name="Value">470u/25V</field>
+        <field name="Footprint">B1:CP_Radial_D10.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C20">
+      <fields>
+        <field name="Reference">C20</field>
+        <field name="Value">0.1u</field>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C21">
+      <fields>
+        <field name="Reference">C21</field>
+        <field name="Value">100u/25V</field>
+        <field name="Footprint">B1:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C3">
+      <fields>
+        <field name="Reference">C3</field>
+        <field name="Value">220u/25V</field>
+        <field name="Footprint">B1:CP_Radial_D8.0mm_P3.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C30">
+      <fields>
+        <field name="Reference">C30</field>
+        <field name="Value">0.1u</field>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C31">
+      <fields>
+        <field name="Reference">C31</field>
+        <field name="Value">100u/25V</field>
+        <field name="Footprint">B1:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C4">
+      <fields>
+        <field name="Reference">C4</field>
+        <field name="Value">470u/16V</field>
+        <field name="Footprint">B1:CP_Radial_D8.0mm_P3.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C40">
+      <fields>
+        <field name="Reference">C40</field>
+        <field name="Value">0.1u</field>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C41">
+      <fields>
+        <field name="Reference">C41</field>
+        <field name="Value">100u/25V</field>
+        <field name="Footprint">B1:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C5">
+      <fields>
+        <field name="Reference">C5</field>
+        <field name="Value">0.33u</field>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C6">
+      <fields>
+        <field name="Reference">C6</field>
+        <field name="Value">10u/16V</field>
+        <field name="Footprint">B1:CP_Radial_D5.0mm_P2.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="C7">
+      <fields>
+        <field name="Reference">C7</field>
+        <field name="Value">0.1u</field>
+        <field name="Footprint">B1:C_Disc_D3.0mm_W1.6mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="D1">
+      <fields>
+        <field name="Reference">D1</field>
+        <field name="Value">P6KE15A</field>
+        <field name="Footprint">B1:D_DO-15_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="D2">
+      <fields>
+        <field name="Reference">D2</field>
+        <field name="Value">1N5822</field>
+        <field name="Footprint">B1:D_DO-201AD_P15.24mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="D3">
+      <fields>
+        <field name="Reference">D3</field>
+        <field name="Value">1N5819</field>
+        <field name="Footprint">B1:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="DZ1">
+      <fields>
+        <field name="Reference">DZ1</field>
+        <field name="Value">12V</field>
+        <field name="Footprint">B1:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="F1">
+      <fields>
+        <field name="Reference">F1</field>
+        <field name="Value">PTC 5A</field>
+        <field name="Footprint">B1:Fuse_PTC_Radial_P5.10mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="J1">
+      <fields>
+        <field name="Reference">J1</field>
+        <field name="Value">9V DC 中心正</field>
+        <field name="Footprint">B1:BarrelJack_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="J10">
+      <fields>
+        <field name="Reference">J10</field>
+        <field name="Value">舵机 R S+G</field>
+        <field name="Footprint">B1:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="J11">
+      <fields>
+        <field name="Reference">J11</field>
+        <field name="Value">EV3 R</field>
+        <field name="Footprint">B1:EV3_Socket_UserDrawing</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="J2">
+      <fields>
+        <field name="Reference">J2</field>
+        <field name="Value">UART G TX RX</field>
+        <field name="Footprint">B1:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="J20">
+      <fields>
+        <field name="Reference">J20</field>
+        <field name="Value">舵机 L S+G</field>
+        <field name="Footprint">B1:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="J21">
+      <fields>
+        <field name="Reference">J21</field>
+        <field name="Value">EV3 L</field>
+        <field name="Footprint">B1:EV3_Socket_UserDrawing</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="J30">
+      <fields>
+        <field name="Reference">J30</field>
+        <field name="Value">舵机 F S+G</field>
+        <field name="Footprint">B1:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="J31">
+      <fields>
+        <field name="Reference">J31</field>
+        <field name="Value">EV3 F</field>
+        <field name="Footprint">B1:EV3_Socket_UserDrawing</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="J40">
+      <fields>
+        <field name="Reference">J40</field>
+        <field name="Value">舵机 B S+G</field>
+        <field name="Footprint">B1:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="J41">
+      <fields>
+        <field name="Reference">J41</field>
+        <field name="Value">EV3 B</field>
+        <field name="Footprint">B1:EV3_Socket_UserDrawing</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="L1">
+      <fields>
+        <field name="Reference">L1</field>
+        <field name="Value">33uH 3A</field>
+        <field name="Footprint">B1:L_Radial_D10.0mm_P5.00mm_Fastron_07M</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="Q1">
+      <fields>
+        <field name="Reference">Q1</field>
+        <field name="Value">IRF4905</field>
+        <field name="Footprint">B1:TO-220-3_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R1">
+      <fields>
+        <field name="Reference">R1</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R10">
+      <fields>
+        <field name="Reference">R10</field>
+        <field name="Value">43.2k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R11">
+      <fields>
+        <field name="Reference">R11</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R12">
+      <fields>
+        <field name="Reference">R12</field>
+        <field name="Value">20k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R13">
+      <fields>
+        <field name="Reference">R13</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R14">
+      <fields>
+        <field name="Reference">R14</field>
+        <field name="Value">20k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R15">
+      <fields>
+        <field name="Reference">R15</field>
+        <field name="Value">220</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R2">
+      <fields>
+        <field name="Reference">R2</field>
+        <field name="Value">300R 1W</field>
+        <field name="Footprint">B1:R_Axial_DIN0414_L11.9mm_D4.5mm_P5.08mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R20">
+      <fields>
+        <field name="Reference">R20</field>
+        <field name="Value">43.2k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R21">
+      <fields>
+        <field name="Reference">R21</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R22">
+      <fields>
+        <field name="Reference">R22</field>
+        <field name="Value">20k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R23">
+      <fields>
+        <field name="Reference">R23</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R24">
+      <fields>
+        <field name="Reference">R24</field>
+        <field name="Value">20k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R25">
+      <fields>
+        <field name="Reference">R25</field>
+        <field name="Value">220</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R3">
+      <fields>
+        <field name="Reference">R3</field>
+        <field name="Value">300R 1W</field>
+        <field name="Footprint">B1:R_Axial_DIN0414_L11.9mm_D4.5mm_P5.08mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R30">
+      <fields>
+        <field name="Reference">R30</field>
+        <field name="Value">43.2k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R31">
+      <fields>
+        <field name="Reference">R31</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R32">
+      <fields>
+        <field name="Reference">R32</field>
+        <field name="Value">20k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R33">
+      <fields>
+        <field name="Reference">R33</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R34">
+      <fields>
+        <field name="Reference">R34</field>
+        <field name="Value">20k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R35">
+      <fields>
+        <field name="Reference">R35</field>
+        <field name="Value">220</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R40">
+      <fields>
+        <field name="Reference">R40</field>
+        <field name="Value">43.2k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R41">
+      <fields>
+        <field name="Reference">R41</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R42">
+      <fields>
+        <field name="Reference">R42</field>
+        <field name="Value">20k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R43">
+      <fields>
+        <field name="Reference">R43</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R44">
+      <fields>
+        <field name="Reference">R44</field>
+        <field name="Value">20k</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="R45">
+      <fields>
+        <field name="Reference">R45</field>
+        <field name="Value">220</field>
+        <field name="Footprint">B1:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="U1">
+      <fields>
+        <field name="Reference">U1</field>
+        <field name="Value">LM2596T-5.0</field>
+        <field name="Footprint">B1:TO-220-5_P3.4x3.7mm_StaggerOdd_Lead3.8mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="U10">
+      <fields>
+        <field name="Reference">U10</field>
+        <field name="Value">DRV8871</field>
+        <field name="Footprint">B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="U2">
+      <fields>
+        <field name="Reference">U2</field>
+        <field name="Value">7805</field>
+        <field name="Footprint">B1:TO-220-3_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="U20">
+      <fields>
+        <field name="Reference">U20</field>
+        <field name="Value">DRV8871</field>
+        <field name="Footprint">B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="U3">
+      <fields>
+        <field name="Reference">U3</field>
+        <field name="Value">Pico H</field>
+        <field name="Footprint">B1:RaspberryPi_Pico_Common_THT</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="14" type="passive"/>
+        <pin num="15" name="15" type="passive"/>
+        <pin num="16" name="16" type="passive"/>
+        <pin num="17" name="17" type="passive"/>
+        <pin num="18" name="18" type="passive"/>
+        <pin num="19" name="19" type="passive"/>
+        <pin num="20" name="20" type="passive"/>
+        <pin num="21" name="21" type="passive"/>
+        <pin num="22" name="22" type="passive"/>
+        <pin num="23" name="23" type="passive"/>
+        <pin num="24" name="24" type="passive"/>
+        <pin num="25" name="25" type="passive"/>
+        <pin num="26" name="26" type="passive"/>
+        <pin num="27" name="27" type="passive"/>
+        <pin num="28" name="28" type="passive"/>
+        <pin num="29" name="29" type="passive"/>
+        <pin num="30" name="30" type="passive"/>
+        <pin num="31" name="31" type="passive"/>
+        <pin num="32" name="32" type="passive"/>
+        <pin num="33" name="33" type="passive"/>
+        <pin num="34" name="34" type="passive"/>
+        <pin num="35" name="35" type="passive"/>
+        <pin num="36" name="36" type="passive"/>
+        <pin num="37" name="37" type="passive"/>
+        <pin num="38" name="38" type="passive"/>
+        <pin num="39" name="39" type="passive"/>
+        <pin num="40" name="40" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="U30">
+      <fields>
+        <field name="Reference">U30</field>
+        <field name="Value">DRV8871</field>
+        <field name="Footprint">B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="B1" part="U40">
+      <fields>
+        <field name="Reference">U40</field>
+        <field name="Value">DRV8871</field>
+        <field name="Footprint">B1:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="B1">
+      <uri>${KIPRJMOD}/lib/B1.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="5V_LOGIC" class="Logic5V">
+      <node ref="C6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J11" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="J21" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="J31" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="J41" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="3_3" pintype="passive"/>
+    </net>
+    <net code="2" name="BUCK_SW" class="Branch">
+      <node ref="D2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="3" name="B_ENC_A_RAW" class="Default">
+      <node ref="J41" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="R41" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="4" name="B_ENC_B_RAW" class="Default">
+      <node ref="J41" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="R43" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="5" name="B_ILIM" class="Default">
+      <node ref="R40" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U40" pin="4" pinfunction="4_4" pintype="passive"/>
+    </net>
+    <net code="6" name="B_M1" class="Motor">
+      <node ref="J41" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U40" pin="6" pinfunction="6_6" pintype="passive"/>
+    </net>
+    <net code="7" name="B_M2" class="Motor">
+      <node ref="J41" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U40" pin="8" pinfunction="8_8" pintype="passive"/>
+    </net>
+    <net code="8" name="B_SERVO" class="Default">
+      <node ref="J40" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="R45" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="9" name="F_ENC_A_RAW" class="Default">
+      <node ref="J31" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="R31" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="10" name="F_ENC_B_RAW" class="Default">
+      <node ref="J31" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="R33" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="11" name="F_ILIM" class="Default">
+      <node ref="R30" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U30" pin="4" pinfunction="4_4" pintype="passive"/>
+    </net>
+    <net code="12" name="F_M1" class="Motor">
+      <node ref="J31" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U30" pin="6" pinfunction="6_6" pintype="passive"/>
+    </net>
+    <net code="13" name="F_M2" class="Motor">
+      <node ref="J31" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U30" pin="8" pinfunction="8_8" pintype="passive"/>
+    </net>
+    <net code="14" name="F_SERVO" class="Default">
+      <node ref="J30" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="R35" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="15" name="GATE" class="Default">
+      <node ref="DZ1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="Q1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R1" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="16" name="GND" class="Ground">
+      <node ref="C1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C10" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C11" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C20" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C21" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C30" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C31" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C40" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C41" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C5" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C6" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C7" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J10" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J11" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J20" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J21" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J30" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J31" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J40" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J41" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="R1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R10" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R12" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R14" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R20" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R22" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R24" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R30" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R32" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R34" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R40" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R42" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R44" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="U10" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U10" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="U10" pin="9" pinfunction="9_9" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U20" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U20" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="U20" pin="9" pinfunction="9_9" pintype="passive"/>
+      <node ref="U3" pin="13" pinfunction="13_13" pintype="passive"/>
+      <node ref="U3" pin="18" pinfunction="18_18" pintype="passive"/>
+      <node ref="U3" pin="23" pinfunction="23_23" pintype="passive"/>
+      <node ref="U3" pin="28" pinfunction="28_28" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U3" pin="33" pinfunction="33_33" pintype="passive"/>
+      <node ref="U3" pin="38" pinfunction="38_38" pintype="passive"/>
+      <node ref="U3" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="U30" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U30" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="U30" pin="9" pinfunction="9_9" pintype="passive"/>
+      <node ref="U40" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U40" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="U40" pin="9" pinfunction="9_9" pintype="passive"/>
+    </net>
+    <net code="17" name="GP0" class="Default">
+      <node ref="J2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="18" name="GP1" class="Default">
+      <node ref="J2" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U3" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="19" name="GP2" class="Default">
+      <node ref="U10" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="4_4" pintype="passive"/>
+    </net>
+    <net code="20" name="GP3" class="Default">
+      <node ref="U10" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="5_5" pintype="passive"/>
+    </net>
+    <net code="21" name="GP4" class="Default">
+      <node ref="R11" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R12" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="6_6" pintype="passive"/>
+    </net>
+    <net code="22" name="GP5" class="Default">
+      <node ref="R13" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R14" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="7" pinfunction="7_7" pintype="passive"/>
+    </net>
+    <net code="23" name="GP6" class="Default">
+      <node ref="U20" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U3" pin="9" pinfunction="9_9" pintype="passive"/>
+    </net>
+    <net code="24" name="GP7" class="Default">
+      <node ref="U20" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U3" pin="10" pinfunction="10_10" pintype="passive"/>
+    </net>
+    <net code="25" name="GP8" class="Default">
+      <node ref="R15" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="11" pinfunction="11_11" pintype="passive"/>
+    </net>
+    <net code="26" name="GP9" class="Default">
+      <node ref="R25" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="12" pinfunction="12_12" pintype="passive"/>
+    </net>
+    <net code="27" name="GP10" class="Default">
+      <node ref="U3" pin="14" pinfunction="14_14" pintype="passive"/>
+      <node ref="U30" pin="3" pinfunction="3_3" pintype="passive"/>
+    </net>
+    <net code="28" name="GP11" class="Default">
+      <node ref="U3" pin="15" pinfunction="15_15" pintype="passive"/>
+      <node ref="U30" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="29" name="GP12" class="Default">
+      <node ref="R21" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R22" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="16" pinfunction="16_16" pintype="passive"/>
+    </net>
+    <net code="30" name="GP13" class="Default">
+      <node ref="R23" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R24" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="17" pinfunction="17_17" pintype="passive"/>
+    </net>
+    <net code="31" name="GP14" class="Default">
+      <node ref="U3" pin="19" pinfunction="19_19" pintype="passive"/>
+      <node ref="U40" pin="3" pinfunction="3_3" pintype="passive"/>
+    </net>
+    <net code="32" name="GP15" class="Default">
+      <node ref="U3" pin="20" pinfunction="20_20" pintype="passive"/>
+      <node ref="U40" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="33" name="GP16" class="Default">
+      <node ref="R31" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R32" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="21" pinfunction="21_21" pintype="passive"/>
+    </net>
+    <net code="34" name="GP17" class="Default">
+      <node ref="R33" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R34" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="22" pinfunction="22_22" pintype="passive"/>
+    </net>
+    <net code="35" name="GP18" class="Default">
+      <node ref="R41" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R42" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="24" pinfunction="24_24" pintype="passive"/>
+    </net>
+    <net code="36" name="GP19" class="Default">
+      <node ref="R43" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R44" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="25" pinfunction="25_25" pintype="passive"/>
+    </net>
+    <net code="37" name="GP20" class="Default">
+      <node ref="R35" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="26" pinfunction="26_26" pintype="passive"/>
+    </net>
+    <net code="38" name="GP21" class="Default">
+      <node ref="R45" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="27" pinfunction="27_27" pintype="passive"/>
+    </net>
+    <net code="39" name="L_ENC_A_RAW" class="Default">
+      <node ref="J21" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="R21" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="40" name="L_ENC_B_RAW" class="Default">
+      <node ref="J21" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="R23" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="41" name="L_ILIM" class="Default">
+      <node ref="R20" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U20" pin="4" pinfunction="4_4" pintype="passive"/>
+    </net>
+    <net code="42" name="L_M1" class="Motor">
+      <node ref="J21" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U20" pin="6" pinfunction="6_6" pintype="passive"/>
+    </net>
+    <net code="43" name="L_M2" class="Motor">
+      <node ref="J21" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U20" pin="8" pinfunction="8_8" pintype="passive"/>
+    </net>
+    <net code="44" name="L_SERVO" class="Default">
+      <node ref="J20" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="R25" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="45" name="R_ENC_A_RAW" class="Default">
+      <node ref="J11" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="R11" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="46" name="R_ENC_B_RAW" class="Default">
+      <node ref="J11" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="R13" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="47" name="R_ILIM" class="Default">
+      <node ref="R10" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U10" pin="4" pinfunction="4_4" pintype="passive"/>
+    </net>
+    <net code="48" name="R_M1" class="Motor">
+      <node ref="J11" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U10" pin="6" pinfunction="6_6" pintype="passive"/>
+    </net>
+    <net code="49" name="R_M2" class="Motor">
+      <node ref="J11" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U10" pin="8" pinfunction="8_8" pintype="passive"/>
+    </net>
+    <net code="50" name="R_SERVO" class="Default">
+      <node ref="J10" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="R15" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="51" name="SERVO_5V" class="Supply">
+      <node ref="C4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J10" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J20" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J30" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J40" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="L1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="4_4" pintype="passive"/>
+    </net>
+    <net code="52" name="VIN" class="Trunk">
+      <node ref="F1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="53" name="VIN_F" class="Trunk">
+      <node ref="F1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="54" name="VM" class="Supply">
+      <node ref="C1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C10" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C11" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C20" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C21" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C30" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C31" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C40" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C41" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="DZ1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="R2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U10" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U20" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="U30" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="U40" pin="5" pinfunction="5_5" pintype="passive"/>
+    </net>
+    <net code="55" name="VSYS" class="Logic5V">
+      <node ref="D3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="39" pinfunction="39_39" pintype="passive"/>
+    </net>
+    <net code="56" name="unconnected-(U3-Pad29)" class="Default">
+      <node ref="U3" pin="29" pinfunction="29_29" pintype="passive+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U3-Pad30)" class="Default">
+      <node ref="U3" pin="30" pinfunction="30_30" pintype="passive+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U3-Pad31)" class="Default">
+      <node ref="U3" pin="31" pinfunction="31_31" pintype="passive+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U3-Pad32)" class="Default">
+      <node ref="U3" pin="32" pinfunction="32_32" pintype="passive+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U3-Pad34)" class="Default">
+      <node ref="U3" pin="34" pinfunction="34_34" pintype="passive+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(U3-Pad35)" class="Default">
+      <node ref="U3" pin="35" pinfunction="35_35" pintype="passive+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(U3-Pad36)" class="Default">
+      <node ref="U3" pin="36" pinfunction="36_36" pintype="passive+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U3-Pad37)" class="Default">
+      <node ref="U3" pin="37" pinfunction="37_37" pintype="passive+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(U3-Pad40)" class="Default">
+      <node ref="U3" pin="40" pinfunction="40_40" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

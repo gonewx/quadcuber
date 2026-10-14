@@ -1,0 +1,35 @@
+焊接顺序,类别,型号/规格,位号,数量,封装,说明
+1,DRV8871,DRV8871DDAR,"U10,U20,U30,U40",4,Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias,唯一贴片件；热风枪焊散热焊盘
+2,电阻,10k 1/4W,R1,1,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,
+2,电阻,10k 1/4W 立式,"R11,R13,R21,R23,R31,R33,R41,R43",8,R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,
+2,电阻,20k 1/4W 立式,"R12,R14,R22,R24,R32,R34,R42,R44",8,R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,
+2,电阻,220 1/4W 立式,"R15,R25,R35,R45",4,R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,
+2,电阻,300R 1W 300Ω 1W 金属膜,"R2,R3",2,R_Axial_DIN0414_L11.9mm_D4.5mm_P5.08mm_Vertical,
+2,电阻,43.2kΩ 1%,"R10,R20,R30,R40",4,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,限流约 1.48A（64/R）
+3,二极管,12V 1N4742A,DZ1,1,D_DO-41_SOD81_P10.16mm_Horizontal,阴极(1)接源极 VM，限制 |Vgs|<=12V
+3,二极管,1N5819 肖特基,D3,1,D_DO-41_SOD81_P10.16mm_Horizontal,阴极(1)接 Pico VSYS
+3,二极管,1N5822 3A 肖特基,D2,1,D_DO-201AD_P15.24mm_Horizontal,阴极(1)接开关节点
+3,二极管,P6KE15A 单向 TVS,D1,1,D_DO-15_P10.16mm_Horizontal,阴极(1)接 VM
+4,瓷片电容,0.1u 0.1µF 瓷片,"C7,C10,C20,C30,C40",5,C_Disc_D3.0mm_W1.6mm_P2.50mm,
+4,瓷片电容,0.33u 0.33µF 瓷片,C5,1,C_Disc_D3.0mm_W1.6mm_P2.50mm,
+5,排针/排母,UART G TX RX 1×3 排针,J2,1,PinHeader_1x03_P2.54mm_Vertical,接 Zero W：GP0=TX、GP1=RX
+5,排针/排母,树莓派 Pico H + 2×1×20 排母,U3,1,RaspberryPi_Pico_Common_THT,USB 朝上；排母两排相距 17.78mm
+5,排针/排母,舵机 B S+G 1×3 排针,J40,1,PinHeader_1x03_P2.54mm_Vertical,自下而上 G/+/S
+5,排针/排母,舵机 F S+G 1×3 排针,J30,1,PinHeader_1x03_P2.54mm_Vertical,自下而上 G/+/S
+5,排针/排母,舵机 L S+G 1×3 排针,J20,1,PinHeader_1x03_P2.54mm_Vertical,自下而上 G/+/S
+5,排针/排母,舵机 R S+G 1×3 排针,J10,1,PinHeader_1x03_P2.54mm_Vertical,自下而上 G/+/S
+6,保险丝,PTC 5A RXEF500 自恢复保险丝（72V/5A）,F1,1,Fuse_PTC_Radial_P5.10mm,
+7,电解电容,100u/25V 100µF/25V 电解,"C11,C21,C31,C41",4,CP_Radial_D6.3mm_P2.50mm,
+7,电解电容,10u/16V 10µF/16V 电解,C6,1,CP_Radial_D5.0mm_P2.00mm,
+7,电解电容,220u/25V 220µF/25V 电解（输入）,C3,1,CP_Radial_D8.0mm_P3.50mm,
+7,电解电容,470u/16V 470µF/16V 低阻电解（输出）,C4,1,CP_Radial_D8.0mm_P3.50mm,
+7,电解电容,470u/25V 470µF/25V 电解,"C1,C2",2,CP_Radial_D10.0mm_P5.00mm,
+8,TO-220,IRF4905 P-MOS,Q1,1,TO-220-3_Vertical,反接保护：漏极(2)接电源、源极(3)接 VM；导通后双向导电
+8,TO-220,L7805CV,U2,1,TO-220-3_Vertical,
+8,TO-220,LM2596T-5.0,U1,1,TO-220-5_P3.4x3.7mm_StaggerOdd_Lead3.8mm_Vertical,ON/OFF(5) 接地=常开；FB(4) 接输出；需要散热片时留空间
+9,电感,33uH 3A 33µH/3A 工字电感,L1,1,L_Radial_D10.0mm_P5.00mm_Fastron_07M,
+10,插座,9V DC 中心正 DC-005 5.5/2.1mm,J1,1,BarrelJack_Horizontal,脚1=中心(+)、脚2=外壳(-)、脚3=开关脚并地；焊前用实物核对孔位
+10,插座,EV3 B 同批 EV3 插座（用户已有）,J41,1,EV3_Socket_UserDrawing,针序未用实物核实：接电机前断电六路通断
+10,插座,EV3 F 同批 EV3 插座（用户已有）,J31,1,EV3_Socket_UserDrawing,针序未用实物核实：接电机前断电六路通断
+10,插座,EV3 L 同批 EV3 插座（用户已有）,J21,1,EV3_Socket_UserDrawing,针序未用实物核实：接电机前断电六路通断
+10,插座,EV3 R 同批 EV3 插座（用户已有）,J11,1,EV3_Socket_UserDrawing,针序未用实物核实：接电机前断电六路通断
