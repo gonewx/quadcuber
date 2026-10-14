@@ -1,5 +1,5 @@
 {
-  "commit": "da5fc42b5e0c6352c827f9ae905eb891fe0dd12b",
+  "commit": "3cfff7c8cb5a1b523186130fa96828cea1cd69d7",
   "scope": "algebraic bounds; source/native/BOM contract; no macro-model run",
   "contract_refs": [
     "F1",
@@ -42,10 +42,10 @@
   ],
   "contract": "PASS",
   "hashes": {
-    "electronics/circuit.py": "7a9c1efa78a20b625537c039264d4b7d18260798ffccf299d9e3b760f7603cea",
-    "electronics/quadcuber.kicad_pcb": "b04859e7a282eb648943abfbf70d00e488a887627a74470aab24ffc20d637d44",
-    "generated/electronics/netlist.xml": "016b09171080c2a90fc61179a3e2b835a10f0c94c38bc4bcdb0ffffd4fe6a548",
-    "generated/electronics/bom.csv": "1ddd6eb9967414952ba391555c7e8fdbfd042f5155f91776ae2a5d50134e4446"
+    "electronics/circuit.py": "9a966008ce2c7ce09d68fb8031c252d260cc4aad983c5322d3e9d0bfb167b673",
+    "electronics/quadcuber.kicad_pcb": "14e9ef467cd5d361c3fb4175c51b00bcbc23b3e32632b039bfbe1385d9fc29df",
+    "generated/electronics/netlist.xml": "60122e8cb053edc65f357ba0ab9e1efd5eab9105bfcbeee96133fb8051d92b1b",
+    "generated/electronics/bom.csv": "02021a65feb08fd04bfacd0f0bd0a9ba86d2cf1b3b48cdea8ca86e3e796021f6"
   },
   "feedback": {
     "nominal_V": 5.077203007518797,

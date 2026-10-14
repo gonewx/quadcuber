@@ -6,7 +6,7 @@
   "crc": "0x9a195ca8",
   "QE_branch_target": "0x64",
   "sha256": {
-    "electronics/quadcuber.kicad_pcb": "be9144f06f8801287043d763554065c89d31856c81c60f32e374e4530be8e95b",
+    "electronics/quadcuber.kicad_pcb": "14e9ef467cd5d361c3fb4175c51b00bcbc23b3e32632b039bfbe1385d9fc29df",
     "electronics/circuit.py": "9a966008ce2c7ce09d68fb8031c252d260cc4aad983c5322d3e9d0bfb167b673",
     "generated/electronics/bom.csv": "02021a65feb08fd04bfacd0f0bd0a9ba86d2cf1b3b48cdea8ca86e3e796021f6",
     "generated/electronics/firmware/quadcuber-a1-micropython-v1.27.0.uf2": "ce965d9bd597be5377bd1bbb1f83bb69894be7ad3f3dac80cdbe60615d143eb9"

@@ -1,5 +1,5 @@
 {
-  "source_sha256": "11b8502157f6d15a8be044557d35306fc5444240d9bb40ef5166bf3fedb1bb9e",
+  "source_sha256": "14e9ef467cd5d361c3fb4175c51b00bcbc23b3e32632b039bfbe1385d9fc29df",
   "kicad": "10.0.7",
   "geometry_tolerance_mm": 0.0001,
   "source_urls": [
@@ -10,7 +10,7 @@
   "limits_note": "Different-net copper only for hole-to-copper/track; same-net copper intentionally connected to its plated barrel is excluded. Thermal pads are reported separately from ordinary component PTH. Borderline distances within 0.0003mm polygon approximation tolerance are not flagged.",
   "hole_classes": {
     "npth": 14,
-    "component_pth": 67,
+    "component_pth": 68,
     "thermal_pad_via_function": 28,
     "native_via": 299
   },
@@ -23,7 +23,7 @@
     "C26": 0.4,
     "C3": 0.5,
     "C36": 0.4,
-    "J1": 0.65,
+    "J1": 0.254,
     "J10": 0.30499999999999994,
     "J11": 0.30499999999999994,
     "J12": 0.30499999999999994,
@@ -20012,7 +20012,7 @@
       "width_mm": 0.12
     },
     {
-      "id": "2c250680-27a6-4e30-8406-2a016f7cb0b4",
+      "id": "33c6ca10-1d3e-4f3f-a768-48f98cbf1321",
       "ref": "J1.graphic",
       "kind": "PCB_SHAPE",
       "net": "",
@@ -20020,7 +20020,7 @@
       "width_mm": 0.12
     },
     {
-      "id": "8c854f38-130c-49cc-9747-ee350271e5c3",
+      "id": "f611102c-a3dc-4299-9749-2f9655c299b8",
       "ref": "J1.graphic",
       "kind": "PCB_SHAPE",
       "net": "",
@@ -20028,55 +20028,7 @@
       "width_mm": 0.12
     },
     {
-      "id": "5b9a671a-c7fd-4a74-bd44-53b855f631a4",
-      "ref": "J1.graphic",
-      "kind": "PCB_SHAPE",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "width_mm": 0.12
-    },
-    {
-      "id": "4c7fdfc3-39c4-4792-9f4d-032eb7e7a653",
-      "ref": "J1.graphic",
-      "kind": "PCB_SHAPE",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "width_mm": 0.12
-    },
-    {
-      "id": "0800b1a0-fa46-4098-a71d-5be00b3d9dc4",
-      "ref": "J1.graphic",
-      "kind": "PCB_SHAPE",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "width_mm": 0.12
-    },
-    {
-      "id": "00c33cd7-b382-4f0e-a6ef-66aac510fce7",
-      "ref": "J1.graphic",
-      "kind": "PCB_SHAPE",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "width_mm": 0.12
-    },
-    {
-      "id": "1546f386-7b55-4344-99c2-efdb8bec2521",
-      "ref": "J1.graphic",
-      "kind": "PCB_SHAPE",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "width_mm": 0.12
-    },
-    {
-      "id": "1736790d-7ab3-4562-88e3-3838d2880dcf",
-      "ref": "J1.graphic",
-      "kind": "PCB_SHAPE",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "width_mm": 0.12
-    },
-    {
-      "id": "616c5850-c51c-4378-b06b-de5f7a8c6beb",
+      "id": "6756a009-2d9a-4f09-8f77-9f23107fc42f",
       "ref": "J1.graphic",
       "kind": "PCB_SHAPE",
       "net": "",
@@ -26382,16 +26334,6 @@
       "width_mm": 0.12
     },
     {
-      "id": "1f813f77-4ea4-4d6a-af49-369b7879183c",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "+9V",
-      "height_mm": 1.0,
-      "width_mm": 0.12
-    },
-    {
       "id": "a197a5b9-89db-4019-894c-cce59214cc73",
       "ref": "board-graphic",
       "kind": "PCB_TEXT",
@@ -26402,22 +26344,22 @@
       "width_mm": 0.12
     },
     {
+      "id": "1f813f77-4ea4-4d6a-af49-369b7879183c",
+      "ref": "board-graphic",
+      "kind": "PCB_TEXT",
+      "net": "",
+      "layer": "F.Silkscreen",
+      "text": "9V CENTER +",
+      "height_mm": 1.0,
+      "width_mm": 0.12
+    },
+    {
       "id": "3e1609af-95ed-462d-84cd-c883c4672509",
       "ref": "board-graphic",
       "kind": "PCB_TEXT",
       "net": "",
       "layer": "F.Silkscreen",
       "text": "A",
-      "height_mm": 1.0,
-      "width_mm": 0.12
-    },
-    {
-      "id": "90d46957-50f5-4004-a216-6ec2eb048f38",
-      "ref": "board-graphic",
-      "kind": "PCB_TEXT",
-      "net": "",
-      "layer": "F.Silkscreen",
-      "text": "GND",
       "height_mm": 1.0,
       "width_mm": 0.12
     },

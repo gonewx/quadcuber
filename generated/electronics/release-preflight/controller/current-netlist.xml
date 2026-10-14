@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/workspace/quadcuber/electronics/quadcuber.kicad_sch</source>
-    <date>2026-10-12T11:58:11</date>
+    <source>/mnt/disk0/project/cube/quadcuber/electronics/quadcuber.kicad_sch</source>
+    <date>2026-10-13T23:19:41</date>
     <tool>Eeschema 10.0.7</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1897,18 +1897,18 @@
       </units>
     </comp>
     <comp ref="J1">
-      <value>9V regulated input</value>
-      <footprint>Quadcuber:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</footprint>
+      <value>9V DC center-positive</value>
+      <footprint>Quadcuber:Jack_DC_Switchcraft_RASPC722X</footprint>
       <fields>
-        <field name="MPN">1715721</field>
-        <field name="Manufacturer">Phoenix Contact</field>
-        <field name="Footprint">Quadcuber:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</field>
+        <field name="MPN">RASPC722X</field>
+        <field name="Manufacturer">Switchcraft</field>
+        <field name="Footprint">Quadcuber:Jack_DC_Switchcraft_RASPC722X</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Quadcuber" part="J1" description=""/>
-      <property name="MPN" value="1715721"/>
-      <property name="Manufacturer" value="Phoenix Contact"/>
+      <property name="MPN" value="RASPC722X"/>
+      <property name="Manufacturer" value="Switchcraft"/>
       <property name="Sheetname" value="power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/power/" tstamps="/aa82877a-e39c-5600-906d-cd639555cb3d/"/>
@@ -1918,6 +1918,7 @@
           <pins>
             <pin num="1"/>
             <pin num="2"/>
+            <pin num="3"/>
           </pins>
         </unit>
       </units>
@@ -6466,14 +6467,15 @@
     <libpart lib="Quadcuber" part="J1">
       <fields>
         <field name="Reference">J1</field>
-        <field name="Value">9V regulated input</field>
-        <field name="Footprint">Quadcuber:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</field>
+        <field name="Value">9V DC center-positive</field>
+        <field name="Footprint">Quadcuber:Jack_DC_Switchcraft_RASPC722X</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+9V" type="passive"/>
-        <pin num="2" name="GND" type="passive"/>
+        <pin num="1" name="CENTER_9V" type="passive"/>
+        <pin num="2" name="SLEEVE_GND" type="passive"/>
+        <pin num="3" name="SLEEVE_SHUNT_NC" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Quadcuber" part="J10">
@@ -8491,7 +8493,7 @@
       <node ref="D3" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D4" pin="2" pinfunction="BI_2" pintype="passive"/>
       <node ref="D7" pin="1" pinfunction="K_1" pintype="passive"/>
-      <node ref="J1" pin="2" pinfunction="GND_2" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="SLEEVE_GND_2" pintype="passive"/>
       <node ref="J10" pin="3" pinfunction="GND_3" pintype="passive"/>
       <node ref="J11" pin="3" pinfunction="GND_3" pintype="passive"/>
       <node ref="J12" pin="3" pinfunction="GND_3" pintype="passive"/>
@@ -8892,7 +8894,7 @@
     </net>
     <net code="100" name="VIN" class="PowerBus">
       <node ref="F1" pin="1" pinfunction="1_1" pintype="passive"/>
-      <node ref="J1" pin="1" pinfunction="+9V_1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="CENTER_9V_1" pintype="passive"/>
     </net>
     <net code="101" name="VIN_FUSED" class="PowerBus">
       <node ref="C4" pin="2" pinfunction="2_2" pintype="passive"/>
@@ -8963,31 +8965,34 @@
       <node ref="R409" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="Y1" pin="3" pinfunction="3_3" pintype="passive"/>
     </net>
-    <net code="107" name="unconnected-(J5-PadA8)" class="Default">
+    <net code="107" name="unconnected-(J1-SLEEVE_SHUNT_NC-Pad3)" class="Default">
+      <node ref="J1" pin="3" pinfunction="SLEEVE_SHUNT_NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="108" name="unconnected-(J5-PadA8)" class="Default">
       <node ref="J5" pin="A8" pinfunction="A8_A8" pintype="passive+no_connect"/>
     </net>
-    <net code="108" name="unconnected-(J5-PadB8)" class="Default">
+    <net code="109" name="unconnected-(J5-PadB8)" class="Default">
       <node ref="J5" pin="B8" pinfunction="B8_B8" pintype="passive+no_connect"/>
     </net>
-    <net code="109" name="unconnected-(U1-GPIO22-Pad34)" class="Default">
+    <net code="110" name="unconnected-(U1-GPIO22-Pad34)" class="Default">
       <node ref="U1" pin="34" pinfunction="GPIO22_34" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="110" name="unconnected-(U1-GPIO23-Pad35)" class="Default">
+    <net code="111" name="unconnected-(U1-GPIO23-Pad35)" class="Default">
       <node ref="U1" pin="35" pinfunction="GPIO23_35" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="111" name="unconnected-(U1-GPIO26-Pad38)" class="Default">
+    <net code="112" name="unconnected-(U1-GPIO26-Pad38)" class="Default">
       <node ref="U1" pin="38" pinfunction="GPIO26_38" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="112" name="unconnected-(U1-GPIO27-Pad39)" class="Default">
+    <net code="113" name="unconnected-(U1-GPIO27-Pad39)" class="Default">
       <node ref="U1" pin="39" pinfunction="GPIO27_39" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="113" name="unconnected-(U1-GPIO28-Pad40)" class="Default">
+    <net code="114" name="unconnected-(U1-GPIO28-Pad40)" class="Default">
       <node ref="U1" pin="40" pinfunction="GPIO28_40" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="114" name="unconnected-(U1-GPIO29-Pad41)" class="Default">
+    <net code="115" name="unconnected-(U1-GPIO29-Pad41)" class="Default">
       <node ref="U1" pin="41" pinfunction="GPIO29_41" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="115" name="unconnected-(U5-NC-Pad4)" class="Default">
+    <net code="116" name="unconnected-(U5-NC-Pad4)" class="Default">
       <node ref="U5" pin="4" pinfunction="NC_4" pintype="passive+no_connect"/>
     </net>
   </nets>

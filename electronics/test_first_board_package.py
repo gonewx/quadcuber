@@ -52,6 +52,26 @@ class FirstBoardPackage(unittest.TestCase):
             self.assertEqual(r['Layer'].lower(), s['Side'])
         self.assertEqual(sum(r['Layer']=='Bottom' for r in cpl), 15)
 
+    def test_catalog_ids_are_exact_or_explicit_blockers(self):
+        rows = self.rows('assembly/part-matching.csv')
+        bom = {r['MPN']: r['LCSC Part #'] for r in self.rows('assembly/jlc-smt-bom.csv')}
+        for r in rows:
+            self.assertEqual(bom[r['MPN']], r['LCSC Part #'])
+            if r['LCSC Part #']:
+                self.assertEqual(r['Catalog_status'], 'EXACT_CATALOG_ID_CHECKED')
+                self.assertTrue(r['Source_URL'].endswith('/'+r['LCSC Part #']+'.html'))
+            else:
+                self.assertEqual(r['Catalog_status'], 'NOT_LISTED')
+                self.assertIn('BLOCKER', r['Order_status'])
+        self.assertEqual({r['MPN'] for r in rows if not r['LCSC Part #']}, {'W25Q16RVCNJQ', 'MF-MSMF110/16X-2'})
+
+    def test_shipped_notes_do_not_point_outside_package(self):
+        for name in ['assembly/hand-solder-purchase.csv', 'README.md', 'docs/order-and-cam.md',
+                     'docs/assembly-and-polarity.md', 'docs/bring-up.md']:
+            text = (OUT/name).read_text()
+            for bad in ['sources/', 'parent thread', 'Coorle']:
+                self.assertNotIn(bad, text, (name, bad))
+
     def test_unique_entry_supersedes_every_old_variant(self):
         old = ROOT / 'generated/electronics/release-preflight'
         for folder in old.glob('ENG-*'):
@@ -68,7 +88,7 @@ class FirstBoardPackage(unittest.TestCase):
         for rel in self.manifest['immutable_design_files']:
             self.assertEqual(hashlib.sha256((ROOT/rel).read_bytes()).hexdigest(),
                              self.manifest['design_baseline_sha256'][rel], rel)
-        with zipfile.ZipFile(OUT/'quadcuber-A1-first-board-db20b98.zip') as z:
+        with zipfile.ZipFile(OUT/(self.manifest['package']+'.zip')) as z:
             self.assertIsNone(z.testzip())
             self.assertEqual(set(z.namelist()), set(self.manifest['payload_sha256']) | {'manifest.json'})
             self.assertEqual(json.loads(z.read('manifest.json')), self.manifest)
