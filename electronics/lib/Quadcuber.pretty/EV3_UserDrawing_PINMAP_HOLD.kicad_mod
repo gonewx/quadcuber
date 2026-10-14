@@ -145,4 +145,9 @@
 		(uuid "0b8fae8b-0972-4348-a9ea-bdc23fa42bca")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/lib/3dmodels/project/EV3_USER_DRAWING_SIMPLIFIED_BODY.step"
+		(offset (xyz 0 0 0))
+		(scale (xyz 1 1 1))
+		(rotate (xyz 0 0 0))
+	)
 )

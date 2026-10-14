@@ -10,13 +10,14 @@
 
 ## KiCad版本与显示
 
-已使用用户批准的官方 **KiCad 10.0.7 Lite** 完成PCB与全部12张原理图的原生 `upgrade --force` 重存，以及ERC、含schematic parity的DRC和引脚契约复验。通过原生pcbnew API把原理图已有的MPN/Manufacturer同步为PCB隐藏字段，解决10版新增的198个缺失MPN一致性告警；未屏蔽检查。Lite安装缺少完整标准3D模型库，不能称为完整3D验证。
+已使用用户批准的官方 **KiCad 10.0.7 Lite** 完成PCB与全部12张原理图的原生 `upgrade --force` 重存，以及ERC、含schematic parity的DRC和引脚契约复验。通过原生pcbnew API把原理图已有的MPN/Manufacturer同步为PCB隐藏字段，解决10版新增的198个缺失MPN一致性告警；未屏蔽检查。Lite本身缺少标准3D库；本轮已把实际使用的模型归档在工程内并以`${KIPRJMOD}`关联，171个已装配器件均有显示。蓝色插座主体和橙色110/16X保险是有来源的简化包络，F2/F3与L1/L2也采用按公开尺寸独立生成的简化包络（原厂CAD再分发许可未确认），不能称为整板精确3D验证；详见[显示修复报告](../generated/electronics/3d-display-repair/README.md)。C26/C36保持DNP并默认隐藏模型。
 
 二维编辑器的红/褐色铜区和其他图层配色不是实物阻焊颜色。查看实物外观用“视图→3D查看器”（Alt+3）；成品绿色阻焊应在最终制造规格中明确。带Pico双排插座、丝印A0的板图是旧版；本目录A1采用直接焊接RP2040，打开时应核对丝印及工程路径。
 
 ## 交付入口
 
 - [KiCad工程](quadcuber.kicad_pro)、[原理图PDF](../generated/electronics/schematic.pdf)
+- [整板3D斜视](../generated/electronics/3d-display-repair/board-oblique.png)、[模型来源和限制](lib/3dmodels/README.md)、[当前显示修复核验](../generated/electronics/3d-display-repair/verification.json)
 - [正面板图](../generated/electronics/pcb-top.png)、[反面铜图（顶视透视）](../generated/electronics/pcb-bottom.png)、[正面装配图](../generated/electronics/assembly.png)、[反面装配图（顶视透视）](../generated/electronics/assembly-bottom.png)
 - [汇总电子BOM](../generated/electronics/bom-grouped.csv)、[逐件BOM](../generated/electronics/bom.csv)、[贴装坐标](../generated/electronics/positions.csv)
 - [ERC](../generated/electronics/erc.rpt)、[DRC](../generated/electronics/drc.rpt)、[状态与源哈希](../generated/electronics/release-status.json)、[独立复核](../generated/electronics/independent-review.md)

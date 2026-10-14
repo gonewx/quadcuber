@@ -1,0 +1,371 @@
+{
+  "pass": true,
+  "model_files": [
+    {
+      "file": "electronics/lib/3dmodels/kicad/Button_Switch_SMD.3dshapes/SW_SPST_TL3342.step",
+      "sha256": "23b1770b921df25f489d37b5636ad4a292f966c00638da7b5cb4b7f97d11c639",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        6.4,
+        5.2,
+        1.54
+      ],
+      "volume_mm3": 24.342425280142802
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+      "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        1.0,
+        0.5,
+        0.5
+      ],
+      "volume_mm3": 0.22661663706143587
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+      "sha256": "4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        1.6,
+        0.8,
+        0.8
+      ],
+      "volume_mm3": 0.9303638934211691
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+      "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        2.0,
+        1.25,
+        1.25
+      ],
+      "volume_mm3": 2.889933096491487
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+      "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        3.2,
+        2.5,
+        2.5
+      ],
+      "volume_mm3": 19.05096495438638
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Capacitor_THT.3dshapes/CP_Radial_D10.0mm_P5.00mm.step",
+      "sha256": "7367f35dd5439e325ba3912de65e9200831fdc6698080ffd056cd268649ba41d",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        10.0,
+        10.0,
+        12.0
+      ],
+      "volume_mm3": 767.2013039232423
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Capacitor_THT.3dshapes/CP_Radial_D8.0mm_P3.50mm.step",
+      "sha256": "abedfe603cd28231e16fb158d7b3f8875be74514f602e356364f48f073d0ef8e",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        8.0,
+        8.0,
+        10.0
+      ],
+      "volume_mm3": 389.56384753731476
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.step",
+      "sha256": "ea4d0799007ebdd3945072bf255d673d2fe87eb05fda85fd8d7993ad9397da41",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        2.54,
+        5.08,
+        11.54
+      ],
+      "volume_mm3": 39.382218773333506
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step",
+      "sha256": "b91b4ac5acf1a0d28a676703db972d17b8f11ef26a85b58d60786a69246b921b",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        2.54,
+        7.62,
+        11.54
+      ],
+      "volume_mm3": 59.07332816000024
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.step",
+      "sha256": "a74079b8d06bda78847623b39ee1855ffd1d9a8c1e896b349e4f1dc2056d44d9",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        2.54,
+        10.16,
+        11.54
+      ],
+      "volume_mm3": 78.76443754666705
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step",
+      "sha256": "6338ce740fa231c2d3dcc6384e0576994a47240a312a21413cb85d76990a69a0",
+      "solids": 36,
+      "valid": true,
+      "bbox_size_mm": [
+        8.94,
+        7.78,
+        4.26
+      ],
+      "volume_mm3": 119.86130380929241
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Crystal.3dshapes/Crystal_SMD_3225-4Pin_3.2x2.5mm.step",
+      "sha256": "d2a89df82ee5f0f56ef23ee59c8161b8d4e92af2b21959d72778316dde3f9f22",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        3.200428,
+        2.500839,
+        0.64
+      ],
+      "volume_mm3": 4.858760851885198
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Diode_SMD.3dshapes/D_SMA.step",
+      "sha256": "1cfddd4e3b1bf22b8fc6ee3258c2aade882ed7b85b528e23b9db42437775a1db",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        5.0,
+        2.7,
+        2.22
+      ],
+      "volume_mm3": 26.18996409222055
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Diode_SMD.3dshapes/D_SMB.step",
+      "sha256": "029466277d91e9f5492556be93e46611049e07115c7913880c547afa96058ed4",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        5.3,
+        3.55,
+        2.15
+      ],
+      "volume_mm3": 35.82558874601093
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Fuse.3dshapes/Fuse_1206_3216Metric.step",
+      "sha256": "5e6dcbe286696143d35a8ea37d91eef4b54ff3d1bd7c2c2b4dedda83d3f8e203",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        3.2,
+        1.6,
+        0.55
+      ],
+      "volume_mm3": 2.6140906168867493
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/LED_SMD.3dshapes/LED_0603_1608Metric.step",
+      "sha256": "98343205ec260ec165026ba2d44329a23096779ac36c553ea84aa7b370242e6d",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        1.6,
+        0.8,
+        1.1
+      ],
+      "volume_mm3": 1.0669788367839736
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Package_DFN_QFN.3dshapes/QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm.step",
+      "sha256": "010e8039ec6f28fb1c5f5c6d170757af464c82c200ecc655c8150398117e2283",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        7.0,
+        7.0,
+        0.9
+      ],
+      "volume_mm3": 41.76220862938599
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
+      "sha256": "d9b46f6dd6cf8c5e2028838eed38e2a6a7f26235856078511e5a71a594ca809e",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        6.0,
+        4.9,
+        1.75
+      ],
+      "volume_mm3": 30.21806434621065
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Package_SO.3dshapes/Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.85x4.9mm_Mask2.4x3.1mm_ThermalVias.step",
+      "sha256": "b3f56d43c221eba26f4dd48d37c782b9cf67bfa435ec77589732151203ec8397",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        5.75,
+        4.9,
+        1.1
+      ],
+      "volume_mm3": 18.36514383312114
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+      "sha256": "3b70f1b6dd947543fda90b947f91f2e2804766c39b78e56c87f1448dfd575ed8",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        2.8,
+        2.9,
+        1.55
+      ],
+      "volume_mm3": 6.5047316449856165
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+      "sha256": "9491de18305b16fe125ee3d603109a29edd837d50d22305b6f929886492ce755",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        2.8,
+        2.9,
+        1.55
+      ],
+      "volume_mm3": 6.594715048563982
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/TDSON-8-1.step",
+      "sha256": "5a963e380dc0ff0eec7e2ba3f7e348613ee7c8d464841726d7b5dfbac6af3411",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        6.15,
+        5.15,
+        1.03
+      ],
+      "volume_mm3": 30.68277390891685
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0402_1005Metric.step",
+      "sha256": "91507e5af4251cb4ef38e04889c9b98da29904432bd83786bba13ae9b605eacb",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        1.0,
+        0.5,
+        0.35
+      ],
+      "volume_mm3": 0.1634484510006475
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+      "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        1.6,
+        0.8,
+        0.45
+      ],
+      "volume_mm3": 0.537218760197631
+    },
+    {
+      "file": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_2512_6332Metric.step",
+      "sha256": "76b2052a3c120193de7cdc0af99157b6f375e9a4af7721e3e3d012968c877f27",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        6.3,
+        3.2,
+        0.6
+      ],
+      "volume_mm3": 11.097022294738707
+    },
+    {
+      "file": "electronics/lib/3dmodels/project/EV3_USER_DRAWING_SIMPLIFIED_BODY.step",
+      "sha256": "6551a4693b5e669e968f40a927bc8b2998b05fcc797f9e10c3fc451a18f2f7ac",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        12.2,
+        15.0,
+        14.95
+      ],
+      "volume_mm3": 2735.8499999999995
+    },
+    {
+      "file": "electronics/lib/3dmodels/project/MF_MSMF050_SIMPLIFIED_MAX_ENVELOPE.step",
+      "sha256": "6602e14c50625ab2f734e5b948e5f21b9367a69a982ebd1a5f8920caf5ab0887",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        4.73,
+        3.41,
+        0.85
+      ],
+      "volume_mm3": 13.709905000000001
+    },
+    {
+      "file": "electronics/lib/3dmodels/project/MF_MSMF110_16X_SIMPLIFIED_MAX_ENVELOPE.step",
+      "sha256": "40dfb192b6b5cc474e84b03fb367006410d9e64df91e4fe7dece863e7615bb14",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        4.83,
+        3.41,
+        0.8
+      ],
+      "volume_mm3": 13.17624
+    },
+    {
+      "file": "electronics/lib/3dmodels/project/RASPC722X_SIMPLIFIED_BODY.step",
+      "sha256": "89eb080ae98d20f79257ed2f6723cf67c895df32d2a03249769c8029d6a6bbe0",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        9.0,
+        14.5,
+        11.0
+      ],
+      "volume_mm3": 1435.5
+    },
+    {
+      "file": "electronics/lib/3dmodels/project/SRP1245A_SIMPLIFIED_MAX_ENVELOPE.step",
+      "sha256": "d71002d034e33bb491a70211b23d7186e859f7253532f898cffddad6bcce7a66",
+      "solids": 1,
+      "valid": true,
+      "bbox_size_mm": [
+        14.0,
+        12.8,
+        5.0
+      ],
+      "volume_mm3": 896.0
+    }
+  ],
+  "manufacturer_CAD_distributed": false,
+  "original_standard_model_hashes_verified": true,
+  "licensing": {
+    "25_KiCad_models": "CC-BY-SA-4.0 with design exception",
+    "5_independent_project_envelopes": "CC0-1.0"
+  }
+}

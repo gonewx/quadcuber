@@ -1,0 +1,2487 @@
+{
+  "pass": true,
+  "baseline_commit": "b0c1822d67cf4002c179fc86d4f697d17ba24381",
+  "kicad": "10.0.7",
+  "pcb_sha256": "be9144f06f8801287043d763554065c89d31856c81c60f32e374e4530be8e95b",
+  "proof": "All PCB S-expression tokens outside model nodes exactly equal baseline; same for every used footprint library. Includes pads, holes, tracks, vias, zones and filled polygons, all text, placements, rotations, UUIDs, nets and DNP attributes.",
+  "project_and_rules_byte_identical": true,
+  "footprints": 200,
+  "visible_populated_component_bodies": 171,
+  "dnp_hidden": [
+    "C26",
+    "C36"
+  ],
+  "no_body_required": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "TP1",
+    "TP10",
+    "TP11",
+    "TP12",
+    "TP13",
+    "TP14",
+    "TP15",
+    "TP16",
+    "TP17",
+    "TP18",
+    "TP19",
+    "TP2",
+    "TP20",
+    "TP21",
+    "TP22",
+    "TP23",
+    "TP24",
+    "TP25",
+    "TP3",
+    "TP4",
+    "TP5",
+    "TP6",
+    "TP7"
+  ],
+  "missing_model_files": [],
+  "missing_populated_body_models": [],
+  "exact_full_board_manufacturer_CAD_verified": false,
+  "manufacturing_release": false,
+  "inventory": [
+    {
+      "ref": "C1",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C100",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C101",
+      "footprint": "C_1210_3225Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+          "visible": true,
+          "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9"
+        }
+      ]
+    },
+    {
+      "ref": "C102",
+      "footprint": "CP_Radial_D10.0mm_P5.00mm",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_THT.3dshapes/CP_Radial_D10.0mm_P5.00mm.step",
+          "visible": true,
+          "sha256": "7367f35dd5439e325ba3912de65e9200831fdc6698080ffd056cd268649ba41d"
+        }
+      ]
+    },
+    {
+      "ref": "C103",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C104",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C105",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C120",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C121",
+      "footprint": "C_1210_3225Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+          "visible": true,
+          "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9"
+        }
+      ]
+    },
+    {
+      "ref": "C122",
+      "footprint": "CP_Radial_D10.0mm_P5.00mm",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_THT.3dshapes/CP_Radial_D10.0mm_P5.00mm.step",
+          "visible": true,
+          "sha256": "7367f35dd5439e325ba3912de65e9200831fdc6698080ffd056cd268649ba41d"
+        }
+      ]
+    },
+    {
+      "ref": "C123",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C124",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C125",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C140",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C141",
+      "footprint": "C_1210_3225Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+          "visible": true,
+          "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9"
+        }
+      ]
+    },
+    {
+      "ref": "C142",
+      "footprint": "CP_Radial_D10.0mm_P5.00mm",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_THT.3dshapes/CP_Radial_D10.0mm_P5.00mm.step",
+          "visible": true,
+          "sha256": "7367f35dd5439e325ba3912de65e9200831fdc6698080ffd056cd268649ba41d"
+        }
+      ]
+    },
+    {
+      "ref": "C143",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C144",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C145",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C160",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C161",
+      "footprint": "C_1210_3225Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+          "visible": true,
+          "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9"
+        }
+      ]
+    },
+    {
+      "ref": "C162",
+      "footprint": "CP_Radial_D10.0mm_P5.00mm",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_THT.3dshapes/CP_Radial_D10.0mm_P5.00mm.step",
+          "visible": true,
+          "sha256": "7367f35dd5439e325ba3912de65e9200831fdc6698080ffd056cd268649ba41d"
+        }
+      ]
+    },
+    {
+      "ref": "C163",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C164",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C165",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C2",
+      "footprint": "CP_Radial_D10.0mm_P5.00mm",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_THT.3dshapes/CP_Radial_D10.0mm_P5.00mm.step",
+          "visible": true,
+          "sha256": "7367f35dd5439e325ba3912de65e9200831fdc6698080ffd056cd268649ba41d"
+        }
+      ]
+    },
+    {
+      "ref": "C20",
+      "footprint": "C_1210_3225Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+          "visible": true,
+          "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9"
+        }
+      ]
+    },
+    {
+      "ref": "C21",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C22",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C23",
+      "footprint": "C_1210_3225Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+          "visible": true,
+          "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9"
+        }
+      ]
+    },
+    {
+      "ref": "C24",
+      "footprint": "C_1210_3225Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+          "visible": true,
+          "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9"
+        }
+      ]
+    },
+    {
+      "ref": "C25",
+      "footprint": "C_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1"
+        }
+      ]
+    },
+    {
+      "ref": "C26",
+      "footprint": "CP_Radial_D8.0mm_P3.50mm",
+      "dnp": true,
+      "category": "DNP; model explicitly hidden in board",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_THT.3dshapes/CP_Radial_D8.0mm_P3.50mm.step",
+          "visible": false,
+          "sha256": "abedfe603cd28231e16fb158d7b3f8875be74514f602e356364f48f073d0ef8e"
+        }
+      ]
+    },
+    {
+      "ref": "C3",
+      "footprint": "CP_Radial_D10.0mm_P5.00mm",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_THT.3dshapes/CP_Radial_D10.0mm_P5.00mm.step",
+          "visible": true,
+          "sha256": "7367f35dd5439e325ba3912de65e9200831fdc6698080ffd056cd268649ba41d"
+        }
+      ]
+    },
+    {
+      "ref": "C30",
+      "footprint": "C_1210_3225Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+          "visible": true,
+          "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9"
+        }
+      ]
+    },
+    {
+      "ref": "C31",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C32",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C33",
+      "footprint": "C_1210_3225Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+          "visible": true,
+          "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9"
+        }
+      ]
+    },
+    {
+      "ref": "C34",
+      "footprint": "C_1210_3225Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+          "visible": true,
+          "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9"
+        }
+      ]
+    },
+    {
+      "ref": "C35",
+      "footprint": "C_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1"
+        }
+      ]
+    },
+    {
+      "ref": "C36",
+      "footprint": "CP_Radial_D8.0mm_P3.50mm",
+      "dnp": true,
+      "category": "DNP; model explicitly hidden in board",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_THT.3dshapes/CP_Radial_D8.0mm_P3.50mm.step",
+          "visible": false,
+          "sha256": "abedfe603cd28231e16fb158d7b3f8875be74514f602e356364f48f073d0ef8e"
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C400",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C410",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C411",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C412",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C413",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C414",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C415",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C416",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C417",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C418",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C419",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C420",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C421",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C422",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C423",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "C424",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C425",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C426",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C427",
+      "footprint": "C_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "footprint": "C_0805_2012Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+          "visible": true,
+          "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+        }
+      ]
+    },
+    {
+      "ref": "D2",
+      "footprint": "D_SMA",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Diode_SMD.3dshapes/D_SMA.step",
+          "visible": true,
+          "sha256": "1cfddd4e3b1bf22b8fc6ee3258c2aade882ed7b85b528e23b9db42437775a1db"
+        }
+      ]
+    },
+    {
+      "ref": "D3",
+      "footprint": "D_SMB",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Diode_SMD.3dshapes/D_SMB.step",
+          "visible": true,
+          "sha256": "029466277d91e9f5492556be93e46611049e07115c7913880c547afa96058ed4"
+        }
+      ]
+    },
+    {
+      "ref": "D4",
+      "footprint": "D_SMB",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Diode_SMD.3dshapes/D_SMB.step",
+          "visible": true,
+          "sha256": "029466277d91e9f5492556be93e46611049e07115c7913880c547afa96058ed4"
+        }
+      ]
+    },
+    {
+      "ref": "D5",
+      "footprint": "D_SMA",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Diode_SMD.3dshapes/D_SMA.step",
+          "visible": true,
+          "sha256": "1cfddd4e3b1bf22b8fc6ee3258c2aade882ed7b85b528e23b9db42437775a1db"
+        }
+      ]
+    },
+    {
+      "ref": "D7",
+      "footprint": "LED_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/LED_SMD.3dshapes/LED_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "98343205ec260ec165026ba2d44329a23096779ac36c553ea84aa7b370242e6d"
+        }
+      ]
+    },
+    {
+      "ref": "F1",
+      "footprint": "Fuse_Littelfuse_407_1206",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Fuse.3dshapes/Fuse_1206_3216Metric.step",
+          "visible": true,
+          "sha256": "5e6dcbe286696143d35a8ea37d91eef4b54ff3d1bd7c2c2b4dedda83d3f8e203"
+        }
+      ]
+    },
+    {
+      "ref": "F10",
+      "footprint": "Fuse_Bourns_MF_MSMF_Style2_1812",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/MF_MSMF110_16X_SIMPLIFIED_MAX_ENVELOPE.step",
+          "visible": true,
+          "sha256": "40dfb192b6b5cc474e84b03fb367006410d9e64df91e4fe7dece863e7615bb14"
+        }
+      ]
+    },
+    {
+      "ref": "F11",
+      "footprint": "Fuse_Bourns_MF_MSMF_Style2_1812",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/MF_MSMF110_16X_SIMPLIFIED_MAX_ENVELOPE.step",
+          "visible": true,
+          "sha256": "40dfb192b6b5cc474e84b03fb367006410d9e64df91e4fe7dece863e7615bb14"
+        }
+      ]
+    },
+    {
+      "ref": "F12",
+      "footprint": "Fuse_Bourns_MF_MSMF_Style2_1812",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/MF_MSMF110_16X_SIMPLIFIED_MAX_ENVELOPE.step",
+          "visible": true,
+          "sha256": "40dfb192b6b5cc474e84b03fb367006410d9e64df91e4fe7dece863e7615bb14"
+        }
+      ]
+    },
+    {
+      "ref": "F13",
+      "footprint": "Fuse_Bourns_MF_MSMF_Style2_1812",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/MF_MSMF110_16X_SIMPLIFIED_MAX_ENVELOPE.step",
+          "visible": true,
+          "sha256": "40dfb192b6b5cc474e84b03fb367006410d9e64df91e4fe7dece863e7615bb14"
+        }
+      ]
+    },
+    {
+      "ref": "F2",
+      "footprint": "Fuse_1812_4532Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/MF_MSMF050_SIMPLIFIED_MAX_ENVELOPE.step",
+          "visible": true,
+          "sha256": "6602e14c50625ab2f734e5b948e5f21b9367a69a982ebd1a5f8920caf5ab0887"
+        }
+      ]
+    },
+    {
+      "ref": "F3",
+      "footprint": "Fuse_1812_4532Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/MF_MSMF050_SIMPLIFIED_MAX_ENVELOPE.step",
+          "visible": true,
+          "sha256": "6602e14c50625ab2f734e5b948e5f21b9367a69a982ebd1a5f8920caf5ab0887"
+        }
+      ]
+    },
+    {
+      "ref": "H1",
+      "footprint": "MountingHole_3.2mm_M3",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "H2",
+      "footprint": "MountingHole_3.2mm_M3",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "H3",
+      "footprint": "MountingHole_3.2mm_M3",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "H4",
+      "footprint": "MountingHole_3.2mm_M3",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "J1",
+      "footprint": "Jack_DC_Switchcraft_RASPC722X",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/RASPC722X_SIMPLIFIED_BODY.step",
+          "visible": true,
+          "sha256": "89eb080ae98d20f79257ed2f6723cf67c895df32d2a03249769c8029d6a6bbe0"
+        }
+      ]
+    },
+    {
+      "ref": "J10",
+      "footprint": "EV3_UserDrawing_PINMAP_HOLD",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/EV3_USER_DRAWING_SIMPLIFIED_BODY.step",
+          "visible": true,
+          "sha256": "6551a4693b5e669e968f40a927bc8b2998b05fcc797f9e10c3fc451a18f2f7ac"
+        }
+      ]
+    },
+    {
+      "ref": "J11",
+      "footprint": "EV3_UserDrawing_PINMAP_HOLD",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/EV3_USER_DRAWING_SIMPLIFIED_BODY.step",
+          "visible": true,
+          "sha256": "6551a4693b5e669e968f40a927bc8b2998b05fcc797f9e10c3fc451a18f2f7ac"
+        }
+      ]
+    },
+    {
+      "ref": "J12",
+      "footprint": "EV3_UserDrawing_PINMAP_HOLD",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/EV3_USER_DRAWING_SIMPLIFIED_BODY.step",
+          "visible": true,
+          "sha256": "6551a4693b5e669e968f40a927bc8b2998b05fcc797f9e10c3fc451a18f2f7ac"
+        }
+      ]
+    },
+    {
+      "ref": "J13",
+      "footprint": "EV3_UserDrawing_PINMAP_HOLD",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/EV3_USER_DRAWING_SIMPLIFIED_BODY.step",
+          "visible": true,
+          "sha256": "6551a4693b5e669e968f40a927bc8b2998b05fcc797f9e10c3fc451a18f2f7ac"
+        }
+      ]
+    },
+    {
+      "ref": "J2",
+      "footprint": "PinHeader_1x03_P2.54mm_Vertical",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step",
+          "visible": true,
+          "sha256": "b91b4ac5acf1a0d28a676703db972d17b8f11ef26a85b58d60786a69246b921b"
+        }
+      ]
+    },
+    {
+      "ref": "J20",
+      "footprint": "PinHeader_1x03_P2.54mm_Vertical",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step",
+          "visible": true,
+          "sha256": "b91b4ac5acf1a0d28a676703db972d17b8f11ef26a85b58d60786a69246b921b"
+        }
+      ]
+    },
+    {
+      "ref": "J21",
+      "footprint": "PinHeader_1x03_P2.54mm_Vertical",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step",
+          "visible": true,
+          "sha256": "b91b4ac5acf1a0d28a676703db972d17b8f11ef26a85b58d60786a69246b921b"
+        }
+      ]
+    },
+    {
+      "ref": "J22",
+      "footprint": "PinHeader_1x03_P2.54mm_Vertical",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step",
+          "visible": true,
+          "sha256": "b91b4ac5acf1a0d28a676703db972d17b8f11ef26a85b58d60786a69246b921b"
+        }
+      ]
+    },
+    {
+      "ref": "J23",
+      "footprint": "PinHeader_1x03_P2.54mm_Vertical",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step",
+          "visible": true,
+          "sha256": "b91b4ac5acf1a0d28a676703db972d17b8f11ef26a85b58d60786a69246b921b"
+        }
+      ]
+    },
+    {
+      "ref": "J3",
+      "footprint": "PinHeader_1x02_P2.54mm_Vertical",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.step",
+          "visible": true,
+          "sha256": "ea4d0799007ebdd3945072bf255d673d2fe87eb05fda85fd8d7993ad9397da41"
+        }
+      ]
+    },
+    {
+      "ref": "J4",
+      "footprint": "PinHeader_1x04_P2.54mm_Vertical",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.step",
+          "visible": true,
+          "sha256": "a74079b8d06bda78847623b39ee1855ffd1d9a8c1e896b349e4f1dc2056d44d9"
+        }
+      ]
+    },
+    {
+      "ref": "J5",
+      "footprint": "USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step",
+          "visible": true,
+          "sha256": "6338ce740fa231c2d3dcc6384e0576994a47240a312a21413cb85d76990a69a0"
+        }
+      ]
+    },
+    {
+      "ref": "L1",
+      "footprint": "L_Bourns_SRP1245A",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/SRP1245A_SIMPLIFIED_MAX_ENVELOPE.step",
+          "visible": true,
+          "sha256": "d71002d034e33bb491a70211b23d7186e859f7253532f898cffddad6bcce7a66"
+        }
+      ]
+    },
+    {
+      "ref": "L2",
+      "footprint": "L_Bourns_SRP1245A",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/project/SRP1245A_SIMPLIFIED_MAX_ENVELOPE.step",
+          "visible": true,
+          "sha256": "d71002d034e33bb491a70211b23d7186e859f7253532f898cffddad6bcce7a66"
+        }
+      ]
+    },
+    {
+      "ref": "Q1",
+      "footprint": "TDSON-8-1",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/TDSON-8-1.step",
+          "visible": true,
+          "sha256": "5a963e380dc0ff0eec7e2ba3f7e348613ee7c8d464841726d7b5dfbac6af3411"
+        }
+      ]
+    },
+    {
+      "ref": "R100",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R101",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R102",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R103",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R104",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R105",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R106",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R107",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R108",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R109",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R120",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R121",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R122",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R123",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R124",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R125",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R126",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R127",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R128",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R129",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R140",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R141",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R142",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R143",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R144",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R145",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R146",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R147",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R148",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R149",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R160",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R161",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R162",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R163",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R164",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R165",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R166",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R167",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R168",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R169",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R21",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R22",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R23",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R24",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R31",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R32",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R33",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R34",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R400",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R401",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R402",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R403",
+      "footprint": "R_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "91507e5af4251cb4ef38e04889c9b98da29904432bd83786bba13ae9b605eacb"
+        }
+      ]
+    },
+    {
+      "ref": "R404",
+      "footprint": "R_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "91507e5af4251cb4ef38e04889c9b98da29904432bd83786bba13ae9b605eacb"
+        }
+      ]
+    },
+    {
+      "ref": "R405",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R406",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R407",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R408",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R409",
+      "footprint": "R_0402_1005Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0402_1005Metric.step",
+          "visible": true,
+          "sha256": "91507e5af4251cb4ef38e04889c9b98da29904432bd83786bba13ae9b605eacb"
+        }
+      ]
+    },
+    {
+      "ref": "R410",
+      "footprint": "R_0603_1608Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+          "visible": true,
+          "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+        }
+      ]
+    },
+    {
+      "ref": "R500",
+      "footprint": "R_2512_6332Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_2512_6332Metric.step",
+          "visible": true,
+          "sha256": "76b2052a3c120193de7cdc0af99157b6f375e9a4af7721e3e3d012968c877f27"
+        }
+      ]
+    },
+    {
+      "ref": "R501",
+      "footprint": "R_2512_6332Metric",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Resistor_SMD.3dshapes/R_2512_6332Metric.step",
+          "visible": true,
+          "sha256": "76b2052a3c120193de7cdc0af99157b6f375e9a4af7721e3e3d012968c877f27"
+        }
+      ]
+    },
+    {
+      "ref": "S1",
+      "footprint": "SW_SPST_TL3342",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Button_Switch_SMD.3dshapes/SW_SPST_TL3342.step",
+          "visible": true,
+          "sha256": "23b1770b921df25f489d37b5636ad4a292f966c00638da7b5cb4b7f97d11c639"
+        }
+      ]
+    },
+    {
+      "ref": "S2",
+      "footprint": "SW_SPST_TL3342",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Button_Switch_SMD.3dshapes/SW_SPST_TL3342.step",
+          "visible": true,
+          "sha256": "23b1770b921df25f489d37b5636ad4a292f966c00638da7b5cb4b7f97d11c639"
+        }
+      ]
+    },
+    {
+      "ref": "TP1",
+      "footprint": "TestPoint_Pad_D2.0mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP10",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP11",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP12",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP13",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP14",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP15",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP16",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP17",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP18",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP19",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP2",
+      "footprint": "TestPoint_Pad_D2.0mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP20",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP21",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP22",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP23",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP24",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP25",
+      "footprint": "TestPoint_Pad_D1.5mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP3",
+      "footprint": "TestPoint_Pad_D2.0mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP4",
+      "footprint": "TestPoint_Pad_D2.0mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP5",
+      "footprint": "TestPoint_Pad_D2.0mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP6",
+      "footprint": "TestPoint_Pad_D2.0mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "TP7",
+      "footprint": "TestPoint_Pad_D2.0mm",
+      "dnp": false,
+      "category": "bare test pad or mounting hole; no component-body model required",
+      "models": []
+    },
+    {
+      "ref": "U1",
+      "footprint": "QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm_ThermalVias",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_DFN_QFN.3dshapes/QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm.step",
+          "visible": true,
+          "sha256": "010e8039ec6f28fb1c5f5c6d170757af464c82c200ecc655c8150398117e2283"
+        }
+      ]
+    },
+    {
+      "ref": "U10",
+      "footprint": "Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_SO.3dshapes/Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.85x4.9mm_Mask2.4x3.1mm_ThermalVias.step",
+          "visible": true,
+          "sha256": "b3f56d43c221eba26f4dd48d37c782b9cf67bfa435ec77589732151203ec8397"
+        }
+      ]
+    },
+    {
+      "ref": "U11",
+      "footprint": "Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_SO.3dshapes/Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.85x4.9mm_Mask2.4x3.1mm_ThermalVias.step",
+          "visible": true,
+          "sha256": "b3f56d43c221eba26f4dd48d37c782b9cf67bfa435ec77589732151203ec8397"
+        }
+      ]
+    },
+    {
+      "ref": "U12",
+      "footprint": "Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_SO.3dshapes/Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.85x4.9mm_Mask2.4x3.1mm_ThermalVias.step",
+          "visible": true,
+          "sha256": "b3f56d43c221eba26f4dd48d37c782b9cf67bfa435ec77589732151203ec8397"
+        }
+      ]
+    },
+    {
+      "ref": "U13",
+      "footprint": "Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_SO.3dshapes/Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.85x4.9mm_Mask2.4x3.1mm_ThermalVias.step",
+          "visible": true,
+          "sha256": "b3f56d43c221eba26f4dd48d37c782b9cf67bfa435ec77589732151203ec8397"
+        }
+      ]
+    },
+    {
+      "ref": "U2",
+      "footprint": "SOT-23-6",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+          "visible": true,
+          "sha256": "9491de18305b16fe125ee3d603109a29edd837d50d22305b6f929886492ce755"
+        }
+      ]
+    },
+    {
+      "ref": "U20",
+      "footprint": "SOT-23-6",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+          "visible": true,
+          "sha256": "9491de18305b16fe125ee3d603109a29edd837d50d22305b6f929886492ce755"
+        }
+      ]
+    },
+    {
+      "ref": "U21",
+      "footprint": "SOT-23-6",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+          "visible": true,
+          "sha256": "9491de18305b16fe125ee3d603109a29edd837d50d22305b6f929886492ce755"
+        }
+      ]
+    },
+    {
+      "ref": "U22",
+      "footprint": "SOT-23-6",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+          "visible": true,
+          "sha256": "9491de18305b16fe125ee3d603109a29edd837d50d22305b6f929886492ce755"
+        }
+      ]
+    },
+    {
+      "ref": "U23",
+      "footprint": "SOT-23-6",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+          "visible": true,
+          "sha256": "9491de18305b16fe125ee3d603109a29edd837d50d22305b6f929886492ce755"
+        }
+      ]
+    },
+    {
+      "ref": "U3",
+      "footprint": "SOT-23-6",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+          "visible": true,
+          "sha256": "9491de18305b16fe125ee3d603109a29edd837d50d22305b6f929886492ce755"
+        }
+      ]
+    },
+    {
+      "ref": "U30",
+      "footprint": "SOT-23-5",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+          "visible": true,
+          "sha256": "3b70f1b6dd947543fda90b947f91f2e2804766c39b78e56c87f1448dfd575ed8"
+        }
+      ]
+    },
+    {
+      "ref": "U31",
+      "footprint": "SOT-23-5",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+          "visible": true,
+          "sha256": "3b70f1b6dd947543fda90b947f91f2e2804766c39b78e56c87f1448dfd575ed8"
+        }
+      ]
+    },
+    {
+      "ref": "U32",
+      "footprint": "SOT-23-5",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+          "visible": true,
+          "sha256": "3b70f1b6dd947543fda90b947f91f2e2804766c39b78e56c87f1448dfd575ed8"
+        }
+      ]
+    },
+    {
+      "ref": "U33",
+      "footprint": "SOT-23-5",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+          "visible": true,
+          "sha256": "3b70f1b6dd947543fda90b947f91f2e2804766c39b78e56c87f1448dfd575ed8"
+        }
+      ]
+    },
+    {
+      "ref": "U4",
+      "footprint": "SOT-23-6",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+          "visible": true,
+          "sha256": "9491de18305b16fe125ee3d603109a29edd837d50d22305b6f929886492ce755"
+        }
+      ]
+    },
+    {
+      "ref": "U5",
+      "footprint": "SOT-23-5",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+          "visible": true,
+          "sha256": "3b70f1b6dd947543fda90b947f91f2e2804766c39b78e56c87f1448dfd575ed8"
+        }
+      ]
+    },
+    {
+      "ref": "U6",
+      "footprint": "SOT-23-6",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+          "visible": true,
+          "sha256": "9491de18305b16fe125ee3d603109a29edd837d50d22305b6f929886492ce755"
+        }
+      ]
+    },
+    {
+      "ref": "U7",
+      "footprint": "SOIC-8_3.9x4.9mm_P1.27mm",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
+          "visible": true,
+          "sha256": "d9b46f6dd6cf8c5e2028838eed38e2a6a7f26235856078511e5a71a594ca809e"
+        }
+      ]
+    },
+    {
+      "ref": "Y1",
+      "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+      "dnp": false,
+      "category": "populated component with visible, locally resolved model",
+      "models": [
+        {
+          "path": "electronics/lib/3dmodels/kicad/Crystal.3dshapes/Crystal_SMD_3225-4Pin_3.2x2.5mm.step",
+          "visible": true,
+          "sha256": "d2a89df82ee5f0f56ef23ee59c8161b8d4e92af2b21959d72778316dde3f9f22"
+        }
+      ]
+    }
+  ]
+}

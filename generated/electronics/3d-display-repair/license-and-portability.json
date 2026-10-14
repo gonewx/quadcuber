@@ -1,0 +1,20 @@
+{
+  "decision": "User-authorized distribution fallback: independent dimension-derived envelopes replace unconfirmed manufacturer CAD",
+  "bourns_redistribution_permission": "unconfirmed; no explicit grant found in local STEP metadata",
+  "terms_url": "https://www.bourns.com/legal/disclaimers-terms-and-policies",
+  "terms_normal_request_result": "HTTP403 on2026-10-14; no bypass",
+  "manufacturer_STEP_in_current_tree": false,
+  "historical_commits_rewritten": false,
+  "kicad_license": "CC-BY-SA-4.0 plus design exception; original notices retained",
+  "project_models_and_generator": "CC0-1.0",
+  "cc0_text_source": "Debian /usr/share/common-licenses/CC0-1.0",
+  "license_sha256": {
+    "electronics/lib/3dmodels/kicad/LICENSE.md": "285b027a721577d0bc0198f36e948c6c282ddaa4b58fef8ed826749576eb0aef",
+    "electronics/lib/3dmodels/project/LICENSE.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+  },
+  "independent_directory_portability_check": {
+    "pass": true,
+    "resolved_model_references": 173,
+    "system_model_library_used": false
+  }
+}

@@ -1,5 +1,7 @@
 # Bourns 原厂模型下载与核查
 
+**最终发布采用许可明确的替代显示：** 原厂STEP再分发授权未确认，两个原始STEP从当前树移出（历史提交未重写，执行环境下载区保留原件）。F2/F3和L1/L2改为按公开尺寸独立生成的简化包络；F10–13继续使用简化包络，未采用错配050。当前状态见[发布报告](../../../generated/electronics/3d-display-repair/README.md)。下表和checksums.json是最初下载的历史记录，包含已移出文件的哈希，不是当前目录完整性清单。
+
 2026-10-13 正常 HTTPS 下载成功；模型来源 URL 与原始哈希见 `model-results.json`，本目录全部原件哈希见 `checksums.json`。三个文件均以 `ISO-10303-21` 开始并正确结束，OpenCascade/CadQuery 导入实体有效，非 HTML。
 
 | 目标 | 官方下载 | 核查结论 |
@@ -8,4 +10,4 @@
 | F10–13 MF-MSMF110/16X-2 | MF-MSMF110_16X.stp | 精确原厂目录链接实际返回与 050 完全相同的字节，PRODUCT 仍为 MF-MSMF050。官方 PDF 第 5、7 页把 110/16X 列为 Style 2，端子形状与 Style 1 不同。不得当作精确 110 模型安装，也未用相似模型代替。 |
 | L1/L2 SRP1245A-100M | SRP1245A series.stp | 原厂目录只有系列模型。有效 8 实体，总包围盒 12.9×12.5×5.005 mm；内部名 TMPC1205HP-Series 仅作为溯源疑点，不单独判无效。已渲染 SRP1245A.pdf 第 1 页，-100M 属于 Lead Frame，总跨度标 13.5±0.5 mm，另一边 12.5±0.3、高4.8±0.2。模型 12.9 mm 总跨度低于图示13.0 mm下限，需原厂确认版本/适用性；不缩放、不假定为已核精确模型。 |
 
-原厂资料：[SRP1245A](https://www.bourns.com/docs/Product-Datasheets/SRP1245A.pdf)、[MF-MSMF](https://www.bourns.com/docs/product-datasheets/mf-msmf.pdf)。本目录保存其余原始下载与错配证据；错配的 `MF-MSMF110_16X.stp` 不随提交发布，原始哈希保留在 `model-results.json`，下载原件仅保留在执行环境的下载区。不代表模型已附加或完成整板3D碰撞检查。J10–13 EV3、C26/C36 DNP、F1 Littelfuse 不在这份 Bourns 核查中替换。
+原厂资料：[SRP1245A](https://www.bourns.com/docs/Product-Datasheets/SRP1245A.pdf)、[MF-MSMF](https://www.bourns.com/docs/product-datasheets/mf-msmf.pdf)。本目录保留数据表与历史下载哈希/错配证据；原厂STEP已从当前发布树移出；错配的 `MF-MSMF110_16X.stp` 不随提交发布，原始哈希保留在 `model-results.json`，下载原件仅保留在执行环境的下载区。不代表模型已附加或完成整板3D碰撞检查。J10–13 EV3、C26/C36 DNP、F1 Littelfuse 不在这份 Bourns 核查中替换。

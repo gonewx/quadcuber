@@ -176,15 +176,9 @@
 		(uuid "7f95e976-e3d1-4360-9a72-1550947d793a")
 	)
 	(embedded_fonts no)
-	(model "${KICAD9_3DMODEL_DIR}/Fuse.3dshapes/Fuse_1812_4532Metric.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
+	(model "${KIPRJMOD}/lib/3dmodels/project/MF_MSMF110_16X_SIMPLIFIED_MAX_ENVELOPE.step"
+		(offset (xyz 0 0 0))
+		(scale (xyz 1 1 1))
+		(rotate (xyz 0 0 0))
 	)
 )

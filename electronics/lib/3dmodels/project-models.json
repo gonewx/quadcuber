@@ -1,0 +1,115 @@
+[
+  {
+    "classification": "independently authored SIMPLIFIED maximum rectangular envelope; CC0-1.0",
+    "source": "sources/bourns-3d-review/mf-msmf.pdf pages4,7; published dimension facts only",
+    "references": [
+      "F2",
+      "F3"
+    ],
+    "evidence": "MF-MSMF050 Style1 maxima A4.73 B3.41 C0.85mm; centered on pads; seatingz0; -2 is packaging",
+    "limitations": "No original CAD imported, notches or metallization. Manufacturer CAD redistribution permission unconfirmed, so the aligned official model is not distributed.",
+    "file": "MF_MSMF050_SIMPLIFIED_MAX_ENVELOPE.step",
+    "sha256": "6602e14c50625ab2f734e5b948e5f21b9367a69a982ebd1a5f8920caf5ab0887",
+    "bbox_mm": {
+      "xmin": -2.365,
+      "xmax": 2.365,
+      "ymin": -1.705,
+      "ymax": 1.705,
+      "zmin": 0.0,
+      "zmax": 0.85
+    },
+    "solids": 1,
+    "valid": true
+  },
+  {
+    "classification": "independently authored SIMPLIFIED maximum rectangular envelope; CC0-1.0",
+    "source": "sources/bourns-3d-review/SRP1245A.pdf page1 Lead Frame dimensions; published facts only",
+    "references": [
+      "L1",
+      "L2"
+    ],
+    "evidence": "Outer terminal span13.5+/-0.5, body width12.5+/-0.3, height4.8+/-0.2 -> envelope14.0x12.8x5.0mm",
+    "limitations": "No internal coil, terminal geometry, top marking or original CAD imported. Manufacturer model had12.9mm span (0.1 below datasheet minimum); redistribution permission also unconfirmed. This dimension-derived block is not exact part CAD or a qualified collision model.",
+    "file": "SRP1245A_SIMPLIFIED_MAX_ENVELOPE.step",
+    "sha256": "d71002d034e33bb491a70211b23d7186e859f7253532f898cffddad6bcce7a66",
+    "bbox_mm": {
+      "xmin": -7.0,
+      "xmax": 7.0,
+      "ymin": -6.4,
+      "ymax": 6.4,
+      "zmin": 0.0,
+      "zmax": 5.0
+    },
+    "solids": 1,
+    "valid": true
+  },
+  {
+    "classification": "project-authored SIMPLIFIED maximum rectangular envelope",
+    "source": "sources/bourns-3d-review/mf-msmf.pdf pages5,7",
+    "references": [
+      "F10",
+      "F11",
+      "F12",
+      "F13"
+    ],
+    "evidence": "MF-MSMF110/16X Style2 maxima A4.83 B3.41 C0.80mm; centered on pads; seatingz0",
+    "limitations": "No notches, metallization or internal structure; NOT manufacturer CAD. Wrong050 download is not used.",
+    "file": "MF_MSMF110_16X_SIMPLIFIED_MAX_ENVELOPE.step",
+    "sha256": "40dfb192b6b5cc474e84b03fb367006410d9e64df91e4fe7dece863e7615bb14",
+    "bbox_mm": {
+      "xmin": -2.415,
+      "xmax": 2.415,
+      "ymin": -1.705,
+      "ymax": 1.705,
+      "zmin": 0.0,
+      "zmax": 0.8
+    },
+    "solids": 1,
+    "valid": true
+  },
+  {
+    "classification": "project-authored SIMPLIFIED nominal body",
+    "references": [
+      "J1"
+    ],
+    "source": "sources/raspc722x-review.md; parent visually verified official PDF, original unavailable here",
+    "evidence": "Body9x14.5x11mm; mating face at localPCB y0, body extends toPCB y+14.5 (modely-14.5)",
+    "limitations": "Solid block, no guessed bore, internal contacts, shunt tab, solder tails or cable clearance. Not full envelope or manufacturer CAD.",
+    "file": "RASPC722X_SIMPLIFIED_BODY.step",
+    "sha256": "89eb080ae98d20f79257ed2f6723cf67c895df32d2a03249769c8029d6a6bbe0",
+    "bbox_mm": {
+      "xmin": -4.5,
+      "xmax": 4.5,
+      "ymin": -14.5,
+      "ymax": 0.0,
+      "zmin": 0.0,
+      "zmax": 11.0
+    },
+    "solids": 1,
+    "valid": true
+  },
+  {
+    "classification": "project-authored SIMPLIFIED nominal body",
+    "references": [
+      "J10",
+      "J11",
+      "J12",
+      "J13"
+    ],
+    "source": "sources/ev3-connector-user-drawing.png and sources/ev3-user-drawing-review.md",
+    "evidence": "Body12.2x15x14.95; localPCB x+/-6.1,y-6..+9; modely-9..+6; origin locating-hole midpoint",
+    "limitations": "No guessed ears, latch cavity, internal contacts, pins or insertion space. Body is not complete mechanical envelope; existing drawing-view uncertainty persists.",
+    "file": "EV3_USER_DRAWING_SIMPLIFIED_BODY.step",
+    "sha256": "6551a4693b5e669e968f40a927bc8b2998b05fcc797f9e10c3fc451a18f2f7ac",
+    "bbox_mm": {
+      "xmin": -6.1,
+      "xmax": 6.1,
+      "ymin": -9.0,
+      "ymax": 6.0,
+      "zmin": 0.0,
+      "zmax": 14.95
+    },
+    "solids": 1,
+    "valid": true
+  }
+]
