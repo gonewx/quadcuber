@@ -1,0 +1,219 @@
+{
+ "previous FB0": {
+  "no_lever": [
+   [
+    2.7103525813449734,
+    false,
+    "F#142 32054.dat 薄梁固定挡套销",
+    "support 32526.dat z_locator_positiveZ_L"
+   ]
+  ],
+  "lever": [
+   [
+    6.201693413929095e-07,
+    true,
+    "F#138 32449.dat 压头支承薄梁",
+    "support 62462.dat end_spacer2L_20"
+   ]
+  ]
+ },
+ "previous FB10": {
+  "no_lever": [
+   [
+    1.3112484621360296,
+    false,
+    "F#145 50945_nominal.dat 橡胶胎",
+    "support 32523.dat seat_column_16_16"
+   ]
+  ],
+  "lever": [
+   [
+    6.577182997437568e-05,
+    true,
+    "F#144 42610.dat 轮毂",
+    "support 23948.dat end_11L_axle"
+   ]
+  ]
+ },
+ "previous FB20": {
+  "no_lever": [
+   [
+    0.7544396260139665,
+    false,
+    "F#145 50945_nominal.dat 橡胶胎",
+    "support 15100.dat seat_support15100_16_16"
+   ]
+  ],
+  "lever": [
+   [
+    7.52028498130555e-06,
+    true,
+    "F#137 32449.dat 压头支承薄梁",
+    "support 32278.dat inner_arm_z32"
+   ]
+  ]
+ },
+ "previous FB30": {
+  "no_lever": [
+   [
+    3.765993839273096,
+    false,
+    "F#145 50945_nominal.dat 橡胶胎",
+    "support 32523.dat seat_column_16_16"
+   ]
+  ],
+  "lever": [
+   [
+    0.0011504410284481417,
+    true,
+    "F#143 32062.dat 轮毂贯穿轴",
+    "support 32278.dat inner_arm_z32"
+   ]
+  ]
+ },
+ "previous FB40": {
+  "no_lever": [],
+  "lever": [
+   [
+    4.167060844847164,
+    false,
+    "F#142 32054.dat 薄梁固定挡套销",
+    "support 32278.dat inner_arm_z32"
+   ]
+  ]
+ },
+ "previous FB50": {
+  "no_lever": [
+   [
+    2.8848187767904854,
+    false,
+    "F#145 50945_nominal.dat 橡胶胎",
+    "support 18654.dat x_locator_middle_spacer"
+   ]
+  ],
+  "lever": []
+ },
+ "previous FB60": {
+  "no_lever": [
+   [
+    1.158753314033703,
+    false,
+    "F#145 50945_nominal.dat 橡胶胎",
+    "support 18654.dat x_locator_middle_spacer"
+   ]
+  ],
+  "lever": []
+ },
+ "rot90 FB0": {
+  "no_lever": [
+   [
+    0.40000000000000036,
+    false,
+    "F#172 32123a.dat 轴座内销轴半套",
+    "support 32526.dat z_locator_positiveZ_L"
+   ]
+  ],
+  "lever": [
+   [
+    1.2579755023873486e-05,
+    true,
+    "F#144 42610.dat 轮毂",
+    "support 32278.dat inner_arm_z32"
+   ]
+  ]
+ },
+ "rot90 FB10": {
+  "no_lever": [
+   [
+    3.312358089803774,
+    false,
+    "F#145 50945_nominal.dat 橡胶胎",
+    "support 32523.dat seat_column_16_16"
+   ]
+  ],
+  "lever": [
+   [
+    1.521737680402659e-05,
+    true,
+    "F#170 42003.dat 轮胎轴座42003",
+    "support 32123a.dat end_retainer_38"
+   ]
+  ]
+ },
+ "rot90 FB20": {
+  "no_lever": [
+   [
+    2.601031628120886,
+    false,
+    "F#144 42610.dat 轮毂",
+    "support 32523.dat seat_column_16_16"
+   ]
+  ],
+  "lever": [
+   [
+    5.29250350089169e-06,
+    true,
+    "F#137 32056.dat 压头L梁-Z",
+    "support 32278.dat inner_arm_z32"
+   ]
+  ]
+ },
+ "rot90 FB30": {
+  "no_lever": [
+   [
+    3.9111908359619676,
+    false,
+    "F#145 50945_nominal.dat 橡胶胎",
+    "support 32523.dat seat_column_16_16"
+   ]
+  ],
+  "lever": [
+   [
+    0.00035660454209107684,
+    true,
+    "F#172 32123a.dat 轴座内销轴半套",
+    "support 32278.dat inner_arm_z32"
+   ]
+  ]
+ },
+ "rot90 FB40": {
+  "no_lever": [],
+  "lever": [
+   [
+    0.0036358769034233276,
+    true,
+    "F#172 32123a.dat 轴座内销轴半套",
+    "support 32278.dat inner_arm_z32"
+   ]
+  ]
+ },
+ "rot90 FB50": {
+  "no_lever": [
+   [
+    3.2861888123481044,
+    false,
+    "F#145 50945_nominal.dat 橡胶胎",
+    "support 32316.dat x_locator_upper_bar"
+   ]
+  ],
+  "lever": [
+   [
+    5.609105531994193,
+    false,
+    "F#175 32123a.dat 轴座外销轴半套",
+    "support 32278.dat inner_arm_z32"
+   ]
+  ]
+ },
+ "rot90 FB60": {
+  "no_lever": [
+   [
+    2.736582114352509,
+    false,
+    "F#145 50945_nominal.dat 橡胶胎",
+    "support 18654.dat x_locator_middle_spacer"
+   ]
+  ],
+  "lever": []
+ }
+}

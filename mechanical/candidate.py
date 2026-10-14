@@ -1,7 +1,9 @@
 """Integrated reversible support plus 60483 head candidate. Frozen originals remain unchanged."""
 from pathlib import Path
-import importlib.util,functools,numpy as np,math
+import importlib.util,functools,numpy as np,math,sys
 HERE=Path(__file__).resolve().parent
+sys.path.insert(0,str(HERE))
+import tyre_rot90
 spec=importlib.util.spec_from_file_location('baseline60483',HERE/'inputs/baseline_model.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 files={};n=None
 for line in (HERE/'inputs/baseline-machine-899.mpd').read_text().splitlines():
@@ -48,17 +50,20 @@ def replace_module(pp):
  return out
 BASE_MODULE=m.module
 
-def module(open_s=0.,angle=0.,steps=False,on_base=True):
+def module(open_s=0.,angle=0.,steps=False,on_base=True,front="previous"):
  pp=replace_module(BASE_MODULE(open_s,angle,steps,on_base))
  # Authorized wall-foot correction. LDraw +Y is physical down.
  for i in ([48,49] if on_base else []):
   p=pp[i];assert p.name=='2780.dat'and not p.head
   pp[i]=p.moved(np.eye(3),[0,10,0])
+ # 2026-10-14 轮胎转 90° 压头仅作核算原型（front='rot90'）；42610 为圆孔，轮胎无法锁死，未并入发布模型。
+ if front=='rot90':pp=tyre_rot90.apply(m,pp,open_s,angle)
+ else:assert front=='previous',front
  return pp
-def state_parts(state,candidate=True):
+def state_parts(state,candidate=True,front='previous'):
  pp=[]
  for arm in m.ARMS:
-  s,a=state.get(arm,(0.,0.));mm=module(s,a)if candidate else BASE_MODULE(s,a,False,True)
+  s,a=state.get(arm,(0.,0.));mm=module(s,a,front=front)if candidate else BASE_MODULE(s,a,False,True)
   for p in mm:q=p.moved(m.ARM_ROT[arm]);q.arm=arm;pp.append(q)
  return pp
 
