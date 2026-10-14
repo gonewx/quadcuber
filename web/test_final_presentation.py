@@ -5,7 +5,7 @@ class FinalPresentation(unittest.TestCase):
  def test_operation_route_identifies_final_version(self):
   page=(D/'integrated-operation.html').read_text()
   self.assertIn('<title>Quadcuber · 装卸动作演示</title>',page)
-  self.assertIn('最终结构 / 938件',page)
+  self.assertIn('最终结构 / 946件',page)
   nav=re.search(r'<nav class="primary-nav"[^>]*>(.*?)</nav>',page,re.S).group(1)
   self.assertEqual(len(re.findall('<a ',nav)),2)
   self.assertNotIn('integrated-operation',nav)
@@ -31,17 +31,17 @@ class FinalPresentation(unittest.TestCase):
    model=(D/state['file']).read_text()
    self.assertEqual(model,state['model_text'])
    self.assertEqual(hashlib.sha256(model.encode()).hexdigest(),state['sha256'])
-   self.assertEqual(state['count'],938);self.assertFalse(state['keys_present'])
+   self.assertEqual(state['count'],946);self.assertFalse(state['keys_present'])
    root=re.split(r'(?m)^0 FILE ',model)[1].splitlines()[1:]
-   self.assertEqual(sum(line.startswith('1 ')for line in root),938)
+   self.assertEqual(sum(line.startswith('1 ')for line in root),946)
    self.assertIn(state['seat_drop_mm'],[0,40.8])
  def test_final_only_visible_manual(self):
   g=json.loads((C/'manual/guide.json').read_text())
   words='\n'.join('\n'.join([s['title'],s['phase'],s['parts'],*s['instructions'],s['check']])for s in g['steps'])
   for bad in ['改装','旧机','旧版','32056','32002','替代两件','拆下两','移除两','177→','177改','R1支承','R3标记']:
    self.assertNotIn(bad,words)
-  self.assertTrue(g['coverage']['original_arm_from_scratch']);self.assertEqual(g['coverage']['prebuilt_core_total_parts'],0);self.assertEqual(len(g['instance_introduction_ledger']),938);self.assertEqual(len({r['instance_key']for r in g['instance_introduction_ledger']}),938)
-  self.assertEqual(g['coverage']['model_count_working'],938)
+  self.assertTrue(g['coverage']['original_arm_from_scratch']);self.assertEqual(g['coverage']['prebuilt_core_total_parts'],0);self.assertEqual(len(g['instance_introduction_ledger']),946);self.assertEqual(len({r['instance_key']for r in g['instance_introduction_ledger']}),946)
+  self.assertEqual(g['coverage']['model_count_working'],946)
  def test_download_pdf_fits_host_single_file_limit(self):
   self.assertLessEqual((C/'manual/manual.pdf').stat().st_size,25*1024*1024)
  def test_frozen_final_models(self):
@@ -54,7 +54,7 @@ class FinalPresentation(unittest.TestCase):
     self.assertNotIn(bad,visible,(file,bad))
  def test_current_bom(self):
   rows=list(csv.DictReader((D/'integrated/final-BOM.csv').open()))
-  self.assertEqual(list(rows[0]),['part','quantity']);self.assertTrue(all(int(r['quantity'])>0 for r in rows));self.assertEqual(sum(int(r['quantity'])for r in rows),938)
+  self.assertEqual(list(rows[0]),['part','quantity']);self.assertTrue(all(int(r['quantity'])>0 for r in rows));self.assertEqual(sum(int(r['quantity'])for r in rows),946)
  def test_every_current_step_exact_geometry(self):
   g=json.loads((C/'manual/guide.json').read_text())
   for s in g['steps']:

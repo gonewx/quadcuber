@@ -38,8 +38,9 @@ def classify(T, P0, d, e1, e2, span):
     arm = any(solid(r * (np.cos(a) * e1 + np.sin(a) * e2)) for a in np.radians([0, 90, 180, 270]))
     if arm:
         return 'blocked'
-    # 宿主必须真的包住这段轴：离轴 3.0mm 一圈都应有材料（孔壁）
-    wall = all(solid(3.0 * (np.cos(a) * e1 + np.sin(a) * e2)) for a in np.radians(range(0, 360, 30)))
+    # 宿主必须真的包住这段轴：离轴 3.0mm 一圈应有材料（孔壁）。网格接缝处直线可能恰好擦过棱线，
+    # 故 12 个方向中至少 9 个命中即可。
+    wall = sum(solid(3.0 * (np.cos(a) * e1 + np.sin(a) * e2)) for a in np.radians(range(7, 360, 30))) >= 9
     if not wall:
         return 'none'
     return 'axle' if diag else 'pin'

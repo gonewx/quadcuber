@@ -14,7 +14,8 @@ from review.scene import C, samples  # noqa: E402
 
 RC = math.sqrt(2) * 28.0
 ZB = 56.0 / 6
-FRONT = {'previous': list(range(137, 155)), 'rot90': list(range(137, 155)) + list(range(168, 186))}
+FRONT = {'previous': list(range(137, 155)), 'rot90': list(range(137, 155)) + list(range(168, 170)),
+         'wheel': list(range(137, 155)) + list(range(168, 184))}
 
 
 def margin(P, delta, theta):
@@ -34,7 +35,7 @@ def groups(front):
     g = {'rubber': [], 'hardware': []}
     for i in FRONT[front]:
         p = pp[i - 1]
-        g['rubber' if p.name == '50945_nominal.dat' else 'hardware'].append(samples(p))
+        g['rubber' if p.name in ('50945_nominal.dat', '2815.dat', '59895.dat') else 'hardware'].append(samples(p))
     return {k: np.concatenate(v) for k, v in g.items()}
 
 

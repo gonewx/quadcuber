@@ -1,10 +1,10 @@
-# 机械源码：542 步 / 938 件
+# 机械源码：558 步 / 946 件
 
-[整机 3D](../generated/site/index.html) · [逐步组装](../generated/site/integrated-assembly.html) · [542 页 PDF](../generated/mechanical/manual/manual.pdf) · [BOM](../generated/mechanical/final-BOM.csv)
+[整机 3D](../generated/site/index.html) · [逐步组装](../generated/site/integrated-assembly.html) · [558 页 PDF](../generated/mechanical/manual/manual.pdf) · [BOM](../generated/mechanical/final-BOM.csv)
 
 `candidate.py` 为当前模型实现，`inputs/` 保存冻结输入与来源，`parts/` 保存所需零件定义，`assembly/` 保存装配配方、生成器和检查。唯一标准输出位于 `generated/mechanical/`，不应手工修改。GitHub 管理源码，Sites 仅接收构建产物。
 
-整机为 120 件闭环底盘、668 件四臂、150 件支承，含 20 件重力复位杠杆。每臂 88 步，完整说明从单件开始覆盖 938 个实例。11个模型状态、542页PDF和120件底盘图解已随本次加固更新；四臂与150件支承几何保持原版。历史冻结证据保留，新版证据见generated/mechanical/release.json。
+整机为 120 件闭环底盘、676 件四臂、150 件支承，含 20 件重力复位杠杆。每臂 92 步，完整说明从单件开始覆盖 946 个实例。2026-10-14 夹指前端改为“轮胎转 90°”压头（`tyre_rot90.py`：32039 轴座＋32123/59895 十字孔锁死小轮，核算见 [docs/lego/proposals/tyre-rot90](../docs/lego/proposals/tyre-rot90/README.md)、`review/`）；11个模型状态、558页PDF与机械头图解随之更新，120件底盘与150件支承几何不变。历史冻结证据保留，新版证据见generated/mechanical/release.json。
 
 在仓库根执行：
 

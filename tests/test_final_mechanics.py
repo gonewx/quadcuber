@@ -47,8 +47,8 @@ class FinalMechanics(unittest.TestCase):
     def test_bom_matches_all_seven_whole_machine_states(self):
         with (ROOT / 'final-BOM.csv').open() as stream:
             bom = collections.Counter({r['part']: int(r['quantity']) for r in csv.DictReader(stream)})
-        self.assertEqual(sum(bom.values()), 938)
-        whole = [r for r in read_json('candidate-manifest.json').values() if r['parts'] == 938]
+        self.assertEqual(sum(bom.values()), 946)
+        whole = [r for r in read_json('candidate-manifest.json').values() if r['parts'] == 946]
         self.assertEqual(len(whole), 7)
         for row in whole:
             files = subfiles((ROOT / row['file']).read_text())
@@ -65,16 +65,16 @@ class FinalMechanics(unittest.TestCase):
         for name in thin:
             self.assertIn('axlehol', '\n'.join(files[name]).lower(), name)
 
-    def test_542_steps_cover_938_instances_once(self):
+    def test_558_steps_cover_946_instances_once(self):
         guide = read_json('manual/guide.json')
-        self.assertEqual(len(guide['steps']), 542)
-        self.assertEqual(len({r['instance_key'] for r in guide['instance_introduction_ledger']}), 938)
-        self.assertEqual(len(guide['instance_introduction_ledger']), 938)
+        self.assertEqual(len(guide['steps']), 558)
+        self.assertEqual(len({r['instance_key'] for r in guide['instance_introduction_ledger']}), 946)
+        self.assertEqual(len(guide['instance_introduction_ledger']), 946)
         c = guide['coverage']
-        self.assertEqual((c['base_parts'], c['final_arm_parts'], c['support_parts']), (120, 668, 150))
+        self.assertEqual((c['base_parts'], c['final_arm_parts'], c['support_parts']), (120, 676, 150))
         self.assertEqual((c['seat_guide_parts'], c['lever_parts']), (130, 20))
         self.assertEqual(c['prebuilt_core_total_parts'], 0)
-        self.assertEqual(c['head_steps_per_arm'], 88)
+        self.assertEqual(c['head_steps_per_arm'], 92)
         self.assertEqual(guide, json.loads((REPO / 'dist/site/integrated/guide.json').read_text()))
         for step in guide['steps']:
             image = ROOT / 'manual' / step['image']
@@ -116,7 +116,7 @@ class FinalMechanics(unittest.TestCase):
             for name in pages:
                 html = re.sub(r'<script[\s\S]*?</script>', '', (REPO / folder / name).read_text())
                 self.assertNotIn('本册不含这些', html)
-                self.assertIn('938', html)
+                self.assertIn('946', html)
 
 
 if __name__ == '__main__':

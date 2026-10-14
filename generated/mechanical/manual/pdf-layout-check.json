@@ -11,7 +11,7 @@
   },
   {
     "page": 3,
-    "bottom_text_y": 315,
+    "bottom_text_y": 281,
     "image": "diagrams/integrated-whole.png"
   },
   {
@@ -781,1931 +781,2011 @@
   },
   {
     "page": 157,
-    "bottom_text_y": 407,
+    "bottom_text_y": 390,
     "image": "final-head-diagrams/18.png"
   },
   {
     "page": 158,
-    "bottom_text_y": 349,
+    "bottom_text_y": 315,
     "image": "final-head-diagrams/19.png"
   },
   {
     "page": 159,
-    "bottom_text_y": 349,
+    "bottom_text_y": 315,
     "image": "final-head-diagrams/20.png"
   },
   {
     "page": 160,
-    "bottom_text_y": 407,
+    "bottom_text_y": 332,
     "image": "final-head-diagrams/21.png"
   },
   {
     "page": 161,
-    "bottom_text_y": 349,
+    "bottom_text_y": 332,
     "image": "final-head-diagrams/22.png"
   },
   {
     "page": 162,
-    "bottom_text_y": 349,
+    "bottom_text_y": 390,
     "image": "final-head-diagrams/23.png"
   },
   {
     "page": 163,
-    "bottom_text_y": 349,
+    "bottom_text_y": 315,
     "image": "final-head-diagrams/24.png"
   },
   {
     "page": 164,
-    "bottom_text_y": 349,
+    "bottom_text_y": 315,
     "image": "final-head-diagrams/25.png"
   },
   {
     "page": 165,
-    "bottom_text_y": 349,
+    "bottom_text_y": 332,
     "image": "final-head-diagrams/26.png"
   },
   {
     "page": 166,
-    "bottom_text_y": 315,
+    "bottom_text_y": 332,
     "image": "final-head-diagrams/27.png"
   },
   {
     "page": 167,
-    "bottom_text_y": 315,
+    "bottom_text_y": 349,
     "image": "final-head-diagrams/28.png"
   },
   {
     "page": 168,
-    "bottom_text_y": 298,
+    "bottom_text_y": 349,
     "image": "final-head-diagrams/29.png"
   },
   {
     "page": 169,
-    "bottom_text_y": 257,
+    "bottom_text_y": 349,
     "image": "final-head-diagrams/30.png"
   },
   {
     "page": 170,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/31.png"
+  },
+  {
+    "page": 171,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/32.png"
+  },
+  {
+    "page": 172,
+    "bottom_text_y": 298,
+    "image": "final-head-diagrams/33.png"
+  },
+  {
+    "page": 173,
+    "bottom_text_y": 257,
+    "image": "final-head-diagrams/34.png"
+  },
+  {
+    "page": 174,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/01.png"
   },
   {
-    "page": 171,
+    "page": 175,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE01.png"
-  },
-  {
-    "page": 172,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE02.png"
-  },
-  {
-    "page": 173,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE03.png"
-  },
-  {
-    "page": 174,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE04.png"
-  },
-  {
-    "page": 175,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE05.png"
   },
   {
     "page": 176,
     "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE06.png"
+    "image": "final-head-diagrams/CORE02.png"
   },
   {
     "page": 177,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE07.png"
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE03.png"
   },
   {
     "page": 178,
     "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE08.png"
+    "image": "final-head-diagrams/CORE04.png"
   },
   {
     "page": 179,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE09.png"
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE05.png"
   },
   {
     "page": 180,
     "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE10.png"
+    "image": "final-head-diagrams/CORE06.png"
   },
   {
     "page": 181,
     "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE11.png"
+    "image": "final-head-diagrams/CORE07.png"
   },
   {
     "page": 182,
     "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE12.png"
+    "image": "final-head-diagrams/CORE08.png"
   },
   {
     "page": 183,
     "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE13.png"
+    "image": "final-head-diagrams/CORE09.png"
   },
   {
     "page": 184,
     "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE14.png"
+    "image": "final-head-diagrams/CORE10.png"
   },
   {
     "page": 185,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE11.png"
+  },
+  {
+    "page": 186,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE12.png"
+  },
+  {
+    "page": 187,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE13.png"
+  },
+  {
+    "page": 188,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE14.png"
+  },
+  {
+    "page": 189,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE15.png"
   },
   {
-    "page": 186,
+    "page": 190,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE16.png"
   },
   {
-    "page": 187,
+    "page": 191,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE17.png"
-  },
-  {
-    "page": 188,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE18.png"
-  },
-  {
-    "page": 189,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE19.png"
-  },
-  {
-    "page": 190,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE20.png"
-  },
-  {
-    "page": 191,
-    "bottom_text_y": 390,
-    "image": "final-head-diagrams/CORE21.png"
   },
   {
     "page": 192,
     "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE22.png"
+    "image": "final-head-diagrams/CORE18.png"
   },
   {
     "page": 193,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE23.png"
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE19.png"
   },
   {
     "page": 194,
     "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE24.png"
+    "image": "final-head-diagrams/CORE20.png"
   },
   {
     "page": 195,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE25.png"
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/CORE21.png"
   },
   {
     "page": 196,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE26.png"
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE22.png"
   },
   {
     "page": 197,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE27.png"
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE23.png"
   },
   {
     "page": 198,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE28.png"
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE24.png"
   },
   {
     "page": 199,
     "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE29.png"
+    "image": "final-head-diagrams/CORE25.png"
   },
   {
     "page": 200,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE30.png"
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE26.png"
   },
   {
     "page": 201,
     "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE31.png"
+    "image": "final-head-diagrams/CORE27.png"
   },
   {
     "page": 202,
     "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE32.png"
+    "image": "final-head-diagrams/CORE28.png"
   },
   {
     "page": 203,
     "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE33.png"
+    "image": "final-head-diagrams/CORE29.png"
   },
   {
     "page": 204,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE30.png"
+  },
+  {
+    "page": 205,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE31.png"
+  },
+  {
+    "page": 206,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE32.png"
+  },
+  {
+    "page": 207,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE33.png"
+  },
+  {
+    "page": 208,
     "bottom_text_y": 400,
     "image": "final-head-diagrams/CORE34.png"
   },
   {
-    "page": 205,
+    "page": 209,
     "bottom_text_y": 383,
     "image": "final-head-diagrams/CORE35.png"
   },
   {
-    "page": 206,
+    "page": 210,
     "bottom_text_y": 366,
     "image": "final-head-diagrams/CORE36.png"
   },
   {
-    "page": 207,
+    "page": 211,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE37.png"
   },
   {
-    "page": 208,
+    "page": 212,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE38.png"
-  },
-  {
-    "page": 209,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE39.png"
-  },
-  {
-    "page": 210,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE40.png"
-  },
-  {
-    "page": 211,
-    "bottom_text_y": 383,
-    "image": "final-head-diagrams/CORE41.png"
-  },
-  {
-    "page": 212,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE42.png"
   },
   {
     "page": 213,
     "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE43.png"
+    "image": "final-head-diagrams/CORE39.png"
   },
   {
     "page": 214,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT01.png"
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE40.png"
   },
   {
     "page": 215,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT02.png"
+    "bottom_text_y": 383,
+    "image": "final-head-diagrams/CORE41.png"
   },
   {
     "page": 216,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT03.png"
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE42.png"
   },
   {
     "page": 217,
-    "bottom_text_y": 332,
-    "image": "final-head-diagrams/TT04.png"
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE43.png"
   },
   {
     "page": 218,
     "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT05.png"
+    "image": "final-head-diagrams/TT01.png"
   },
   {
     "page": 219,
     "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT06.png"
+    "image": "final-head-diagrams/TT02.png"
   },
   {
     "page": 220,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/TT03.png"
+  },
+  {
+    "page": 221,
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/TT04.png"
+  },
+  {
+    "page": 222,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/TT05.png"
+  },
+  {
+    "page": 223,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/TT06.png"
+  },
+  {
+    "page": 224,
     "bottom_text_y": 366,
     "image": "final-head-diagrams/TT07.png"
   },
   {
-    "page": 221,
+    "page": 225,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/TT08.png"
   },
   {
-    "page": 222,
+    "page": 226,
     "bottom_text_y": 390,
     "image": "final-head-diagrams/CORE44.png"
-  },
-  {
-    "page": 223,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE45.png"
-  },
-  {
-    "page": 224,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE46.png"
-  },
-  {
-    "page": 225,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE47.png"
-  },
-  {
-    "page": 226,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE48.png"
   },
   {
     "page": 227,
     "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE49.png"
+    "image": "final-head-diagrams/CORE45.png"
   },
   {
     "page": 228,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT09.png"
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE46.png"
   },
   {
     "page": 229,
-    "bottom_text_y": 315,
-    "image": "final-head-diagrams/02.png"
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE47.png"
   },
   {
     "page": 230,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/03.png"
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE48.png"
   },
   {
     "page": 231,
     "bottom_text_y": 407,
-    "image": "final-head-diagrams/04.png"
+    "image": "final-head-diagrams/CORE49.png"
   },
   {
     "page": 232,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/TT09.png"
+  },
+  {
+    "page": 233,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/02.png"
+  },
+  {
+    "page": 234,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/03.png"
+  },
+  {
+    "page": 235,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/04.png"
+  },
+  {
+    "page": 236,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/05.png"
   },
   {
-    "page": 233,
+    "page": 237,
     "bottom_text_y": 390,
     "image": "final-head-diagrams/06.png"
   },
   {
-    "page": 234,
+    "page": 238,
     "bottom_text_y": 366,
     "image": "final-head-diagrams/07.png"
   },
   {
-    "page": 235,
+    "page": 239,
     "bottom_text_y": 390,
     "image": "final-head-diagrams/08.png"
-  },
-  {
-    "page": 236,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/09.png"
-  },
-  {
-    "page": 237,
-    "bottom_text_y": 366,
-    "image": "final-head-diagrams/10.png"
-  },
-  {
-    "page": 238,
-    "bottom_text_y": 390,
-    "image": "final-head-diagrams/11.png"
-  },
-  {
-    "page": 239,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/12.png"
   },
   {
     "page": 240,
     "bottom_text_y": 349,
-    "image": "final-head-diagrams/13.png"
+    "image": "final-head-diagrams/09.png"
   },
   {
     "page": 241,
-    "bottom_text_y": 390,
-    "image": "final-head-diagrams/14.png"
+    "bottom_text_y": 366,
+    "image": "final-head-diagrams/10.png"
   },
   {
     "page": 242,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/15.png"
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/11.png"
   },
   {
     "page": 243,
-    "bottom_text_y": 390,
-    "image": "final-head-diagrams/16.png"
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/12.png"
   },
   {
     "page": 244,
     "bottom_text_y": 349,
-    "image": "final-head-diagrams/17.png"
+    "image": "final-head-diagrams/13.png"
   },
   {
     "page": 245,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/18.png"
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/14.png"
   },
   {
     "page": 246,
     "bottom_text_y": 349,
-    "image": "final-head-diagrams/19.png"
+    "image": "final-head-diagrams/15.png"
   },
   {
     "page": 247,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/20.png"
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/16.png"
   },
   {
     "page": 248,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/21.png"
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/17.png"
   },
   {
     "page": 249,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/22.png"
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/18.png"
   },
   {
     "page": 250,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/23.png"
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/19.png"
   },
   {
     "page": 251,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/24.png"
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/20.png"
   },
   {
     "page": 252,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/25.png"
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/21.png"
   },
   {
     "page": 253,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/26.png"
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/22.png"
   },
   {
     "page": 254,
-    "bottom_text_y": 315,
-    "image": "final-head-diagrams/27.png"
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/23.png"
   },
   {
     "page": 255,
     "bottom_text_y": 315,
-    "image": "final-head-diagrams/28.png"
+    "image": "final-head-diagrams/24.png"
   },
   {
     "page": 256,
-    "bottom_text_y": 298,
-    "image": "final-head-diagrams/29.png"
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/25.png"
   },
   {
     "page": 257,
-    "bottom_text_y": 257,
-    "image": "final-head-diagrams/30.png"
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/26.png"
   },
   {
     "page": 258,
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/27.png"
+  },
+  {
+    "page": 259,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/28.png"
+  },
+  {
+    "page": 260,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/29.png"
+  },
+  {
+    "page": 261,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/30.png"
+  },
+  {
+    "page": 262,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/31.png"
+  },
+  {
+    "page": 263,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/32.png"
+  },
+  {
+    "page": 264,
+    "bottom_text_y": 298,
+    "image": "final-head-diagrams/33.png"
+  },
+  {
+    "page": 265,
+    "bottom_text_y": 257,
+    "image": "final-head-diagrams/34.png"
+  },
+  {
+    "page": 266,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/01.png"
   },
   {
-    "page": 259,
+    "page": 267,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE01.png"
-  },
-  {
-    "page": 260,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE02.png"
-  },
-  {
-    "page": 261,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE03.png"
-  },
-  {
-    "page": 262,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE04.png"
-  },
-  {
-    "page": 263,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE05.png"
-  },
-  {
-    "page": 264,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE06.png"
-  },
-  {
-    "page": 265,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE07.png"
-  },
-  {
-    "page": 266,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE08.png"
-  },
-  {
-    "page": 267,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE09.png"
   },
   {
     "page": 268,
     "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE10.png"
-  },
-  {
-    "page": 269,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE11.png"
-  },
-  {
-    "page": 270,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE12.png"
-  },
-  {
-    "page": 271,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE13.png"
-  },
-  {
-    "page": 272,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE14.png"
-  },
-  {
-    "page": 273,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE15.png"
-  },
-  {
-    "page": 274,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE16.png"
-  },
-  {
-    "page": 275,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE17.png"
-  },
-  {
-    "page": 276,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE18.png"
-  },
-  {
-    "page": 277,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE19.png"
-  },
-  {
-    "page": 278,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE20.png"
-  },
-  {
-    "page": 279,
-    "bottom_text_y": 390,
-    "image": "final-head-diagrams/CORE21.png"
-  },
-  {
-    "page": 280,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE22.png"
-  },
-  {
-    "page": 281,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE23.png"
-  },
-  {
-    "page": 282,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE24.png"
-  },
-  {
-    "page": 283,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE25.png"
-  },
-  {
-    "page": 284,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE26.png"
-  },
-  {
-    "page": 285,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE27.png"
-  },
-  {
-    "page": 286,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE28.png"
-  },
-  {
-    "page": 287,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE29.png"
-  },
-  {
-    "page": 288,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE30.png"
-  },
-  {
-    "page": 289,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE31.png"
-  },
-  {
-    "page": 290,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE32.png"
-  },
-  {
-    "page": 291,
-    "bottom_text_y": 424,
-    "image": "final-head-diagrams/CORE33.png"
-  },
-  {
-    "page": 292,
-    "bottom_text_y": 400,
-    "image": "final-head-diagrams/CORE34.png"
-  },
-  {
-    "page": 293,
-    "bottom_text_y": 383,
-    "image": "final-head-diagrams/CORE35.png"
-  },
-  {
-    "page": 294,
-    "bottom_text_y": 366,
-    "image": "final-head-diagrams/CORE36.png"
-  },
-  {
-    "page": 295,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE37.png"
-  },
-  {
-    "page": 296,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE38.png"
-  },
-  {
-    "page": 297,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE39.png"
-  },
-  {
-    "page": 298,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE40.png"
-  },
-  {
-    "page": 299,
-    "bottom_text_y": 383,
-    "image": "final-head-diagrams/CORE41.png"
-  },
-  {
-    "page": 300,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE42.png"
-  },
-  {
-    "page": 301,
-    "bottom_text_y": 441,
-    "image": "final-head-diagrams/CORE43.png"
-  },
-  {
-    "page": 302,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT01.png"
-  },
-  {
-    "page": 303,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT02.png"
-  },
-  {
-    "page": 304,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT03.png"
-  },
-  {
-    "page": 305,
-    "bottom_text_y": 332,
-    "image": "final-head-diagrams/TT04.png"
-  },
-  {
-    "page": 306,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT05.png"
-  },
-  {
-    "page": 307,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT06.png"
-  },
-  {
-    "page": 308,
-    "bottom_text_y": 366,
-    "image": "final-head-diagrams/TT07.png"
-  },
-  {
-    "page": 309,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT08.png"
-  },
-  {
-    "page": 310,
-    "bottom_text_y": 390,
-    "image": "final-head-diagrams/CORE44.png"
-  },
-  {
-    "page": 311,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE45.png"
-  },
-  {
-    "page": 312,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE46.png"
-  },
-  {
-    "page": 313,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE47.png"
-  },
-  {
-    "page": 314,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE48.png"
-  },
-  {
-    "page": 315,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE49.png"
-  },
-  {
-    "page": 316,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/TT09.png"
-  },
-  {
-    "page": 317,
-    "bottom_text_y": 315,
-    "image": "final-head-diagrams/02.png"
-  },
-  {
-    "page": 318,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/03.png"
-  },
-  {
-    "page": 319,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/04.png"
-  },
-  {
-    "page": 320,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/05.png"
-  },
-  {
-    "page": 321,
-    "bottom_text_y": 390,
-    "image": "final-head-diagrams/06.png"
-  },
-  {
-    "page": 322,
-    "bottom_text_y": 366,
-    "image": "final-head-diagrams/07.png"
-  },
-  {
-    "page": 323,
-    "bottom_text_y": 390,
-    "image": "final-head-diagrams/08.png"
-  },
-  {
-    "page": 324,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/09.png"
-  },
-  {
-    "page": 325,
-    "bottom_text_y": 366,
-    "image": "final-head-diagrams/10.png"
-  },
-  {
-    "page": 326,
-    "bottom_text_y": 390,
-    "image": "final-head-diagrams/11.png"
-  },
-  {
-    "page": 327,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/12.png"
-  },
-  {
-    "page": 328,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/13.png"
-  },
-  {
-    "page": 329,
-    "bottom_text_y": 390,
-    "image": "final-head-diagrams/14.png"
-  },
-  {
-    "page": 330,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/15.png"
-  },
-  {
-    "page": 331,
-    "bottom_text_y": 390,
-    "image": "final-head-diagrams/16.png"
-  },
-  {
-    "page": 332,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/17.png"
-  },
-  {
-    "page": 333,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/18.png"
-  },
-  {
-    "page": 334,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/19.png"
-  },
-  {
-    "page": 335,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/20.png"
-  },
-  {
-    "page": 336,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/21.png"
-  },
-  {
-    "page": 337,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/22.png"
-  },
-  {
-    "page": 338,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/23.png"
-  },
-  {
-    "page": 339,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/24.png"
-  },
-  {
-    "page": 340,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/25.png"
-  },
-  {
-    "page": 341,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/26.png"
-  },
-  {
-    "page": 342,
-    "bottom_text_y": 315,
-    "image": "final-head-diagrams/27.png"
-  },
-  {
-    "page": 343,
-    "bottom_text_y": 315,
-    "image": "final-head-diagrams/28.png"
-  },
-  {
-    "page": 344,
-    "bottom_text_y": 298,
-    "image": "final-head-diagrams/29.png"
-  },
-  {
-    "page": 345,
-    "bottom_text_y": 257,
-    "image": "final-head-diagrams/30.png"
-  },
-  {
-    "page": 346,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/01.png"
-  },
-  {
-    "page": 347,
-    "bottom_text_y": 407,
-    "image": "final-head-diagrams/CORE01.png"
-  },
-  {
-    "page": 348,
-    "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE02.png"
   },
   {
-    "page": 349,
+    "page": 269,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE03.png"
   },
   {
-    "page": 350,
+    "page": 270,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE04.png"
   },
   {
-    "page": 351,
+    "page": 271,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE05.png"
   },
   {
-    "page": 352,
+    "page": 272,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE06.png"
   },
   {
-    "page": 353,
+    "page": 273,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE07.png"
   },
   {
-    "page": 354,
+    "page": 274,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE08.png"
   },
   {
-    "page": 355,
+    "page": 275,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE09.png"
   },
   {
-    "page": 356,
+    "page": 276,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE10.png"
   },
   {
-    "page": 357,
+    "page": 277,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE11.png"
   },
   {
-    "page": 358,
+    "page": 278,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE12.png"
   },
   {
-    "page": 359,
+    "page": 279,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE13.png"
   },
   {
-    "page": 360,
+    "page": 280,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE14.png"
   },
   {
-    "page": 361,
+    "page": 281,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE15.png"
   },
   {
-    "page": 362,
+    "page": 282,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE16.png"
   },
   {
-    "page": 363,
+    "page": 283,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE17.png"
   },
   {
-    "page": 364,
+    "page": 284,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE18.png"
   },
   {
-    "page": 365,
+    "page": 285,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE19.png"
   },
   {
-    "page": 366,
+    "page": 286,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE20.png"
   },
   {
-    "page": 367,
+    "page": 287,
     "bottom_text_y": 390,
     "image": "final-head-diagrams/CORE21.png"
   },
   {
-    "page": 368,
+    "page": 288,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE22.png"
   },
   {
-    "page": 369,
+    "page": 289,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE23.png"
   },
   {
-    "page": 370,
+    "page": 290,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE24.png"
   },
   {
-    "page": 371,
+    "page": 291,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE25.png"
   },
   {
-    "page": 372,
+    "page": 292,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE26.png"
   },
   {
-    "page": 373,
+    "page": 293,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE27.png"
   },
   {
-    "page": 374,
+    "page": 294,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE28.png"
   },
   {
-    "page": 375,
+    "page": 295,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE29.png"
   },
   {
-    "page": 376,
+    "page": 296,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE30.png"
   },
   {
-    "page": 377,
+    "page": 297,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE31.png"
   },
   {
-    "page": 378,
+    "page": 298,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE32.png"
   },
   {
-    "page": 379,
+    "page": 299,
     "bottom_text_y": 424,
     "image": "final-head-diagrams/CORE33.png"
   },
   {
-    "page": 380,
+    "page": 300,
     "bottom_text_y": 400,
     "image": "final-head-diagrams/CORE34.png"
   },
   {
-    "page": 381,
+    "page": 301,
     "bottom_text_y": 383,
     "image": "final-head-diagrams/CORE35.png"
   },
   {
-    "page": 382,
+    "page": 302,
     "bottom_text_y": 366,
     "image": "final-head-diagrams/CORE36.png"
   },
   {
-    "page": 383,
+    "page": 303,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE37.png"
   },
   {
-    "page": 384,
+    "page": 304,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE38.png"
   },
   {
-    "page": 385,
+    "page": 305,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE39.png"
   },
   {
-    "page": 386,
+    "page": 306,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE40.png"
   },
   {
-    "page": 387,
+    "page": 307,
     "bottom_text_y": 383,
     "image": "final-head-diagrams/CORE41.png"
   },
   {
-    "page": 388,
+    "page": 308,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE42.png"
   },
   {
-    "page": 389,
+    "page": 309,
     "bottom_text_y": 441,
     "image": "final-head-diagrams/CORE43.png"
   },
   {
-    "page": 390,
+    "page": 310,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/TT01.png"
   },
   {
-    "page": 391,
+    "page": 311,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/TT02.png"
   },
   {
-    "page": 392,
+    "page": 312,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/TT03.png"
   },
   {
-    "page": 393,
+    "page": 313,
     "bottom_text_y": 332,
     "image": "final-head-diagrams/TT04.png"
   },
   {
-    "page": 394,
+    "page": 314,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/TT05.png"
   },
   {
-    "page": 395,
+    "page": 315,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/TT06.png"
   },
   {
-    "page": 396,
+    "page": 316,
     "bottom_text_y": 366,
     "image": "final-head-diagrams/TT07.png"
   },
   {
-    "page": 397,
+    "page": 317,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/TT08.png"
   },
   {
-    "page": 398,
+    "page": 318,
     "bottom_text_y": 390,
     "image": "final-head-diagrams/CORE44.png"
   },
   {
-    "page": 399,
+    "page": 319,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE45.png"
   },
   {
-    "page": 400,
+    "page": 320,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE46.png"
   },
   {
-    "page": 401,
+    "page": 321,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE47.png"
   },
   {
-    "page": 402,
+    "page": 322,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE48.png"
   },
   {
-    "page": 403,
+    "page": 323,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/CORE49.png"
   },
   {
-    "page": 404,
+    "page": 324,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/TT09.png"
   },
   {
-    "page": 405,
+    "page": 325,
     "bottom_text_y": 315,
     "image": "final-head-diagrams/02.png"
   },
   {
-    "page": 406,
+    "page": 326,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/03.png"
   },
   {
-    "page": 407,
+    "page": 327,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/04.png"
   },
   {
-    "page": 408,
+    "page": 328,
     "bottom_text_y": 407,
     "image": "final-head-diagrams/05.png"
   },
   {
-    "page": 409,
+    "page": 329,
     "bottom_text_y": 390,
     "image": "final-head-diagrams/06.png"
   },
   {
-    "page": 410,
+    "page": 330,
     "bottom_text_y": 366,
     "image": "final-head-diagrams/07.png"
   },
   {
-    "page": 411,
+    "page": 331,
     "bottom_text_y": 390,
     "image": "final-head-diagrams/08.png"
   },
   {
-    "page": 412,
+    "page": 332,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/09.png"
   },
   {
-    "page": 413,
+    "page": 333,
     "bottom_text_y": 366,
     "image": "final-head-diagrams/10.png"
   },
   {
-    "page": 414,
+    "page": 334,
     "bottom_text_y": 390,
     "image": "final-head-diagrams/11.png"
   },
   {
-    "page": 415,
+    "page": 335,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/12.png"
   },
   {
-    "page": 416,
+    "page": 336,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/13.png"
   },
   {
-    "page": 417,
+    "page": 337,
     "bottom_text_y": 390,
     "image": "final-head-diagrams/14.png"
   },
   {
-    "page": 418,
+    "page": 338,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/15.png"
   },
   {
-    "page": 419,
+    "page": 339,
     "bottom_text_y": 390,
     "image": "final-head-diagrams/16.png"
   },
   {
-    "page": 420,
+    "page": 340,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/17.png"
   },
   {
-    "page": 421,
-    "bottom_text_y": 407,
+    "page": 341,
+    "bottom_text_y": 390,
     "image": "final-head-diagrams/18.png"
   },
   {
-    "page": 422,
-    "bottom_text_y": 349,
+    "page": 342,
+    "bottom_text_y": 315,
     "image": "final-head-diagrams/19.png"
   },
   {
-    "page": 423,
-    "bottom_text_y": 349,
+    "page": 343,
+    "bottom_text_y": 315,
     "image": "final-head-diagrams/20.png"
   },
   {
-    "page": 424,
-    "bottom_text_y": 407,
+    "page": 344,
+    "bottom_text_y": 332,
     "image": "final-head-diagrams/21.png"
   },
   {
-    "page": 425,
-    "bottom_text_y": 349,
+    "page": 345,
+    "bottom_text_y": 332,
     "image": "final-head-diagrams/22.png"
   },
   {
-    "page": 426,
-    "bottom_text_y": 349,
+    "page": 346,
+    "bottom_text_y": 390,
     "image": "final-head-diagrams/23.png"
+  },
+  {
+    "page": 347,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/24.png"
+  },
+  {
+    "page": 348,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/25.png"
+  },
+  {
+    "page": 349,
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/26.png"
+  },
+  {
+    "page": 350,
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/27.png"
+  },
+  {
+    "page": 351,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/28.png"
+  },
+  {
+    "page": 352,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/29.png"
+  },
+  {
+    "page": 353,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/30.png"
+  },
+  {
+    "page": 354,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/31.png"
+  },
+  {
+    "page": 355,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/32.png"
+  },
+  {
+    "page": 356,
+    "bottom_text_y": 298,
+    "image": "final-head-diagrams/33.png"
+  },
+  {
+    "page": 357,
+    "bottom_text_y": 257,
+    "image": "final-head-diagrams/34.png"
+  },
+  {
+    "page": 358,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/01.png"
+  },
+  {
+    "page": 359,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE01.png"
+  },
+  {
+    "page": 360,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE02.png"
+  },
+  {
+    "page": 361,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE03.png"
+  },
+  {
+    "page": 362,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE04.png"
+  },
+  {
+    "page": 363,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE05.png"
+  },
+  {
+    "page": 364,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE06.png"
+  },
+  {
+    "page": 365,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE07.png"
+  },
+  {
+    "page": 366,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE08.png"
+  },
+  {
+    "page": 367,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE09.png"
+  },
+  {
+    "page": 368,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE10.png"
+  },
+  {
+    "page": 369,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE11.png"
+  },
+  {
+    "page": 370,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE12.png"
+  },
+  {
+    "page": 371,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE13.png"
+  },
+  {
+    "page": 372,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE14.png"
+  },
+  {
+    "page": 373,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE15.png"
+  },
+  {
+    "page": 374,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE16.png"
+  },
+  {
+    "page": 375,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE17.png"
+  },
+  {
+    "page": 376,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE18.png"
+  },
+  {
+    "page": 377,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE19.png"
+  },
+  {
+    "page": 378,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE20.png"
+  },
+  {
+    "page": 379,
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/CORE21.png"
+  },
+  {
+    "page": 380,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE22.png"
+  },
+  {
+    "page": 381,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE23.png"
+  },
+  {
+    "page": 382,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE24.png"
+  },
+  {
+    "page": 383,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE25.png"
+  },
+  {
+    "page": 384,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE26.png"
+  },
+  {
+    "page": 385,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE27.png"
+  },
+  {
+    "page": 386,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE28.png"
+  },
+  {
+    "page": 387,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE29.png"
+  },
+  {
+    "page": 388,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE30.png"
+  },
+  {
+    "page": 389,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE31.png"
+  },
+  {
+    "page": 390,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE32.png"
+  },
+  {
+    "page": 391,
+    "bottom_text_y": 424,
+    "image": "final-head-diagrams/CORE33.png"
+  },
+  {
+    "page": 392,
+    "bottom_text_y": 400,
+    "image": "final-head-diagrams/CORE34.png"
+  },
+  {
+    "page": 393,
+    "bottom_text_y": 383,
+    "image": "final-head-diagrams/CORE35.png"
+  },
+  {
+    "page": 394,
+    "bottom_text_y": 366,
+    "image": "final-head-diagrams/CORE36.png"
+  },
+  {
+    "page": 395,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE37.png"
+  },
+  {
+    "page": 396,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE38.png"
+  },
+  {
+    "page": 397,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE39.png"
+  },
+  {
+    "page": 398,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE40.png"
+  },
+  {
+    "page": 399,
+    "bottom_text_y": 383,
+    "image": "final-head-diagrams/CORE41.png"
+  },
+  {
+    "page": 400,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE42.png"
+  },
+  {
+    "page": 401,
+    "bottom_text_y": 441,
+    "image": "final-head-diagrams/CORE43.png"
+  },
+  {
+    "page": 402,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/TT01.png"
+  },
+  {
+    "page": 403,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/TT02.png"
+  },
+  {
+    "page": 404,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/TT03.png"
+  },
+  {
+    "page": 405,
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/TT04.png"
+  },
+  {
+    "page": 406,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/TT05.png"
+  },
+  {
+    "page": 407,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/TT06.png"
+  },
+  {
+    "page": 408,
+    "bottom_text_y": 366,
+    "image": "final-head-diagrams/TT07.png"
+  },
+  {
+    "page": 409,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/TT08.png"
+  },
+  {
+    "page": 410,
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/CORE44.png"
+  },
+  {
+    "page": 411,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE45.png"
+  },
+  {
+    "page": 412,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE46.png"
+  },
+  {
+    "page": 413,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE47.png"
+  },
+  {
+    "page": 414,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE48.png"
+  },
+  {
+    "page": 415,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/CORE49.png"
+  },
+  {
+    "page": 416,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/TT09.png"
+  },
+  {
+    "page": 417,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/02.png"
+  },
+  {
+    "page": 418,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/03.png"
+  },
+  {
+    "page": 419,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/04.png"
+  },
+  {
+    "page": 420,
+    "bottom_text_y": 407,
+    "image": "final-head-diagrams/05.png"
+  },
+  {
+    "page": 421,
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/06.png"
+  },
+  {
+    "page": 422,
+    "bottom_text_y": 366,
+    "image": "final-head-diagrams/07.png"
+  },
+  {
+    "page": 423,
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/08.png"
+  },
+  {
+    "page": 424,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/09.png"
+  },
+  {
+    "page": 425,
+    "bottom_text_y": 366,
+    "image": "final-head-diagrams/10.png"
+  },
+  {
+    "page": 426,
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/11.png"
   },
   {
     "page": 427,
     "bottom_text_y": 349,
-    "image": "final-head-diagrams/24.png"
+    "image": "final-head-diagrams/12.png"
   },
   {
     "page": 428,
     "bottom_text_y": 349,
-    "image": "final-head-diagrams/25.png"
+    "image": "final-head-diagrams/13.png"
   },
   {
     "page": 429,
-    "bottom_text_y": 349,
-    "image": "final-head-diagrams/26.png"
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/14.png"
   },
   {
     "page": 430,
-    "bottom_text_y": 315,
-    "image": "final-head-diagrams/27.png"
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/15.png"
   },
   {
     "page": 431,
-    "bottom_text_y": 315,
-    "image": "final-head-diagrams/28.png"
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/16.png"
   },
   {
     "page": 432,
-    "bottom_text_y": 298,
-    "image": "final-head-diagrams/29.png"
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/17.png"
   },
   {
     "page": 433,
-    "bottom_text_y": 257,
-    "image": "final-head-diagrams/30.png"
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/18.png"
   },
   {
     "page": 434,
-    "bottom_text_y": 356,
-    "image": "final-head-diagrams/30.png"
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/19.png"
   },
   {
     "page": 435,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/20.png"
+  },
+  {
+    "page": 436,
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/21.png"
+  },
+  {
+    "page": 437,
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/22.png"
+  },
+  {
+    "page": 438,
+    "bottom_text_y": 390,
+    "image": "final-head-diagrams/23.png"
+  },
+  {
+    "page": 439,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/24.png"
+  },
+  {
+    "page": 440,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/25.png"
+  },
+  {
+    "page": 441,
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/26.png"
+  },
+  {
+    "page": 442,
+    "bottom_text_y": 332,
+    "image": "final-head-diagrams/27.png"
+  },
+  {
+    "page": 443,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/28.png"
+  },
+  {
+    "page": 444,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/29.png"
+  },
+  {
+    "page": 445,
+    "bottom_text_y": 349,
+    "image": "final-head-diagrams/30.png"
+  },
+  {
+    "page": 446,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/31.png"
+  },
+  {
+    "page": 447,
+    "bottom_text_y": 315,
+    "image": "final-head-diagrams/32.png"
+  },
+  {
+    "page": 448,
+    "bottom_text_y": 298,
+    "image": "final-head-diagrams/33.png"
+  },
+  {
+    "page": 449,
+    "bottom_text_y": 257,
+    "image": "final-head-diagrams/34.png"
+  },
+  {
+    "page": 450,
+    "bottom_text_y": 356,
+    "image": "final-head-diagrams/34.png"
+  },
+  {
+    "page": 451,
     "bottom_text_y": 47,
     "image": "support-diagrams/001.png"
   },
   {
-    "page": 436,
+    "page": 452,
     "bottom_text_y": 47,
     "image": "support-diagrams/002.png"
   },
   {
-    "page": 437,
+    "page": 453,
     "bottom_text_y": 47,
     "image": "support-diagrams/003.png"
   },
   {
-    "page": 438,
+    "page": 454,
     "bottom_text_y": 47,
     "image": "support-diagrams/004.png"
   },
   {
-    "page": 439,
+    "page": 455,
     "bottom_text_y": 47,
     "image": "support-diagrams/005.png"
   },
   {
-    "page": 440,
+    "page": 456,
     "bottom_text_y": 47,
     "image": "support-diagrams/006.png"
   },
   {
-    "page": 441,
+    "page": 457,
     "bottom_text_y": 47,
     "image": "support-diagrams/007.png"
   },
   {
-    "page": 442,
+    "page": 458,
     "bottom_text_y": 47,
     "image": "support-diagrams/008.png"
   },
   {
-    "page": 443,
+    "page": 459,
     "bottom_text_y": 47,
     "image": "support-diagrams/009.png"
   },
   {
-    "page": 444,
+    "page": 460,
     "bottom_text_y": 47,
     "image": "support-diagrams/010.png"
   },
   {
-    "page": 445,
+    "page": 461,
     "bottom_text_y": 298,
     "image": "diagrams/interface-R.png"
   },
   {
-    "page": 446,
+    "page": 462,
     "bottom_text_y": 281,
     "image": "diagrams/brace-R.png"
   },
   {
-    "page": 447,
+    "page": 463,
     "bottom_text_y": 298,
     "image": "diagrams/interface-L.png"
   },
   {
-    "page": 448,
+    "page": 464,
     "bottom_text_y": 281,
     "image": "diagrams/brace-L.png"
   },
   {
-    "page": 449,
+    "page": 465,
     "bottom_text_y": 298,
     "image": "diagrams/interface-F.png"
   },
   {
-    "page": 450,
+    "page": 466,
     "bottom_text_y": 281,
     "image": "diagrams/brace-F.png"
   },
   {
-    "page": 451,
+    "page": 467,
     "bottom_text_y": 298,
     "image": "diagrams/interface-B.png"
   },
   {
-    "page": 452,
+    "page": 468,
     "bottom_text_y": 189,
     "image": "diagrams/brace-B.png"
   },
   {
-    "page": 453,
+    "page": 469,
     "bottom_text_y": 47,
     "image": "support-diagrams/011.png"
   },
   {
-    "page": 454,
+    "page": 470,
     "bottom_text_y": 47,
     "image": "support-diagrams/012.png"
   },
   {
-    "page": 455,
+    "page": 471,
     "bottom_text_y": 47,
     "image": "support-diagrams/013.png"
   },
   {
-    "page": 456,
+    "page": 472,
     "bottom_text_y": 47,
     "image": "support-diagrams/014.png"
   },
   {
-    "page": 457,
+    "page": 473,
     "bottom_text_y": 47,
     "image": "support-diagrams/015.png"
   },
   {
-    "page": 458,
+    "page": 474,
     "bottom_text_y": 47,
     "image": "support-diagrams/016.png"
   },
   {
-    "page": 459,
+    "page": 475,
     "bottom_text_y": 47,
     "image": "support-diagrams/017.png"
   },
   {
-    "page": 460,
+    "page": 476,
     "bottom_text_y": 47,
     "image": "support-diagrams/018.png"
   },
   {
-    "page": 461,
+    "page": 477,
     "bottom_text_y": 47,
     "image": "support-diagrams/019.png"
   },
   {
-    "page": 462,
+    "page": 478,
     "bottom_text_y": 47,
     "image": "support-diagrams/020.png"
   },
   {
-    "page": 463,
+    "page": 479,
     "bottom_text_y": 47,
     "image": "support-diagrams/021.png"
   },
   {
-    "page": 464,
+    "page": 480,
     "bottom_text_y": 47,
     "image": "support-diagrams/022.png"
   },
   {
-    "page": 465,
+    "page": 481,
     "bottom_text_y": 47,
     "image": "support-diagrams/023.png"
   },
   {
-    "page": 466,
+    "page": 482,
     "bottom_text_y": 47,
     "image": "support-diagrams/024.png"
   },
   {
-    "page": 467,
+    "page": 483,
     "bottom_text_y": 47,
     "image": "support-diagrams/025.png"
   },
   {
-    "page": 468,
+    "page": 484,
     "bottom_text_y": 47,
     "image": "support-diagrams/026.png"
   },
   {
-    "page": 469,
+    "page": 485,
     "bottom_text_y": 47,
     "image": "support-diagrams/027.png"
   },
   {
-    "page": 470,
+    "page": 486,
     "bottom_text_y": 47,
     "image": "support-diagrams/028.png"
   },
   {
-    "page": 471,
+    "page": 487,
     "bottom_text_y": 47,
     "image": "support-diagrams/029.png"
   },
   {
-    "page": 472,
+    "page": 488,
     "bottom_text_y": 47,
     "image": "support-diagrams/030.png"
   },
   {
-    "page": 473,
+    "page": 489,
     "bottom_text_y": 47,
     "image": "support-diagrams/031.png"
   },
   {
-    "page": 474,
+    "page": 490,
     "bottom_text_y": 47,
     "image": "support-diagrams/032.png"
   },
   {
-    "page": 475,
+    "page": 491,
     "bottom_text_y": 47,
     "image": "support-diagrams/033.png"
   },
   {
-    "page": 476,
+    "page": 492,
     "bottom_text_y": 47,
     "image": "support-diagrams/034.png"
   },
   {
-    "page": 477,
+    "page": 493,
     "bottom_text_y": 47,
     "image": "support-diagrams/035.png"
   },
   {
-    "page": 478,
+    "page": 494,
     "bottom_text_y": 47,
     "image": "support-diagrams/036.png"
   },
   {
-    "page": 479,
+    "page": 495,
     "bottom_text_y": 47,
     "image": "support-diagrams/037.png"
   },
   {
-    "page": 480,
+    "page": 496,
     "bottom_text_y": 47,
     "image": "support-diagrams/038.png"
   },
   {
-    "page": 481,
+    "page": 497,
     "bottom_text_y": 47,
     "image": "support-diagrams/039.png"
   },
   {
-    "page": 482,
+    "page": 498,
     "bottom_text_y": 47,
     "image": "support-diagrams/040.png"
   },
   {
-    "page": 483,
+    "page": 499,
     "bottom_text_y": 47,
     "image": "support-diagrams/041.png"
   },
   {
-    "page": 484,
+    "page": 500,
     "bottom_text_y": 47,
     "image": "support-diagrams/042.png"
   },
   {
-    "page": 485,
+    "page": 501,
     "bottom_text_y": 47,
     "image": "support-diagrams/043.png"
   },
   {
-    "page": 486,
+    "page": 502,
     "bottom_text_y": 47,
     "image": "support-diagrams/044.png"
   },
   {
-    "page": 487,
+    "page": 503,
     "bottom_text_y": 47,
     "image": "support-diagrams/045.png"
   },
   {
-    "page": 488,
+    "page": 504,
     "bottom_text_y": 47,
     "image": "support-diagrams/046.png"
   },
   {
-    "page": 489,
+    "page": 505,
     "bottom_text_y": 47,
     "image": "support-diagrams/047.png"
   },
   {
-    "page": 490,
+    "page": 506,
     "bottom_text_y": 47,
     "image": "support-diagrams/048.png"
   },
   {
-    "page": 491,
+    "page": 507,
     "bottom_text_y": 47,
     "image": "support-diagrams/049.png"
   },
   {
-    "page": 492,
+    "page": 508,
     "bottom_text_y": 47,
     "image": "support-diagrams/050.png"
   },
   {
-    "page": 493,
+    "page": 509,
     "bottom_text_y": 47,
     "image": "support-diagrams/051.png"
   },
   {
-    "page": 494,
+    "page": 510,
     "bottom_text_y": 47,
     "image": "support-diagrams/052.png"
   },
   {
-    "page": 495,
+    "page": 511,
     "bottom_text_y": 47,
     "image": "support-diagrams/053.png"
   },
   {
-    "page": 496,
+    "page": 512,
     "bottom_text_y": 47,
     "image": "support-diagrams/054.png"
   },
   {
-    "page": 497,
+    "page": 513,
     "bottom_text_y": 47,
     "image": "support-diagrams/055.png"
   },
   {
-    "page": 498,
+    "page": 514,
     "bottom_text_y": 47,
     "image": "support-diagrams/056.png"
   },
   {
-    "page": 499,
+    "page": 515,
     "bottom_text_y": 47,
     "image": "support-diagrams/057.png"
   },
   {
-    "page": 500,
+    "page": 516,
     "bottom_text_y": 47,
     "image": "support-diagrams/058.png"
   },
   {
-    "page": 501,
+    "page": 517,
     "bottom_text_y": 47,
     "image": "support-diagrams/059.png"
   },
   {
-    "page": 502,
+    "page": 518,
     "bottom_text_y": 47,
     "image": "support-diagrams/060.png"
   },
   {
-    "page": 503,
+    "page": 519,
     "bottom_text_y": 47,
     "image": "support-diagrams/061.png"
   },
   {
-    "page": 504,
+    "page": 520,
     "bottom_text_y": 47,
     "image": "support-diagrams/062.png"
   },
   {
-    "page": 505,
+    "page": 521,
     "bottom_text_y": 47,
     "image": "support-diagrams/063.png"
   },
   {
-    "page": 506,
+    "page": 522,
     "bottom_text_y": 47,
     "image": "support-diagrams/064.png"
   },
   {
-    "page": 507,
+    "page": 523,
     "bottom_text_y": 47,
     "image": "support-diagrams/065.png"
   },
   {
-    "page": 508,
+    "page": 524,
     "bottom_text_y": 47,
     "image": "support-diagrams/066.png"
   },
   {
-    "page": 509,
+    "page": 525,
     "bottom_text_y": 47,
     "image": "support-diagrams/067.png"
   },
   {
-    "page": 510,
+    "page": 526,
     "bottom_text_y": 47,
     "image": "support-diagrams/068.png"
   },
   {
-    "page": 511,
+    "page": 527,
     "bottom_text_y": 47,
     "image": "support-diagrams/069.png"
   },
   {
-    "page": 512,
+    "page": 528,
     "bottom_text_y": 47,
     "image": "support-diagrams/070.png"
   },
   {
-    "page": 513,
+    "page": 529,
     "bottom_text_y": 47,
     "image": "support-diagrams/071.png"
   },
   {
-    "page": 514,
+    "page": 530,
     "bottom_text_y": 47,
     "image": "support-diagrams/072.png"
   },
   {
-    "page": 515,
+    "page": 531,
     "bottom_text_y": 47,
     "image": "support-diagrams/073.png"
   },
   {
-    "page": 516,
+    "page": 532,
     "bottom_text_y": 47,
     "image": "support-diagrams/074.png"
   },
   {
-    "page": 517,
+    "page": 533,
     "bottom_text_y": 47,
     "image": "support-diagrams/075.png"
   },
   {
-    "page": 518,
+    "page": 534,
     "bottom_text_y": 47,
     "image": "support-diagrams/076.png"
   },
   {
-    "page": 519,
+    "page": 535,
     "bottom_text_y": 47,
     "image": "support-diagrams/077.png"
   },
   {
-    "page": 520,
+    "page": 536,
     "bottom_text_y": 47,
     "image": "support-diagrams/078.png"
   },
   {
-    "page": 521,
+    "page": 537,
     "bottom_text_y": 47,
     "image": "support-diagrams/079.png"
   },
   {
-    "page": 522,
+    "page": 538,
     "bottom_text_y": 47,
     "image": "support-diagrams/080.png"
   },
   {
-    "page": 523,
+    "page": 539,
     "bottom_text_y": 47,
     "image": "support-diagrams/081.png"
   },
   {
-    "page": 524,
+    "page": 540,
     "bottom_text_y": 47,
     "image": "support-diagrams/082.png"
   },
   {
-    "page": 525,
+    "page": 541,
     "bottom_text_y": 47,
     "image": "support-diagrams/083.png"
   },
   {
-    "page": 526,
+    "page": 542,
     "bottom_text_y": 47,
     "image": "support-diagrams/084.png"
   },
   {
-    "page": 527,
+    "page": 543,
     "bottom_text_y": 47,
     "image": "support-diagrams/085.png"
   },
   {
-    "page": 528,
+    "page": 544,
     "bottom_text_y": 47,
     "image": "support-diagrams/086.png"
   },
   {
-    "page": 529,
+    "page": 545,
     "bottom_text_y": 47,
     "image": "support-diagrams/087.png"
   },
   {
-    "page": 530,
+    "page": 546,
     "bottom_text_y": 47,
     "image": "support-diagrams/088.png"
   },
   {
-    "page": 531,
+    "page": 547,
     "bottom_text_y": 47,
     "image": "support-diagrams/089.png"
   },
   {
-    "page": 532,
+    "page": 548,
     "bottom_text_y": 47,
     "image": "support-diagrams/090.png"
   },
   {
-    "page": 533,
+    "page": 549,
     "bottom_text_y": 47,
     "image": "support-diagrams/091.png"
   },
   {
-    "page": 534,
+    "page": 550,
     "bottom_text_y": 47,
     "image": "support-diagrams/092.png"
   },
   {
-    "page": 535,
+    "page": 551,
     "bottom_text_y": 47,
     "image": "support-diagrams/093.png"
   },
   {
-    "page": 536,
+    "page": 552,
     "bottom_text_y": 281,
     "image": "diagrams/integrated-whole.png"
   },
   {
-    "page": 537,
+    "page": 553,
     "bottom_text_y": 298,
     "image": "diagrams/lever-upper.png"
   },
   {
-    "page": 538,
+    "page": 554,
     "bottom_text_y": 281,
     "image": "diagrams/lever-upper.png"
   },
   {
-    "page": 539,
+    "page": 555,
     "bottom_text_y": 332,
     "image": "diagrams/lever-upper.png"
   },
   {
-    "page": 540,
+    "page": 556,
     "bottom_text_y": 332,
     "image": "diagrams/lever-upper.png"
   },
   {
-    "page": 541,
+    "page": 557,
     "bottom_text_y": 349,
     "image": "final-head-diagrams/opening.png"
   },
   {
-    "page": 542,
+    "page": 558,
     "bottom_text_y": 298,
     "image": "diagrams/support-lowered.png"
   }

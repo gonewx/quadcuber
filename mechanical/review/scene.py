@@ -10,7 +10,7 @@ import candidate as C  # noqa: E402
 
 # 原型新增零件（官方 LDraw 原文件）只给核算用，不进入发布模型的资产表。
 for _p in (Path(__file__).resolve().parent / 'parts').glob('*.dat'):
-    C.files.setdefault(_p.name, _p.read_text().splitlines())
+    C.files.setdefault(_p.name.replace('__', '/'), _p.read_text().splitlines())
 from review.meshdist import TriGrid, edge_samples, seg_tri_cross  # noqa: E402
 
 H = 0.3  # 边采样间距 mm；最小距离误差约 H/2
