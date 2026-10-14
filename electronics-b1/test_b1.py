@@ -40,6 +40,19 @@ class B1Pinmap(unittest.TestCase):
         for pin in (36, 40):  # 3V3 输出、VBUS 不接外部电源
             self.assertTrue((self.pads[('U3', str(pin))] or '').startswith('unconnected-'), pin)
 
+    def test_pico_table_matches_breadboard_wiring(self):
+        """第二来源：wiring/build.py 中已在面包板实测接线用过的 Pico 引脚表。"""
+        import ast
+        import runpy
+        table = {}
+        for node in ast.parse((ROOT / 'wiring/build.py').read_text()).body:
+            if isinstance(node, ast.Assign) and getattr(node.targets[0], 'id', '') in ('PICO_LEFT', 'PICO_RIGHT'):
+                table.update(ast.literal_eval(node.value))
+        ours = runpy.run_path(str(HERE / 'circuit.py'))['PICO_PINS']
+        alias = {'AGND': 'GND', 'ADC_VREF': 'VREF'}
+        self.assertEqual(len(table), 40)
+        self.assertEqual({k: alias.get(v, v) for k, v in ours.items()}, table)
+
     def test_each_arm_matches_wiring_spec(self):
         for i, (arm, (motor, enc, servo, _sm)) in enumerate(ARMS.items()):
             n = 10 * (i + 1)

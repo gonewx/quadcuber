@@ -21,6 +21,7 @@ jobs:
         run: |
           python -m unittest -v
           python -m unittest discover -s electronics -p 'test_*.py' -v
+          python -m unittest electronics-b1/test_b1.py -v
           python wiring/build.py --check
       - name: Check assembly and reproducible models and pages
         run: |
