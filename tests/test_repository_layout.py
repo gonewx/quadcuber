@@ -61,6 +61,16 @@ class RepositoryLayout(unittest.TestCase):
         for step in data['guide']['steps']:
             self.assertTrue((page.parent / data['imageRoot'] / step['image']).is_file(), step['image'])
 
+    def test_whole_viewer_part_count_matches_embedded_model(self):
+        # 整机3D按 data.parts 校验件数；必须等于模型主文件的顶层零件行数，避免改型后写死的件数过期。
+        page = ROOT / 'generated/site/index.html'
+        data = json.JSONDecoder().raw_decode(page.read_text().split('window.WORKBENCH_DATA=', 1)[1])[0]
+        main = data['model'].split('0 FILE ')[1]
+        top = sum(line.startswith('1 ') for line in main.splitlines())
+        self.assertEqual(data['parts'], top)
+        script = (ROOT / 'web/viewer-workbench.js').read_text()
+        self.assertNotRegex(script, r'(?<![0-9.])9[0-9]{2}件')
+
     def test_distribution_builds_in_empty_output(self):
         builder = ROOT / 'tools/build_distribution.py'
         self.assertTrue(builder.is_file(), 'distribution must be built from repository sources')
