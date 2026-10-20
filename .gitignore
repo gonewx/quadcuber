@@ -18,6 +18,8 @@ arm.log
 firmware/pico/arm.log
 # 串口测试日志（arm-B1.log 等）只在本机保留；需要存档的实测日志放 docs/measurements/
 firmware/pico/*.log
+# 从设备导出的 config.py 备份（含实测舵机值，以设备上为准）
+firmware/pico-config-backup-*.py
 
 # KiCad 本机文件：打开工程时的锁文件、每人各自的界面设置
 ~*.lck
