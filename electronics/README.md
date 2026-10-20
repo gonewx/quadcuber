@@ -1,8 +1,10 @@
 # 四臂集成单板控制器 A1（板载RP2040） — 工程评审，未制造放行
 
-本目录是唯一电子源目录。打开 `quadcuber.kicad_pro`，包含原生可编辑原理图和四层 PCB、本地符号/封装库。本设计为**单块PCB，RP2040、QSPI Flash、晶振、USB-C、驱动和电源均直接焊接在板上**；A0的Pico H插装已移除。马达使用EV3裸插座。接线定义仍从 `../wiring/spec.py` 导入，固件未改动，也没有把 R/L 固件描述成已支持四臂控制。
+> 当前手焊装配使用 [B1 底板](../electronics-b1/README.md)，请看 [B1 焊接与首次上电指南](../docs/b1-soldering-guide.md)。下文与本目录文件仅描述旧 A1 集成板，不适用于 B1。
 
-**当前唯一工程首板入口：[送厂包与分工](../generated/electronics/engineering-first-board/README.md)。** 设计基线 `3cfff7c`（相对 `db20b98` 只把风险丝印改为 `PROTOTYPE` / `VERIFY EV3 PINMAP BEFORE MOTOR USE`）、J1为RASPC722X DC5521；嘉立创双面SMT共153件（J5含4个PTH屏蔽脚补焊待厂商确认），用户自焊18件通孔器件。39个型号已填LCSC编号；U7 W25Q16RVCNJQ与F10–F13 MF-MSMF110/16X-2未上架，须代购或寄料。本包供受控首板CAM审核，未宣称厂商已接受或量产/实板性能通过；提交时附CAM确认单。旧Phoenix与所有 `ENG-FULL-*` / `ENG-POWER-CONTROLLER-*` 文件只供历史审查，不得下单混用。
+本目录是 A1 电子源目录。打开 `quadcuber.kicad_pro`，包含原生可编辑原理图和四层 PCB、本地符号/封装库。本设计为**单块PCB，RP2040、QSPI Flash、晶振、USB-C、驱动和电源均直接焊接在板上**；A0的Pico H插装已移除。马达使用EV3裸插座。接线定义仍从 `../wiring/spec.py` 导入，固件未改动，也没有把 R/L 固件描述成已支持四臂控制。
+
+**A1 历史工程首板入口：[送厂包与分工](../generated/electronics/engineering-first-board/README.md)。** 设计基线 `3cfff7c`（相对 `db20b98` 只把风险丝印改为 `PROTOTYPE` / `VERIFY EV3 PINMAP BEFORE MOTOR USE`）、J1为RASPC722X DC5521；嘉立创双面SMT共153件（J5含4个PTH屏蔽脚补焊待厂商确认），用户自焊18件通孔器件。39个型号已填LCSC编号；U7 W25Q16RVCNJQ与F10–F13 MF-MSMF110/16X-2未上架，须代购或寄料。本包供受控首板CAM审核，未宣称厂商已接受或量产/实板性能通过；提交时附CAM确认单。旧Phoenix与所有 `ENG-FULL-*` / `ENG-POWER-CONTROLLER-*` 文件只供历史审查，不得下单混用。
 
 EV3仍以用户尺寸图及同批实物为依据，不索取不存在的完整MPN文件，不替换普通RJ12。首板承担孔位/主体适配返工风险；连接电机前必须做六路断电通断及机械试配，触点电流能力由受控实验建立。C26/C36不装。首次上电与逐级扩大负载条件见首板包，不要求首板尚未制出时已有实板动态测试结果。
 

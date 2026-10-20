@@ -16,7 +16,9 @@
 
 ## 电路与硬件验证
 
-新增[四臂集成 PCB 原生 KiCad 工程](electronics/README.md)，A1为**板载RP2040、Flash、晶振、USB-C及驱动/电源的单PCB设计**，保留现有MicroPython GPIO/PIO定义。EV3插座孔位已按用户尺寸图更新，针号/料号/额定仍待核实，**未制造放行、未PCB实测**。源文件统一在 `electronics/`，检查和制造预览统一在 `generated/electronics/`。 当前[唯一工程首板送厂入口](generated/electronics/engineering-first-board/README.md)绑定DC5521设计 `3cfff7c`（丝印已改为PROTOTYPE），厂商双面SMT+用户自焊通孔；旧Phoenix变体已废止。工程首板仍须按包内CAM单及上电步骤执行，不代表量产放行。
+当前手焊板为 **[B1 底板](electronics-b1/README.md)**：99×99mm 双层板，插装 Pico H，其余元件手焊。PCB 和零件已到手，按 **[B1 焊接与首次上电指南](docs/b1-soldering-guide.md)** 装配，配合[元件位置图](generated/electronics-b1/assembly.png)和[手焊 BOM](generated/electronics-b1/bom-hand-solder.csv)。焊接、编码器电平、供电及带载仍待实测。
+
+[A1 集成板](electronics/README.md)及其[工程首板送厂包](generated/electronics/engineering-first-board/README.md)保留作历史资料；其板载 RP2040、双面 SMT、自焊18件和专用固件流程不适用于 B1。
 
 打开[当前接线：原 R／新 R+L（条件式）](generated/wiring/direct-breadboard.html)，在同一页面切换图、表和下载，默认显示原 R。适用条件见[电路总览](docs/wiring/README.md)；[历史单臂总览](generated/wiring/index.html)和[可选单臂洞洞板](generated/wiring/perfboard.html)保留作参考。EV3 大马达＋DRV8833 的空载闭环已通过，范围见[实测记录](docs/single_arm-results.md)；这不等于 v4 机械头、舵机、带魔方动作或四臂供电已验收。接下来需要实物标定和分级测试。
 

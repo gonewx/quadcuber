@@ -42,6 +42,25 @@ def run(*args):
     return r.stdout
 
 
+def finish_assembly_preview():
+    """固定深色背景，让浅色装配线条在浏览器和图片查看器中均清晰可见。"""
+    svg = OUT / 'assembly.svg'
+    source = svg.read_text()
+    # 使用实际矩形而非 CSS 背景，确保 SVG 转 PNG 后仍不透明。
+    if 'id="assembly-background"' not in source:
+        source = re.sub(
+            r'(<svg\b[^>]*>)',
+            r'\1\n<rect id="assembly-background" x="0" y="0" width="100%" '
+            r'height="100%" fill="#161b22" />', source, count=1,
+        )
+        svg.write_text(source)
+    import cairosvg
+    cairosvg.svg2png(
+        url=str(svg), write_to=str(OUT / 'assembly.png'),
+        output_width=2400, output_height=2400, background_color='#161b22',
+    )
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     run('sch', 'erc', '-o', OUT / 'erc.rpt', SCH)
@@ -71,6 +90,7 @@ def main():
                                  ('assembly', 'F.Silkscreen,F.Fab,Edge.Cuts', False)]:
         run('pcb', 'export', 'svg', '--mode-single', '--fit-page-to-board', '--exclude-drawing-sheet',
             '--layers', layers, *(['--mirror'] if mirror else []), '-o', OUT / f'{name}.svg', PCB)
+    finish_assembly_preview()
 
     # 手焊清单：先贴片后通孔，贴片里先 IC（热风枪）再小件，最后焊高的通孔插座。同型号合并。
     order = ['贴片 IC', '贴片电阻电容', '贴片二极管', '贴片保险丝', '贴片电解电容', '贴片电感', '排针/排母', '插座']
