@@ -94,7 +94,7 @@ class Arm:
 
     def require_ready(self):
         if not self._ready:
-            raise ValueError('没有可用的臂；先 arm R 或 arm L')
+            raise ValueError('没有可用的臂；先 arm R/L/F/B')
 
     def _reset_session(self):
         self.nominal = 0.0  # A new selection uses a new encoder origin.
@@ -290,12 +290,12 @@ class Arm:
 def cmd_arm(arm, args):
     if len(args) > 1:
         arm.close()
-        raise ValueError('arm [R|L]')
+        raise ValueError('arm [R|L|F|B]')
     if args:
         arm.select(args[0])
         print('选臂完成：输出停止、临时授权和零位已重置')
     if not arm._ready:
-        print('当前未选臂；输出已停止。使用 arm R 或 arm L')
+        print('当前未选臂；输出已停止。使用 arm R/L/F/B')
         return
     cfg = arm.config
     print('当前臂 %s · 配置 %s · 电机 GP%d/%d · 编码器 GP%d/%d · 舵机 GP%d · PIO %s' %
@@ -580,7 +580,7 @@ COMMANDS = {
 }
 
 HELP = """命令:
-  arm [R|L]             查看选臂/引脚；选臂先停两臂并撤销授权，单臂逐个调试
+  arm [R|L|F|B]         查看选臂/引脚；选臂先停两臂并撤销授权，单臂逐个调试
   motor_test unloaded   显式空载测试授权；无魔方、先核实机构自由行程；入口不运动
   check [占空比]        短暂正转, 检查马达/编码器方向 (须已标定或进入空载模式)
   enc / zero            读编码器 / 当前位置清零

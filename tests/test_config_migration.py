@@ -131,6 +131,28 @@ class GroupedConfigTest(unittest.TestCase):
             self.assertFalse(world.servo_ns)
             arm.close()
 
+    def test_f_and_b_select_with_fixed_pins_and_missing_group_stops(self):
+        groups = self.profiles.config.ARMS
+        arm = self.at.Arm()
+        for name, pins in (('F', (10, 11, 16, 17, 20, (4, 5))), ('B', (14, 15, 18, 19, 21, (6, 7)))):
+            arm.select(name)
+            cfg = arm.config
+            self.assertEqual((cfg.MOTOR_IN1, cfg.MOTOR_IN2, cfg.ENC_A, cfg.ENC_B, cfg.SERVO, cfg.ENC_SM), pins)
+            self.assertEqual(arm.arm_id, name)
+        self.assertIsNot(groups['F']['GAINS'], groups['B']['GAINS'])
+        saved = groups.pop('F')
+        try:
+            arm.select('R')
+            arm.motor.drive(.2)
+            with self.assertRaisesRegex(ValueError, 'F 分组'): arm.select('F')
+            self.assertFalse(arm._ready)
+            self.assertTrue(all(v == 0 for v in world.pwm.values()))
+        finally:
+            groups['F'] = saved
+        with self.assertRaises(ValueError): arm.select('X')
+        self.assertFalse(arm._ready)
+        arm.close()
+
     def test_shared_gains_or_groups_are_rejected_after_stopping(self):
         groups = self.profiles.config.ARMS
         arm = self.at.Arm()

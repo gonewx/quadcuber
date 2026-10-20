@@ -70,7 +70,7 @@ class ArmSelectionTest(unittest.TestCase):
         arm = self.at.Arm()
         arm.motor.drive(.2)
         arm._motor_test = True
-        for invalid in ('F', 'l', '', None):
+        for invalid in ('X', 'f', 'l', '', None):
             with self.subTest(invalid=invalid), self.assertRaises(ValueError): arm.select(invalid)
             self.assertFalse(any(sm.enabled for sm in world.sms.values()))
             self.assertFalse(arm._motor_test)

@@ -148,9 +148,11 @@ class WiringTest(unittest.TestCase):
 
     def test_reject_pwm_alias(self):
         # GP25 与 L 臂 GP9 是同一 PWM 通道，但不重复占用 GPIO。
+        arms = runpy.run_path(str(spec.ROOT / 'firmware/pico/config.py'))['ARMS']
+        rl_only = {'ARMS': {k: arms[k] for k in ('R', 'L')}}  # 只改接线表，不让固件 B 分组先报错
         with patch.dict(spec.ARMS, B=((14, 15), (18, 19), (25,), (6, 7))):
             with self.assertRaisesRegex(ValueError, 'PWM'):
-                spec.validate()
+                spec.validate(rl_only)
 
     def test_reject_missing_ground(self):
         direct_wiring.WIRES[:] = [w for w in direct_wiring.WIRES if w['code'] != 'P10']

@@ -53,8 +53,8 @@ def validate(config=None):
     # 图中还包含固定物理脚位/导线坐标；改表不能自动迁移接线图。
     groups = config['ARMS'] if 'ARMS' in config else {'R': config}
     for name, cfg in groups.items():
-        if name not in ('R', 'L'):
-            raise ValueError('固件仅支持 R/L 分组')
+        if name not in ARMS:
+            raise ValueError('固件分组只能是 R/L/F/B')
         motor, enc, servo, sm = ARMS[name]
         expected = dict(MOTOR_IN1=motor[0], MOTOR_IN2=motor[1], ENC_A=enc[0],
                         ENC_B=enc[1], SERVO=servo[0], ENC_SM=sm, ENC_PULLUP=False)
