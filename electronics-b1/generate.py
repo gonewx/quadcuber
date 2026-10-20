@@ -13,7 +13,8 @@ import pcbnew as p
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from circuit import C, BOARD  # noqa: E402
+from circuit import C, BOARD, REF_MOVES, SILK  # noqa: E402
+from silk import add_labels, move_refs  # noqa: E402
 
 LIB = HERE / 'lib/B1.pretty'
 NAME = 'quadcuber-b1'
@@ -295,5 +296,7 @@ for arm, x in {'R': 16, 'L': 38, 'F': 60, 'B': 82}.items():
     text(arm, x - 10, 82, 1.5)
 text('QUADCUBER B1', 48, 50, 1.2)
 text('9V ONLY', 48, 52.5, 1.0)
+add_labels(b, SILK, OX, OY)
+move_refs(b, REF_MOVES, OX, OY)
 p.SaveBoard(str(HERE / f'{NAME}.kicad_pcb'), b)
 print(f'B1: {len(C)} footprints, {len(nets)} nets, board {W}x{H} mm')

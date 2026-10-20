@@ -5,12 +5,14 @@
 - 2 层 FR-4，99×99mm，1.6mm，1oz。元件全部放在顶面，尽量用贴片件（0805 及以上、SOIC/SOT-223/TO-263/HSOP），自己用热风枪和烙铁手焊。只有排针、Pico 排母、DC 插座和 EV3 插座是通孔件。
 - 树莓派 Pico H 插在两排 1×20 排母上，USB 朝板子上边。引脚与 `wiring/spec.py` 的 `ARMS` 一致，固件不用改。
 - 四个 EV3 插座在下边，从左到右依次是 R / L / F / B。每个插座上方是该臂的舵机排针，自下而上为 G / + / S。
+- 接口丝印（2026-10-20 补）：舵机排针右侧逐针印 `G` / `+` / `S`；J2 右侧印 `GND` / `TX` / `RX`、下方印 `UART`（不是舵机口）；EV3 插座背面在第 1 针（M1）旁印 `1`。**已生产的 B1 实物没有这些丝印**（首测时舵机插反、插进过 J2），实物上用记号笔在每个舵机排针的 G 针旁点标记。
 
 ## 文件
 
 | 文件 | 作用 |
 |---|---|
 | `circuit.py` | 元件、网络和摆放位置的唯一来源 |
+| `silk.py`、`label_interfaces.py` | 接口丝印（数据在 `circuit.py` 的 `SILK`/`REF_MOVES`）。`generate.py` 生成时就加上；`label_interfaces.py` 给已布线的 PCB 补加，只动丝印文字，可重复运行 |
 | `generate.py` | 生成符号库、原理图、工程文件和未布线的 PCB。预先画好并锁定两条电源主干（VM 底层 2mm、舵机 5V 顶层 1.5mm），并给每个贴片接地脚加就近的接地过孔 |
 | `route.py` | 导出 DSN（带显式线宽），用 freerouting 布线，导入 SES；填充两面地铜，再打地缝合过孔 |
 | `build.py` | ERC/DRC（有错误就中止）、网表、Gerber+钻孔 ZIP、手焊 BOM、预览 SVG |
@@ -25,17 +27,18 @@
 export KICAD_APP_RUN=<KiCad 10.0.7 AppImage 解包目录>/AppRun
 $KICAD_APP_RUN python3.11 electronics-b1/generate.py
 $KICAD_APP_RUN python3.11 electronics-b1/route.py <freerouting-2.1.0.jar> 30
+$KICAD_APP_RUN python3.11 electronics-b1/label_interfaces.py   # 只改丝印时从这一步开始，不用重新布线
 python3 electronics-b1/build.py
 python3 -m unittest electronics-b1/test_b1.py -v
 ```
 
 freerouting 2.1.0 的下载地址和 SHA256 见 `../electronics/toolchain.json`。自动布线每次的结果可能略有不同；重新布线后必须重跑 `build.py` 和测试。
 
-## 当前检查结果（2026-10-14）
+## 当前检查结果（2026-10-20，补接口丝印后）
 
 - ERC：0 错误，0 警告。
-- DRC：0 错误，0 个未连通焊盘。另有 26 条警告：23 处丝印重叠（位号文字压在相邻元件上），3 处是锁定电源主干的端点悬空。都不影响制板。
-- `test_b1.py` 5/5 通过。
+- DRC：0 错误，0 个未连通焊盘。另有 19 条警告：16 处丝印重叠（位号文字压在相邻元件上；新加的接口丝印没有重叠），3 处是锁定电源主干的端点悬空。都不影响制板。
+- `test_b1.py` 6/6 通过（新增：每条接口丝印都在 PCB 上，且与对应网络的焊盘同一行）。
 
 ## 焊前要核对的实物
 

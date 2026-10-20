@@ -28,6 +28,29 @@ def pcb_pads():
     return pads
 
 
+def pcb_pad_xy():
+    """{(位号, 焊盘号): (x, y)}，板框坐标（mm），按封装旋转换算。"""
+    import math
+    text = (HERE / 'quadcuber-b1.kicad_pcb').read_text()
+    out = {}
+    for fp in re.split(r'\n\t\(footprint ', text)[1:]:
+        ref = re.search(r'\(property "Reference" "([^"]+)"', fp).group(1)
+        fx, fy, *rot = [float(v) for v in re.search(r"\n\t\t\(at ([-\d.]+) ([-\d.]+) ?([-\d.]*)\)", fp).groups() if v]
+        a = math.radians(rot[0] if rot else 0.0)
+        for num, px, py in re.findall(r'\(pad "([^"]+)" .*?\(at ([-\d.]+) ([-\d.]+)', fp, re.S):
+            px, py = float(px), float(py)
+            # KiCad 的 y 轴向下，角度为逆时针
+            out[(ref, num)] = (round(fx + px * math.cos(a) + py * math.sin(a) - 50, 2),
+                               round(fy - px * math.sin(a) + py * math.cos(a) - 50, 2))
+    return out
+
+
+def pcb_silk_texts():
+    text = (HERE / 'quadcuber-b1.kicad_pcb').read_text()
+    return {(s, round(float(x) - 50, 2), round(float(y) - 50, 2), layer[0])
+            for s, x, y, layer in re.findall(r'\(gr_text "([^"]*)"\s*\(at ([-\d.]+) ([-\d.]+)[^)]*\)\s*\(layer "(\w)\.SilkS"', text)}
+
+
 class B1Pinmap(unittest.TestCase):
     def setUp(self):
         self.pads = pcb_pads()
@@ -92,6 +115,29 @@ class B1Pinmap(unittest.TestCase):
         for net in ET.parse(path).getroot().iter('net'):
             for node in net.iter('node'):
                 self.assertEqual(self.pads[(node.get('ref'), node.get('pin'))], net.get('name'))
+
+    def test_interface_silk_sits_beside_matching_pads(self):
+        """B1 实测插反过舵机、把舵机插进 J2：每个标识必须在 PCB 上、且与对应网络的焊盘同一行。"""
+        silk = runpy.run_path(str(HERE / 'circuit.py'))['SILK']
+        texts, xy = pcb_silk_texts(), pcb_pad_xy()
+        for s, x, y, side, _left in silk:
+            self.assertIn((s, round(x, 2), round(y, 2), side), texts, s)
+        def label_at(ref, pad):
+            px, py = xy[(ref, pad)]
+            near = [s for s, x, y, side in texts if side == 'F' and abs(y - py) < 0.01 and 0 < x - px < 4]
+            self.assertEqual(len(near), 1, (ref, pad, near))
+            return near[0]
+        for i, arm in enumerate(ARMS, 1):
+            hdr = f'J{10 * i}'
+            got = {self.pads[(hdr, n)]: label_at(hdr, n) for n in '123'}
+            self.assertEqual(got, {'GND': 'G', 'SERVO_5V': '+', f'{arm}_SERVO': 'S'})
+            ev3 = f'J{10 * i + 1}'
+            px, py = xy[(ev3, '1')]
+            self.assertEqual(self.pads[(ev3, '1')], f'{arm}_M1')
+            self.assertTrue(any(s == '1' and side == 'B' and abs(y - py) < 0.01 and 0 < x - px < 2.5
+                                for s, x, y, side in texts), ev3)
+        got = {self.pads[('J2', n)]: label_at('J2', n) for n in '123'}
+        self.assertEqual(got, {'GND': 'GND', 'GP0': 'TX', 'GP1': 'RX'})
 
 
 if __name__ == '__main__':

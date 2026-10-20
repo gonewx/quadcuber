@@ -118,4 +118,17 @@ for i, (arm, (motor, enc, servo, _sm)) in enumerate(ARMS.items()):
 for k, xy in enumerate([(3.5, 3.5), (95.5, 3.5), (3.5, 95.5), (95.5, 95.5)], 1):
     add(f'H{k}', 'M3', 'hole', {}, xy, 0)
 
+# ---- 接口丝印 -------------------------------------------------------------------
+# (文字, x, y, 层 'F'/'B', 左对齐)。B1 实测把舵机插反、把舵机插进 J2，故逐针标出。
+SILK = []
+for arm, x in X0.items():
+    for name, dy in (('G', 0.0), ('+', -2.54), ('S', -5.08)):   # 舵机排针自下而上 G/+/S，标在右侧
+        SILK.append((name, x + 10.5, 72 + dy, 'F', False))
+    SILK.append(('1', x + 4.15, 88.16, 'B', False))             # 背面焊 EV3 时认第 1 针（M1）
+for name, dy in (('GND', 0.0), ('TX', 2.54), ('RX', 5.08)):     # J2 自上而下 GND/TX/RX
+    SILK.append((name, 95.2, 16 + dy, 'F', True))
+SILK.append(('UART', 93, 24.2, 'F', False))
+# 下一臂编码器电阻 R21/R31/R41 的位号原在电阻左侧，会压住上面的 G/+，挪到电阻正下方并横排
+REF_MOVES = {f'R{10 * i + 1}': (X0[arm] - 10.0, 74.3, 0) for i, arm in enumerate(X0, 1) if arm != 'R'}
+
 BOARD = (99.0, 99.0)

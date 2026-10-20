@@ -1,8 +1,8 @@
 ** Drc report for quadcuber-b1.kicad_pcb **
-** Created on 2026-10-14T02:23:18 **
+** Created on 2026-10-20T00:21:54 **
 ** Report includes: Errors, Warnings **
 
-** Found 26 DRC violations **
+** Found 19 DRC violations **
 [track_dangling]: Track has unconnected end
     Local override; warning
     @(63.0000 mm, 107.4000 mm): 走线 [VM] (B.Cu), 长度: 73.0000 mm
@@ -14,96 +14,68 @@
     @(51.8000 mm, 129.5000 mm): 走线 [SERVO_5V] (F.Cu), 长度: 91.2000 mm
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(127.7350 mm, 121.2271 mm): R43 的 线段, 位于 F.Silkscreen
-    @(127.8500 mm, 121.0000 mm): R44 的参考字段
-[silk_overlap]: Silkscreen clearance
-    Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(125.2350 mm, 121.2271 mm): R42 的 线段, 位于 F.Silkscreen
-    @(125.3500 mm, 121.0000 mm): R43 的参考字段
-[silk_overlap]: Silkscreen clearance
-    Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(119.6800 mm, 122.0000 mm): J30 的 线段, 位于 F.Silkscreen
-    @(120.3500 mm, 121.0000 mm): R41 的参考字段
-[silk_overlap]: Silkscreen clearance
-    Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(119.6800 mm, 120.7300 mm): J30 的 线段, 位于 F.Silkscreen
-    @(120.3500 mm, 121.0000 mm): R41 的参考字段
+    @(64.0000 mm, 88.6500 mm): U1 的参考字段
+    @(52.7000 mm, 88.7000 mm): L1 的 线段, 位于 F.Silkscreen
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
     @(122.7350 mm, 121.2271 mm): R41 的 线段, 位于 F.Silkscreen
     @(122.8500 mm, 121.0000 mm): R42 的参考字段
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(103.2350 mm, 121.2271 mm): R32 的 线段, 位于 F.Silkscreen
-    @(103.3500 mm, 121.0000 mm): R33 的参考字段
-[silk_overlap]: Silkscreen clearance
-    Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(105.8500 mm, 121.0000 mm): R34 的参考字段
-    @(105.7350 mm, 121.2271 mm): R33 的 线段, 位于 F.Silkscreen
-[silk_overlap]: Silkscreen clearance
-    Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(100.8500 mm, 121.0000 mm): R32 的参考字段
-    @(100.7350 mm, 121.2271 mm): R31 的 线段, 位于 F.Silkscreen
-[silk_overlap]: Silkscreen clearance
-    Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(76.3500 mm, 121.0000 mm): R21 的参考字段
-    @(75.6800 mm, 122.0000 mm): J10 的 线段, 位于 F.Silkscreen
-[silk_overlap]: Silkscreen clearance
-    Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(76.3500 mm, 121.0000 mm): R21 的参考字段
-    @(75.6800 mm, 120.7300 mm): J10 的 线段, 位于 F.Silkscreen
-[silk_overlap]: Silkscreen clearance
-    Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(64.0000 mm, 88.6500 mm): U1 的参考字段
-    @(52.7000 mm, 88.7000 mm): L1 的 线段, 位于 F.Silkscreen
+    @(127.7350 mm, 121.2271 mm): R43 的 线段, 位于 F.Silkscreen
+    @(127.8500 mm, 121.0000 mm): R44 的参考字段
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
     @(80.0000 mm, 61.8500 mm): R1 的参考字段
     @(80.0000 mm, 61.4000 mm): Q1 的参考字段
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(77.6400 mm, 67.5000 mm): DZ1 的 线段, 位于 F.Silkscreen
-    @(80.0000 mm, 68.0000 mm): D1 的参考字段
-[silk_overlap]: Silkscreen clearance
-    Rule: <电路板配置> 中的 "丝印" 约束; warning
     @(79.7729 mm, 64.2350 mm): R1 的 线段, 位于 F.Silkscreen
     @(80.0000 mm, 64.5000 mm): DZ1 的参考字段
+[silk_overlap]: Silkscreen clearance
+    Rule: <电路板配置> 中的 "丝印" 约束; warning
+    @(77.6400 mm, 67.5000 mm): DZ1 的 线段, 位于 F.Silkscreen
+    @(80.0000 mm, 68.0000 mm): D1 的参考字段
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
     @(78.8500 mm, 121.0000 mm): R22 的参考字段
     @(78.7350 mm, 121.2271 mm): R21 的 线段, 位于 F.Silkscreen
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(81.3500 mm, 121.0000 mm): R23 的参考字段
-    @(81.2350 mm, 121.2271 mm): R22 的 线段, 位于 F.Silkscreen
-[silk_overlap]: Silkscreen clearance
-    Rule: <电路板配置> 中的 "丝印" 约束; warning
     @(83.8500 mm, 121.0000 mm): R24 的参考字段
     @(83.7350 mm, 121.2271 mm): R23 的 线段, 位于 F.Silkscreen
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(56.8500 mm, 121.0000 mm): R12 的参考字段
-    @(56.7350 mm, 121.2271 mm): R11 的 线段, 位于 F.Silkscreen
+    @(81.3500 mm, 121.0000 mm): R23 的参考字段
+    @(81.2350 mm, 121.2271 mm): R22 的 线段, 位于 F.Silkscreen
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
     @(61.8500 mm, 121.0000 mm): R14 的参考字段
     @(61.7350 mm, 121.2271 mm): R13 的 线段, 位于 F.Silkscreen
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
+    @(56.8500 mm, 121.0000 mm): R12 的参考字段
+    @(56.7350 mm, 121.2271 mm): R11 的 线段, 位于 F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: <电路板配置> 中的 "丝印" 约束; warning
     @(59.2350 mm, 121.2271 mm): R12 的 线段, 位于 F.Silkscreen
     @(59.3500 mm, 121.0000 mm): R13 的参考字段
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(98.3500 mm, 121.0000 mm): R31 的参考字段
-    @(97.6800 mm, 120.7300 mm): J20 的 线段, 位于 F.Silkscreen
+    @(103.2350 mm, 121.2271 mm): R32 的 线段, 位于 F.Silkscreen
+    @(103.3500 mm, 121.0000 mm): R33 的参考字段
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(97.6800 mm, 122.0000 mm): J20 的 线段, 位于 F.Silkscreen
-    @(98.3500 mm, 121.0000 mm): R31 的参考字段
+    @(100.8500 mm, 121.0000 mm): R32 的参考字段
+    @(100.7350 mm, 121.2271 mm): R31 的 线段, 位于 F.Silkscreen
 [silk_overlap]: Silkscreen clearance
     Rule: <电路板配置> 中的 "丝印" 约束; warning
-    @(97.6800 mm, 120.7300 mm): J20 的 线段, 位于 F.Silkscreen
-    @(98.3500 mm, 121.0000 mm): R31 的参考字段
+    @(105.8500 mm, 121.0000 mm): R34 的参考字段
+    @(105.7350 mm, 121.2271 mm): R33 的 线段, 位于 F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: <电路板配置> 中的 "丝印" 约束; warning
+    @(125.2350 mm, 121.2271 mm): R42 的 线段, 位于 F.Silkscreen
+    @(125.3500 mm, 121.0000 mm): R43 的参考字段
 
 ** Found 0 unconnected pads **
 
