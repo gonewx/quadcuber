@@ -16,6 +16,8 @@ arm.log
 /output/
 /tmp/
 firmware/pico/arm.log
+# 串口测试日志（arm-B1.log 等）只在本机保留；需要存档的实测日志放 docs/measurements/
+firmware/pico/*.log
 
 # KiCad 本机文件：打开工程时的锁文件、每人各自的界面设置
 ~*.lck
